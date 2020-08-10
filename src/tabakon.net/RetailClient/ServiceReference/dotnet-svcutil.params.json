@@ -1,0 +1,15 @@
+{
+  "providerId": "Microsoft.Tools.ServiceModel.Svcutil",
+  "version": "2.0.1",
+  "options": {
+    "inputs": [
+      "http://localhost:8080/retail_1/ws/ws_tbk?wsdl"
+    ],
+    "namespaceMappings": [
+      "*, ServiceReference"
+    ],
+    "outputFile": "Reference.cs",
+    "targetFramework": "netstandard2.0",
+    "typeReuseMode": "All"
+  }
+}
