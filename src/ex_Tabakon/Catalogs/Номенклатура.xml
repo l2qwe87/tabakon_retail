@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Catalog uuid="73eb1b17-4b88-43d4-bb5d-6821e757f8b0">
+		<InternalInfo>
+			<xr:GeneratedType name="CatalogObject.Номенклатура" category="Object">
+				<xr:TypeId>386389d7-25f3-46d0-85b2-a31a28e89742</xr:TypeId>
+				<xr:ValueId>c526dd07-bfc5-437c-a83a-3b4a19cdb086</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogRef.Номенклатура" category="Ref">
+				<xr:TypeId>ee2818be-c3ed-40b8-ab87-d1a26e8aec98</xr:TypeId>
+				<xr:ValueId>4c1e68f7-f678-4411-bb5d-b116c1d2f496</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogSelection.Номенклатура" category="Selection">
+				<xr:TypeId>1c437128-2932-42b4-826b-66dfeb1008f0</xr:TypeId>
+				<xr:ValueId>5ffe6f4d-3e3e-4733-95e8-c733ef625d24</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogList.Номенклатура" category="List">
+				<xr:TypeId>ef4b41d7-6da5-4a82-9667-ac8633306ef9</xr:TypeId>
+				<xr:ValueId>45fdedc4-579f-44c9-af76-e4a1fa8fe605</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogManager.Номенклатура" category="Manager">
+				<xr:TypeId>a027e67c-a4eb-4cec-afc9-9da80435eedf</xr:TypeId>
+				<xr:ValueId>92cf23e0-e6a5-4011-bff5-2f6e85eed889</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>Номенклатура</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>b7fb602b-73ed-40e9-9b94-88e47819fe72</ExtendedConfigurationObject>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="c0da2d21-c9b4-438f-acce-8776a122e74a">
+				<InternalInfo/>
+				<Properties>
+					<Name>ТабачнаяПродукция</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>3d8cc8f4-1714-40c8-a0a0-469f34b1cdcf</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="ff401cf9-b4d5-48b4-bfe6-4f23c4efec9b">
+				<InternalInfo/>
+				<Properties>
+					<Name>ОсобенностьУчета</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>b1e80c99-8c5e-478e-a958-f9ee9f71042e</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ОсобенностиУчетаНоменклатуры</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="2abdbc65-ad3c-4694-97f5-e6fc6d7c7ece">
+				<InternalInfo/>
+				<Properties>
+					<Name>ВидНоменклатуры</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>ae2367bb-e45f-4d28-af2c-6e1e0a4f15b5</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВидыНоменклатуры</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Form>ФормаСписка</Form>
+		</ChildObjects>
+	</Catalog>
+</MetaDataObject>

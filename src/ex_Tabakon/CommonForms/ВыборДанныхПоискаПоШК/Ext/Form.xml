@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer" callType="After">ТБКПриСозданииНаСервереПосле</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ТаблицаВыбора" id="1">
+			<Representation>Tree</Representation>
+			<SelectionMode>SingleRow</SelectionMode>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<InitialTreeView>ExpandAllLevels</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<ContextMenu name="ТаблицаВыбораКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ТаблицаВыбораКоманднаяПанель" id="3">
+				<ChildItems>
+					<Button name="ТаблицаВыбораВыбрать" id="29">
+						<Type>CommandBarButton</Type>
+						<DefaultButton>true</DefaultButton>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ТаблицаВыбораВыбратьРасширеннаяПодсказка" id="30"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаВыбораРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="ТаблицаВыбораСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>ТаблицаВыбора</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаВыбораСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="ТаблицаВыбораСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаВыбораСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>ТаблицаВыбора</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаВыбораСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ТаблицаВыбораСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаВыбораУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>ТаблицаВыбора</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаВыбораУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ТаблицаВыбораУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="ТаблицаВыбораВыбрана" id="31">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>...</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>Directly</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТаблицаВыбораВыбранаКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ТаблицаВыбораВыбранаРасширеннаяПодсказка" id="33"/>
+				</CheckBoxField>
+				<InputField name="ТаблицаВыбораКодПоиска" id="34">
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаВыбораКодПоискаКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ТаблицаВыбораКодПоискаРасширеннаяПодсказка" id="36"/>
+				</InputField>
+				<InputField name="ТаблицаВыбораПредставлениеВладельца" id="17">
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаВыбораПредставлениеВладельцаКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ТаблицаВыбораПредставлениеВладельцаРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<ColumnGroup name="КолонкиОстатка" id="45">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Колонки остатка</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="КолонкиОстаткаРасширеннаяПодсказка" id="46"/>
+					<ChildItems>
+						<InputField name="ТаблицаВыбораОстаток" id="47">
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаВыбораОстатокКонтекстноеМеню" id="48"/>
+							<ExtendedTooltip name="ТаблицаВыбораОстатокРасширеннаяПодсказка" id="49"/>
+						</InputField>
+						<InputField name="ТаблицаВыбораРезерв" id="50">
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаВыбораРезервКонтекстноеМеню" id="51"/>
+							<ExtendedTooltip name="ТаблицаВыбораРезервРасширеннаяПодсказка" id="52"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="ГруппаПоказыватьОстаток" id="40">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПоказыватьОстатокРасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<CheckBoxField name="ПоказыватьОстатокНоменклатуры" id="37">
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПоказыватьОстатокНоменклатурыКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ПоказыватьОстатокНоменклатурыРасширеннаяПодсказка" id="39"/>
+				</CheckBoxField>
+				<InputField name="Магазин" id="42">
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="МагазинКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="МагазинРасширеннаяПодсказка" id="44"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+	<BaseForm version="2.9">
+		<CommandBarLocation>None</CommandBarLocation>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+			<Autofill>false</Autofill>
+		</AutoCommandBar>
+		<ChildItems>
+			<Table name="ТаблицаВыбора" id="1">
+				<Representation>Tree</Representation>
+				<SelectionMode>SingleRow</SelectionMode>
+				<AutoInsertNewRow>true</AutoInsertNewRow>
+				<InitialTreeView>ExpandAllLevels</InitialTreeView>
+				<EnableStartDrag>true</EnableStartDrag>
+				<EnableDrag>true</EnableDrag>
+				<FileDragMode>AsFile</FileDragMode>
+				<ContextMenu name="ТаблицаВыбораКонтекстноеМеню" id="2"/>
+				<AutoCommandBar name="ТаблицаВыбораКоманднаяПанель" id="3">
+					<ChildItems>
+						<Button name="ТаблицаВыбораВыбрать" id="29">
+							<Type>CommandBarButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<CommandName>0</CommandName>
+							<ExtendedTooltip name="ТаблицаВыбораВыбратьРасширеннаяПодсказка" id="30"/>
+						</Button>
+					</ChildItems>
+				</AutoCommandBar>
+				<ExtendedTooltip name="ТаблицаВыбораРасширеннаяПодсказка" id="4"/>
+				<SearchStringAddition name="ТаблицаВыбораСтрокаПоиска" id="5">
+					<AdditionSource>
+						<Item>ТаблицаВыбора</Item>
+						<Type>SearchStringRepresentation</Type>
+					</AdditionSource>
+					<ContextMenu name="ТаблицаВыбораСтрокаПоискаКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ТаблицаВыбораСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+				</SearchStringAddition>
+				<ViewStatusAddition name="ТаблицаВыбораСостояниеПросмотра" id="8">
+					<AdditionSource>
+						<Item>ТаблицаВыбора</Item>
+						<Type>ViewStatusRepresentation</Type>
+					</AdditionSource>
+					<ContextMenu name="ТаблицаВыбораСостояниеПросмотраКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ТаблицаВыбораСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+				</ViewStatusAddition>
+				<SearchControlAddition name="ТаблицаВыбораУправлениеПоиском" id="11">
+					<AdditionSource>
+						<Item>ТаблицаВыбора</Item>
+						<Type>SearchControl</Type>
+					</AdditionSource>
+					<ContextMenu name="ТаблицаВыбораУправлениеПоискомКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ТаблицаВыбораУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+				</SearchControlAddition>
+				<ChildItems>
+					<CheckBoxField name="ТаблицаВыбораВыбрана" id="31">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>...</v8:content>
+							</v8:item>
+						</Title>
+						<EditMode>Directly</EditMode>
+						<CheckBoxType>Auto</CheckBoxType>
+						<ContextMenu name="ТаблицаВыбораВыбранаКонтекстноеМеню" id="32"/>
+						<ExtendedTooltip name="ТаблицаВыбораВыбранаРасширеннаяПодсказка" id="33"/>
+					</CheckBoxField>
+					<InputField name="ТаблицаВыбораКодПоиска" id="34">
+						<EditMode>EnterOnInput</EditMode>
+						<ContextMenu name="ТаблицаВыбораКодПоискаКонтекстноеМеню" id="35"/>
+						<ExtendedTooltip name="ТаблицаВыбораКодПоискаРасширеннаяПодсказка" id="36"/>
+					</InputField>
+					<InputField name="ТаблицаВыбораПредставлениеВладельца" id="17">
+						<EditMode>EnterOnInput</EditMode>
+						<ContextMenu name="ТаблицаВыбораПредставлениеВладельцаКонтекстноеМеню" id="18"/>
+						<ExtendedTooltip name="ТаблицаВыбораПредставлениеВладельцаРасширеннаяПодсказка" id="19"/>
+					</InputField>
+					<ColumnGroup name="КолонкиОстатка" id="45">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Колонки остатка</v8:content>
+							</v8:item>
+						</Title>
+						<Group>Horizontal</Group>
+						<ExtendedTooltip name="КолонкиОстаткаРасширеннаяПодсказка" id="46"/>
+						<ChildItems>
+							<InputField name="ТаблицаВыбораОстаток" id="47">
+								<EditMode>EnterOnInput</EditMode>
+								<ContextMenu name="ТаблицаВыбораОстатокКонтекстноеМеню" id="48"/>
+								<ExtendedTooltip name="ТаблицаВыбораОстатокРасширеннаяПодсказка" id="49"/>
+							</InputField>
+							<InputField name="ТаблицаВыбораРезерв" id="50">
+								<EditMode>EnterOnInput</EditMode>
+								<ContextMenu name="ТаблицаВыбораРезервКонтекстноеМеню" id="51"/>
+								<ExtendedTooltip name="ТаблицаВыбораРезервРасширеннаяПодсказка" id="52"/>
+							</InputField>
+						</ChildItems>
+					</ColumnGroup>
+				</ChildItems>
+			</Table>
+			<UsualGroup name="ГруппаПоказыватьОстаток" id="40">
+				<Group>Horizontal</Group>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаПоказыватьОстатокРасширеннаяПодсказка" id="41"/>
+				<ChildItems>
+					<CheckBoxField name="ПоказыватьОстатокНоменклатуры" id="37">
+						<TitleLocation>Right</TitleLocation>
+						<CheckBoxType>Auto</CheckBoxType>
+						<ContextMenu name="ПоказыватьОстатокНоменклатурыКонтекстноеМеню" id="38"/>
+						<ExtendedTooltip name="ПоказыватьОстатокНоменклатурыРасширеннаяПодсказка" id="39"/>
+					</CheckBoxField>
+					<InputField name="Магазин" id="42">
+						<TitleLocation>None</TitleLocation>
+						<ContextMenu name="МагазинКонтекстноеМеню" id="43"/>
+						<ExtendedTooltip name="МагазинРасширеннаяПодсказка" id="44"/>
+					</InputField>
+				</ChildItems>
+			</UsualGroup>
+		</ChildItems>
+		<Attributes/>
+	</BaseForm>
+</Form>

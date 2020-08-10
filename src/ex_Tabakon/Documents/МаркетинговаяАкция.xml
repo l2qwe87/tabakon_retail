@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Document uuid="694ee289-ba58-4433-910f-997f56739ec6">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentObject.МаркетинговаяАкция" category="Object">
+				<xr:TypeId>fee99229-f9db-4b99-8b43-dd3d9a44a54d</xr:TypeId>
+				<xr:ValueId>6ff093c5-ba03-48e2-beef-6945765f88bd</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentRef.МаркетинговаяАкция" category="Ref">
+				<xr:TypeId>4f2f1f3b-fc7e-470d-b595-cae661496270</xr:TypeId>
+				<xr:ValueId>cc8e4169-45fe-496f-91b4-4dd98bc46cc8</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentSelection.МаркетинговаяАкция" category="Selection">
+				<xr:TypeId>ab51ab18-49e1-449d-ac8f-6f3416033a4b</xr:TypeId>
+				<xr:ValueId>05ef37b2-e888-4ddf-932d-71be6d04c989</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentList.МаркетинговаяАкция" category="List">
+				<xr:TypeId>126dd001-c4df-4d2d-bc30-42d9fda7a29f</xr:TypeId>
+				<xr:ValueId>ba1522ba-90ed-4b86-bd52-548a358bf223</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentManager.МаркетинговаяАкция" category="Manager">
+				<xr:TypeId>c3d2aaee-2432-4b96-a208-5e819d64b44f</xr:TypeId>
+				<xr:ValueId>2d40b762-5329-4586-b8d9-531a28822175</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>МаркетинговаяАкция</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>7b667cd6-8f23-4f30-9423-7c109bbeca70</ExtendedConfigurationObject>
+			<RegisterRecords/>
+		</Properties>
+		<ChildObjects>
+			<TabularSection uuid="ba26e6d7-af15-4bbb-9762-ad61f66bf3db">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.МаркетинговаяАкция.СкидкиНаценки" category="TabularSection">
+						<xr:TypeId>9e0a4f5a-3cf7-4a57-a432-f6b7bee7d6b1</xr:TypeId>
+						<xr:ValueId>d4f2733b-0704-429b-9b55-a2c96ee7354c</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.МаркетинговаяАкция.СкидкиНаценки" category="TabularSectionRow">
+						<xr:TypeId>6bb527b9-f9ac-4bee-8644-b8b6f404580c</xr:TypeId>
+						<xr:ValueId>bf3fb109-a632-44d5-9910-bd48ede3401d</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>СкидкиНаценки</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>7836b629-2c9d-4d7e-8386-5adab8ea2d31</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="6fef8aa6-ce42-4d12-9175-e5ae90850f1c">
+						<InternalInfo/>
+						<Properties>
+							<Name>СкидкаНаценка</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>ca6a8972-9946-40ae-a19d-229d9fa3482f</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.СкидкиНаценки</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="cf6ab2cc-7335-42bb-8053-cc785af4c1fc">
+						<InternalInfo/>
+						<Properties>
+							<Name>Магазин</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>cc8db6a9-9534-41d3-b454-d3be93a38866</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.Магазины</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="1877ca44-561b-4108-aff8-731413ab26d4">
+						<InternalInfo/>
+						<Properties>
+							<Name>ДатаНачала</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>c7277892-f109-4b74-818f-90ecdc18e035</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:dateTime</v8:Type>
+								<v8:DateQualifiers>
+									<v8:DateFractions>Date</v8:DateFractions>
+								</v8:DateQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+			<TabularSection uuid="aa24bf98-b0e3-49c6-8dbb-ce0a8d909713">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.МаркетинговаяАкция.Магазины" category="TabularSection">
+						<xr:TypeId>8d3d002d-1686-4f8e-8a56-f501f4dbf181</xr:TypeId>
+						<xr:ValueId>eb89a0d1-1ab4-436a-b767-d5b6c5316a75</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.МаркетинговаяАкция.Магазины" category="TabularSectionRow">
+						<xr:TypeId>a7f20a99-5d2e-458b-a549-8ad618672567</xr:TypeId>
+						<xr:ValueId>4cb43240-cbcf-4b7a-8e5f-5c531be09ba8</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>Магазины</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>09b23aaa-ca84-453d-97b3-bb602aae9251</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="be649c64-2e8c-445c-8c7a-b28ab51cf401">
+						<InternalInfo/>
+						<Properties>
+							<Name>Магазин</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>fb9d3f7c-4d10-4509-b33d-fab89b432a80</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.Магазины</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+		</ChildObjects>
+	</Document>
+</MetaDataObject>

@@ -1,0 +1,527 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Group>Horizontal</Group>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<Pages name="ГруппаСтраницы" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыExtendedTooltip" id="33"/>
+			<ChildItems>
+				<Page name="ГруппаОбщая" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа общая</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаОбщаяExtendedTooltip" id="34"/>
+					<ChildItems>
+						<LabelDecoration name="ТекстОбИсключениях" id="30">
+							<Visible>false</Visible>
+							<TextColor>style:ЦветНепроведенногоДокумента</TextColor>
+							<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="ТекстОбИсключенияхКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ТекстОбИсключенияхРасширеннаяПодсказка" id="35"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаБезИсключений" id="32">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа без исключений</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаБезИсключенийExtendedTooltip" id="36"/>
+							<ChildItems>
+								<Table name="Список" id="1">
+									<ReadOnly>true</ReadOnly>
+									<DefaultItem>true</DefaultItem>
+									<Width>60</Width>
+									<Height>6</Height>
+									<SelectionMode>SingleRow</SelectionMode>
+									<RowSelectionMode>Row</RowSelectionMode>
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<EnableStartDrag>true</EnableStartDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+									<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="СписокExtendedTooltip" id="37"/>
+									<SearchStringAddition name="СписокСтрокаПоиска" id="49">
+										<AdditionSource>
+											<Item>Список</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="50"/>
+										<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="51"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СписокСостояниеПросмотра" id="52">
+										<AdditionSource>
+											<Item>Список</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="53"/>
+										<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="54"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СписокУправлениеПоиском" id="55">
+										<AdditionSource>
+											<Item>Список</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="56"/>
+										<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="57"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<CheckBoxField name="Выбран" id="22">
+											<ReadOnly>true</ReadOnly>
+											<TitleFont ref="sys:DefaultGUIFont" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ВыбранКонтекстноеМеню" id="23"/>
+											<ExtendedTooltip name="ВыбранExtendedTooltip" id="38"/>
+										</CheckBoxField>
+										<LabelField name="СкидкаНаценка" id="8">
+											<TitleFont ref="sys:DefaultGUIFont" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<Width>15</Width>
+											<Font ref="sys:DefaultGUIFont" height="12" bold="false" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<ContextMenu name="СкидкаНаценкаКонтекстноеМеню" id="9"/>
+											<ExtendedTooltip name="СкидкаНаценкаExtendedTooltip" id="39"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСписокПуст" id="27">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа список пуст</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаСписокПустExtendedTooltip" id="47"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияСписокПуст" id="28">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>6</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<TextColor>web:DarkBlue</TextColor>
+							<Font ref="sys:DefaultGUIFont" height="20" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Нет действующих управляемых скидок</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="ДекорацияСписокПустКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ДекорацияСписокПустExtendedTooltip" id="48"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаКнопки" id="17">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКнопкиExtendedTooltip" id="40"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаКолонкиКнопок" id="64">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКолонкиКнопокРасширеннаяПодсказка" id="65"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЛево" id="58">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЛевоРасширеннаяПодсказка" id="59"/>
+							<ChildItems>
+								<Button name="КнопкаВверх" id="18">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<Width>8</Width>
+									<Height>3</Height>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="КнопкаВверхExtendedTooltip" id="41"/>
+								</Button>
+								<Button name="КомандаВниз" id="19">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<Width>8</Width>
+									<Height>3</Height>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="КомандаВнизExtendedTooltip" id="42"/>
+								</Button>
+								<Button name="КомандаУстановитьФлажки" id="24">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<Width>8</Width>
+									<Height>3</Height>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="КомандаУстановитьФлажкиExtendedTooltip" id="44"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПраво" id="60">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПравоРасширеннаяПодсказка" id="61"/>
+							<ChildItems>
+								<Button name="КомандаВыбрать" id="20">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<DefaultButton>true</DefaultButton>
+									<Width>8</Width>
+									<Height>3</Height>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="КомандаВыбратьExtendedTooltip" id="43"/>
+								</Button>
+								<Button name="КнопкаЗакрыть" id="21">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<Width>8</Width>
+									<Height>3</Height>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="КнопкаЗакрытьExtendedTooltip" id="46"/>
+								</Button>
+								<Button name="КомандаСнятьФлажки" id="25">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<Width>8</Width>
+									<Height>3</Height>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="КомандаСнятьФлажкиExtendedTooltip" id="45"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<Button name="ВвестиПромокод" id="62">
+					<Type>UsualButton</Type>
+					<Width>17</Width>
+					<Height>3</Height>
+					<CommandName>0</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Промокод</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ВвестиПромокодРасширеннаяПодсказка" id="63"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Список</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.Выбран</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<BaseForm version="2.9">
+		<Group>Horizontal</Group>
+		<VerticalScroll>useIfNecessary</VerticalScroll>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+			<Autofill>false</Autofill>
+		</AutoCommandBar>
+		<ChildItems>
+			<Pages name="ГруппаСтраницы" id="26">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа страницы</v8:content>
+					</v8:item>
+				</Title>
+				<PagesRepresentation>None</PagesRepresentation>
+				<ExtendedTooltip name="ГруппаСтраницыExtendedTooltip" id="33"/>
+				<ChildItems>
+					<Page name="ГруппаОбщая" id="16">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа общая</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ГруппаОбщаяExtendedTooltip" id="34"/>
+						<ChildItems>
+							<LabelDecoration name="ТекстОбИсключениях" id="30">
+								<Visible>false</Visible>
+								<TextColor>style:ЦветНепроведенногоДокумента</TextColor>
+								<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								<ContextMenu name="ТекстОбИсключенияхКонтекстноеМеню" id="31"/>
+								<ExtendedTooltip name="ТекстОбИсключенияхРасширеннаяПодсказка" id="35"/>
+							</LabelDecoration>
+							<UsualGroup name="ГруппаБезИсключений" id="32">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа без исключений</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Horizontal</Group>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаБезИсключенийExtendedTooltip" id="36"/>
+								<ChildItems>
+									<Table name="Список" id="1">
+										<ReadOnly>true</ReadOnly>
+										<DefaultItem>true</DefaultItem>
+										<Width>60</Width>
+										<Height>6</Height>
+										<SelectionMode>SingleRow</SelectionMode>
+										<RowSelectionMode>Row</RowSelectionMode>
+										<UseAlternationRowColor>true</UseAlternationRowColor>
+										<EnableStartDrag>true</EnableStartDrag>
+										<FileDragMode>AsFile</FileDragMode>
+										<SearchStringLocation>None</SearchStringLocation>
+										<ViewStatusLocation>None</ViewStatusLocation>
+										<SearchControlLocation>None</SearchControlLocation>
+										<RowFilter xsi:nil="true"/>
+										<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+										<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+											<Autofill>false</Autofill>
+										</AutoCommandBar>
+										<ExtendedTooltip name="СписокExtendedTooltip" id="37"/>
+										<SearchStringAddition name="СписокСтрокаПоиска" id="49">
+											<AdditionSource>
+												<Item>Список</Item>
+												<Type>SearchStringRepresentation</Type>
+											</AdditionSource>
+											<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="50"/>
+											<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="51"/>
+										</SearchStringAddition>
+										<ViewStatusAddition name="СписокСостояниеПросмотра" id="52">
+											<AdditionSource>
+												<Item>Список</Item>
+												<Type>ViewStatusRepresentation</Type>
+											</AdditionSource>
+											<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="53"/>
+											<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="54"/>
+										</ViewStatusAddition>
+										<SearchControlAddition name="СписокУправлениеПоиском" id="55">
+											<AdditionSource>
+												<Item>Список</Item>
+												<Type>SearchControl</Type>
+											</AdditionSource>
+											<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="56"/>
+											<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="57"/>
+										</SearchControlAddition>
+										<ChildItems>
+											<CheckBoxField name="Выбран" id="22">
+												<ReadOnly>true</ReadOnly>
+												<TitleFont ref="sys:DefaultGUIFont" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+												<TitleLocation>None</TitleLocation>
+												<EditMode>EnterOnInput</EditMode>
+												<CheckBoxType>Auto</CheckBoxType>
+												<ContextMenu name="ВыбранКонтекстноеМеню" id="23"/>
+												<ExtendedTooltip name="ВыбранExtendedTooltip" id="38"/>
+											</CheckBoxField>
+											<LabelField name="СкидкаНаценка" id="8">
+												<TitleFont ref="sys:DefaultGUIFont" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+												<Width>15</Width>
+												<Font ref="sys:DefaultGUIFont" height="12" bold="false" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+												<ContextMenu name="СкидкаНаценкаКонтекстноеМеню" id="9"/>
+												<ExtendedTooltip name="СкидкаНаценкаExtendedTooltip" id="39"/>
+											</LabelField>
+										</ChildItems>
+									</Table>
+								</ChildItems>
+							</UsualGroup>
+						</ChildItems>
+					</Page>
+					<Page name="ГруппаСписокПуст" id="27">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа список пуст</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ГруппаСписокПустExtendedTooltip" id="47"/>
+						<ChildItems>
+							<LabelDecoration name="ДекорацияСписокПуст" id="28">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<Height>6</Height>
+								<HorizontalStretch>true</HorizontalStretch>
+								<VerticalStretch>true</VerticalStretch>
+								<TextColor>web:DarkBlue</TextColor>
+								<Font ref="sys:DefaultGUIFont" height="20" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Нет действующих управляемых скидок</v8:content>
+									</v8:item>
+								</Title>
+								<Hyperlink>true</Hyperlink>
+								<HorizontalAlign>Center</HorizontalAlign>
+								<VerticalAlign>Center</VerticalAlign>
+								<ContextMenu name="ДекорацияСписокПустКонтекстноеМеню" id="29"/>
+								<ExtendedTooltip name="ДекорацияСписокПустExtendedTooltip" id="48"/>
+							</LabelDecoration>
+						</ChildItems>
+					</Page>
+				</ChildItems>
+			</Pages>
+			<UsualGroup name="ГруппаКнопки" id="17">
+				<Group>Vertical</Group>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаКнопкиExtendedTooltip" id="40"/>
+				<ChildItems>
+					<UsualGroup name="ГруппаКолонкиКнопок" id="64">
+						<Group>Horizontal</Group>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ГруппаКолонкиКнопокРасширеннаяПодсказка" id="65"/>
+						<ChildItems>
+							<UsualGroup name="ГруппаЛево" id="58">
+								<Group>Vertical</Group>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаЛевоРасширеннаяПодсказка" id="59"/>
+								<ChildItems>
+									<Button name="КнопкаВверх" id="18">
+										<Type>UsualButton</Type>
+										<Representation>Picture</Representation>
+										<Width>8</Width>
+										<Height>3</Height>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="КнопкаВверхExtendedTooltip" id="41"/>
+									</Button>
+									<Button name="КомандаВниз" id="19">
+										<Type>UsualButton</Type>
+										<Representation>Picture</Representation>
+										<Width>8</Width>
+										<Height>3</Height>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="КомандаВнизExtendedTooltip" id="42"/>
+									</Button>
+									<Button name="КомандаУстановитьФлажки" id="24">
+										<Type>UsualButton</Type>
+										<Representation>Picture</Representation>
+										<Width>8</Width>
+										<Height>3</Height>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="КомандаУстановитьФлажкиExtendedTooltip" id="44"/>
+									</Button>
+								</ChildItems>
+							</UsualGroup>
+							<UsualGroup name="ГруппаПраво" id="60">
+								<Group>Vertical</Group>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаПравоРасширеннаяПодсказка" id="61"/>
+								<ChildItems>
+									<Button name="КомандаВыбрать" id="20">
+										<Type>UsualButton</Type>
+										<Representation>Picture</Representation>
+										<DefaultButton>true</DefaultButton>
+										<Width>8</Width>
+										<Height>3</Height>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="КомандаВыбратьExtendedTooltip" id="43"/>
+									</Button>
+									<Button name="КнопкаЗакрыть" id="21">
+										<Type>UsualButton</Type>
+										<Representation>Picture</Representation>
+										<Width>8</Width>
+										<Height>3</Height>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="КнопкаЗакрытьExtendedTooltip" id="46"/>
+									</Button>
+									<Button name="КомандаСнятьФлажки" id="25">
+										<Type>UsualButton</Type>
+										<Representation>Picture</Representation>
+										<Width>8</Width>
+										<Height>3</Height>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="КомандаСнятьФлажкиExtendedTooltip" id="45"/>
+									</Button>
+								</ChildItems>
+							</UsualGroup>
+						</ChildItems>
+					</UsualGroup>
+					<Button name="ВвестиПромокод" id="62">
+						<Type>UsualButton</Type>
+						<Width>17</Width>
+						<Height>3</Height>
+						<CommandName>0</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Промокод</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ВвестиПромокодРасширеннаяПодсказка" id="63"/>
+					</Button>
+				</ChildItems>
+			</UsualGroup>
+		</ChildItems>
+		<Attributes>
+			<ConditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Список</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Список.Выбран</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</ConditionalAppearance>
+		</Attributes>
+	</BaseForm>
+</Form>

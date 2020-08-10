@@ -1,0 +1,1157 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen" callType="After">ТБКПриОткрытииПосле</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="СтраницыФормы" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы формы</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыФормыExtendedTooltip" id="30"/>
+			<ChildItems>
+				<Page name="СтраницаКнопок" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница кнопок</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="СтраницаКнопокExtendedTooltip" id="31"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаГоризонтКнопок" id="102">
+							<Group>Horizontal</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаГоризонтКнопокРасширеннаяПодсказка" id="103"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаТБК" id="109">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ТБК</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ТБК</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаТБКРасширеннаяПодсказка" id="110"/>
+									<ChildItems>
+										<Button name="ВыполнитьОбмен" id="116">
+											<Type>UsualButton</Type>
+											<Representation>PictureAndText</Representation>
+											<Height>2</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<CommandName>Form.Command.ВыполнитьОбмен</CommandName>
+											<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<Picture>
+												<xr:Ref>CommonPicture.СинхронизацияДанныхВыполнение</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="ВыполнитьОбменРасширеннаяПодсказка" id="117"/>
+										</Button>
+										<UsualGroup name="СостоянияКассККМ" id="118">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Состояния касс ККМ</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Состояния касс ККМ</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="СостоянияКассККМРасширеннаяПодсказка" id="119"/>
+											<ChildItems>
+												<UsualGroup name="ККМ_ФР1" id="120">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ККМ ф р1</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ККМ ф р1</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>AlwaysHorizontal</Group>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ККМ_ФР1РасширеннаяПодсказка" id="121"/>
+													<ChildItems>
+														<LabelDecoration name="КассаККМ_ФР1_Название" id="124">
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>КассаККМ_ФР1_Название</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="КассаККМ_ФР1_НазваниеКонтекстноеМеню" id="125"/>
+															<ExtendedTooltip name="КассаККМ_ФР1_НазваниеРасширеннаяПодсказка" id="126"/>
+														</LabelDecoration>
+														<PictureDecoration name="КассаККМ_ФР1_Открыта" id="127">
+															<Picture>
+																<xr:Ref>CommonPicture.СостояниеИнтеграцииОтправлено</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</Picture>
+															<ContextMenu name="КассаККМ_ФР1_ОткрытаКонтекстноеМеню" id="128"/>
+															<ExtendedTooltip name="КассаККМ_ФР1_ОткрытаРасширеннаяПодсказка" id="129"/>
+														</PictureDecoration>
+														<PictureDecoration name="КассаККМ_ФР1_Закрыта" id="130">
+															<Picture>
+																<xr:Ref>CommonPicture.СостояниеОбменаДаннымиОшибка</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</Picture>
+															<ContextMenu name="КассаККМ_ФР1_ЗакрытаКонтекстноеМеню" id="131"/>
+															<ExtendedTooltip name="КассаККМ_ФР1_ЗакрытаРасширеннаяПодсказка" id="132"/>
+														</PictureDecoration>
+														<PictureDecoration name="КассаККМ_ФР1_ЗакрытаВедомостиНет" id="133">
+															<Visible>false</Visible>
+															<Picture>
+																<xr:Ref>CommonPicture.СостояниеОбменаДанными</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</Picture>
+															<ContextMenu name="КассаККМ_ФР1_ЗакрытаВедомостиНетКонтекстноеМеню" id="134"/>
+															<ExtendedTooltip name="КассаККМ_ФР1_ЗакрытаВедомостиНетРасширеннаяПодсказка" id="135"/>
+														</PictureDecoration>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ККМ_ФР2" id="122">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ККМ ф р2</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ККМ ф р2</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>AlwaysHorizontal</Group>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ККМ_ФР2РасширеннаяПодсказка" id="123"/>
+													<ChildItems>
+														<LabelDecoration name="КассаККМ_ФР2_Название" id="136">
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>КассаККМ_ФР2_Название</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="КассаККМ_ФР2_НазваниеКонтекстноеМеню" id="137"/>
+															<ExtendedTooltip name="КассаККМ_ФР2_НазваниеРасширеннаяПодсказка" id="138"/>
+														</LabelDecoration>
+														<PictureDecoration name="КассаККМ_ФР2_Открыта" id="139">
+															<Picture>
+																<xr:Ref>CommonPicture.СостояниеИнтеграцииОтправлено</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</Picture>
+															<ContextMenu name="КассаККМ_ФР2_ОткрытаКонтекстноеМеню" id="140"/>
+															<ExtendedTooltip name="КассаККМ_ФР2_ОткрытаРасширеннаяПодсказка" id="141"/>
+														</PictureDecoration>
+														<PictureDecoration name="КассаККМ_ФР2_Закрыта" id="142">
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Касса ККМ ф р2 закрыта</v8:content>
+																</v8:item>
+															</Title>
+															<Picture>
+																<xr:Ref>CommonPicture.СостояниеОбменаДаннымиОшибка</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</Picture>
+															<ContextMenu name="КассаККМ_ФР2_ЗакрытаКонтекстноеМеню" id="143"/>
+															<ExtendedTooltip name="КассаККМ_ФР2_ЗакрытаРасширеннаяПодсказка" id="144"/>
+														</PictureDecoration>
+														<PictureDecoration name="КассаККМ_ФР2_ЗакрытаВедомостиНет" id="145">
+															<Visible>false</Visible>
+															<Picture>
+																<xr:Ref>CommonPicture.СостояниеОбменаДанными</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</Picture>
+															<ContextMenu name="КассаККМ_ФР2_ЗакрытаВедомостиНетКонтекстноеМеню" id="146"/>
+															<ExtendedTooltip name="КассаККМ_ФР2_ЗакрытаВедомостиНетРасширеннаяПодсказка" id="147"/>
+														</PictureDecoration>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<Button name="ДокументПеремещениеТоваровОткрытьСписок" id="148">
+											<Type>UsualButton</Type>
+											<Height>2</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<CommandName>Document.ПеремещениеТоваров.StandardCommand.OpenList</CommandName>
+											<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<ExtendedTooltip name="ДокументПеремещениеТоваровОткрытьСписокРасширеннаяПодсказка" id="149"/>
+										</Button>
+										<Button name="ДокументПрименениеЦенНоменклатурыОткрытьСписок" id="150">
+											<Type>UsualButton</Type>
+											<Height>2</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<CommandName>Document.ПрименениеЦенНоменклатуры.StandardCommand.OpenList</CommandName>
+											<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<ExtendedTooltip name="ДокументПрименениеЦенНоменклатурыОткрытьСписокРасширеннаяПодсказка" id="151"/>
+										</Button>
+										<Button name="ДокументТБК_ВедомостьОПродажахЗаДеньОткрытьСписок" id="152">
+											<Type>UsualButton</Type>
+											<Height>2</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<CommandName>Document.ТБК_ВедомостьОПродажахЗаДень.StandardCommand.OpenList</CommandName>
+											<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<ExtendedTooltip name="ДокументТБК_ВедомостьОПродажахЗаДеньОткрытьСписокРасширеннаяПодсказка" id="153"/>
+										</Button>
+										<Button name="Чеки" id="156">
+											<Type>UsualButton</Type>
+											<Height>2</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<CommandName>Form.Command.ПоказатьЧеки</CommandName>
+											<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Чеки</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЧекиРасширеннаяПодсказка" id="157"/>
+										</Button>
+										<Button name="ВыгрузитьПродажиЗаПериод" id="154">
+											<Type>UsualButton</Type>
+											<Height>2</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<CommandName>Form.Command.ВыгрузитьПродажиЗаПериод</CommandName>
+											<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<ExtendedTooltip name="ВыгрузитьПродажиЗаПериодРасширеннаяПодсказка" id="155"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<LabelDecoration name="ДекорацияДляЦентрирования" id="106">
+									<Width>2</Width>
+									<SkipOnInput>true</SkipOnInput>
+									<ContextMenu name="ДекорацияДляЦентрированияКонтекстноеМеню" id="107"/>
+									<ExtendedTooltip name="ДекорацияДляЦентрированияРасширеннаяПодсказка" id="108"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаВертикальВГоризонте" id="104">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаВертикальВГоризонтеРасширеннаяПодсказка" id="105"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияРегистрацияПродаж" id="75">
+											<Width>24</Width>
+											<Height>2</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация регистрация продаж</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<Picture>
+												<xr:Ref>CommonPicture.РМКРегистрацияПродаж</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+											</Border>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияРегистрацияПродажКонтекстноеМеню" id="76"/>
+											<ExtendedTooltip name="ДекорацияРегистрацияПродажРасширеннаяПодсказка" id="77"/>
+										</PictureDecoration>
+										<PictureDecoration name="ДекорацияОткрытиеСмены" id="78">
+											<Width>24</Width>
+											<Height>2</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация открытие смены</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<Picture>
+												<xr:Ref>CommonPicture.РМКОткрытиеСмены</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+											</Border>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияОткрытиеСменыКонтекстноеМеню" id="79"/>
+											<ExtendedTooltip name="ДекорацияОткрытиеСменыРасширеннаяПодсказка" id="80"/>
+										</PictureDecoration>
+										<PictureDecoration name="ДекорацияОтчетБезГашения" id="81">
+											<Width>24</Width>
+											<Height>2</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация открытие смены</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<Picture>
+												<xr:Ref>CommonPicture.РМКОтчетБезГашения</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+											</Border>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияОтчетБезГашенияКонтекстноеМеню" id="82"/>
+											<ExtendedTooltip name="ДекорацияОтчетБезГашенияРасширеннаяПодсказка" id="83"/>
+										</PictureDecoration>
+										<PictureDecoration name="ДекорацияСводныйОтчет" id="87">
+											<Width>24</Width>
+											<Height>2</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация сводный отчет</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<Picture>
+												<xr:Ref>CommonPicture.РМКСводныйОтчет</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+											</Border>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияСводныйОтчетКонтекстноеМеню" id="88"/>
+											<ExtendedTooltip name="ДекорацияСводныйОтчетРасширеннаяПодсказка" id="89"/>
+										</PictureDecoration>
+										<PictureDecoration name="ДекорацияЗакрытиеСмены" id="84">
+											<Width>24</Width>
+											<Height>2</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация закрытие смены</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<Picture>
+												<xr:Ref>CommonPicture.РМКЗакрытиеСмены</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+											</Border>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияЗакрытиеСменыКонтекстноеМеню" id="85"/>
+											<ExtendedTooltip name="ДекорацияЗакрытиеСменыРасширеннаяПодсказка" id="86"/>
+										</PictureDecoration>
+										<PictureDecoration name="ДекорацияНастройкаРМК" id="90">
+											<Width>24</Width>
+											<Height>2</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация настройка РМК</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<Picture>
+												<xr:Ref>CommonPicture.РМКНастройкаРМК</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+											</Border>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияНастройкаРМККонтекстноеМеню" id="91"/>
+											<ExtendedTooltip name="ДекорацияНастройкаРМКРасширеннаяПодсказка" id="92"/>
+										</PictureDecoration>
+										<PictureDecoration name="ДекорацияОбменДанными" id="93">
+											<Width>24</Width>
+											<Height>2</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация обмен данными</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<Picture>
+												<xr:Ref>CommonPicture.РМКОбменДанными</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+											</Border>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияОбменДаннымиКонтекстноеМеню" id="94"/>
+											<ExtendedTooltip name="ДекорацияОбменДаннымиРасширеннаяПодсказка" id="95"/>
+										</PictureDecoration>
+										<PictureDecoration name="ДекорацияЗакрыть" id="96">
+											<Width>24</Width>
+											<Height>2</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация закрыть</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<Picture>
+												<xr:Ref>CommonPicture.РМКЗакрыть</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+											</Border>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияЗакрытьКонтекстноеМеню" id="97"/>
+											<ExtendedTooltip name="ДекорацияЗакрытьРасширеннаяПодсказка" id="98"/>
+										</PictureDecoration>
+										<PictureDecoration name="ДекорацияЗавершениеРаботы" id="99">
+											<Width>24</Width>
+											<Height>2</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация завершение работы</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<Picture>
+												<xr:Ref>CommonPicture.РМКЗавершениеРаботы</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+											</Border>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияЗавершениеРаботыКонтекстноеМеню" id="100"/>
+											<ExtendedTooltip name="ДекорацияЗавершениеРаботыРасширеннаяПодсказка" id="101"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаВыбораМагазина" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница выбора магазина</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаВыбораМагазинаExtendedTooltip" id="41"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаМагазиныШапка" id="55">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа магазины шапка</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаМагазиныШапкаРасширеннаяПодсказка" id="56"/>
+							<ChildItems>
+								<Button name="ВыборМагазина" id="53">
+									<Type>UsualButton</Type>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="ВыборМагазинаРасширеннаяПодсказка" id="54"/>
+								</Button>
+								<LabelDecoration name="ДекорацияВыберитеМагазин" id="18">
+									<Font ref="sys:DefaultGUIFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выберите магазин</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияВыберитеМагазинКонтекстноеМеню" id="19"/>
+									<ExtendedTooltip name="ДекорацияВыберитеМагазинExtendedTooltip" id="42"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="Магазины" id="13">
+							<Representation>List</Representation>
+							<ReadOnly>true</ReadOnly>
+							<Width>30</Width>
+							<SelectionMode>SingleRow</SelectionMode>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="МагазиныКонтекстноеМеню" id="14"/>
+							<AutoCommandBar name="МагазиныКоманднаяПанель" id="15">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="МагазиныExtendedTooltip" id="43"/>
+							<SearchStringAddition name="МагазиныSearchString" id="57">
+								<AdditionSource>
+									<Item>Магазины</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="МагазиныSearchStringContextMenu" id="58"/>
+								<ExtendedTooltip name="МагазиныSearchStringExtendedTooltip" id="59"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="МагазиныViewStatus" id="60">
+								<AdditionSource>
+									<Item>Магазины</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="МагазиныViewStatusContextMenu" id="61"/>
+								<ExtendedTooltip name="МагазиныViewStatusExtendedTooltip" id="62"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="МагазиныSearchControl" id="63">
+								<AdditionSource>
+									<Item>Магазины</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="МагазиныSearchControlContextMenu" id="64"/>
+								<ExtendedTooltip name="МагазиныSearchControlExtendedTooltip" id="65"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="МагазиныМагазин" id="16">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Магазины</v8:content>
+										</v8:item>
+									</Title>
+									<TitleFont ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<EditMode>EnterOnInput</EditMode>
+									<Font ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
+									<ContextMenu name="МагазиныМагазинКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="МагазиныМагазинExtendedTooltip" id="44"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаВыбораКассы" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница выбора кассы</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаВыбораКассыExtendedTooltip" id="45"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКассыШапка" id="28">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кассы шапка</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКассыШапкаРасширеннаяПодсказка" id="46"/>
+							<ChildItems>
+								<Button name="КомандаНазадКСпискуКнопок" id="29">
+									<Type>UsualButton</Type>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="КомандаНазадКСпискуКнопокExtendedTooltip" id="47"/>
+								</Button>
+								<Button name="ВыборКассы" id="51">
+									<Type>UsualButton</Type>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="ВыборКассыРасширеннаяПодсказка" id="52"/>
+								</Button>
+								<LabelDecoration name="ДекорацияВыберитеКассу" id="21">
+									<Font ref="sys:DefaultGUIFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выберите кассу</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияВыберитеКассуКонтекстноеМеню" id="22"/>
+									<ExtendedTooltip name="ДекорацияВыберитеКассуExtendedTooltip" id="48"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="Кассы" id="23">
+							<Representation>List</Representation>
+							<ReadOnly>true</ReadOnly>
+							<Width>30</Width>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="КассыКонтекстноеМеню" id="24"/>
+							<AutoCommandBar name="КассыКоманднаяПанель" id="25">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="КассыExtendedTooltip" id="49"/>
+							<SearchStringAddition name="КассыSearchString" id="66">
+								<AdditionSource>
+									<Item>Кассы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КассыSearchStringContextMenu" id="67"/>
+								<ExtendedTooltip name="КассыSearchStringExtendedTooltip" id="68"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КассыViewStatus" id="69">
+								<AdditionSource>
+									<Item>Кассы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КассыViewStatusContextMenu" id="70"/>
+								<ExtendedTooltip name="КассыViewStatusExtendedTooltip" id="71"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КассыSearchControl" id="72">
+								<AdditionSource>
+									<Item>Кассы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КассыSearchControlContextMenu" id="73"/>
+								<ExtendedTooltip name="КассыSearchControlExtendedTooltip" id="74"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="КассыКасса" id="26">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Кассы</v8:content>
+										</v8:item>
+									</Title>
+									<TitleFont ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<EditMode>EnterOnInput</EditMode>
+									<Font ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<ContextMenu name="КассыКассаКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="КассыКассаExtendedTooltip" id="50"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes/>
+	<Commands>
+		<Command name="ВыполнитьОбмен" id="1000000">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить обмен</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить обмен</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКВыполнитьОбменПосле</Action>
+		</Command>
+		<Command name="ВыгрузитьПродажиЗаПериод" id="1000001">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить продажи за период</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить продажи за период</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКВыгрузитьПродажиЗаПериодПосле</Action>
+		</Command>
+		<Command name="ПоказатьЧеки" id="1000002">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать чеки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать чеки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКПоказатьЧекиПосле</Action>
+		</Command>
+	</Commands>
+	<BaseForm version="2.9">
+		<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+		<VerticalScroll>useIfNecessary</VerticalScroll>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+			<Autofill>false</Autofill>
+		</AutoCommandBar>
+		<ChildItems>
+			<Pages name="СтраницыФормы" id="10">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Страницы формы</v8:content>
+					</v8:item>
+				</Title>
+				<PagesRepresentation>None</PagesRepresentation>
+				<ExtendedTooltip name="СтраницыФормыExtendedTooltip" id="30"/>
+				<ChildItems>
+					<Page name="СтраницаКнопок" id="11">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Страница кнопок</v8:content>
+							</v8:item>
+						</Title>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="СтраницаКнопокExtendedTooltip" id="31"/>
+						<ChildItems>
+							<UsualGroup name="ГруппаГоризонтКнопок" id="102">
+								<Group>Horizontal</Group>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаГоризонтКнопокРасширеннаяПодсказка" id="103"/>
+								<ChildItems>
+									<LabelDecoration name="ДекорацияДляЦентрирования" id="106">
+										<Width>2</Width>
+										<SkipOnInput>true</SkipOnInput>
+										<ContextMenu name="ДекорацияДляЦентрированияКонтекстноеМеню" id="107"/>
+										<ExtendedTooltip name="ДекорацияДляЦентрированияРасширеннаяПодсказка" id="108"/>
+									</LabelDecoration>
+									<UsualGroup name="ГруппаВертикальВГоризонте" id="104">
+										<Group>Vertical</Group>
+										<Representation>None</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаВертикальВГоризонтеРасширеннаяПодсказка" id="105"/>
+										<ChildItems>
+											<PictureDecoration name="ДекорацияРегистрацияПродаж" id="75">
+												<Width>24</Width>
+												<Height>2</Height>
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Декорация регистрация продаж</v8:content>
+													</v8:item>
+												</Title>
+												<Hyperlink>true</Hyperlink>
+												<Picture>
+													<xr:Ref>CommonPicture.РМКРегистрацияПродаж</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<Border width="1">
+													<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+												</Border>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="ДекорацияРегистрацияПродажКонтекстноеМеню" id="76"/>
+												<ExtendedTooltip name="ДекорацияРегистрацияПродажРасширеннаяПодсказка" id="77"/>
+											</PictureDecoration>
+											<PictureDecoration name="ДекорацияОткрытиеСмены" id="78">
+												<Width>24</Width>
+												<Height>2</Height>
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Декорация открытие смены</v8:content>
+													</v8:item>
+												</Title>
+												<Hyperlink>true</Hyperlink>
+												<Picture>
+													<xr:Ref>CommonPicture.РМКОткрытиеСмены</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<Border width="1">
+													<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+												</Border>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="ДекорацияОткрытиеСменыКонтекстноеМеню" id="79"/>
+												<ExtendedTooltip name="ДекорацияОткрытиеСменыРасширеннаяПодсказка" id="80"/>
+											</PictureDecoration>
+											<PictureDecoration name="ДекорацияОтчетБезГашения" id="81">
+												<Width>24</Width>
+												<Height>2</Height>
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Декорация открытие смены</v8:content>
+													</v8:item>
+												</Title>
+												<Hyperlink>true</Hyperlink>
+												<Picture>
+													<xr:Ref>CommonPicture.РМКОтчетБезГашения</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<Border width="1">
+													<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+												</Border>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="ДекорацияОтчетБезГашенияКонтекстноеМеню" id="82"/>
+												<ExtendedTooltip name="ДекорацияОтчетБезГашенияРасширеннаяПодсказка" id="83"/>
+											</PictureDecoration>
+											<PictureDecoration name="ДекорацияСводныйОтчет" id="87">
+												<Width>24</Width>
+												<Height>2</Height>
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Декорация сводный отчет</v8:content>
+													</v8:item>
+												</Title>
+												<Hyperlink>true</Hyperlink>
+												<Picture>
+													<xr:Ref>CommonPicture.РМКСводныйОтчет</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<Border width="1">
+													<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+												</Border>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="ДекорацияСводныйОтчетКонтекстноеМеню" id="88"/>
+												<ExtendedTooltip name="ДекорацияСводныйОтчетРасширеннаяПодсказка" id="89"/>
+											</PictureDecoration>
+											<PictureDecoration name="ДекорацияЗакрытиеСмены" id="84">
+												<Width>24</Width>
+												<Height>2</Height>
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Декорация закрытие смены</v8:content>
+													</v8:item>
+												</Title>
+												<Hyperlink>true</Hyperlink>
+												<Picture>
+													<xr:Ref>CommonPicture.РМКЗакрытиеСмены</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<Border width="1">
+													<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+												</Border>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="ДекорацияЗакрытиеСменыКонтекстноеМеню" id="85"/>
+												<ExtendedTooltip name="ДекорацияЗакрытиеСменыРасширеннаяПодсказка" id="86"/>
+											</PictureDecoration>
+											<PictureDecoration name="ДекорацияНастройкаРМК" id="90">
+												<Width>24</Width>
+												<Height>2</Height>
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Декорация настройка РМК</v8:content>
+													</v8:item>
+												</Title>
+												<Hyperlink>true</Hyperlink>
+												<Picture>
+													<xr:Ref>CommonPicture.РМКНастройкаРМК</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<Border width="1">
+													<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+												</Border>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="ДекорацияНастройкаРМККонтекстноеМеню" id="91"/>
+												<ExtendedTooltip name="ДекорацияНастройкаРМКРасширеннаяПодсказка" id="92"/>
+											</PictureDecoration>
+											<PictureDecoration name="ДекорацияОбменДанными" id="93">
+												<Width>24</Width>
+												<Height>2</Height>
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Декорация обмен данными</v8:content>
+													</v8:item>
+												</Title>
+												<Hyperlink>true</Hyperlink>
+												<Picture>
+													<xr:Ref>CommonPicture.РМКОбменДанными</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<Border width="1">
+													<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+												</Border>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="ДекорацияОбменДаннымиКонтекстноеМеню" id="94"/>
+												<ExtendedTooltip name="ДекорацияОбменДаннымиРасширеннаяПодсказка" id="95"/>
+											</PictureDecoration>
+											<PictureDecoration name="ДекорацияЗакрыть" id="96">
+												<Width>24</Width>
+												<Height>2</Height>
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Декорация закрыть</v8:content>
+													</v8:item>
+												</Title>
+												<Hyperlink>true</Hyperlink>
+												<Picture>
+													<xr:Ref>CommonPicture.РМКЗакрыть</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<Border width="1">
+													<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+												</Border>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="ДекорацияЗакрытьКонтекстноеМеню" id="97"/>
+												<ExtendedTooltip name="ДекорацияЗакрытьРасширеннаяПодсказка" id="98"/>
+											</PictureDecoration>
+											<PictureDecoration name="ДекорацияЗавершениеРаботы" id="99">
+												<Width>24</Width>
+												<Height>2</Height>
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Декорация завершение работы</v8:content>
+													</v8:item>
+												</Title>
+												<Hyperlink>true</Hyperlink>
+												<Picture>
+													<xr:Ref>CommonPicture.РМКЗавершениеРаботы</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<Border width="1">
+													<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+												</Border>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="ДекорацияЗавершениеРаботыКонтекстноеМеню" id="100"/>
+												<ExtendedTooltip name="ДекорацияЗавершениеРаботыРасширеннаяПодсказка" id="101"/>
+											</PictureDecoration>
+										</ChildItems>
+									</UsualGroup>
+								</ChildItems>
+							</UsualGroup>
+						</ChildItems>
+					</Page>
+					<Page name="СтраницаВыбораМагазина" id="12">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Страница выбора магазина</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СтраницаВыбораМагазинаExtendedTooltip" id="41"/>
+						<ChildItems>
+							<UsualGroup name="ГруппаМагазиныШапка" id="55">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа магазины шапка</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Horizontal</Group>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаМагазиныШапкаРасширеннаяПодсказка" id="56"/>
+								<ChildItems>
+									<Button name="ВыборМагазина" id="53">
+										<Type>UsualButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="ВыборМагазинаРасширеннаяПодсказка" id="54"/>
+									</Button>
+									<LabelDecoration name="ДекорацияВыберитеМагазин" id="18">
+										<Font ref="sys:DefaultGUIFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Выберите магазин</v8:content>
+											</v8:item>
+										</Title>
+										<ContextMenu name="ДекорацияВыберитеМагазинКонтекстноеМеню" id="19"/>
+										<ExtendedTooltip name="ДекорацияВыберитеМагазинExtendedTooltip" id="42"/>
+									</LabelDecoration>
+								</ChildItems>
+							</UsualGroup>
+							<Table name="Магазины" id="13">
+								<Representation>List</Representation>
+								<ReadOnly>true</ReadOnly>
+								<Width>30</Width>
+								<SelectionMode>SingleRow</SelectionMode>
+								<RowSelectionMode>Row</RowSelectionMode>
+								<AutoInsertNewRow>true</AutoInsertNewRow>
+								<EnableStartDrag>true</EnableStartDrag>
+								<EnableDrag>true</EnableDrag>
+								<FileDragMode>AsFile</FileDragMode>
+								<SearchStringLocation>None</SearchStringLocation>
+								<ViewStatusLocation>None</ViewStatusLocation>
+								<SearchControlLocation>None</SearchControlLocation>
+								<RowFilter xsi:nil="true"/>
+								<ContextMenu name="МагазиныКонтекстноеМеню" id="14"/>
+								<AutoCommandBar name="МагазиныКоманднаяПанель" id="15">
+									<Autofill>false</Autofill>
+								</AutoCommandBar>
+								<ExtendedTooltip name="МагазиныExtendedTooltip" id="43"/>
+								<SearchStringAddition name="МагазиныSearchString" id="57">
+									<AdditionSource>
+										<Item>Магазины</Item>
+										<Type>SearchStringRepresentation</Type>
+									</AdditionSource>
+									<ContextMenu name="МагазиныSearchStringContextMenu" id="58"/>
+									<ExtendedTooltip name="МагазиныSearchStringExtendedTooltip" id="59"/>
+								</SearchStringAddition>
+								<ViewStatusAddition name="МагазиныViewStatus" id="60">
+									<AdditionSource>
+										<Item>Магазины</Item>
+										<Type>ViewStatusRepresentation</Type>
+									</AdditionSource>
+									<ContextMenu name="МагазиныViewStatusContextMenu" id="61"/>
+									<ExtendedTooltip name="МагазиныViewStatusExtendedTooltip" id="62"/>
+								</ViewStatusAddition>
+								<SearchControlAddition name="МагазиныSearchControl" id="63">
+									<AdditionSource>
+										<Item>Магазины</Item>
+										<Type>SearchControl</Type>
+									</AdditionSource>
+									<ContextMenu name="МагазиныSearchControlContextMenu" id="64"/>
+									<ExtendedTooltip name="МагазиныSearchControlExtendedTooltip" id="65"/>
+								</SearchControlAddition>
+								<ChildItems>
+									<InputField name="МагазиныМагазин" id="16">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Магазины</v8:content>
+											</v8:item>
+										</Title>
+										<TitleFont ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<EditMode>EnterOnInput</EditMode>
+										<Font ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
+										<ContextMenu name="МагазиныМагазинКонтекстноеМеню" id="17"/>
+										<ExtendedTooltip name="МагазиныМагазинExtendedTooltip" id="44"/>
+									</InputField>
+								</ChildItems>
+							</Table>
+						</ChildItems>
+					</Page>
+					<Page name="СтраницаВыбораКассы" id="20">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Страница выбора кассы</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СтраницаВыбораКассыExtendedTooltip" id="45"/>
+						<ChildItems>
+							<UsualGroup name="ГруппаКассыШапка" id="28">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа кассы шапка</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Horizontal</Group>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаКассыШапкаРасширеннаяПодсказка" id="46"/>
+								<ChildItems>
+									<Button name="КомандаНазадКСпискуКнопок" id="29">
+										<Type>UsualButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="КомандаНазадКСпискуКнопокExtendedTooltip" id="47"/>
+									</Button>
+									<Button name="ВыборКассы" id="51">
+										<Type>UsualButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="ВыборКассыРасширеннаяПодсказка" id="52"/>
+									</Button>
+									<LabelDecoration name="ДекорацияВыберитеКассу" id="21">
+										<Font ref="sys:DefaultGUIFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Выберите кассу</v8:content>
+											</v8:item>
+										</Title>
+										<ContextMenu name="ДекорацияВыберитеКассуКонтекстноеМеню" id="22"/>
+										<ExtendedTooltip name="ДекорацияВыберитеКассуExtendedTooltip" id="48"/>
+									</LabelDecoration>
+								</ChildItems>
+							</UsualGroup>
+							<Table name="Кассы" id="23">
+								<Representation>List</Representation>
+								<ReadOnly>true</ReadOnly>
+								<Width>30</Width>
+								<AutoInsertNewRow>true</AutoInsertNewRow>
+								<EnableStartDrag>true</EnableStartDrag>
+								<EnableDrag>true</EnableDrag>
+								<FileDragMode>AsFile</FileDragMode>
+								<SearchStringLocation>None</SearchStringLocation>
+								<ViewStatusLocation>None</ViewStatusLocation>
+								<SearchControlLocation>None</SearchControlLocation>
+								<RowFilter xsi:nil="true"/>
+								<ContextMenu name="КассыКонтекстноеМеню" id="24"/>
+								<AutoCommandBar name="КассыКоманднаяПанель" id="25">
+									<Autofill>false</Autofill>
+								</AutoCommandBar>
+								<ExtendedTooltip name="КассыExtendedTooltip" id="49"/>
+								<SearchStringAddition name="КассыSearchString" id="66">
+									<AdditionSource>
+										<Item>Кассы</Item>
+										<Type>SearchStringRepresentation</Type>
+									</AdditionSource>
+									<ContextMenu name="КассыSearchStringContextMenu" id="67"/>
+									<ExtendedTooltip name="КассыSearchStringExtendedTooltip" id="68"/>
+								</SearchStringAddition>
+								<ViewStatusAddition name="КассыViewStatus" id="69">
+									<AdditionSource>
+										<Item>Кассы</Item>
+										<Type>ViewStatusRepresentation</Type>
+									</AdditionSource>
+									<ContextMenu name="КассыViewStatusContextMenu" id="70"/>
+									<ExtendedTooltip name="КассыViewStatusExtendedTooltip" id="71"/>
+								</ViewStatusAddition>
+								<SearchControlAddition name="КассыSearchControl" id="72">
+									<AdditionSource>
+										<Item>Кассы</Item>
+										<Type>SearchControl</Type>
+									</AdditionSource>
+									<ContextMenu name="КассыSearchControlContextMenu" id="73"/>
+									<ExtendedTooltip name="КассыSearchControlExtendedTooltip" id="74"/>
+								</SearchControlAddition>
+								<ChildItems>
+									<InputField name="КассыКасса" id="26">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Кассы</v8:content>
+											</v8:item>
+										</Title>
+										<TitleFont ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<EditMode>EnterOnInput</EditMode>
+										<Font ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<ContextMenu name="КассыКассаКонтекстноеМеню" id="27"/>
+										<ExtendedTooltip name="КассыКассаExtendedTooltip" id="50"/>
+									</InputField>
+								</ChildItems>
+							</Table>
+						</ChildItems>
+					</Page>
+				</ChildItems>
+			</Pages>
+		</ChildItems>
+		<Attributes/>
+	</BaseForm>
+</Form>

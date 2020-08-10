@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Catalog uuid="9f66f3d7-86f8-43ae-b0c4-d645fb61a4d2">
+		<InternalInfo>
+			<xr:GeneratedType name="CatalogObject.СкидкиНаценки" category="Object">
+				<xr:TypeId>46937c8e-6310-4c03-9139-8e5192cb4154</xr:TypeId>
+				<xr:ValueId>d8336fe4-48f7-401b-9945-3876b451865c</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogRef.СкидкиНаценки" category="Ref">
+				<xr:TypeId>8570ae11-4235-418c-b46e-8214cd717dec</xr:TypeId>
+				<xr:ValueId>219bda32-b585-4adb-bb54-d6b952e95d9a</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogSelection.СкидкиНаценки" category="Selection">
+				<xr:TypeId>20e28d75-5ce6-4280-8c11-3ad3c025ca84</xr:TypeId>
+				<xr:ValueId>3b6f26e6-1684-4c78-bd56-68c30dfc7a4d</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogList.СкидкиНаценки" category="List">
+				<xr:TypeId>1af7fe6c-3762-4929-96d6-933e574bf9c4</xr:TypeId>
+				<xr:ValueId>6f61bc19-9ea3-4d91-9583-1eef5e0b1762</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogManager.СкидкиНаценки" category="Manager">
+				<xr:TypeId>ec8edc70-82b8-4a76-9c5e-3ef0b1de4d1f</xr:TypeId>
+				<xr:ValueId>fbef17b4-5230-40ed-8648-f59aa32458fb</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>СкидкиНаценки</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>25600f00-5a0f-4302-95ea-d20a98b8212d</ExtendedConfigurationObject>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="7f1a654d-3d6d-41a6-a0ae-4aaa47e7ff61">
+				<InternalInfo/>
+				<Properties>
+					<Name>ЗначениеСкидкиНаценки</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>accc1785-41b4-4838-91c8-3b7163156175</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="c162dc98-bb09-4a41-946f-78aadeab711b">
+				<InternalInfo/>
+				<Properties>
+					<Name>ОбластьПредоставления</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>3291aa65-561f-49bf-bf47-edd11377644e</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ВариантыОбластейОграниченияСкидокНаценок</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="2f38b5d2-dbb8-4dd5-b2bf-303074c00ab6">
+				<InternalInfo/>
+				<Properties>
+					<Name>Управляемая</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>8fc52cbd-c9cb-4288-a66d-1f50ebf6dc37</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+		</ChildObjects>
+	</Catalog>
+</MetaDataObject>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Catalog uuid="03c1c7c4-7915-47c6-8696-8ce7e3fa1c9b">
+		<InternalInfo>
+			<xr:GeneratedType name="CatalogObject.Магазины" category="Object">
+				<xr:TypeId>2f21f08a-a01c-42a9-8e80-0118900b5d7f</xr:TypeId>
+				<xr:ValueId>ba0c315f-3841-4137-ad15-ac1be00a2af1</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogRef.Магазины" category="Ref">
+				<xr:TypeId>c3b0b47b-0340-43ce-b657-e3e078e1a7b3</xr:TypeId>
+				<xr:ValueId>a4c54110-ae19-4b61-9791-23c37988b1b0</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogSelection.Магазины" category="Selection">
+				<xr:TypeId>dccd59b2-4782-45e6-a011-068f9e30a79d</xr:TypeId>
+				<xr:ValueId>f8b2194b-3104-4ceb-b00d-854d0f66115a</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogList.Магазины" category="List">
+				<xr:TypeId>da8026c0-b8aa-4b07-b6d2-6e070582f661</xr:TypeId>
+				<xr:ValueId>695e22dc-5f30-4a73-b3bc-2a3051d2474f</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogManager.Магазины" category="Manager">
+				<xr:TypeId>733734ae-250d-4a1c-bb16-c92252df8f46</xr:TypeId>
+				<xr:ValueId>ba0ade0a-865a-4f23-906c-7ae3fa899365</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>Магазины</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>ba52ee3f-d48d-44cd-a79d-d7f05dd1227b</ExtendedConfigurationObject>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="51bc7b53-bbea-4a11-981d-73a4cc5b608f">
+				<InternalInfo/>
+				<Properties>
+					<Name>СкладПродажи</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>c8ad03c5-9f4a-45dc-9f56-13a411a56388</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="8080c393-74d6-43fa-a7a8-d6275e212232">
+				<InternalInfo/>
+				<Properties>
+					<Name>ИспользоватьОрдернуюСхемуПриПеремещении</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>26f17a3e-0889-4343-a79e-e0f6562ef947</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+		</ChildObjects>
+	</Catalog>
+</MetaDataObject>

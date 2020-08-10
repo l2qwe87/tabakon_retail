@@ -1,0 +1,1881 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<CommandBar name="КомандыФормы" id="129">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команды формы</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSource>Form</CommandSource>
+			<ExtendedTooltip name="КомандыФормыРасширеннаяПодсказка" id="130"/>
+			<ChildItems>
+				<Button name="ФормаВыполнитьРаспределение" id="96">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ФормаВыполнитьРаспределениеРасширеннаяПодсказка" id="97"/>
+				</Button>
+				<Button name="ФормаОформитьРасхождения" id="111">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ФормаОформитьРасхожденияРасширеннаяПодсказка" id="112"/>
+				</Button>
+				<Popup name="Печать" id="68">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Опись номенклатуры</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>StdPicture.Print</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ПечатьРасширеннаяПодсказка" id="69"/>
+					<ChildItems>
+						<Button name="ТоварыДеревоПечатьОписьНоменклатурыПоРаспоряжению" id="70">
+							<Type>CommandBarButton</Type>
+							<CommandName>0</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>По распоряжению</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ТоварыДеревоПечатьОписьНоменклатурыПоРаспоряжениюРасширеннаяПодсказка" id="71"/>
+						</Button>
+						<Button name="ТоварыДеревоПечатьОписьНоменклатурыПоФакту" id="72">
+							<Type>CommandBarButton</Type>
+							<CommandName>0</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>По факту</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ТоварыДеревоПечатьОписьНоменклатурыПоФактуРасширеннаяПодсказка" id="73"/>
+						</Button>
+						<Button name="ТоварыДеревоПечатьОписьНоменклатурыПоВсемСкладам" id="74">
+							<Type>CommandBarButton</Type>
+							<CommandName>0</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>По всем складам</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ТоварыДеревоПечатьОписьНоменклатурыПоВсемСкладамРасширеннаяПодсказка" id="75"/>
+						</Button>
+					</ChildItems>
+				</Popup>
+				<Button name="ФормаОбновитьЗаполнение" id="113">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.Refresh</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перезаполнить по распоряжению</v8:content>
+						</v8:item>
+					</Title>
+					<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="ФормаОбновитьЗаполнениеРасширеннаяПодсказка" id="114"/>
+				</Button>
+				<Button name="ФормаОстаткиТоваров" id="193">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>0</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остатки на складах</v8:content>
+						</v8:item>
+					</Title>
+					<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="ФормаОстаткиТоваровРасширеннаяПодсказка" id="194"/>
+				</Button>
+				<ButtonGroup name="ФормаГруппаНастройкиИЗакрыть" id="177">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Форма группа настройки и закрыть</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ФормаГруппаНастройкиИЗакрытьРасширеннаяПодсказка" id="178"/>
+					<ChildItems>
+						<Button name="ФормаНастройкиРаспределения" id="175">
+							<Type>CommandBarButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>0</CommandName>
+							<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="ФормаНастройкиРаспределенияРасширеннаяПодсказка" id="176"/>
+						</Button>
+					</ChildItems>
+				</ButtonGroup>
+			</ChildItems>
+		</CommandBar>
+		<UsualGroup name="ГруппаШапка" id="131">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="132"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаРаспоряжениеМагазинСклад" id="139">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа распоряжение магазин склад</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРаспоряжениеМагазинСкладРасширеннаяПодсказка" id="140"/>
+					<ChildItems>
+						<LabelField name="ДокументРаспоряжение" id="55">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Распоряжение</v8:content>
+								</v8:item>
+							</Title>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="ДокументРаспоряжениеКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="ДокументРаспоряжениеРасширеннаяПодсказка" id="57"/>
+						</LabelField>
+						<LabelField name="Магазин" id="157">
+							<ContextMenu name="МагазинКонтекстноеМеню" id="158"/>
+							<ExtendedTooltip name="МагазинРасширеннаяПодсказка" id="159"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницы" id="148">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="149"/>
+			<ChildItems>
+				<Page name="СтраницаТовары" id="150">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Товары</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalSpacing>Half</VerticalSpacing>
+					<ExtendedTooltip name="СтраницаТоварыРасширеннаяПодсказка" id="151"/>
+					<ChildItems>
+						<CommandBar name="ТоварыДеревоКоманднаяПанель1" id="212">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Товары дерево командная панель1</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ТоварыДеревоКоманднаяПанель1РасширеннаяПодсказка" id="213"/>
+							<ChildItems>
+								<Button name="ТоварыДеревоДобавитьНоменклатура" id="146">
+									<Type>CommandBarButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>0</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подобрать товары...</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ТоварыДеревоДобавитьНоменклатураРасширеннаяПодсказка" id="147"/>
+								</Button>
+								<ButtonGroup name="ТоварыДеревоГруппаПодключаемоеОборудование" id="115">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Товары дерево группа подключаемое оборудование</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ТоварыДеревоГруппаПодключаемоеОборудованиеРасширеннаяПодсказка" id="116"/>
+									<ChildItems>
+										<Button name="ТоварыДеревоПоискПоШтрихкоду" id="123">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ТоварыДеревоПоискПоШтрихкодуРасширеннаяПодсказка" id="124"/>
+										</Button>
+										<Button name="ТоварыДеревоПоискПоМагнитномуКоду" id="121">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ТоварыДеревоПоискПоМагнитномуКодуРасширеннаяПодсказка" id="122"/>
+										</Button>
+										<Button name="ТоварыДеревоВыгрузитьДанныеВТСД" id="117">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ТоварыДеревоВыгрузитьДанныеВТСДРасширеннаяПодсказка" id="118"/>
+										</Button>
+										<Button name="ТоварыДеревоЗагрузитьДанныеИзТСД" id="119">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ТоварыДеревоЗагрузитьДанныеИзТСДРасширеннаяПодсказка" id="120"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+								<ButtonGroup name="ТоварыДеревоГруппаРаботаСКоличеством" id="135">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Товары дерево группа работа с количеством</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ТоварыДеревоГруппаРаботаСКоличествомРасширеннаяПодсказка" id="136"/>
+									<ChildItems>
+										<Button name="ТоварыДеревоЗаполнитьФактПоРаспоряжению" id="109">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ТоварыДеревоЗаполнитьФактПоРаспоряжениюРасширеннаяПодсказка" id="110"/>
+										</Button>
+										<Popup name="ГруппаРаспределение" id="76">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Распределить</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.РаспределитьПоСкладам</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<Representation>PictureAndText</Representation>
+											<ExtendedTooltip name="ГруппаРаспределениеРасширеннаяПодсказка" id="77"/>
+											<ChildItems>
+												<Popup name="ГруппаВсеНаОдинСклад" id="216">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Все количество на один склад</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ГруппаВсеНаОдинСкладРасширеннаяПодсказка" id="217"/>
+												</Popup>
+												<Popup name="ГруппаОстатокНаСклад" id="218">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Оставшееся количество на склад</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ГруппаОстатокНаСкладРасширеннаяПодсказка" id="219"/>
+												</Popup>
+												<Button name="ТоварыДеревоРаспределитьПоОстаткам" id="82">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>По остаткам</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ТоварыДеревоРаспределитьПоОстаткамРасширеннаяПодсказка" id="83"/>
+												</Button>
+												<Button name="ТоварыДеревоРаспределитьПоПотребностям" id="84">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>По потребностям</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ТоварыДеревоРаспределитьПоПотребностямРасширеннаяПодсказка" id="85"/>
+												</Button>
+												<Button name="ТоварыДеревоРаспределитьПоПравиламРаспределения" id="86">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>По правилам распределения</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ТоварыДеревоРаспределитьПоПравиламРаспределенияРасширеннаяПодсказка" id="87"/>
+												</Button>
+												<ButtonGroup name="ТоварыДеревоГруппаРаспределитьДополнительно" id="94">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Товары дерево группа распределить дополнительно</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ТоварыДеревоГруппаРаспределитьДополнительноРасширеннаяПодсказка" id="95"/>
+												</ButtonGroup>
+											</ChildItems>
+										</Popup>
+										<Button name="ТоварыДеревоПоказатьОстатки" id="133">
+											<Type>CommandBarButton</Type>
+											<Visible>false</Visible>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ТоварыДеревоПоказатьОстаткиРасширеннаяПодсказка" id="134"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+								<ButtonGroup name="ТоварыДеревоГруппаРаботаСРасхождениями" id="201">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Товары дерево группа работа с расхождениями</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ТоварыДеревоГруппаРаботаСРасхождениямиРасширеннаяПодсказка" id="202"/>
+									<ChildItems>
+										<Button name="ТоварыДеревоПоказатьРасхождения" id="203">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Picture>
+												<xr:Ref>CommonPicture.ОтборРасхождений</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отобрать расхождения</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ТоварыДеревоПоказатьРасхожденияРасширеннаяПодсказка" id="204"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+								<Button name="ВидимостьСкладов" id="185">
+									<Type>CommandBarHyperlink</Type>
+									<CommandName>0</CommandName>
+									<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="ВидимостьСкладовРасширеннаяПодсказка" id="186"/>
+								</Button>
+								<ButtonGroup name="ТоварыДеревоГруппаРаботыСДеревом" id="179">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Товары дерево группа работы с деревом</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ТоварыДеревоГруппаРаботыСДеревомРасширеннаяПодсказка" id="180"/>
+									<ChildItems>
+										<Button name="ТоварыДеревоДеревоСвернутьВсе" id="181">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ТоварыДеревоДеревоСвернутьВсеРасширеннаяПодсказка" id="182"/>
+										</Button>
+										<Button name="ТоварыДеревоДеревоРазвернутьВсе" id="183">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ТоварыДеревоДеревоРазвернутьВсеРасширеннаяПодсказка" id="184"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+								<ButtonGroup name="ГруппаСтандартныеКоманды" id="214">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа стандартные команды</v8:content>
+										</v8:item>
+									</Title>
+									<CommandSource>Item.ТоварыДерево</CommandSource>
+									<ExtendedTooltip name="ГруппаСтандартныеКомандыРасширеннаяПодсказка" id="215"/>
+								</ButtonGroup>
+							</ChildItems>
+						</CommandBar>
+						<Table name="ТоварыДерево" id="1">
+							<Representation>Tree</Representation>
+							<SearchOnInput>DontUse</SearchOnInput>
+							<InitialTreeView>ExpandTopLevel</InitialTreeView>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="ТоварыДеревоКонтекстноеМеню" id="2"/>
+							<AutoCommandBar name="ТоварыДеревоКоманднаяПанель" id="3">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТоварыДеревоРасширеннаяПодсказка" id="4"/>
+							<SearchStringAddition name="ТоварыДеревоСтрокаПоиска" id="5">
+								<AdditionSource>
+									<Item>ТоварыДерево</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТоварыДеревоСтрокаПоискаКонтекстноеМеню" id="6"/>
+								<ExtendedTooltip name="ТоварыДеревоСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТоварыДеревоСостояниеПросмотра" id="8">
+								<AdditionSource>
+									<Item>ТоварыДерево</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТоварыДеревоСостояниеПросмотраКонтекстноеМеню" id="9"/>
+								<ExtendedTooltip name="ТоварыДеревоСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТоварыДеревоУправлениеПоиском" id="11">
+								<AdditionSource>
+									<Item>ТоварыДерево</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТоварыДеревоУправлениеПоискомКонтекстноеМеню" id="12"/>
+								<ExtendedTooltip name="ТоварыДеревоУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<ColumnGroup name="ТоварыДеревоГруппаНоменклатураХарактеристика" id="44">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Товары дерево группа номенклатура характеристика</v8:content>
+										</v8:item>
+									</Title>
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТоварыДеревоГруппаНоменклатураХарактеристикаРасширеннаяПодсказка" id="45"/>
+									<ChildItems>
+										<InputField name="ТоварыДеревоНоменклатура" id="14">
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТоварыДеревоНоменклатураКонтекстноеМеню" id="15"/>
+											<ExtendedTooltip name="ТоварыДеревоНоменклатураРасширеннаяПодсказка" id="16"/>
+										</InputField>
+										<InputField name="ТоварыДеревоХарактеристика" id="17">
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТоварыДеревоХарактеристикаКонтекстноеМеню" id="18"/>
+											<ExtendedTooltip name="ТоварыДеревоХарактеристикаРасширеннаяПодсказка" id="19"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ТоварыДеревоНоменклатураКод" id="195">
+									<EditMode>EnterOnInput</EditMode>
+									<Width>9</Width>
+									<ContextMenu name="ТоварыДеревоНоменклатураКодКонтекстноеМеню" id="196"/>
+									<ExtendedTooltip name="ТоварыДеревоНоменклатураКодРасширеннаяПодсказка" id="197"/>
+								</InputField>
+								<InputField name="ТоварыДеревоНоменклатураАртикул" id="198">
+									<EditMode>EnterOnInput</EditMode>
+									<Width>12</Width>
+									<ContextMenu name="ТоварыДеревоНоменклатураАртикулКонтекстноеМеню" id="199"/>
+									<ExtendedTooltip name="ТоварыДеревоНоменклатураАртикулРасширеннаяПодсказка" id="200"/>
+								</InputField>
+								<ColumnGroup name="ТоварыДеревоГруппаУпаковкаЕдиницаИзмерения" id="53">
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Товары дерево группа упаковка единица измерения</v8:content>
+										</v8:item>
+									</Title>
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТоварыДеревоГруппаУпаковкаЕдиницаИзмеренияРасширеннаяПодсказка" id="54"/>
+									<ChildItems>
+										<InputField name="ТоварыДеревоУпаковка" id="20">
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<ContextMenu name="ТоварыДеревоУпаковкаКонтекстноеМеню" id="21"/>
+											<ExtendedTooltip name="ТоварыДеревоУпаковкаРасширеннаяПодсказка" id="22"/>
+										</InputField>
+										<LabelField name="ТоварыДеревоНоменклатураЕдиницаИзмерения" id="50">
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ед.изм.</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<ContextMenu name="ТоварыДеревоНоменклатураЕдиницаИзмеренияКонтекстноеМеню" id="51"/>
+											<ExtendedTooltip name="ТоварыДеревоНоменклатураЕдиницаИзмеренияРасширеннаяПодсказка" id="52"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ТоварыДеревоЦена" id="41">
+									<Width>9</Width>
+									<ContextMenu name="ТоварыДеревоЦенаКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="ТоварыДеревоЦенаРасширеннаяПодсказка" id="43"/>
+								</InputField>
+								<ColumnGroup name="ТоварыДеревоГруппаКоличествоОстатокРаспоряжение" id="168">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Товары дерево группа количество остаток распоряжение</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ТоварыДеревоГруппаКоличествоОстатокРаспоряжениеРасширеннаяПодсказка" id="169"/>
+									<ChildItems>
+										<ColumnGroup name="ТоварыДеревоГруппаКоличествоУпаковокРаспоряжение" id="46">
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Товары дерево группа количество упаковок распоряжение</v8:content>
+												</v8:item>
+											</Title>
+											<Group>InCell</Group>
+											<ExtendedTooltip name="ТоварыДеревоГруппаКоличествоУпаковокРаспоряжениеРасширеннаяПодсказка" id="47"/>
+											<ChildItems>
+												<PictureField name="ТоварыДеревоСтатусыСерийИПодарочныхСертификатовРаспоряжение" id="29">
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>1</Width>
+													<ValuesPicture>
+														<xr:Ref>CommonPicture.СтатусыСерийИПодарочныхСертификатов</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</ValuesPicture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="ТоварыДеревоСтатусыСерийИПодарочныхСертификатовРаспоряжениеКонтекстноеМеню" id="30"/>
+													<ExtendedTooltip name="ТоварыДеревоСтатусыСерийИПодарочныхСертификатовРаспоряжениеРасширеннаяПодсказка" id="31"/>
+												</PictureField>
+												<InputField name="ТоварыДеревоКоличествоУпаковокРаспоряжение" id="26">
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>По плану</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>8</Width>
+													<ContextMenu name="ТоварыДеревоКоличествоУпаковокРаспоряжениеКонтекстноеМеню" id="27"/>
+													<ExtendedTooltip name="ТоварыДеревоКоличествоУпаковокРаспоряжениеРасширеннаяПодсказка" id="28"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="ТоварыДеревоГруппаОстатокРаспоряжение" id="173">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Товары дерево группа остаток распоряжение</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ТоварыДеревоГруппаОстатокРаспоряжениеРасширеннаяПодсказка" id="174"/>
+										</ColumnGroup>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТоварыДеревоГруппаКоличествоУпаковокФакт" id="48">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Товары дерево группа количество упаковок факт</v8:content>
+										</v8:item>
+									</Title>
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТоварыДеревоГруппаКоличествоУпаковокФактРасширеннаяПодсказка" id="49"/>
+									<ChildItems>
+										<PictureField name="ТоварыДеревоСтатусыСерийИПодарочныхСертификатовФакт" id="62">
+											<TitleLocation>None</TitleLocation>
+											<EditMode>Directly</EditMode>
+											<Width>1</Width>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.СтатусыСерийИПодарочныхСертификатов</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</ValuesPicture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ТоварыДеревоСтатусыСерийИПодарочныхСертификатовФактКонтекстноеМеню" id="63"/>
+											<ExtendedTooltip name="ТоварыДеревоСтатусыСерийИПодарочныхСертификатовФактРасширеннаяПодсказка" id="64"/>
+										</PictureField>
+										<InputField name="ТоварыДеревоКоличествоУпаковокФакт" id="35">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>По факту</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<ContextMenu name="ТоварыДеревоКоличествоУпаковокФактКонтекстноеМеню" id="36"/>
+											<ExtendedTooltip name="ТоварыДеревоКоличествоУпаковокФактРасширеннаяПодсказка" id="37"/>
+										</InputField>
+										<LabelField name="ТоварыДеревоКоличествоУпаковокОтклонение" id="187">
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<Width>3</Width>
+											<ContextMenu name="ТоварыДеревоКоличествоУпаковокОтклонениеКонтекстноеМеню" id="188"/>
+											<ExtendedTooltip name="ТоварыДеревоКоличествоУпаковокОтклонениеРасширеннаяПодсказка" id="189"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТоварыДеревоГруппаКоличествоПеремещение" id="58">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Переместить</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="ТоварыДеревоГруппаКоличествоПеремещениеРасширеннаяПодсказка" id="59"/>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОформленныеДокументы" id="152">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Созданные документы</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>StdPicture.Document</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СтраницаОформленныеДокументыРасширеннаяПодсказка" id="153"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация1" id="154">
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="155"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="156"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаОформленныеДокументы" id="160">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа оформленные документы</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОформленныеДокументыРасширеннаяПодсказка" id="161"/>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТоварыДеревоНоменклатура</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТоварыДеревоНоменклатураКод</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТоварыДеревоНоменклатураАртикул</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТоварыДерево.Характеристика</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Отображать</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТоварыДеревоНоменклатураЕдиницаИзмерения</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ТоварыДерево.Упаковка</dcsset:left>
+							<dcsset:comparisonType>Filled</dcsset:comparisonType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ТоварыДерево.ЭтоГруппа</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Отображать</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТоварыДерево</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТоварыДерево.ЭтоГруппа</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ЦветФонаЧередованияСтрокТабличнойЧасти</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТоварыДеревоКоличествоУпаковокОтклонение</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ТоварыДерево.КоличествоУпаковокОтклонение</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string"/>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ТоварыДерево.КоличествоФакт</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ПриемкаВслепую</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Отображать</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТоварыДеревоКоличествоУпаковокФакт</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>NotGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>OrGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ТоварыДерево.КоличествоУпаковокОтклонение</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:string"/>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ТоварыДерево.КоличествоФакт</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ПриемкаВслепую</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Отображать</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТоварыДеревоКоличествоУпаковокФакт</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТоварыДерево.ЕстьОшибкиЗаполнения</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ЦветФонаНекорректногоКонтрагентаВДокументе</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ОтметкаНезаполненного</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТоварыДеревоКоличествоУпаковокРаспоряжение</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТоварыДерево.ЕстьОшибкиЗаполнения</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">РаботаСФактом</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ЦветФонаНекорректногоКонтрагентаВДокументе</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ОтметкаНезаполненного</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТоварыДеревоНоменклатураАртикул</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДополнительныеКолонкиНоменклатуры</dcsset:left>
+						<dcsset:comparisonType>NotInList</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ДополнительнаяКолонкаПечатныхФормДокументов.Артикул</dcsset:right>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ДополнительнаяКолонкаПечатныхФормДокументов.КодАртикул</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Видимость</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТоварыДеревоНоменклатураКод</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДополнительныеКолонкиНоменклатуры</dcsset:left>
+						<dcsset:comparisonType>NotInList</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ДополнительнаяКолонкаПечатныхФормДокументов.Код</dcsset:right>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ДополнительнаяКолонкаПечатныхФормДокументов.КодАртикул</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Видимость</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<BaseForm version="2.9">
+		<AutoTitle>false</AutoTitle>
+		<CommandBarLocation>None</CommandBarLocation>
+		<CommandSet>
+			<ExcludedCommand>Abort</ExcludedCommand>
+			<ExcludedCommand>Cancel</ExcludedCommand>
+			<ExcludedCommand>Ignore</ExcludedCommand>
+			<ExcludedCommand>No</ExcludedCommand>
+			<ExcludedCommand>OK</ExcludedCommand>
+			<ExcludedCommand>RestoreValues</ExcludedCommand>
+			<ExcludedCommand>Retry</ExcludedCommand>
+			<ExcludedCommand>SaveValues</ExcludedCommand>
+			<ExcludedCommand>Yes</ExcludedCommand>
+		</CommandSet>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+		<ChildItems>
+			<CommandBar name="КомандыФормы" id="129">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Команды формы</v8:content>
+					</v8:item>
+				</Title>
+				<CommandSource>Form</CommandSource>
+				<ExtendedTooltip name="КомандыФормыРасширеннаяПодсказка" id="130"/>
+				<ChildItems>
+					<Button name="ФормаВыполнитьРаспределение" id="96">
+						<Type>CommandBarButton</Type>
+						<DefaultButton>true</DefaultButton>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ФормаВыполнитьРаспределениеРасширеннаяПодсказка" id="97"/>
+					</Button>
+					<Button name="ФормаОформитьРасхождения" id="111">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ФормаОформитьРасхожденияРасширеннаяПодсказка" id="112"/>
+					</Button>
+					<Popup name="Печать" id="68">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Опись номенклатуры</v8:content>
+							</v8:item>
+						</Title>
+						<Picture>
+							<xr:Ref>StdPicture.Print</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ПечатьРасширеннаяПодсказка" id="69"/>
+						<ChildItems>
+							<Button name="ТоварыДеревоПечатьОписьНоменклатурыПоРаспоряжению" id="70">
+								<Type>CommandBarButton</Type>
+								<CommandName>0</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>По распоряжению</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ТоварыДеревоПечатьОписьНоменклатурыПоРаспоряжениюРасширеннаяПодсказка" id="71"/>
+							</Button>
+							<Button name="ТоварыДеревоПечатьОписьНоменклатурыПоФакту" id="72">
+								<Type>CommandBarButton</Type>
+								<CommandName>0</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>По факту</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ТоварыДеревоПечатьОписьНоменклатурыПоФактуРасширеннаяПодсказка" id="73"/>
+							</Button>
+							<Button name="ТоварыДеревоПечатьОписьНоменклатурыПоВсемСкладам" id="74">
+								<Type>CommandBarButton</Type>
+								<CommandName>0</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>По всем складам</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ТоварыДеревоПечатьОписьНоменклатурыПоВсемСкладамРасширеннаяПодсказка" id="75"/>
+							</Button>
+						</ChildItems>
+					</Popup>
+					<Button name="ФормаОбновитьЗаполнение" id="113">
+						<Type>CommandBarButton</Type>
+						<CommandName>0</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.Refresh</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Перезаполнить по распоряжению</v8:content>
+							</v8:item>
+						</Title>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ФормаОбновитьЗаполнениеРасширеннаяПодсказка" id="114"/>
+					</Button>
+					<Button name="ФормаОстаткиТоваров" id="193">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>0</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Остатки на складах</v8:content>
+							</v8:item>
+						</Title>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ФормаОстаткиТоваровРасширеннаяПодсказка" id="194"/>
+					</Button>
+					<ButtonGroup name="ФормаГруппаНастройкиИЗакрыть" id="177">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Форма группа настройки и закрыть</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ФормаГруппаНастройкиИЗакрытьРасширеннаяПодсказка" id="178"/>
+						<ChildItems>
+							<Button name="ФормаНастройкиРаспределения" id="175">
+								<Type>CommandBarButton</Type>
+								<Representation>PictureAndText</Representation>
+								<CommandName>0</CommandName>
+								<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="ФормаНастройкиРаспределенияРасширеннаяПодсказка" id="176"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+				</ChildItems>
+			</CommandBar>
+			<UsualGroup name="ГруппаШапка" id="131">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа шапка</v8:content>
+					</v8:item>
+				</Title>
+				<HorizontalStretch>true</HorizontalStretch>
+				<Group>Horizontal</Group>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="132"/>
+				<ChildItems>
+					<UsualGroup name="ГруппаРаспоряжениеМагазинСклад" id="139">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа распоряжение магазин склад</v8:content>
+							</v8:item>
+						</Title>
+						<Group>Vertical</Group>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ГруппаРаспоряжениеМагазинСкладРасширеннаяПодсказка" id="140"/>
+						<ChildItems>
+							<LabelField name="ДокументРаспоряжение" id="55">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Распоряжение</v8:content>
+									</v8:item>
+								</Title>
+								<Hiperlink>true</Hiperlink>
+								<ContextMenu name="ДокументРаспоряжениеКонтекстноеМеню" id="56"/>
+								<ExtendedTooltip name="ДокументРаспоряжениеРасширеннаяПодсказка" id="57"/>
+							</LabelField>
+							<LabelField name="Магазин" id="157">
+								<ContextMenu name="МагазинКонтекстноеМеню" id="158"/>
+								<ExtendedTooltip name="МагазинРасширеннаяПодсказка" id="159"/>
+							</LabelField>
+						</ChildItems>
+					</UsualGroup>
+				</ChildItems>
+			</UsualGroup>
+			<Pages name="ГруппаСтраницы" id="148">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа страницы</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="149"/>
+				<ChildItems>
+					<Page name="СтраницаТовары" id="150">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Товары</v8:content>
+							</v8:item>
+						</Title>
+						<VerticalSpacing>Half</VerticalSpacing>
+						<ExtendedTooltip name="СтраницаТоварыРасширеннаяПодсказка" id="151"/>
+						<ChildItems>
+							<CommandBar name="ТоварыДеревоКоманднаяПанель1" id="212">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Товары дерево командная панель1</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ТоварыДеревоКоманднаяПанель1РасширеннаяПодсказка" id="213"/>
+								<ChildItems>
+									<Button name="ТоварыДеревоДобавитьНоменклатура" id="146">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>0</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Подобрать товары...</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ТоварыДеревоДобавитьНоменклатураРасширеннаяПодсказка" id="147"/>
+									</Button>
+									<ButtonGroup name="ТоварыДеревоГруппаПодключаемоеОборудование" id="115">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Товары дерево группа подключаемое оборудование</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ТоварыДеревоГруппаПодключаемоеОборудованиеРасширеннаяПодсказка" id="116"/>
+										<ChildItems>
+											<Button name="ТоварыДеревоПоискПоШтрихкоду" id="123">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="ТоварыДеревоПоискПоШтрихкодуРасширеннаяПодсказка" id="124"/>
+											</Button>
+											<Button name="ТоварыДеревоПоискПоМагнитномуКоду" id="121">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="ТоварыДеревоПоискПоМагнитномуКодуРасширеннаяПодсказка" id="122"/>
+											</Button>
+											<Button name="ТоварыДеревоВыгрузитьДанныеВТСД" id="117">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="ТоварыДеревоВыгрузитьДанныеВТСДРасширеннаяПодсказка" id="118"/>
+											</Button>
+											<Button name="ТоварыДеревоЗагрузитьДанныеИзТСД" id="119">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="ТоварыДеревоЗагрузитьДанныеИзТСДРасширеннаяПодсказка" id="120"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ТоварыДеревоГруппаРаботаСКоличеством" id="135">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Товары дерево группа работа с количеством</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ТоварыДеревоГруппаРаботаСКоличествомРасширеннаяПодсказка" id="136"/>
+										<ChildItems>
+											<Button name="ТоварыДеревоЗаполнитьФактПоРаспоряжению" id="109">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="ТоварыДеревоЗаполнитьФактПоРаспоряжениюРасширеннаяПодсказка" id="110"/>
+											</Button>
+											<Popup name="ГруппаРаспределение" id="76">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Распределить</v8:content>
+													</v8:item>
+												</Title>
+												<Picture>
+													<xr:Ref>CommonPicture.РаспределитьПоСкладам</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<Representation>PictureAndText</Representation>
+												<ExtendedTooltip name="ГруппаРаспределениеРасширеннаяПодсказка" id="77"/>
+												<ChildItems>
+													<Popup name="ГруппаВсеНаОдинСклад" id="216">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Все количество на один склад</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="ГруппаВсеНаОдинСкладРасширеннаяПодсказка" id="217"/>
+													</Popup>
+													<Popup name="ГруппаОстатокНаСклад" id="218">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Оставшееся количество на склад</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="ГруппаОстатокНаСкладРасширеннаяПодсказка" id="219"/>
+													</Popup>
+													<Button name="ТоварыДеревоРаспределитьПоОстаткам" id="82">
+														<Type>CommandBarButton</Type>
+														<CommandName>0</CommandName>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>По остаткам</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="ТоварыДеревоРаспределитьПоОстаткамРасширеннаяПодсказка" id="83"/>
+													</Button>
+													<Button name="ТоварыДеревоРаспределитьПоПотребностям" id="84">
+														<Type>CommandBarButton</Type>
+														<CommandName>0</CommandName>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>По потребностям</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="ТоварыДеревоРаспределитьПоПотребностямРасширеннаяПодсказка" id="85"/>
+													</Button>
+													<Button name="ТоварыДеревоРаспределитьПоПравиламРаспределения" id="86">
+														<Type>CommandBarButton</Type>
+														<CommandName>0</CommandName>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>По правилам распределения</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="ТоварыДеревоРаспределитьПоПравиламРаспределенияРасширеннаяПодсказка" id="87"/>
+													</Button>
+													<ButtonGroup name="ТоварыДеревоГруппаРаспределитьДополнительно" id="94">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Товары дерево группа распределить дополнительно</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="ТоварыДеревоГруппаРаспределитьДополнительноРасширеннаяПодсказка" id="95"/>
+													</ButtonGroup>
+												</ChildItems>
+											</Popup>
+											<Button name="ТоварыДеревоПоказатьОстатки" id="133">
+												<Type>CommandBarButton</Type>
+												<Visible>false</Visible>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="ТоварыДеревоПоказатьОстаткиРасширеннаяПодсказка" id="134"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ТоварыДеревоГруппаРаботаСРасхождениями" id="201">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Товары дерево группа работа с расхождениями</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ТоварыДеревоГруппаРаботаСРасхождениямиРасширеннаяПодсказка" id="202"/>
+										<ChildItems>
+											<Button name="ТоварыДеревоПоказатьРасхождения" id="203">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Picture>
+													<xr:Ref>CommonPicture.ОтборРасхождений</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Отобрать расхождения</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ТоварыДеревоПоказатьРасхожденияРасширеннаяПодсказка" id="204"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="ВидимостьСкладов" id="185">
+										<Type>CommandBarHyperlink</Type>
+										<CommandName>0</CommandName>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ВидимостьСкладовРасширеннаяПодсказка" id="186"/>
+									</Button>
+									<ButtonGroup name="ТоварыДеревоГруппаРаботыСДеревом" id="179">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Товары дерево группа работы с деревом</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ТоварыДеревоГруппаРаботыСДеревомРасширеннаяПодсказка" id="180"/>
+										<ChildItems>
+											<Button name="ТоварыДеревоДеревоСвернутьВсе" id="181">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="ТоварыДеревоДеревоСвернутьВсеРасширеннаяПодсказка" id="182"/>
+											</Button>
+											<Button name="ТоварыДеревоДеревоРазвернутьВсе" id="183">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="ТоварыДеревоДеревоРазвернутьВсеРасширеннаяПодсказка" id="184"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ГруппаСтандартныеКоманды" id="214">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа стандартные команды</v8:content>
+											</v8:item>
+										</Title>
+										<CommandSource>Item.ТоварыДерево</CommandSource>
+										<ExtendedTooltip name="ГруппаСтандартныеКомандыРасширеннаяПодсказка" id="215"/>
+									</ButtonGroup>
+								</ChildItems>
+							</CommandBar>
+							<Table name="ТоварыДерево" id="1">
+								<Representation>Tree</Representation>
+								<SearchOnInput>DontUse</SearchOnInput>
+								<InitialTreeView>ExpandTopLevel</InitialTreeView>
+								<FileDragMode>AsFile</FileDragMode>
+								<ContextMenu name="ТоварыДеревоКонтекстноеМеню" id="2"/>
+								<AutoCommandBar name="ТоварыДеревоКоманднаяПанель" id="3">
+									<Autofill>false</Autofill>
+								</AutoCommandBar>
+								<ExtendedTooltip name="ТоварыДеревоРасширеннаяПодсказка" id="4"/>
+								<SearchStringAddition name="ТоварыДеревоСтрокаПоиска" id="5">
+									<AdditionSource>
+										<Item>ТоварыДерево</Item>
+										<Type>SearchStringRepresentation</Type>
+									</AdditionSource>
+									<ContextMenu name="ТоварыДеревоСтрокаПоискаКонтекстноеМеню" id="6"/>
+									<ExtendedTooltip name="ТоварыДеревоСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+								</SearchStringAddition>
+								<ViewStatusAddition name="ТоварыДеревоСостояниеПросмотра" id="8">
+									<AdditionSource>
+										<Item>ТоварыДерево</Item>
+										<Type>ViewStatusRepresentation</Type>
+									</AdditionSource>
+									<ContextMenu name="ТоварыДеревоСостояниеПросмотраКонтекстноеМеню" id="9"/>
+									<ExtendedTooltip name="ТоварыДеревоСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+								</ViewStatusAddition>
+								<SearchControlAddition name="ТоварыДеревоУправлениеПоиском" id="11">
+									<AdditionSource>
+										<Item>ТоварыДерево</Item>
+										<Type>SearchControl</Type>
+									</AdditionSource>
+									<ContextMenu name="ТоварыДеревоУправлениеПоискомКонтекстноеМеню" id="12"/>
+									<ExtendedTooltip name="ТоварыДеревоУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+								</SearchControlAddition>
+								<ChildItems>
+									<ColumnGroup name="ТоварыДеревоГруппаНоменклатураХарактеристика" id="44">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Товары дерево группа номенклатура характеристика</v8:content>
+											</v8:item>
+										</Title>
+										<Group>InCell</Group>
+										<ExtendedTooltip name="ТоварыДеревоГруппаНоменклатураХарактеристикаРасширеннаяПодсказка" id="45"/>
+										<ChildItems>
+											<InputField name="ТоварыДеревоНоменклатура" id="14">
+												<ReadOnly>true</ReadOnly>
+												<EditMode>EnterOnInput</EditMode>
+												<ContextMenu name="ТоварыДеревоНоменклатураКонтекстноеМеню" id="15"/>
+												<ExtendedTooltip name="ТоварыДеревоНоменклатураРасширеннаяПодсказка" id="16"/>
+											</InputField>
+											<InputField name="ТоварыДеревоХарактеристика" id="17">
+												<ReadOnly>true</ReadOnly>
+												<EditMode>EnterOnInput</EditMode>
+												<ContextMenu name="ТоварыДеревоХарактеристикаКонтекстноеМеню" id="18"/>
+												<ExtendedTooltip name="ТоварыДеревоХарактеристикаРасширеннаяПодсказка" id="19"/>
+											</InputField>
+										</ChildItems>
+									</ColumnGroup>
+									<InputField name="ТоварыДеревоНоменклатураКод" id="195">
+										<EditMode>EnterOnInput</EditMode>
+										<Width>9</Width>
+										<ContextMenu name="ТоварыДеревоНоменклатураКодКонтекстноеМеню" id="196"/>
+										<ExtendedTooltip name="ТоварыДеревоНоменклатураКодРасширеннаяПодсказка" id="197"/>
+									</InputField>
+									<InputField name="ТоварыДеревоНоменклатураАртикул" id="198">
+										<EditMode>EnterOnInput</EditMode>
+										<Width>12</Width>
+										<ContextMenu name="ТоварыДеревоНоменклатураАртикулКонтекстноеМеню" id="199"/>
+										<ExtendedTooltip name="ТоварыДеревоНоменклатураАртикулРасширеннаяПодсказка" id="200"/>
+									</InputField>
+									<ColumnGroup name="ТоварыДеревоГруппаУпаковкаЕдиницаИзмерения" id="53">
+										<ReadOnly>true</ReadOnly>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Товары дерево группа упаковка единица измерения</v8:content>
+											</v8:item>
+										</Title>
+										<Group>InCell</Group>
+										<ExtendedTooltip name="ТоварыДеревоГруппаУпаковкаЕдиницаИзмеренияРасширеннаяПодсказка" id="54"/>
+										<ChildItems>
+											<InputField name="ТоварыДеревоУпаковка" id="20">
+												<ReadOnly>true</ReadOnly>
+												<TitleLocation>None</TitleLocation>
+												<EditMode>EnterOnInput</EditMode>
+												<Width>5</Width>
+												<ContextMenu name="ТоварыДеревоУпаковкаКонтекстноеМеню" id="21"/>
+												<ExtendedTooltip name="ТоварыДеревоУпаковкаРасширеннаяПодсказка" id="22"/>
+											</InputField>
+											<LabelField name="ТоварыДеревоНоменклатураЕдиницаИзмерения" id="50">
+												<ReadOnly>true</ReadOnly>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Ед.изм.</v8:content>
+													</v8:item>
+												</Title>
+												<EditMode>EnterOnInput</EditMode>
+												<Width>5</Width>
+												<ContextMenu name="ТоварыДеревоНоменклатураЕдиницаИзмеренияКонтекстноеМеню" id="51"/>
+												<ExtendedTooltip name="ТоварыДеревоНоменклатураЕдиницаИзмеренияРасширеннаяПодсказка" id="52"/>
+											</LabelField>
+										</ChildItems>
+									</ColumnGroup>
+									<InputField name="ТоварыДеревоЦена" id="41">
+										<Width>9</Width>
+										<ContextMenu name="ТоварыДеревоЦенаКонтекстноеМеню" id="42"/>
+										<ExtendedTooltip name="ТоварыДеревоЦенаРасширеннаяПодсказка" id="43"/>
+									</InputField>
+									<ColumnGroup name="ТоварыДеревоГруппаКоличествоОстатокРаспоряжение" id="168">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Товары дерево группа количество остаток распоряжение</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ТоварыДеревоГруппаКоличествоОстатокРаспоряжениеРасширеннаяПодсказка" id="169"/>
+										<ChildItems>
+											<ColumnGroup name="ТоварыДеревоГруппаКоличествоУпаковокРаспоряжение" id="46">
+												<ReadOnly>true</ReadOnly>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Товары дерево группа количество упаковок распоряжение</v8:content>
+													</v8:item>
+												</Title>
+												<Group>InCell</Group>
+												<ExtendedTooltip name="ТоварыДеревоГруппаКоличествоУпаковокРаспоряжениеРасширеннаяПодсказка" id="47"/>
+												<ChildItems>
+													<PictureField name="ТоварыДеревоСтатусыСерийИПодарочныхСертификатовРаспоряжение" id="29">
+														<ReadOnly>true</ReadOnly>
+														<TitleLocation>None</TitleLocation>
+														<EditMode>EnterOnInput</EditMode>
+														<Width>1</Width>
+														<ValuesPicture>
+															<xr:Ref>CommonPicture.СтатусыСерийИПодарочныхСертификатов</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</ValuesPicture>
+														<FileDragMode>AsFile</FileDragMode>
+														<ContextMenu name="ТоварыДеревоСтатусыСерийИПодарочныхСертификатовРаспоряжениеКонтекстноеМеню" id="30"/>
+														<ExtendedTooltip name="ТоварыДеревоСтатусыСерийИПодарочныхСертификатовРаспоряжениеРасширеннаяПодсказка" id="31"/>
+													</PictureField>
+													<InputField name="ТоварыДеревоКоличествоУпаковокРаспоряжение" id="26">
+														<ReadOnly>true</ReadOnly>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>По плану</v8:content>
+															</v8:item>
+														</Title>
+														<EditMode>EnterOnInput</EditMode>
+														<Width>8</Width>
+														<ContextMenu name="ТоварыДеревоКоличествоУпаковокРаспоряжениеКонтекстноеМеню" id="27"/>
+														<ExtendedTooltip name="ТоварыДеревоКоличествоУпаковокРаспоряжениеРасширеннаяПодсказка" id="28"/>
+													</InputField>
+												</ChildItems>
+											</ColumnGroup>
+											<ColumnGroup name="ТоварыДеревоГруппаОстатокРаспоряжение" id="173">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Товары дерево группа остаток распоряжение</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ТоварыДеревоГруппаОстатокРаспоряжениеРасширеннаяПодсказка" id="174"/>
+											</ColumnGroup>
+										</ChildItems>
+									</ColumnGroup>
+									<ColumnGroup name="ТоварыДеревоГруппаКоличествоУпаковокФакт" id="48">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Товары дерево группа количество упаковок факт</v8:content>
+											</v8:item>
+										</Title>
+										<Group>InCell</Group>
+										<ExtendedTooltip name="ТоварыДеревоГруппаКоличествоУпаковокФактРасширеннаяПодсказка" id="49"/>
+										<ChildItems>
+											<PictureField name="ТоварыДеревоСтатусыСерийИПодарочныхСертификатовФакт" id="62">
+												<TitleLocation>None</TitleLocation>
+												<EditMode>Directly</EditMode>
+												<Width>1</Width>
+												<ValuesPicture>
+													<xr:Ref>CommonPicture.СтатусыСерийИПодарочныхСертификатов</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</ValuesPicture>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="ТоварыДеревоСтатусыСерийИПодарочныхСертификатовФактКонтекстноеМеню" id="63"/>
+												<ExtendedTooltip name="ТоварыДеревоСтатусыСерийИПодарочныхСертификатовФактРасширеннаяПодсказка" id="64"/>
+											</PictureField>
+											<InputField name="ТоварыДеревоКоличествоУпаковокФакт" id="35">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>По факту</v8:content>
+													</v8:item>
+												</Title>
+												<EditMode>EnterOnInput</EditMode>
+												<Width>8</Width>
+												<ContextMenu name="ТоварыДеревоКоличествоУпаковокФактКонтекстноеМеню" id="36"/>
+												<ExtendedTooltip name="ТоварыДеревоКоличествоУпаковокФактРасширеннаяПодсказка" id="37"/>
+											</InputField>
+											<LabelField name="ТоварыДеревоКоличествоУпаковокОтклонение" id="187">
+												<EditMode>EnterOnInput</EditMode>
+												<ShowInHeader>false</ShowInHeader>
+												<Width>3</Width>
+												<ContextMenu name="ТоварыДеревоКоличествоУпаковокОтклонениеКонтекстноеМеню" id="188"/>
+												<ExtendedTooltip name="ТоварыДеревоКоличествоУпаковокОтклонениеРасширеннаяПодсказка" id="189"/>
+											</LabelField>
+										</ChildItems>
+									</ColumnGroup>
+									<ColumnGroup name="ТоварыДеревоГруппаКоличествоПеремещение" id="58">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Переместить</v8:content>
+											</v8:item>
+										</Title>
+										<Group>Horizontal</Group>
+										<ExtendedTooltip name="ТоварыДеревоГруппаКоличествоПеремещениеРасширеннаяПодсказка" id="59"/>
+									</ColumnGroup>
+								</ChildItems>
+							</Table>
+						</ChildItems>
+					</Page>
+					<Page name="СтраницаОформленныеДокументы" id="152">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Созданные документы</v8:content>
+							</v8:item>
+						</Title>
+						<Picture>
+							<xr:Ref>StdPicture.Document</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="СтраницаОформленныеДокументыРасширеннаяПодсказка" id="153"/>
+						<ChildItems>
+							<LabelDecoration name="Декорация1" id="154">
+								<ContextMenu name="Декорация1КонтекстноеМеню" id="155"/>
+								<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="156"/>
+							</LabelDecoration>
+							<UsualGroup name="ГруппаОформленныеДокументы" id="160">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа оформленные документы</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Vertical</Group>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаОформленныеДокументыРасширеннаяПодсказка" id="161"/>
+							</UsualGroup>
+						</ChildItems>
+					</Page>
+				</ChildItems>
+			</Pages>
+		</ChildItems>
+		<Attributes>
+			<ConditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ТоварыДеревоНоменклатура</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ТоварыДеревоНоменклатураКод</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ТоварыДеревоНоменклатураАртикул</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ТоварыДерево.Характеристика</dcsset:left>
+							<dcsset:comparisonType>Filled</dcsset:comparisonType>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Отображать</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ТоварыДеревоНоменклатураЕдиницаИзмерения</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>OrGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ТоварыДерево.Упаковка</dcsset:left>
+								<dcsset:comparisonType>Filled</dcsset:comparisonType>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ТоварыДерево.ЭтоГруппа</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Отображать</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ТоварыДерево</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ТоварыДерево.ЭтоГруппа</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:ЦветФонаЧередованияСтрокТабличнойЧасти</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ТоварыДеревоКоличествоУпаковокОтклонение</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>OrGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ТоварыДерево.КоличествоУпаковокОтклонение</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:string"/>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ТоварыДерево.КоличествоФакт</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ПриемкаВслепую</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Отображать</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ТоварыДеревоКоличествоУпаковокФакт</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>NotGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemGroup">
+								<dcsset:groupType>OrGroup</dcsset:groupType>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ТоварыДерево.КоличествоУпаковокОтклонение</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:string"/>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ТоварыДерево.КоличествоФакт</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ПриемкаВслепую</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>Отображать</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ТоварыДеревоКоличествоУпаковокФакт</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ТоварыДерево.ЕстьОшибкиЗаполнения</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:ЦветФонаНекорректногоКонтрагентаВДокументе</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ОтметкаНезаполненного</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ТоварыДеревоКоличествоУпаковокРаспоряжение</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ТоварыДерево.ЕстьОшибкиЗаполнения</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">РаботаСФактом</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:ЦветФонаНекорректногоКонтрагентаВДокументе</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ОтметкаНезаполненного</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ТоварыДеревоНоменклатураАртикул</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДополнительныеКолонкиНоменклатуры</dcsset:left>
+							<dcsset:comparisonType>NotInList</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ДополнительнаяКолонкаПечатныхФормДокументов.Артикул</dcsset:right>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ДополнительнаяКолонкаПечатныхФормДокументов.КодАртикул</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Видимость</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ТоварыДеревоНоменклатураКод</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДополнительныеКолонкиНоменклатуры</dcsset:left>
+							<dcsset:comparisonType>NotInList</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ДополнительнаяКолонкаПечатныхФормДокументов.Код</dcsset:right>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ДополнительнаяКолонкаПечатныхФормДокументов.КодАртикул</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Видимость</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</ConditionalAppearance>
+		</Attributes>
+	</BaseForm>
+</Form>

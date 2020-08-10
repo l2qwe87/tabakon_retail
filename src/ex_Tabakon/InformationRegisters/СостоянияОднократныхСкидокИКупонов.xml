@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<InformationRegister uuid="74eb207f-9ad8-44f4-b709-c55e504f7c7e">
+		<InternalInfo>
+			<xr:GeneratedType name="InformationRegisterRecord.СостоянияОднократныхСкидокИКупонов" category="Record">
+				<xr:TypeId>928d3e53-bc76-4b68-906d-7e4c1bce7fc4</xr:TypeId>
+				<xr:ValueId>0aaf7e1a-90fa-4113-937a-3a99d1328348</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterManager.СостоянияОднократныхСкидокИКупонов" category="Manager">
+				<xr:TypeId>e7ce70f2-4600-4a4f-b2d5-eb00697a9557</xr:TypeId>
+				<xr:ValueId>7ce33e08-b52c-4149-b250-565754b256e9</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterSelection.СостоянияОднократныхСкидокИКупонов" category="Selection">
+				<xr:TypeId>b2a97ff2-c43e-479d-bb90-815dddc586c4</xr:TypeId>
+				<xr:ValueId>9867b245-39fd-4d23-b6a6-73af1457009a</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterList.СостоянияОднократныхСкидокИКупонов" category="List">
+				<xr:TypeId>40e1506d-c2ed-488e-b3f1-0614c07c3338</xr:TypeId>
+				<xr:ValueId>e5e80869-163e-4901-845f-372c79163264</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordSet.СостоянияОднократныхСкидокИКупонов" category="RecordSet">
+				<xr:TypeId>db2fd02c-b876-4539-bc29-7f9f4fcd612c</xr:TypeId>
+				<xr:ValueId>867d8ef0-9505-4996-bab5-7b7f8a398856</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordKey.СостоянияОднократныхСкидокИКупонов" category="RecordKey">
+				<xr:TypeId>5fd0a441-9aef-4f8e-b050-7cdb1d01932e</xr:TypeId>
+				<xr:ValueId>f8147382-743c-4cc8-a9ca-b0459c1be887</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordManager.СостоянияОднократныхСкидокИКупонов" category="RecordManager">
+				<xr:TypeId>0cc0f745-db54-48f6-82d3-614c6f3a7628</xr:TypeId>
+				<xr:ValueId>287dd490-e83f-420a-9699-139524d1ce2a</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>СостоянияОднократныхСкидокИКупонов</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>12b5ec42-8e68-4b66-bc4c-3fc6c4f3aefc</ExtendedConfigurationObject>
+			<InformationRegisterPeriodicity>Second</InformationRegisterPeriodicity>
+			<WriteMode>Independent</WriteMode>
+		</Properties>
+		<ChildObjects>
+			<Resource uuid="f2e7519d-87f3-487f-afc7-0d81fb7a174f">
+				<InternalInfo/>
+				<Properties>
+					<Name>Состояние</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>a0fd5a16-483d-40ee-a654-06b055ca85e3</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.СостоянияОднократныхСкидок</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
+			<Attribute uuid="dfd7e047-5a44-4607-a365-b3df8eebb4b1">
+				<InternalInfo/>
+				<Properties>
+					<Name>Магазин</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>fadc5fd5-a552-4ac0-aa22-3659f097740e</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Магазины</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="b6126870-8cae-4135-ba7b-895241ff6f89">
+				<InternalInfo/>
+				<Properties>
+					<Name>ДокументДвижения</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>f8070cf6-560a-46dd-8d0a-98f8781b29fb</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ЧекККМ</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="5cd1d0f5-9c63-4c01-899d-d2c832e7fc13">
+				<InternalInfo/>
+				<Properties>
+					<Name>ПериодДействия</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>09f144b6-b05e-4b8d-a3bf-75c7accda5da</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Dimension uuid="f1217014-bf9e-42dc-8554-efb998a6fb37">
+				<InternalInfo/>
+				<Properties>
+					<Name>Скидка</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>283b475a-224e-46d3-8f87-1e3d6501798e</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СкидкиНаценки</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="15a70f75-45e7-45a5-86fe-82050db57058">
+				<InternalInfo/>
+				<Properties>
+					<Name>ИдентификаторСкидки</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>b49d6de2-7bf7-4a06-ae70-4ae902914048</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>36</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</InformationRegister>
+</MetaDataObject>

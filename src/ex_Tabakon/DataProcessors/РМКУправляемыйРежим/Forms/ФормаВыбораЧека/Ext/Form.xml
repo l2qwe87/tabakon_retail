@@ -1,0 +1,566 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="ГруппаОтборы" id="60">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОтборыРасширеннаяПодсказка" id="61"/>
+			<ChildItems>
+				<InputField name="НомерЧека" id="117">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>№</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" height="16" kind="StyleItem"/>
+					<Width>6</Width>
+					<Font ref="style:NormalTextFont" height="16" kind="StyleItem"/>
+					<ContextMenu name="НомерЧекаКонтекстноеМеню" id="118"/>
+					<ExtendedTooltip name="НомерЧекаРасширеннаяПодсказка" id="119"/>
+				</InputField>
+				<InputField name="ДатаНачала" id="65">
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>С</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" height="16" kind="StyleItem"/>
+					<Width>13</Width>
+					<Font ref="style:NormalTextFont" height="16" kind="StyleItem"/>
+					<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="67"/>
+				</InputField>
+				<InputField name="ДатаКонца" id="62">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>по</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" height="16" kind="StyleItem"/>
+					<Width>13</Width>
+					<Font ref="style:NormalTextFont" height="16" kind="StyleItem"/>
+					<ContextMenu name="ДатаКонцаКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="ДатаКонцаРасширеннаяПодсказка" id="64"/>
+				</InputField>
+				<InputField name="КассаККМ" id="105">
+					<TitleFont ref="style:NormalTextFont" height="16" kind="StyleItem"/>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>true</ChoiceButton>
+					<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<Font ref="style:NormalTextFont" height="16" kind="StyleItem"/>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+					<ContextMenu name="КассаККМКонтекстноеМеню" id="106"/>
+					<ExtendedTooltip name="КассаККМРасширеннаяПодсказка" id="107"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницы" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыExtendedTooltip" id="34"/>
+			<ChildItems>
+				<Page name="ГруппаОбщая" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа общая</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ГруппаОбщаяExtendedTooltip" id="35"/>
+					<ChildItems>
+						<Table name="СписокЧеков" id="68">
+							<CommandBarLocation>None</CommandBarLocation>
+							<ReadOnly>true</ReadOnly>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<RowPictureDataPath>10000000</RowPictureDataPath>
+							<Font ref="style:NormalTextFont" height="16" kind="StyleItem"/>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СписокЧековКонтекстноеМеню" id="69"/>
+							<AutoCommandBar name="СписокЧековКоманднаяПанель" id="70"/>
+							<ExtendedTooltip name="СписокЧековРасширеннаяПодсказка" id="71"/>
+							<SearchStringAddition name="СписокЧековСтрокаПоиска" id="72">
+								<AdditionSource>
+									<Item>СписокЧеков</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокЧековСтрокаПоискаКонтекстноеМеню" id="73"/>
+								<ExtendedTooltip name="СписокЧековСтрокаПоискаРасширеннаяПодсказка" id="74"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокЧековСостояниеПросмотра" id="75">
+								<AdditionSource>
+									<Item>СписокЧеков</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокЧековСостояниеПросмотраКонтекстноеМеню" id="76"/>
+								<ExtendedTooltip name="СписокЧековСостояниеПросмотраРасширеннаяПодсказка" id="77"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокЧековУправлениеПоиском" id="78">
+								<AdditionSource>
+									<Item>СписокЧеков</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокЧековУправлениеПоискомКонтекстноеМеню" id="79"/>
+								<ExtendedTooltip name="СписокЧековУправлениеПоискомРасширеннаяПодсказка" id="80"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СписокЧековДата" id="81">
+									<Width>10</Width>
+									<ContextMenu name="СписокЧековДатаКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="СписокЧековДатаРасширеннаяПодсказка" id="83"/>
+								</LabelField>
+								<LabelField name="СписокЧековНомер" id="84">
+									<Width>9</Width>
+									<ContextMenu name="СписокЧековНомерКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="СписокЧековНомерРасширеннаяПодсказка" id="86"/>
+								</LabelField>
+								<LabelField name="СписокЧековСмена" id="108">
+									<Width>9</Width>
+									<ContextMenu name="СписокЧековСменаКонтекстноеМеню" id="109"/>
+									<ExtendedTooltip name="СписокЧековСменаРасширеннаяПодсказка" id="110"/>
+								</LabelField>
+								<LabelField name="СписокЧековСумма" id="120">
+									<Width>22</Width>
+									<ContextMenu name="СписокЧековСуммаКонтекстноеМеню" id="121"/>
+									<ExtendedTooltip name="СписокЧековСуммаРасширеннаяПодсказка" id="122"/>
+								</LabelField>
+								<LabelField name="СписокЧековВидОперации" id="93">
+									<ContextMenu name="СписокЧековВидОперацииКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="СписокЧековВидОперацииРасширеннаяПодсказка" id="95"/>
+								</LabelField>
+								<LabelField name="СписокЧековКассаККМ" id="96">
+									<ContextMenu name="СписокЧековКассаККМКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="СписокЧековКассаККМРасширеннаяПодсказка" id="98"/>
+								</LabelField>
+								<LabelField name="СписокЧековОрганизация" id="99">
+									<ContextMenu name="СписокЧековОрганизацияКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="СписокЧековОрганизацияРасширеннаяПодсказка" id="101"/>
+								</LabelField>
+								<LabelField name="СписокЧековСтатусЧекаККМ" id="102">
+									<ContextMenu name="СписокЧековСтатусЧекаККМКонтекстноеМеню" id="103"/>
+									<ExtendedTooltip name="СписокЧековСтатусЧекаККМРасширеннаяПодсказка" id="104"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="ГруппаКнопки" id="17">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопки</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<Group>Vertical</Group>
+							<VerticalSpacing>Double</VerticalSpacing>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКнопкиExtendedTooltip" id="41"/>
+							<ChildItems>
+								<Button name="КомандаВыбрать" id="20">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<DefaultButton>true</DefaultButton>
+									<Width>8</Width>
+									<Height>3</Height>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="КомандаВыбратьExtendedTooltip" id="44"/>
+								</Button>
+								<Button name="ПоискПоШтрихкоду" id="113">
+									<Type>UsualButton</Type>
+									<TitleHeight>2</TitleHeight>
+									<Width>8</Width>
+									<Height>3</Height>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="ПоискПоШтрихкодуРасширеннаяПодсказка" id="114"/>
+								</Button>
+								<Button name="ПоискПоМагнитномуКоду" id="111">
+									<Type>UsualButton</Type>
+									<TitleHeight>2</TitleHeight>
+									<Width>8</Width>
+									<Height>3</Height>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="ПоискПоМагнитномуКодуРасширеннаяПодсказка" id="112"/>
+								</Button>
+								<Button name="Кнопка1" id="123">
+									<Type>UsualButton</Type>
+									<TitleHeight>2</TitleHeight>
+									<Width>8</Width>
+									<Height>3</Height>
+									<CommandName>0</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Найти чек SWIP</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="Кнопка1РасширеннаяПодсказка" id="124"/>
+								</Button>
+								<Button name="КомандаОтменитьПоиск" id="115">
+									<Type>UsualButton</Type>
+									<TitleHeight>3</TitleHeight>
+									<Width>8</Width>
+									<Height>3</Height>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="КомандаОтменитьПоискРасширеннаяПодсказка" id="116"/>
+								</Button>
+								<Button name="КнопкаЗакрыть" id="21">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<Width>8</Width>
+									<Height>3</Height>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="КнопкаЗакрытьExtendedTooltip" id="45"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СписокЧековСумма</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>СписокЧековВидОперации</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">СписокЧеков.ВидОперации</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыОперацийЧекККМ.Возврат</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<BaseForm version="2.9">
+		<VerticalScroll>useIfNecessary</VerticalScroll>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+			<Autofill>false</Autofill>
+		</AutoCommandBar>
+		<ChildItems>
+			<UsualGroup name="ГруппаОтборы" id="60">
+				<Group>Horizontal</Group>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаОтборыРасширеннаяПодсказка" id="61"/>
+				<ChildItems>
+					<InputField name="НомерЧека" id="117">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>№</v8:content>
+							</v8:item>
+						</Title>
+						<TitleFont ref="style:NormalTextFont" height="16" kind="StyleItem"/>
+						<Width>6</Width>
+						<Font ref="style:NormalTextFont" height="16" kind="StyleItem"/>
+						<ContextMenu name="НомерЧекаКонтекстноеМеню" id="118"/>
+						<ExtendedTooltip name="НомерЧекаРасширеннаяПодсказка" id="119"/>
+					</InputField>
+					<InputField name="ДатаНачала" id="65">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>С</v8:content>
+							</v8:item>
+						</Title>
+						<TitleFont ref="style:NormalTextFont" height="16" kind="StyleItem"/>
+						<Width>13</Width>
+						<Font ref="style:NormalTextFont" height="16" kind="StyleItem"/>
+						<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="66"/>
+						<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="67"/>
+					</InputField>
+					<InputField name="ДатаКонца" id="62">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>по</v8:content>
+							</v8:item>
+						</Title>
+						<TitleFont ref="style:NormalTextFont" height="16" kind="StyleItem"/>
+						<Width>13</Width>
+						<Font ref="style:NormalTextFont" height="16" kind="StyleItem"/>
+						<ContextMenu name="ДатаКонцаКонтекстноеМеню" id="63"/>
+						<ExtendedTooltip name="ДатаКонцаРасширеннаяПодсказка" id="64"/>
+					</InputField>
+					<InputField name="КассаККМ" id="105">
+						<TitleFont ref="style:NormalTextFont" height="16" kind="StyleItem"/>
+						<DropListButton>false</DropListButton>
+						<ChoiceButton>true</ChoiceButton>
+						<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+						<ClearButton>true</ClearButton>
+						<OpenButton>false</OpenButton>
+						<Font ref="style:NormalTextFont" height="16" kind="StyleItem"/>
+						<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+						<ContextMenu name="КассаККМКонтекстноеМеню" id="106"/>
+						<ExtendedTooltip name="КассаККМРасширеннаяПодсказка" id="107"/>
+					</InputField>
+				</ChildItems>
+			</UsualGroup>
+			<Pages name="ГруппаСтраницы" id="30">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа страницы</v8:content>
+					</v8:item>
+				</Title>
+				<HorizontalStretch>true</HorizontalStretch>
+				<PagesRepresentation>None</PagesRepresentation>
+				<ExtendedTooltip name="ГруппаСтраницыExtendedTooltip" id="34"/>
+				<ChildItems>
+					<Page name="ГруппаОбщая" id="16">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа общая</v8:content>
+							</v8:item>
+						</Title>
+						<HorizontalStretch>true</HorizontalStretch>
+						<Group>Horizontal</Group>
+						<ExtendedTooltip name="ГруппаОбщаяExtendedTooltip" id="35"/>
+						<ChildItems>
+							<Table name="СписокЧеков" id="68">
+								<CommandBarLocation>None</CommandBarLocation>
+								<ReadOnly>true</ReadOnly>
+								<UseAlternationRowColor>true</UseAlternationRowColor>
+								<EnableStartDrag>true</EnableStartDrag>
+								<FileDragMode>AsFile</FileDragMode>
+								<RowPictureDataPath>10000000</RowPictureDataPath>
+								<Font ref="style:NormalTextFont" height="16" kind="StyleItem"/>
+								<SearchStringLocation>None</SearchStringLocation>
+								<ViewStatusLocation>None</ViewStatusLocation>
+								<SearchControlLocation>None</SearchControlLocation>
+								<AutoRefresh>false</AutoRefresh>
+								<AutoRefreshPeriod>60</AutoRefreshPeriod>
+								<Period>
+									<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+									<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+									<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+								</Period>
+								<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+								<RestoreCurrentRow>false</RestoreCurrentRow>
+								<TopLevelParent xsi:nil="true"/>
+								<ShowRoot>true</ShowRoot>
+								<AllowRootChoice>false</AllowRootChoice>
+								<UpdateOnDataChange>Auto</UpdateOnDataChange>
+								<ContextMenu name="СписокЧековКонтекстноеМеню" id="69"/>
+								<AutoCommandBar name="СписокЧековКоманднаяПанель" id="70"/>
+								<ExtendedTooltip name="СписокЧековРасширеннаяПодсказка" id="71"/>
+								<SearchStringAddition name="СписокЧековСтрокаПоиска" id="72">
+									<AdditionSource>
+										<Item>СписокЧеков</Item>
+										<Type>SearchStringRepresentation</Type>
+									</AdditionSource>
+									<ContextMenu name="СписокЧековСтрокаПоискаКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="СписокЧековСтрокаПоискаРасширеннаяПодсказка" id="74"/>
+								</SearchStringAddition>
+								<ViewStatusAddition name="СписокЧековСостояниеПросмотра" id="75">
+									<AdditionSource>
+										<Item>СписокЧеков</Item>
+										<Type>ViewStatusRepresentation</Type>
+									</AdditionSource>
+									<ContextMenu name="СписокЧековСостояниеПросмотраКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="СписокЧековСостояниеПросмотраРасширеннаяПодсказка" id="77"/>
+								</ViewStatusAddition>
+								<SearchControlAddition name="СписокЧековУправлениеПоиском" id="78">
+									<AdditionSource>
+										<Item>СписокЧеков</Item>
+										<Type>SearchControl</Type>
+									</AdditionSource>
+									<ContextMenu name="СписокЧековУправлениеПоискомКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="СписокЧековУправлениеПоискомРасширеннаяПодсказка" id="80"/>
+								</SearchControlAddition>
+								<ChildItems>
+									<LabelField name="СписокЧековДата" id="81">
+										<Width>10</Width>
+										<ContextMenu name="СписокЧековДатаКонтекстноеМеню" id="82"/>
+										<ExtendedTooltip name="СписокЧековДатаРасширеннаяПодсказка" id="83"/>
+									</LabelField>
+									<LabelField name="СписокЧековНомер" id="84">
+										<Width>9</Width>
+										<ContextMenu name="СписокЧековНомерКонтекстноеМеню" id="85"/>
+										<ExtendedTooltip name="СписокЧековНомерРасширеннаяПодсказка" id="86"/>
+									</LabelField>
+									<LabelField name="СписокЧековСмена" id="108">
+										<Width>9</Width>
+										<ContextMenu name="СписокЧековСменаКонтекстноеМеню" id="109"/>
+										<ExtendedTooltip name="СписокЧековСменаРасширеннаяПодсказка" id="110"/>
+									</LabelField>
+									<LabelField name="СписокЧековСумма" id="120">
+										<Width>22</Width>
+										<ContextMenu name="СписокЧековСуммаКонтекстноеМеню" id="121"/>
+										<ExtendedTooltip name="СписокЧековСуммаРасширеннаяПодсказка" id="122"/>
+									</LabelField>
+									<LabelField name="СписокЧековВидОперации" id="93">
+										<ContextMenu name="СписокЧековВидОперацииКонтекстноеМеню" id="94"/>
+										<ExtendedTooltip name="СписокЧековВидОперацииРасширеннаяПодсказка" id="95"/>
+									</LabelField>
+									<LabelField name="СписокЧековКассаККМ" id="96">
+										<ContextMenu name="СписокЧековКассаККМКонтекстноеМеню" id="97"/>
+										<ExtendedTooltip name="СписокЧековКассаККМРасширеннаяПодсказка" id="98"/>
+									</LabelField>
+									<LabelField name="СписокЧековОрганизация" id="99">
+										<ContextMenu name="СписокЧековОрганизацияКонтекстноеМеню" id="100"/>
+										<ExtendedTooltip name="СписокЧековОрганизацияРасширеннаяПодсказка" id="101"/>
+									</LabelField>
+									<LabelField name="СписокЧековСтатусЧекаККМ" id="102">
+										<ContextMenu name="СписокЧековСтатусЧекаККМКонтекстноеМеню" id="103"/>
+										<ExtendedTooltip name="СписокЧековСтатусЧекаККМРасширеннаяПодсказка" id="104"/>
+									</LabelField>
+								</ChildItems>
+							</Table>
+							<UsualGroup name="ГруппаКнопки" id="17">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа кнопки</v8:content>
+									</v8:item>
+								</Title>
+								<HorizontalStretch>false</HorizontalStretch>
+								<VerticalStretch>false</VerticalStretch>
+								<Group>Vertical</Group>
+								<VerticalSpacing>Double</VerticalSpacing>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаКнопкиExtendedTooltip" id="41"/>
+								<ChildItems>
+									<Button name="КомандаВыбрать" id="20">
+										<Type>UsualButton</Type>
+										<Representation>Picture</Representation>
+										<DefaultButton>true</DefaultButton>
+										<Width>8</Width>
+										<Height>3</Height>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="КомандаВыбратьExtendedTooltip" id="44"/>
+									</Button>
+									<Button name="ПоискПоШтрихкоду" id="113">
+										<Type>UsualButton</Type>
+										<TitleHeight>2</TitleHeight>
+										<Width>8</Width>
+										<Height>3</Height>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="ПоискПоШтрихкодуРасширеннаяПодсказка" id="114"/>
+									</Button>
+									<Button name="ПоискПоМагнитномуКоду" id="111">
+										<Type>UsualButton</Type>
+										<TitleHeight>2</TitleHeight>
+										<Width>8</Width>
+										<Height>3</Height>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="ПоискПоМагнитномуКодуРасширеннаяПодсказка" id="112"/>
+									</Button>
+									<Button name="Кнопка1" id="123">
+										<Type>UsualButton</Type>
+										<TitleHeight>2</TitleHeight>
+										<Width>8</Width>
+										<Height>3</Height>
+										<CommandName>0</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Найти чек SWIP</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="Кнопка1РасширеннаяПодсказка" id="124"/>
+									</Button>
+									<Button name="КомандаОтменитьПоиск" id="115">
+										<Type>UsualButton</Type>
+										<TitleHeight>3</TitleHeight>
+										<Width>8</Width>
+										<Height>3</Height>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="КомандаОтменитьПоискРасширеннаяПодсказка" id="116"/>
+									</Button>
+									<Button name="КнопкаЗакрыть" id="21">
+										<Type>UsualButton</Type>
+										<Representation>Picture</Representation>
+										<Width>8</Width>
+										<Height>3</Height>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="КнопкаЗакрытьExtendedTooltip" id="45"/>
+									</Button>
+								</ChildItems>
+							</UsualGroup>
+						</ChildItems>
+					</Page>
+				</ChildItems>
+			</Pages>
+		</ChildItems>
+		<Attributes>
+			<ConditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СписокЧековСумма</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СписокЧековВидОперации</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">СписокЧеков.ВидОперации</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыОперацийЧекККМ.Возврат</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</ConditionalAppearance>
+		</Attributes>
+	</BaseForm>
+</Form>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Document uuid="dfda0531-a9dd-496e-8c7e-97df04afa0ae">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentObject.ВыемкаДенежныхСредствИзКассыККМ" category="Object">
+				<xr:TypeId>9d9f011f-edfd-483e-b7c8-05b7aa35a7e6</xr:TypeId>
+				<xr:ValueId>101503d7-7bc8-4cf9-bb85-1f6c9a591788</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentRef.ВыемкаДенежныхСредствИзКассыККМ" category="Ref">
+				<xr:TypeId>1b31adc9-624c-4b7e-bf87-577b9caaadd4</xr:TypeId>
+				<xr:ValueId>5868971a-5865-4fb6-87dd-78dedadfedce</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentSelection.ВыемкаДенежныхСредствИзКассыККМ" category="Selection">
+				<xr:TypeId>755af382-08d2-4a0c-8018-e8587499c646</xr:TypeId>
+				<xr:ValueId>e6763a44-6c2f-4d1e-a14e-77809c6eb34a</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentList.ВыемкаДенежныхСредствИзКассыККМ" category="List">
+				<xr:TypeId>f3e9b0b1-b4f1-4f26-b005-b8b73bddc494</xr:TypeId>
+				<xr:ValueId>8b8f8dcb-5ea6-4f8e-bc3d-7a9fa5ef38ea</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentManager.ВыемкаДенежныхСредствИзКассыККМ" category="Manager">
+				<xr:TypeId>53510792-ccc9-4e06-815b-3d0dfc6646a2</xr:TypeId>
+				<xr:ValueId>5cc11da2-69f1-4939-bf1f-c4c90a255c20</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ВыемкаДенежныхСредствИзКассыККМ</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>817704eb-8ec7-4b1e-9fc0-c7c03eda47f6</ExtendedConfigurationObject>
+			<RegisterRecords/>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="e06069bc-5acd-41d6-9cc4-32217a69f06c">
+				<InternalInfo/>
+				<Properties>
+					<Name>КассаККМ</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>2711475b-45b2-4e48-b16e-42e00a6b5342</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КассыККМ</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="b564d9f1-e9a1-475f-b2a9-a31b14a0b910">
+				<InternalInfo/>
+				<Properties>
+					<Name>СуммаДокумента</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>e8359383-f79e-426d-99bc-356b7c9392bb</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="441a2559-46fe-44bd-9e61-c3b9b45c4931">
+				<InternalInfo/>
+				<Properties>
+					<Name>ОтчетОРозничныхПродажах</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>644394f0-f2d7-4026-97c0-8951017e9d7d</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ОтчетОРозничныхПродажах</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="d05bcaf0-8b49-478d-9ad0-30c8c5c33829">
+				<InternalInfo/>
+				<Properties>
+					<Name>Магазин</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>2e8a2e94-e710-4c31-9d72-a0066c3065ff</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Магазины</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="1a338fcc-e70f-44d8-82ef-742f12a60b6c">
+				<InternalInfo/>
+				<Properties>
+					<Name>ХозяйственнаяОперация</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>2d102644-b1d8-49f9-877c-1270910b238c</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ХозяйственныеОперации</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+		</ChildObjects>
+	</Document>
+</MetaDataObject>
