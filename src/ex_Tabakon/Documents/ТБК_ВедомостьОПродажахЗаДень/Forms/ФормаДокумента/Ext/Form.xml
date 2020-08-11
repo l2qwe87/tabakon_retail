@@ -498,6 +498,77 @@
 								</InputField>
 							</ChildItems>
 						</Table>
+						<Button name="ПродавцыПодробно" id="218">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ПродавцыПодробно</CommandName>
+							<ExtendedTooltip name="ПродавцыПодробноРасширеннаяПодсказка" id="219"/>
+						</Button>
+						<Table name="Продавцы" id="193">
+							<Visible>false</Visible>
+							<HeightInTableRows>3</HeightInTableRows>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Продавцы</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПродавцыКонтекстноеМеню" id="194"/>
+							<AutoCommandBar name="ПродавцыКоманднаяПанель" id="195">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ПродавцыРасширеннаяПодсказка" id="196"/>
+							<SearchStringAddition name="ПродавцыСтрокаПоиска" id="197">
+								<AdditionSource>
+									<Item>Продавцы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПродавцыСтрокаПоискаКонтекстноеМеню" id="198"/>
+								<ExtendedTooltip name="ПродавцыСтрокаПоискаРасширеннаяПодсказка" id="199"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПродавцыСостояниеПросмотра" id="200">
+								<AdditionSource>
+									<Item>Продавцы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПродавцыСостояниеПросмотраКонтекстноеМеню" id="201"/>
+								<ExtendedTooltip name="ПродавцыСостояниеПросмотраРасширеннаяПодсказка" id="202"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПродавцыУправлениеПоиском" id="203">
+								<AdditionSource>
+									<Item>Продавцы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПродавцыУправлениеПоискомКонтекстноеМеню" id="204"/>
+								<ExtendedTooltip name="ПродавцыУправлениеПоискомРасширеннаяПодсказка" id="205"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПродавцыНомерСтроки" id="206">
+									<DataPath>Объект.Продавцы.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПродавцыНомерСтрокиКонтекстноеМеню" id="207"/>
+									<ExtendedTooltip name="ПродавцыНомерСтрокиРасширеннаяПодсказка" id="208"/>
+								</LabelField>
+								<InputField name="ПродавцыПродавец" id="209">
+									<DataPath>Объект.Продавцы.Продавец</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПродавцыПродавецКонтекстноеМеню" id="210"/>
+									<ExtendedTooltip name="ПродавцыПродавецРасширеннаяПодсказка" id="211"/>
+								</InputField>
+								<CheckBoxField name="ПродавцыЭтоГлавныйПродавец" id="212">
+									<DataPath>Объект.Продавцы.ЭтоГлавныйПродавец</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПродавцыЭтоГлавныйПродавецКонтекстноеМеню" id="213"/>
+									<ExtendedTooltip name="ПродавцыЭтоГлавныйПродавецРасширеннаяПодсказка" id="214"/>
+								</CheckBoxField>
+								<CheckBoxField name="ПродавцыЭтоДопСмена" id="215">
+									<DataPath>Объект.Продавцы.ЭтоДопСмена</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПродавцыЭтоДопСменаКонтекстноеМеню" id="216"/>
+									<ExtendedTooltip name="ПродавцыЭтоДопСменаРасширеннаяПодсказка" id="217"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -787,6 +858,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СоздатьВыемку</Action>
+		</Command>
+		<Command name="ПродавцыПодробно" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продавцы подробно</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продажи подробно</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПродавцыПодробно</Action>
 		</Command>
 	</Commands>
 </Form>
