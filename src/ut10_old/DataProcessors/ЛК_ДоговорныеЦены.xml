@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<DataProcessor uuid="adac0280-2ca7-489a-bc40-045864ea6a47">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject.ЛК_ДоговорныеЦены" category="Object">
+				<xr:TypeId>47beadba-53f4-47aa-aab7-97cf32944bea</xr:TypeId>
+				<xr:ValueId>e550f787-821b-437f-89fb-2b9cf022ed68</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager.ЛК_ДоговорныеЦены" category="Manager">
+				<xr:TypeId>1aa35e85-206a-46f0-80a4-0785e448b4c2</xr:TypeId>
+				<xr:ValueId>66d0b1d1-0f25-40e1-89ad-968795509daf</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ЛК_ДоговорныеЦены</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договорные цены</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<DefaultForm>DataProcessor.ЛК_ДоговорныеЦены.Form.ФормаОбработкиДоговорныхЦен</DefaultForm>
+			<AuxiliaryForm/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<TabularSection uuid="13c6325f-fbb8-4464-9fa5-d02bb2fb572c">
+				<InternalInfo>
+					<xr:GeneratedType name="DataProcessorTabularSection.ЛК_ДоговорныеЦены.ТаблицаЦен" category="TabularSection">
+						<xr:TypeId>1aceb2ad-1992-462c-b364-a80f33bfafcd</xr:TypeId>
+						<xr:ValueId>1448649b-a156-4509-a6dc-0499d838bece</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DataProcessorTabularSectionRow.ЛК_ДоговорныеЦены.ТаблицаЦен" category="TabularSectionRow">
+						<xr:TypeId>1e4fb91d-62e6-453e-926d-2cd6a21bcedc</xr:TypeId>
+						<xr:ValueId>620e59d7-5a07-4af1-b527-2d79c28adb1f</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>ТаблицаЦен</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таблица цен</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<ToolTip/>
+					<FillChecking>DontCheck</FillChecking>
+				</Properties>
+				<ChildObjects/>
+			</TabularSection>
+			<Form>ФормаОбработкиДоговорныхЦен</Form>
+			<Form>УстановкаЗначения</Form>
+			<Form>ВыборСкладов</Form>
+			<Form>ФормаВыбораДата</Form>
+			<Template>Цены</Template>
+			<Template>Цены1</Template>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>

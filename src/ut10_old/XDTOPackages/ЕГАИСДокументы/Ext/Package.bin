@@ -1,0 +1,28 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://fsrar.ru/WEGAIS/WB_DOC_SINGLE_01">
+	<import namespace="http://fsrar.ru/WEGAIS/ActTTNSingle"/>
+	<import namespace="http://fsrar.ru/WEGAIS/Common"/>
+	<import namespace="http://fsrar.ru/WEGAIS/QueryParameters"/>
+	<import namespace="http://fsrar.ru/WEGAIS/ReplyAP"/>
+	<import namespace="http://fsrar.ru/WEGAIS/ReplyClient"/>
+	<import namespace="http://fsrar.ru/WEGAIS/Ticket"/>
+	<import namespace="http://fsrar.ru/WEGAIS/TTNInformBReg"/>
+	<import namespace="http://fsrar.ru/WEGAIS/TTNSingle"/>
+	<objectType name="Документы">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="Версия" type="d3p1:Строка" lowerBound="0" default="1.0" form="Attribute" localName="Version"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/WB_DOC_SINGLE_01" name="Владелец" type="d3p1:Владелец" localName="Owner"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/WB_DOC_SINGLE_01" name="Документ" type="d3p1:Документ" localName="Document"/>
+	</objectType>
+	<objectType name="Владелец" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="ИдентификаторФСРАР" type="d3p1:ИдентификаторФСРАР" localName="FSRAR_ID"/>
+	</objectType>
+	<objectType name="Документ" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ActTTNSingle" name="АктПодтвержденияТТН" type="d3p1:АктПодтвержденияТТН" lowerBound="0" localName="WayBillAct"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/QueryParameters" name="ЗапросАлкогольнойПродукции" type="d3p1:Запрос" lowerBound="0" localName="QueryAP"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/QueryParameters" name="ЗапросОрганизаций" type="d3p1:Запрос" lowerBound="0" localName="QueryClients"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ReplyAP" name="ОтветАлкогольнаяПродукция" type="d3p1:Ответ" lowerBound="0" localName="ReplyAP"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ReplyClient" name="ОтветОрганизации" type="d3p1:Ответ" lowerBound="0" localName="ReplyClient"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Ticket" name="Квитанция" type="d3p1:Квитанция" lowerBound="0" localName="Ticket"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/TTNInformBReg" name="РегистрацияСправокПоТТН" type="d3p1:РегистрацияСправок" lowerBound="0" localName="TTNInformBReg"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/TTNSingle" name="ТТН" type="d3p1:ТТН" lowerBound="0" localName="WayBill"/>
+	</objectType>
+</package>

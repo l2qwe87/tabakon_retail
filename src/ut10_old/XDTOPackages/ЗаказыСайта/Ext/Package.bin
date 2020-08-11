@@ -1,0 +1,23 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.OrdersSite.org">
+	<objectType name="Заказ">
+		<property name="Номер" type="xs:string"/>
+		<property name="Дата" type="xs:string"/>
+		<property name="ИмяПокупателя" type="xs:string"/>
+		<property name="Телефон" type="xs:string"/>
+		<property name="Email" type="xs:string"/>
+		<property name="ДополнительнаяИнформация" type="xs:string"/>
+		<property xmlns:d3p1="http://www.OrdersSite.org" name="Товары" type="d3p1:ТаблицаЗаказа"/>
+	</objectType>
+	<objectType name="ТаблицаЗаказа">
+		<property xmlns:d3p1="http://www.OrdersSite.org" name="Товар" type="d3p1:Номенклатура" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Номенклатура">
+		<property name="УИД" type="xs:string"/>
+		<property name="НазваниеТовара" type="xs:string"/>
+		<property name="Количество" type="xs:string"/>
+		<property name="Сумма" type="xs:string"/>
+	</objectType>
+	<objectType name="ЗаказыЗаПериод">
+		<property xmlns:d3p1="http://www.OrdersSite.org" name="Заказ" type="d3p1:Заказ" lowerBound="0" upperBound="-1"/>
+	</objectType>
+</package>

@@ -75,7 +75,7 @@
 		<Metadata name="CommonModule.ТБК_Номенклатура.Module" id="4518a945-1264-4b94-b64b-e81fc7a8a0c3.0" configVersion="8ca6f8b3f992b55fb20b83b3c509c4d30ab46ef5"/>
 		<Metadata name="CommonModule.ТБК_ПраваДоступа" id="80d37976-c4a7-451c-998e-059242d7f570" configVersion="27aaa9b80d9cf1abc6faabbefcc1f7d2877fba73"/>
 		<Metadata name="CommonModule.ТБК_ПраваДоступа.Module" id="80d37976-c4a7-451c-998e-059242d7f570.0" configVersion="408acfe49a5f1723993c81a7581b9d14aa99d94b"/>
-		<Metadata name="CommonModule.ШтрихкодированиеИС" id="2259f15b-ece8-431f-b294-c36e94a00814" configVersion="9bbdf33afe2f97a35e22e3ba568bbdc584a14747"/>
+		<Metadata name="CommonModule.ШтрихкодированиеИС" id="2259f15b-ece8-431f-b294-c36e94a00814" configVersion="50f75cb8cb38a778d882c0de74d90f9bc20cf072"/>
 		<Metadata name="CommonModule.ШтрихкодированиеИС.Module" id="2259f15b-ece8-431f-b294-c36e94a00814.0" configVersion="1a409cdc491374f385629ddcada1e1edde3406ac"/>
 		<Metadata name="CommonModule.ШтрихкодированиеИСВызовСервера" id="10adff0e-3681-404f-8f18-12cc3d2eb2bc" configVersion="2d1c4dc9101a6620de8258b2086fb07358fd88d3"/>
 		<Metadata name="CommonModule.ШтрихкодированиеИСВызовСервера.Module" id="10adff0e-3681-404f-8f18-12cc3d2eb2bc.0" configVersion="2ff17ff2c133fcf8bcf0f3e798c5a63382101d04"/>
@@ -287,6 +287,10 @@
 			<Metadata name="Enum.ВариантыОбластейОграниченияСкидокНаценок.EnumValue.ВСтроке" id="070bf22c-30cf-4311-a343-60f05fa81aaf"/>
 			<Metadata name="Enum.ВариантыОбластейОграниченияСкидокНаценок.EnumValue.ВДокументе" id="76e848eb-baa1-4a38-ab11-eccdd48ee95a"/>
 		</Metadata>
+		<Metadata name="Enum.ВидыИнформационныхКарт" id="7e1b1e99-5251-4af5-a76f-e84f4c375ceb" configVersion="dcb85da85c22bfe4dc43c95c5df8df43218bec9a">
+			<Metadata name="Enum.ВидыИнформационныхКарт.EnumValue.Штриховая" id="0f477432-f532-4ef2-b925-c401af7b87a9"/>
+			<Metadata name="Enum.ВидыИнформационныхКарт.EnumValue.Смешанная" id="2270c453-0cb6-4ca3-b99a-494d97a00986"/>
+		</Metadata>
 		<Metadata name="Enum.ВидыНазначенияДатЗапрета" id="10008afe-804a-4ba2-b17a-6d3717a43d41" configVersion="d0d4ee75554e3f526b1e3d3fc808e4cfff84d27a">
 			<Metadata name="Enum.ВидыНазначенияДатЗапрета.EnumValue.ДляВсехИнформационныхБаз" id="4f306f7f-d57c-4ebf-ac11-efdae92e6bf1"/>
 			<Metadata name="Enum.ВидыНазначенияДатЗапрета.EnumValue.ДляВсехПользователей" id="db830f97-e859-4add-90d7-204743cc22ca"/>
@@ -343,6 +347,13 @@
 			<Metadata name="InformationRegister.СостоянияОднократныхСкидокИКупонов.Resource.Состояние" id="f2e7519d-87f3-487f-afc7-0d81fb7a174f"/>
 		</Metadata>
 		<Metadata name="InformationRegister.ТБКДанныеВаучера" id="70148690-1695-431c-b9e5-0ef3f3226dbf" configVersion="0c00a5450318cb1656c2bff7567b6c6037b886b2">
+			<Metadata name="InformationRegister.ТБК_Штрихкоды.Dimension.Штрихкод" id="8000740c-2d97-4ca6-a8f1-e3defd96cacd"/>
+			<Metadata name="InformationRegister.ТБК_Штрихкоды.Dimension.Упаковка" id="a78661de-ec80-4cae-bf57-b380c15d78a9"/>
+			<Metadata name="InformationRegister.ТБК_Штрихкоды.Dimension.ТипШтрихкода" id="d3443d9a-5388-4f6c-a931-a95e66a0d077"/>
+			<Metadata name="InformationRegister.ТБК_Штрихкоды.Dimension.Владелец" id="dd92994f-432b-4fda-a60f-835a783d9c80"/>
+		</Metadata>
+		<Metadata name="InformationRegister.ТБК_Штрихкоды.ManagerModule" id="87594802-22b7-48b6-9149-483a8703294e.2" configVersion="d46803c2cf1304204a3309c2fe3a1b9377bb5800"/>
+		<Metadata name="InformationRegister.ТБКДанныеВаучера" id="70148690-1695-431c-b9e5-0ef3f3226dbf" configVersion="0c00a5450318cb1656c2bff7567b6c6037b886b2">
 			<Metadata name="InformationRegister.ТБКДанныеВаучера.Resource.Состояние" id="20ac02c4-63f2-416f-8d31-9ffd3ded1fa3"/>
 			<Metadata name="InformationRegister.ТБКДанныеВаучера.Dimension.ИдентификаторСкидки" id="554e1f21-f77b-47fa-a125-8aac7580be89"/>
 			<Metadata name="InformationRegister.ТБКДанныеВаучера.Attribute.ФамилияИмяОтчество" id="e43f889b-ab70-4fba-b963-18d93fd66ffd"/>
@@ -355,7 +366,7 @@
 		</Metadata>
 		<Metadata name="InformationRegister.ТБКМиграции.Form.ФормаСписка" id="4e1faab2-fb3e-4573-87ac-efe5125670f3" configVersion="665093a007962c055e689dd7dbf1bf3df052e1e6"/>
 		<Metadata name="InformationRegister.ТБКМиграции.Form.ФормаСписка.Form" id="4e1faab2-fb3e-4573-87ac-efe5125670f3.0" configVersion="ca6a54ad833868890bc408001ed7a2989eec6718"/>
-		<Metadata name="InformationRegister.Штрихкоды" id="a4edc356-6add-4038-b31b-0468f5fb9b66" configVersion="5bc843cea6acc8b0e13fcbd9835f01932ff0ee84">
+		<Metadata name="InformationRegister.Штрихкоды" id="a4edc356-6add-4038-b31b-0468f5fb9b66" configVersion="6dd21e99d3e8c02bdc401f7faba592e8a977013c">
 			<Metadata name="InformationRegister.Штрихкоды.Dimension.ТипШтрихкода" id="30ed1825-f4c5-4f81-9799-a5a98ca86c27"/>
 			<Metadata name="InformationRegister.Штрихкоды.Dimension.Штрихкод" id="329ca6c0-cc64-4621-8df6-1ca5efdd5d9f"/>
 			<Metadata name="InformationRegister.Штрихкоды.Dimension.Владелец" id="52bdddc7-f36a-4303-aee6-3c395041f298"/>
@@ -363,6 +374,11 @@
 			<Metadata name="InformationRegister.Штрихкоды.Dimension.Упаковка" id="97a1ace5-2f14-486f-b3d6-f2b63756e7ea"/>
 		</Metadata>
 		<Metadata name="InformationRegister.Штрихкоды.ManagerModule" id="a4edc356-6add-4038-b31b-0468f5fb9b66.2" configVersion="707cce8f10ccd62beff53f3ea89de277401098b4"/>
+		<Metadata name="InformationRegister.Штрихкоды.Form.ФормаЗаписи.Form" id="9b2079cf-e20d-404b-83ad-72d6aba691cd.0" configVersion="99213bcd0b206979d072b34a96b0cbfc839dcf2b"/>
+		<Metadata name="InformationRegister.Штрихкоды.Form.ФормаСписка" id="564ed04e-bec7-4ad2-9558-2593791cb3d4" configVersion="ff85ea95db8db9fc844bfd7c1bcc93b06dff3159"/>
+		<Metadata name="InformationRegister.Штрихкоды.Form.ФормаСписка.Form" id="564ed04e-bec7-4ad2-9558-2593791cb3d4.0" configVersion="debcfbc29aae6444e1a012cd61075592eb7ee97b"/>
+		<Metadata name="InformationRegister.Штрихкоды.ManagerModule" id="a4edc356-6add-4038-b31b-0468f5fb9b66.2" configVersion="ddf43d82ca5e07a452a6025686bfb3dafd91d02d"/>
+		<Metadata name="InformationRegister.Штрихкоды.RecordSetModule" id="a4edc356-6add-4038-b31b-0468f5fb9b66.1" configVersion="b2f53b13f67a7d035372f82e317a4f2a5f984088"/>
 		<Metadata name="Language.Русский" id="102c7ee0-7d90-4103-9220-f91d70c0c9e2" configVersion="97901e92df79c3e021b4f36a4f8ce9f8265a9a29"/>
 		<Metadata name="StyleItem.ИтогиФонГруппы" id="dd0a039b-6387-46cd-a04d-41e4f1d0c456" configVersion="58386a151c4351a3863cb43fe40d2fdb8b6d35f8"/>
 		<Metadata name="StyleItem.ПоясняющийТекст" id="b38092a0-e0dd-45c6-bde6-d8c255847737" configVersion="b99161197f2ec50136d75aab5c9bae7c9d58eae8"/>
@@ -374,6 +390,8 @@
 		<Metadata name="StyleItem.ЦветФонаЧередованияСтрокТабличнойЧасти" id="39993b05-a6ee-4e4b-bee8-2854915062bf" configVersion="7f8d5d2dbc1d2130e56d20b6030200c18471d5cc"/>
 		<Metadata name="Subsystem.ЗапасыИЗакупки" id="d8e1e687-18f0-4de3-8e6a-24e545ff6501" configVersion="c8cf98065c543742b2ea6bda204316859e6ad76b"/>
 		<Metadata name="Subsystem.ЗапасыИЗакупки.Subsystem.Снабжение" id="58bc0dcc-be7e-4d5b-8a95-a5a913e7fe89" configVersion="ecf490d884d0edb271a1fde93e4ce6e5b1aeb1bc"/>
+		<Metadata name="Subsystem.НормативноСправочнаяИнформация" id="2dc26dd2-633d-425f-bdee-2de50114c307" configVersion="f1e97d388a1b4e2c9f82b44256a8ac83640c76f3"/>
+		<Metadata name="Subsystem.НормативноСправочнаяИнформация.Subsystem.Номенклатура" id="b7d98663-c711-4e13-9f7b-2765e4d04c93" configVersion="7b87a6e90106237cc86db546a2ddc0c0062cd6ff"/>
 		<Metadata name="Subsystem.Продажи" id="bb51a5bc-1687-474d-a788-a3abb5a4c2ba" configVersion="12e043dfd48d1c7f875dc45643d91eeca5514951"/>
 		<Metadata name="Subsystem.ТБКМиграции" id="8f284d35-92ce-4b4b-813e-62cb86791411" configVersion="11d085370b871e2186d11d07373f28dcef460f44"/>
 		<Metadata name="WebService.ws_tbk" id="35d4f010-c703-470f-8ac9-703db1a6527e" configVersion="63a91247a3f91fcba9206aff5daec9d9c4197d21">

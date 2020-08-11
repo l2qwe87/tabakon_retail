@@ -1,0 +1,29 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://fsrar.ru/WEGAIS/ActTTNSingle">
+	<import namespace="http://fsrar.ru/WEGAIS/Common"/>
+	<valueType name="СтатусАкта" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">Accepted</enumeration>
+		<enumeration xsi:type="xs:string">Rejected</enumeration>
+	</valueType>
+	<objectType name="АктПодтвержденияТТН">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="Идентификатор" type="d3p1:Идентификатор" lowerBound="0" localName="Identity"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ActTTNSingle" name="Шапка" type="d3p1:Шапка" localName="Header"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ActTTNSingle" name="Содержимое" type="d3p1:Содержимое" localName="Content"/>
+	</objectType>
+	<objectType name="Шапка" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ActTTNSingle" name="Статус" type="d3p1:СтатусАкта" lowerBound="0" localName="IsAccept"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="Номер" type="d3p1:Строка50" localName="ACTNUMBER"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="Дата" type="d3p1:Дата" localName="ActDate"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="ИдентификаторТТН" type="d3p1:Строка50" localName="WBRegId"/>
+		<property name="Комментарий" lowerBound="0" localName="Note">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="500"/>
+		</property>
+	</objectType>
+	<objectType name="Содержимое">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ActTTNSingle" name="Элементы" type="d3p1:СодержимоеЭлемент" lowerBound="0" upperBound="-1" localName="Position"/>
+	</objectType>
+	<objectType name="СодержимоеЭлемент" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="ИдентификаторСтроки" type="d3p1:Идентификатор" localName="Identity"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="НомерСправкиБ" type="d3p1:Строка50" localName="InformBRegId"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="КоличествоФакт" type="d3p1:ЧислоНеотрицательное" localName="RealQuantity"/>
+	</objectType>
+</package>

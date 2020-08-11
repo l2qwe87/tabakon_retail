@@ -1,0 +1,15 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://fsrar.ru/WEGAIS/QueryParameters">
+	<import namespace="http://fsrar.ru/WEGAIS/Common"/>
+	<objectType name="Запрос">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/QueryParameters" name="Параметры" type="d3p1:Параметры" lowerBound="0" upperBound="-1" localName="Parameters"/>
+	</objectType>
+	<objectType name="Параметры">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/QueryParameters" name="Элементы" type="d3p1:ПараметрыЭлемент" upperBound="-1" localName="Parameter"/>
+	</objectType>
+	<objectType name="ПараметрыЭлемент" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="Имя" type="d3p1:Строка50" localName="Name"/>
+		<property name="Значение" localName="Value">
+			<typeDef xmlns:d4p1="http://fsrar.ru/WEGAIS/Common" xsi:type="ValueType" base="d4p1:Строка" variety="Atomic" maxLength="255"/>
+		</property>
+	</objectType>
+</package>

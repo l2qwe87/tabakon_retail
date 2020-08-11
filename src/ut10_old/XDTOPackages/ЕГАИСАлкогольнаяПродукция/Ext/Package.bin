@@ -1,0 +1,63 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://fsrar.ru/WEGAIS/ProductRef">
+	<import namespace="http://fsrar.ru/WEGAIS/ClientRef"/>
+	<import namespace="http://fsrar.ru/WEGAIS/Common"/>
+	<valueType name="ГраницаДиапазона" variety="Atomic" minLength="1" maxLength="9">
+		<typeDef base="xs:string" variety="Atomic"/>
+		<pattern>([0-9])*</pattern>
+	</valueType>
+	<valueType name="Серия" variety="Atomic" length="3">
+		<typeDef base="xs:string" variety="Atomic"/>
+		<pattern>[0-9]{3}</pattern>
+	</valueType>
+	<valueType name="ТипАП" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">АП</enumeration>
+		<enumeration xsi:type="xs:string">ССП</enumeration>
+		<enumeration xsi:type="xs:string">ССНП</enumeration>
+		<enumeration xsi:type="xs:string">Спирт</enumeration>
+	</valueType>
+	<objectType name="АлкогольнаяПродукция" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="Идентификатор" type="d3p1:Идентификатор" lowerBound="0" localName="Identity"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ProductRef" name="Тип" type="d3p1:ТипАП" lowerBound="0" localName="Type"/>
+		<property name="НаименованиеПолное" localName="FullName">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="255"/>
+		</property>
+		<property name="Наименование" lowerBound="0" localName="ShortName">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="64"/>
+		</property>
+		<property name="Код" localName="AlcCode">
+			<typeDef xmlns:d4p1="http://fsrar.ru/WEGAIS/Common" xsi:type="ValueType" base="d4p1:Строка" variety="Atomic" maxLength="64"/>
+		</property>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="Объем" type="d3p1:ЧислоПоложительное" lowerBound="0" localName="Capacity"/>
+		<property name="Крепость" lowerBound="0" localName="AlcVolume">
+			<typeDef xsi:type="ValueType" base="xs:decimal" variety="Atomic" minInclusive="0" maxInclusive="100"/>
+		</property>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ClientRef" name="Производитель" type="d3p1:Организация" lowerBound="0" localName="Producer"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ClientRef" name="Импортер" type="d3p1:Организация" lowerBound="0" localName="Importer"/>
+		<property name="КодВидаПродукции" localName="ProductVCode">
+			<typeDef xmlns:d4p1="http://fsrar.ru/WEGAIS/Common" xsi:type="ValueType" base="d4p1:Строка" variety="Atomic" maxLength="5"/>
+		</property>
+	</objectType>
+	<objectType name="СправкаА" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="РегистрационныйНомер" type="d3p1:Строка50" localName="RegId"/>
+	</objectType>
+	<objectType name="СправкаБ">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ProductRef" name="Элементы" type="d3p1:СправкаБЭлемент" localName="InformBItem"/>
+	</objectType>
+	<objectType name="СправкаБЭлемент">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="РегистрационныйНомер" type="d3p1:Строка50" localName="BRegId"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ProductRef" name="Маркировка" type="d3p1:Маркировка" lowerBound="0" localName="MarkInfo"/>
+	</objectType>
+	<objectType name="Маркировка">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="ТипМарки" type="d3p1:Строка50" localName="Type"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ProductRef" name="ДиапазоныНомеров" type="d3p1:ДиапазоныНомеров" localName="Ranges"/>
+	</objectType>
+	<objectType name="ДиапазоныНомеров">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ProductRef" name="Элементы" type="d3p1:ДиапазоныНомеровЭлемент" upperBound="-1" localName="Range"/>
+	</objectType>
+	<objectType name="ДиапазоныНомеровЭлемент">
+		<property name="Идентификатор" type="xs:string" lowerBound="0" localName="Identity"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ProductRef" name="Серия" type="d3p1:Серия" localName="Rank"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ProductRef" name="НачальныйНомер" type="d3p1:ГраницаДиапазона" localName="Start"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ProductRef" name="КонечныйНомер" type="d3p1:ГраницаДиапазона" localName="Last"/>
+	</objectType>
+</package>
