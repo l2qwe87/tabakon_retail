@@ -35,6 +35,55 @@
 				</Properties>
 				<ChildObjects/>
 			</Operation>
+			<Operation uuid="46e10a4b-43a5-4f99-b466-8d03b0e7ca49">
+				<Properties>
+					<Name>Get</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Get</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<XDTOReturningValueType>xs:string</XDTOReturningValueType>
+					<Nillable>false</Nillable>
+					<Transactioned>false</Transactioned>
+					<ProcedureName>Get</ProcedureName>
+					<DataLockControlMode>Managed</DataLockControlMode>
+				</Properties>
+				<ChildObjects>
+					<Parameter uuid="de1f9cda-cc3e-4676-908d-24a37f405a87">
+						<Properties>
+							<Name>method</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>method</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType>xs:string</XDTOValueType>
+							<Nillable>false</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+					<Parameter uuid="2c95d8eb-6517-457a-8ae4-360d3ee47f6f">
+						<Properties>
+							<Name>params</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>params</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType>xs:string</XDTOValueType>
+							<Nillable>true</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+				</ChildObjects>
+			</Operation>
 		</ChildObjects>
 	</WebService>
 </MetaDataObject>
