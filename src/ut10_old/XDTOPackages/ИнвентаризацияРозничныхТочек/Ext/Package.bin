@@ -1,0 +1,17 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.tabakon-inventory-exchange.org">
+	<import namespace="http://v8.1c.ru/8.1/data/core"/>
+	<objectType name="Магазин" open="false" abstract="false" mixed="false" ordered="true" sequenced="false">
+		<property name="Код" type="xs:string" lowerBound="0" upperBound="1" form="Element"/>
+		<property name="Наименование" type="xs:string" lowerBound="0" upperBound="1" nillable="true" form="Element"/>
+		<property name="ИдентификаторСсылки" type="xs:string"/>
+		<property name="КодОрганизации" type="xs:string" lowerBound="0" upperBound="1" form="Element"/>
+		<property name="НаименованиеОрганизации" type="xs:string" lowerBound="0" upperBound="1" nillable="true" form="Element"/>
+		<property name="ИдентификаторСсылкиОрганизации" type="xs:string"/>
+	</objectType>
+	<objectType name="СписокМагазинов" open="false" abstract="false" mixed="false" ordered="true" sequenced="false">
+		<property xmlns:d3p1="http://www.tabakon-inventory-exchange.org" name="Список" type="d3p1:Магазин" lowerBound="0" upperBound="-1" form="Element"/>
+	</objectType>
+	<objectType name="ТабличныеДанные">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ТаблицаЗначений" type="d3p1:ValueTable"/>
+	</objectType>
+</package>

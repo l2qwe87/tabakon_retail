@@ -1,0 +1,82 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://fsrar.ru/WEGAIS/TTNSingle">
+	<import namespace="http://fsrar.ru/WEGAIS/Common"/>
+	<import namespace="http://fsrar.ru/WEGAIS/ClientRef"/>
+	<import namespace="http://fsrar.ru/WEGAIS/ProductRef"/>
+	<valueType name="ТипыТТН" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">WBReturnToMe</enumeration>
+		<enumeration xsi:type="xs:string">WBInvoiceToMe</enumeration>
+		<enumeration xsi:type="xs:string">WBReturnFromMe</enumeration>
+		<enumeration xsi:type="xs:string">WBInvoiceFromMe</enumeration>
+	</valueType>
+	<valueType name="ТипыУпаковки" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">Packed</enumeration>
+		<enumeration xsi:type="xs:string">Unpacked</enumeration>
+	</valueType>
+	<objectType name="ТТН">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="Идентификатор" type="d3p1:Идентификатор" lowerBound="0" localName="Identity"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/TTNSingle" name="Шапка" type="d3p1:Шапка" localName="Header"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/TTNSingle" name="Содержимое" type="d3p1:Содержимое" localName="Content"/>
+	</objectType>
+	<objectType name="Шапка" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/TTNSingle" name="ТипТТН" type="d3p1:ТипыТТН" default="WBInvoiceFromMe" localName="Type"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/TTNSingle" name="ТипУпаковки" type="d3p1:ТипыУпаковки" localName="UnitType"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="Номер" type="d3p1:Строка50" localName="NUMBER"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="Дата" type="d3p1:Дата" localName="Date"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="ДатаОтгрузки" type="d3p1:Дата" localName="ShippingDate"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/TTNSingle" name="Доставка" type="d3p1:Доставка" localName="Transport"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ClientRef" name="Грузоотправитель" type="d3p1:Организация" localName="Shipper"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ClientRef" name="Грузополучатель" type="d3p1:Организация" localName="Consignee"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ClientRef" name="Поставщик" type="d3p1:Организация" lowerBound="0" localName="Supplier"/>
+		<property name="Основание" lowerBound="0" localName="Base">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="200"/>
+		</property>
+		<property name="Комментарий" lowerBound="0" localName="Note">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="200"/>
+		</property>
+	</objectType>
+	<objectType name="Доставка" open="true" ordered="false" sequenced="true">
+		<property name="ТипДоставки" lowerBound="0" localName="TRAN_TYPE">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="50"/>
+		</property>
+		<property name="Перевозчик" lowerBound="0" localName="TRAN_COMPANY">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="255"/>
+		</property>
+		<property name="Автомобиль" lowerBound="0" localName="TRAN_CAR">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="255"/>
+		</property>
+		<property name="Прицеп" lowerBound="0" localName="TRAN_TRAILER">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="255"/>
+		</property>
+		<property name="Заказчик" lowerBound="0" localName="TRAN_CUSTOMER">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="255"/>
+		</property>
+		<property name="Водитель" lowerBound="0" localName="TRAN_DRIVER">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="255"/>
+		</property>
+		<property name="ПунктПогрузки" lowerBound="0" localName="TRAN_LOADPOINT">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="2000"/>
+		</property>
+		<property name="ПунктРазгрузки" lowerBound="0" localName="TRAN_UNLOADPOINT">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="2000"/>
+		</property>
+		<property name="Перенаправление" lowerBound="0" localName="TRAN_REDIRECT">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="2000"/>
+		</property>
+		<property name="Экспедитор" lowerBound="0" localName="TRAN_FORWARDER">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="255"/>
+		</property>
+	</objectType>
+	<objectType name="Содержимое">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/TTNSingle" name="Элементы" type="d3p1:СодержимоеЭлемент" upperBound="-1" localName="Position"/>
+	</objectType>
+	<objectType name="СодержимоеЭлемент" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ProductRef" name="АлкогольнаяПродукция" type="d3p1:АлкогольнаяПродукция" localName="Product"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="ИдентификаторУпаковки" type="d3p1:Строка50" lowerBound="0" localName="Pack_ID"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="Количество" type="d3p1:ЧислоПоложительное" localName="Quantity"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="Цена" type="d3p1:ЧислоНеотрицательное" localName="Price"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="НомерПартии" type="d3p1:Строка50" lowerBound="0" localName="Party"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="ИдентификаторСтроки" type="d3p1:Идентификатор" localName="Identity"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ProductRef" name="СправкаА" type="d3p1:СправкаА" localName="InformA"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ProductRef" name="СправкаБ" type="d3p1:СправкаБ" localName="InformB"/>
+	</objectType>
+</package>

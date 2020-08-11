@@ -1,0 +1,52 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://fsrar.ru/WEGAIS/ClientRef">
+	<import namespace="http://fsrar.ru/WEGAIS/Common"/>
+	<valueType name="ИНН" base="xs:string" variety="Atomic">
+		<pattern>(\d{10}|\d{12})</pattern>
+	</valueType>
+	<valueType name="КПП" base="xs:string" variety="Atomic" length="9">
+		<pattern>[0-9]{9}</pattern>
+	</valueType>
+	<objectType name="Организация" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="Идентификатор" type="d3p1:Идентификатор" lowerBound="0" localName="Identity"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="Код" type="d3p1:Строка50" localName="ClientRegId"/>
+		<property name="НаименованиеПолное" localName="FullName">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="255"/>
+		</property>
+		<property name="Наименование" lowerBound="0" localName="ShortName">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="64"/>
+		</property>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ClientRef" name="ИНН" type="d3p1:ИНН" lowerBound="0" nillable="true" localName="INN"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ClientRef" name="КПП" type="d3p1:КПП" lowerBound="0" localName="KPP"/>
+		<property name="УНП" type="xs:string" lowerBound="0" nillable="true" localName="UNP"/>
+		<property name="РНН" type="xs:string" lowerBound="0" nillable="true" localName="RNN"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ClientRef" name="Адрес" type="d3p1:Адрес" localName="address"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ClientRef" name="СписокАдресов" type="d3p1:СписокАдресов" lowerBound="0" localName="addresslist"/>
+		<property name="Статус" type="xs:string" lowerBound="0" nillable="true" localName="State"/>
+	</objectType>
+	<objectType name="СписокАдресов">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ClientRef" name="Элементы" type="d3p1:Адрес" upperBound="-1" localName="address"/>
+	</objectType>
+	<objectType name="Адрес" open="true">
+		<property name="КодСтраны" localName="Country">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+				<pattern>[0-9][0-9][0-9]</pattern>
+			</typeDef>
+		</property>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="ПочтовыйИндекс" type="d3p1:Строка50" lowerBound="0" localName="Index"/>
+		<property name="КодРегиона" lowerBound="0" localName="RegionCode">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic">
+				<pattern>[0-9][0-9]</pattern>
+			</typeDef>
+		</property>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="Область" type="d3p1:Строка50" lowerBound="0" localName="area"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="Город" type="d3p1:Строка50" lowerBound="0" localName="city"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="Район" type="d3p1:Строка50" lowerBound="0" localName="place"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="Улица" type="d3p1:Строка50" lowerBound="0" localName="street"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="Дом" type="d3p1:Строка50" lowerBound="0" localName="house"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="Строение" type="d3p1:Строка50" lowerBound="0" localName="building"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="Буква" type="d3p1:Строка50" lowerBound="0" localName="liter"/>
+		<property name="Представление" localName="description">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="2000"/>
+		</property>
+	</objectType>
+</package>

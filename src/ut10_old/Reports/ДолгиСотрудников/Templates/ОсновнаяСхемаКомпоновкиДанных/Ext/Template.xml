@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудник</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Группа</dataPath>
+			<field>Группа</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВзятоНО</dataPath>
+			<field>ВзятоНО</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Взято НО</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДолгНаНачалоП</dataPath>
+			<field>ДолгНаНачалоП</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нач. остаток</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВзятоОБ</dataPath>
+			<field>ВзятоОБ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Взято</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДолгНаКонецП</dataPath>
+			<field>ДолгНаКонецП</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кон. остаток</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВозвратНО</dataPath>
+			<field>ВозвратНО</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возврат НО</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВозвратОБ</dataPath>
+			<field>ВозвратОБ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возврат</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ФизическиеЛица.Ссылка,
+	ФизическиеЛица.Родитель КАК Группа
+ПОМЕСТИТЬ Сотр
+ИЗ
+	Справочник.ФизическиеЛица КАК ФизическиеЛица
+ГДЕ
+	НЕ ФизическиеЛица.ПометкаУдаления
+	И НЕ ФизическиеЛица.ЭтоГруппа
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Сотр.Ссылка КАК Сотрудник,
+	Сотр.Группа
+ПОМЕСТИТЬ Сотр2
+ИЗ
+	Сотр КАК Сотр
+ГДЕ
+	Сотр.Группа В(&amp;Группы)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДвиженияДенежныхСредств.Регистратор,
+	ДвиженияДенежныхСредств.СтатьяДвиженияДенежныхСредств,
+	ДвиженияДенежныхСредств.Сумма,
+	ДвиженияДенежныхСредств.Контрагент
+ПОМЕСТИТЬ Долги
+ИЗ
+	РегистрНакопления.ДвиженияДенежныхСредств КАК ДвиженияДенежныхСредств
+ГДЕ
+	ДвиженияДенежныхСредств.СтатьяДвиженияДенежныхСредств В(&amp;СтатьяДвиженияДенежныхСредств)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Долги.Регистратор.Дата,
+	Долги.Регистратор КАК Регистратор,
+	РасходныйКассовыйОрдерВыплатаСотрудникам.Сотрудник,
+	РасходныйКассовыйОрдерВыплатаСотрудникам.Сумма КАК Взято
+ПОМЕСТИТЬ тВзято
+ИЗ
+	Долги КАК Долги
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.РасходныйКассовыйОрдер.ВыплатаСотрудникам КАК РасходныйКассовыйОрдерВыплатаСотрудникам
+		ПО Долги.Регистратор = РасходныйКассовыйОрдерВыплатаСотрудникам.Ссылка
+ГДЕ
+	Долги.Регистратор ССЫЛКА Документ.РасходныйКассовыйОрдер
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Долги.Регистратор.Дата,
+	Долги.Регистратор,
+	Долги.Сумма КАК Возврат,
+	Долги.Контрагент КАК Сотрудник
+ПОМЕСТИТЬ тВозвр
+ИЗ
+	Долги КАК Долги
+ГДЕ
+	Долги.Регистратор ССЫЛКА Документ.ПриходныйКассовыйОрдер
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ тВзято.РегистраторДата) КАК РегистраторДата,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ тВзято.Регистратор) КАК Регистратор,
+	тВзято.Сотрудник,
+	СУММА(ЕСТЬNULL(тВзято.Взято, 0)) КАК Взято
+ПОМЕСТИТЬ ВзтОН
+ИЗ
+	тВзято КАК тВзято
+ГДЕ
+	тВзято.РегистраторДата &lt; &amp;НП
+	И НЕ тВзято.Сотрудник ЕСТЬ NULL
+
+СГРУППИРОВАТЬ ПО
+	тВзято.Сотрудник
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ тВзято.РегистраторДата) КАК РегистраторДата,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ тВзято.Регистратор) КАК Регистратор,
+	тВзято.Сотрудник,
+	СУММА(ЕСТЬNULL(тВзято.Взято, 0)) КАК Взято
+ПОМЕСТИТЬ ВзтОборот
+ИЗ
+	тВзято КАК тВзято
+ГДЕ
+	тВзято.РегистраторДата &gt;= &amp;НП
+	И тВзято.РегистраторДата &lt;= &amp;КП
+	И НЕ тВзято.Сотрудник ЕСТЬ NULL
+
+СГРУППИРОВАТЬ ПО
+	тВзято.Сотрудник
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ тВозвр.РегистраторДата) КАК РегистраторДата,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ тВозвр.Регистратор) КАК Регистратор,
+	тВозвр.Сотрудник,
+	СУММА(ЕСТЬNULL(тВозвр.Возврат, 0)) КАК Возврат
+ПОМЕСТИТЬ ВозОН
+ИЗ
+	тВозвр КАК тВозвр
+ГДЕ
+	тВозвр.РегистраторДата &lt; &amp;НП
+	И НЕ тВозвр.Сотрудник ЕСТЬ NULL
+
+СГРУППИРОВАТЬ ПО
+	тВозвр.Сотрудник
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ тВозвр.РегистраторДата) КАК РегистраторДата,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ тВозвр.Регистратор) КАК Регистратор,
+	тВозвр.Сотрудник,
+	СУММА(ЕСТЬNULL(тВозвр.Возврат, 0)) КАК Возврат
+ПОМЕСТИТЬ ВозОборот
+ИЗ
+	тВозвр КАК тВозвр
+ГДЕ
+	тВозвр.РегистраторДата &gt;= &amp;НП
+	И тВозвр.РегистраторДата &lt;= &amp;КП
+	И НЕ тВозвр.Сотрудник ЕСТЬ NULL
+
+СГРУППИРОВАТЬ ПО
+	тВозвр.Сотрудник
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Сотр2.Сотрудник,
+	Сотр2.Группа,
+	ЕСТЬNULL(ВзтОН.Взято, 0) КАК ВзятоНО,
+	ЕСТЬNULL(ВозОН.Возврат, 0) КАК ВозвратНО,
+	ЕСТЬNULL(ВзтОборот.Взято, 0) КАК ВзятоОБ,
+	ЕСТЬNULL(ВозОборот.Возврат, 0) КАК ВозвратОБ,
+	ЕСТЬNULL(ВзтОН.Взято, 0) - ЕСТЬNULL(ВозОН.Возврат, 0) КАК ДолгНаНачалоП,
+	ЕСТЬNULL(ВзтОН.Взято, 0) - ЕСТЬNULL(ВозОН.Возврат, 0) + ЕСТЬNULL(ВзтОборот.Взято, 0) - ЕСТЬNULL(ВозОборот.Возврат, 0) КАК ДолгНаКонецП
+ПОМЕСТИТЬ ИТ
+ИЗ
+	Сотр2 КАК Сотр2
+		ЛЕВОЕ СОЕДИНЕНИЕ ВзтОН КАК ВзтОН
+		ПО Сотр2.Сотрудник = ВзтОН.Сотрудник
+		ЛЕВОЕ СОЕДИНЕНИЕ ВозОН КАК ВозОН
+		ПО Сотр2.Сотрудник = ВозОН.Сотрудник
+		ЛЕВОЕ СОЕДИНЕНИЕ ВзтОборот КАК ВзтОборот
+		ПО Сотр2.Сотрудник = ВзтОборот.Сотрудник
+		ЛЕВОЕ СОЕДИНЕНИЕ ВозОборот КАК ВозОборот
+		ПО Сотр2.Сотрудник = ВозОборот.Сотрудник
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ИТ.Сотрудник,
+	ИТ.Группа,
+	ИТ.ВзятоНО,
+	ИТ.ВозвратНО,
+	ИТ.ДолгНаНачалоП,
+	ИТ.ВзятоОБ,
+	ИТ.ВозвратОБ,
+	ИТ.ДолгНаКонецП
+ИЗ
+	ИТ КАК ИТ</query>
+	</dataSet>
+	<totalField>
+		<dataPath>ВзятоОБ</dataPath>
+		<expression>Сумма(ВзятоОБ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВозвратОБ</dataPath>
+		<expression>Сумма(ВозвратОБ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ДолгНаКонецП</dataPath>
+		<expression>Сумма(ДолгНаКонецП)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ДолгНаНачалоП</dataPath>
+		<expression>Сумма(ДолгНаНачалоП)</expression>
+	</totalField>
+	<parameter>
+		<name>Группы</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Группы</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ФизическиеЛица</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КП</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>КП</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НП</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>НП</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СтатьяДвиженияДенежныхСредств</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Статья движения денежных средств</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СтатьиДвиженияДенежныхСредств</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Группа</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сотрудник</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДолгНаНачалоП</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВзятоОБ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВозвратОБ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДолгНаКонецП</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Группы</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>СтатьяДвиженияДенежныхСредств</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ДолгНаКонецП</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДолгНаКонецП</dcsset:left>
+							<dcsset:comparisonType>Less</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#35B308</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеПолейГруппировки</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionGroupFieldsPlacement">SeparatelyAndInTotalsOnly</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">End</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Группа</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,26 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://fsrar.ru/WEGAIS/TTNInformBReg">
+	<import namespace="http://fsrar.ru/WEGAIS/Common"/>
+	<import namespace="http://fsrar.ru/WEGAIS/ClientRef"/>
+	<objectType name="РегистрацияСправок">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/TTNInformBReg" name="Шапка" type="d3p1:Шапка" localName="Header"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/TTNInformBReg" name="Содержимое" type="d3p1:Содержимое" localName="Content"/>
+	</objectType>
+	<objectType name="Шапка" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="Идентификатор" type="d3p1:Идентификатор" lowerBound="0" localName="Identity"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="ИдентификаторТТН" type="d3p1:Строка50" localName="WBRegId"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="НомерФиксацииТТН" type="d3p1:Строка50" lowerBound="0" localName="EGAISFixNumber"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="ДатаФиксацииТТН" type="d3p1:Дата" lowerBound="0" localName="EGAISFixDate"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="НомерТТН" type="d3p1:Строка50" localName="WBNUMBER"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="ДатаТТН" type="d3p1:Дата" localName="WBDate"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ClientRef" name="Грузоотправитель" type="d3p1:Организация" localName="Shipper"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ClientRef" name="Грузополучатель" type="d3p1:Организация" localName="Consignee"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ClientRef" name="Поставщик" type="d3p1:Организация" lowerBound="0" localName="Supplier"/>
+	</objectType>
+	<objectType name="Содержимое">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/TTNInformBReg" name="Элементы" type="d3p1:СодержимоеЭлемент" upperBound="-1" localName="Position"/>
+	</objectType>
+	<objectType name="СодержимоеЭлемент" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="ИдентификаторСтрокиТТН" type="d3p1:Идентификатор" localName="Identity"/>
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/Common" name="РегистрационныйНомер" type="d3p1:Строка50" localName="InformBRegId"/>
+	</objectType>
+</package>

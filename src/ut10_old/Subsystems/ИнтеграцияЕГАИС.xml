@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Subsystem uuid="7a664dfd-7b70-4de1-abdc-b54a666896e5">
+		<Properties>
+			<Name>ИнтеграцияЕГАИС</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интеграция ЕГАИС</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияЕГАИСВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияЕГАИСКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.ЕГАИСЧек</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.КлассификаторАлкогольнойПродукцииЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.ЕГАИСДокументы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.ЕГАИСЗапросКлассификатора</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЗапросыЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.КлассификаторОрганизацийЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.ЕГАИСКвитанция</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.ЕГАИСОрганизация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.ЕГАИСАлкогольнаяПродукция</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.ЕГАИСОтветОрганизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.ЕГАИСОтветАлкогольнаяПродукция</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияЕГАИСПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияЕГАИСКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.ЕГАИСАктПодтвержденияТТН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.ЕГАИСТТН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыОбъектовЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ОткрытьНастройкиОбменаЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ОткрытьКлассификаторАлкогольнойПродукцииЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ОткрытьКлассификаторОрганизацийЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыЛицензийАлкогольнойПродукции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияЕГАИСКлиентПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.ЕГАИСОбщиеТипы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.ЕГАИСРегистрацияСправокПоТТН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ДатаНачалаРегистрацииРозничныхПродажВЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ВыполнениеСинхронизацииСЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.НастройкаСинхронизацииСЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ВестиСведенияДляДекларацийПоАлкогольнойПродукции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВестиСведенияДляДекларацийПоАлкогольнойПродукции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ТоварноТранспортнаяНакладнаяЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЕГАИС_Отказ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЕГАИС_ПереданОтвет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЕГАИС_СканированиеАкцизнойМарки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЕГАИС_СтатусыОбработки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыОбработкиТТН_ЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СоответствиеНоменклатурыЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СоответствиеОрганизацийЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НастройкиОбменаЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.СопоставлениеНоменклатурыЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.СопоставлениеОрганизацийЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыАлкогольнойПродукции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ФормаСканированияАкцизнойМарки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ОбработкаОтветовЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВыгружатьПродажиНемаркируемойПродукцииВЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.КлассификаторВидовАлкогольнойПродукции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ЕГАИССформироватьИдентификаторОбъектаРИБ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияЕГАИСКлиентСерверПереопределяемый</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>
