@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗаписать" id="21">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="22"/>
+			</Button>
+			<Button name="ФормаНовыйШтрихкод" id="13">
+				<Type>CommandBarButton</Type>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="ФормаНовыйШтрихкодExtendedTooltip" id="14"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="047d4d09-961c-4bdc-8519-eef10674c35b" callType="After">ТБКПослеЗаписиПосле</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Владелец" id="1">
+			<DataPath>1/0:52bdddc7-f36a-4303-aee6-3c395041f298</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<OpenButton>true</OpenButton>
+			<ChoiceParameters>
+				<app:item name="Отбор.ВидКарты">
+					<app:value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="v8:FixedArray">
+							<v8:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ВидыИнформационныхКарт.EnumValue.Штриховая</Value>
+							</v8:Value>
+							<v8:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ВидыИнформационныхКарт.EnumValue.Смешанная</Value>
+							</v8:Value>
+						</Value>
+					</app:value>
+				</app:item>
+			</ChoiceParameters>
+			<ContextMenu name="ВладелецКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ВладелецExtendedTooltip" id="15"/>
+		</InputField>
+		<InputField name="Характеристика" id="5">
+			<DataPath>1/0:5d6d6c4b-09ac-4820-8d03-1a039ba08da5</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<DropListButton>false</DropListButton>
+			<ChoiceButton>true</ChoiceButton>
+			<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<ChoiceParameterLinks>
+				<xr:Link>
+					<xr:Name>Владелец</xr:Name>
+					<xr:DataPath xsi:type="xs:string">1/0:52bdddc7-f36a-4303-aee6-3c395041f298</xr:DataPath>
+					<xr:ValueChange>Clear</xr:ValueChange>
+				</xr:Link>
+			</ChoiceParameterLinks>
+			<ContextMenu name="ХарактеристикаКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ХарактеристикаExtendedTooltip" id="16"/>
+		</InputField>
+		<InputField name="Упаковка" id="9">
+			<DataPath>1/0:97a1ace5-2f14-486f-b3d6-f2b63756e7ea</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="УпаковкаКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="УпаковкаExtendedTooltip" id="17"/>
+		</InputField>
+		<InputField name="Штрихкод" id="3">
+			<DataPath>1/0:329ca6c0-cc64-4621-8df6-1ca5efdd5d9f</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ШтрихкодКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ШтрихкодExtendedTooltip" id="19"/>
+		</InputField>
+		<InputField name="ТипШтрихкода" id="7">
+			<DataPath>1/0:30ed1825-f4c5-4f81-9799-a5a98ca86c27</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<OpenButton>false</OpenButton>
+			<ContextMenu name="ТипШтрихкодаКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ТипШтрихкодаExtendedTooltip" id="18"/>
+		</InputField>
+		<InputField name="ПредставлениеШтрихкода" id="11">
+			<Visible>false</Visible>
+			<ContextMenu name="ПредставлениеШтрихкодаКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ПредставлениеШтрихкодаExtendedTooltip" id="20"/>
+		</InputField>
+	</ChildItems>
+	<Attributes/>
+	<BaseForm version="2.9">
+		<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+		<VerticalScroll>useIfNecessary</VerticalScroll>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+			<ChildItems>
+				<Button name="ФормаЗаписать" id="21">
+					<Type>CommandBarButton</Type>
+					<Representation>Picture</Representation>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="22"/>
+				</Button>
+				<Button name="ФормаНовыйШтрихкод" id="13">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ФормаНовыйШтрихкодExtendedTooltip" id="14"/>
+				</Button>
+			</ChildItems>
+		</AutoCommandBar>
+		<ChildItems>
+			<InputField name="Владелец" id="1">
+				<DataPath>1/0:52bdddc7-f36a-4303-aee6-3c395041f298</DataPath>
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<OpenButton>true</OpenButton>
+				<ChoiceParameters>
+					<app:item name="Отбор.ВидКарты">
+						<app:value xsi:type="FormChoiceListDesTimeValue">
+							<Presentation/>
+							<Value xsi:type="v8:FixedArray">
+								<v8:Value xsi:type="FormChoiceListDesTimeValue">
+									<Presentation/>
+									<Value xsi:type="xr:DesignTimeRef">Enum.ВидыИнформационныхКарт.EnumValue.Штриховая</Value>
+								</v8:Value>
+								<v8:Value xsi:type="FormChoiceListDesTimeValue">
+									<Presentation/>
+									<Value xsi:type="xr:DesignTimeRef">Enum.ВидыИнформационныхКарт.EnumValue.Смешанная</Value>
+								</v8:Value>
+							</Value>
+						</app:value>
+					</app:item>
+				</ChoiceParameters>
+				<ContextMenu name="ВладелецКонтекстноеМеню" id="2"/>
+				<ExtendedTooltip name="ВладелецExtendedTooltip" id="15"/>
+			</InputField>
+			<InputField name="Характеристика" id="5">
+				<DataPath>1/0:5d6d6c4b-09ac-4820-8d03-1a039ba08da5</DataPath>
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<DropListButton>false</DropListButton>
+				<ChoiceButton>true</ChoiceButton>
+				<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+				<AutoMarkIncomplete>true</AutoMarkIncomplete>
+				<ChoiceParameterLinks>
+					<xr:Link>
+						<xr:Name>Владелец</xr:Name>
+						<xr:DataPath xsi:type="xs:string">1/0:52bdddc7-f36a-4303-aee6-3c395041f298</xr:DataPath>
+						<xr:ValueChange>Clear</xr:ValueChange>
+					</xr:Link>
+				</ChoiceParameterLinks>
+				<ContextMenu name="ХарактеристикаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="ХарактеристикаExtendedTooltip" id="16"/>
+			</InputField>
+			<InputField name="Упаковка" id="9">
+				<DataPath>1/0:97a1ace5-2f14-486f-b3d6-f2b63756e7ea</DataPath>
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<ContextMenu name="УпаковкаКонтекстноеМеню" id="10"/>
+				<ExtendedTooltip name="УпаковкаExtendedTooltip" id="17"/>
+			</InputField>
+			<InputField name="Штрихкод" id="3">
+				<DataPath>1/0:329ca6c0-cc64-4621-8df6-1ca5efdd5d9f</DataPath>
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<ContextMenu name="ШтрихкодКонтекстноеМеню" id="4"/>
+				<ExtendedTooltip name="ШтрихкодExtendedTooltip" id="19"/>
+			</InputField>
+			<InputField name="ТипШтрихкода" id="7">
+				<DataPath>1/0:30ed1825-f4c5-4f81-9799-a5a98ca86c27</DataPath>
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<OpenButton>false</OpenButton>
+				<ContextMenu name="ТипШтрихкодаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="ТипШтрихкодаExtendedTooltip" id="18"/>
+			</InputField>
+			<InputField name="ПредставлениеШтрихкода" id="11">
+				<Visible>false</Visible>
+				<ContextMenu name="ПредставлениеШтрихкодаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ПредставлениеШтрихкодаExtendedTooltip" id="20"/>
+			</InputField>
+		</ChildItems>
+		<Attributes/>
+	</BaseForm>
+</Form>
