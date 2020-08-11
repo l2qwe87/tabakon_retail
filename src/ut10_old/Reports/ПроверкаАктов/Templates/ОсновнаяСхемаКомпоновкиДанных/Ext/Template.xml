@@ -1,0 +1,598 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetUnion">
+		<name>НаборДанных3</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ООРПСуммаДокумента</dataPath>
+			<field>ООРПСуммаДокумента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выручка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ООППКСуммаДокумента</dataPath>
+			<field>ООППКСуммаДокумента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>БН (эквайринг)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КассаНаименование</dataPath>
+			<field>КассаНаименование</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Касса</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>День</dataPath>
+			<field>День</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>День</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НалРасчетноеЗначение</dataPath>
+			<field>НалРасчетноеЗначение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нал Расчетное значение</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Разница</dataPath>
+			<field>Разница</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разница</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПКОСуммаДокумента</dataPath>
+			<field>ПКОСуммаДокумента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НАЛ факт (ПКО)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<item xsi:type="DataSetQuery">
+			<name>НаборДанных2</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КассаНаименование</dataPath>
+				<field>ООРПКассаККМНаименование</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Касса наименование</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Дата</dataPath>
+				<field>ООРПДата</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Ссылка</dataPath>
+				<field>ООРПСсылка</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Ссылка</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ООРПСуммаДокумента</dataPath>
+				<field>ООРПСуммаДокумента</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ООРПСумма документа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>День</dataPath>
+				<field>День</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>День</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НалРасчетноеЗначение</dataPath>
+				<field>НалРасчетноеЗначение</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Нал расчетное значение</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Разница</dataPath>
+				<field>Разница</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Разница</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	ОтчетОРозничныхПродажах.КассаККМ.Наименование КАК ООРПКассаККМНаименование,
+	ОтчетОРозничныхПродажах.СуммаДокумента КАК ООРПСуммаДокумента,
+	ОтчетОРозничныхПродажах.Ссылка КАК ООРПСсылка,
+	ОтчетОРозничныхПродажах.Дата КАК ООРПДата,
+	ОтчетОРозничныхПродажах.Организация,
+	НАЧАЛОПЕРИОДА(ОтчетОРозничныхПродажах.Дата, ДЕНЬ) КАК День,
+	0 КАК НалРасчетноеЗначение,
+	0 КАК Разница
+ИЗ
+	Документ.ОтчетОРозничныхПродажах КАК ОтчетОРозничныхПродажах
+ГДЕ
+	ВЫБОР
+			КОГДА &amp;Организация &lt;&gt; НЕОПРЕДЕЛЕНО
+				ТОГДА ОтчетОРозничныхПродажах.Организация = &amp;Организация
+			КОГДА &amp;Организация = НЕОПРЕДЕЛЕНО
+				ТОГДА ОтчетОРозничныхПродажах.Организация &lt;&gt; ЗНАЧЕНИЕ(Справочник.Организации.ПустаяСсылка)
+						ИЛИ ОтчетОРозничныхПродажах.Организация = ЗНАЧЕНИЕ(Справочник.Организации.ПустаяСсылка)
+		КОНЕЦ
+	И ОтчетОРозничныхПродажах.Дата &gt;= &amp;НачалоПериода
+	И ВЫБОР
+			КОГДА &amp;КонецПериода &lt;&gt; НЕОПРЕДЕЛЕНО
+				ТОГДА ОтчетОРозничныхПродажах.Дата &lt;= &amp;КонецПериода
+			КОГДА &amp;КонецПериода = НЕОПРЕДЕЛЕНО
+				ТОГДА ОтчетОРозничныхПродажах.Дата &gt;= &amp;КонецПериода
+		КОНЕЦ
+	И ОтчетОРозничныхПродажах.ПометкаУдаления = ЛОЖЬ
+	И ОтчетОРозничныхПродажах.Проведен = ИСТИНА</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>НаборДанных1</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ООППКСуммаДокумента</dataPath>
+				<field>ООППКСуммаДокумента</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ООППКСумма документа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Дата</dataPath>
+				<field>ООППКДата</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КассаНаименование</dataPath>
+				<field>ООППККассаНаименование</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Касса наименование</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Ссылка</dataPath>
+				<field>ООППКСсылка</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Ссылка</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>День</dataPath>
+				<field>День</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>День</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НалРасчетноеЗначение</dataPath>
+				<field>НалРасчетноеЗначение</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Нал расчетное значение</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Разница</dataPath>
+				<field>Разница</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Разница</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	ОплатаОтПокупателяПлатежнойКартой.Касса.Наименование КАК ООППККассаНаименование,
+	ОплатаОтПокупателяПлатежнойКартой.СуммаДокумента КАК ООППКСуммаДокумента,
+	ОплатаОтПокупателяПлатежнойКартой.Ссылка КАК ООППКСсылка,
+	ОплатаОтПокупателяПлатежнойКартой.Дата КАК ООППКДата,
+	ОплатаОтПокупателяПлатежнойКартой.Организация,
+	НАЧАЛОПЕРИОДА(ОплатаОтПокупателяПлатежнойКартой.Дата, ДЕНЬ) КАК День,
+	0 КАК НалРасчетноеЗначение,
+	0 КАК Разница
+ИЗ
+	Документ.ОплатаОтПокупателяПлатежнойКартой КАК ОплатаОтПокупателяПлатежнойКартой
+ГДЕ
+	ВЫБОР
+			КОГДА &amp;Организация &lt;&gt; НЕОПРЕДЕЛЕНО
+				ТОГДА ОплатаОтПокупателяПлатежнойКартой.Организация = &amp;Организация
+			КОГДА &amp;Организация = НЕОПРЕДЕЛЕНО
+				ТОГДА ОплатаОтПокупателяПлатежнойКартой.Организация &lt;&gt; ЗНАЧЕНИЕ(Справочник.Организации.ПустаяСсылка)
+						ИЛИ ОплатаОтПокупателяПлатежнойКартой.Организация = ЗНАЧЕНИЕ(Справочник.Организации.ПустаяСсылка)
+		КОНЕЦ
+	И ОплатаОтПокупателяПлатежнойКартой.Дата &gt;= &amp;НачалоПериода
+	И ВЫБОР
+			КОГДА &amp;КонецПериода &lt;&gt; НЕОПРЕДЕЛЕНО
+				ТОГДА ОплатаОтПокупателяПлатежнойКартой.Дата &lt;= &amp;КонецПериода
+			КОГДА &amp;КонецПериода = НЕОПРЕДЕЛЕНО
+				ТОГДА ОплатаОтПокупателяПлатежнойКартой.Дата &gt;= &amp;КонецПериода
+		КОНЕЦ
+	И ОплатаОтПокупателяПлатежнойКартой.Проведен = ИСТИНА
+	И ОплатаОтПокупателяПлатежнойКартой.ПометкаУдаления = ЛОЖЬ
+	И ОплатаОтПокупателяПлатежнойКартой.ВидОплаты.Наименование &lt;&gt; "Возврат денежных средств покупателю"
+	И ОплатаОтПокупателяПлатежнойКартой.ВидОперации.Ссылка = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийОплатаОтПокупателяПлатежнойКартой.ОплатаПокупателя)</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>НаборДанных3</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>День</dataPath>
+				<field>День</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>День</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НалРасчетноеЗначение</dataPath>
+				<field>НалРасчетноеЗначение</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Нал расчетное значение</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Разница</dataPath>
+				<field>Разница</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Разница</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Ссылка</dataPath>
+				<field>ПКОСсылка</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Ссылка</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПКОСуммаДокумента</dataPath>
+				<field>ПКОСуммаДокумента</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ПКОСумма документа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Дата</dataPath>
+				<field>ПКОДата</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КассаНаименование</dataPath>
+				<field>ПКОКассаНаименование</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Касса наименование</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	ПриходныйКассовыйОрдер.Касса.Наименование КАК ПКОКассаНаименование,
+	ПриходныйКассовыйОрдер.СуммаДокумента КАК ПКОСуммаДокумента,
+	ПриходныйКассовыйОрдер.Ссылка КАК ПКОСсылка,
+	ПриходныйКассовыйОрдер.Дата КАК ПКОДата,
+	ПриходныйКассовыйОрдер.Организация,
+	НАЧАЛОПЕРИОДА(ПриходныйКассовыйОрдер.Дата, ДЕНЬ) КАК День,
+	0 КАК НалРасчетноеЗначение,
+	0 КАК Разница
+ИЗ
+	Документ.ПриходныйКассовыйОрдер КАК ПриходныйКассовыйОрдер
+ГДЕ
+	ВЫБОР
+			КОГДА &amp;Организация &lt;&gt; НЕОПРЕДЕЛЕНО
+				ТОГДА ПриходныйКассовыйОрдер.Организация = &amp;Организация
+			КОГДА &amp;Организация = НЕОПРЕДЕЛЕНО
+				ТОГДА ПриходныйКассовыйОрдер.Организация &lt;&gt; ЗНАЧЕНИЕ(Справочник.Организации.ПустаяСсылка)
+						ИЛИ ПриходныйКассовыйОрдер.Организация = ЗНАЧЕНИЕ(Справочник.Организации.ПустаяСсылка)
+		КОНЕЦ
+	И ПриходныйКассовыйОрдер.Дата &gt;= &amp;НачалоПериода
+	И ВЫБОР
+			КОГДА &amp;КонецПериода &lt;&gt; НЕОПРЕДЕЛЕНО
+				ТОГДА ПриходныйКассовыйОрдер.Дата &lt;= &amp;КонецПериода
+			КОГДА &amp;КонецПериода = НЕОПРЕДЕЛЕНО
+				ТОГДА ПриходныйКассовыйОрдер.Дата &gt;= &amp;КонецПериода
+		КОНЕЦ
+	И ПриходныйКассовыйОрдер.Проведен = ИСТИНА
+	И ПриходныйКассовыйОрдер.ПометкаУдаления = ЛОЖЬ</query>
+		</item>
+	</dataSet>
+	<calculatedField>
+		<dataPath>НалРасчетноеЗначение</dataPath>
+		<expression/>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Нал Расчетное значение</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>Разница</dataPath>
+		<expression/>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Разница</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<totalField>
+		<dataPath>ООППКСуммаДокумента</dataPath>
+		<expression>Сумма(ООППКСуммаДокумента)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ООРПСуммаДокумента</dataPath>
+		<expression>Сумма(ООРПСуммаДокумента)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НалРасчетноеЗначение</dataPath>
+		<expression>ЕСТЬNULL(Сумма(ООРПСуммаДокумента),0)-ЕСТЬNULL(Сумма(ООППКСуммаДокумента),0)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Разница</dataPath>
+		<expression>ЕСТЬNULL(Сумма(ООРПСуммаДокумента),0)-ЕСТЬNULL(Сумма(ООППКСуммаДокумента),0)-ЕСТЬNULL(Сумма(ПКОСуммаДокумента),0)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПКОСуммаДокумента</dataPath>
+		<expression>Сумма(ПКОСуммаДокумента)</expression>
+	</totalField>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Организация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Организация</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КассаНаименование</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ООРПСуммаДокумента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ООППКСуммаДокумента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НалРасчетноеЗначение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПКОСуммаДокумента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Разница</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>День</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Организация</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>КассаНаименование</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сумма</dataPath>
+			<field>Сумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактеристикаНоменклатуры</dataPath>
+			<field>ХарактеристикаНоменклатуры</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Качество</dataPath>
+			<field>Качество</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Цена</dataPath>
+			<field>Цена</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СерияНоменклатуры</dataPath>
+			<field>СерияНоменклатуры</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ОстаткиТоваров.Номенклатура КАК Номенклатура,
+	ОстаткиТоваров.Номенклатура.Код КАК КодНоменклатуры,
+	ОстаткиТоваров.Номенклатура.Наименование КАК НаименованиеНоменклатуры,
+	ОстаткиТоваров.Номенклатура.Артикул КАК Артикул,
+	ОстаткиТоваров.Номенклатура.ЕдиницаХраненияОстатков КАК ЕдиницаХраненияОстатков,
+	ОстаткиТоваров.Номенклатура.ЕдиницаХраненияОстатков.Наименование КАК НаименованиеЕдиницыХранения,
+	СУММА(ОстаткиТоваров.Номенклатура.ЕдиницаХраненияОстатков.Коэффициент) КАК КоэффициентЕдиницыХранения,
+	ОстаткиТоваров.Качество КАК Качество,
+	ОстаткиТоваров.Качество.Наименование КАК НаименованиеКачества,
+	СУММА(ВЫРАЗИТЬ(ОстаткиТоваров.КоличествоОстаток КАК ЧИСЛО(15, 3))) КАК Количество,
+	СУММА(ВЫРАЗИТЬ(ОстаткиТоваров.СуммаПродажнаяОстаток КАК ЧИСЛО(15, 2))) КАК Сумма,
+	СУММА(ЦеныАТТСрезПоследних.Цена) КАК Цена,
+	ОстаткиТоваров.Номенклатура.Родитель.Наименование,
+	ОстаткиТоваров.Номенклатура.Родитель КАК НоменклатураРодительС,
+	ОстаткиТоваров.ХарактеристикаНоменклатуры КАК ХарактеристикаНоменклатуры,
+	ОстаткиТоваров.ХарактеристикаНоменклатуры.Наименование КАК ХарактеристикаНоменклатурыНаименование,
+	ОстаткиТоваров.Номенклатура.ТоварМРЦ КАК ТоварМРЦ
+ПОМЕСТИТЬ DN
+ИЗ
+	РегистрНакопления.ТоварыВРознице.Остатки(&amp;НаДату, Склад = &amp;Склад) КАК ОстаткиТоваров
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЦеныАТТ.СрезПоследних(, Склад = &amp;Склад) КАК ЦеныАТТСрезПоследних
+		ПО ОстаткиТоваров.Номенклатура = ЦеныАТТСрезПоследних.Номенклатура
+			И ОстаткиТоваров.ХарактеристикаНоменклатуры = ЦеныАТТСрезПоследних.ХарактеристикаНоменклатуры
+ГДЕ
+	ОстаткиТоваров.Номенклатура.ЭтоГруппа = ЛОЖЬ
+
+СГРУППИРОВАТЬ ПО
+	ОстаткиТоваров.Качество,
+	ОстаткиТоваров.Номенклатура,
+	ОстаткиТоваров.ХарактеристикаНоменклатуры,
+	ОстаткиТоваров.Номенклатура.Код,
+	ОстаткиТоваров.Номенклатура.Наименование,
+	ОстаткиТоваров.Номенклатура.Артикул,
+	ОстаткиТоваров.Номенклатура.ЕдиницаХраненияОстатков,
+	ОстаткиТоваров.Номенклатура.ЕдиницаХраненияОстатков.Наименование,
+	ОстаткиТоваров.Качество.Наименование,
+	ОстаткиТоваров.Номенклатура.Родитель.Наименование,
+	ОстаткиТоваров.Номенклатура.Родитель,
+	ОстаткиТоваров.ХарактеристикаНоменклатуры.Наименование,
+	ОстаткиТоваров.Номенклатура.ТоварМРЦ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	DN.Номенклатура,
+	DN.ХарактеристикаНоменклатуры,
+	DN.Количество,
+	DN.Сумма,
+	DN.Цена
+ИЗ
+	DN КАК DN
+ГДЕ
+	(DN.Количество = 0
+				И DN.Сумма &lt;&gt; 0
+			ИЛИ DN.Количество &lt;&gt; 0
+				И DN.Сумма = 0
+			ИЛИ DN.Количество &lt; 0)</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Количество</dataPath>
+		<expression>Сумма(Количество)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Сумма</dataPath>
+		<expression>Сумма(Сумма)</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НаДату</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>На дату</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Склад</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Склад</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Склады</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ХарактеристикаНоменклатуры</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Количество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Цена</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

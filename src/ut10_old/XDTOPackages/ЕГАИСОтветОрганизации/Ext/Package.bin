@@ -1,0 +1,9 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://fsrar.ru/WEGAIS/ReplyClient">
+	<import namespace="http://fsrar.ru/WEGAIS/ClientRef"/>
+	<objectType name="Ответ">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ReplyClient" name="СписокОрганизаций" type="d3p1:СписокОрганизаций" localName="Clients"/>
+	</objectType>
+	<objectType name="СписокОрганизаций">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ClientRef" name="Элементы" type="d3p1:Организация" lowerBound="0" upperBound="-1" localName="Client"/>
+	</objectType>
+</package>

@@ -1,0 +1,9 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://fsrar.ru/WEGAIS/ReplyAP">
+	<import namespace="http://fsrar.ru/WEGAIS/ProductRef"/>
+	<objectType name="Ответ">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ReplyAP" name="СписокАлкогольнойПродукции" type="d3p1:СписокАлкогольнойПродукции" localName="Products"/>
+	</objectType>
+	<objectType name="СписокАлкогольнойПродукции">
+		<property xmlns:d3p1="http://fsrar.ru/WEGAIS/ProductRef" name="Элементы" type="d3p1:АлкогольнаяПродукция" lowerBound="0" upperBound="-1" localName="Product"/>
+	</objectType>
+</package>
