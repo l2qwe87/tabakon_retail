@@ -17,7 +17,7 @@
 //  Password - string
 //  FullName - string - Фамилия Имя Отчество
 //  Birthdate - string - 20000101
-Функция CreateUserPassword(вхПараметры) ЭКСПОРТ
+Функция CreateUser(вхПараметры) ЭКСПОРТ
 	результ = ложь;	
 	
 	//результ = истина;
