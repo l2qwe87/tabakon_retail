@@ -19,11 +19,136 @@
 			<DefaultForm>DataProcessor.РМКУправляемыйРежим.Form.ТБКФормаВаучер</DefaultForm>
 		</Properties>
 		<ChildObjects>
+			<TabularSection uuid="5209da53-8fec-4d86-94df-a44894d19cad">
+				<InternalInfo>
+					<xr:GeneratedType name="DataProcessorTabularSection.РМКУправляемыйРежим.Товары" category="TabularSection">
+						<xr:TypeId>82380fbb-b86b-40e5-921c-1c858c3d2529</xr:TypeId>
+						<xr:ValueId>409162cf-c7d0-4803-a491-e014b63c71ff</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DataProcessorTabularSectionRow.РМКУправляемыйРежим.Товары" category="TabularSectionRow">
+						<xr:TypeId>dd3989f1-601a-42e1-87c4-d3c820d99c2d</xr:TypeId>
+						<xr:ValueId>59144d0d-b24f-49bb-a637-c79fb6ef6672</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>Товары</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>16b98a4b-498b-41e1-aa38-cbf441644735</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="d0e20dec-4ca1-4a15-bb7a-30601e0cd293">
+						<InternalInfo/>
+						<Properties>
+							<Name>Продавец</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>93e59ff9-2f36-427f-a0e9-f93e049d4f21</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="b87a2292-2e0b-4e19-81d9-e466bbd95f96">
+						<InternalInfo/>
+						<Properties>
+							<Name>Номенклатура</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>406e59bf-9445-4c97-9bb0-336fb395af58</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="1a06fd91-f4e7-4f5e-9a91-ef90ce6f1d7c">
+						<InternalInfo/>
+						<Properties>
+							<Name>Характеристика</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>84c90203-c2ac-439c-8ea5-0b9ab11ce775</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="0a2517e8-640e-446d-8fdf-74e2caf6f3d4">
+						<InternalInfo/>
+						<Properties>
+							<Name>Количество</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>cbc82bc8-5054-45fc-b49e-4546691e3515</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>15</v8:Digits>
+									<v8:FractionDigits>3</v8:FractionDigits>
+									<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="bc46a3c7-66c1-4843-9857-53d004878ffb">
+						<InternalInfo/>
+						<Properties>
+							<Name>Цена</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>05a42bb7-d2d4-47fb-a508-ae11979cdbf5</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>15</v8:Digits>
+									<v8:FractionDigits>2</v8:FractionDigits>
+									<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="d8110f06-f1f8-4adf-b544-b94eeb4785e4">
+						<InternalInfo/>
+						<Properties>
+							<Name>СуммаРучнойСкидки</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>7e925a3e-46bf-4878-8296-ef7835ef81d5</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>15</v8:Digits>
+									<v8:FractionDigits>2</v8:FractionDigits>
+									<v8:AllowedSign>Any</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="765051a4-af07-4903-8bb1-3127170411e2">
+						<InternalInfo/>
+						<Properties>
+							<Name>Сумма</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>da9be837-6df1-4123-a59a-7564a23af935</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>15</v8:Digits>
+									<v8:FractionDigits>2</v8:FractionDigits>
+									<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
 			<Form>ТБКФормаВаучер</Form>
 			<Form>Форма</Form>
 			<Form>ФормаУправляемыеСкидки</Form>
 			<Form>ФормаМеню</Form>
 			<Form>ФормаВыбораЧека</Form>
+			<Form>ТБКФормаВыборЗамены</Form>
 		</ChildObjects>
 	</DataProcessor>
 </MetaDataObject>
