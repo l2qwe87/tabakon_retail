@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<InformationRegister uuid="be8e067b-a622-4391-aea6-1433482412f9">
+		<InternalInfo>
+			<xr:GeneratedType name="InformationRegisterRecord.КомплектующиеНоменклатуры" category="Record">
+				<xr:TypeId>aff69531-53ee-4170-b902-3c8dd0ac8e05</xr:TypeId>
+				<xr:ValueId>52fe66bd-f587-47b3-83d5-9660278eba5b</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterManager.КомплектующиеНоменклатуры" category="Manager">
+				<xr:TypeId>92a5a173-0187-46be-b2ec-b94f17574d41</xr:TypeId>
+				<xr:ValueId>7ffd1d6a-2b1b-433a-a85e-0c84bb64b88a</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterSelection.КомплектующиеНоменклатуры" category="Selection">
+				<xr:TypeId>7d9371f2-7612-4d77-8afc-18768076358e</xr:TypeId>
+				<xr:ValueId>cabb79b0-6c98-431e-92e9-44992e28fe7d</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterList.КомплектующиеНоменклатуры" category="List">
+				<xr:TypeId>cef43e00-69e6-4655-9e38-0abdb78713f5</xr:TypeId>
+				<xr:ValueId>86d53473-7dc8-4aca-8c04-f9897c9ef32d</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordSet.КомплектующиеНоменклатуры" category="RecordSet">
+				<xr:TypeId>302efdb4-8fc8-4e12-af8d-35107eecf5bd</xr:TypeId>
+				<xr:ValueId>e3719f0d-ce54-490b-89df-5b08dbeadcd5</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordKey.КомплектующиеНоменклатуры" category="RecordKey">
+				<xr:TypeId>66562217-3567-4eee-b22c-6fe031091058</xr:TypeId>
+				<xr:ValueId>fd9cc42d-4f49-49a4-a99a-45142ee21709</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordManager.КомплектующиеНоменклатуры" category="RecordManager">
+				<xr:TypeId>54a3fabd-7fa4-4f64-ad7d-f057805f04e6</xr:TypeId>
+				<xr:ValueId>0136f7c4-6c81-452d-a1af-08e7a9bd6f4a</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>КомплектующиеНоменклатуры</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>394885a6-2d3e-4c45-9820-9b9fba020ec4</ExtendedConfigurationObject>
+			<InformationRegisterPeriodicity>Nonperiodical</InformationRegisterPeriodicity>
+			<WriteMode>Independent</WriteMode>
+		</Properties>
+		<ChildObjects>
+			<Resource uuid="69c71df7-e4e7-458d-8cca-626cba195156">
+				<InternalInfo/>
+				<Properties>
+					<Name>ДоляСтоимости</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>17587f97-7294-43f8-b245-79f73b28a4c2</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="7c47970e-56c5-46fb-8293-dbdf55ff7a96">
+				<InternalInfo/>
+				<Properties>
+					<Name>Номенклатура</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>61ca56e3-813d-4d27-8425-b3164eb4899f</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="f78e49ce-a148-41b2-ae4f-0b81db76c915">
+				<InternalInfo/>
+				<Properties>
+					<Name>Характеристика</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>44de9609-08b9-4125-932a-71a556ded6dd</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="9acd6c2d-bff0-464c-9133-25a17572d880">
+				<InternalInfo/>
+				<Properties>
+					<Name>Комплектующая</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>4e63f55e-838d-4e26-b533-d00f24bd6eff</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="6faa5bb2-79c7-435c-8907-bc0ff7bdaa5f">
+				<InternalInfo/>
+				<Properties>
+					<Name>ХарактеристикаКомплектующей</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>ec6b245f-ec46-4aab-9c1a-520839fd62b2</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</InformationRegister>
+</MetaDataObject>
