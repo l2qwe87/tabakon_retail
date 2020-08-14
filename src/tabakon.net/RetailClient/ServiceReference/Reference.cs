@@ -7,17 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ServiceReference
+namespace WS_TBK
 {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="ws_tbk", ConfigurationName="ServiceReference.ws_tbkPortType")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="ws_tbk", ConfigurationName="WS_TBK.ws_tbkPortType")]
     public interface ws_tbkPortType
     {
         
         [System.ServiceModel.OperationContractAttribute(Action="ws_tbk#ws_tbk:GetVersion", ReplyAction="*")]
-        System.Threading.Tasks.Task<ServiceReference.GetVersionResponse> GetVersionAsync(ServiceReference.GetVersionRequest request);
+        System.Threading.Tasks.Task<WS_TBK.GetVersionResponse> GetVersionAsync(WS_TBK.GetVersionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="ws_tbk#ws_tbk:Get", ReplyAction="*")]
+        System.Threading.Tasks.Task<WS_TBK.GetResponse> GetAsync(WS_TBK.GetRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="ws_tbk#ws_tbk:Post", ReplyAction="*")]
+        System.Threading.Tasks.Task<WS_TBK.PostResponse> PostAsync(WS_TBK.PostRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -28,13 +34,13 @@ namespace ServiceReference
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetVersion", Namespace="ws_tbk", Order=0)]
-        public ServiceReference.GetVersionRequestBody Body;
+        public WS_TBK.GetVersionRequestBody Body;
         
         public GetVersionRequest()
         {
         }
         
-        public GetVersionRequest(ServiceReference.GetVersionRequestBody Body)
+        public GetVersionRequest(WS_TBK.GetVersionRequestBody Body)
         {
             this.Body = Body;
         }
@@ -60,13 +66,13 @@ namespace ServiceReference
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetVersionResponse", Namespace="ws_tbk", Order=0)]
-        public ServiceReference.GetVersionResponseBody Body;
+        public WS_TBK.GetVersionResponseBody Body;
         
         public GetVersionResponse()
         {
         }
         
-        public GetVersionResponse(ServiceReference.GetVersionResponseBody Body)
+        public GetVersionResponse(WS_TBK.GetVersionResponseBody Body)
         {
             this.Body = Body;
         }
@@ -92,14 +98,182 @@ namespace ServiceReference
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1")]
-    public interface ws_tbkPortTypeChannel : ServiceReference.ws_tbkPortType, System.ServiceModel.IClientChannel
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="Get", Namespace="ws_tbk", Order=0)]
+        public WS_TBK.GetRequestBody Body;
+        
+        public GetRequest()
+        {
+        }
+        
+        public GetRequest(WS_TBK.GetRequestBody Body)
+        {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="ws_tbk")]
+    public partial class GetRequestBody
+    {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string method;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public string @params;
+        
+        public GetRequestBody()
+        {
+        }
+        
+        public GetRequestBody(string method, string @params)
+        {
+            this.method = method;
+            this.@params = @params;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetResponse", Namespace="ws_tbk", Order=0)]
+        public WS_TBK.GetResponseBody Body;
+        
+        public GetResponse()
+        {
+        }
+        
+        public GetResponse(WS_TBK.GetResponseBody Body)
+        {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="ws_tbk")]
+    public partial class GetResponseBody
+    {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string @return;
+        
+        public GetResponseBody()
+        {
+        }
+        
+        public GetResponseBody(string @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class PostRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="Post", Namespace="ws_tbk", Order=0)]
+        public WS_TBK.PostRequestBody Body;
+        
+        public PostRequest()
+        {
+        }
+        
+        public PostRequest(WS_TBK.PostRequestBody Body)
+        {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="ws_tbk")]
+    public partial class PostRequestBody
+    {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string method;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public string @params;
+        
+        public PostRequestBody()
+        {
+        }
+        
+        public PostRequestBody(string method, string @params)
+        {
+            this.method = method;
+            this.@params = @params;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class PostResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="PostResponse", Namespace="ws_tbk", Order=0)]
+        public WS_TBK.PostResponseBody Body;
+        
+        public PostResponse()
+        {
+        }
+        
+        public PostResponse(WS_TBK.PostResponseBody Body)
+        {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="ws_tbk")]
+    public partial class PostResponseBody
+    {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string @return;
+        
+        public PostResponseBody()
+        {
+        }
+        
+        public PostResponseBody(string @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1")]
+    public interface ws_tbkPortTypeChannel : WS_TBK.ws_tbkPortType, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1")]
-    public partial class ws_tbkPortTypeClient : System.ServiceModel.ClientBase<ServiceReference.ws_tbkPortType>, ServiceReference.ws_tbkPortType
+    public partial class ws_tbkPortTypeClient : System.ServiceModel.ClientBase<WS_TBK.ws_tbkPortType>, WS_TBK.ws_tbkPortType
     {
         
         /// <summary>
@@ -136,16 +310,46 @@ namespace ServiceReference
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ServiceReference.GetVersionResponse> ServiceReference.ws_tbkPortType.GetVersionAsync(ServiceReference.GetVersionRequest request)
+        System.Threading.Tasks.Task<WS_TBK.GetVersionResponse> WS_TBK.ws_tbkPortType.GetVersionAsync(WS_TBK.GetVersionRequest request)
         {
             return base.Channel.GetVersionAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ServiceReference.GetVersionResponse> GetVersionAsync()
+        public System.Threading.Tasks.Task<WS_TBK.GetVersionResponse> GetVersionAsync()
         {
-            ServiceReference.GetVersionRequest inValue = new ServiceReference.GetVersionRequest();
-            inValue.Body = new ServiceReference.GetVersionRequestBody();
-            return ((ServiceReference.ws_tbkPortType)(this)).GetVersionAsync(inValue);
+            WS_TBK.GetVersionRequest inValue = new WS_TBK.GetVersionRequest();
+            inValue.Body = new WS_TBK.GetVersionRequestBody();
+            return ((WS_TBK.ws_tbkPortType)(this)).GetVersionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WS_TBK.GetResponse> WS_TBK.ws_tbkPortType.GetAsync(WS_TBK.GetRequest request)
+        {
+            return base.Channel.GetAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WS_TBK.GetResponse> GetAsync(string method, string @params)
+        {
+            WS_TBK.GetRequest inValue = new WS_TBK.GetRequest();
+            inValue.Body = new WS_TBK.GetRequestBody();
+            inValue.Body.method = method;
+            inValue.Body.@params = @params;
+            return ((WS_TBK.ws_tbkPortType)(this)).GetAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WS_TBK.PostResponse> WS_TBK.ws_tbkPortType.PostAsync(WS_TBK.PostRequest request)
+        {
+            return base.Channel.PostAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WS_TBK.PostResponse> PostAsync(string method, string @params)
+        {
+            WS_TBK.PostRequest inValue = new WS_TBK.PostRequest();
+            inValue.Body = new WS_TBK.PostRequestBody();
+            inValue.Body.method = method;
+            inValue.Body.@params = @params;
+            return ((WS_TBK.ws_tbkPortType)(this)).PostAsync(inValue);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()
