@@ -271,7 +271,7 @@ namespace WS_TBK
     {
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    // [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.1")]
     public partial class ws_tbkPortTypeClient : System.ServiceModel.ClientBase<WS_TBK.ws_tbkPortType>, WS_TBK.ws_tbkPortType
     {
@@ -281,32 +281,64 @@ namespace WS_TBK
         /// </summary>
         /// <param name="serviceEndpoint">The endpoint to configure</param>
         /// <param name="clientCredentials">The client credentials</param>
+
+        private string userName => @"Админ";
+        //private string userName => @"ws";
+        private string userPassword => "159753";
+
         static partial void ConfigureEndpoint(System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, System.ServiceModel.Description.ClientCredentials clientCredentials);
         
         public ws_tbkPortTypeClient(EndpointConfiguration endpointConfiguration) : 
                 base(ws_tbkPortTypeClient.GetBindingForEndpoint(endpointConfiguration), ws_tbkPortTypeClient.GetEndpointAddress(endpointConfiguration))
         {
             this.Endpoint.Name = endpointConfiguration.ToString();
+
+            this.ChannelFactory.Credentials.UserName.UserName = this.userName;
+            this.ChannelFactory.Credentials.UserName.Password = this.userPassword;
+
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
         }
-        
         public ws_tbkPortTypeClient(EndpointConfiguration endpointConfiguration, string remoteAddress) : 
                 base(ws_tbkPortTypeClient.GetBindingForEndpoint(endpointConfiguration), new System.ServiceModel.EndpointAddress(remoteAddress))
         {
+
             this.Endpoint.Name = endpointConfiguration.ToString();
+
+            this.ChannelFactory.Credentials.UserName.UserName = this.userName;
+            this.ChannelFactory.Credentials.UserName.Password = this.userPassword;
+
+            
+
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
+        }
+
+        public ws_tbkPortTypeClient(EndpointConfiguration endpointConfiguration, string remoteAddress, System.ServiceModel.Description.ClientCredentials clientCredentials) : 
+                base(ws_tbkPortTypeClient.GetBindingForEndpoint(endpointConfiguration), new System.ServiceModel.EndpointAddress(remoteAddress))
+        {
+            this.Endpoint.Name = endpointConfiguration.ToString();
+
+            this.ChannelFactory.Credentials.UserName.UserName = this.userName;
+            this.ChannelFactory.Credentials.UserName.Password = this.userPassword;
+
+            ConfigureEndpoint(this.Endpoint, clientCredentials);
         }
         
         public ws_tbkPortTypeClient(EndpointConfiguration endpointConfiguration, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(ws_tbkPortTypeClient.GetBindingForEndpoint(endpointConfiguration), remoteAddress)
         {
             this.Endpoint.Name = endpointConfiguration.ToString();
+
+            this.ChannelFactory.Credentials.UserName.UserName = this.userName;
+            this.ChannelFactory.Credentials.UserName.Password = this.userPassword;
+
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
         }
         
         public ws_tbkPortTypeClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)
         {
+            this.ChannelFactory.Credentials.UserName.UserName = this.userName;
+            this.ChannelFactory.Credentials.UserName.Password = this.userPassword;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -367,6 +399,14 @@ namespace WS_TBK
             if ((endpointConfiguration == EndpointConfiguration.ws_tbkSoap))
             {
                 System.ServiceModel.BasicHttpBinding result = new System.ServiceModel.BasicHttpBinding();
+                
+                
+                result.Security.Mode = System.ServiceModel.BasicHttpSecurityMode.TransportCredentialOnly;
+                result.Security.Transport.ClientCredentialType = System.ServiceModel.HttpClientCredentialType.Basic;               
+                
+                //result.TextEncoding = System.Text.Encoding.UTF8;
+                result.TextEncoding = System.Text.Encoding.BigEndianUnicode;
+
                 result.MaxBufferSize = int.MaxValue;
                 result.ReaderQuotas = System.Xml.XmlDictionaryReaderQuotas.Max;
                 result.MaxReceivedMessageSize = int.MaxValue;
@@ -380,6 +420,10 @@ namespace WS_TBK
                 textBindingElement.MessageVersion = System.ServiceModel.Channels.MessageVersion.CreateVersion(System.ServiceModel.EnvelopeVersion.Soap12, System.ServiceModel.Channels.AddressingVersion.None);
                 result.Elements.Add(textBindingElement);
                 System.ServiceModel.Channels.HttpTransportBindingElement httpBindingElement = new System.ServiceModel.Channels.HttpTransportBindingElement();
+
+                
+                httpBindingElement.AuthenticationScheme = System.Net.AuthenticationSchemes.Basic;
+
                 httpBindingElement.AllowCookies = true;
                 httpBindingElement.MaxBufferSize = int.MaxValue;
                 httpBindingElement.MaxReceivedMessageSize = int.MaxValue;
@@ -393,10 +437,12 @@ namespace WS_TBK
         {
             if ((endpointConfiguration == EndpointConfiguration.ws_tbkSoap))
             {
+                //return new System.ServiceModel.EndpointAddress($"{url}/ws/ws_tbk");
                 return new System.ServiceModel.EndpointAddress("http://localhost:8080/retail_1/ws/ws_tbk");
             }
             if ((endpointConfiguration == EndpointConfiguration.ws_tbkSoap12))
             {
+                //return new System.ServiceModel.EndpointAddress($"{url}/ws/ws_tbk");
                 return new System.ServiceModel.EndpointAddress("http://localhost:8080/retail_1/ws/ws_tbk");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));

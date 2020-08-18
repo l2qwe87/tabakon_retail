@@ -2,7 +2,7 @@
 
 namespace Tabakon.DALMigration.Migrations
 {
-    public partial class init : Migration
+    public partial class CreateRetailEndpoint : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -10,13 +10,13 @@ namespace Tabakon.DALMigration.Migrations
                 name: "RetailEndpoint",
                 columns: table => new
                 {
-                    Identity = table.Column<string>(nullable: false),
-                    RetailName = table.Column<string>(nullable: true),
-                    RetailHost = table.Column<string>(nullable: true)
+                    RetailEndpointIdentity = table.Column<string>(nullable: false),
+                    RetailEndpointName = table.Column<string>(nullable: true),
+                    RetailEndpointHost = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_RetailEndpoint", x => x.Identity);
+                    table.PrimaryKey("PK_RetailEndpoint", x => x.RetailEndpointIdentity);
                 });
         }
 

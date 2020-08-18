@@ -4,8 +4,9 @@ namespace Tabakon.Entity
 {
     public class RetailEndpoint
     {
-        public string Identity {get;set;}
-        public string RetailName {get;set;}
-        public string RetailHost {get;set;}
+        public string RetailEndpointIdentity {get;set;}
+        public string RetailEndpointName {get;set;}
+        public string RetailEndpointHost {get;set;}
+        public string RetailEndpointUrl {get;set;}
     }
 }

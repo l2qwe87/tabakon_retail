@@ -9,7 +9,7 @@ using Tabakon.DBContextMigration;
 namespace Tabakon.DALMigration.Migrations
 {
     [DbContext(typeof(MigratioTabakonDBContext))]
-    [Migration("20200814120000_init")]
+    [Migration("20200817223906_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -19,22 +19,6 @@ namespace Tabakon.DALMigration.Migrations
                 .HasAnnotation("ProductVersion", "3.1.7")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("Tabakon.Entity.RetailEndpoint", b =>
-                {
-                    b.Property<string>("Identity")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("RetailHost")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("RetailName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Identity");
-
-                    b.ToTable("RetailEndpoint");
-                });
 #pragma warning restore 612, 618
         }
     }

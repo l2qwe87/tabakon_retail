@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tabakon.DBContextMigration;
 
 namespace Tabakon.DALMigration.Migrations
 {
     [DbContext(typeof(MigratioTabakonDBContext))]
-    partial class MigratioTabakonDBContextModelSnapshot : ModelSnapshot
+    [Migration("20200817225223_CreateRetailPing")]
+    partial class CreateRetailPing
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -28,9 +30,6 @@ namespace Tabakon.DALMigration.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RetailEndpointName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("RetailEndpointUrl")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("RetailEndpointIdentity");

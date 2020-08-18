@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tabakon.DBContextMigration;
 
 namespace Tabakon.DALMigration.Migrations
 {
     [DbContext(typeof(MigratioTabakonDBContext))]
-    partial class MigratioTabakonDBContextModelSnapshot : ModelSnapshot
+    [Migration("20200817224352_CreateRetailVersion")]
+    partial class CreateRetailVersion
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,28 +32,9 @@ namespace Tabakon.DALMigration.Migrations
                     b.Property<string>("RetailEndpointName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("RetailEndpointUrl")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("RetailEndpointIdentity");
 
                     b.ToTable("RetailEndpoint");
-                });
-
-            modelBuilder.Entity("Tabakon.Entity.RetailPing", b =>
-                {
-                    b.Property<string>("RetailEndpointIdentity")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("JsonData")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("LastCheck")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("RetailEndpointIdentity");
-
-                    b.ToTable("RetailPing");
                 });
 
             modelBuilder.Entity("Tabakon.Entity.RetailVersion", b =>
@@ -68,15 +51,6 @@ namespace Tabakon.DALMigration.Migrations
                     b.HasKey("RetailEndpointIdentity");
 
                     b.ToTable("RetailVersion");
-                });
-
-            modelBuilder.Entity("Tabakon.Entity.RetailPing", b =>
-                {
-                    b.HasOne("Tabakon.Entity.RetailEndpoint", "RetailEndpoint")
-                        .WithMany()
-                        .HasForeignKey("RetailEndpointIdentity")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("Tabakon.Entity.RetailVersion", b =>
