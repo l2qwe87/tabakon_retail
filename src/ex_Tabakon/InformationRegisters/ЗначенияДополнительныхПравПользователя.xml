@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<InformationRegister uuid="3f247b80-48b8-4643-b6e2-41109711c9ce">
+		<InternalInfo>
+			<xr:GeneratedType name="InformationRegisterRecord.ЗначенияДополнительныхПравПользователя" category="Record">
+				<xr:TypeId>bf986bad-b5e6-45f6-b11a-2b069fffd258</xr:TypeId>
+				<xr:ValueId>b70c4cf1-7930-4728-838b-038ba1bab663</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterManager.ЗначенияДополнительныхПравПользователя" category="Manager">
+				<xr:TypeId>46eff21b-1afb-42af-99aa-b40356cfb3d0</xr:TypeId>
+				<xr:ValueId>6cb377c4-cb0b-43fc-b097-6fae91f91f9e</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterSelection.ЗначенияДополнительныхПравПользователя" category="Selection">
+				<xr:TypeId>9936e787-96b4-4534-ab60-46009901a20b</xr:TypeId>
+				<xr:ValueId>8b93e50c-bdfc-4e0c-9b15-3c7845ff69ae</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterList.ЗначенияДополнительныхПравПользователя" category="List">
+				<xr:TypeId>2b30b756-50e4-4fd9-9aee-93967678c9fc</xr:TypeId>
+				<xr:ValueId>c9cc52a4-3a08-480f-975f-1eed72fb95db</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordSet.ЗначенияДополнительныхПравПользователя" category="RecordSet">
+				<xr:TypeId>6e07e2c9-3b6b-441f-a918-aba8e140058c</xr:TypeId>
+				<xr:ValueId>46384399-6ece-4d71-90a4-312a9a646874</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordKey.ЗначенияДополнительныхПравПользователя" category="RecordKey">
+				<xr:TypeId>2b7a5a85-725e-4d2e-a468-50e77dc6b1da</xr:TypeId>
+				<xr:ValueId>9dac4a02-c9b3-4c77-998e-535b3a3dd3e4</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordManager.ЗначенияДополнительныхПравПользователя" category="RecordManager">
+				<xr:TypeId>8c317b4c-af1d-485b-b2f2-ac8a52a15f20</xr:TypeId>
+				<xr:ValueId>1371992c-6a38-465b-ab26-7eecee605518</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ЗначенияДополнительныхПравПользователя</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>bf7b8bc6-91de-441b-bc96-188c2cd9b7e2</ExtendedConfigurationObject>
+			<InformationRegisterPeriodicity>Nonperiodical</InformationRegisterPeriodicity>
+			<WriteMode>Independent</WriteMode>
+		</Properties>
+		<ChildObjects>
+			<Resource uuid="5b394375-92e1-44fc-a80f-175bc926fb71">
+				<InternalInfo/>
+				<Properties>
+					<Name>Значение</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>8266f6a0-ff7e-4f93-99c9-dd0048acf4f0</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:Characteristic.ПраваПользователей</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="ec3fc6df-9658-480e-bdb2-091bb89e8cb2">
+				<InternalInfo/>
+				<Properties>
+					<Name>Пользователь</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>1c7c2da3-c046-424d-817e-3a6d4382efab</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="c8ca8af5-fdcc-4e85-8d64-cf8e2b8b5f77">
+				<InternalInfo/>
+				<Properties>
+					<Name>Право</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>18c3fa04-cbb8-4040-93b2-ab132317ac69</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:ChartOfCharacteristicTypesRef.ПраваПользователей</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</InformationRegister>
+</MetaDataObject>
