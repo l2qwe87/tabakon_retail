@@ -28,12 +28,16 @@ namespace RetailClient
             if (reply.Status == IPStatus.Success)
             {
                 totalTime += reply.RoundtripTime;
+                return totalTime;
             }
-        
-            return totalTime;
+            else
+            {
+                throw new Exception(Enum.GetName(typeof(IPStatus), reply.Status));  
+            }
         }
         public async Task<string> GetVersionAsync()
         {
+            await this.PingAsync();
             ws_tbkPortTypeClient ws = new ws_tbkPortTypeClient(EndpointConfiguration.ws_tbkSoap12, url+"/ws/ws_tbk.1cws"); 
             using (OperationContextScope ocs=new OperationContextScope(ws.InnerChannel))
             {
