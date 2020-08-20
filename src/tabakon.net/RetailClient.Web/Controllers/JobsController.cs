@@ -59,10 +59,8 @@ namespace RetailClientTests.Controllers
                 endpoints = await ctx.RetailEndpoint.Select(r => r).AsNoTracking().ToListAsync();
             }
 
-
             var tasks = endpoints.Select(async endpoint =>
-            {
-                await Task.Delay(TimeSpan.FromMilliseconds(200));
+            {   
                 return await JobAsync<T>(alwaysSaveResult, endpoint, func);
             });
             await Task.WhenAll(tasks);

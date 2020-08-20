@@ -21,18 +21,27 @@ namespace RetailClient
         public async Task<long> PingAsync(){
 
             long totalTime = 0;
-            int timeout = 5;
+            int timeout = 5000;
             Ping pingSender = new Ping();            
             
-            var reply = await pingSender.SendPingAsync(host, timeout);
-            if (reply.Status == IPStatus.Success)
+            IPStatus? beastStatus = null;
+
+            for (var i =0; i<5; i++)
             {
+                var reply = await pingSender.SendPingAsync(host, timeout);
                 totalTime += reply.RoundtripTime;
+                beastStatus = (reply.Status == IPStatus.Success)
+                    ? reply.Status 
+                    : beastStatus ?? reply.Status;
+            }
+
+            if (beastStatus == IPStatus.Success)
+            {
                 return totalTime;
             }
             else
             {
-                throw new Exception(Enum.GetName(typeof(IPStatus), reply.Status));  
+                throw new Exception(Enum.GetName(typeof(IPStatus), beastStatus));  
             }
         }
         public async Task<string> GetVersionAsync()
