@@ -25,8 +25,8 @@ namespace RetailClient
             Ping pingSender = new Ping();            
             
             IPStatus? beastStatus = null;
-
-            for (var i =0; i<5; i++)
+            var count = 5;
+            for (var i =0; i< count; i++)
             {
                 var reply = await pingSender.SendPingAsync(host, timeout);
                 totalTime += reply.RoundtripTime;
@@ -37,7 +37,7 @@ namespace RetailClient
 
             if (beastStatus == IPStatus.Success)
             {
-                return totalTime;
+                return totalTime / count;
             }
             else
             {

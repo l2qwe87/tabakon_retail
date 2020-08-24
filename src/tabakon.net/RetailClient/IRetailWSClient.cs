@@ -8,5 +8,7 @@ namespace RetailClient
         Task<long> PingAsync();
         Task<string> GetVersionAsync();
 
+        //Task<string> GetOORP();
+
     }
 }
