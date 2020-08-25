@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using System;
 using System.Net.NetworkInformation;
 using System.ServiceModel;
@@ -47,7 +48,7 @@ namespace RetailClient
         public async Task<string> GetVersionAsync()
         {
             await this.PingAsync();
-            ws_tbkPortTypeClient ws = new ws_tbkPortTypeClient(EndpointConfiguration.ws_tbkSoap12, url+"/ws/ws_tbk.1cws"); 
+            var ws = GetWSClient(url);
             using (OperationContextScope ocs=new OperationContextScope(ws.InnerChannel))
             {
                 var requestProp = new HttpRequestMessageProperty();
@@ -58,8 +59,43 @@ namespace RetailClient
                 var version = ws.GetVersionAsync().Result;
                 return await Task.FromResult(version.Body.@return);
                 
-            }            
+            }
         }
 
+        public struct GetRetailDocSelesReportParams
+        {
+            private readonly DateTime _date;
+            public GetRetailDocSelesReportParams(DateTime date) {
+                _date = date;
+            }
+            public string DateFrom => _date.ToString("yyyyMMdd");
+            public string DateTo => _date.ToString("yyyyMMdd");
+        }
+        public async Task<string> GetRetailDocSelesReport(DateTime date)
+        {
+
+            GetRetailDocSelesReportParams pr = new GetRetailDocSelesReportParams(date);
+            var method = "DailySelesReport";
+            var @params = JsonConvert.SerializeObject(pr);
+            await this.PingAsync();
+            var ws = GetWSClient(url);
+            using (OperationContextScope ocs = new OperationContextScope(ws.InnerChannel))
+            {
+                var requestProp = new HttpRequestMessageProperty();
+                requestProp.Headers["Authorization"] = "Basic 0JDQtNC80LjQvToxNTk3NTM=";
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestProp;
+                //var version = await ws.GetVersionAsync();
+
+                var response = ws.GetAsync(method, @params).Result;
+                return await Task.FromResult(response.Body.@return);
+
+            }
+        }
+
+
+        private ws_tbkPortTypeClient GetWSClient(string url) {
+            ws_tbkPortTypeClient ws = new ws_tbkPortTypeClient(EndpointConfiguration.ws_tbkSoap12, url + "/ws/ws_tbk.1cws");
+            return ws;
+        }
     }
 }

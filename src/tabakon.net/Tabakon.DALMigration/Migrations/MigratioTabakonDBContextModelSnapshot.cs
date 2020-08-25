@@ -21,14 +21,17 @@ namespace Tabakon.DALMigration.Migrations
 
             modelBuilder.Entity("Tabakon.Entity.RetailDocSelesReport", b =>
                 {
-                    b.Property<int>("DocType")
-                        .HasColumnType("int");
+                    b.Property<string>("RetailEndpointIdentity")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("DocRef")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("DocDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("DocRef")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("DocType")
+                        .HasColumnType("int");
 
                     b.Property<string>("JsonData")
                         .HasColumnType("nvarchar(max)");
@@ -36,12 +39,13 @@ namespace Tabakon.DALMigration.Migrations
                     b.Property<DateTime>("LastCheck")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("RetailEndpointIdentity")
-                        .HasColumnType("nvarchar(450)");
+                    b.HasKey("RetailEndpointIdentity", "DocRef");
 
-                    b.HasKey("DocType", "DocDate", "DocRef");
+                    b.HasIndex("DocRef");
 
-                    b.HasIndex("RetailEndpointIdentity");
+                    b.HasIndex("DocType");
+
+                    b.HasIndex("DocDate", "DocType");
 
                     b.ToTable("RetailDocSelesReport");
                 });
@@ -101,7 +105,9 @@ namespace Tabakon.DALMigration.Migrations
                 {
                     b.HasOne("Tabakon.Entity.RetailEndpoint", "RetailEndpoint")
                         .WithMany()
-                        .HasForeignKey("RetailEndpointIdentity");
+                        .HasForeignKey("RetailEndpointIdentity")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Tabakon.Entity.RetailPing", b =>

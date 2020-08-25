@@ -36,6 +36,7 @@ namespace RetailClientTests
             services.AddSingleton<IJobService, JobService>();
             services.AddScoped<WorkerRetailVersion, WorkerRetailVersion>();
             services.AddScoped<WorkerPing, WorkerPing>();
+            services.AddScoped<WorkerRetailDocSelesReport, WorkerRetailDocSelesReport>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -68,8 +69,9 @@ namespace RetailClientTests
         {
             var jobService = serviceProvider.GetService<IJobService>();
 
-            jobService.AddTask<WorkerRetailVersion>(TimeSpan.FromMinutes(30));
-            jobService.AddTask<WorkerPing>(TimeSpan.FromMinutes(20));
+            jobService.AddTask<WorkerRetailDocSelesReport>(TimeSpan.FromMinutes(20));
+            jobService.AddTask<WorkerRetailVersion>(TimeSpan.FromHours(1));
+            jobService.AddTask<WorkerPing>(TimeSpan.FromMinutes(15));
         }
     }
 }

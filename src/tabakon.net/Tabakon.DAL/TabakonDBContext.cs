@@ -47,8 +47,10 @@ namespace Tabakon.DAL
 
 
             modelBuilder.Entity<RetailDocSelesReport>(m => {
-                m.HasKey(a => a.DocRef);
-                m.HasKey(a => new { a.DocType, a.DocDate, a.DocRef });
+                m.HasKey(a => new { a.RetailEndpointIdentity, a.DocRef });
+                m.HasIndex(a => a.DocRef);
+                m.HasIndex(a => a.DocType);
+                m.HasIndex(a => new { a.DocDate, a.DocType });
                 m.HasOne(a => a.RetailEndpoint).WithMany().HasForeignKey(f => f.RetailEndpointIdentity);
             }); 
 

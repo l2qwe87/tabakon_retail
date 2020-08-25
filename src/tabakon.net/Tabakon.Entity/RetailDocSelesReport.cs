@@ -6,5 +6,9 @@ namespace Tabakon.Entity
 {
     public class RetailDocSelesReport : AbstractDocEntity
     {
+        public RetailDocSelesReport() : base() 
+        {
+            DocType = DocType.SelesReport;
+        }
     }
 }
