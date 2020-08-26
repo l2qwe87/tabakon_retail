@@ -73,8 +73,11 @@ namespace RetailClient.Web.Contracts
                                     var logger = scope.ServiceProvider.GetService<ILogger<JobService>>();
                                     logger.LogInformation($"JobService.Run({typeof(T).Namespace}.{typeof(T).Name}); {ex}");
                                 }
-                                catch
+                                catch (Exception e)
                                 {
+                                    //arr.Add(e.Message);
+                                    var _logger = serviceProvider.GetService<ILogger<JobService>>();
+                                    _logger.LogError(e.Message, e);
                                 }
                             }).Wait(TimeSpan.FromMilliseconds(500));
                         }
@@ -153,6 +156,8 @@ namespace RetailClient.Web.Contracts
                     catch (Exception e)
                     {
                         //arr.Add(e.Message);
+                        var _logger = serviceProvider.GetService<ILogger<WorkerRetailDocSelesReport>>();
+                        _logger.LogError(e.Message,e);
                     }
                     dateBegin = dateBegin.AddDays(1);
                 }

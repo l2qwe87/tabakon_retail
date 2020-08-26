@@ -10,6 +10,7 @@ using RetailClient;
 using Tabakon.DAL;
 using Tabakon.Entity;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration.EnvironmentVariables;
 
 namespace RetailClientTests.Controllers
 {
@@ -27,6 +28,59 @@ namespace RetailClientTests.Controllers
         {
             this.serviceProvider = serviceProvider;
         }
+
+
+        [HttpGet("GetRetailDocSelesReport")]
+        public string GetRetailDocSelesReport()
+        {
+#if DEBUG
+            var _host = "127.0.0.1";
+            var ws = new RetailWSClient(_host, "http://localhost:8080/retail_1");
+            var _date = DateTime.Parse("2020/07/31");
+#else
+            var _host = "10.101.0.50";
+            var ws = new RetailWSClient(_host, "http://10.101.0.50/retail");
+            var _date = DateTime.Now.AddDays(-1);
+#endif
+
+            
+            var wsResult = ws.GetRetailDocSelesReport(_date).Result;
+
+            try
+            {
+                var ctx = serviceProvider.GetRequiredService<TabakonDBContext>();
+                var dbset = ctx.Set<RetailDocSelesReport>();
+
+                var endpoint = ctx.RetailEndpoint.FirstOrDefault(e => e.RetailEndpointHost == _host);
+
+                AbstractCacheEntity entity = Activator.CreateInstance<RetailDocSelesReport>()
+                            .PopulateData(endpoint)
+                            .PopulateData(wsResult);
+
+                entity = dbset.FirstOrDefault(entity.IsEquals<RetailDocSelesReport>().Compile());
+                if (entity == null)
+                {
+                    entity = (Activator.CreateInstance<RetailDocSelesReport>())
+                        .PopulateData(endpoint)
+                        .PopulateData(wsResult);
+
+                    dbset.Add(entity as RetailDocSelesReport);
+                }
+
+                string jsonData = entity.JsonData;
+                entity.LastCheck = DateTime.Now;
+                entity.PopulateData(wsResult);
+
+                ctx.SaveChanges();
+            }
+            catch (Exception e) 
+            {
+                wsResult = wsResult + "\n" + e.Message;
+            }
+
+            return wsResult;
+        }
+
         [HttpGet("Ping")]
         public async Task<IEnumerable<RetailPing>> Ping()
         {
