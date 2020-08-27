@@ -120,6 +120,7 @@
 					<v8:content>Группа данные</v8:content>
 				</v8:item>
 			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа_ДанныеРасширеннаяПодсказка" id="89"/>
 			<ChildItems>
@@ -136,6 +137,7 @@
 							<v8:content>Группа выручка</v8:content>
 						</v8:item>
 					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
 					<Group>AlwaysHorizontal</Group>
 					<Representation>StrongSeparation</Representation>
 					<ShowTitle>false</ShowTitle>
@@ -256,6 +258,7 @@
 							<v8:content>Группа продажи</v8:content>
 						</v8:item>
 					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
 					<Representation>StrongSeparation</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Группа_ПродажиРасширеннаяПодсказка" id="97"/>
@@ -498,13 +501,42 @@
 								</InputField>
 							</ChildItems>
 						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа_Продавцы" id="223">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ПРОДАВЦЫ:</v8:content>
+						</v8:item>
+					</Title>
+					<TitleTextColor>#800000</TitleTextColor>
+					<TitleFont ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа продавцы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="Группа_ПродавцыРасширеннаяПодсказка" id="224"/>
+					<ChildItems>
 						<Button name="ПродавцыПодробно" id="218">
 							<Type>Hyperlink</Type>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
 							<CommandName>Form.Command.ПродавцыПодробно</CommandName>
+							<TextColor>#800000</TextColor>
+							<Font ref="style:NormalTextFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 							<ExtendedTooltip name="ПродавцыПодробноРасширеннаяПодсказка" id="219"/>
 						</Button>
 						<Table name="Продавцы" id="193">
 							<Visible>false</Visible>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<HeightInTableRows>3</HeightInTableRows>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
@@ -540,6 +572,9 @@
 								<ContextMenu name="ПродавцыУправлениеПоискомКонтекстноеМеню" id="204"/>
 								<ExtendedTooltip name="ПродавцыУправлениеПоискомРасширеннаяПодсказка" id="205"/>
 							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">ПродавцыПриИзменении</Event>
+							</Events>
 							<ChildItems>
 								<LabelField name="ПродавцыНомерСтроки" id="206">
 									<DataPath>Объект.Продавцы.LineNumber</DataPath>
