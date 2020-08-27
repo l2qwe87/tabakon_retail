@@ -14,17 +14,6 @@
 		<Event name="OnOpen" callType="After">ТБКПриОткрытииПосле</Event>
 	</Events>
 	<ChildItems>
-		<LabelDecoration name="ВерсияР" id="543">
-			<Title formatted="false">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Версия Р</v8:content>
-				</v8:item>
-			</Title>
-			<GroupHorizontalAlign>Left</GroupHorizontalAlign>
-			<ContextMenu name="ВерсияРКонтекстноеМеню" id="544"/>
-			<ExtendedTooltip name="ВерсияРРасширеннаяПодсказка" id="545"/>
-		</LabelDecoration>
 		<UsualGroup name="ГруппаЗаголовкиКнопки" id="102">
 			<Title>
 				<v8:item>
@@ -37,6 +26,19 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаЗаголовкиКнопкиРасширеннаяПодсказка" id="162"/>
 			<ChildItems>
+				<LabelDecoration name="ВерсияР" id="543">
+					<TextColor>#339966</TextColor>
+					<Font ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Версия Р</v8:content>
+						</v8:item>
+					</Title>
+					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+					<ContextMenu name="ВерсияРКонтекстноеМеню" id="544"/>
+					<ExtendedTooltip name="ВерсияРРасширеннаяПодсказка" id="545"/>
+				</LabelDecoration>
 				<InputField name="ТекущаяКассаККМ" id="540">
 					<DataPath>ТекущаяКассаККМ</DataPath>
 					<OpenButton>false</OpenButton>
