@@ -141,7 +141,7 @@ namespace RetailClient.Web.Contracts
                 var arr = new List<string>();
                 var dateBegin = DateTime.Now.Date.AddDays(-50);
 #if RELEASE
-                dateBegin = DateTime.Now.Date.AddDays(-7);
+                dateBegin = DateTime.Now.Date.AddDays(-1);
 #endif
                 while (dateBegin < DateTime.Now)
                 {
@@ -152,6 +152,8 @@ namespace RetailClient.Web.Contracts
                         var jArray = JArray.Parse(json);
                         var docs = jArray.Select(e => e.ToString()).ToList();
                         arr.AddRange(docs);
+                        //var _logger = serviceProvider.GetService<ILogger<WorkerRetailDocSelesReport>>();
+                        //_logger.LogWarning(JsonConvert.SerializeObject(docs));
                     }
                     catch (Exception e)
                     {
@@ -236,7 +238,11 @@ namespace RetailClient.Web.Contracts
             using (var scope = serviceProvider.CreateScope())
             {
                 var ctx = scope.ServiceProvider.GetRequiredService<TabakonDBContext>();
-                endpoints = await ctx.RetailEndpoint.Select(r => r).AsNoTracking().ToListAsync();
+                endpoints = await ctx.RetailEndpoint
+                    //.Where(r => r.RetailEndpointHost == "10.101.0.50" || r.RetailEndpointHost == "localhost")
+                    .Select(r => r)
+                    .AsNoTracking()
+                    .ToListAsync();
             }
 
             var tasks = endpoints.Select(async endpoint =>
