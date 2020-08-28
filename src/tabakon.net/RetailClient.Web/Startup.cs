@@ -37,6 +37,13 @@ namespace RetailClientTests
             services.AddScoped<WorkerRetailVersion, WorkerRetailVersion>();
             services.AddScoped<WorkerPing, WorkerPing>();
             services.AddScoped<WorkerRetailDocSelesReport, WorkerRetailDocSelesReport>();
+
+
+
+            services.AddSpaStaticFiles(configuration =>
+            {
+                configuration.RootPath = "dist/tabakon-web-admin";
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,9 +61,19 @@ namespace RetailClientTests
 
             app.UseAuthorization();
 
+            
+
+            app.UseStaticFiles();
+            app.UseSpaStaticFiles();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+
+            app.UseSpa(spa =>
+            {
+                spa.Options.SourcePath = "dist/tabakon-web-admin";
             });
 
 
@@ -71,7 +88,7 @@ namespace RetailClientTests
 
             jobService.AddTask<WorkerRetailDocSelesReport>(TimeSpan.FromMinutes(20));
             jobService.AddTask<WorkerRetailVersion>(TimeSpan.FromHours(1));
-            jobService.AddTask<WorkerPing>(TimeSpan.FromMinutes(15));
+            jobService.AddTask<WorkerPing>(TimeSpan.FromMinutes(20));
         }
     }
 }
