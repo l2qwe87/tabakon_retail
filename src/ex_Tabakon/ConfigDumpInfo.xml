@@ -176,7 +176,7 @@
 		<Metadata name="DataProcessor.ТБК_ВыгрузкаПродажДляИнвентаризации" id="224b1922-dd22-41c9-840e-946e5983b974" configVersion="b42201e84592301b7b74db2d1f7f428df9184201"/>
 		<Metadata name="DataProcessor.ТБК_ВыгрузкаПродажДляИнвентаризации.Form.Форма" id="37b03efd-208c-42c9-8ce2-c989363138e3" configVersion="14e321aa89742bcb0f0a95c08139256fcdb0c4b6"/>
 		<Metadata name="DataProcessor.ТБК_ВыгрузкаПродажДляИнвентаризации.Form.Форма.Form" id="37b03efd-208c-42c9-8ce2-c989363138e3.0" configVersion="ff2296b8ab55f349b3bc39766fdc2066a863b677"/>
-		<Metadata name="DataProcessor.ТБК_Миграции" id="7bbb3322-98fe-45fa-9b25-c1c33143198f" configVersion="6d31ba8c7054f00bcbde648dcf70ce212a60af55">
+		<Metadata name="DataProcessor.ТБК_Миграции" id="7bbb3322-98fe-45fa-9b25-c1c33143198f" configVersion="2afc176cc315c1c416be1bd357976427b8d6ff12">
 			<Metadata name="DataProcessor.ТБК_Миграции.Command.М_00009_ДатаЗапретИзменениеДанных20200731" id="03e106ce-38cb-4fe1-99b1-ce1912f5bfd3"/>
 			<Metadata name="DataProcessor.ТБК_Миграции.Command.М_00008_ЧисткаШтрихкодов" id="04b07181-6f8b-4544-9088-a512aed9f985"/>
 			<Metadata name="DataProcessor.ТБК_Миграции.Command.М_00007_ДатаЗапретИзменениеДанных20200712" id="18e20c35-a50c-4db7-98f1-2b3edec5efd8"/>
@@ -186,6 +186,7 @@
 			<Metadata name="DataProcessor.ТБК_Миграции.Command.М_00006_РКО_ДДС_Поставщику" id="70d36117-ec75-4319-9e09-50c64a9036ca"/>
 			<Metadata name="DataProcessor.ТБК_Миграции.Command.М_00004_ПКО_До_20200708" id="719c6f78-798a-4b2b-86bd-ff0e70da00e2"/>
 			<Metadata name="DataProcessor.ТБК_Миграции.Command.М_00001_ДатаЗапретИзменениеДанных20200701" id="76e26364-75bb-44d2-b6d0-5f3eade7b0a6"/>
+			<Metadata name="DataProcessor.ТБК_Миграции.Command.М_00014_УдалитьДублиИПустыхПродавцовВВедомостях" id="aefe89cf-319b-4767-b984-99e9370ccbb9"/>
 			<Metadata name="DataProcessor.ТБК_Миграции.Command.М_00013_ПроставитьПредметРасчета" id="b157a658-4c5c-414d-abee-b302d800f4d1"/>
 			<Metadata name="DataProcessor.ТБК_Миграции.Command.М_00005_ДатаЗапрета_Документ_Ваучеры" id="b8968ca5-b2db-4fa9-ac2f-4092d9b47ff9"/>
 			<Metadata name="DataProcessor.ТБК_Миграции.Command.М_00010_ВаучерыНаВесьЧек" id="f0f72089-cd16-440a-9cfd-a3134d372486"/>
@@ -204,7 +205,8 @@
 		<Metadata name="DataProcessor.ТБК_Миграции.Command.М_00011_ПроведениеСписаний.CommandModule" id="32420e2d-b960-4593-b32d-dfc8689740fe.2" configVersion="0df7e5f8f9ddc008076f4147eda5997adca2547b"/>
 		<Metadata name="DataProcessor.ТБК_Миграции.Command.М_00012_ПроведениеСписаний_Дубль.CommandModule" id="f7936ef2-e41f-470f-b715-f49e382e201c.2" configVersion="0df7e5f8f9ddc008076f4147eda5997adca2547b"/>
 		<Metadata name="DataProcessor.ТБК_Миграции.Command.М_00013_ПроставитьПредметРасчета.CommandModule" id="b157a658-4c5c-414d-abee-b302d800f4d1.2" configVersion="0df7e5f8f9ddc008076f4147eda5997adca2547b"/>
-		<Metadata name="DataProcessor.ТБК_Миграции.ManagerModule" id="7bbb3322-98fe-45fa-9b25-c1c33143198f.2" configVersion="d51d36d6e85dda5422192cba3a21b13700b0ebf9"/>
+		<Metadata name="DataProcessor.ТБК_Миграции.Command.М_00014_УдалитьДублиИПустыхПродавцовВВедомостях.CommandModule" id="aefe89cf-319b-4767-b984-99e9370ccbb9.2" configVersion="0df7e5f8f9ddc008076f4147eda5997adca2547b"/>
+		<Metadata name="DataProcessor.ТБК_Миграции.ManagerModule" id="7bbb3322-98fe-45fa-9b25-c1c33143198f.2" configVersion="dad385207224c136350f635612376dee0b137f6f"/>
 		<Metadata name="DataProcessor.ТБК_Миграции.Template.М_00011" id="f3c15d9a-8cd0-45dd-abe8-2f5548653330" configVersion="6ca3ef6b4959895360cb430ecba6a791b6051ab2"/>
 		<Metadata name="DataProcessor.ТБК_Миграции.Template.М_00011.Template" id="f3c15d9a-8cd0-45dd-abe8-2f5548653330.0" configVersion="bc7ba9fc8a307d0481eb54b955f801061d4fc0f1"/>
 		<Metadata name="DataProcessor.ТБК_Оле" id="a3df1917-e644-4061-966b-3e7cbddbab9f" configVersion="ea129d88ce302c656f99787c6dded9422a36dfa6"/>
@@ -331,7 +333,7 @@
 			<Metadata name="Document.ТБК_ВедомостьОПродажахЗаДень.TabularSection.Продавцы.Attribute.ЭтоДопСмена" id="feea7627-7858-43ef-afb5-0980140cd5a3"/>
 		</Metadata>
 		<Metadata name="Document.ТБК_ВедомостьОПродажахЗаДень.Form.ФормаДокумента" id="d72a4bfd-8ed5-4c03-99e5-0753e77a09c6" configVersion="3b04d1c48b43c180e44b95d3db1303df4a356057"/>
-		<Metadata name="Document.ТБК_ВедомостьОПродажахЗаДень.Form.ФормаДокумента.Form" id="d72a4bfd-8ed5-4c03-99e5-0753e77a09c6.0" configVersion="c626ac29e2e7fa742994a798048db6ad5ffdfc40"/>
+		<Metadata name="Document.ТБК_ВедомостьОПродажахЗаДень.Form.ФормаДокумента.Form" id="d72a4bfd-8ed5-4c03-99e5-0753e77a09c6.0" configVersion="3fd3a2f584e94df86a35a0f0deae870d0d681f17"/>
 		<Metadata name="Document.ТБК_ВедомостьОПродажахЗаДень.ManagerModule" id="e74945b0-5e81-4b01-8d49-cbcc69d28575.2" configVersion="52e39f00d5ddf46b3bdfa39b145ebadd0d5fc49a"/>
 		<Metadata name="Document.ЧекККМ" id="b54faadd-47a2-4bce-be65-3abfe04af96e" configVersion="57e39db779ff198a0ad45683dd554f09c54d9537">
 			<Metadata name="Document.ЧекККМ.TabularSection.Оплата" id="20f0ab97-b8de-46b5-879f-18dfbc2986b7"/>
