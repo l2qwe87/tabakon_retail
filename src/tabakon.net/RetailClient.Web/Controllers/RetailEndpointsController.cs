@@ -5,25 +5,27 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using RetailClient.Web.Contracts;
 using Tabakon.DAL;
 using Tabakon.Entity;
 
 namespace RetailClientTests.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class RetailEndpointsController : ControllerBase
     {
-
-        private readonly TabakonDBContext ctx;
-        public RetailEndpointsController(TabakonDBContext ctx)
+        private readonly IRetailEndpointsRepo retailEndpointsRepo;
+        
+        public RetailEndpointsController(IRetailEndpointsRepo retailEndpointsRepo)
         {
-            this.ctx = ctx;
+            this.retailEndpointsRepo = retailEndpointsRepo;
         }
         [HttpGet("Get")]
         public async Task<IEnumerable<RetailEndpoint>> Get()
         {
-            var endpoints = await ctx.RetailEndpoint.Select(r => r).ToListAsync();
+            var endpoints = await retailEndpointsRepo.GetRetailEndpointsAsync();
+            
             return endpoints;
         }
 
