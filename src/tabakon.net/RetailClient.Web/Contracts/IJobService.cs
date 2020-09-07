@@ -141,8 +141,10 @@ namespace RetailClient.Web.Contracts
                 var arr = new List<string>();
                 var dateBegin = DateTime.Now.Date.AddDays(-50);
 #if RELEASE
-                dateBegin = DateTime.Now.Date.AddDays(-1);
+                dateBegin = DateTime.Now.Date.AddDays(-5);
 #endif
+                var logger = serviceProvider.GetService<ILogger<WorkerRetailDocSelesReport>>();
+                logger.LogInformation($"BEGIN WorkerRetailDocSelesReport : {endpoint.RetailEndpointName}");
                 while (dateBegin < DateTime.Now)
                 {
                     var ws = new RetailWSClient(endpoint.RetailEndpointHost, endpoint.RetailEndpointUrl);
@@ -165,8 +167,8 @@ namespace RetailClient.Web.Contracts
                 }
 
                 //Console.Out.WriteLine($"WorkerRetailDocSelesReport : {endpoint.RetailEndpointName} : {arr.Count()}");
-                var logger = serviceProvider.GetService<ILogger<WorkerRetailDocSelesReport>>();
-                logger.LogInformation($"WorkerRetailDocSelesReport : {endpoint.RetailEndpointName} : {arr.Count()}");
+                
+                logger.LogInformation($"END WorkerRetailDocSelesReport : {endpoint.RetailEndpointName} : {arr.Count()}");
 
                 return arr;
             });
@@ -182,6 +184,9 @@ namespace RetailClient.Web.Contracts
             var alwaysSaveResult = false;
             var result = await DoWorkAsync<RetailVersion>(alwaysSaveResult, async (endpoint) =>
             {
+                var logger = serviceProvider.GetService<ILogger<WorkerRetailVersion>>();
+                logger.LogInformation($"BEGIN WorkerRetailVersion : {endpoint.RetailEndpointName}");
+
                 var ws = new RetailWSClient(endpoint.RetailEndpointHost, endpoint.RetailEndpointUrl);
                 try
                 {
@@ -192,6 +197,10 @@ namespace RetailClient.Web.Contracts
                     return (alwaysSaveResult)
                         ? new[] { e.Message }
                         : new string[0];
+                }
+                finally
+                {
+                    logger.LogInformation($"END WorkerRetailVersion : {endpoint.RetailEndpointName}");
                 }
             });
         }
@@ -239,8 +248,9 @@ namespace RetailClient.Web.Contracts
             {
                 var ctx = scope.ServiceProvider.GetRequiredService<TabakonDBContext>();
                 endpoints = await ctx.RetailEndpoint
-                    .Where(r => !r.MarkAsDeleted )
+                    .Where(r => !r.MarkAsDeleted && r.RetailEndpointHost.Length > 0)
                     //.Where(r => r.RetailEndpointHost == "10.101.0.50" || r.RetailEndpointHost == "localhost")
+                    .OrderBy(r => r.RetailEndpointName)
                     .Select(r => r)
                     .AsNoTracking()
                     .ToListAsync();
