@@ -16,6 +16,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { VersionsComponent } from './stats/versions/versions.component';
+import { CommonComponentsModule } from './common-components-module/common-components-module.module';
+
+
 
 @NgModule({
   declarations: [
@@ -36,6 +39,7 @@ import { VersionsComponent } from './stats/versions/versions.component';
     CovalentDynamicFormsModule,
     CovalentBaseEchartsModule,
     BrowserAnimationsModule,
+    CommonComponentsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

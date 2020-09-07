@@ -10,6 +10,7 @@ export class VersionsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log("qqq");
   }
 
 }
