@@ -239,6 +239,7 @@ namespace RetailClient.Web.Contracts
             {
                 var ctx = scope.ServiceProvider.GetRequiredService<TabakonDBContext>();
                 endpoints = await ctx.RetailEndpoint
+                    .Where(r => !r.MarkAsDeleted )
                     //.Where(r => r.RetailEndpointHost == "10.101.0.50" || r.RetailEndpointHost == "localhost")
                     .Select(r => r)
                     .AsNoTracking()
