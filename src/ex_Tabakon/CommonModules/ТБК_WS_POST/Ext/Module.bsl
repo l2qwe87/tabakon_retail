@@ -49,3 +49,21 @@
 	
 	РегистрыСведений.ТБК_Константы.Установить_РежимРаботыРасширения(config);
 КонецФункции
+
+
+Функция Run_exRetailOle(вхПараметры) ЭКСПОРТ
+	имяФайла = "C:\app\database\exRetailOle.cmd"; 
+	
+	файл_cmd = Новый Файл(имяФайла);
+	WshShell=Новый COMОбъект("WScript.Shell");
+	WshShell.Run(имяФайла);
+	
+КонецФункции
+
+Функция Run_apply_cfe(вхПараметры) ЭКСПОРТ
+	имяФайла = "C:\app\database\apply_cfe.cmd"; 
+	
+	файл_cmd = Новый Файл(имяФайла);
+	WshShell=Новый COMОбъект("WScript.Shell");
+	WshShell.Run(имяФайла);
+КонецФункции
