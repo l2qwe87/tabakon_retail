@@ -39,13 +39,14 @@ namespace RetailClient.Web.Services.Jobs
                     {
                         //arr.Add(e.Message);
                         var _logger = serviceProvider.GetService<ILogger<WorkerRetailDocSelesReport>>();
-                        _logger.LogError(e.Message, e);
+                        _logger.LogError($"{endpoint.RetailEndpointHost} \n{e.Message}", e);
                     }
                     dateBegin = dateBegin.AddDays(1);
                 }
 
                 //Console.Out.WriteLine($"WorkerRetailDocSelesReport : {endpoint.RetailEndpointName} : {arr.Count()}");
                 var logger = serviceProvider.GetService<ILogger<WorkerRetailDocSelesReport>>();
+
                 logger.LogInformation($"WorkerRetailDocSelesReport : {endpoint.RetailEndpointName} : {arr.Count()}");
 
                 return arr;

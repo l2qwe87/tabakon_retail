@@ -20,7 +20,9 @@ namespace RetailClient.Web.Services
 
         public async Task<IEnumerable<RetailEndpoint>> GetRetailEndpointsAsync() 
         {
-            var endpoints = await ctx.RetailEndpoint.Select(r => r).ToListAsync();
+            var endpoints = await ctx.RetailEndpoint
+                .Where(e => e.MarkAsDeleted == false && e.RetailEndpointHost.Length > 0)
+                .Select(r => r).ToListAsync();
 
             return endpoints;
         }

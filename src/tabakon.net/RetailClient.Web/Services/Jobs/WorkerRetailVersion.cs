@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Tabakon.Entity;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace RetailClient.Web.Services.Jobs
 {
@@ -22,6 +24,9 @@ namespace RetailClient.Web.Services.Jobs
                 }
                 catch (Exception e)
                 {
+                    var _logger = serviceProvider.GetService<ILogger<WorkerRetailVersion>>();
+                    _logger.LogError($"{endpoint.RetailEndpointHost} \n{e.Message}", e);
+
                     return (alwaysSaveResult)
                         ? new[] { e.Message }
                         : new string[0];
