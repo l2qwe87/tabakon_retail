@@ -194,6 +194,11 @@
 					<CommandName>0</CommandName>
 					<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="64"/>
 				</Button>
+				<Button name="СписокУдалитьХарактеристики_НеЗаполнено" id="105">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.УдалитьХарактеристики_НеЗаполнено</CommandName>
+					<ExtendedTooltip name="СписокУдалитьХарактеристики_НеЗаполненоРасширеннаяПодсказка" id="106"/>
+				</Button>
 				<Button name="ФормаУстановить_ОсобенностьУчетаДля_ТабачнаяПродукция" id="103">
 					<Type>CommandBarButton</Type>
 					<CommandName>Form.Command.Установить_ОсобенностьУчетаДля_ТабачнаяПродукция</CommandName>
@@ -356,6 +361,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКУстановить_ОсобенностьУчетаДля_ТабачнаяПродукцияПосле</Action>
+		</Command>
+		<Command name="УдалитьХарактеристики_НеЗаполнено" id="1000001">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить характеристики не заполнено</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить характеристики не заполнено</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКУдалитьХарактеристики_НеЗаполненоПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
