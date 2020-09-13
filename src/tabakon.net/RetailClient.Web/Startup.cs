@@ -13,6 +13,8 @@ using Microsoft.Extensions.Logging;
 using Tabakon.DAL;
 using Microsoft.EntityFrameworkCore;
 using RetailClient.Web.Contracts;
+using RetailClient.Web.Services.Jobs;
+using RetailClient.Web.Services;
 
 namespace RetailClientTests
 {
@@ -38,7 +40,7 @@ namespace RetailClientTests
             services.AddScoped<WorkerPing, WorkerPing>();
             services.AddScoped<WorkerRetailDocSelesReport, WorkerRetailDocSelesReport>();
 
-
+            services.AddScoped<IRetailEndpointsRepo, RetailEndpointsRepo>(); 
 
             services.AddSpaStaticFiles(configuration =>
             {
@@ -87,7 +89,7 @@ namespace RetailClientTests
             var jobService = serviceProvider.GetService<IJobService>();
 
             jobService.AddTask<WorkerRetailDocSelesReport>(TimeSpan.FromMinutes(20));
-            jobService.AddTask<WorkerRetailVersion>(TimeSpan.FromHours(25));
+            jobService.AddTask<WorkerRetailVersion>(TimeSpan.FromMinutes(25));
             jobService.AddTask<WorkerPing>(TimeSpan.FromMinutes(15));
         }
     }
