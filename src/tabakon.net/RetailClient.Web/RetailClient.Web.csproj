@@ -1,16 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <ItemGroup>
-    <ProjectReference Include="..\Tabakon.DAL\Tabakon.DAL.csproj" />
-    <ProjectReference Include="..\RetailClient\RetailClient.csproj" />
-  </ItemGroup>
- 
-<ItemGroup>
-	<PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.7" />
-</ItemGroup>
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-  </PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Tabakon.DAL\Tabakon.DAL.csproj" />
+		<ProjectReference Include="..\RetailClient\RetailClient.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.7" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="3.1.8" />
+	</ItemGroup>
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<IsTransformWebConfigDisabled>true</IsTransformWebConfigDisabled>
+	</PropertyGroup>
 
 
 </Project>

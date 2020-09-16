@@ -18,6 +18,7 @@ namespace RetailClientTests
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
+                .UseWindowsService()
                 .ConfigureLogging(logging =>
                 {
                     logging.ClearProviders();
