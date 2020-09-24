@@ -43,7 +43,100 @@
 					</Type>
 				</Properties>
 			</Attribute>
+			<Attribute uuid="d396e4bc-086b-4066-857e-38381a99a1fb">
+				<InternalInfo/>
+				<Properties>
+					<Name>ЧекККМПродажа</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>f363cbd4-edd4-4602-8a3a-945c40d7791a</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ЧекККМ</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="146486c3-ee02-4612-bc8f-8421b6528a12">
+				<InternalInfo/>
+				<Properties>
+					<Name>ВидОперации</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>c3e036cf-2439-4519-8e8b-1755595bff91</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ВидыОперацийЧекККМ</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="46f98e23-b23d-4e85-b377-de53a747cb9f">
+				<InternalInfo/>
+				<Properties>
+					<Name>СуммаДокумента</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>76193e38-2d62-44b8-932a-857f95c23f2b</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="0a078f6e-954e-4427-bb7b-1cbbfa3223a2">
+				<Properties>
+					<Name>ВозвратОтПокупателя</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Возврат от покупателя</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ВозвратТоваровОтПокупателя</v8:Type>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillFromFillingValue>false</FillFromFillingValue>
+					<FillValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<Indexing>DontIndex</Indexing>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="925aad9d-3d06-4682-b81f-aee9f07ecde3">
+				<InternalInfo/>
+				<Properties>
+					<Name>ОтчетОРозничныхПродажах</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>7ef804ab-2406-4818-9b08-5af3b51bde64</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ОтчетОРозничныхПродажах</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
 			<Form>ФормаСписка</Form>
+			<Form>ФормаДокумента</Form>
 			<TabularSection uuid="f3f83701-4b36-42d4-aa80-19762b987de4">
 				<InternalInfo>
 					<xr:GeneratedType name="DocumentTabularSection.ЧекККМ.Товары" category="TabularSection">
@@ -117,6 +210,18 @@
 									<v8:FractionDigits>2</v8:FractionDigits>
 									<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="a6b8b5c9-ac87-4c6a-ad11-5c8490262db4">
+						<InternalInfo/>
+						<Properties>
+							<Name>Склад</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>5fa06548-1ca7-4a84-b0a7-fa842a88d0be</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.Склады</v8:Type>
 							</Type>
 						</Properties>
 					</Attribute>
