@@ -21,6 +21,7 @@ import { CommonComponentsModule } from './common-components-module/common-compon
 import { HttpClientModule } from '@angular/common/http';
 import { EndpointsGridComponent } from './stats/endpoints-grid/endpoints-grid.component';
 import { EndpointsService } from './services/endpoints.service';
+import { EndpointVersionComponent } from './stats/endpoint-version/endpoint-version.component';
 
 
 
@@ -29,7 +30,8 @@ import { EndpointsService } from './services/endpoints.service';
     AppComponent,
     HomeComponent,
     VersionsComponent,
-    EndpointsGridComponent
+    EndpointsGridComponent,
+    EndpointVersionComponent
   ],
   imports: [
     BrowserModule,

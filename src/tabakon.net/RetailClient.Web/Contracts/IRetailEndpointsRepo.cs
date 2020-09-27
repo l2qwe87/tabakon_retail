@@ -9,5 +9,7 @@ namespace RetailClient.Web.Contracts
     public interface IRetailEndpointsRepo
     {
         Task<IEnumerable<RetailEndpoint>> GetRetailEndpointsAsync();
+
+        Task<IEnumerable<RetailVersion>> GetRetailEndpointsVersionAsync();
     }
 }

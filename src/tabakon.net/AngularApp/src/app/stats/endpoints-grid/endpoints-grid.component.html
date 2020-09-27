@@ -22,6 +22,15 @@
             Retail Endpoint Host
         </th>
         <th td-data-table-column [name]="'retailEndpointUrl'">Retail Endpoint Url</th>
+        <th 
+            td-data-table-column 
+            [name]="'retailEndpointVersion'"
+            [sortable]="true"
+            [active]="sortBy == 'retailEndpointVersion'"
+            (sortChange)="sort($event)"
+            [sortOrder]="sortOrder"
+        >
+            Retail Endpoint Version</th>
       </tr>
     </thead>
     <tbody>
@@ -29,6 +38,7 @@
         <td td-data-table-cell>{{ item.retailEndpointName }}</td>
         <td td-data-table-cell>{{ item.retailEndpointHost }}</td>
         <td td-data-table-cell>{{ item.retailEndpointUrl }}</td>
+        <td td-data-table-cell><app-endpoint-version [endpoint]="item"></app-endpoint-version></td>
       </tr>
     </tbody>
    </table>

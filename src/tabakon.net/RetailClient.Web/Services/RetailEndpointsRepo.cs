@@ -26,5 +26,14 @@ namespace RetailClient.Web.Services
 
             return endpoints;
         }
+
+        public async Task<IEnumerable<RetailVersion>> GetRetailEndpointsVersionAsync()
+        { 
+            var versions = await ctx.RetailVersion
+                .Where(e => e.RetailEndpoint.MarkAsDeleted == false && e.RetailEndpoint.RetailEndpointHost.Length > 0)
+                .Select(r => r).ToListAsync();
+
+            return versions;
+        }
     }
 }
