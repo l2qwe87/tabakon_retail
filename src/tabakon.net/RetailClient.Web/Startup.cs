@@ -88,9 +88,9 @@ namespace RetailClientTests
         {
             var jobService = serviceProvider.GetService<IJobService>();
 
-            //jobService.AddTask<WorkerRetailDocSelesReport>(TimeSpan.FromMinutes(20));
-            //jobService.AddTask<WorkerRetailVersion>(TimeSpan.FromMinutes(25));
-            //jobService.AddTask<WorkerPing>(TimeSpan.FromMinutes(15));
+            jobService.AddTask<WorkerRetailDocSelesReport>(TimeSpan.FromMinutes(20));
+            jobService.AddTask<WorkerRetailVersion>(TimeSpan.FromMinutes(25));
+            jobService.AddTask<WorkerPing>(TimeSpan.FromMinutes(15));
         }
     }
 }
