@@ -19,6 +19,8 @@ import { HomeComponent } from './home/home.component';
 import { VersionsComponent } from './stats/versions/versions.component';
 import { CommonComponentsModule } from './common-components-module/common-components-module.module';
 import { HttpClientModule } from '@angular/common/http';
+import { EndpointsGridComponent } from './stats/endpoints-grid/endpoints-grid.component';
+import { EndpointsService } from './services/endpoints.service';
 
 
 
@@ -26,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     HomeComponent,
-    VersionsComponent
+    VersionsComponent,
+    EndpointsGridComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,9 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     
   ],
-  providers: [],
+  providers: [
+    { provide : EndpointsService }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

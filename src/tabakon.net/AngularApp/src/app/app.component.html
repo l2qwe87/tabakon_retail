@@ -1,5 +1,34 @@
-<button mat-raised-button color="primary" [routerLink]="['/stats/versions']">
-  Versions dd
- </button>
+ <td-layout class="layout-nav-main" sidenavWidth="280px">
+  <td-navigation-drawer
+    flex
+    sidenavTitle="Tabakon"
+    name="TBK"
+  >
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="['/home']" tdLayoutToggle>
+        <mat-icon>home</mat-icon>
+        Главная
+      </a>
+      
+      <a mat-list-item [routerLink]="['/stats/endpoints-grid']" tdLayoutToggle>
+        <mat-icon>view_list</mat-icon>
+        Список торговых точек
+      </a>
+      
+      <a mat-list-item tdLayoutToggle>
+        <mat-icon>close</mat-icon>
+        Закрыть
+      </a>
+    </mat-nav-list>
+  </td-navigation-drawer>
+  <td-layout-nav toolbarTitle="Меню" navigationRoute="/">
+    <button mat-icon-button td-menu-button tdLayoutToggle>
+      <mat-icon>menu</mat-icon>
+    </button>
 
- <router-outlet></router-outlet>
+
+    <router-outlet></router-outlet>
+  
+  
+  </td-layout-nav>
+ </td-layout>

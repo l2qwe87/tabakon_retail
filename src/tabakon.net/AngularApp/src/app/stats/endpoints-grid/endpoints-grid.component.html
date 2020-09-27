@@ -1,0 +1,34 @@
+<table td-data-table>
+    <thead>
+      <tr td-data-table-column-row>
+        <th
+          td-data-table-column
+          [name]="'retailEndpointName'"
+          [sortable]="true"
+          [active]="sortBy == 'retailEndpointName'"
+          (sortChange)="sort($event)"
+          [sortOrder]="sortOrder"
+        >
+            Retail Endpoint Name
+        </th>
+        <th
+          td-data-table-column
+          [name]="'retailEndpointHost'"
+          [sortable]="true"
+          [active]="sortBy == 'retailEndpointHost'"
+          (sortChange)="sort($event)"
+          [sortOrder]="sortOrder"
+        >
+            Retail Endpoint Host
+        </th>
+        <th td-data-table-column [name]="'retailEndpointUrl'">Retail Endpoint Url</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr td-data-table-row *ngFor="let item of atomicData">
+        <td td-data-table-cell>{{ item.retailEndpointName }}</td>
+        <td td-data-table-cell>{{ item.retailEndpointHost }}</td>
+        <td td-data-table-cell>{{ item.retailEndpointUrl }}</td>
+      </tr>
+    </tbody>
+   </table>

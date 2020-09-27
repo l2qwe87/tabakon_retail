@@ -21,15 +21,12 @@ namespace RetailClientTests.Controllers
         {
             this.retailEndpointsRepo = retailEndpointsRepo;
         }
-        [HttpGet("Get")]
+        [HttpGet]
         public async Task<IEnumerable<RetailEndpoint>> Get()
         {
             var endpoints = await retailEndpointsRepo.GetRetailEndpointsAsync();
             
             return endpoints;
         }
-
-        
-
     }
 }
