@@ -1,5 +1,7 @@
-<div *ngIf="retailVersion">
-    <p> {{retailVersion.jsonData}} </p>
-    <p> {{retailVersion.lastCheck | date:'hh:mm (dd.MM.yyyy)'}} </p>
-</div>
+
+    <div *ngIf="retailVersion" class="alert" [ngClass]="{ 'alert-primary' : isExpired == false, 'alert-danger' : isExpired == true }" role="alert">
+        <p> {{retailVersion.jsonData}} </p>
+        <p> {{retailVersion.lastCheck | date:'hh:mm (dd.MM.yyyy)'}} </p>
+    </div>
+
 

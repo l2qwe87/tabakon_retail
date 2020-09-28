@@ -37,6 +37,14 @@ export class EndpointVersionComponent implements OnInit, OnDestroy {
     }
   }
 
+  get isExpired() : boolean {
+    let date1 = new Date( this.retailVersion.lastCheck);
+    let date2 = new Date();
+    let diff = Math.abs(date1.getTime() - date2.getTime());
+    let diffHours = Math.ceil(diff / (1000 * 3600 )); 
+    return diffHours > 2;    
+  }
+
   constructor(
     private endpointsService : EndpointsService
   ) { 

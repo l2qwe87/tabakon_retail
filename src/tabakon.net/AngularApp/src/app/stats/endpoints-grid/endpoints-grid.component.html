@@ -37,7 +37,7 @@
       <tr td-data-table-row *ngFor="let item of atomicData">
         <td td-data-table-cell>{{ item.retailEndpointName }}</td>
         <td td-data-table-cell>{{ item.retailEndpointHost }}</td>
-        <td td-data-table-cell>{{ item.retailEndpointUrl }}</td>
+        <td td-data-table-cell><a href="{{ item.retailEndpointUrl }}" target="_blank">{{ item.retailEndpointUrl }}</a></td>
         <td td-data-table-cell><app-endpoint-version [endpoint]="item"></app-endpoint-version></td>
       </tr>
     </tbody>

@@ -16,7 +16,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
-import { VersionsComponent } from './stats/versions/versions.component';
 import { CommonComponentsModule } from './common-components-module/common-components-module.module';
 import { HttpClientModule } from '@angular/common/http';
 import { EndpointsGridComponent } from './stats/endpoints-grid/endpoints-grid.component';
@@ -29,7 +28,6 @@ import { EndpointVersionComponent } from './stats/endpoint-version/endpoint-vers
   declarations: [
     AppComponent,
     HomeComponent,
-    VersionsComponent,
     EndpointsGridComponent,
     EndpointVersionComponent
   ],
