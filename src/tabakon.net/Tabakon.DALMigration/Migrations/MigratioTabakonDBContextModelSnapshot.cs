@@ -55,6 +55,9 @@ namespace Tabakon.DALMigration.Migrations
                     b.Property<string>("RetailEndpointIdentity")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<bool>("MarkAsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<string>("RetailEndpointHost")
                         .HasColumnType("nvarchar(max)");
 
