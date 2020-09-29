@@ -8,5 +8,6 @@ namespace Tabakon.Entity
         public string RetailEndpointName {get;set;}
         public string RetailEndpointHost {get;set;}
         public string RetailEndpointUrl {get;set;}
+        public bool MarkAsDeleted { get; set; }
     }
 }
