@@ -20,7 +20,14 @@ export class EndpointVersionComponent implements OnInit, OnDestroy {
     let date2 = new Date();
     let diff = Math.abs(date1.getTime() - date2.getTime());
     let diffHours = Math.ceil(diff / (1000 * 3600 )); 
-    return diffHours > 2;    
+
+    let isBad = diffHours > 2;
+    if(isBad)
+      if(this.retailVersion.jsonData)
+        if(this.retailVersion.jsonData.search("_TIME_") == -1)
+          this.retailVersion.jsonData = " _TIME_ "+this.retailVersion.jsonData;
+
+    return isBad;
   }
 
   constructor(
