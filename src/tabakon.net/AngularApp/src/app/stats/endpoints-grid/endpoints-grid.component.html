@@ -22,7 +22,7 @@
 <table td-data-table>
     <thead>
       <tr td-data-table-column-row>
-        <th td-data-table-column [name]="'npp'">Retail Endpoint Url</th>
+        <th td-data-table-column [name]="'npp'">№ п/п</th>
         <th
           td-data-table-column
           [name]="'retailEndpointName'"
@@ -31,9 +31,9 @@
           (sortChange)="sort($event)"
           [sortOrder]="sortOrder"
         >
-            Retail Endpoint Name
+            Наименвоание склада в 1С
         </th>
-        <th
+        <!-- <th
           td-data-table-column
           [name]="'retailEndpointHost'"
           [sortable]="true"
@@ -42,8 +42,8 @@
           [sortOrder]="sortOrder"
         >
             Retail Endpoint Host
-        </th>
-        <th td-data-table-column [name]="'retailEndpointUrl'">Retail Endpoint Url</th>
+        </th> -->
+        <th td-data-table-column [name]="'retailEndpointUrl'">WEB клиент</th>
         <th 
             td-data-table-column 
             [name]="'retailEndpointVersion'"
@@ -52,14 +52,14 @@
             (sortChange)="sort($event)"
             [sortOrder]="sortOrder"
         >
-            Retail Endpoint Version</th>
+            Версия расширения</th>
       </tr>
     </thead>
     <tbody>
       <tr td-data-table-row *ngFor="let item of atomicData; let npp = index">
         <td td-data-table-cell>{{ npp+1 }}</td>
         <td td-data-table-cell>{{ item.retailEndpointName }}</td>
-        <td td-data-table-cell>{{ item.retailEndpointHost }}</td>
+        <!-- <td td-data-table-cell>{{ item.retailEndpointHost }}</td> -->
         <td td-data-table-cell><a href="{{ item.retailEndpointUrl }}" target="_blank">{{ item.retailEndpointUrl }}</a></td>
         <td td-data-table-cell><app-endpoint-version [retailVersion]="item.extData.retailVersion"></app-endpoint-version></td>
       </tr>
