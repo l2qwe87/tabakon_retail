@@ -12,30 +12,8 @@ import { EndpointsService } from 'src/app/services/endpoints.service';
 export class EndpointVersionComponent implements OnInit, OnDestroy {
 
 
-  private _subs : Subscription[] = [];
-  private _endpointIdentity : string;
-  public retailVersion : RetailVersion;
-
   @Input()
-  set endpoint(value : RetailEndpoint){
-    if(value.retailEndpointIdentity != this._endpointIdentity){
-      this._endpointIdentity = value.retailEndpointIdentity;
-      
-      let sub = this.endpointsService.getEndpointsVersion().pipe(
-        map(v => {
-          let filterResult = v.filter(e => e.retailEndpointIdentity == this._endpointIdentity)
-          if(filterResult.length > 0){
-            return filterResult[0];
-          }else{
-            return null;
-          }
-        }),
-        filter(v => !!v)
-      ).subscribe( v => this.retailVersion = v);
-
-      this._subs.push(sub);
-    }
-  }
+  public retailVersion : RetailVersion;
 
   get isExpired() : boolean {
     let date1 = new Date( this.retailVersion.lastCheck);
@@ -46,7 +24,6 @@ export class EndpointVersionComponent implements OnInit, OnDestroy {
   }
 
   constructor(
-    private endpointsService : EndpointsService
   ) { 
 
   }
@@ -55,7 +32,6 @@ export class EndpointVersionComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this._subs.forEach(s => s.unsubscribe());
   }
 
 }

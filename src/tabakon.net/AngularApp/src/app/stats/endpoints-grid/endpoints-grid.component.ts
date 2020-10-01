@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ITdDataTableSortChangeEvent, TdDataTableSortingOrder } from '@covalent/core/data-table';
+import { combineLatest } from 'rxjs';
+
+import { combineAll, switchMap } from 'rxjs/operators';
 import { RetailEndpoint } from 'src/app/models/RetailEndpoint';
 import { EndpointsService } from 'src/app/services/endpoints.service';
 
@@ -10,7 +13,7 @@ import { EndpointsService } from 'src/app/services/endpoints.service';
 })
 export class EndpointsGridComponent implements OnInit {
 
-
+  private _internalData : RetailEndpoint[] = [];
   public atomicData : RetailEndpoint[] = [];
 
   sortBy: string = 'retailEndpointName';
@@ -22,13 +25,23 @@ export class EndpointsGridComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.endpointsService.getEndpoints().subscribe(
-      data => {
-        //console.log(data);
-        this.atomicData = data;
+    combineLatest(this.endpointsService.getEndpoints(), this.endpointsService.getEndpointsVersion())
+      .subscribe(v =>{
+        this._internalData = v[0];
+        let endpointsVersions = v[1];
+        this._internalData.forEach(e =>{
+          e.extData = {};
+
+          let filterResult = endpointsVersions.filter(endpointsVersion => endpointsVersion.retailEndpointIdentity == e.retailEndpointIdentity)
+          if(filterResult.length > 0){
+            e.extData.retailVersion = filterResult[0];
+          }else{
+            e.extData.retailVersion = null;
+          }
+        })
+
         this.filterData();
-      }
-    )
+      });
   }
 
   sort(sortEvent: ITdDataTableSortChangeEvent): void {
@@ -40,23 +53,58 @@ export class EndpointsGridComponent implements OnInit {
     this.filterData();
   }
 
+  private _filterTerm : string = '';
+  filter(filterTerm: string): void {
+    this._filterTerm = filterTerm;
+    this.filterData();
+  }
+
+
   private filterData(): void {
-    this.atomicData = Array.from(this.atomicData); // Change the array reference to trigger OnPush
-    this.atomicData.sort((a: any, b: any) => {
+    this.atomicData = Array.from(this._internalData); // Change the array reference to trigger OnPush
+
+    if(this._filterTerm){
+
+      let searchData = this._filterTerm.toLowerCase();
+
+      this.atomicData = this.atomicData.filter(e => {
+        let elJson = JSON.stringify(e).toLowerCase()
+        let searchResult = elJson.search(searchData)
+        return searchResult != -1;
+      })
+    }
+
+    this.atomicData.sort((a: RetailEndpoint, b: RetailEndpoint) => {
       let direction: number = 0;
       if (this.sortOrder === TdDataTableSortingOrder.Descending) {
         direction = 1;
       } else if (this.sortOrder === TdDataTableSortingOrder.Ascending) {
         direction = -1;
       }
-      if (a[this.sortBy] < b[this.sortBy]) {
+
+      let leftValue = a[this.sortBy];
+      let rightValue = b[this.sortBy];
+      
+      if(this.sortBy == "retailEndpointVersion"){
+        
+        if(a.extData.retailVersion)
+          leftValue = a.extData.retailVersion.jsonData;
+
+        if(b.extData.retailVersion)
+          rightValue = b.extData.retailVersion.jsonData;
+
+      }
+
+      if (leftValue < rightValue) {
         return direction;
-      } else if (a[this.sortBy] > b[this.sortBy]) {
+      } else if (leftValue > rightValue) {
         return -direction;
       } else {
         return direction;
       }
     });
+
+    this.atomicData.forEach((e : any) => e.retailEndpointVersion )  
   }
  
 

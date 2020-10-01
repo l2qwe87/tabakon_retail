@@ -1,6 +1,28 @@
+<div
+ layout="row"
+ layout-align="start center"
+ class="pad-left-sm pad-right-sm"
+>
+ <span class="push-left-sm">
+   <span class="mat-title">Список торговых точек</span>
+ </span>
+ <mat-divider></mat-divider>
+ <td-search-box
+   #searchBox
+   [alwaysVisible]="true"
+   backIcon="arrow_back"
+   class="push-right-sm"
+   placeholder="Введите строку для поиска"
+   (searchDebounce)="filter($event)"
+   flex
+ ></td-search-box>
+</div>
+
+<mat-divider></mat-divider>
 <table td-data-table>
     <thead>
       <tr td-data-table-column-row>
+        <th td-data-table-column [name]="'npp'">Retail Endpoint Url</th>
         <th
           td-data-table-column
           [name]="'retailEndpointName'"
@@ -34,11 +56,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr td-data-table-row *ngFor="let item of atomicData">
+      <tr td-data-table-row *ngFor="let item of atomicData; let npp = index">
+        <td td-data-table-cell>{{ npp+1 }}</td>
         <td td-data-table-cell>{{ item.retailEndpointName }}</td>
         <td td-data-table-cell>{{ item.retailEndpointHost }}</td>
         <td td-data-table-cell><a href="{{ item.retailEndpointUrl }}" target="_blank">{{ item.retailEndpointUrl }}</a></td>
-        <td td-data-table-cell><app-endpoint-version [endpoint]="item"></app-endpoint-version></td>
+        <td td-data-table-cell><app-endpoint-version [retailVersion]="item.extData.retailVersion"></app-endpoint-version></td>
       </tr>
     </tbody>
    </table>

@@ -87,10 +87,11 @@ namespace RetailClientTests
         private void InitSingeltonServices(IServiceProvider serviceProvider)
         {
             var jobService = serviceProvider.GetService<IJobService>();
-
+#if RELEASE
             jobService.AddTask<WorkerRetailDocSelesReport>(TimeSpan.FromMinutes(20));
             jobService.AddTask<WorkerRetailVersion>(TimeSpan.FromMinutes(25));
             jobService.AddTask<WorkerPing>(TimeSpan.FromMinutes(15));
+#endif
         }
     }
 }
