@@ -17,7 +17,7 @@ export class EndpointsGridComponent implements OnInit {
   public atomicData : RetailEndpoint[] = [];
 
   sortBy: string = 'retailEndpointName';
-  sortOrder: TdDataTableSortingOrder = TdDataTableSortingOrder.Descending;
+  sortOrder: TdDataTableSortingOrder = TdDataTableSortingOrder.Ascending;
 
   constructor(
     private endpointsService : EndpointsService
@@ -84,7 +84,7 @@ export class EndpointsGridComponent implements OnInit {
 
       let leftValue = a[this.sortBy];
       let rightValue = b[this.sortBy];
-      
+
       if(this.sortBy == "retailEndpointVersion"){
         
         if(a.extData.retailVersion)
