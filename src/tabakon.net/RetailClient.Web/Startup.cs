@@ -92,7 +92,7 @@ namespace RetailClientTests
 #if RELEASE
             jobService.AddTask<WorkerRetailDocSelesReport>(TimeSpan.FromMinutes(20));
             jobService.AddTask<WorkerRetailVersion>(TimeSpan.FromMinutes(25));
-            jobService.AddTask<WorkerRetailExtConfiguration>(TimeSpan.FromMinutes(25));            
+            jobService.AddTask<WorkerRetailExtConfiguration>(TimeSpan.FromMinutes(25));
             jobService.AddTask<WorkerPing>(TimeSpan.FromMinutes(15));
 #endif
         }

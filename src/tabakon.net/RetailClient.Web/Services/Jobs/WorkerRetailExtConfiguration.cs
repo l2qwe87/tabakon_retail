@@ -12,7 +12,7 @@ namespace RetailClient.Web.Services.Jobs
     {
         public WorkerRetailExtConfiguration(IServiceProvider serviceProvider) : base(serviceProvider) { }
 
-        public override async Task RunAsync(IServiceProvider serviceProvider)
+        public override async Task RunAsync(IServiceProvider serviceProvider, Func<RetailEndpoint, bool> predicat = null)
         {
             var alwaysSaveResult = false;
             var result = await DoWorkAsync<RetailExtConfiguration>(alwaysSaveResult, async (endpoint) =>
@@ -31,7 +31,7 @@ namespace RetailClient.Web.Services.Jobs
                         ? new[] { e.Message }
                         : new string[0];
                 }
-            });
+            }, predicat);
         }
     }
 }

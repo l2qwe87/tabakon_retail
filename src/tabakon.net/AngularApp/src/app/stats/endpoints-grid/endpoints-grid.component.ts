@@ -3,7 +3,7 @@ import { ITdDataTableSortChangeEvent, TdDataTableSortingOrder } from '@covalent/
 import { combineLatest } from 'rxjs';
 
 import { combineAll, switchMap } from 'rxjs/operators';
-import { RetailEndpoint } from 'src/app/models/RetailEndpoint';
+import { RetailEndpoint, RetailEndpointExtData, RetailExtConfiguration } from 'src/app/models/RetailEndpoint';
 import { EndpointsService } from 'src/app/services/endpoints.service';
 
 @Component({
@@ -25,23 +25,35 @@ export class EndpointsGridComponent implements OnInit {
 
 
   ngOnInit(): void {
-    combineLatest(this.endpointsService.getEndpoints(), this.endpointsService.getEndpointsVersion())
+    //combineLatest(this.endpointsService.getEndpoints(), this.endpointsService.getEndpointsVersion())
+    this.endpointsService.getEndpoints()
       .subscribe(v =>{
-        this._internalData = v[0];
-        let endpointsVersions = v[1];
-        this._internalData.forEach(e =>{
-          e.extData = {};
+        this._internalData = v;
+        //this._internalData = v[0];
+        // let endpointsVersions = v[1];
+        // this._internalData.forEach(e =>{
+        //   e.extData = {};
 
-          let filterResult = endpointsVersions.filter(endpointsVersion => endpointsVersion.retailEndpointIdentity == e.retailEndpointIdentity)
-          if(filterResult.length > 0){
-            e.extData.retailVersion = filterResult[0];
-          }else{
-            e.extData.retailVersion = null;
-          }
-        })
+        //   let filterResult = endpointsVersions.filter(endpointsVersion => endpointsVersion.retailEndpointIdentity == e.retailEndpointIdentity)
+        //   if(filterResult.length > 0){
+        //     e.extData.retailVersion = filterResult[0];
+        //   }else{
+        //     e.extData.retailVersion = null;
+        //   }
+        // })
 
         this.filterData();
       });
+  }
+
+  getColorForExtConfiguration(retailExtConfiguration : RetailExtConfiguration){
+    if(retailExtConfiguration.jsonData == 'Release')
+      return 'warn'//'primary'
+    if(retailExtConfiguration.jsonData == 'Beta')
+      return 'accent'
+    if(retailExtConfiguration.jsonData == 'Release')
+      return 'warn'
+
   }
 
   sort(sortEvent: ITdDataTableSortChangeEvent): void {

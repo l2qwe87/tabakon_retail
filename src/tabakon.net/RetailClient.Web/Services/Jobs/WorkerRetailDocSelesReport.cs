@@ -13,7 +13,7 @@ namespace RetailClient.Web.Services.Jobs
     {
         public WorkerRetailDocSelesReport(IServiceProvider serviceProvider) : base(serviceProvider) { }
 
-        public override async Task RunAsync(IServiceProvider serviceProvider)
+        public override async Task RunAsync(IServiceProvider serviceProvider, Func<RetailEndpoint, bool> predicat = null)
         {
             var alwaysSaveResult = false;
             var result = await DoWorkAsync<RetailDocSelesReport>(alwaysSaveResult, async (endpoint) =>
@@ -50,7 +50,7 @@ namespace RetailClient.Web.Services.Jobs
                 logger.LogInformation($"WorkerRetailDocSelesReport : {endpoint.RetailEndpointName} : {arr.Count()}");
 
                 return arr;
-            });
+            }, predicat);
         }
     }
 }

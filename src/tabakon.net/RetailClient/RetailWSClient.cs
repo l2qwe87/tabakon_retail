@@ -76,7 +76,7 @@ namespace RetailClient
                 OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestProp;
 
                 var response = ws.GetAsync(method, @params).Result;
-                return await Task.FromResult(response.Body.@return);
+                return (await Task.FromResult(response.Body.@return)).Replace("\"","");
             }
         }
         

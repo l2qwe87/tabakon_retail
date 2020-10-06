@@ -1,6 +1,7 @@
 
 export class RetailEndpointExtData{
     public retailVersion? : RetailVersion
+    public retailExtConfiguration? : RetailExtConfiguration
 }
 
 export class RetailEndpoint{
@@ -21,5 +22,9 @@ class AbstractCacheEntity{
 }
 
 export class RetailVersion extends AbstractCacheEntity{
+
+}
+
+export class RetailExtConfiguration extends AbstractCacheEntity{
 
 }
