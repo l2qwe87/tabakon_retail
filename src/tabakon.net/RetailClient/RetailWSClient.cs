@@ -62,6 +62,25 @@ namespace RetailClient
             }
         }
 
+        public async Task<string> GetExtConfigurationAsync()
+        {
+            await this.PingAsync();
+
+            var method = "GetExtConfiguration";
+            var @params = "{}";
+            var ws = GetWSClient(url);
+            using (OperationContextScope ocs = new OperationContextScope(ws.InnerChannel))
+            {
+                var requestProp = new HttpRequestMessageProperty();
+                requestProp.Headers["Authorization"] = "Basic 0JDQtNC80LjQvToxNTk3NTM=";
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestProp;
+
+                var response = ws.GetAsync(method, @params).Result;
+                return (await Task.FromResult(response.Body.@return)).Replace("\"","");
+            }
+        }
+        
+
         public struct GetRetailDocSelesReportParams
         {
             private readonly DateTime _date;

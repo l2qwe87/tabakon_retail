@@ -35,5 +35,14 @@ namespace RetailClient.Web.Services
 
             return versions;
         }
+
+        public async Task<IEnumerable<RetailExtConfiguration>> GetRetailExtConfigurationAsync()
+        {
+            var extConfiguration = await ctx.RetailExtConfiguration
+                .Where(e => e.RetailEndpoint.MarkAsDeleted == false && e.RetailEndpoint.RetailEndpointHost.Length > 0)
+                .Select(r => r).ToListAsync();
+
+            return extConfiguration;
+        }
     }
 }

@@ -38,6 +38,8 @@ namespace RetailClientTests
             services.AddSingleton<IJobService, JobService>();
             services.AddScoped<WorkerRetailVersion, WorkerRetailVersion>();
             services.AddScoped<WorkerPing, WorkerPing>();
+            services.AddScoped<WorkerRetailExtConfiguration, WorkerRetailExtConfiguration>();
+            
             services.AddScoped<WorkerRetailDocSelesReport, WorkerRetailDocSelesReport>();
 
             services.AddScoped<IRetailEndpointsRepo, RetailEndpointsRepo>(); 
@@ -90,6 +92,7 @@ namespace RetailClientTests
 #if RELEASE
             jobService.AddTask<WorkerRetailDocSelesReport>(TimeSpan.FromMinutes(20));
             jobService.AddTask<WorkerRetailVersion>(TimeSpan.FromMinutes(25));
+            jobService.AddTask<WorkerRetailExtConfiguration>(TimeSpan.FromMinutes(25));
             jobService.AddTask<WorkerPing>(TimeSpan.FromMinutes(15));
 #endif
         }

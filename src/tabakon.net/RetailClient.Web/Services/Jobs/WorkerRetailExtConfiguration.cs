@@ -8,23 +8,23 @@ using Microsoft.Extensions.Logging;
 
 namespace RetailClient.Web.Services.Jobs
 {
-    public class WorkerRetailVersion : WorkerT
+    public class WorkerRetailExtConfiguration : WorkerT
     {
-        public WorkerRetailVersion(IServiceProvider serviceProvider) : base(serviceProvider) { }
+        public WorkerRetailExtConfiguration(IServiceProvider serviceProvider) : base(serviceProvider) { }
 
         public override async Task RunAsync(IServiceProvider serviceProvider, Func<RetailEndpoint, bool> predicat = null)
         {
             var alwaysSaveResult = false;
-            var result = await DoWorkAsync<RetailVersion>(alwaysSaveResult, async (endpoint) =>
+            var result = await DoWorkAsync<RetailExtConfiguration>(alwaysSaveResult, async (endpoint) =>
             {
                 var ws = new RetailWSClient(endpoint.RetailEndpointHost, endpoint.RetailEndpointUrl);
                 try
                 {
-                    return new[] { (await ws.GetVersionAsync()) };
+                    return new[] { (await ws.GetExtConfigurationAsync()) };
                 }
                 catch (Exception e)
                 {
-                    var _logger = serviceProvider.GetService<ILogger<WorkerRetailVersion>>();
+                    var _logger = serviceProvider.GetService<ILogger<RetailExtConfiguration>>();
                     _logger.LogError($"{endpoint.RetailEndpointHost} \n{e.Message}", e);
 
                     return (alwaysSaveResult)

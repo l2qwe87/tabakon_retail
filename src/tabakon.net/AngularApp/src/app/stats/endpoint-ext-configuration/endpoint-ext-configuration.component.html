@@ -1,0 +1,11 @@
+
+<div *ngIf="retailExtConfiguration" 
+    class="alert" 
+    style="margin-bottom: 0;"
+    [ngClass]="{ 'alert-success' : isRelease == true , 'alert-warning' : isBeta == true, 'alert-danger' : isAlpha == true }" 
+    role="alert"
+>
+    <span> {{retailExtConfiguration.jsonData}}</span>
+</div>
+
+

@@ -19,15 +19,18 @@ namespace RetailClient.Web.Services.Jobs
             this.serviceProvider = serviceProvider;
         }
 
-        public abstract Task RunAsync(IServiceProvider serviceProvider);
+        public abstract Task RunAsync(IServiceProvider serviceProvider, Func<RetailEndpoint, bool> predicat = null);
 
-        protected async Task<IEnumerable<T>> DoWorkAsync<T>(bool alwaysSaveResult, Func<RetailEndpoint, Task<IEnumerable<string>>> func) where T : AbstractCacheEntity
+        protected async Task<IEnumerable<T>> DoWorkAsync<T>(bool alwaysSaveResult, Func<RetailEndpoint, Task<IEnumerable<string>>> func, Func<RetailEndpoint, bool> predicat) where T : AbstractCacheEntity
         {
             IEnumerable<RetailEndpoint> endpoints = null;
             using (var scope = serviceProvider.CreateScope())
             {
                 var retailEndpointsRepo = scope.ServiceProvider.GetRequiredService<IRetailEndpointsRepo>();
                 endpoints = await retailEndpointsRepo.GetRetailEndpointsAsync();
+            }
+            if (predicat != null) {
+                endpoints = endpoints.Where(e => predicat(e));
             }
 
             var tasks = endpoints.Select(async endpoint =>
