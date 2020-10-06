@@ -3,12 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Tabakon.DALMigration.Migrations
 {
-    public partial class ExtConfiguration : Migration
+    public partial class RetailExtConfiguration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "ExtConfiguration",
+                name: "RetailExtConfiguration",
                 columns: table => new
                 {
                     RetailEndpointIdentity = table.Column<string>(nullable: false),
@@ -17,9 +17,9 @@ namespace Tabakon.DALMigration.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ExtConfiguration", x => x.RetailEndpointIdentity);
+                    table.PrimaryKey("PK_RetailExtConfiguration", x => x.RetailEndpointIdentity);
                     table.ForeignKey(
-                        name: "FK_ExtConfiguration_RetailEndpoint_RetailEndpointIdentity",
+                        name: "FK_RetailExtConfiguration_RetailEndpoint_RetailEndpointIdentity",
                         column: x => x.RetailEndpointIdentity,
                         principalTable: "RetailEndpoint",
                         principalColumn: "RetailEndpointIdentity",
@@ -30,7 +30,7 @@ namespace Tabakon.DALMigration.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "ExtConfiguration");
+                name: "RetailExtConfiguration");
         }
     }
 }

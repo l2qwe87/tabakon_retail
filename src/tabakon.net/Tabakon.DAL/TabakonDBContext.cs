@@ -16,7 +16,7 @@ namespace Tabakon.DAL
 
         public virtual DbSet<RetailEndpoint> RetailEndpoint {get;set;}
         public virtual DbSet<RetailVersion> RetailVersion {get;set;}
-        public virtual DbSet<ExtConfiguration> ExtConfiguration { get; set; }
+        public virtual DbSet<RetailExtConfiguration> RetailExtConfiguration { get; set; }
         public virtual DbSet<RetailPing> RetailPing {get;set;}
         public virtual DbSet<RetailDocSelesReport> RetailDocSelesReport { get; set; }
         
@@ -41,7 +41,7 @@ namespace Tabakon.DAL
                 m.HasOne(a => a.RetailEndpoint).WithMany().HasForeignKey(f => f.RetailEndpointIdentity);
             });
 
-            modelBuilder.Entity<ExtConfiguration>(m => {
+            modelBuilder.Entity<RetailExtConfiguration>(m => {
                 m.HasKey(a => a.RetailEndpointIdentity);
                 m.HasOne(a => a.RetailEndpoint).WithMany().HasForeignKey(f => f.RetailEndpointIdentity);
             });

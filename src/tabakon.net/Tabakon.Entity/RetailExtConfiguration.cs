@@ -1,6 +1,6 @@
 namespace Tabakon.Entity
 {
-    public class ExtConfiguration : AbstractCacheEntity
+    public class RetailExtConfiguration : AbstractCacheEntity
     {
         
     }

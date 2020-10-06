@@ -19,22 +19,6 @@ namespace Tabakon.DALMigration.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Tabakon.Entity.ExtConfiguration", b =>
-                {
-                    b.Property<string>("RetailEndpointIdentity")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("JsonData")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("LastCheck")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("RetailEndpointIdentity");
-
-                    b.ToTable("ExtConfiguration");
-                });
-
             modelBuilder.Entity("Tabakon.Entity.RetailDocSelesReport", b =>
                 {
                     b.Property<string>("RetailEndpointIdentity")
@@ -88,6 +72,22 @@ namespace Tabakon.DALMigration.Migrations
                     b.ToTable("RetailEndpoint");
                 });
 
+            modelBuilder.Entity("Tabakon.Entity.RetailExtConfiguration", b =>
+                {
+                    b.Property<string>("RetailEndpointIdentity")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("JsonData")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("LastCheck")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("RetailEndpointIdentity");
+
+                    b.ToTable("RetailExtConfiguration");
+                });
+
             modelBuilder.Entity("Tabakon.Entity.RetailPing", b =>
                 {
                     b.Property<string>("RetailEndpointIdentity")
@@ -120,7 +120,7 @@ namespace Tabakon.DALMigration.Migrations
                     b.ToTable("RetailVersion");
                 });
 
-            modelBuilder.Entity("Tabakon.Entity.ExtConfiguration", b =>
+            modelBuilder.Entity("Tabakon.Entity.RetailDocSelesReport", b =>
                 {
                     b.HasOne("Tabakon.Entity.RetailEndpoint", "RetailEndpoint")
                         .WithMany()
@@ -129,7 +129,7 @@ namespace Tabakon.DALMigration.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Tabakon.Entity.RetailDocSelesReport", b =>
+            modelBuilder.Entity("Tabakon.Entity.RetailExtConfiguration", b =>
                 {
                     b.HasOne("Tabakon.Entity.RetailEndpoint", "RetailEndpoint")
                         .WithMany()
