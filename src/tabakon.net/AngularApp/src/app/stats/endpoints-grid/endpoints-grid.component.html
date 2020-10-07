@@ -57,18 +57,18 @@
       </tr>
     </thead>
     <tbody>
-      <tr td-data-table-row *ngFor="let item of atomicData; let npp = index">
+      <tr td-data-table-row *ngFor="let retailEndpoint of atomicData; let npp = index">
         <td td-data-table-cell>{{ npp+1 }}</td>
-        <td td-data-table-cell>{{ item.retailEndpointName }}</td>
-        <!-- <td td-data-table-cell>{{ item.retailEndpointHost }}</td> -->
-        <td td-data-table-cell><a href="{{ item.retailEndpointUrl }}" target="_blank">{{ item.retailEndpointUrl }}</a></td>
+        <td td-data-table-cell><a [routerLink]="['/endpoints/', retailEndpoint.retailEndpointIdentity]">{{ retailEndpoint.retailEndpointName }}</a></td>
+        <!-- <td td-data-table-cell>{{ retailEndpoint.retailEndpointHost }}</td> -->
+        <td td-data-table-cell><a href="{{ retailEndpoint.retailEndpointUrl }}" target="_blank">{{ retailEndpoint.retailEndpointUrl }}</a></td>
         <td td-data-table-cell>
-          <div *ngIf="item.extData.retailExtConfiguration && item.extData.retailExtConfiguration.jsonData">
-            <app-endpoint-ext-configuration [retailExtConfiguration]="item.extData.retailExtConfiguration" ></app-endpoint-ext-configuration>
+          <div *ngIf="retailEndpoint.extData.retailExtConfiguration && retailEndpoint.extData.retailExtConfiguration.jsonData">
+            <app-endpoint-ext-configuration [retailExtConfiguration]="retailEndpoint.extData.retailExtConfiguration" ></app-endpoint-ext-configuration>
           </div>
         </td>
         <td td-data-table-cell>
-            <app-endpoint-version [retailVersion]="item.extData.retailVersion"></app-endpoint-version>
+            <app-endpoint-version [retailVersion]="retailEndpoint.extData.retailVersion"></app-endpoint-version>
         </td>
       </tr>
     </tbody>

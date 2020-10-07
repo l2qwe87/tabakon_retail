@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using RetailClient;
 using RetailClient.Web.Contracts;
 using RetailClient.Web.Services.Jobs;
 using Tabakon.DAL;
@@ -26,7 +27,7 @@ namespace RetailClientTests.Controllers
             this.endpoint = endpoint;
         }
 
-        public string RetailEndpointIdentity => endpoint.RetailEndpointHost;
+        public string RetailEndpointIdentity => endpoint.RetailEndpointIdentity;
         public string RetailEndpointName => endpoint.RetailEndpointName;
         public string RetailEndpointHost => endpoint.RetailEndpointHost;
         public string RetailEndpointUrl => endpoint.RetailEndpointUrl;
@@ -80,6 +81,24 @@ namespace RetailClientTests.Controllers
         [HttpGet("RetailExtConfiguration/{retailEndpointIdentity}")]
         public async Task<RetailExtConfiguration> GetRetailExtConfiguration(string retailEndpointIdentity)
         {
+            var workerRetailVersion = serviceProvider.GetService<WorkerRetailExtConfiguration>();
+            await workerRetailVersion.RunAsync(serviceProvider, e => e.RetailEndpointIdentity == retailEndpointIdentity);
+
+            var data = await retailEndpointsRepo.GetRetailExtConfigurationAsync();
+            data = data.Where(v => v.RetailEndpointIdentity == retailEndpointIdentity);
+            return data.FirstOrDefault();
+        }
+
+        [HttpPost("RetailExtConfiguration/{retailEndpointIdentity}")]
+        public async Task<RetailExtConfiguration> SetRetailExtConfiguration(string retailEndpointIdentity, [FromBody] string extConfiguration)
+        {
+            var retailEndpointsRepo = serviceProvider.GetRequiredService<IRetailEndpointsRepo>();
+            var endpoint = (await retailEndpointsRepo.GetRetailEndpointsAsync()).FirstOrDefault(e => e.RetailEndpointIdentity == retailEndpointIdentity);
+
+            var ws = new RetailWSClient(endpoint.RetailEndpointHost, endpoint.RetailEndpointUrl);
+            await ws.SetExtConfigurationAsync(extConfiguration);
+
+
             var workerRetailVersion = serviceProvider.GetService<WorkerRetailExtConfiguration>();
             await workerRetailVersion.RunAsync(serviceProvider, e => e.RetailEndpointIdentity == retailEndpointIdentity);
 

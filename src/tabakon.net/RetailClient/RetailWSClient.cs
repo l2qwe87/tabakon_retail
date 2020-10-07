@@ -62,6 +62,26 @@ namespace RetailClient
             }
         }
 
+        public async Task<string> SetExtConfigurationAsync(string extConfiguration)
+        { 
+            await this.PingAsync();
+
+            var method = "SetExtConfiguration";
+
+            var @params =  new { Configuration = extConfiguration} ;
+            var @paramStr = JsonConvert.SerializeObject(@params);
+            var ws = GetWSClient(url);
+            using (OperationContextScope ocs = new OperationContextScope(ws.InnerChannel))
+            {
+                var requestProp = new HttpRequestMessageProperty();
+                requestProp.Headers["Authorization"] = "Basic 0JDQtNC80LjQvToxNTk3NTM=";
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestProp;
+
+                var response = ws.PostAsync(method, @paramStr).Result;
+                return (await Task.FromResult(response.Body.@return)).Replace("\"","");
+            }
+        }
+
         public async Task<string> GetExtConfigurationAsync()
         {
             await this.PingAsync();

@@ -1,3 +1,25 @@
-<p>endpoint-detail works!</p>
 
-{{retailEndpointIdentity}}
+<td-layout-card-over  *ngIf="retailEndpoint" [cardTitle]="retailEndpoint.retailEndpointName" [cardSubtitle]="retailEndpoint.retailEndpointIdentity">
+    
+    <p class="pt-4 d-flex flex-row">
+        <label class="label">IP : </label>
+        <span>{{retailEndpoint.retailEndpointHost}}</span>
+    </p>
+    <p class="d-flex flex-row">
+        <label class="label">URL : </label>
+        <a href="{{ retailEndpoint.retailEndpointUrl }}" target="_blank">{{ retailEndpoint.retailEndpointUrl }}</a>
+    </p>
+
+    <mat-divider></mat-divider>
+    <p class="pt-2">
+        <label class="label">Расширение : </label>
+        <app-endpoint-ext-configuration 
+            *ngIf="retailEndpoint.extData.retailExtConfiguration && retailEndpoint.extData.retailExtConfiguration.jsonData"
+            [retailExtConfiguration]="retailEndpoint.extData.retailExtConfiguration" 
+        >
+        </app-endpoint-ext-configuration>
+
+        <app-endpoint-version [retailVersion]="retailEndpoint.extData.retailVersion"></app-endpoint-version>
+    </p>
+    
+</td-layout-card-over>
