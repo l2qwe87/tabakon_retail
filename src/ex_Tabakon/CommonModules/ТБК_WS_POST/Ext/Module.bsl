@@ -61,6 +61,12 @@
 КонецФункции
 
 Функция Run_apply_cfe(вхПараметры) ЭКСПОРТ
+	
+	фв = Новый файл("c:\app\database\Tabakon.version.loaded.txt");
+	Если фв.Существует() Тогда
+		УдалитьФайлы("c:\app\database\Tabakon.version.loaded.txt");
+	КонецЕсли;
+	
 	имяФайла = "C:\app\database\apply_cfe.cmd"; 
 	
 	файл_cmd = Новый Файл(имяФайла);
