@@ -24,6 +24,8 @@ import { EndpointsService } from './services/endpoints.service';
 import { EndpointVersionComponent } from './stats/endpoint-version/endpoint-version.component';
 import { EndpointDetailComponent } from './stats/endpoint-detail/endpoint-detail.component';
 import { EndpointExtConfigurationComponent } from './stats/endpoint-ext-configuration/endpoint-ext-configuration.component';
+import { CovalentLoadingModule } from '@covalent/core/loading';
+import { CovalentDialogsModule } from '@covalent/core/dialogs';
 
 
 
@@ -50,6 +52,8 @@ import { EndpointExtConfigurationComponent } from './stats/endpoint-ext-configur
     CovalentBaseEchartsModule,
     CovalentDataTableModule,
     CovalentSearchModule,
+    CovalentLoadingModule,
+    CovalentDialogsModule,
 
     BrowserAnimationsModule,
     CommonComponentsModule,

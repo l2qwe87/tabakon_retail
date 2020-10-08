@@ -67,19 +67,27 @@ namespace RetailClient
             await this.PingAsync();
 
             var method = "SetExtConfiguration";
-
             var @params =  new { Configuration = extConfiguration} ;
             var @paramStr = JsonConvert.SerializeObject(@params);
-            var ws = GetWSClient(url);
-            using (OperationContextScope ocs = new OperationContextScope(ws.InnerChannel))
-            {
-                var requestProp = new HttpRequestMessageProperty();
-                requestProp.Headers["Authorization"] = "Basic 0JDQtNC80LjQvToxNTk3NTM=";
-                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestProp;
+            return Post(method, @paramStr).Replace("\"", "");
+        }
 
-                var response = ws.PostAsync(method, @paramStr).Result;
-                return (await Task.FromResult(response.Body.@return)).Replace("\"","");
-            }
+        public async Task<string> Run_exRetailOle()
+        {
+            await this.PingAsync();
+
+            var method = "Run_exRetailOle";
+            var @paramStr = "{}";
+            return Post(method, @paramStr);
+        }
+
+        public async Task<string> Run_apply_cfe()
+        {
+            await this.PingAsync();
+
+            var method = "Run_apply_cfe";
+            var @paramStr = "{}";
+            return Post(method, @paramStr);
         }
 
         public async Task<string> GetExtConfigurationAsync()
@@ -88,16 +96,7 @@ namespace RetailClient
 
             var method = "GetExtConfiguration";
             var @params = "{}";
-            var ws = GetWSClient(url);
-            using (OperationContextScope ocs = new OperationContextScope(ws.InnerChannel))
-            {
-                var requestProp = new HttpRequestMessageProperty();
-                requestProp.Headers["Authorization"] = "Basic 0JDQtNC80LjQvToxNTk3NTM=";
-                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestProp;
-
-                var response = ws.GetAsync(method, @params).Result;
-                return (await Task.FromResult(response.Body.@return)).Replace("\"","");
-            }
+            return Get(method, @params).Replace("\"", "");
         }
         
 
@@ -117,20 +116,35 @@ namespace RetailClient
             var method = "DailySelesReport";
             var @params = JsonConvert.SerializeObject(pr);
             await this.PingAsync();
+            return Get(method, @params);
+        }
+
+
+        private string Post(string method, string @paramStr)
+        {
             var ws = GetWSClient(url);
             using (OperationContextScope ocs = new OperationContextScope(ws.InnerChannel))
             {
                 var requestProp = new HttpRequestMessageProperty();
                 requestProp.Headers["Authorization"] = "Basic 0JDQtNC80LjQvToxNTk3NTM=";
                 OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestProp;
-                //var version = await ws.GetVersionAsync();
-
-                var response = ws.GetAsync(method, @params).Result;
-                return await Task.FromResult(response.Body.@return);
-
+                var response = ws.PostAsync(method, @paramStr).Result;
+                return response.Body.@return;
             }
         }
 
+        private string Get(string method, string @paramStr)
+        {
+            var ws = GetWSClient(url);
+            using (OperationContextScope ocs = new OperationContextScope(ws.InnerChannel))
+            {
+                var requestProp = new HttpRequestMessageProperty();
+                requestProp.Headers["Authorization"] = "Basic 0JDQtNC80LjQvToxNTk3NTM=";
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestProp;
+                var response = ws.GetAsync(method, @paramStr).Result;
+                return response.Body.@return;
+            }
+        }
 
         private ws_tbkPortTypeClient GetWSClient(string url) {
             ws_tbkPortTypeClient ws = new ws_tbkPortTypeClient(EndpointConfiguration.ws_tbkSoap12, url + "/ws/ws_tbk.1cws");

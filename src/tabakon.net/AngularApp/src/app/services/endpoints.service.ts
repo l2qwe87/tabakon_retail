@@ -38,6 +38,71 @@ export class EndpointsService extends mixinHttp(class {},{ baseUrl: ""}){
      );
   }
 
+  @TdGET({
+    path: '/api/RetailEndpoints/RetailVersion/:retailEndpointIdentity',
+  })
+  getRetailVersion(
+    @TdParam('retailEndpointIdentity') retailEndpointIdentity : string, 
+    @TdResponse() response?: Observable<HttpResponse<any>>
+  ): Observable<RetailVersion> {
+    return response.pipe(
+      map(r => r as unknown as RetailVersion)
+    );
+  }
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  @TdGET({
+    path: '/api/RetailEndpoints/RetailExtConfiguration/:retailEndpointIdentity',
+  })
+  getRetailExtConfiguration(
+    @TdParam('retailEndpointIdentity') retailEndpointIdentity : string, 
+    @TdResponse() response?: Observable<HttpResponse<any>>
+  ): Observable<RetailExtConfiguration> {
+    return response.pipe(
+      map(r => r as unknown as RetailExtConfiguration)
+    );
+  }
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  @TdGET({
+    path: '/api/RetailEndpoints/RetailExtConfiguration/:retailEndpointIdentity/:extConfiguration',
+  })
+  setRetailExtConfiguration(
+    @TdParam('retailEndpointIdentity') retailEndpointIdentity : string, 
+    @TdParam('extConfiguration') extConfiguration : string, 
+    @TdResponse() response?: Observable<HttpResponse<any>>
+  ): Observable<RetailExtConfiguration> {
+    return response.pipe(
+      map(r => r as unknown as RetailExtConfiguration)
+    );
+  }
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  @TdGET({
+    path: '/api/RetailEndpoints/Run_apply_cfe/:retailEndpointIdentity',
+  })
+  run_apply_cfe(
+    @TdParam('retailEndpointIdentity') retailEndpointIdentity : string, 
+    @TdResponse() response?: Observable<HttpResponse<any>>
+  ): Observable<any> {
+    return response.pipe(
+      map(r => r as unknown)
+    );
+  }
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  @TdGET({
+    path: '/api/RetailEndpoints/Run_exRetailOle/:retailEndpointIdentity',
+  })
+  run_exRetailOle(
+    @TdParam('retailEndpointIdentity') retailEndpointIdentity : string, 
+    @TdResponse() response?: Observable<HttpResponse<any>>
+  ): Observable<any> {
+    return response.pipe(
+      map(r => r as unknown)
+    );
+  }
+
 
   // getEndpointsVersion(): Observable<RetailVersion[]> {
   //   return this._retailVersion.asObservable();

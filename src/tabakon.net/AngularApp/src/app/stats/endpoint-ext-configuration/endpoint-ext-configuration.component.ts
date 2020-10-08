@@ -16,7 +16,6 @@ export class EndpointExtConfigurationComponent implements OnInit {
   }
 
   get isRelease() : boolean {
-    console.log("this.retailExtConfiguration.jsonData", this.retailExtConfiguration.jsonData)
     return this.retailExtConfiguration.jsonData == "Release"
   }
   get isBeta() : boolean {
