@@ -2,17 +2,17 @@
 <td-layout-card-over  *ngIf="retailEndpoint" [cardTitle]="retailEndpoint.retailEndpointName" [cardSubtitle]="retailEndpoint.retailEndpointIdentity">
     <div *tdLoading="'endpointDetail'; color:'primary'"> 
         <p class="pt-4 d-flex flex-row">
-            <label class="detail-label">IP : </label>
+            <label class="detail-label">IP</label>
             <a mat-button color="primary">{{retailEndpoint.retailEndpointHost}}</a>
         </p>
         <p class="d-flex flex-row">
-            <label class="detail-label">URL : </label>
+            <label class="detail-label">URL</label>
             <a href="{{ retailEndpoint.retailEndpointUrl }}" mat-button color="primary" target="_blank"><mat-icon>aspect_ratio</mat-icon> {{ retailEndpoint.retailEndpointUrl }}</a>
         </p>
 
         
         <div class="pt-2 d-flex flex-row">
-            <div class="detail-label">Расширение : </div>
+            <div class="detail-label">Расширение</div>
             <div class="d-flex flex-row">
                 <app-endpoint-version [retailVersion]="retailEndpoint.extData.retailVersion"></app-endpoint-version>
                 <app-endpoint-ext-configuration 
@@ -20,7 +20,9 @@
                     *ngIf="retailEndpoint.extData.retailExtConfiguration && retailEndpoint.extData.retailExtConfiguration.jsonData"
                     [retailExtConfiguration]="retailEndpoint.extData.retailExtConfiguration" >
                 </app-endpoint-ext-configuration>
-                <button mat-raised-button color="warn" class="ml-2" (click)="changeExtConfiguration()">Изменить конфигурацию расширения</button>
+                <div>
+                    <button mat-raised-button color="warn" class="ml-2" (click)="changeExtConfiguration()">Изменить конфигурацию расширения</button>
+                </div>
             </div>
         </div>
         <mat-divider class="mt-4"></mat-divider>
