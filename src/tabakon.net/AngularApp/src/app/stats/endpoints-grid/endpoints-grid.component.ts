@@ -65,9 +65,20 @@ export class EndpointsGridComponent implements OnInit {
     this.filterData();
   }
 
+  static FILTER_TERM : string = '';
   private _filterTerm : string = '';
+  set filterTerm(value : string) { 
+    //EndpointsGridComponent.FILTER_TERM = value; 
+    this._filterTerm = value;
+  } 
+  get filterTerm() : string { 
+    //return EndpointsGridComponent.FILTER_TERM
+    return this._filterTerm;
+  } 
+
+
   filter(filterTerm: string): void {
-    this._filterTerm = filterTerm;
+    this.filterTerm = filterTerm;
     this.filterData();
   }
 
@@ -75,9 +86,9 @@ export class EndpointsGridComponent implements OnInit {
   private filterData(): void {
     this.atomicData = Array.from(this._internalData); // Change the array reference to trigger OnPush
 
-    if(this._filterTerm){
+    if(this.filterTerm){
 
-      let searchData = this._filterTerm.toLowerCase();
+      let searchData = this.filterTerm.toLowerCase();
 
       this.atomicData = this.atomicData.filter(e => {
         let elJson = JSON.stringify(e).toLowerCase()
