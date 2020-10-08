@@ -68,12 +68,12 @@ export class EndpointsGridComponent implements OnInit {
   static FILTER_TERM : string = '';
   private _filterTerm : string = '';
   set filterTerm(value : string) { 
-    //EndpointsGridComponent.FILTER_TERM = value; 
-    this._filterTerm = value;
+    EndpointsGridComponent.FILTER_TERM = value; 
+    //this._filterTerm = value;
   } 
   get filterTerm() : string { 
-    //return EndpointsGridComponent.FILTER_TERM
-    return this._filterTerm;
+    return EndpointsGridComponent.FILTER_TERM
+    //return this._filterTerm;
   } 
 
 
