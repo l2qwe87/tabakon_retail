@@ -62,7 +62,6 @@
             <div *ngIf="retailEndpoint.extData.retailExtConfiguration && retailEndpoint.extData.retailExtConfiguration.jsonData">
               <app-endpoint-ext-configuration 
                 [retailExtConfiguration]="retailEndpoint.extData.retailExtConfiguration"
-                (click)="filter(retailEndpoint.extData.retailExtConfiguration.jsonData)"
               >
               </app-endpoint-ext-configuration>
             </div>
