@@ -22,7 +22,10 @@
 	док.УстановитьТекст(режимРаботыРасширения);
 	док.Записать("c:\app\database\Tabakon.Configuration.txt", "windows-1251");
 	
-	//"c:\app\database\Tabakon.version.loaded.txt"  
+	фв = Новый файл("c:\app\database\Tabakon.version.loaded.txt");
+	Если фв.Существует() Тогда
+		УдалитьФайлы("c:\app\database\Tabakon.version.loaded.txt");
+	КонецЕсли;
 КонецФункции
 
 
