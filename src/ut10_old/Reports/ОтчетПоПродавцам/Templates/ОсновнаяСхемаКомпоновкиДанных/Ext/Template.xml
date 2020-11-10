@@ -424,6 +424,56 @@
 	СуммыПоГруппам.Склад,
 	СуммыПоГруппам.Дата</query>
 	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных3</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаОклада</dataPath>
+			<field>СуммаОклада</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>дата</dataPath>
+			<field>дата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусПродавца</dataPath>
+			<field>СтатусПродавца</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус продавца</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ОкладыПоМагазинамСрезПоследних.Склад,
+	ВЫБОР
+		КОГДА ОкладыПоМагазинамСрезПоследних.ГлавныйПродавец
+			ТОГДА "Первый"
+		ИНАЧЕ "Второй"
+	КОНЕЦ КАК СтатусПродавца,
+	ОкладыПоМагазинамСрезПоследних.СуммаОклада,
+	&amp;дата
+ИЗ
+	РегистрСведений.ОкладыПоМагазинам.СрезПоследних(
+			&amp;дата,
+			Склад = &amp;Склад1
+				И ВЫБОР
+					КОГДА ГлавныйПродавец
+						ТОГДА "Первый"
+					ИНАЧЕ "Второй"
+				КОНЕЦ = &amp;СтатусПродавца) КАК ОкладыПоМагазинамСрезПоследних</query>
+	</dataSet>
 	<dataSetLink>
 		<sourceDataSet>НаборДанных1</sourceDataSet>
 		<destinationDataSet>НаборДанных2</destinationDataSet>
@@ -435,6 +485,30 @@
 		<destinationDataSet>НаборДанных2</destinationDataSet>
 		<sourceExpression>Склад</sourceExpression>
 		<destinationExpression>Склад2</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных1</sourceDataSet>
+		<destinationDataSet>НаборДанных3</destinationDataSet>
+		<sourceExpression>Дата</sourceExpression>
+		<destinationExpression>дата</destinationExpression>
+		<parameter>дата</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных1</sourceDataSet>
+		<destinationDataSet>НаборДанных3</destinationDataSet>
+		<sourceExpression>Склад</sourceExpression>
+		<destinationExpression>Склад</destinationExpression>
+		<parameter>Склад1</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных1</sourceDataSet>
+		<destinationDataSet>НаборДанных3</destinationDataSet>
+		<sourceExpression>СтатусПродавца</sourceExpression>
+		<destinationExpression>СтатусПродавца</destinationExpression>
+		<parameter>СтатусПродавца</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
 	</dataSetLink>
 	<calculatedField>
 		<dataPath>ИтогоПремия</dataPath>
@@ -497,6 +571,10 @@
 	<totalField>
 		<dataPath>СуммаПремииЭлектронка</dataPath>
 		<expression>Сумма(СуммаПремииЭлектронка)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаОклада</dataPath>
+		<expression>Сумма(СуммаОклада)</expression>
 	</totalField>
 	<parameter>
 		<name>ДатаКон</name>
@@ -587,6 +665,55 @@
 		</title>
 		<valueType>
 			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Номенклатура</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>дата</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СтатусПродавца</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Статус продавца</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>6</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Склад1</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Склад1</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Склады</v8:Type>
 		</valueType>
 		<value xsi:nil="true"/>
 		<useRestriction>true</useRestriction>
@@ -766,6 +893,9 @@
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
 							<dcsset:field>Часы</dcsset:field>
 						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СуммаОклада</dcsset:field>
+						</dcsset:item>
 					</dcsset:selection>
 				</dcsset:column>
 				<dcsset:column>
@@ -776,6 +906,9 @@
 						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
 							<dcsset:field>КоличествоСмен</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СуммаОклада</dcsset:field>
 						</dcsset:item>
 					</dcsset:selection>
 				</dcsset:column>
