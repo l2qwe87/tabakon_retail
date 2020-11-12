@@ -10,5 +10,6 @@ namespace RetailClient
 
         Task<string> GetRetailDocSelesReport(DateTime date);
 
+        Task<string> GetExtConfigurationAsync();
     }
 }

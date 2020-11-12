@@ -1,44 +1,77 @@
-<table td-data-table>
-    <thead>
-      <tr td-data-table-column-row>
-        <th
-          td-data-table-column
-          [name]="'retailEndpointName'"
-          [sortable]="true"
-          [active]="sortBy == 'retailEndpointName'"
-          (sortChange)="sort($event)"
-          [sortOrder]="sortOrder"
-        >
-            Retail Endpoint Name
-        </th>
-        <th
-          td-data-table-column
-          [name]="'retailEndpointHost'"
-          [sortable]="true"
-          [active]="sortBy == 'retailEndpointHost'"
-          (sortChange)="sort($event)"
-          [sortOrder]="sortOrder"
-        >
-            Retail Endpoint Host
-        </th>
-        <th td-data-table-column [name]="'retailEndpointUrl'">Retail Endpoint Url</th>
-        <th 
-            td-data-table-column 
-            [name]="'retailEndpointVersion'"
+<td-layout-card-over  cardTitle="Список торговых точек" cardWidth="90">
+  <div *tdLoading="'endpointGrid'; color:'primary'"> 
+
+      <mat-divider></mat-divider>
+
+      <td-search-box
+        #searchBox
+        [alwaysVisible]="true"
+        backIcon="arrow_back"
+        class="push-right-sm"
+        [placeholder]="(filterTerm ? filterTerm : 'Введите строку для поиска')"
+        (searchDebounce)="filter($event)"
+        flex
+      ></td-search-box>
+  
+
+    <mat-divider></mat-divider>
+    <table td-data-table>
+      <thead>
+        <tr td-data-table-column-row>
+          <th td-data-table-column [name]="'npp'">№ п/п</th>
+          <th
+            td-data-table-column
+            [name]="'retailEndpointName'"
             [sortable]="true"
-            [active]="sortBy == 'retailEndpointVersion'"
+            [active]="sortBy == 'retailEndpointName'"
             (sortChange)="sort($event)"
             [sortOrder]="sortOrder"
-        >
-            Retail Endpoint Version</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr td-data-table-row *ngFor="let item of atomicData">
-        <td td-data-table-cell>{{ item.retailEndpointName }}</td>
-        <td td-data-table-cell>{{ item.retailEndpointHost }}</td>
-        <td td-data-table-cell><a href="{{ item.retailEndpointUrl }}" target="_blank">{{ item.retailEndpointUrl }}</a></td>
-        <td td-data-table-cell><app-endpoint-version [endpoint]="item"></app-endpoint-version></td>
-      </tr>
-    </tbody>
-   </table>
+          >
+              Наименвоание склада в 1С
+          </th>
+          <!-- <th
+            td-data-table-column
+            [name]="'retailEndpointHost'"
+            [sortable]="true"
+            [active]="sortBy == 'retailEndpointHost'"
+            (sortChange)="sort($event)"
+            [sortOrder]="sortOrder"
+          >
+              Retail Endpoint Host
+          </th> -->
+          <th td-data-table-column [name]="'retailEndpointUrl'">WEB клиент</th>
+          <th></th>
+          <th 
+              td-data-table-column 
+              [name]="'retailEndpointVersion'"
+              [sortable]="true"
+              [active]="sortBy == 'retailEndpointVersion'"
+              (sortChange)="sort($event)"
+              [sortOrder]="sortOrder"
+          >
+              Версия расширения</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr td-data-table-row *ngFor="let retailEndpoint of atomicData; let npp = index">
+          <td td-data-table-cell>{{ npp+1 }}</td>
+          <td td-data-table-cell><a [routerLink]="['/endpoints/', retailEndpoint.retailEndpointIdentity]" mat-button color="primary"><mat-icon>drag_indicator</mat-icon> {{ retailEndpoint.retailEndpointName }}</a></td>
+          <!-- <td td-data-table-cell>{{ retailEndpoint.retailEndpointHost }}</td> -->
+          <td td-data-table-cell><a href="{{ retailEndpoint.retailEndpointUrl }}" mat-button color="primary" target="_blank"><mat-icon>aspect_ratio</mat-icon> {{ retailEndpoint.retailEndpointUrl }}</a></td>
+          <td td-data-table-cell>
+            <div *ngIf="retailEndpoint.extData.retailExtConfiguration && retailEndpoint.extData.retailExtConfiguration.jsonData">
+              <app-endpoint-ext-configuration 
+                [retailExtConfiguration]="retailEndpoint.extData.retailExtConfiguration"
+              >
+              </app-endpoint-ext-configuration>
+            </div>
+          </td>
+          <td td-data-table-cell>
+              <app-endpoint-version [retailVersion]="retailEndpoint.extData.retailVersion"></app-endpoint-version>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+  </div>
+</td-layout-card-over>

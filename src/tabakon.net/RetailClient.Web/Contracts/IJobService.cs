@@ -14,7 +14,7 @@ namespace RetailClient.Web.Contracts
 {
     public interface ITask : IDisposable
     {
-        Task RunAsync(IServiceProvider serviceProvider);
+        Task RunAsync(IServiceProvider serviceProvider, Func<RetailEndpoint, bool> predicat);
     }
 
     public interface IJobService

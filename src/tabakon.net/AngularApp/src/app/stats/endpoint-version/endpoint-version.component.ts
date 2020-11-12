@@ -12,41 +12,25 @@ import { EndpointsService } from 'src/app/services/endpoints.service';
 export class EndpointVersionComponent implements OnInit, OnDestroy {
 
 
-  private _subs : Subscription[] = [];
-  private _endpointIdentity : string;
-  public retailVersion : RetailVersion;
-
   @Input()
-  set endpoint(value : RetailEndpoint){
-    if(value.retailEndpointIdentity != this._endpointIdentity){
-      this._endpointIdentity = value.retailEndpointIdentity;
-      
-      let sub = this.endpointsService.getEndpointsVersion().pipe(
-        map(v => {
-          let filterResult = v.filter(e => e.retailEndpointIdentity == this._endpointIdentity)
-          if(filterResult.length > 0){
-            return filterResult[0];
-          }else{
-            return null;
-          }
-        }),
-        filter(v => !!v)
-      ).subscribe( v => this.retailVersion = v);
-
-      this._subs.push(sub);
-    }
-  }
+  public retailVersion : RetailVersion;
 
   get isExpired() : boolean {
     let date1 = new Date( this.retailVersion.lastCheck);
     let date2 = new Date();
     let diff = Math.abs(date1.getTime() - date2.getTime());
     let diffHours = Math.ceil(diff / (1000 * 3600 )); 
-    return diffHours > 2;    
+
+    let isBad = diffHours > 2;
+    if(isBad)
+      if(this.retailVersion.jsonData)
+        if(this.retailVersion.jsonData.search("_TIME_") == -1)
+          this.retailVersion.jsonData = " _TIME_ "+this.retailVersion.jsonData;
+
+    return isBad;
   }
 
   constructor(
-    private endpointsService : EndpointsService
   ) { 
 
   }
@@ -55,7 +39,6 @@ export class EndpointVersionComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this._subs.forEach(s => s.unsubscribe());
   }
 
 }

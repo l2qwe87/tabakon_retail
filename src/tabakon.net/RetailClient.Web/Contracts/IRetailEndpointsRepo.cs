@@ -11,5 +11,9 @@ namespace RetailClient.Web.Contracts
         Task<IEnumerable<RetailEndpoint>> GetRetailEndpointsAsync();
 
         Task<IEnumerable<RetailVersion>> GetRetailEndpointsVersionAsync();
+
+        Task<IEnumerable<RetailExtConfiguration>> GetRetailExtConfigurationAsync();
+
+        
     }
 }
