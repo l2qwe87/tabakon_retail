@@ -36,7 +36,7 @@ namespace RetailClient.Web.Services.Jobs
                         {
                             var task = scope.ServiceProvider.GetRequiredService<T>();
 
-                            await (task as ITask).RunAsync(scope.ServiceProvider);
+                            await (task as ITask).RunAsync(scope.ServiceProvider, null);
 
                         }
                         if (isRunning)

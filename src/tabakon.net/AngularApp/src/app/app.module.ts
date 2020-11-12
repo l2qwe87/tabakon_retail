@@ -8,6 +8,7 @@ import { CovalentMarkdownModule } from '@covalent/markdown';
 import { CovalentDynamicFormsModule } from '@covalent/dynamic-forms';
 import { CovalentBaseEchartsModule } from '@covalent/echarts/base';
 import { CovalentDataTableModule } from '@covalent/core/data-table';
+import { CovalentSearchModule } from '@covalent/core/search';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -21,6 +22,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { EndpointsGridComponent } from './stats/endpoints-grid/endpoints-grid.component';
 import { EndpointsService } from './services/endpoints.service';
 import { EndpointVersionComponent } from './stats/endpoint-version/endpoint-version.component';
+import { EndpointDetailComponent } from './stats/endpoint-detail/endpoint-detail.component';
+import { EndpointExtConfigurationComponent } from './stats/endpoint-ext-configuration/endpoint-ext-configuration.component';
+import { CovalentLoadingModule } from '@covalent/core/loading';
+import { CovalentDialogsModule } from '@covalent/core/dialogs';
 
 
 
@@ -29,7 +34,9 @@ import { EndpointVersionComponent } from './stats/endpoint-version/endpoint-vers
     AppComponent,
     HomeComponent,
     EndpointsGridComponent,
-    EndpointVersionComponent
+    EndpointVersionComponent,
+    EndpointDetailComponent,
+    EndpointExtConfigurationComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +51,10 @@ import { EndpointVersionComponent } from './stats/endpoint-version/endpoint-vers
     CovalentDynamicFormsModule,
     CovalentBaseEchartsModule,
     CovalentDataTableModule,
+    CovalentSearchModule,
+    CovalentLoadingModule,
+    CovalentDialogsModule,
+
     BrowserAnimationsModule,
     CommonComponentsModule,
 
