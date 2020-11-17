@@ -19,7 +19,7 @@
 			<ExtendedTooltip name="СоздатьДокументыРасширеннаяПодсказка" id="58"/>
 		</Button>
 		<UsualGroup name="Группа1" id="47">
-			<Group>AlwaysHorizontal</Group>
+			<Group>Horizontal</Group>
 			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="48"/>
 			<ChildItems>
 				<InputField name="ТорговаяТочка" id="44">
@@ -71,6 +71,7 @@
 			<AutoInsertNewRow>true</AutoInsertNewRow>
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
 			<DataPath>Объект.ТоварыИДокументы</DataPath>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="ТоварыИДокументыКонтекстноеМеню" id="5"/>
@@ -86,6 +87,11 @@
 							</v8:item>
 						</Title>
 						<ExtendedTooltip name="ФормаКнопка1РасширеннаяПодсказка" id="56"/>
+					</Button>
+					<Button name="ПодобратьБК" id="111">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПодобратьБК</CommandName>
+						<ExtendedTooltip name="ПодобратьБКРасширеннаяПодсказка" id="112"/>
 					</Button>
 				</ChildItems>
 			</AutoCommandBar>
@@ -262,11 +268,11 @@
 		</Table>
 		<UsualGroup name="Группа2" id="59">
 			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
-			<Group>AlwaysHorizontal</Group>
+			<Group>Horizontal</Group>
 			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="60"/>
 		</UsualGroup>
 		<UsualGroup name="Группа4" id="80">
-			<Group>AlwaysHorizontal</Group>
+			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="81"/>
@@ -324,6 +330,7 @@
 					<AutoInsertNewRow>true</AutoInsertNewRow>
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
 					<DataPath>Объект.РКО</DataPath>
 					<RowFilter xsi:nil="true"/>
 					<ContextMenu name="РКОКонтекстноеМеню" id="83"/>
@@ -478,6 +485,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗаполнитьТЧ</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СоздатьДокументы" id="2">
 			<Title>
@@ -493,6 +501,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СоздатьДокументы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПровестиОтчет" id="3">
 			<Title>
@@ -508,6 +517,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПровестиОтчет</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ДолгиПодробно" id="4">
 			<Title>
@@ -523,6 +533,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ДолгиПодробно</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СоздатьРКО" id="5">
 			<Title>
@@ -538,6 +549,22 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СоздатьРКО</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПодобратьБК" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать БК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать БК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодобратьБК</Action>
 		</Command>
 	</Commands>
 </Form>
