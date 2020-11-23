@@ -236,6 +236,20 @@
 											</Title>
 											<ExtendedTooltip name="ЧекиРасширеннаяПодсказка" id="157"/>
 										</Button>
+										<Button name="Возвраты" id="161">
+											<Type>UsualButton</Type>
+											<Height>2</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<CommandName>Form.Command.ПоказатьВозвраты</CommandName>
+											<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Возвраты от покупателей</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВозвратыРасширеннаяПодсказка" id="162"/>
+										</Button>
 										<Button name="ВыгрузитьПродажиЗаПериод" id="154">
 											<Type>UsualButton</Type>
 											<Height>2</Height>
@@ -719,6 +733,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКПоказатьЧекиПосле</Action>
+		</Command>
+		<Command name="ПоказатьВозвраты" id="1000003">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать возвраты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать возвраты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКПоказатьВозвратыПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
