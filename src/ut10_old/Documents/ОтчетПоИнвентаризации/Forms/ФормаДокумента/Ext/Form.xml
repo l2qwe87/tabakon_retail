@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Width>120</Width>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа4" id="96">
+			<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+			<Group>AlwaysHorizontal</Group>
+			<HorizontalAlign>Left</HorizontalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="97"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>10</Width>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="ДокументИнвентаризация" id="7">
+					<DataPath>Объект.ДокументИнвентаризация</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДокументИнвентаризацияКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ДокументИнвентаризацияРасширеннаяПодсказка" id="9"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="89">
+			<Group>AlwaysHorizontal</Group>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="90"/>
+			<ChildItems>
+				<InputField name="ПричинаИнвентаризации" id="10">
+					<DataPath>Объект.ПричинаИнвентаризации</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПричинаИнвентаризацииКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ПричинаИнвентаризацииРасширеннаяПодсказка" id="12"/>
+				</InputField>
+				<InputField name="ПроверилИнвентаризацию" id="19">
+					<DataPath>Объект.ПроверилИнвентаризацию</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПроверилИнвентаризациюКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ПроверилИнвентаризациюРасширеннаяПодсказка" id="21"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа1" id="98">
+			<Group>AlwaysHorizontal</Group>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="99"/>
+			<ChildItems>
+				<UsualGroup name="Группа6" id="105">
+					<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="106"/>
+					<ChildItems>
+						<InputField name="СуммаНедостачиФакт" id="13">
+							<DataPath>Объект.СуммаНедостачиФакт</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СуммаНедостачиФактКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="СуммаНедостачиФактРасширеннаяПодсказка" id="15"/>
+							<Events>
+								<Event name="OnChange">СуммаНедостачиФактПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="СуммаНеРаспределеноНедостача" id="16">
+							<DataPath>Объект.СуммаНеРаспределеноНедостача</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СуммаНеРаспределеноНедостачаКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="СуммаНеРаспределеноНедостачаРасширеннаяПодсказка" id="18"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа5" id="103">
+					<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="104"/>
+					<ChildItems>
+						<InputField name="СуммаПерезачетов" id="93">
+							<DataPath>Объект.СуммаПерезачетов</DataPath>
+							<ContextMenu name="СуммаПерезачетовКонтекстноеМеню" id="94"/>
+							<ExtendedTooltip name="СуммаПерезачетовРасширеннаяПодсказка" id="95"/>
+						</InputField>
+						<InputField name="СуммаУдержаноФакт" id="100">
+							<DataPath>Объект.СуммаУдержаноФакт</DataPath>
+							<ContextMenu name="СуммаУдержаноФактКонтекстноеМеню" id="101"/>
+							<ExtendedTooltip name="СуммаУдержаноФактРасширеннаяПодсказка" id="102"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Страницы" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<Page name="ГруппаРаспределениеНедостачиПерезачеты" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Распределение недостачи перезачеты</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаРаспределениеНедостачиПерезачетыРасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<Table name="РаспределениеНедостачиПерезачеты" id="32">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.РаспределениеНедостачиПерезачеты</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="РаспределениеНедостачиПерезачетыКонтекстноеМеню" id="33"/>
+							<AutoCommandBar name="РаспределениеНедостачиПерезачетыКоманднаяПанель" id="34"/>
+							<ExtendedTooltip name="РаспределениеНедостачиПерезачетыРасширеннаяПодсказка" id="35"/>
+							<SearchStringAddition name="РаспределениеНедостачиПерезачетыСтрокаПоиска" id="36">
+								<AdditionSource>
+									<Item>РаспределениеНедостачиПерезачеты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РаспределениеНедостачиПерезачетыСтрокаПоискаКонтекстноеМеню" id="37"/>
+								<ExtendedTooltip name="РаспределениеНедостачиПерезачетыСтрокаПоискаРасширеннаяПодсказка" id="38"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РаспределениеНедостачиПерезачетыСостояниеПросмотра" id="39">
+								<AdditionSource>
+									<Item>РаспределениеНедостачиПерезачеты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РаспределениеНедостачиПерезачетыСостояниеПросмотраКонтекстноеМеню" id="40"/>
+								<ExtendedTooltip name="РаспределениеНедостачиПерезачетыСостояниеПросмотраРасширеннаяПодсказка" id="41"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РаспределениеНедостачиПерезачетыУправлениеПоиском" id="42">
+								<AdditionSource>
+									<Item>РаспределениеНедостачиПерезачеты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РаспределениеНедостачиПерезачетыУправлениеПоискомКонтекстноеМеню" id="43"/>
+								<ExtendedTooltip name="РаспределениеНедостачиПерезачетыУправлениеПоискомРасширеннаяПодсказка" id="44"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnEditEnd">РаспределениеНедостачиПерезачетыПриОкончанииРедактирования</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="РаспределениеНедостачиПерезачетыНомерСтроки" id="45">
+									<DataPath>Объект.РаспределениеНедостачиПерезачеты.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РаспределениеНедостачиПерезачетыНомерСтрокиКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="РаспределениеНедостачиПерезачетыНомерСтрокиРасширеннаяПодсказка" id="47"/>
+								</LabelField>
+								<InputField name="РаспределениеНедостачиПерезачетыВидРаспределения" id="48">
+									<DataPath>Объект.РаспределениеНедостачиПерезачеты.ВидРаспределения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РаспределениеНедостачиПерезачетыВидРаспределенияКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="РаспределениеНедостачиПерезачетыВидРаспределенияРасширеннаяПодсказка" id="50"/>
+									<Events>
+										<Event name="OnChange">РаспределениеНедостачиПерезачетыВидРаспределенияПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="РаспределениеНедостачиПерезачетыСотрудник" id="51">
+									<DataPath>Объект.РаспределениеНедостачиПерезачеты.Сотрудник</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РаспределениеНедостачиПерезачетыСотрудникКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="РаспределениеНедостачиПерезачетыСотрудникРасширеннаяПодсказка" id="53"/>
+								</InputField>
+								<InputField name="РаспределениеНедостачиПерезачетыПериодУдержания" id="54">
+									<DataPath>1/0:e1e9f4a3-b27c-4be9-8726-786851cf0eae/0:4a9edbec-eacd-43db-8b15-f6e1c4b78332</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РаспределениеНедостачиПерезачетыПериодУдержанияКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="РаспределениеНедостачиПерезачетыПериодУдержанияРасширеннаяПодсказка" id="56"/>
+								</InputField>
+								<InputField name="РаспределениеНедостачиПерезачетыСумма" id="57">
+									<DataPath>Объект.РаспределениеНедостачиПерезачеты.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РаспределениеНедостачиПерезачетыСуммаКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="РаспределениеНедостачиПерезачетыСуммаРасширеннаяПодсказка" id="59"/>
+									<Events>
+										<Event name="OnChange">РаспределениеНедостачиПерезачетыСуммаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="РаспределениеНедостачиПерезачетыУдержаноФакт" id="60">
+									<DataPath>Объект.РаспределениеНедостачиПерезачеты.УдержаноФакт</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РаспределениеНедостачиПерезачетыУдержаноФактКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="РаспределениеНедостачиПерезачетыУдержаноФактРасширеннаяПодсказка" id="62"/>
+									<Events>
+										<Event name="OnChange">РаспределениеНедостачиПерезачетыУдержаноФактПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="РаспределениеНедостачиПерезачетыКомментарий" id="63">
+									<DataPath>Объект.РаспределениеНедостачиПерезачеты.Комментарий</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РаспределениеНедостачиПерезачетыКомментарийКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="РаспределениеНедостачиПерезачетыКомментарийРасширеннаяПодсказка" id="65"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПровелиИнвентаризацию" id="66">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Провели инвентаризацию</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаПровелиИнвентаризациюРасширеннаяПодсказка" id="67"/>
+					<ChildItems>
+						<Table name="ПровелиИнвентаризацию" id="68">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ПровелиИнвентаризацию</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПровелиИнвентаризациюКонтекстноеМеню" id="69"/>
+							<AutoCommandBar name="ПровелиИнвентаризациюКоманднаяПанель" id="70"/>
+							<ExtendedTooltip name="ПровелиИнвентаризациюРасширеннаяПодсказка" id="71"/>
+							<SearchStringAddition name="ПровелиИнвентаризациюСтрокаПоиска" id="72">
+								<AdditionSource>
+									<Item>ПровелиИнвентаризацию</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПровелиИнвентаризациюСтрокаПоискаКонтекстноеМеню" id="73"/>
+								<ExtendedTooltip name="ПровелиИнвентаризациюСтрокаПоискаРасширеннаяПодсказка" id="74"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПровелиИнвентаризациюСостояниеПросмотра" id="75">
+								<AdditionSource>
+									<Item>ПровелиИнвентаризацию</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПровелиИнвентаризациюСостояниеПросмотраКонтекстноеМеню" id="76"/>
+								<ExtendedTooltip name="ПровелиИнвентаризациюСостояниеПросмотраРасширеннаяПодсказка" id="77"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПровелиИнвентаризациюУправлениеПоиском" id="78">
+								<AdditionSource>
+									<Item>ПровелиИнвентаризацию</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПровелиИнвентаризациюУправлениеПоискомКонтекстноеМеню" id="79"/>
+								<ExtendedTooltip name="ПровелиИнвентаризациюУправлениеПоискомРасширеннаяПодсказка" id="80"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПровелиИнвентаризациюНомерСтроки" id="81">
+									<DataPath>Объект.ПровелиИнвентаризацию.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПровелиИнвентаризациюНомерСтрокиКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="ПровелиИнвентаризациюНомерСтрокиРасширеннаяПодсказка" id="83"/>
+								</LabelField>
+								<InputField name="ПровелиИнвентаризациюРевизор" id="84">
+									<DataPath>Объект.ПровелиИнвентаризацию.Ревизор</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПровелиИнвентаризациюРевизорКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="ПровелиИнвентаризациюРевизорРасширеннаяПодсказка" id="86"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="Группа3" id="91">
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="92"/>
+			<ChildItems>
+				<InputField name="Ответственный" id="22">
+					<DataPath>Объект.Ответственный</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОтветственныйКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="24"/>
+				</InputField>
+				<InputField name="Комментарий" id="25">
+					<DataPath>Объект.Комментарий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="27"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ОтчетПоИнвентаризации</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>
