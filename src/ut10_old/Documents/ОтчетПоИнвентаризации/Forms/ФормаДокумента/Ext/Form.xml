@@ -151,6 +151,7 @@
 							</SearchControlAddition>
 							<Events>
 								<Event name="OnEditEnd">РаспределениеНедостачиПерезачетыПриОкончанииРедактирования</Event>
+								<Event name="AfterDeleteRow">РаспределениеНедостачиПерезачетыПослеУдаления</Event>
 							</Events>
 							<ChildItems>
 								<LabelField name="РаспределениеНедостачиПерезачетыНомерСтроки" id="45">
@@ -169,7 +170,7 @@
 									</Events>
 								</InputField>
 								<InputField name="РаспределениеНедостачиПерезачетыГруппаНоменклатуры" id="107">
-									<DataPath>Объект.РаспределениеНедостачиПерезачеты.ГруппаНоменклатуры</DataPath>
+									<DataPath>1/0:e1e9f4a3-b27c-4be9-8726-786851cf0eae/0:ce70987e-7a72-46cc-bac4-3c618c162668</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="РаспределениеНедостачиПерезачетыГруппаНоменклатурыКонтекстноеМеню" id="108"/>
 									<ExtendedTooltip name="РаспределениеНедостачиПерезачетыГруппаНоменклатурыРасширеннаяПодсказка" id="109"/>
@@ -269,6 +270,65 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ПровелиИнвентаризациюРевизорКонтекстноеМеню" id="85"/>
 									<ExtendedTooltip name="ПровелиИнвентаризациюРевизорРасширеннаяПодсказка" id="86"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПровелиИнвентаризацию1" id="110">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группы номенклатуры</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаПровелиИнвентаризацию1РасширеннаяПодсказка" id="111"/>
+					<ChildItems>
+						<Table name="ГруппыНоменклатуры" id="112">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ГруппыНоменклатуры</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ГруппыНоменклатурыКонтекстноеМеню" id="113"/>
+							<AutoCommandBar name="ГруппыНоменклатурыКоманднаяПанель" id="114"/>
+							<ExtendedTooltip name="ГруппыНоменклатурыРасширеннаяПодсказка" id="115"/>
+							<SearchStringAddition name="ГруппыНоменклатурыСтрокаПоиска" id="116">
+								<AdditionSource>
+									<Item>ГруппыНоменклатуры</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ГруппыНоменклатурыСтрокаПоискаКонтекстноеМеню" id="117"/>
+								<ExtendedTooltip name="ГруппыНоменклатурыСтрокаПоискаРасширеннаяПодсказка" id="118"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ГруппыНоменклатурыСостояниеПросмотра" id="119">
+								<AdditionSource>
+									<Item>ГруппыНоменклатуры</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ГруппыНоменклатурыСостояниеПросмотраКонтекстноеМеню" id="120"/>
+								<ExtendedTooltip name="ГруппыНоменклатурыСостояниеПросмотраРасширеннаяПодсказка" id="121"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ГруппыНоменклатурыУправлениеПоиском" id="122">
+								<AdditionSource>
+									<Item>ГруппыНоменклатуры</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ГруппыНоменклатурыУправлениеПоискомКонтекстноеМеню" id="123"/>
+								<ExtendedTooltip name="ГруппыНоменклатурыУправлениеПоискомРасширеннаяПодсказка" id="124"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ГруппыНоменклатурыНомерСтроки" id="125">
+									<DataPath>Объект.ГруппыНоменклатуры.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ГруппыНоменклатурыНомерСтрокиКонтекстноеМеню" id="126"/>
+									<ExtendedTooltip name="ГруппыНоменклатурыНомерСтрокиРасширеннаяПодсказка" id="127"/>
+								</LabelField>
+								<InputField name="ГруппыНоменклатурыГруппаНоменклатуры" id="128">
+									<DataPath>Объект.ГруппыНоменклатуры.ГруппаНоменклатуры</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ГруппыНоменклатурыГруппаНоменклатурыКонтекстноеМеню" id="129"/>
+									<ExtendedTooltip name="ГруппыНоменклатурыГруппаНоменклатурыРасширеннаяПодсказка" id="130"/>
 								</InputField>
 							</ChildItems>
 						</Table>
