@@ -330,8 +330,19 @@
 									<ContextMenu name="ГруппыНоменклатурыГруппаНоменклатурыКонтекстноеМеню" id="129"/>
 									<ExtendedTooltip name="ГруппыНоменклатурыГруппаНоменклатурыРасширеннаяПодсказка" id="130"/>
 								</InputField>
+								<InputField name="ГруппыНоменклатурыСумма" id="131">
+									<DataPath>Объект.ГруппыНоменклатуры.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ГруппыНоменклатурыСуммаКонтекстноеМеню" id="132"/>
+									<ExtendedTooltip name="ГруппыНоменклатурыСуммаРасширеннаяПодсказка" id="133"/>
+								</InputField>
 							</ChildItems>
 						</Table>
+						<LabelField name="ГруппыНоменклатурыИтогСумма" id="134">
+							<DataPath>Объект.ГруппыНоменклатуры.TotalСумма</DataPath>
+							<ContextMenu name="ГруппыНоменклатурыИтогСуммаКонтекстноеМеню" id="135"/>
+							<ExtendedTooltip name="ГруппыНоменклатурыИтогСуммаРасширеннаяПодсказка" id="136"/>
+						</LabelField>
 					</ChildItems>
 				</Page>
 			</ChildItems>
