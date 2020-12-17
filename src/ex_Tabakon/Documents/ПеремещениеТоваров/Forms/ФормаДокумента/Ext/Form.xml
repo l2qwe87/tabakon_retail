@@ -30,6 +30,13 @@
 				<BackColor>style:ActivityColor</BackColor>
 				<ExtendedTooltip name="ФормаКнопкаПринятьТоварыРасширеннаяПодсказка" id="476"/>
 			</Button>
+			<Button name="ФормаКнопкаОтгрузитьТовары" id="477">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.Command.ОтгузитьТовары</CommandName>
+				<BackColor>style:ActivityColor</BackColor>
+				<ExtendedTooltip name="ФормаКнопкаОтгрузитьТоварыРасширеннаяПодсказка" id="478"/>
+			</Button>
 			<Popup name="ПодменюСоздатьНаОсновании" id="29">
 				<Title>
 					<v8:item>
@@ -1385,6 +1392,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКПринятьТоварыПосле</Action>
+		</Command>
+		<Command name="ОтгузитьТовары" id="1000001">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отгузить товары</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отгузить товары</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКОтгузитьтоварыПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
