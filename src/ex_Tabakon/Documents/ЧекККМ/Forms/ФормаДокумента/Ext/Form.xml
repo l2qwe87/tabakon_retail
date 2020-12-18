@@ -178,6 +178,12 @@
 						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 						<ExtendedTooltip name="ФормаОтменитьОплатуВПлатежнойСистемеРасширеннаяПодсказка" id="813"/>
 					</Button>
+					<Button name="ФормаКнопкаОформитьВозвратОтПокупателя" id="816">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ВозвратОтПокупателя</CommandName>
+						<BackColor>#FFFF00</BackColor>
+						<ExtendedTooltip name="ФормаКнопкаОформитьВозвратОтПокупателяРасширеннаяПодсказка" id="817"/>
+					</Button>
 				</ChildItems>
 			</ButtonGroup>
 			<Button name="ФормаСправка" id="298">
@@ -2983,6 +2989,23 @@
 			</dcsset:item>
 		</ConditionalAppearance>
 	</Attributes>
+	<Commands>
+		<Command name="ВозвратОтПокупателя" id="1000001">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возврат от покупателя</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возврат от покупателя</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКВозвратОтПокупателяПосле</Action>
+		</Command>
+	</Commands>
 	<BaseForm version="2.9">
 		<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
