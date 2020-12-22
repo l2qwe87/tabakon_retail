@@ -433,6 +433,12 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>СуммаОклада</dataPath>
 			<field>СуммаОклада</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма Оклада</v8:content>
+				</v8:item>
+			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>дата</dataPath>
@@ -520,6 +526,16 @@
 			</v8:item>
 		</title>
 	</calculatedField>
+	<calculatedField>
+		<dataPath>ОкладЗаДень</dataPath>
+		<expression>СуммаОклада</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Оклад за день</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
 	<totalField>
 		<dataPath>Часы</dataPath>
 		<expression>Сумма(Часы)</expression>
@@ -575,6 +591,10 @@
 	<totalField>
 		<dataPath>СуммаОклада</dataPath>
 		<expression>Сумма(СуммаОклада)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОкладЗаДень</dataPath>
+		<expression>(ОкладЗаДень)</expression>
 	</totalField>
 	<parameter>
 		<name>ДатаКон</name>
@@ -893,6 +913,9 @@
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
 							<dcsset:field>Часы</dcsset:field>
 						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СуммаОклада</dcsset:field>
+						</dcsset:item>
 					</dcsset:selection>
 				</dcsset:column>
 				<dcsset:column>
@@ -1156,9 +1179,6 @@
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
 							<dcsset:field>Часы</dcsset:field>
 						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:SelectedItemField">
-							<dcsset:field>СуммаОклада</dcsset:field>
-						</dcsset:item>
 					</dcsset:selection>
 				</dcsset:column>
 				<dcsset:column>
@@ -1169,6 +1189,9 @@
 						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
 							<dcsset:field>КоличествоСмен</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ОкладЗаДень</dcsset:field>
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
 							<dcsset:field>СуммаОклада</dcsset:field>
