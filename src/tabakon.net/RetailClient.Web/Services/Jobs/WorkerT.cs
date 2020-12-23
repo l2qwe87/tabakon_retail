@@ -36,9 +36,9 @@ namespace RetailClient.Web.Services.Jobs
                 endpoints = endpoints.Where(e => predicat(e));
             }
 
-            Parallel.ForEach(endpoints, (async endpoint =>
+            Parallel.ForEach(endpoints, (endpoint =>
             {
-                await JobAsync<T>(alwaysSaveResult, endpoint, func);
+                JobAsync<T>(alwaysSaveResult, endpoint, func).Wait();
             }));
             //var tasks = endpoints.Select(async endpoint =>
             //{
