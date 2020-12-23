@@ -39,7 +39,7 @@ namespace RetailClientTests
             services.AddScoped<WorkerRetailVersion, WorkerRetailVersion>();
             services.AddScoped<WorkerPing, WorkerPing>();
             services.AddScoped<WorkerRetailExtConfiguration, WorkerRetailExtConfiguration>();
-            
+            services.AddScoped<WorkerRetailGetStoreBalance, WorkerRetailGetStoreBalance>();
             services.AddScoped<WorkerRetailDocSelesReport, WorkerRetailDocSelesReport>();
 
             services.AddScoped<IRetailEndpointsRepo, RetailEndpointsRepo>(); 
@@ -88,12 +88,15 @@ namespace RetailClientTests
 
         private void InitSingeltonServices(IServiceProvider serviceProvider)
         {
+
             var jobService = serviceProvider.GetService<IJobService>();
 #if RELEASE
             jobService.AddTask<WorkerRetailDocSelesReport>(TimeSpan.FromMinutes(20));
             jobService.AddTask<WorkerRetailVersion>(TimeSpan.FromMinutes(25));
             jobService.AddTask<WorkerRetailExtConfiguration>(TimeSpan.FromMinutes(25));
             jobService.AddTask<WorkerPing>(TimeSpan.FromMinutes(15));
+            jobService.AddTask<WorkerRetailGetStoreBalance>(TimeSpan.FromMinutes(60));
+#else
             jobService.AddTask<WorkerRetailGetStoreBalance>(TimeSpan.FromMinutes(60));
 #endif
         }

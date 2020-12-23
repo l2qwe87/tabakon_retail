@@ -63,6 +63,7 @@ namespace RetailClient.Web.Services.Jobs
                                     var _logger = serviceProvider.GetService<ILogger<JobService>>();
                                     _logger.LogError(e.Message, e);
                                 }
+                                Task.Delay(TimeSpan.FromSeconds(5)).Wait();
                             }).Wait(TimeSpan.FromMilliseconds(500));
                         }
                     }
