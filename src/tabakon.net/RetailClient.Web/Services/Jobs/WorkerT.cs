@@ -40,11 +40,19 @@ namespace RetailClient.Web.Services.Jobs
             //{
             //    JobAsync<T>(alwaysSaveResult, endpoint, func).Wait();
             //}));
-            var tasks = endpoints.Select(async endpoint =>
-            {
-                return await JobAsync<T>(alwaysSaveResult, endpoint, func);
-            });
-            await Task.WhenAll(tasks);
+            //var tasks = endpoints.Select(async endpoint =>
+            //{
+            //    return await JobAsync<T>(alwaysSaveResult, endpoint, func);
+            //});
+            //await Task.WhenAll(tasks);
+            var res = endpoints
+                .AsParallel()
+                .WithDegreeOfParallelism(10)
+                .Select(endpoint =>
+                {
+                    return JobAsync<T>(alwaysSaveResult, endpoint, func).Result;
+                })
+                .ToList();
 
             using (var scope = serviceProvider.CreateScope())
             {
