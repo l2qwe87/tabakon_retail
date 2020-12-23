@@ -98,7 +98,16 @@ namespace RetailClient
             var @params = "{}";
             return Get(method, @params).Replace("\"", "");
         }
-        
+
+        public async Task<string> GetStoreBalanceAsync()
+        {
+            await this.PingAsync();
+
+            var method = "GetStoreBalance";
+            var @params = "{}";
+            return Get(method, @params).Replace("\"", "");
+        }       
+
 
         public struct GetRetailDocSelesReportParams
         {
