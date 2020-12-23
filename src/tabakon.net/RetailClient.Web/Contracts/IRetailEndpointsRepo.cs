@@ -8,11 +8,11 @@ namespace RetailClient.Web.Contracts
 {
     public interface IRetailEndpointsRepo
     {
-        Task<IEnumerable<RetailEndpoint>> GetRetailEndpointsAsync();
+        IQueryable<RetailEndpoint> GetRetailEndpoints();
 
-        Task<IEnumerable<RetailVersion>> GetRetailEndpointsVersionAsync();
+        IQueryable<RetailVersion> GetRetailEndpointsVersion();
 
-        Task<IEnumerable<RetailExtConfiguration>> GetRetailExtConfigurationAsync();
+        IQueryable<RetailExtConfiguration> GetRetailExtConfiguration();
 
         
     }

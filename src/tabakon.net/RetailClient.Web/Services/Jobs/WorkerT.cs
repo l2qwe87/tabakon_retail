@@ -27,7 +27,10 @@ namespace RetailClient.Web.Services.Jobs
             using (var scope = serviceProvider.CreateScope())
             {
                 var retailEndpointsRepo = scope.ServiceProvider.GetRequiredService<IRetailEndpointsRepo>();
-                endpoints = await retailEndpointsRepo.GetRetailEndpointsAsync();
+                endpoints = await retailEndpointsRepo
+                    .GetRetailEndpoints()
+                    .AsNoTracking()
+                    .ToListAsync();
             }
             if (predicat != null) {
                 endpoints = endpoints.Where(e => predicat(e));
