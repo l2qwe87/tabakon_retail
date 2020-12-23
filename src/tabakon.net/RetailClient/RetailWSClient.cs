@@ -50,17 +50,17 @@ namespace RetailClient
         public async Task<string> GetVersionAsync()
         {
             await this.PingAsync();
-            var ws = GetWSClient(url);
-            using (OperationContextScope ocs=new OperationContextScope(ws.InnerChannel))
+            using (var ws = GetWSClient(url))
+            using (OperationContextScope ocs = new OperationContextScope(ws.InnerChannel))
             {
                 var requestProp = new HttpRequestMessageProperty();
                 requestProp.Headers["Authorization"] = "Basic 0JDQtNC80LjQvToxNTk3NTM=";
                 OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestProp;
                 //var version = await ws.GetVersionAsync();
-                
+
                 var version = ws.GetVersionAsync().Result;
                 return await Task.FromResult(version.Body.@return);
-                
+
             }
         }
 
@@ -133,7 +133,7 @@ namespace RetailClient
 
         private string Post(string method, string @paramStr)
         {
-            var ws = GetWSClient(url);
+            using (var ws = GetWSClient(url))
             using (OperationContextScope ocs = new OperationContextScope(ws.InnerChannel))
             {
                 var requestProp = new HttpRequestMessageProperty();
@@ -146,7 +146,7 @@ namespace RetailClient
 
         private string Get(string method, string @paramStr)
         {
-            var ws = GetWSClient(url);
+            using (var ws = GetWSClient(url))
             using (OperationContextScope ocs = new OperationContextScope(ws.InnerChannel))
             {
                 var requestProp = new HttpRequestMessageProperty();
