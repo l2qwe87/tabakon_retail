@@ -36,15 +36,15 @@ namespace RetailClient.Web.Services.Jobs
                 endpoints = endpoints.Where(e => predicat(e));
             }
 
-            Parallel.ForEach(endpoints, (endpoint =>
-            {
-                JobAsync<T>(alwaysSaveResult, endpoint, func).Wait();
-            }));
-            //var tasks = endpoints.Select(async endpoint =>
+            //Parallel.ForEach(endpoints, (endpoint =>
             //{
-            //    return await JobAsync<T>(alwaysSaveResult, endpoint, func);
-            //});
-            //await Task.WhenAll(tasks);
+            //    JobAsync<T>(alwaysSaveResult, endpoint, func).Wait();
+            //}));
+            var tasks = endpoints.Select(async endpoint =>
+            {
+                return await JobAsync<T>(alwaysSaveResult, endpoint, func);
+            });
+            await Task.WhenAll(tasks);
 
             using (var scope = serviceProvider.CreateScope())
             {
