@@ -25,7 +25,7 @@ namespace RetailClient.Web.Services.Jobs
                 catch (Exception e)
                 {
                     var _logger = serviceProvider.GetService<ILogger<RetailGetStoreBalance>>();
-                    _logger.LogError($"{endpoint.RetailEndpointHost} \n{e.Message}", e);
+                    _logger.LogError(e, $"{endpoint.RetailEndpointHost} \n{e.Message}");
 
                     return (alwaysSaveResult)
                         ? new[] { e.Message }
