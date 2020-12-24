@@ -33,7 +33,7 @@ namespace RetailClientTests
         {
             services.AddControllers();
 
-            services.AddDbContext<TabakonDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("TabakonDataContext")));
+            services.AddDbContextPool<TabakonDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("TabakonDataContext")));
 
             services.AddSingleton<IJobService, JobService>();
             services.AddScoped<WorkerRetailVersion, WorkerRetailVersion>();
@@ -97,11 +97,11 @@ namespace RetailClientTests
             jobService.AddTask<WorkerPing>(TimeSpan.FromMinutes(15));
             jobService.AddTask<WorkerRetailGetStoreBalance>(TimeSpan.FromMinutes(60));
 #else
-            jobService.AddTask<WorkerRetailDocSelesReport>(TimeSpan.FromMinutes(20));
-            jobService.AddTask<WorkerRetailVersion>(TimeSpan.FromMinutes(25));
-            jobService.AddTask<WorkerRetailExtConfiguration>(TimeSpan.FromMinutes(25));
-            jobService.AddTask<WorkerPing>(TimeSpan.FromMinutes(15));
-            jobService.AddTask<WorkerRetailGetStoreBalance>(TimeSpan.FromMinutes(60));
+            jobService.AddTask<WorkerRetailDocSelesReport>(TimeSpan.FromMinutes(2));
+            jobService.AddTask<WorkerRetailVersion>(TimeSpan.FromMinutes(5));
+            jobService.AddTask<WorkerRetailExtConfiguration>(TimeSpan.FromMinutes(5));
+            jobService.AddTask<WorkerPing>(TimeSpan.FromMinutes(1));
+            jobService.AddTask<WorkerRetailGetStoreBalance>(TimeSpan.FromMinutes(5));
 #endif
         }
     }

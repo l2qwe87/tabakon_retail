@@ -7,9 +7,9 @@ namespace Tabakon.DAL
     
     public class TabakonDBContext : DbContext
     {
-        public TabakonDBContext()
-        {   
-        }
+        //public TabakonDBContext()
+        //{   
+        //}
         public TabakonDBContext(DbContextOptions<TabakonDBContext> options)
             : base(options)
         { }
