@@ -4,6 +4,7 @@ using RetailClient.Web.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime;
 using System.Threading.Tasks;
 
 namespace RetailClient.Web.Services.Jobs
@@ -67,6 +68,8 @@ namespace RetailClient.Web.Services.Jobs
                             }).Wait(TimeSpan.FromMilliseconds(500));
                         }
                     }
+                    GCSettings.LargeObjectHeapCompactionMode = GCLargeObjectHeapCompactionMode.CompactOnce;
+                    GC.Collect();
                 }
             });
         }
