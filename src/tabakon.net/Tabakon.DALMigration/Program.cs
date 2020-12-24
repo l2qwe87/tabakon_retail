@@ -8,20 +8,25 @@ namespace Tabakon.DBContextMigration
 {
     public class MigratioTabakonDBContext : TabakonDBContext
     {
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
+        public static IConfiguration GetConfiguration() {
             var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                   .SetBasePath(Directory.GetCurrentDirectory())
+                   .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
 #if RELEASE
                 .AddJsonFile(@"appsettings.Release.json", optional: true, reloadOnChange: true)
 #endif
             ;
 
-            IConfiguration configuration = builder.Build();
+            return builder.Build();
+        }
+        public MigratioTabakonDBContext(DbContextOptions<TabakonDBContext> options)
+            : base(options)
+        { }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+           
 
-            optionsBuilder.UseSqlServer(configuration.GetConnectionString("TabakonDataContext"));
+            optionsBuilder.UseSqlServer(GetConfiguration().GetConnectionString("TabakonDataContext"));
 
         }
     }
@@ -29,11 +34,15 @@ namespace Tabakon.DBContextMigration
     {
         static void Main(string[] args)
         {
-            using (var ctx = new MigratioTabakonDBContext())
+            var optionsBuilder = new DbContextOptionsBuilder<TabakonDBContext>();
+            optionsBuilder.UseSqlServer(MigratioTabakonDBContext.GetConfiguration().GetConnectionString("TabakonDataContext"));
+            using (var ctx = new MigratioTabakonDBContext(optionsBuilder.Options))
             {
                 ctx.Database.Migrate();
             }
             Console.WriteLine("Hello World!");
         }
     }
+
+
 }
