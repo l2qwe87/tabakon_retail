@@ -31,6 +31,11 @@ namespace RetailClient.Web.Services.Jobs
                     .GetRetailEndpoints()
                     .AsNoTracking()
                     .ToListAsync();
+#if DEBUG
+                endpoints = endpoints.Concat(endpoints).Concat(endpoints).Concat(endpoints)
+                    .Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints)
+                    .Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints);
+#endif
             }
             if (predicat != null) {
                 endpoints = endpoints.Where(e => predicat(e));
@@ -45,14 +50,11 @@ namespace RetailClient.Web.Services.Jobs
             //    return await JobAsync<T>(alwaysSaveResult, endpoint, func);
             //});
             //await Task.WhenAll(tasks);
-            var res = endpoints
-                .AsParallel()
-                .WithDegreeOfParallelism(10)
-                .Select(endpoint =>
-                {
-                    return JobAsync<T>(alwaysSaveResult, endpoint, func).Result;
-                })
-                .ToList();
+            var tasks = endpoints.Select(async endpoint =>
+            {
+                return await JobAsync<T>(alwaysSaveResult, endpoint, func);
+            });
+            await Task.WhenAll(tasks);
 
             using (var scope = serviceProvider.CreateScope())
             {
@@ -119,6 +121,7 @@ namespace RetailClient.Web.Services.Jobs
         public void Dispose()
         {
             Dispose(true);
+            GC.SuppressFinalize(this);
         }
         #endregion
     }
