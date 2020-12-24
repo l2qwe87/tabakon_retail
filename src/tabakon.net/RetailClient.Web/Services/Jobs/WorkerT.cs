@@ -50,10 +50,30 @@ namespace RetailClient.Web.Services.Jobs
             //    return await JobAsync<T>(alwaysSaveResult, endpoint, func);
             //});
             //await Task.WhenAll(tasks);
-            var tasks = endpoints.Select(async endpoint =>
+
+            var taskCount = 6;
+            var max = endpoints.Count()-1;
+            var part = (max / taskCount)+1;
+            var tasks = Enumerable.Range(0, taskCount).Select(async i => 
             {
-                return await JobAsync<T>(alwaysSaveResult, endpoint, func);
+                var skip = i * part;
+                var take = part;
+                if ((skip + take) > max)
+                {
+                    take = max - skip;
+                }
+                var toDo = endpoints.Skip(skip).Take(take);
+                foreach (var endpoint in toDo)
+                {
+                    await JobAsync<T>(alwaysSaveResult, endpoint, func);
+                }              
+                
             });
+
+            //var tasks = endpoints.Select(async endpoint =>
+            //{
+            //    return await JobAsync<T>(alwaysSaveResult, endpoint, func);
+            //});
             await Task.WhenAll(tasks);
 
             using (var scope = serviceProvider.CreateScope())
