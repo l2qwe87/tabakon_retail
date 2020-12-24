@@ -68,8 +68,6 @@ namespace RetailClient.Web.Services.Jobs
                             }).Wait(TimeSpan.FromMilliseconds(500));
                         }
                     }
-                    GCSettings.LargeObjectHeapCompactionMode = GCLargeObjectHeapCompactionMode.CompactOnce;
-                    GC.Collect();
                 }
             });
         }

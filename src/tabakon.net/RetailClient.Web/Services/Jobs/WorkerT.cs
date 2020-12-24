@@ -4,6 +4,7 @@ using RetailClient.Web.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime;
 using System.Threading.Tasks;
 using Tabakon.DAL;
 using Tabakon.Entity;
@@ -142,6 +143,10 @@ namespace RetailClient.Web.Services.Jobs
         {
             Dispose(true);
             GC.SuppressFinalize(this);
+            
+            GCSettings.LargeObjectHeapCompactionMode = GCLargeObjectHeapCompactionMode.CompactOnce;
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
         }
         #endregion
     }

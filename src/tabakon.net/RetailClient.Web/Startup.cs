@@ -33,7 +33,7 @@ namespace RetailClientTests
         {
             services.AddControllers();
 
-            services.AddDbContextPool<TabakonDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("TabakonDataContext")));
+            services.AddDbContextPool<TabakonDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("TabakonDataContext")), 20);
 
             services.AddSingleton<IJobService, JobService>();
             services.AddScoped<WorkerRetailVersion, WorkerRetailVersion>();
