@@ -107,7 +107,7 @@ namespace RetailClient
 
             var method = "GetStoreBalance";
             var @params = "{}";
-            return Get(method, @params).Replace("\"", "");
+            return Get(method, @params);
         }       
 
 
