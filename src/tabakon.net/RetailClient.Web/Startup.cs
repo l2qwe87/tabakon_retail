@@ -94,6 +94,7 @@ namespace RetailClientTests
             jobService.AddTask<WorkerRetailVersion>(TimeSpan.FromMinutes(25));
             jobService.AddTask<WorkerRetailExtConfiguration>(TimeSpan.FromMinutes(25));
             jobService.AddTask<WorkerPing>(TimeSpan.FromMinutes(15));
+            jobService.AddTask<WorkerRetailGetStoreBalance>(TimeSpan.FromMinutes(60));
 #endif
         }
     }
