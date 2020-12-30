@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Catalog uuid="d9827a36-d7a1-4ce3-bdaa-686b28267b07">
+		<InternalInfo>
+			<xr:GeneratedType name="CatalogObject.ПодключаемоеОборудование" category="Object">
+				<xr:TypeId>738fff9d-f5bf-4493-9142-11f4fa0ee383</xr:TypeId>
+				<xr:ValueId>2e48bb68-e463-49dc-9a25-755dc577811b</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogRef.ПодключаемоеОборудование" category="Ref">
+				<xr:TypeId>bc0d373c-b7d2-4d2d-98d5-7de1facfa55c</xr:TypeId>
+				<xr:ValueId>2e972a6a-dd64-4aee-9833-be678878e1e0</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogSelection.ПодключаемоеОборудование" category="Selection">
+				<xr:TypeId>c0099b68-c03b-4a9a-8466-91d390a87876</xr:TypeId>
+				<xr:ValueId>c8838a1d-5c2e-4ed4-bf34-e1aaea08dad7</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogList.ПодключаемоеОборудование" category="List">
+				<xr:TypeId>2062dd1e-3873-4372-b555-1463dbc2501e</xr:TypeId>
+				<xr:ValueId>36dee049-4e91-4906-81a3-5c0eeb021bb3</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogManager.ПодключаемоеОборудование" category="Manager">
+				<xr:TypeId>a052e0a0-f580-4de5-b717-15937f6ec4d3</xr:TypeId>
+				<xr:ValueId>8ca15ff7-0cad-4270-b88f-809524e62cd0</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ПодключаемоеОборудование</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>be7d6af6-dd09-4fdf-9a4e-595331854f78</ExtendedConfigurationObject>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="d14e52c8-0d0f-4fa4-b390-65588caca2fe">
+				<InternalInfo/>
+				<Properties>
+					<Name>УстройствоИспользуется</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>23fbe4c8-8e00-4de3-ae17-fc93f21afafd</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="90c57da2-cb4b-41b6-96b9-944785b583c7">
+				<InternalInfo/>
+				<Properties>
+					<Name>РабочееМесто</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>bc7d78cc-c06e-43f2-8a3a-cedc584d8a72</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.РабочиеМеста</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="c6ec804e-e167-40fd-ac7d-bec0f5929b83">
+				<InternalInfo/>
+				<Properties>
+					<Name>ТипОборудования</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>7765357b-70c8-41ad-b3d4-699d212bc974</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ТипыПодключаемогоОборудования</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+		</ChildObjects>
+	</Catalog>
+</MetaDataObject>
