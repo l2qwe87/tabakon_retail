@@ -55,6 +55,9 @@ namespace Tabakon.DALMigration.Migrations
                     b.Property<string>("RetailEndpointIdentity")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<bool>("MarkAsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<string>("RetailEndpointHost")
                         .HasColumnType("nvarchar(max)");
 
@@ -67,6 +70,22 @@ namespace Tabakon.DALMigration.Migrations
                     b.HasKey("RetailEndpointIdentity");
 
                     b.ToTable("RetailEndpoint");
+                });
+
+            modelBuilder.Entity("Tabakon.Entity.RetailExtConfiguration", b =>
+                {
+                    b.Property<string>("RetailEndpointIdentity")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("JsonData")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("LastCheck")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("RetailEndpointIdentity");
+
+                    b.ToTable("RetailExtConfiguration");
                 });
 
             modelBuilder.Entity("Tabakon.Entity.RetailPing", b =>
@@ -102,6 +121,15 @@ namespace Tabakon.DALMigration.Migrations
                 });
 
             modelBuilder.Entity("Tabakon.Entity.RetailDocSelesReport", b =>
+                {
+                    b.HasOne("Tabakon.Entity.RetailEndpoint", "RetailEndpoint")
+                        .WithMany()
+                        .HasForeignKey("RetailEndpointIdentity")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Tabakon.Entity.RetailExtConfiguration", b =>
                 {
                     b.HasOne("Tabakon.Entity.RetailEndpoint", "RetailEndpoint")
                         .WithMany()

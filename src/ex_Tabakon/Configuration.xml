@@ -40,14 +40,14 @@
 			<ObjectBelonging>Adopted</ObjectBelonging>
 			<KeepMappingToExtendedConfigurationObjectsByIDs>true</KeepMappingToExtendedConfigurationObjectsByIDs>
 			<NamePrefix>ТБК</NamePrefix>
-			<ConfigurationExtensionCompatibilityMode>Version8_3_12</ConfigurationExtensionCompatibilityMode>
+			<ConfigurationExtensionCompatibilityMode>Version8_3_14</ConfigurationExtensionCompatibilityMode>
 			<DefaultRunMode>ManagedApplication</DefaultRunMode>
 			<UsePurposes>
 				<v8:Value xsi:type="app:ApplicationUsePurpose">PlatformApplication</v8:Value>
 			</UsePurposes>
 			<ScriptVariant>Russian</ScriptVariant>
 			<Vendor/>
-			<Version>1.0.3.7</Version>
+			<Version>1.2.5.7</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
@@ -103,6 +103,24 @@
 			<CommonPicture>МаркируемаяАлкогольнаяПродукцияТЧ</CommonPicture>
 			<CommonPicture>МаркируемаяАлкогольнаяПродукцияШапкаТЧ</CommonPicture>
 			<CommonPicture>Перейти</CommonPicture>
+			<CommonPicture>РМК_Enter</CommonPicture>
+			<CommonPicture>РМК_Стереть</CommonPicture>
+			<CommonPicture>РМК_Сторно</CommonPicture>
+			<CommonPicture>РМК_Цифра0</CommonPicture>
+			<CommonPicture>РМК_Цифра1</CommonPicture>
+			<CommonPicture>РМК_Цифра2</CommonPicture>
+			<CommonPicture>РМК_Цифра3</CommonPicture>
+			<CommonPicture>РМК_Цифра4</CommonPicture>
+			<CommonPicture>РМК_Цифра5</CommonPicture>
+			<CommonPicture>РМК_Цифра6</CommonPicture>
+			<CommonPicture>РМК_Цифра7</CommonPicture>
+			<CommonPicture>РМК_Цифра8</CommonPicture>
+			<CommonPicture>РМК_Цифра9</CommonPicture>
+			<CommonPicture>РМК_ТочкаКалькулятора</CommonPicture>
+			<CommonPicture>ДлительнаяОперация48</CommonPicture>
+			<CommonPicture>КоллекцияВидыПринтеров</CommonPicture>
+			<Role>ТБК_Кассир</Role>
+			<Role>ДобавлениеИзменениеЧековККМ</Role>
 			<CommonModule>ШтрихкодированиеИС</CommonModule>
 			<CommonModule>ШтрихкодированиеИСРТ</CommonModule>
 			<CommonModule>ШтрихкодированиеМОТП</CommonModule>
@@ -115,6 +133,8 @@
 			<CommonModule>ТБК_WS_GET</CommonModule>
 			<CommonModule>ТБК_WS_POST</CommonModule>
 			<CommonModule>ОбщегоНазначения</CommonModule>
+			<CommonModule>ЗапасыСервер</CommonModule>
+			<CommonModule>ШтрихкодированиеЕГАИСКлиентСервер</CommonModule>
 			<ExchangePlan>ОбменРозницаУправлениеТорговлей103</ExchangePlan>
 			<WebService>ws_tbk</WebService>
 			<DefinedType>Номенклатура</DefinedType>
@@ -147,6 +167,10 @@
 			<Catalog>ГруппыДоступа</Catalog>
 			<Catalog>УсловияПредоставленияСкидокНаценок</Catalog>
 			<Catalog>ПризнакиПредметовРасчета</Catalog>
+			<Catalog>ХранилищеШаблонов</Catalog>
+			<Catalog>ПрофилиГруппДоступа</Catalog>
+			<Catalog>ЭквайринговыеТерминалы</Catalog>
+			<Catalog>ПодключаемоеОборудование</Catalog>
 			<Document>ТБК_ВедомостьОПродажахЗаДень</Document>
 			<Document>ОтчетОРозничныхПродажах</Document>
 			<Document>ЧекККМ</Document>
@@ -160,6 +184,9 @@
 			<Document>ПеремещениеТоваров</Document>
 			<Document>ВозвратТоваровОтПокупателя</Document>
 			<Document>ОплатаОтПокупателяПлатежнойКартой</Document>
+			<Document>РеализацияТоваров</Document>
+			<Document>ПриходныйОрдерНаТовары</Document>
+			<Document>ОтгрузкаТоваровИСМП</Document>
 			<Enum>ВариантыВеденияДополнительныхДанныхПоНоменклатуре</Enum>
 			<Enum>ВидыПродукцииИС</Enum>
 			<Enum>ВидыОперацийЧекККМ</Enum>
@@ -176,12 +203,17 @@
 			<Enum>ПолФизическогоЛица</Enum>
 			<Enum>УсловияПредоставленияСкидокНаценок</Enum>
 			<Enum>ТипыНоменклатуры</Enum>
+			<Enum>СтавкиНДС</Enum>
+			<Enum>ТипыСистемНалогообложенияККТ</Enum>
+			<Enum>СпособыПредоставленияСкидокНаценок</Enum>
 			<DataProcessor>РМКУправляемыйРежим</DataProcessor>
 			<DataProcessor>ТБК_Оле</DataProcessor>
 			<DataProcessor>ТБК_Миграции</DataProcessor>
 			<DataProcessor>ТБК_ВыгрузкаПродажДляИнвентаризации</DataProcessor>
 			<DataProcessor>ПомощникПриемкиОтгрузки</DataProcessor>
 			<DataProcessor>ТБК_TEST_WS</DataProcessor>
+			<DataProcessor>ПечатьЭтикетокИЦенников</DataProcessor>
+			<DataProcessor>СозданиеЧековКоррекции</DataProcessor>
 			<InformationRegister>СостоянияОднократныхСкидокИКупонов</InformationRegister>
 			<InformationRegister>ТБКДанныеВаучера</InformationRegister>
 			<InformationRegister>Штрихкоды</InformationRegister>
@@ -190,9 +222,12 @@
 			<InformationRegister>ТБК_Штрихкоды</InformationRegister>
 			<InformationRegister>КомплектующиеНоменклатуры</InformationRegister>
 			<InformationRegister>ЗначенияДополнительныхПравПользователя</InformationRegister>
+			<InformationRegister>ТБК_Константы</InformationRegister>
+			<InformationRegister>СоответствияОбъектовИнформационныхБаз</InformationRegister>
 			<ChartOfCharacteristicTypes>РазделыДатЗапретаИзменения</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>ТипыШтрихкодов</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>ПраваПользователей</ChartOfCharacteristicTypes>
+			<ChartOfCharacteristicTypes>ДополнительныеРеквизитыИСведения</ChartOfCharacteristicTypes>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

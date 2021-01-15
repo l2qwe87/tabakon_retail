@@ -62,6 +62,34 @@
 						<Event name="OnChange" callType="After">ТБКТекущаяКассаККМПриИзмененииПосле</Event>
 					</Events>
 				</InputField>
+				<UsualGroup name="Debug" id="551">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Debug</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Debug</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="DebugРасширеннаяПодсказка" id="552"/>
+					<ChildItems>
+						<InputField name="Debug_Марка" id="546">
+							<DataPath>Debug_Марка</DataPath>
+							<ContextMenu name="Debug_МаркаКонтекстноеМеню" id="547"/>
+							<ExtendedTooltip name="Debug_МаркаРасширеннаяПодсказка" id="548"/>
+						</InputField>
+						<Button name="Debug_ОбработатьМарку" id="549">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.Debug_ОбработатьМарку</CommandName>
+							<ExtendedTooltip name="Debug_ОбработатьМаркуРасширеннаяПодсказка" id="550"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
 				<LabelField name="НадписьЗаголовок" id="474">
 					<TitleLocation>None</TitleLocation>
 					<AutoMaxWidth>false</AutoMaxWidth>
@@ -2319,6 +2347,40 @@
 						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
+				<UsualGroup name="ГруппаТБК" id="558">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ТБК</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ТБК</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТБКРасширеннаяПодсказка" id="559"/>
+					<ChildItems>
+						<Button name="КнопкаОтключитьЭквайринг" id="560">
+							<Type>UsualButton</Type>
+							<Width>12</Width>
+							<Height>4</Height>
+							<CommandName>Form.Command.ОтключитьЭквайринг</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отключить
+эквайринг</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КнопкаОтключитьЭквайрингРасширеннаяПодсказка" id="561"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
@@ -2390,6 +2452,21 @@
 					</Type>
 				</Column>
 			</Columns>
+		</Attribute>
+		<Attribute name="Debug_Марка" id="1000002">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Debug марка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
@@ -2512,6 +2589,36 @@
 			</Picture>
 			<Action callType="After">ТБКПрименитьВаучерПосле</Action>
 			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="Debug_ОбработатьМарку" id="1000001">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Debug обработать марку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Debug обработать марку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКDebug_ОбработатьМаркуПосле</Action>
+		</Command>
+		<Command name="ОтключитьЭквайринг" id="1000002">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить эквайринг</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить эквайринг</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКОтключитьЭквайрингПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">

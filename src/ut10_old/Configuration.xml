@@ -761,6 +761,8 @@
 			<CommonPicture>ЭлектронныеДокументыНеправильнаяПодпись</CommonPicture>
 			<CommonPicture>ЭлектронныйОбмен1Ссеть</CommonPicture>
 			<CommonPicture>ЭмблемаСервиса1СЭДО</CommonPicture>
+			<CommonPicture>Свойства</CommonPicture>
+			<CommonPicture>ИсторияВерсий</CommonPicture>
 			<Interface>ИнтерфейсЕГАИС</Interface>
 			<Interface>ИнтерфейсКассира</Interface>
 			<Interface>ОбновлениеКонфигурацииИБ</Interface>
@@ -772,6 +774,7 @@
 			<Interface>УправлениеЗапасами</Interface>
 			<Interface>УправлениеПродажами</Interface>
 			<Interface>УправлениеРозничнойТорговлей</Interface>
+			<Interface>Версионирование</Interface>
 			<SessionParameter>ВсеУзлыДляОбменаССайтомЗаказами</SessionParameter>
 			<SessionParameter>ВсеУзлыДляОбменаССайтомТоварами</SessionParameter>
 			<SessionParameter>ВсеУзлыОбменаСРозничнойТорговлей</SessionParameter>
@@ -1095,6 +1098,8 @@
 			<CommonModule>ЭлектронныеДокументыСлужебныйКлиент</CommonModule>
 			<CommonModule>ТБК_ОбменУТНовая</CommonModule>
 			<CommonModule>ТБК_Лог</CommonModule>
+			<CommonModule>ВерсионированиеОбъектов</CommonModule>
+			<CommonModule>ВерсионированиеОбъектовПривилегированный</CommonModule>
 			<ExchangePlan>ОбменРозницаУправлениеТорговлей103</ExchangePlan>
 			<ExchangePlan>ОбменССайтомЗаказами</ExchangePlan>
 			<ExchangePlan>ОбменССайтомТоварами</ExchangePlan>
@@ -1167,6 +1172,7 @@
 			<WebService>Exchange_2_0_1_6</WebService>
 			<WebService>InterfaceVersion</WebService>
 			<WebService>InventoryExchange</WebService>
+			<WebService>tbk</WebService>
 			<WSReference>UpdateFilesApiImplService</WSReference>
 			<WSReference>WS_InventoryExchange</WSReference>
 			<EventSubscription>ВключитьИспользованиеПланаОбмена</EventSubscription>
@@ -1241,6 +1247,10 @@
 			<EventSubscription>ПодпискаНаСобытие1</EventSubscription>
 			<EventSubscription>РегистрацияИзмененийНоменклатурыДляОбменаУТГЛРозница</EventSubscription>
 			<EventSubscription>РегистрацияИзмененийНоменклатурыПриЗаписиДляОбменаУТГЛРозница</EventSubscription>
+			<EventSubscription>ПередЗаписьюПроверкаСкладаИОрганизации</EventSubscription>
+			<EventSubscription>ВерсионированиеОбъектов_ПередЗаписьюДокумента</EventSubscription>
+			<EventSubscription>ВерсионированиеОбъектов_ПередЗаписьюСправочника</EventSubscription>
+			<EventSubscription>ВерсионированиеОбъектов_ПриЗаписиСправочникаДокумента</EventSubscription>
 			<ScheduledJob>ВыполнениеОбмена</ScheduledJob>
 			<ScheduledJob>ЗаданиеАвтономноеРешение</ScheduledJob>
 			<ScheduledJob>ЗаданиеОбменССайтом</ScheduledJob>
@@ -1260,6 +1270,8 @@
 			<ScheduledJob>ЛК_ПроведениеПоПартиям</ScheduledJob>
 			<ScheduledJob>ЛК_УдалениеДоков</ScheduledJob>
 			<ScheduledJob>ОбменСГлавнойРозницей</ScheduledJob>
+			<ScheduledJob>СжатиеДанныхВерсионирования</ScheduledJob>
+			<ScheduledJob>ПроверкаОбменаУТ_УТ</ScheduledJob>
 			<FunctionalOption>АктуальнаяДатаОбновленияПовторноИспользуемыхЗначенийМРО</FunctionalOption>
 			<FunctionalOption>ВестиСведенияДляДекларацийПоАлкогольнойПродукции</FunctionalOption>
 			<FunctionalOption>ИспользоватьОбмен1ССеть</FunctionalOption>
@@ -1417,6 +1429,7 @@
 			<Constant>ПаузаДляПартийНочь</Constant>
 			<Constant>ЛК_Счетчик_Дата_1</Constant>
 			<Constant>ЛК_ПутьКхранилищуКартинок</Constant>
+			<Constant>ИспользоватьВерсионированиеОбъектов</Constant>
 			<CommonForm>АвторизацияНаСайтеПоддержкиПользователей</CommonForm>
 			<CommonForm>АдресУчастникаОбменаЭД</CommonForm>
 			<CommonForm>ВводПароляСОписаниями</CommonForm>
@@ -1605,6 +1618,7 @@
 			<Catalog>Сайт_ТипыДоставки</Catalog>
 			<Catalog>Сайт_ТипыОплаты</Catalog>
 			<Catalog>Сайт_СтатусыЗаказов</Catalog>
+			<Catalog>Мерчанты</Catalog>
 			<Document>ABCКлассификацияПокупателей</Document>
 			<Document>АвансовыйОтчет</Document>
 			<Document>АккредитивПереданный</Document>
@@ -1996,6 +2010,7 @@
 			<Enum>УсловияФормулЦен</Enum>
 			<Enum>ТипыАкций</Enum>
 			<Enum>ШаблоныПечатиЦенников</Enum>
+			<Enum>ВариантыВерсионированияОбъектов</Enum>
 			<Report>ABCАнализПокупателей</Report>
 			<Report>ABCАнализПродаж</Report>
 			<Report>XYZABCАнализПродаж</Report>
@@ -2131,6 +2146,9 @@
 			<Report>АкцииИВаучеры</Report>
 			<Report>ПроверкаАктов</Report>
 			<Report>ПросмотрТоваровНаТочках</Report>
+			<Report>ОтчетпоУдержаниюНедостачи</Report>
+			<Report>ОтчетПоПродавцам</Report>
+			<Report>ИсторияИзмененийОбъектов</Report>
 			<DataProcessor>АвтоОбменДанными</DataProcessor>
 			<DataProcessor>АвтоПолучениеОтправкаЭлектронныхПисем</DataProcessor>
 			<DataProcessor>АдреснаяКнига</DataProcessor>
@@ -2276,6 +2294,8 @@
 			<DataProcessor>ООРП_CличительнаяВедомость</DataProcessor>
 			<DataProcessor>УстановкаМинОстатков</DataProcessor>
 			<DataProcessor>ЗагрузкаГалсер</DataProcessor>
+			<DataProcessor>ОбработкаНехваткиТоваров</DataProcessor>
+			<DataProcessor>НастройкаВерсионирования</DataProcessor>
 			<InformationRegister>ABCКлассификацияПокупателей</InformationRegister>
 			<InformationRegister>АдресныйКлассификатор</InformationRegister>
 			<InformationRegister>ВерсииПодсистем</InformationRegister>
@@ -2419,6 +2439,9 @@
 			<InformationRegister>МинОстаткиГрупп</InformationRegister>
 			<InformationRegister>ДополонительнаяОплатаВРЛ</InformationRegister>
 			<InformationRegister>ДополнительнаяРегистрацияОбъектов</InformationRegister>
+			<InformationRegister>ОкладыПоМагазинам</InformationRegister>
+			<InformationRegister>ВерсииОбъектов</InformationRegister>
+			<InformationRegister>НастройкаВерсионированияОбъектов</InformationRegister>
 			<AccumulationRegister>ВзаиморасчетыСКонтрагентами</AccumulationRegister>
 			<AccumulationRegister>ВзаиморасчетыСКонтрагентамиПоДокументамРасчетов</AccumulationRegister>
 			<AccumulationRegister>ВзаиморасчетыСПодотчетнымиЛицами</AccumulationRegister>
