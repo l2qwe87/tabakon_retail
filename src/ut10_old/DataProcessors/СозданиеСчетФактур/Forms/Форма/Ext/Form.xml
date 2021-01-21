@@ -87,6 +87,26 @@
 					</Title>
 					<ExtendedTooltip name="ГруппаРеализацииРасширеннаяПодсказка" id="10"/>
 					<ChildItems>
+						<UsualGroup name="Группа3" id="78">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="79"/>
+							<ChildItems>
+								<Button name="РеализацииКнопка1" id="74">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>Form.Item.Реализации.StandardCommand.SortListAsc</CommandName>
+									<ExtendedTooltip name="РеализацииКнопка1РасширеннаяПодсказка" id="75"/>
+								</Button>
+								<Button name="РеализацииКнопка2" id="76">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>Form.Item.Реализации.StandardCommand.SortListDesc</CommandName>
+									<ExtendedTooltip name="РеализацииКнопка2РасширеннаяПодсказка" id="77"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
 						<Table name="Реализации" id="11">
 							<Representation>List</Representation>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
@@ -156,13 +176,44 @@
 					</Title>
 					<ExtendedTooltip name="ГруппаПоступленияРасширеннаяПодсказка" id="34"/>
 					<ChildItems>
+						<UsualGroup name="Группа4" id="80">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="81"/>
+							<ChildItems>
+								<Button name="РеализацииКнопка3" id="82">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>35:2bbe4e12-06d2-409b-a972-eea585125d83</CommandName>
+									<ExtendedTooltip name="РеализацииКнопка3РасширеннаяПодсказка" id="83"/>
+								</Button>
+								<Button name="РеализацииКнопка4" id="84">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>35:58b2a785-23f6-4b0e-a324-9a1323285595</CommandName>
+									<ExtendedTooltip name="РеализацииКнопка4РасширеннаяПодсказка" id="85"/>
+								</Button>
+								<Button name="РеализацииКнопка6" id="88">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>35:c0519548-2a9a-44de-a25e-faf01e089d4d</CommandName>
+									<ExtendedTooltip name="РеализацииКнопка6РасширеннаяПодсказка" id="89"/>
+								</Button>
+								<Button name="РеализацииКнопка5" id="86">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>35:44ad3ec9-f3c2-4913-9224-5f9fb6418743</CommandName>
+									<ExtendedTooltip name="РеализацииКнопка5РасширеннаяПодсказка" id="87"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
 						<Table name="Поступления" id="35">
 							<Representation>List</Representation>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<FileDragMode>AsFile</FileDragMode>
-							<DataPath>Объект.Поступления</DataPath>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="ПоступленияКонтекстноеМеню" id="36"/>
 							<AutoCommandBar name="ПоступленияКоманднаяПанель" id="37">
@@ -195,19 +246,21 @@
 							</SearchControlAddition>
 							<ChildItems>
 								<LabelField name="ПоступленияНомерСтроки" id="48">
-									<DataPath>Объект.Поступления.LineNumber</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ПоступленияНомерСтрокиКонтекстноеМеню" id="49"/>
 									<ExtendedTooltip name="ПоступленияНомерСтрокиРасширеннаяПодсказка" id="50"/>
 								</LabelField>
 								<InputField name="ПоступленияПоступления" id="51">
-									<DataPath>Объект.Поступления.Поступление</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ПоступленияПоступленияКонтекстноеМеню" id="52"/>
 									<ExtendedTooltip name="ПоступленияПоступленияРасширеннаяПодсказка" id="53"/>
 								</InputField>
+								<InputField name="ПоступленияКонтрагент" id="71">
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПоступленияКонтрагентКонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="ПоступленияКонтрагентРасширеннаяПодсказка" id="73"/>
+								</InputField>
 								<InputField name="ПоступленияСчетФактура" id="54">
-									<DataPath>Объект.Поступления.СчетФактура</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ПоступленияСчетФактураКонтекстноеМеню" id="55"/>
 									<ExtendedTooltip name="ПоступленияСчетФактураРасширеннаяПодсказка" id="56"/>
