@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПечать" id="41">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.Печать</CommandName>
+				<Font ref="style:TextFont" height="10" kind="StyleItem"/>
+				<Picture>
+					<xr:Ref>StdPicture.Print</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаПечатьРасширеннаяПодсказка" id="42"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="1">
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Table name="ФайлыГТД" id="3">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>ФайлыГТД</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ФайлыГТДКонтекстноеМеню" id="4"/>
+					<AutoCommandBar name="ФайлыГТДКоманднаяПанель" id="5">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ФайлыГТДРасширеннаяПодсказка" id="6"/>
+					<SearchStringAddition name="ФайлыГТДСтрокаПоиска" id="7">
+						<AdditionSource>
+							<Item>ФайлыГТД</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ФайлыГТДСтрокаПоискаКонтекстноеМеню" id="8"/>
+						<ExtendedTooltip name="ФайлыГТДСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ФайлыГТДСостояниеПросмотра" id="10">
+						<AdditionSource>
+							<Item>ФайлыГТД</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ФайлыГТДСостояниеПросмотраКонтекстноеМеню" id="11"/>
+						<ExtendedTooltip name="ФайлыГТДСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ФайлыГТДУправлениеПоиском" id="13">
+						<AdditionSource>
+							<Item>ФайлыГТД</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ФайлыГТДУправлениеПоискомКонтекстноеМеню" id="14"/>
+						<ExtendedTooltip name="ФайлыГТДУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<CheckBoxField name="ФайлыГТДфлВыводитьНаПечать" id="35">
+							<DataPath>ФайлыГТД.флВыводитьНаПечать</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ФайлыГТДфлВыводитьНаПечатьКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="ФайлыГТДфлВыводитьНаПечатьРасширеннаяПодсказка" id="37"/>
+						</CheckBoxField>
+						<InputField name="ФайлыГТДФайлГТД" id="16">
+							<DataPath>ФайлыГТД.ФайлГТД</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ФайлыГТДФайлГТДКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ФайлыГТДФайлГТДРасширеннаяПодсказка" id="18"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<Table name="ФайлыДекларации" id="19">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>ФайлыДекларации</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ФайлыДекларацииКонтекстноеМеню" id="20"/>
+					<AutoCommandBar name="ФайлыДекларацииКоманднаяПанель" id="21">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ФайлыДекларацииРасширеннаяПодсказка" id="22"/>
+					<SearchStringAddition name="ФайлыДекларацииСтрокаПоиска" id="23">
+						<AdditionSource>
+							<Item>ФайлыДекларации</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ФайлыДекларацииСтрокаПоискаКонтекстноеМеню" id="24"/>
+						<ExtendedTooltip name="ФайлыДекларацииСтрокаПоискаРасширеннаяПодсказка" id="25"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ФайлыДекларацииСостояниеПросмотра" id="26">
+						<AdditionSource>
+							<Item>ФайлыДекларации</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ФайлыДекларацииСостояниеПросмотраКонтекстноеМеню" id="27"/>
+						<ExtendedTooltip name="ФайлыДекларацииСостояниеПросмотраРасширеннаяПодсказка" id="28"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ФайлыДекларацииУправлениеПоиском" id="29">
+						<AdditionSource>
+							<Item>ФайлыДекларации</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ФайлыДекларацииУправлениеПоискомКонтекстноеМеню" id="30"/>
+						<ExtendedTooltip name="ФайлыДекларацииУправлениеПоискомРасширеннаяПодсказка" id="31"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<CheckBoxField name="ФайлыДекларациифлВыводитьНаПечать" id="38">
+							<DataPath>ФайлыДекларации.флВыводитьНаПечать</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ФайлыДекларациифлВыводитьНаПечатьКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="ФайлыДекларациифлВыводитьНаПечатьРасширеннаяПодсказка" id="40"/>
+						</CheckBoxField>
+						<InputField name="ФайлыДекларацииФайлДекларации" id="32">
+							<DataPath>ФайлыДекларации.ФайлДекларации</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ФайлыДекларацииФайлДекларацииКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="ФайлыДекларацииФайлДекларацииРасширеннаяПодсказка" id="34"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.РаботаСФайламиГТД</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ФайлыГТД" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файлы ГТД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ФайлГТД" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Файл ГТД</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="флВыводитьНаПечать" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выводить на печать</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ФайлыДекларации" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файлы ГТД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ФайлДекларации" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Файл декларации</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="флВыводитьНаПечать" id="2">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="АдресГТДВХранилище" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес ГТДВХранилище</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Печать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Печать</Action>
+		</Command>
+	</Commands>
+</Form>
