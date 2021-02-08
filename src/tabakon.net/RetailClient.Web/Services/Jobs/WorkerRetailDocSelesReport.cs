@@ -21,7 +21,7 @@ namespace RetailClient.Web.Services.Jobs
                 var arr = new List<string>();
                 var dateBegin = DateTime.Now.Date.AddDays(-50);
 #if RELEASE
-                dateBegin = DateTime.Now.Date.AddDays(-15);
+                dateBegin = DateTime.Now.Date.AddDays(-5);
 #endif
                 while (dateBegin < DateTime.Now)
                 {
@@ -39,7 +39,7 @@ namespace RetailClient.Web.Services.Jobs
                     {
                         //arr.Add(e.Message);
                         var _logger = serviceProvider.GetService<ILogger<WorkerRetailDocSelesReport>>();
-                        _logger.LogError($"{endpoint.RetailEndpointHost} \n{e.Message}", e);
+                        _logger.LogError(e, $"{endpoint.RetailEndpointHost} \n{e.Message}");
                     }
                     dateBegin = dateBegin.AddDays(1);
                 }

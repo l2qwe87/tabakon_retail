@@ -23,42 +23,44 @@ namespace RetailClient
 
             long totalTime = 0;
             int timeout = 5000;
-            Ping pingSender = new Ping();            
-            
-            IPStatus? beastStatus = null;
-            var count = 5;
-            for (var i =0; i< count; i++)
+            using (Ping pingSender = new Ping())
             {
-                var reply = await pingSender.SendPingAsync(host, timeout);
-                totalTime += reply.RoundtripTime;
-                beastStatus = (reply.Status == IPStatus.Success)
-                    ? reply.Status 
-                    : beastStatus ?? reply.Status;
-            }
 
-            if (beastStatus == IPStatus.Success)
-            {
-                return totalTime / count;
-            }
-            else
-            {
-                throw new Exception(Enum.GetName(typeof(IPStatus), beastStatus));  
+                IPStatus? beastStatus = null;
+                var count = 5;
+                for (var i = 0; i < count; i++)
+                {
+                    var reply = await pingSender.SendPingAsync(host, timeout);
+                    totalTime += reply.RoundtripTime;
+                    beastStatus = (reply.Status == IPStatus.Success)
+                        ? reply.Status
+                        : beastStatus ?? reply.Status;
+                }
+
+                if (beastStatus == IPStatus.Success)
+                {
+                    return totalTime / count;
+                }
+                else
+                {
+                    throw new Exception(Enum.GetName(typeof(IPStatus), beastStatus));
+                }
             }
         }
         public async Task<string> GetVersionAsync()
         {
             await this.PingAsync();
-            var ws = GetWSClient(url);
-            using (OperationContextScope ocs=new OperationContextScope(ws.InnerChannel))
+            using (var ws = GetWSClient(url))
+            using (OperationContextScope ocs = new OperationContextScope(ws.InnerChannel))
             {
                 var requestProp = new HttpRequestMessageProperty();
                 requestProp.Headers["Authorization"] = "Basic 0JDQtNC80LjQvToxNTk3NTM=";
                 OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestProp;
                 //var version = await ws.GetVersionAsync();
-                
+
                 var version = ws.GetVersionAsync().Result;
                 return await Task.FromResult(version.Body.@return);
-                
+
             }
         }
 
@@ -98,7 +100,16 @@ namespace RetailClient
             var @params = "{}";
             return Get(method, @params).Replace("\"", "");
         }
-        
+
+        public async Task<string> GetStoreBalanceAsync()
+        {
+            await this.PingAsync();
+
+            var method = "GetStoreBalance";
+            var @params = "{}";
+            return Get(method, @params);
+        }       
+
 
         public struct GetRetailDocSelesReportParams
         {
@@ -122,7 +133,7 @@ namespace RetailClient
 
         private string Post(string method, string @paramStr)
         {
-            var ws = GetWSClient(url);
+            using (var ws = GetWSClient(url))
             using (OperationContextScope ocs = new OperationContextScope(ws.InnerChannel))
             {
                 var requestProp = new HttpRequestMessageProperty();
@@ -135,7 +146,7 @@ namespace RetailClient
 
         private string Get(string method, string @paramStr)
         {
-            var ws = GetWSClient(url);
+            using (var ws = GetWSClient(url))
             using (OperationContextScope ocs = new OperationContextScope(ws.InnerChannel))
             {
                 var requestProp = new HttpRequestMessageProperty();

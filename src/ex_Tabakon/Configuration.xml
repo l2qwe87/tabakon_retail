@@ -47,7 +47,7 @@
 			</UsePurposes>
 			<ScriptVariant>Russian</ScriptVariant>
 			<Vendor/>
-			<Version>1.0.5.4</Version>
+			<Version>1.2.7.2</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
@@ -119,6 +119,8 @@
 			<CommonPicture>РМК_ТочкаКалькулятора</CommonPicture>
 			<CommonPicture>ДлительнаяОперация48</CommonPicture>
 			<CommonPicture>КоллекцияВидыПринтеров</CommonPicture>
+			<Role>ТБК_Кассир</Role>
+			<Role>ДобавлениеИзменениеЧековККМ</Role>
 			<CommonModule>ШтрихкодированиеИС</CommonModule>
 			<CommonModule>ШтрихкодированиеИСРТ</CommonModule>
 			<CommonModule>ШтрихкодированиеМОТП</CommonModule>
@@ -132,6 +134,7 @@
 			<CommonModule>ТБК_WS_POST</CommonModule>
 			<CommonModule>ОбщегоНазначения</CommonModule>
 			<CommonModule>ЗапасыСервер</CommonModule>
+			<CommonModule>ШтрихкодированиеЕГАИСКлиентСервер</CommonModule>
 			<ExchangePlan>ОбменРозницаУправлениеТорговлей103</ExchangePlan>
 			<WebService>ws_tbk</WebService>
 			<DefinedType>Номенклатура</DefinedType>
@@ -165,6 +168,9 @@
 			<Catalog>УсловияПредоставленияСкидокНаценок</Catalog>
 			<Catalog>ПризнакиПредметовРасчета</Catalog>
 			<Catalog>ХранилищеШаблонов</Catalog>
+			<Catalog>ПрофилиГруппДоступа</Catalog>
+			<Catalog>ЭквайринговыеТерминалы</Catalog>
+			<Catalog>ПодключаемоеОборудование</Catalog>
 			<Document>ТБК_ВедомостьОПродажахЗаДень</Document>
 			<Document>ОтчетОРозничныхПродажах</Document>
 			<Document>ЧекККМ</Document>
@@ -179,6 +185,8 @@
 			<Document>ВозвратТоваровОтПокупателя</Document>
 			<Document>ОплатаОтПокупателяПлатежнойКартой</Document>
 			<Document>РеализацияТоваров</Document>
+			<Document>ПриходныйОрдерНаТовары</Document>
+			<Document>ОтгрузкаТоваровИСМП</Document>
 			<Enum>ВариантыВеденияДополнительныхДанныхПоНоменклатуре</Enum>
 			<Enum>ВидыПродукцииИС</Enum>
 			<Enum>ВидыОперацийЧекККМ</Enum>
@@ -205,6 +213,8 @@
 			<DataProcessor>ПомощникПриемкиОтгрузки</DataProcessor>
 			<DataProcessor>ТБК_TEST_WS</DataProcessor>
 			<DataProcessor>ПечатьЭтикетокИЦенников</DataProcessor>
+			<DataProcessor>СозданиеЧековКоррекции</DataProcessor>
+			<DataProcessor>ТБК_ПочинитьВыемку</DataProcessor>
 			<InformationRegister>СостоянияОднократныхСкидокИКупонов</InformationRegister>
 			<InformationRegister>ТБКДанныеВаучера</InformationRegister>
 			<InformationRegister>Штрихкоды</InformationRegister>
@@ -215,6 +225,7 @@
 			<InformationRegister>ЗначенияДополнительныхПравПользователя</InformationRegister>
 			<InformationRegister>ТБК_Константы</InformationRegister>
 			<InformationRegister>СоответствияОбъектовИнформационныхБаз</InformationRegister>
+			<AccumulationRegister>ТоварыНаСкладах</AccumulationRegister>
 			<ChartOfCharacteristicTypes>РазделыДатЗапретаИзменения</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>ТипыШтрихкодов</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>ПраваПользователей</ChartOfCharacteristicTypes>

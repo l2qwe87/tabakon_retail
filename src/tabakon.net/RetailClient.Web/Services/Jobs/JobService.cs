@@ -4,6 +4,7 @@ using RetailClient.Web.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime;
 using System.Threading.Tasks;
 
 namespace RetailClient.Web.Services.Jobs
@@ -61,8 +62,9 @@ namespace RetailClient.Web.Services.Jobs
                                 {
                                     //arr.Add(e.Message);
                                     var _logger = serviceProvider.GetService<ILogger<JobService>>();
-                                    _logger.LogError(e.Message, e);
+                                    _logger.LogError(e, e.Message);
                                 }
+                                Task.Delay(TimeSpan.FromSeconds(5)).Wait();
                             }).Wait(TimeSpan.FromMilliseconds(500));
                         }
                     }
