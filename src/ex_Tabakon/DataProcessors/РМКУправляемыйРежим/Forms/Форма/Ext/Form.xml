@@ -2347,6 +2347,40 @@
 						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
+				<UsualGroup name="ГруппаТБК" id="558">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ТБК</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ТБК</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТБКРасширеннаяПодсказка" id="559"/>
+					<ChildItems>
+						<Button name="КнопкаОтключитьЭквайринг" id="560">
+							<Type>UsualButton</Type>
+							<Width>12</Width>
+							<Height>4</Height>
+							<CommandName>Form.Command.ОтключитьЭквайринг</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отключить
+эквайринг</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КнопкаОтключитьЭквайрингРасширеннаяПодсказка" id="561"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
@@ -2570,6 +2604,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКDebug_ОбработатьМаркуПосле</Action>
+		</Command>
+		<Command name="ОтключитьЭквайринг" id="1000002">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить эквайринг</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить эквайринг</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКОтключитьЭквайрингПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">

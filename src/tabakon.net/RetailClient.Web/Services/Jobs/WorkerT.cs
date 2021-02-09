@@ -4,6 +4,7 @@ using RetailClient.Web.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime;
 using System.Threading.Tasks;
 using Tabakon.DAL;
 using Tabakon.Entity;
@@ -27,16 +28,53 @@ namespace RetailClient.Web.Services.Jobs
             using (var scope = serviceProvider.CreateScope())
             {
                 var retailEndpointsRepo = scope.ServiceProvider.GetRequiredService<IRetailEndpointsRepo>();
-                endpoints = await retailEndpointsRepo.GetRetailEndpointsAsync();
+                endpoints = await retailEndpointsRepo
+                    .GetRetailEndpoints()
+                    .AsNoTracking()
+                    .ToListAsync();
+#if DEBUG
+                endpoints = endpoints.Concat(endpoints).Concat(endpoints).Concat(endpoints)
+                    .Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints)
+                    .Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints);
+#endif
             }
             if (predicat != null) {
                 endpoints = endpoints.Where(e => predicat(e));
             }
 
-            var tasks = endpoints.Select(async endpoint =>
+            //Parallel.ForEach(endpoints, (endpoint =>
+            //{
+            //    JobAsync<T>(alwaysSaveResult, endpoint, func).Wait();
+            //}));
+            //var tasks = endpoints.Select(async endpoint =>
+            //{
+            //    return await JobAsync<T>(alwaysSaveResult, endpoint, func);
+            //});
+            //await Task.WhenAll(tasks);
+
+            var taskCount = 6;
+            var max = endpoints.Count()-1;
+            var part = (max / taskCount)+1;
+            var tasks = Enumerable.Range(0, taskCount).Select(async i => 
             {
-                return await JobAsync<T>(alwaysSaveResult, endpoint, func);
+                var skip = i * part;
+                var take = part;
+                if ((skip + take) > max)
+                {
+                    take = max - skip;
+                }
+                var toDo = endpoints.Skip(skip).Take(take);
+                foreach (var endpoint in toDo)
+                {
+                    await JobAsync<T>(alwaysSaveResult, endpoint, func);
+                }              
+                
             });
+
+            //var tasks = endpoints.Select(async endpoint =>
+            //{
+            //    return await JobAsync<T>(alwaysSaveResult, endpoint, func);
+            //});
             await Task.WhenAll(tasks);
 
             using (var scope = serviceProvider.CreateScope())
@@ -104,6 +142,11 @@ namespace RetailClient.Web.Services.Jobs
         public void Dispose()
         {
             Dispose(true);
+            GC.SuppressFinalize(this);
+            
+            GCSettings.LargeObjectHeapCompactionMode = GCLargeObjectHeapCompactionMode.CompactOnce;
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
         }
         #endregion
     }

@@ -24,9 +24,9 @@ namespace RetailClientTests.Controllers
         [HttpGet]
         public async Task<IEnumerable<RetailVersion>> Get()
         {
-            var versions = await retailEndpointsRepo.GetRetailEndpointsVersionAsync();
+            var versions = retailEndpointsRepo.GetRetailEndpointsVersion();
             
-            return versions;
+            return await versions.AsNoTracking().ToListAsync();
         }
     }
 }

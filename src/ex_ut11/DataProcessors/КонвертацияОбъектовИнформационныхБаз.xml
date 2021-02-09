@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<DataProcessor uuid="44e4adce-9f13-43e5-8fde-b15d73e6bcd4">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject.КонвертацияОбъектовИнформационныхБаз" category="Object">
+				<xr:TypeId>06c40412-ac28-4c2d-adb8-c75d212daae8</xr:TypeId>
+				<xr:ValueId>e7cd6743-73c0-4bb6-a192-28166882807a</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager.КонвертацияОбъектовИнформационныхБаз" category="Manager">
+				<xr:TypeId>1ef0918e-8e30-4fe7-b609-57f8da429130</xr:TypeId>
+				<xr:ValueId>995e0224-5de1-4fff-b413-f081344dc7fe</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>КонвертацияОбъектовИнформационныхБаз</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>cae8a6f2-bbe9-4b73-b839-9bf8e5e2818d</ExtendedConfigurationObject>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="a9ac6265-d953-4252-b936-1c45cfcb05d7">
+				<InternalInfo/>
+				<Properties>
+					<Name>ИмяФайлаОбмена</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>27b27cc5-d1ad-4a2a-bcf4-ec2ebb3eba43</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="731b79c9-f376-404f-9c78-60413dd90e00">
+				<InternalInfo/>
+				<Properties>
+					<Name>УзелОбменаЗагрузкаДанных</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>0c8571be-f9b6-4292-add9-980cfe7fa2ec</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:ExchangePlanRef</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Attribute>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>

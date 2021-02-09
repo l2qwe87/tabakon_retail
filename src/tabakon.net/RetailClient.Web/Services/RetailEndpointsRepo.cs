@@ -18,29 +18,29 @@ namespace RetailClient.Web.Services
             this.ctx = ctx;
         }
 
-        public async Task<IEnumerable<RetailEndpoint>> GetRetailEndpointsAsync() 
+        public IQueryable<RetailEndpoint> GetRetailEndpoints() 
         {
-            var endpoints = await ctx.RetailEndpoint
+            var endpoints = ctx.RetailEndpoint
                 .Where(e => e.MarkAsDeleted == false && e.RetailEndpointHost.Length > 0)
-                .Select(r => r).ToListAsync();
+                .Select(r => r);
 
             return endpoints;
         }
 
-        public async Task<IEnumerable<RetailVersion>> GetRetailEndpointsVersionAsync()
+        public IQueryable<RetailVersion> GetRetailEndpointsVersion()
         { 
-            var versions = await ctx.RetailVersion
+            var versions = ctx.RetailVersion
                 .Where(e => e.RetailEndpoint.MarkAsDeleted == false && e.RetailEndpoint.RetailEndpointHost.Length > 0)
-                .Select(r => r).ToListAsync();
+                .Select(r => r);
 
             return versions;
         }
 
-        public async Task<IEnumerable<RetailExtConfiguration>> GetRetailExtConfigurationAsync()
+        public IQueryable<RetailExtConfiguration> GetRetailExtConfiguration()
         {
-            var extConfiguration = await ctx.RetailExtConfiguration
+            var extConfiguration = ctx.RetailExtConfiguration
                 .Where(e => e.RetailEndpoint.MarkAsDeleted == false && e.RetailEndpoint.RetailEndpointHost.Length > 0)
-                .Select(r => r).ToListAsync();
+                .Select(r => r);
 
             return extConfiguration;
         }

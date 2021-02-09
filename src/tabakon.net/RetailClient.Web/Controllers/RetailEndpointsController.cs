@@ -54,9 +54,9 @@ namespace RetailClientTests.Controllers
         [HttpGet]
         public async Task<IEnumerable<RetailEndpointDto>> Get()
         {
-            var endpoints = await retailEndpointsRepo.GetRetailEndpointsAsync();
-            var versions = await retailEndpointsRepo.GetRetailEndpointsVersionAsync();
-            var extConfigurations = await retailEndpointsRepo.GetRetailExtConfigurationAsync();
+            var endpoints = await retailEndpointsRepo.GetRetailEndpoints().AsNoTracking().ToListAsync();
+            var versions = await retailEndpointsRepo.GetRetailEndpointsVersion().AsNoTracking().ToListAsync();
+            var extConfigurations = await retailEndpointsRepo.GetRetailExtConfiguration().AsNoTracking().ToListAsync();
 
 
             return endpoints.Select(e => new RetailEndpointDto(e) {
@@ -73,9 +73,11 @@ namespace RetailClientTests.Controllers
             var workerRetailVersion = serviceProvider.GetService<WorkerRetailVersion>();
             await workerRetailVersion.RunAsync(serviceProvider, e => e.RetailEndpointIdentity == retailEndpointIdentity);
 
-            var data = await retailEndpointsRepo.GetRetailEndpointsVersionAsync();
+            var data = retailEndpointsRepo.GetRetailEndpointsVersion();
             data = data.Where(v => v.RetailEndpointIdentity == retailEndpointIdentity);
-            return data.FirstOrDefault();
+            return await data
+                .AsNoTracking()
+                .FirstOrDefaultAsync();
         }
 
         [HttpGet("RetailExtConfiguration/{retailEndpointIdentity}")]
@@ -84,16 +86,20 @@ namespace RetailClientTests.Controllers
             var workerRetailVersion = serviceProvider.GetService<WorkerRetailExtConfiguration>();
             await workerRetailVersion.RunAsync(serviceProvider, e => e.RetailEndpointIdentity == retailEndpointIdentity);
 
-            var data = await retailEndpointsRepo.GetRetailExtConfigurationAsync();
+            var data = retailEndpointsRepo.GetRetailExtConfiguration();
             data = data.Where(v => v.RetailEndpointIdentity == retailEndpointIdentity);
-            return data.FirstOrDefault();
+            return await data
+                .AsNoTracking()
+                .FirstOrDefaultAsync();
         }
 
         [HttpGet("RetailExtConfiguration/{retailEndpointIdentity}/{extConfiguration}")]
         public async Task<RetailExtConfiguration> SetRetailExtConfiguration(string retailEndpointIdentity, string extConfiguration)
         {
             var retailEndpointsRepo = serviceProvider.GetRequiredService<IRetailEndpointsRepo>();
-            var endpoint = (await retailEndpointsRepo.GetRetailEndpointsAsync()).FirstOrDefault(e => e.RetailEndpointIdentity == retailEndpointIdentity);
+            var endpoint = await retailEndpointsRepo.GetRetailEndpoints()
+                .AsNoTracking()
+                .FirstOrDefaultAsync(e => e.RetailEndpointIdentity == retailEndpointIdentity);
 
             var ws = new RetailWSClient(endpoint.RetailEndpointHost, endpoint.RetailEndpointUrl);
             await ws.SetExtConfigurationAsync(extConfiguration);
@@ -102,16 +108,16 @@ namespace RetailClientTests.Controllers
             var workerRetailVersion = serviceProvider.GetService<WorkerRetailExtConfiguration>();
             await workerRetailVersion.RunAsync(serviceProvider, e => e.RetailEndpointIdentity == retailEndpointIdentity);
 
-            var data = await retailEndpointsRepo.GetRetailExtConfigurationAsync();
+            var data = retailEndpointsRepo.GetRetailExtConfiguration();
             data = data.Where(v => v.RetailEndpointIdentity == retailEndpointIdentity);
-            return data.FirstOrDefault();
+            return await data.AsNoTracking().FirstOrDefaultAsync();
         }
 
         [HttpGet("Run_apply_cfe/{retailEndpointIdentity}")]
         public async Task Run_apply_cfe(string retailEndpointIdentity)
         {
             var retailEndpointsRepo = serviceProvider.GetRequiredService<IRetailEndpointsRepo>();
-            var endpoint = (await retailEndpointsRepo.GetRetailEndpointsAsync()).FirstOrDefault(e => e.RetailEndpointIdentity == retailEndpointIdentity);
+            var endpoint = await retailEndpointsRepo.GetRetailEndpoints().FirstOrDefaultAsync(e => e.RetailEndpointIdentity == retailEndpointIdentity);
 
             var ws = new RetailWSClient(endpoint.RetailEndpointHost, endpoint.RetailEndpointUrl);
             await ws.Run_apply_cfe();
@@ -121,7 +127,9 @@ namespace RetailClientTests.Controllers
         public async Task Run_exRetailOle(string retailEndpointIdentity)
         {
             var retailEndpointsRepo = serviceProvider.GetRequiredService<IRetailEndpointsRepo>();
-            var endpoint = (await retailEndpointsRepo.GetRetailEndpointsAsync()).FirstOrDefault(e => e.RetailEndpointIdentity == retailEndpointIdentity);
+            var endpoint = await retailEndpointsRepo.GetRetailEndpoints()
+                .AsNoTracking()
+                .FirstOrDefaultAsync(e => e.RetailEndpointIdentity == retailEndpointIdentity);
 
             var ws = new RetailWSClient(endpoint.RetailEndpointHost, endpoint.RetailEndpointUrl);
             await ws.Run_exRetailOle();
