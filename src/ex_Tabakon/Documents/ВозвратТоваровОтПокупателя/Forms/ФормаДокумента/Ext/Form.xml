@@ -217,6 +217,13 @@
 				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="60"/>
 			</Button>
+			<Button name="ФормаОтвязатьЧек" id="550">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОтвязатьЧек</CommandName>
+				<RepresentationInContextMenu>OnlyInContextMenu</RepresentationInContextMenu>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаОтвязатьЧекРасширеннаяПодсказка" id="551"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -1862,6 +1869,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКОплатаСмешаннаяПосле</Action>
+		</Command>
+		<Command name="ОтвязатьЧек" id="1000003">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отвязать чек</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отвязать чек</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКОтвязатьЧекПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
