@@ -106,6 +106,9 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ДокументОприходования</dataPath>
 			<field>ДокументОприходования</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ЗаказПокупателя</dataPath>
@@ -147,6 +150,44 @@
 				<dcscom:periodType>Main</dcscom:periodType>
 			</role>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПродажиБезНДС</dataPath>
+			<field>ПродажиБезНДС</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗначениеНДС</dataPath>
+			<field>ЗначениеНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение НДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СебестоимостьБезНДС</dataPath>
+			<field>СебестоимостьБезНДС</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НДСПродаж</dataPath>
+			<field>НДСПродаж</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НДСПродаж</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НДССебестоимости</dataPath>
+			<field>НДССебестоимости</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НДССебестоимости</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	МинимальныйОстаток.Склад,
@@ -186,7 +227,9 @@
 			ТОГДА ПродажиОбороты.Регистратор.СкладОрдер
 		ИНАЧЕ ПродажиОбороты.Регистратор.Склад
 	КОНЕЦ КАК Магазин,
-	ПродажиОбороты.Регистратор
+	ПродажиОбороты.Регистратор,
+	ПродажиСебестоимостьОбороты.ДокументОприходования,
+	ПродажиСебестоимостьОбороты.КоличествоОборот
 ПОМЕСТИТЬ ВТТаблица
 ИЗ
 	РегистрНакопления.Продажи.Обороты(&amp;ДатаНач, КОНЕЦПЕРИОДА(&amp;ДатаКон, ДЕНЬ), Регистратор, ) КАК ПродажиОбороты
@@ -209,7 +252,9 @@
 			ТОГДА ПродажиОбороты.Регистратор.СкладОрдер
 		ИНАЧЕ ПродажиОбороты.Регистратор.Склад
 	КОНЕЦ,
-	ПродажиОбороты.Регистратор
+	ПродажиОбороты.Регистратор,
+	ПродажиСебестоимостьОбороты.ДокументОприходования,
+	ПродажиСебестоимостьОбороты.КоличествоОборот
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -222,10 +267,11 @@
 	ВТТаблица.Продажии,
 	ВТТаблица.Себестоимость,
 	ВТТаблица.Магазин,
-	ВТТаблица.Продажии - ВТТаблица.Себестоимость КАК Прибыль,
 	МО.МинОстаток,
 	Кат.Категория,
-	ВТТаблица.Регистратор
+	ВТТаблица.Регистратор,
+	ВТТаблица.ДокументОприходования
+ПОМЕСТИТЬ Итог
 ИЗ
 	ВТТаблица КАК ВТТаблица
 		ЛЕВОЕ СОЕДИНЕНИЕ МО КАК МО
@@ -242,12 +288,71 @@
 	ЗНАЧЕНИЯХАРАКТЕРИСТИК РегистрСведений.ЗначенияСвойствОбъектов
 	ПОЛЕОБЪЕКТА Объект
 	ПОЛЕВИДА Свойство
-	ПОЛЕЗНАЧЕНИЯ Значение }</query>
+	ПОЛЕЗНАЧЕНИЯ Значение }
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Итог.НоменклатурнаяГруппа,
+	Итог.Номенклатура,
+	Итог.Организация,
+	Итог.Ответственный,
+	Итог.Количество,
+	Итог.Продажии,
+	Итог.Себестоимость,
+	Итог.Магазин,
+	Итог.МинОстаток,
+	Итог.Категория,
+	Итог.Регистратор,
+	ВЫБОР
+		КОГДА ПоступлениеТоваровУслугТовары.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНдс.БезНДС)
+				ИЛИ ПоступлениеТоваровУслугТовары.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНдс.ПустаяСсылка)
+				ИЛИ ПоступлениеТоваровУслугТовары.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНдс.НДС0)
+				ИЛИ ПоступлениеТоваровУслугТовары.СтавкаНДС ЕСТЬ NULL
+			ТОГДА 0
+		КОГДА ПоступлениеТоваровУслугТовары.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНдс.НДС10)
+			ТОГДА 10
+		КОГДА ПоступлениеТоваровУслугТовары.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНдс.НДС18)
+			ТОГДА 18
+		КОГДА ПоступлениеТоваровУслугТовары.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНдс.НДС20)
+			ТОГДА 20
+	КОНЕЦ КАК ЗначениеНДС,
+	Итог.ДокументОприходования
+ПОМЕСТИТЬ ПолныйИТОГ
+ИЗ
+	Итог КАК Итог
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ПоступлениеТоваровУслуг.Товары КАК ПоступлениеТоваровУслугТовары
+		ПО Итог.Номенклатура = ПоступлениеТоваровУслугТовары.Номенклатура
+			И Итог.ДокументОприходования = ПоступлениеТоваровУслугТовары.Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ПолныйИТОГ.НоменклатурнаяГруппа,
+	ПолныйИТОГ.Номенклатура,
+	ПолныйИТОГ.Организация,
+	ПолныйИТОГ.Ответственный,
+	ПолныйИТОГ.Количество,
+	ПолныйИТОГ.Продажии,
+	ПолныйИТОГ.Себестоимость,
+	ПолныйИТОГ.Магазин,
+	ПолныйИТОГ.МинОстаток,
+	ПолныйИТОГ.Категория,
+	ПолныйИТОГ.Регистратор,
+	ПолныйИТОГ.ДокументОприходования,
+	ПолныйИТОГ.ЗначениеНДС,
+	ВЫРАЗИТЬ(ПолныйИТОГ.Продажии / (1 + ПолныйИТОГ.ЗначениеНДС / 100) КАК ЧИСЛО(10, 2)) КАК ПродажиБезНДС,
+	ВЫРАЗИТЬ(ПолныйИТОГ.Себестоимость / (1 + ПолныйИТОГ.ЗначениеНДС / 100) КАК ЧИСЛО(10, 2)) КАК СебестоимостьБезНДС,
+	ВЫРАЗИТЬ(ПолныйИТОГ.Продажии - ПолныйИТОГ.Продажии / (1 + ПолныйИТОГ.ЗначениеНДС / 100) КАК ЧИСЛО(10, 2)) КАК НДСПродаж,
+	ВЫРАЗИТЬ(ПолныйИТОГ.Себестоимость - ПолныйИТОГ.Себестоимость / (1 + ПолныйИТОГ.ЗначениеНДС / 100) КАК ЧИСЛО(10, 2)) КАК НДССебестоимости,
+	(ВЫРАЗИТЬ(ПолныйИТОГ.Продажии / (1 + ПолныйИТОГ.ЗначениеНДС / 100) КАК ЧИСЛО(10, 2))) - (ВЫРАЗИТЬ(ПолныйИТОГ.Себестоимость / (1 + ПолныйИТОГ.ЗначениеНДС / 100) КАК ЧИСЛО(10, 2))) КАК Прибыль
+ИЗ
+	ПолныйИТОГ КАК ПолныйИТОГ</query>
 	</dataSet>
 	<calculatedField>
 		<dataPath>ПрибыльПроцент</dataPath>
-		<expression>Прибыль/ (ВЫБОР
-КОГДА Себестоимость = 0 ТОГДА Прибыль ИНАЧЕ Себестоимость КОНЕЦ) * 100 </expression>
+		<expression>ОКР(Прибыль/ (ВЫБОР
+КОГДА СебестоимостьБезНДС = 0 ТОГДА Прибыль ИНАЧЕ СебестоимостьБезНДС КОНЕЦ) * 100 ,2)</expression>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
@@ -274,6 +379,22 @@
 	<totalField>
 		<dataPath>МинОстаток</dataPath>
 		<expression>Максимум(МинОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СебестоимостьБезНДС</dataPath>
+		<expression>Сумма(СебестоимостьБезНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПродажиБезНДС</dataPath>
+		<expression>Сумма(ПродажиБезНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НДСПродаж</dataPath>
+		<expression>Сумма(НДСПродаж)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НДССебестоимости</dataPath>
+		<expression>Сумма(НДССебестоимости)</expression>
 	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -481,13 +602,28 @@
 					<dcsset:field>Себестоимость</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НДССебестоимости</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СебестоимостьБезНДС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Продажии</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НДСПродаж</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПродажиБезНДС</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Прибыль</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>ПрибыльПроцент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗначениеНДС</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:filter>
@@ -512,7 +648,10 @@
 			</dcsset:filter>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ДатаКон</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>ДатаНач</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
 				</dcscor:item>
@@ -601,7 +740,10 @@
 			</dcsset:filter>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ДатаКон</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>ДатаНач</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
 				</dcscor:item>
@@ -659,13 +801,28 @@
 					<dcsset:field>Себестоимость</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НДССебестоимости</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СебестоимостьБезНДС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Продажии</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НДСПродаж</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПродажиБезНДС</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Прибыль</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>ПрибыльПроцент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗначениеНДС</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:filter>
@@ -688,6 +845,16 @@
 					</dcsset:right>
 				</dcsset:item>
 			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ДатаКон</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ДатаНач</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
 			<dcsset:outputParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>МакетОформления</dcscor:parameter>
