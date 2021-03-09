@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Document uuid="60fd04b5-de4c-417a-92de-f6d076ef0cee">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentObject.ОтчетОРозничныхПродажах" category="Object">
+				<xr:TypeId>6d29d52a-3ecc-4cda-a40d-ba45dfc97df1</xr:TypeId>
+				<xr:ValueId>817adcc4-8c36-402d-90ba-303d2e9750f8</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentRef.ОтчетОРозничныхПродажах" category="Ref">
+				<xr:TypeId>85f46fa8-e5c8-4a60-90ad-726d24de8ab1</xr:TypeId>
+				<xr:ValueId>bef58c3d-bb66-4b7d-9641-c3d00e2a2f3b</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentSelection.ОтчетОРозничныхПродажах" category="Selection">
+				<xr:TypeId>5914f7e0-ac54-4ebe-913d-daa12953e246</xr:TypeId>
+				<xr:ValueId>b4d175f1-c4e1-4562-ad55-ba34dc91b3ed</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentList.ОтчетОРозничныхПродажах" category="List">
+				<xr:TypeId>4a0bdf7b-352f-4dff-9fc6-8ce3a0f6d9d8</xr:TypeId>
+				<xr:ValueId>7b61c76e-bc68-4a76-9626-eca684a6efe6</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentManager.ОтчетОРозничныхПродажах" category="Manager">
+				<xr:TypeId>d052e705-d965-4da3-a406-b5c725886562</xr:TypeId>
+				<xr:ValueId>b5e7012a-cf26-47ca-8f6d-6148a82fca9f</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ОтчетОРозничныхПродажах</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>b9bdcee6-45bd-4f47-851c-6f90e0d0dd13</ExtendedConfigurationObject>
+			<RegisterRecords/>
+		</Properties>
+		<ChildObjects>
+			<TabularSection uuid="be0f6e09-6c17-489a-86e4-dc16533f826f">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.ОтчетОРозничныхПродажах.Товары" category="TabularSection">
+						<xr:TypeId>15025d5c-ca28-4f5e-b2d1-5448e8d7291d</xr:TypeId>
+						<xr:ValueId>aa726863-6b8d-49ea-a56e-ccec4e4c0df1</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.ОтчетОРозничныхПродажах.Товары" category="TabularSectionRow">
+						<xr:TypeId>6be7b895-6e82-42a0-9502-a962db252546</xr:TypeId>
+						<xr:ValueId>6076a434-64c9-481c-b066-4a225796c583</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>Товары</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>3c4b45fd-65c3-46a3-b288-6b114e3b7b60</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="41c4dd41-3265-4011-a6db-bacf13c3e553">
+						<InternalInfo/>
+						<Properties>
+							<Name>СчетУчета</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>d25c4871-ba41-4553-9e72-3a4a235e61c7</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:ChartOfAccountsRef.Хозрасчетный</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+		</ChildObjects>
+	</Document>
+</MetaDataObject>
