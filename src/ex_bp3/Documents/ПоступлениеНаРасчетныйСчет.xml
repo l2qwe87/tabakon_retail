@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Document uuid="7e84e4fa-4a66-4648-a25f-a67b1e1df391">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentObject.ПоступлениеНаРасчетныйСчет" category="Object">
+				<xr:TypeId>2c303350-d5aa-437c-8a0e-ee14b7bdcf53</xr:TypeId>
+				<xr:ValueId>72092227-e68b-4150-b59b-821774e93060</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentRef.ПоступлениеНаРасчетныйСчет" category="Ref">
+				<xr:TypeId>b66455cc-f24d-43b0-88fa-672495f0b1b7</xr:TypeId>
+				<xr:ValueId>69ccb0bb-0fba-4c71-90a9-16599c890f69</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentSelection.ПоступлениеНаРасчетныйСчет" category="Selection">
+				<xr:TypeId>30ee87c7-d97f-4a3d-8756-bf8536a1d330</xr:TypeId>
+				<xr:ValueId>0494c901-018d-4a43-abf9-d002a21f0452</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentList.ПоступлениеНаРасчетныйСчет" category="List">
+				<xr:TypeId>a36745fc-cb93-4d33-8e3a-43d81326003c</xr:TypeId>
+				<xr:ValueId>aeb0e6df-fc04-4829-a870-2acacc587920</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentManager.ПоступлениеНаРасчетныйСчет" category="Manager">
+				<xr:TypeId>691f8ea4-e2a8-4553-84bc-dab12d3730a3</xr:TypeId>
+				<xr:ValueId>7d859c79-135f-48f5-8832-ed524ef386a6</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ПоступлениеНаРасчетныйСчет</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>d2ae4aee-94fe-4d92-976e-b939d3475235</ExtendedConfigurationObject>
+			<RegisterRecords/>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="33fccca1-d950-4bfa-a068-8f22f84d667b">
+				<InternalInfo/>
+				<Properties>
+					<Name>СуммаУслуг</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>24b5994c-2562-4e79-9274-77eab4a33fdd</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="c3b5ea2d-7912-42a8-b077-cb947ef76ae9">
+				<InternalInfo/>
+				<Properties>
+					<Name>НазначениеПлатежа</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>c36d4bd1-fa77-461f-b260-2564b02031b0</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>210</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<TabularSection uuid="a3864f3a-1f38-496a-9fb6-bd0d7dfc2425">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.ПоступлениеНаРасчетныйСчет.РасшифровкаПлатежа" category="TabularSection">
+						<xr:TypeId>40a09721-9063-4cc0-bbc0-302c0c2e7fc7</xr:TypeId>
+						<xr:ValueId>dd21643c-0185-44a9-805d-02ac093592dc</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.ПоступлениеНаРасчетныйСчет.РасшифровкаПлатежа" category="TabularSectionRow">
+						<xr:TypeId>c1784acc-2d2e-4619-92de-f4c4452503f0</xr:TypeId>
+						<xr:ValueId>e0031106-6587-43b9-8d53-08d08ed7559e</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>РасшифровкаПлатежа</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>26d07140-0636-4d56-b832-8e6242a2bdd6</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="b9ede14b-b423-4161-95f5-9cfa6dbb0588">
+						<InternalInfo/>
+						<Properties>
+							<Name>СуммаУслуг</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>2ab30651-35aa-4e6e-bcb1-bae3f2a2ff56</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>15</v8:Digits>
+									<v8:FractionDigits>2</v8:FractionDigits>
+									<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+		</ChildObjects>
+	</Document>
+</MetaDataObject>
