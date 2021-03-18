@@ -227,8 +227,12 @@
 	ПродажиОбороты.Номенклатура,
 	ПродажиОбороты.Организация,
 	ПродажиОбороты.Регистратор.Ответственный КАК Ответственный,
-	СУММА(ПродажиСебестоимостьОбороты.КоличествоОборот) КАК Количество,
-	СУММА(ПродажиОбороты.СтоимостьОборот / ПродажиОбороты.КоличествоОборот * ПродажиСебестоимостьОбороты.КоличествоОборот) КАК Продажии,
+	СУММА(ПродажиОбороты.КоличествоОборот) КАК Количество,
+	СУММА(ВЫБОР
+			КОГДА ЕСТЬNULL(ПродажиСебестоимостьОбороты.КоличествоОборот, 0) = 0
+				ТОГДА ПродажиОбороты.СтоимостьОборот
+			ИНАЧЕ ПродажиОбороты.СтоимостьОборот / ПродажиОбороты.КоличествоОборот * ПродажиСебестоимостьОбороты.КоличествоОборот
+		КОНЕЦ) КАК Продажии,
 	СУММА(ЕСТЬNULL(ПродажиСебестоимостьОбороты.СтоимостьОборот, 0)) КАК Себестоимость,
 	ВЫБОР
 		КОГДА ПродажиОбороты.Регистратор.Склад ЕСТЬ NULL
@@ -313,16 +317,16 @@
 	Итог.Категория,
 	Итог.Регистратор,
 	ВЫБОР
-		КОГДА ПоступлениеТоваровУслугТовары.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНдс.БезНДС)
-				ИЛИ ПоступлениеТоваровУслугТовары.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНдс.ПустаяСсылка)
-				ИЛИ ПоступлениеТоваровУслугТовары.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНдс.НДС0)
-				ИЛИ ПоступлениеТоваровУслугТовары.СтавкаНДС ЕСТЬ NULL
+		КОГДА ВложенныйЗапрос.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНдс.БезНДС)
+				ИЛИ ВложенныйЗапрос.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНдс.ПустаяСсылка)
+				ИЛИ ВложенныйЗапрос.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНдс.НДС0)
+				ИЛИ ВложенныйЗапрос.СтавкаНДС ЕСТЬ NULL
 			ТОГДА 0
-		КОГДА ПоступлениеТоваровУслугТовары.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНдс.НДС10)
+		КОГДА ВложенныйЗапрос.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНдс.НДС10)
 			ТОГДА 10
-		КОГДА ПоступлениеТоваровУслугТовары.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНдс.НДС18)
+		КОГДА ВложенныйЗапрос.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНдс.НДС18)
 			ТОГДА 18
-		КОГДА ПоступлениеТоваровУслугТовары.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНдс.НДС20)
+		КОГДА ВложенныйЗапрос.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНдс.НДС20)
 			ТОГДА 20
 	КОНЕЦ КАК ЗначениеНДС,
 	Итог.ДокументОприходования,
@@ -330,9 +334,21 @@
 ПОМЕСТИТЬ ПолныйИТОГ
 ИЗ
 	Итог КАК Итог
-		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ПоступлениеТоваровУслуг.Товары КАК ПоступлениеТоваровУслугТовары
-		ПО Итог.Номенклатура = ПоступлениеТоваровУслугТовары.Номенклатура
-			И Итог.ДокументОприходования = ПоступлениеТоваровУслугТовары.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ПоступлениеТоваровУслугТовары.Ссылка КАК Ссылка,
+			ПоступлениеТоваровУслугТовары.Номенклатура КАК Номенклатура,
+			МАКСИМУМ(ПоступлениеТоваровУслугТовары.СтавкаНДС) КАК СтавкаНДС
+		ИЗ
+			Документ.ПоступлениеТоваровУслуг.Товары КАК ПоступлениеТоваровУслугТовары,
+			Итог КАК Итог
+		ГДЕ
+			ПоступлениеТоваровУслугТовары.Ссылка В (Итог.ДокументОприходования)
+		
+		СГРУППИРОВАТЬ ПО
+			ПоступлениеТоваровУслугТовары.Ссылка,
+			ПоступлениеТоваровУслугТовары.Номенклатура) КАК ВложенныйЗапрос
+		ПО Итог.Номенклатура = ВложенныйЗапрос.Номенклатура
+			И Итог.ДокументОприходования = ВложенныйЗапрос.Ссылка
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -362,11 +378,11 @@
 			ИНАЧЕ 0
 		КОНЕЦ КАК ЧИСЛО(10, 2)) КАК НДСПродаж,
 	ВЫРАЗИТЬ(ПолныйИТОГ.Себестоимость - ПолныйИТОГ.Себестоимость / (1 + ПолныйИТОГ.ЗначениеНДС / 100) КАК ЧИСЛО(10, 2)) КАК НДССебестоимости,
-	ВЫБОР
-		КОГДА ПолныйИТОГ.ОрганизацияИНН = "781122201700"
-			ТОГДА (ВЫРАЗИТЬ(ПолныйИТОГ.Продажии / (1 + 20 / 100) КАК ЧИСЛО(10, 2))) - (ВЫРАЗИТЬ(ПолныйИТОГ.Себестоимость / (1 + ПолныйИТОГ.ЗначениеНДС / 100) КАК ЧИСЛО(10, 2)))
-		ИНАЧЕ ПолныйИТОГ.Продажии - ПолныйИТОГ.Себестоимость
-	КОНЕЦ КАК Прибыль,
+	ВЫРАЗИТЬ(ВЫБОР
+			КОГДА ПолныйИТОГ.ОрганизацияИНН = "781122201700"
+				ТОГДА (ВЫРАЗИТЬ(ПолныйИТОГ.Продажии / (1 + 20 / 100) КАК ЧИСЛО(10, 2))) - (ВЫРАЗИТЬ(ПолныйИТОГ.Себестоимость / (1 + ПолныйИТОГ.ЗначениеНДС / 100) КАК ЧИСЛО(10, 2)))
+			ИНАЧЕ ПолныйИТОГ.Продажии - ПолныйИТОГ.Себестоимость
+		КОНЕЦ КАК ЧИСЛО(15, 2)) КАК Прибыль,
 	ПолныйИТОГ.ОрганизацияИНН,
 	ПолныйИТОГ.Регистратор.Контрагент
 ИЗ
@@ -684,96 +700,9 @@
 					<dcscor:parameter>ДатаНач</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
 				</dcscor:item>
-			</dcsset:dataParameters>
-			<dcsset:outputParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>МакетОформления</dcscor:parameter>
-					<dcscor:value xsi:type="xs:string">Арктика</dcscor:value>
-				</dcscor:item>
-			</dcsset:outputParameters>
-			<dcsset:item xsi:type="dcsset:StructureItemGroup">
-				<dcsset:groupItems>
-					<dcsset:item xsi:type="dcsset:GroupItemField">
-						<dcsset:field>Организация</dcsset:field>
-						<dcsset:groupType>Items</dcsset:groupType>
-						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-					</dcsset:item>
-				</dcsset:groupItems>
-				<dcsset:order>
-					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-				</dcsset:order>
-				<dcsset:selection>
-					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-				</dcsset:selection>
-				<dcsset:item xsi:type="dcsset:StructureItemGroup">
-					<dcsset:order>
-						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-					</dcsset:order>
-					<dcsset:selection>
-						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-					</dcsset:selection>
-				</dcsset:item>
-			</dcsset:item>
-		</dcsset:settings>
-	</settingsVariant>
-	<settingsVariant>
-		<dcsset:name>Автор</dcsset:name>
-		<dcsset:presentation xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Автор</v8:content>
-			</v8:item>
-		</dcsset:presentation>
-		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
-			<dcsset:selection>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Номенклатура</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Количество</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Себестоимость</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Продажии</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Прибыль</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ПрибыльПроцент</dcsset:field>
-				</dcsset:item>
-			</dcsset:selection>
-			<dcsset:filter>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">Магазин</dcsset:left>
-					<dcsset:comparisonType>InListByHierarchy</dcsset:comparisonType>
-					<dcsset:right xsi:type="v8:ValueListType">
-						<v8:valueType/>
-						<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
-					</dcsset:right>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
-					<dcsset:comparisonType>InListByHierarchy</dcsset:comparisonType>
-					<dcsset:right xsi:type="v8:ValueListType">
-						<v8:valueType/>
-						<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
-					</dcsset:right>
-				</dcsset:item>
-			</dcsset:filter>
-			<dcsset:dataParameters>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>ДатаКон</dcscor:parameter>
-					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>ДатаНач</dcscor:parameter>
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Регистратор</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
 				</dcscor:item>
 			</dcsset:dataParameters>
@@ -786,7 +715,7 @@
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
 				<dcsset:groupItems>
 					<dcsset:item xsi:type="dcsset:GroupItemField">
-						<dcsset:field>Ответственный</dcsset:field>
+						<dcsset:field>Организация</dcsset:field>
 						<dcsset:groupType>Items</dcsset:groupType>
 						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
@@ -853,6 +782,9 @@
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>ЗначениеНДС</dcsset:field>
 				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Регистратор</dcsset:field>
+				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:filter>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -882,6 +814,11 @@
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>ДатаНач</dcscor:parameter>
 					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Регистратор</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:outputParameters>
