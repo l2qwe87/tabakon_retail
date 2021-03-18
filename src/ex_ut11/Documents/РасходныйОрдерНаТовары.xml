@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Document uuid="a3f6da34-3eb7-47b8-82a3-13596940d63b">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentObject.РасходныйОрдерНаТовары" category="Object">
+				<xr:TypeId>c5ca6f23-ed42-4fb5-ac38-f74803d5d9eb</xr:TypeId>
+				<xr:ValueId>6e3bf142-f110-4750-92bd-866152d2e756</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentRef.РасходныйОрдерНаТовары" category="Ref">
+				<xr:TypeId>7392a561-246b-4690-a1b4-659732143e1c</xr:TypeId>
+				<xr:ValueId>8af7ddfe-bfb7-4125-8a32-d1a0da6f5f00</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentSelection.РасходныйОрдерНаТовары" category="Selection">
+				<xr:TypeId>0dac9dca-4608-4705-8d4a-b48628c4da29</xr:TypeId>
+				<xr:ValueId>02a75c08-931d-4a11-95f9-64c23ccb1d89</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentList.РасходныйОрдерНаТовары" category="List">
+				<xr:TypeId>8871c65d-86a3-4f5c-a815-e2dee51ac882</xr:TypeId>
+				<xr:ValueId>37344329-6683-49d0-bbff-c90acc957996</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentManager.РасходныйОрдерНаТовары" category="Manager">
+				<xr:TypeId>b2a2e286-7bbd-4d82-8ac5-e25ef420694e</xr:TypeId>
+				<xr:ValueId>89e2cd9e-9b76-4840-a0fe-4bf8eeba5441</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>РасходныйОрдерНаТовары</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>e5b57481-c7d7-459c-8f38-003976928dcf</ExtendedConfigurationObject>
+			<RegisterRecords/>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="bfaf5f69-6cad-4331-b653-24ce725ce499">
+				<InternalInfo/>
+				<Properties>
+					<Name>СкладскаяОперация</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>89cd1a11-c961-49a0-b7ea-67cc67387e68</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.СкладскиеОперации</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="3cf73b91-0040-46eb-a6c9-cce82bac4352">
+				<InternalInfo/>
+				<Properties>
+					<Name>Статус</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>07d94e4d-722d-4939-a3da-ba2a3afba256</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.СтатусыРасходныхОрдеров</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="75c63939-d100-4346-92ed-1c71b77acc8f">
+				<InternalInfo/>
+				<Properties>
+					<Name>ДатаОтгрузки</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>96ee5655-e55c-4d9d-9386-a82e47bcd733</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="10cfbed6-29e9-4297-a8d3-1f0fd97e413f">
+				<InternalInfo/>
+				<Properties>
+					<Name>Приоритет</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>6a9f8399-4614-4cb5-ba80-210c90c11e54</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Приоритеты</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<TabularSection uuid="08762fe9-78d9-4c47-a41b-a36f255c8673">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.РасходныйОрдерНаТовары.ТоварыПоРаспоряжениям" category="TabularSection">
+						<xr:TypeId>d0129a2e-62a4-41c9-b945-ecfb00026678</xr:TypeId>
+						<xr:ValueId>4076487b-8f76-4791-bf66-b56da3dfea00</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.РасходныйОрдерНаТовары.ТоварыПоРаспоряжениям" category="TabularSectionRow">
+						<xr:TypeId>5e731a31-8ec5-4199-a836-b30508557e23</xr:TypeId>
+						<xr:ValueId>f74e15d2-6d55-494b-959b-219aad19b8a6</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>ТоварыПоРаспоряжениям</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>f93cbc89-602b-4c37-a90c-1bceda80afe7</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="6b79a17b-027d-47b5-9839-c55417494cc2">
+						<InternalInfo/>
+						<Properties>
+							<Name>Распоряжение</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>07df2cb8-3a48-4671-b17f-d2bf82e412f8</ExtendedConfigurationObject>
+							<Type>
+								<v8:TypeSet>cfg:DefinedType.РаспоряжениеНаОтгрузку</v8:TypeSet>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+			<TabularSection uuid="392d8a4f-7cf4-418a-93fe-0924cbe0bb63">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.РасходныйОрдерНаТовары.ОтгружаемыеТовары" category="TabularSection">
+						<xr:TypeId>6e1cb274-50d0-4dca-9a0f-5eab32956ef1</xr:TypeId>
+						<xr:ValueId>7e2ed79d-a840-4e7b-be02-0027a7a69c67</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.РасходныйОрдерНаТовары.ОтгружаемыеТовары" category="TabularSectionRow">
+						<xr:TypeId>789eca1f-f5c0-4fca-8a5c-6cbffbabe612</xr:TypeId>
+						<xr:ValueId>e6acf91e-f37e-4fa9-91f3-971ccbed431d</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>ОтгружаемыеТовары</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>389dae2c-5f04-4c10-8555-7103bd0c3f21</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="a49e8f3c-fb8c-4de6-a442-530c8d2fcbfa">
+						<InternalInfo/>
+						<Properties>
+							<Name>Действие</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>c4e6782d-54b8-4614-8549-b94f2af33d1b</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:EnumRef.ДействияСоСтрокамиОрдеровНаОтгрузку</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+		</ChildObjects>
+	</Document>
+</MetaDataObject>
