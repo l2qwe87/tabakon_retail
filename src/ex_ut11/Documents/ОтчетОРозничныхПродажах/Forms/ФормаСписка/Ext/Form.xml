@@ -36,6 +36,21 @@
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
+		<UsualGroup name="Настройки" id="101">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="НастройкиРасширеннаяПодсказка" id="102"/>
+		</UsualGroup>
 		<Table name="ОтчетыОРозничныхПродажах" id="1">
 			<Representation>List</Representation>
 			<SkipOnInput>false</SkipOnInput>
@@ -64,6 +79,7 @@
 			<ShowRoot>true</ShowRoot>
 			<AllowRootChoice>false</AllowRootChoice>
 			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>Настройки</UserSettingsGroup>
 			<ContextMenu name="ОтчетыОРозничныхПродажахКонтекстноеМеню" id="2">
 				<Autofill>false</Autofill>
 				<ChildItems>
