@@ -56,6 +56,7 @@
 								</InputField>
 								<InputField name="Организация" id="388">
 									<DataPath>Организация</DataPath>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
 									<ContextMenu name="ОрганизацияКонтекстноеМеню" id="389"/>
 									<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="390"/>
 								</InputField>
@@ -63,6 +64,11 @@
 									<Type>UsualButton</Type>
 									<CommandName>Form.Command.ДобавитьРегистрацию</CommandName>
 									<ExtendedTooltip name="ДобавитьРегистрациюРасширеннаяПодсказка" id="392"/>
+								</Button>
+								<Button name="DayByDay" id="393">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.DayByDay</CommandName>
+									<ExtendedTooltip name="DayByDayРасширеннаяПодсказка" id="394"/>
 								</Button>
 							</ChildItems>
 						</UsualGroup>
@@ -1876,6 +1882,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">TBK_ДобавитьРегистрациюПосле</Action>
+		</Command>
+		<Command name="DayByDay" id="1000001">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Day by day</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Day by day</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">TBK_DayByDayПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.11">
