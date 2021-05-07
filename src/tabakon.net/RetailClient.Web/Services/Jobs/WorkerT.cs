@@ -28,31 +28,20 @@ namespace RetailClient.Web.Services.Jobs
             using (var scope = serviceProvider.CreateScope())
             {
                 var retailEndpointsRepo = scope.ServiceProvider.GetRequiredService<IRetailEndpointsRepo>();
-                var query = retailEndpointsRepo
+                endpoints = await retailEndpointsRepo
                     .GetRetailEndpoints()
                     .Where(r => r.RetailEndpointIdentity == "100000388")
-                    .AsNoTracking();
-
-                Console.Out.WriteLine(query.ToQueryString());
-
-                endpoints = await query
+                    .AsNoTracking()
                     .ToListAsync();
-
-                
 #if DEBUG
                 //endpoints = endpoints.Concat(endpoints).Concat(endpoints).Concat(endpoints)
                 //    .Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints)
                 //    .Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints);
 #endif
             }
-
-            Console.Out.WriteLine($"endpoints _1 = {endpoints.Count()}");
-
             if (predicat != null) {
                 endpoints = endpoints.Where(e => predicat(e));
             }
-
-            Console.Out.WriteLine($"endpoints _2 = {endpoints.Count()}");
 
             //Parallel.ForEach(endpoints, (endpoint =>
             //{
@@ -69,16 +58,13 @@ namespace RetailClient.Web.Services.Jobs
             var part = (max / taskCount)+1;
             var tasks = Enumerable.Range(0, taskCount).Select(async i => 
             {
-                Console.Out.WriteLine($"RUN Thread {i}");
                 var skip = i * part;
                 var take = part;
                 if ((skip + take) > max)
                 {
                     take = max - skip;
                 }
-                Console.Out.WriteLine($"skip: {skip}, take: {take}");
                 var toDo = endpoints.Skip(skip).Take(take);
-                Console.Out.WriteLine($"toDo: {toDo.Count()}");
                 foreach (var endpoint in toDo)
                 {
                     await JobAsync<T>(alwaysSaveResult, endpoint, func);

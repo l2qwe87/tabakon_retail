@@ -36,8 +36,7 @@ namespace RetailClient
                         ? reply.Status
                         : beastStatus ?? reply.Status;
                 }
-                Console.Out.WriteLine($"PING {host} {beastStatus}");
-                Console.Out.WriteLine($"PING {totalTime} / {count} = { totalTime / count }");
+
                 if (beastStatus == IPStatus.Success)
                 {
                     return totalTime / count;
