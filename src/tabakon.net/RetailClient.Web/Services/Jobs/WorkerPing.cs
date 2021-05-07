@@ -15,6 +15,7 @@ namespace RetailClient.Web.Services.Jobs
             var alwaysSaveResult = true;
             var result = await DoWorkAsync<RetailPing>(alwaysSaveResult, async (endpoint) =>
             {
+                Console.Out.WriteLine($"BEGIN PING {endpoint.RetailEndpointUrl}");
                 var ws = new RetailWSClient(endpoint.RetailEndpointHost, endpoint.RetailEndpointUrl);
                 try
                 {
@@ -22,10 +23,14 @@ namespace RetailClient.Web.Services.Jobs
                 }
                 catch (Exception e)
                 {
+                    
+                    Console.Out.WriteLine(e);
+
                     return (alwaysSaveResult)
                         ? new[] { e.Message }
                         : new string[0];
                 }
+                Console.Out.WriteLine($"END PING {endpoint.RetailEndpointUrl}");
             }, predicat);
         }
     }

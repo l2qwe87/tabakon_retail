@@ -33,6 +33,7 @@ namespace RetailClient.Web.Services.Jobs
                 {
                     try
                     {
+                        Console.Out.WriteLine($"BEGIN TASK {typeof(T)}");
                         using (var scope = serviceProvider.CreateScope())
                         {
                             var task = scope.ServiceProvider.GetRequiredService<T>();
@@ -40,6 +41,7 @@ namespace RetailClient.Web.Services.Jobs
                             await (task as ITask).RunAsync(scope.ServiceProvider, null);
 
                         }
+                        Console.Out.WriteLine($"BEGIN TASK {typeof(T)}");
                         if (isRunning)
                         {
                             await Task.Delay(interval);
@@ -47,6 +49,7 @@ namespace RetailClient.Web.Services.Jobs
                     }
                     catch (Exception ex)
                     {
+                        Console.Out.WriteLine($"ERROR END {typeof(T)} {ex}");
                         using (var scope = serviceProvider.CreateScope())
                         {
                             //var logger = scope.ServiceProvider.GetService<ILoggerService>();
