@@ -65,7 +65,7 @@ namespace RetailClient.Web.Services.Jobs
             //await Task.WhenAll(tasks);
 
             var taskCount = 6;
-            var max = endpoints.Count()-1;
+            var max = endpoints.Count();
             var part = (max / taskCount)+1;
             var tasks = Enumerable.Range(0, taskCount).Select(async i => 
             {
