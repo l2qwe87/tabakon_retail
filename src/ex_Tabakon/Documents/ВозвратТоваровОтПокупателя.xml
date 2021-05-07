@@ -84,6 +84,18 @@
 					</Type>
 				</Properties>
 			</Attribute>
+			<Attribute uuid="d4fe998d-f137-4043-b915-a7acdc51d9ff">
+				<InternalInfo/>
+				<Properties>
+					<Name>Организация</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>e4a5cc9f-a8d1-4360-8f91-c46cfb35d143</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
 			<Form>ФормаДокумента</Form>
 			<Form>ФормаСложнойОплаты</Form>
 			<TabularSection uuid="a1eeebd7-1329-43f0-a185-3fb9b45c058b">
@@ -309,6 +321,38 @@
 									<v8:FractionDigits>2</v8:FractionDigits>
 									<v8:AllowedSign>Any</v8:AllowedSign>
 								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+			<TabularSection uuid="08febb53-0589-4cba-982e-1327d1e6110e">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.ВозвратТоваровОтПокупателя.ШтрихкодыУпаковок" category="TabularSection">
+						<xr:TypeId>d707e1a1-d9b5-4970-9c28-5e3c923d49e5</xr:TypeId>
+						<xr:ValueId>62bf361b-5d79-444f-9367-9aa7ff5906b8</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.ВозвратТоваровОтПокупателя.ШтрихкодыУпаковок" category="TabularSectionRow">
+						<xr:TypeId>795b99d9-9f69-48b6-8f51-3887c6f201a9</xr:TypeId>
+						<xr:ValueId>2982224e-52f2-4512-bb96-6b79693023fc</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>ШтрихкодыУпаковок</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>c44c206c-35d8-4e36-acae-260a699e55c7</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="0e3bee72-5a96-47ab-ac88-2b11de57dd62">
+						<InternalInfo/>
+						<Properties>
+							<Name>ШтрихкодУпаковки</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>26354604-984d-4759-a3b2-e77c11586572</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.ШтрихкодыУпаковокТоваров</v8:Type>
 							</Type>
 						</Properties>
 					</Attribute>

@@ -147,6 +147,18 @@
 					</Type>
 				</Properties>
 			</Attribute>
+			<Attribute uuid="de474536-1865-4354-997a-2c705df1b123">
+				<InternalInfo/>
+				<Properties>
+					<Name>Организация</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>c1056292-8a4f-4583-89ea-b69e8144ed62</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
 			<Form>ФормаСписка</Form>
 			<Form>ФормаДокумента</Form>
 			<TabularSection uuid="f3f83701-4b36-42d4-aa80-19762b987de4">
@@ -266,6 +278,38 @@
 							<ExtendedConfigurationObject>3029414a-1fe0-405c-8caa-c6306717ea1a</ExtendedConfigurationObject>
 							<Type>
 								<v8:Type>cfg:CatalogRef.ВидыОплатЧекаККМ</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+			<TabularSection uuid="b42e03a0-37fd-4bcf-8d7d-dd3848e9846b">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.ЧекККМ.АкцизныеМарки" category="TabularSection">
+						<xr:TypeId>af2e8049-2682-42b4-9716-643c5f423fc4</xr:TypeId>
+						<xr:ValueId>62429721-2873-4528-bc28-fbbb1a8a59a0</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.ЧекККМ.АкцизныеМарки" category="TabularSectionRow">
+						<xr:TypeId>f61c287b-528b-4066-9e6c-48330872092c</xr:TypeId>
+						<xr:ValueId>973fca59-4bd9-4496-84d5-b8ae754f1e1f</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>АкцизныеМарки</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>099441b3-538e-41cb-a1db-613e1b3c9764</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="e16deed6-d438-4daa-8dac-f88c23142674">
+						<InternalInfo/>
+						<Properties>
+							<Name>АкцизнаяМарка</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>06d90247-2515-4557-b425-4db2f445ed22</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.ШтрихкодыУпаковокТоваров</v8:Type>
 							</Type>
 						</Properties>
 					</Attribute>
