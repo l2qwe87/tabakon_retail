@@ -30,13 +30,12 @@ namespace RetailClient.Web.Services.Jobs
                 var retailEndpointsRepo = scope.ServiceProvider.GetRequiredService<IRetailEndpointsRepo>();
                 endpoints = await retailEndpointsRepo
                     .GetRetailEndpoints()
-                    .Where(r => r.RetailEndpointIdentity == "100000388")
                     .AsNoTracking()
                     .ToListAsync();
 #if DEBUG
-                //endpoints = endpoints.Concat(endpoints).Concat(endpoints).Concat(endpoints)
-                //    .Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints)
-                //    .Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints);
+                endpoints = endpoints.Concat(endpoints).Concat(endpoints).Concat(endpoints)
+                    .Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints)
+                    .Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints);
 #endif
             }
             if (predicat != null) {
