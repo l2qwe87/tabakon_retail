@@ -12,6 +12,10 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen" callType="After">ТБКПриОткрытииПосле</Event>
+		<Event name="OnCreateAtServer" callType="Before">ТБКПриСозданииНаСервереПеред</Event>
+		<Event name="OnCreateAtServer" callType="After">ТБКПриСозданииНаСервереПосле</Event>
+		<Event name="ActivationProcessing" callType="After">ТБКОбработкаАктивизацииПосле</Event>
+		<Event name="OnClose" callType="After">ТБКПриЗакрытииПосле</Event>
 	</Events>
 	<ChildItems>
 		<LabelDecoration name="ВерсияР" id="543">
@@ -32,7 +36,7 @@
 					<v8:content>Группа заголовки кнопки</v8:content>
 				</v8:item>
 			</Title>
-			<Group>Horizontal</Group>
+			<Group>AlwaysHorizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаЗаголовкиКнопкиРасширеннаяПодсказка" id="162"/>
@@ -62,6 +66,24 @@
 						<Event name="OnChange" callType="After">ТБКТекущаяКассаККМПриИзмененииПосле</Event>
 					</Events>
 				</InputField>
+				<UsualGroup name="Группа1" id="566">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="567"/>
+					<ChildItems>
+						<Button name="ЗаказыПокупателей" id="562">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗаказыПокупателей</CommandName>
+							<ExtendedTooltip name="ЗаказыПокупателейРасширеннаяПодсказка" id="563"/>
+						</Button>
+						<Button name="ЗаказыДляОтмены" id="564">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗаказыДляОтмены</CommandName>
+							<ExtendedTooltip name="ЗаказыДляОтменыРасширеннаяПодсказка" id="565"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
 				<UsualGroup name="Debug" id="551">
 					<Visible>false</Visible>
 					<Title>
@@ -2471,6 +2493,21 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="АдресВХ" id="1000003">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес ВХ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -2622,6 +2659,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКОтключитьЭквайрингПосле</Action>
+		</Command>
+		<Command name="ЗаказыПокупателей" id="1000003">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказы покупателей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказы покупателей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКЗаказыПокупателейПосле</Action>
+		</Command>
+		<Command name="ЗаказыДляОтмены" id="1000004">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказы для отмены</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказы покупателей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКЗаказыДляОтменыПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
