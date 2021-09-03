@@ -24,8 +24,9 @@ namespace TbkTest
             services.AddSingleton<ISigner, BashFrameworkSigner>();
 
             services.AddSingleton<IsmpClientConfig>((_) => new IsmpClientConfig 
-            { 
+            {
                 BaseUrl = "https://markirovka.crpt.ru",
+                //BaseUrl = "https://ismp.crpt.ru",
                 //Thumbprint = "3B5AFA9635BD5EA7B1C3F847A543BBF214BEE297" //SN=Малышев, G=Дмитрий Борисович, 780156595000
                 Thumbprint = "B2CE2E0BB37ABA5EDE06ACF0FD70841B8F113BAE" //SN=Хмелева, G=Татьяна Алексеевна,780216064720
 
@@ -72,6 +73,11 @@ namespace TbkTest
 
                 };
 
+                var _qrs = new[] { 
+                    "04601653033399WnSlxCcACyA7rOc",
+                    "00000046182876P?!ghe!"
+                };
+
                 foreach (var qr in qrs) {
                     Console.WriteLine($"========================================");
 
@@ -81,20 +87,20 @@ namespace TbkTest
                         Console.WriteLine($"{qqq}");
                     }
 
-                    {
-                        var qqq = await markirovkaClient.CisesInfo(qr);
-                        Console.WriteLine($"{qqq}");
-                    }
-                    {
-                        var q = new QR(qr);
-                        var qqq = await markirovkaClient.CisesInfo(q.KI);
-                        Console.WriteLine($"{qqq}");
-                    }
-                    {
-                        var q = new QR(qr);
-                        var qqq = await markirovkaClient.CisesInfo(q.KI_SHORT);
-                        Console.WriteLine($"{qqq}");
-                    }
+                    //{
+                    //    var qqq = await markirovkaClient.CisesInfo(qr);
+                    //    Console.WriteLine($"{qqq}");
+                    //}
+                    //{
+                    //    var q = new QR(qr);
+                    //    var qqq = await markirovkaClient.CisesInfo(q.KI);
+                    //    Console.WriteLine($"{qqq}");
+                    //}
+                    //{
+                    //    var q = new QR(qr);
+                    //    var qqq = await markirovkaClient.CisesInfo(q.KI_SHORT);
+                    //    Console.WriteLine($"{qqq}");
+                    //}
                 }
 
 

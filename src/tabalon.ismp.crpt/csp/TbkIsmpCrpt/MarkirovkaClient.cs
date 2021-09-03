@@ -29,11 +29,12 @@ namespace TbkIsmpCrpt
                     {
                         var token = _ismpClient.Auth().Result;
                         _token = token;
+                        //Console.WriteLine(_token);
 
                         var hand = new JwtSecurityTokenHandler();
                         var tokenS = hand.ReadJwtToken(_token);
 
-                        var span = TimeSpan.FromSeconds((DateTime.Now - tokenS.ValidTo).TotalSeconds / 2);
+                        var span = TimeSpan.FromSeconds((tokenS.ValidTo - DateTime.Now).TotalSeconds / 2);
                         SchedscheduleTokenCleanupule(span);
                     }
         }

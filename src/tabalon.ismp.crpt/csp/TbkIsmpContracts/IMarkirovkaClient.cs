@@ -14,6 +14,9 @@ namespace TbkIsmpContracts
     public static class MarkirovkaExtenion
     {
         public static Task<string> CisesInfo(this IMarkirovkaClient markirovkaClient, string cis)
-            => markirovkaClient.CisesInfo(new[] { cis });
+        {
+            Console.WriteLine(cis);
+            return markirovkaClient.CisesInfo(new[] { cis });
+        }
     }
 }

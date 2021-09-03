@@ -72,7 +72,22 @@ namespace TbkIsmpCrpt
             return q.token;
         }
 
-        public async Task<string> CisesInfo(IEnumerable<string> ciss, string token) 
+        public async Task<string> CisesInfo(IEnumerable<string> ciss, string token)
+        {
+            var tokenResponse = await IsmpRequest.Create(_serviceProvider)
+                //.SetRequestUrl("api/v3/true-api/cises/short/list")
+                .SetRequestUrl("api/v3/true-api/cises/info")
+                //.SetRequestUrl("api/v4/facade/cis/cis_list?childrenPaging=true&childrenPage=1&childrenLimit=50")
+                .AddAuth(token)
+                //.AddBody(new { cises = ciss })
+                .AddBody(ciss)
+                .Build()
+                .SendAsync(); 
+
+            return tokenResponse.Body<string>(); ;
+        }
+
+        public async Task<string> _CisesInfo(IEnumerable<string> ciss, string token) 
         {
             var tokenResponse = await IsmpRequest.Create(_serviceProvider)
                 //.SetRequestUrl("api/v3/true-api/cises/info/")
