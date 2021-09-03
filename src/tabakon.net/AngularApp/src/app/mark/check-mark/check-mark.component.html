@@ -1,11 +1,12 @@
-
-<td-search-input
-     appearance="outline"
-     [showUnderline]="true"
-     placeholder="Марка (QR)"
-     (search)="getMarkInfo($event)"
-     searchIcon="search"
-   ></td-search-input>
+<div class="container">
+    <td-search-input
+        appearance="outline"
+        [showUnderline]="true"
+        placeholder="Марка (QR)"
+        (search)="getMarkInfo($event)"
+        searchIcon="search"
+    ></td-search-input>
+</div>
 
    <div>
        <mat-card *ngFor="let info of markInfo">
