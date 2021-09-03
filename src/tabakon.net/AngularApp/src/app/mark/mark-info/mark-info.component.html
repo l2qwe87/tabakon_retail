@@ -1,0 +1,20 @@
+
+<div>
+    <div class="container">
+        <div *ngFor="let prop of props" class="row-table row">
+            <div class="col-sm">
+                <h3 class="fw-bold">{{ prop.label }}</h3>
+            </div>
+            <div class="col-sm">
+                <h3 class="fw-bold">{{ prop.value }}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="container border rounded">
+        <td-highlight codeLang="javascript" class="">
+            {{ info | json }}
+        </td-highlight>
+    </div>
+</div>
+
+

@@ -1,0 +1,14 @@
+
+<td-search-input
+     appearance="outline"
+     [showUnderline]="true"
+     placeholder="Марка (QR)"
+     (search)="getMarkInfo($event)"
+     searchIcon="search"
+   ></td-search-input>
+
+   <div>
+       <mat-card *ngFor="let info of markInfo">
+           <app-mark-info [info]="info"></app-mark-info>
+       </mat-card>
+   </div>

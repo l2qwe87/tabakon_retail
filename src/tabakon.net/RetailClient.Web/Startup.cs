@@ -15,6 +15,7 @@ using Microsoft.EntityFrameworkCore;
 using RetailClient.Web.Contracts;
 using RetailClient.Web.Services.Jobs;
 using RetailClient.Web.Services;
+using System.Net.Http;
 
 namespace RetailClientTests
 {
@@ -34,6 +35,22 @@ namespace RetailClientTests
             services.AddControllers();
 
             services.AddDbContext<TabakonDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("TabakonDataContext")));
+
+            services.AddScoped<HttpClientHandler>(serviceProvider =>
+            {
+                var httpClientHandler = new HttpClientHandler();
+                httpClientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => { return true; };
+                return httpClientHandler;
+            });
+
+            services.AddScoped<HttpClient>(serviceProvider => {
+                var httpClientHandler = serviceProvider.GetRequiredService<HttpClientHandler>();
+                var httpClient = new HttpClient(httpClientHandler);
+                var httpClientTimeout = Configuration.GetValue<double>("HttpClient:Timeout");
+                httpClient.Timeout = TimeSpan.FromSeconds(httpClientTimeout);
+                return httpClient;
+            });
+
 
             services.AddSingleton<IJobService, JobService>();
             services.AddScoped<WorkerRetailVersion, WorkerRetailVersion>();
