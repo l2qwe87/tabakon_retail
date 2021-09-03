@@ -97,22 +97,9 @@ namespace RetailClientTests
                 spa.Options.SourcePath = "dist/tabakon-web-admin";
             });
 
-
-            InitSingeltonServices(serviceScope.ServiceProvider);
         }
 
 
 
-        private void InitSingeltonServices(IServiceProvider serviceProvider)
-        {
-            var jobService = serviceProvider.GetService<IJobService>();
-#if RELEASE
-            jobService.AddTask<WorkerRetailDocSelesReport>(TimeSpan.FromMinutes(20));
-            jobService.AddTask<WorkerRetailVersion>(TimeSpan.FromMinutes(25));
-            jobService.AddTask<WorkerRetailExtConfiguration>(TimeSpan.FromMinutes(25));
-            jobService.AddTask<WorkerPing>(TimeSpan.FromMinutes(15));
-            jobService.AddTask<WorkerRetailGetStoreBalance>(TimeSpan.FromMinutes(60));
-#endif
-        }
     }
 }
