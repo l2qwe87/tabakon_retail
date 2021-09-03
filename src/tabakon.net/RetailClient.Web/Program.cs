@@ -14,7 +14,9 @@ namespace RetailClientTests
     {
         public static void Main(string[] args)
         {
-            //Directory.SetCurrentDirectory(Path.GetDirectoryName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName));
+#if RELEASE
+            Directory.SetCurrentDirectory(Path.GetDirectoryName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName));
+#endif
 
             CreateHostBuilder(args).Build().Run();
         }
