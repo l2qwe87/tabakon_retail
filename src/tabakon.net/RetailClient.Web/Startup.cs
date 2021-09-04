@@ -71,12 +71,12 @@ namespace RetailClientTests
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             serviceScope = app.ApplicationServices.CreateScope();
-            if (env.IsDevelopment())
+            //if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
