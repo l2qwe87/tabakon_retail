@@ -36,14 +36,14 @@ namespace RetailClientTests
 
             services.AddDbContext<TabakonDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("TabakonDataContext")));
 
-            services.AddScoped<HttpClientHandler>(serviceProvider =>
+            services.AddSingleton<HttpClientHandler>(serviceProvider =>
             {
                 var httpClientHandler = new HttpClientHandler();
                 httpClientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => { return true; };
                 return httpClientHandler;
             });
 
-            services.AddScoped<HttpClient>(serviceProvider => {
+            services.AddSingleton<HttpClient>(serviceProvider => {
                 var httpClientHandler = serviceProvider.GetRequiredService<HttpClientHandler>();
                 var httpClient = new HttpClient(httpClientHandler);
                 var httpClientTimeout = Configuration.GetValue<double>("HttpClient:Timeout");
