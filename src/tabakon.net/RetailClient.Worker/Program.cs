@@ -34,6 +34,22 @@ namespace RetailClient.Worker
 
                     services.AddDbContext<TabakonDBContext>(options => options.UseSqlServer(configuration.GetConnectionString("TabakonDataContext")));
 
+                    services.AddScoped<HttpClientHandler>(serviceProvider =>
+                    {
+                        var httpClientHandler = new HttpClientHandler();
+                        httpClientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => { return true; };
+                        return httpClientHandler;
+                    });
+
+                    services.AddScoped<HttpClient>(serviceProvider => {
+                        var httpClientHandler = serviceProvider.GetRequiredService<HttpClientHandler>();
+                        var httpClient = new HttpClient(httpClientHandler);
+                        var httpClientTimeout = serviceProvider.GetRequiredService<IConfiguration>().GetValue<double>("HttpClient:Timeout");
+                        httpClient.Timeout = TimeSpan.FromSeconds(httpClientTimeout);
+                        return httpClient;
+                    });
+
+
                     services.AddSingleton<IJobService, JobService>();
                     services.AddScoped<WorkerRetailVersion, WorkerRetailVersion>();
                     services.AddScoped<WorkerPing, WorkerPing>();
