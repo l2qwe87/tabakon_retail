@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MarkService } from '../mark.service';
 
 @Component({
@@ -15,19 +15,24 @@ export class CheckMarkComponent implements OnInit {
 
   }
 
+  @ViewChild('tdsearch') tdsearch;
 
   public markInfo : any[] = [];
+  public searchInput : string = "";
 
 
   public getMarkInfo(mark : string)
   {
     console.log("getMarkInfo "+mark);
+    this.markInfo = [];
     this.markService.getMarkInfo(mark).subscribe(markInfo => {
       if(typeof markInfo === 'string'){
         this.markInfo=JSON.parse(markInfo)
       }else{
         this.markInfo = markInfo;
       }
+
+      this.tdsearch.clearSearch();
     });
   }
 
