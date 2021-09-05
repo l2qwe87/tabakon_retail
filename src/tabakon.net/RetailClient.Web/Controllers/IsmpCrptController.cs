@@ -20,52 +20,46 @@ namespace RetailClientTests.Controllers
     [Route("api/[controller]")]
     public class IsmpCrptController : ControllerBase
     {
-        private readonly  IConfiguration _configuration;
-        private readonly IsmpHttpClient _httpClient; 
+        private readonly IsmpCrptApiClient _ismpCrptApiClient;
 
         public IsmpCrptController(
-            IConfiguration configuration,
-            IsmpHttpClient httpClient
+            IsmpCrptApiClient ismpCrptApiClient
             )
         {
-            _configuration = configuration;
-            _httpClient = httpClient;
+            _ismpCrptApiClient = ismpCrptApiClient;
         }
 
         [HttpGet("Info")]
         public async Task<string> InfoGet([FromQuery] IEnumerable<string> ciss)
-            => await InfoInternal(ciss);
+            => await _ismpCrptApiClient.Info(ciss);
 
         [HttpPost("Info")]
         public async Task<string> InfoPost([FromBody] IEnumerable<string> ciss)
-            => await InfoInternal(ciss);
+            => await _ismpCrptApiClient.Info(ciss);
+
+    }
 
 
-        private async Task<string> InfoInternal(IEnumerable<string> ciss)
+    public class IsmpCrptApiClient
+    {
+        private readonly HttpClient _httpClient;
+        public IsmpCrptApiClient(
+            HttpClient httpClient
+            ) 
         {
-            string resp = null;
-            //var host = //_configuration.GetValue<string>("IsmpCrpt:Host");
-            //var url =  host + "api/IsmpCrpt/Info";
-            var url =  "api/IsmpCrpt/Info";
-
-            Console.WriteLine($"===============");
-            //Console.WriteLine($"host : {host}");
-            Console.WriteLine($"url  : {url}");
-            Console.WriteLine($"===============");
-
-            using (var request = new HttpRequestMessage(HttpMethod.Post, url)) {
-                request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                request.Content = new StringContent( 
+            _httpClient = httpClient;
+        }
+        public async Task<string> Info(IEnumerable<string> ciss) 
+        {
+            var url = "/api/IsmpCrpt/Info";
+            var request = new HttpRequestMessage(HttpMethod.Post, url);
+                request.Content = new StringContent(
                     JsonConvert.SerializeObject(ciss),
                     Encoding.UTF8,
                     "application/json");
 
-                using (var r = await _httpClient.SendAsync(request).ConfigureAwait(false))
-                {
-                    resp = await r.Content.ReadAsStringAsync();
-                }
-            }
-            return resp;
+            var r = await _httpClient.SendAsync(request).ConfigureAwait(false);
+            return await r.Content.ReadAsStringAsync();
         }
     }
 }

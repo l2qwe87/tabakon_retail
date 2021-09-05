@@ -17,9 +17,14 @@ using RetailClient.Web.Services.Jobs;
 using RetailClient.Web.Services;
 using System.Net.Http;
 using System.Security.Policy;
+using RetailClientTests.Controllers;
+using System.Net.Http.Headers;
 
 namespace RetailClientTests
 {
+
+   
+
     public class IsmpHttpClient : HttpClient
     {
         public IsmpHttpClient(HttpMessageHandler handler) : base(handler) { }
@@ -50,21 +55,12 @@ namespace RetailClientTests
 
             services.AddDbContext<TabakonDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("TabakonDataContext")));
 
-            services.AddSingleton<HttpClientHandler>(serviceProvider =>
-            {
-                var httpClientHandler = new HttpClientHandler();
-                httpClientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => { return true; };
-                return httpClientHandler;
-            });
-
-            services.AddSingleton<IsmpHttpClient>(serviceProvider => {
-                var httpClientHandler = serviceProvider.GetRequiredService<HttpClientHandler>();
-                var httpClient = new IsmpHttpClient(httpClientHandler);
-                httpClient.BaseAddress = new Uri(Configuration.GetValue<string>("IsmpCrpt:Host"));
-                var httpClientTimeout = Configuration.GetValue<double>("HttpClient:Timeout");
-                httpClient.Timeout = TimeSpan.FromSeconds(httpClientTimeout);
-                return httpClient;
-            });
+            services.AddHttpClient<IsmpCrptApiClient>("IsmpCrptApiClient",
+                client =>
+                {
+                    client.BaseAddress = new Uri(Configuration.GetValue<string>("IsmpCrpt:Host"));
+                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                });
 
 
             //services.AddSingleton<IJobService, JobService>();
