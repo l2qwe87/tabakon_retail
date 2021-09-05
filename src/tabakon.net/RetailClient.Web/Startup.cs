@@ -25,6 +25,14 @@ namespace RetailClientTests
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+
+            var host = Configuration.GetSection("IsmpCrpt").GetValue<string>("Host");
+            var timeout = Configuration.GetValue<double>("HttpClient:Timeout");
+
+            Console.WriteLine($"===============");
+            Console.WriteLine($"host : {host}");
+            Console.WriteLine($"timeout  : {timeout}");
+            Console.WriteLine($"===============");
         }
 
         public IConfiguration Configuration { get; }

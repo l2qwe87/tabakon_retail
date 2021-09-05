@@ -44,7 +44,8 @@ namespace RetailClientTests.Controllers
         private async Task<string> InfoInternal(IEnumerable<string> ciss)
         {
             string resp = null;
-            var url = _configuration.GetSection("IsmpCrpt").GetValue<string>("Host") + "api/IsmpCrpt/Info";
+            var host = _configuration.GetSection("IsmpCrpt").GetValue<string>("Host");
+            var url =  host + "api/IsmpCrpt/Info";
             using (var request = new HttpRequestMessage(HttpMethod.Post, url)) {
                 request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 request.Content = new StringContent( 
