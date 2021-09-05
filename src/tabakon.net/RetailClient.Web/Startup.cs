@@ -52,7 +52,8 @@ namespace RetailClientTests
             });
 
 
-            services.AddSingleton<IJobService, JobService>();
+            //services.AddSingleton<IJobService, JobService>();
+
             services.AddScoped<WorkerRetailVersion, WorkerRetailVersion>();
             services.AddScoped<WorkerPing, WorkerPing>();
             services.AddScoped<WorkerRetailExtConfiguration, WorkerRetailExtConfiguration>();

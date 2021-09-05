@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +15,21 @@ namespace RetailClientTests
     {
         public static void Main(string[] args)
         {
-#if RELEASE
-            Directory.SetCurrentDirectory(Path.GetDirectoryName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName));
-#endif
+            if (!File.Exists("appsettings.json")) 
+            {
+                var processModule = Process.GetCurrentProcess().MainModule;
+                if (processModule != null)
+                {
+                    var pathToExe = processModule.FileName;
+                    var pathToContentRoot = Path.GetDirectoryName(pathToExe);
+                    Directory.SetCurrentDirectory(pathToContentRoot);
+                }
+            }
+
+            if (!File.Exists("appsettings.json"))
+            {
+                throw new Exception("appsettings.json not found");
+            }
 
             CreateHostBuilder(args).Build().Run();
         }
