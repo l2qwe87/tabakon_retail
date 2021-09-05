@@ -16,9 +16,15 @@ using RetailClient.Web.Contracts;
 using RetailClient.Web.Services.Jobs;
 using RetailClient.Web.Services;
 using System.Net.Http;
+using System.Security.Policy;
 
 namespace RetailClientTests
 {
+    public class IsmpHttpClient : HttpClient
+    {
+        public IsmpHttpClient(HttpMessageHandler handler) : base(handler) { }
+    }
+
     public class Startup
     {
         private static IServiceScope serviceScope;
@@ -51,9 +57,10 @@ namespace RetailClientTests
                 return httpClientHandler;
             });
 
-            services.AddSingleton<HttpClient>(serviceProvider => {
+            services.AddSingleton<IsmpHttpClient>(serviceProvider => {
                 var httpClientHandler = serviceProvider.GetRequiredService<HttpClientHandler>();
-                var httpClient = new HttpClient(httpClientHandler);
+                var httpClient = new IsmpHttpClient(httpClientHandler);
+                httpClient.BaseAddress = new Uri(Configuration.GetValue<string>("IsmpCrpt:Host"));
                 var httpClientTimeout = Configuration.GetValue<double>("HttpClient:Timeout");
                 httpClient.Timeout = TimeSpan.FromSeconds(httpClientTimeout);
                 return httpClient;

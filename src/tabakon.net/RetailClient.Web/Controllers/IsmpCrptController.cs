@@ -21,11 +21,11 @@ namespace RetailClientTests.Controllers
     public class IsmpCrptController : ControllerBase
     {
         private readonly  IConfiguration _configuration;
-        private readonly HttpClient _httpClient; 
+        private readonly IsmpHttpClient _httpClient; 
 
         public IsmpCrptController(
             IConfiguration configuration,
-            HttpClient httpClient
+            IsmpHttpClient httpClient
             )
         {
             _configuration = configuration;
@@ -44,11 +44,12 @@ namespace RetailClientTests.Controllers
         private async Task<string> InfoInternal(IEnumerable<string> ciss)
         {
             string resp = null;
-            var host = _configuration.GetSection("IsmpCrpt").GetValue<string>("Host");
-            var url =  host + "api/IsmpCrpt/Info";
+            //var host = //_configuration.GetValue<string>("IsmpCrpt:Host");
+            //var url =  host + "api/IsmpCrpt/Info";
+            var url =  "api/IsmpCrpt/Info";
 
             Console.WriteLine($"===============");
-            Console.WriteLine($"host : {host}");
+            //Console.WriteLine($"host : {host}");
             Console.WriteLine($"url  : {url}");
             Console.WriteLine($"===============");
 
@@ -59,7 +60,7 @@ namespace RetailClientTests.Controllers
                     Encoding.UTF8,
                     "application/json");
 
-                using (var r = await _httpClient.SendAsync(request))
+                using (var r = await _httpClient.SendAsync(request).ConfigureAwait(false))
                 {
                     resp = await r.Content.ReadAsStringAsync();
                 }
