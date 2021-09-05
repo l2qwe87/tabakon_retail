@@ -46,6 +46,12 @@ namespace RetailClientTests.Controllers
             string resp = null;
             var host = _configuration.GetSection("IsmpCrpt").GetValue<string>("Host");
             var url =  host + "api/IsmpCrpt/Info";
+
+            Console.WriteLine($"===============");
+            Console.WriteLine($"host : {host}");
+            Console.WriteLine($"url  : {url}");
+            Console.WriteLine($"===============");
+
             using (var request = new HttpRequestMessage(HttpMethod.Post, url)) {
                 request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 request.Content = new StringContent( 
