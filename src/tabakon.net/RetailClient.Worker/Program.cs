@@ -54,7 +54,7 @@ namespace RetailClient.Worker
                     services.AddScoped<WorkerRetailVersion, WorkerRetailVersion>();
                     services.AddScoped<WorkerPing, WorkerPing>();
                     services.AddScoped<WorkerRetailExtConfiguration, WorkerRetailExtConfiguration>();
-
+                    services.AddScoped<WorkerRetailGetStoreBalance, WorkerRetailGetStoreBalance>();
                     services.AddScoped<WorkerRetailDocSelesReport, WorkerRetailDocSelesReport>();
 
                     services.AddScoped<IRetailEndpointsRepo, RetailEndpointsRepo>();

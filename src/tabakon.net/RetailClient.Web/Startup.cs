@@ -111,14 +111,5 @@ namespace RetailClientTests
 
         }
 
-
-
-
-#else
-            jobService.AddTask<WorkerRetailDocSelesReport>(TimeSpan.FromMinutes(2));
-            jobService.AddTask<WorkerRetailVersion>(TimeSpan.FromMinutes(5));
-            jobService.AddTask<WorkerRetailExtConfiguration>(TimeSpan.FromMinutes(5));
-            jobService.AddTask<WorkerPing>(TimeSpan.FromMinutes(1));
-            jobService.AddTask<WorkerRetailGetStoreBalance>(TimeSpan.FromMinutes(5));
     }
 }
