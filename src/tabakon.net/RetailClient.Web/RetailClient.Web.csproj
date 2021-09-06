@@ -9,10 +9,19 @@
 		<PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="5.0.1" />
 		<PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="5.0.1" />
 	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Update="appsettings.Development.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Update="appsettings.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
 	<PropertyGroup>
 		<TargetFramework>netcoreapp5.0</TargetFramework>
 		<IsTransformWebConfigDisabled>true</IsTransformWebConfigDisabled>
-
+		<ServerGarbageCollection>false</ServerGarbageCollection>
 		<SpaRoot>dist\tabakon-web-admin</SpaRoot>
 	</PropertyGroup>
 
