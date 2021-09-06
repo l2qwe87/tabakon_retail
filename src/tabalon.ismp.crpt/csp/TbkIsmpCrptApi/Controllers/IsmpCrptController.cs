@@ -83,17 +83,23 @@ namespace TbkIsmpCrptApi.Controllers
 
             if (qr.Length != gtin_length + serialNumber_length + price_length + sign_length)
             {
-                throw new ArgumentException("bad QR", "qr");
+                //throw new ArgumentException("bad QR", "qr");
+                CIS = qr;
+                KI_SHORT = qr;
+                KI = qr;
             }
+            else
+            {
 
-            _gtin = qr.Substring(0, gtin_length);
-            _serialNumber = qr.Substring(gtin_length, serialNumber_length);
-            _price = qr.Substring(gtin_length + serialNumber_length, price_length);
-            _sign = qr.Substring(gtin_length + serialNumber_length + price_length, sign_length);
+                _gtin = qr.Substring(0, gtin_length);
+                _serialNumber = qr.Substring(gtin_length, serialNumber_length);
+                _price = qr.Substring(gtin_length + serialNumber_length, price_length);
+                _sign = qr.Substring(gtin_length + serialNumber_length + price_length, sign_length);
 
-            CIS = $"{_gtin }{_serialNumber}";
-            KI_SHORT = $"01{_gtin }21{_serialNumber}";
-            KI = $"{KI_SHORT}8005{_price}96{_sign}";
+                CIS = $"{_gtin }{_serialNumber}";
+                KI_SHORT = $"01{_gtin }21{_serialNumber}";
+                KI = $"{KI_SHORT}8005{_price}96{_sign}";
+            }
 
         }
     }
