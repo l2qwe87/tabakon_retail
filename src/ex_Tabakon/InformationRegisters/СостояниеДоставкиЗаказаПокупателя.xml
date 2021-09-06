@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<InformationRegister uuid="d6a196bc-cb94-47bf-93f7-89191866745b">
+		<InternalInfo>
+			<xr:GeneratedType name="InformationRegisterRecord.СостояниеДоставкиЗаказаПокупателя" category="Record">
+				<xr:TypeId>95f0a485-8859-4868-a80a-9cb8f0dd02ea</xr:TypeId>
+				<xr:ValueId>eccc46da-456b-4bbb-9dc3-264b39a7ad4e</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterManager.СостояниеДоставкиЗаказаПокупателя" category="Manager">
+				<xr:TypeId>853d99cb-6391-48de-ae1f-b674280d3f4b</xr:TypeId>
+				<xr:ValueId>83dbbbb4-332d-4121-b3ed-691044a418cd</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterSelection.СостояниеДоставкиЗаказаПокупателя" category="Selection">
+				<xr:TypeId>92f744a3-52e0-48f7-bd3a-147f6c21b410</xr:TypeId>
+				<xr:ValueId>38b2ebcf-d628-44e1-9a9d-ab14d180a574</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterList.СостояниеДоставкиЗаказаПокупателя" category="List">
+				<xr:TypeId>91f155ee-ec85-42e2-b350-2742a78ed491</xr:TypeId>
+				<xr:ValueId>214fb4d7-3dce-4450-ab4e-04ce28ed1050</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordSet.СостояниеДоставкиЗаказаПокупателя" category="RecordSet">
+				<xr:TypeId>7778b978-fde6-4206-b0bf-2f2549a053c3</xr:TypeId>
+				<xr:ValueId>e42a40d0-6094-459e-a6a8-60a747b6d336</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordKey.СостояниеДоставкиЗаказаПокупателя" category="RecordKey">
+				<xr:TypeId>2e24afe1-1b0b-42c9-96e9-9d5265136fa4</xr:TypeId>
+				<xr:ValueId>f5cf1f6f-ceb4-4198-a01c-383eac37c460</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordManager.СостояниеДоставкиЗаказаПокупателя" category="RecordManager">
+				<xr:TypeId>62bd1f07-bd78-4eec-8faf-286f1518f4d2</xr:TypeId>
+				<xr:ValueId>8230e7ef-3547-4cc7-aa23-9de1d6b33f3e</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>СостояниеДоставкиЗаказаПокупателя</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>fa2fc1eb-3451-4559-bf94-dbd11fd4ea52</ExtendedConfigurationObject>
+			<InformationRegisterPeriodicity>Second</InformationRegisterPeriodicity>
+			<WriteMode>Independent</WriteMode>
+		</Properties>
+		<ChildObjects>
+			<Resource uuid="22642ef9-0057-4aba-bab6-4e3cf4ee7a3c">
+				<InternalInfo/>
+				<Properties>
+					<Name>Состояние</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>eb98ffc6-26c5-4393-a4d4-36624a44b0a9</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.СостоянияДоставкиЗаказаПокупателя</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="7526f866-1bb2-406c-94ea-8069a5dc484f">
+				<InternalInfo/>
+				<Properties>
+					<Name>ЗаказПокупателя</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>5b427830-7837-4c2a-814b-26994253a684</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</InformationRegister>
+</MetaDataObject>

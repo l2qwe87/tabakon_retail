@@ -26,6 +26,8 @@ import { EndpointDetailComponent } from './stats/endpoint-detail/endpoint-detail
 import { EndpointExtConfigurationComponent } from './stats/endpoint-ext-configuration/endpoint-ext-configuration.component';
 import { CovalentLoadingModule } from '@covalent/core/loading';
 import { CovalentDialogsModule } from '@covalent/core/dialogs';
+import { CheckMarkComponent } from './mark/check-mark/check-mark.component';
+import { MarkInfoComponent } from './mark/mark-info/mark-info.component';
 
 
 
@@ -36,7 +38,9 @@ import { CovalentDialogsModule } from '@covalent/core/dialogs';
     EndpointsGridComponent,
     EndpointVersionComponent,
     EndpointDetailComponent,
-    EndpointExtConfigurationComponent
+    EndpointExtConfigurationComponent,
+    CheckMarkComponent,
+    MarkInfoComponent
   ],
   imports: [
     BrowserModule,

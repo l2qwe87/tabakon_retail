@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<AccumulationRegister uuid="0aab2c9f-455a-4ba2-ac17-17dc4e81fd2b">
+		<InternalInfo>
+			<xr:GeneratedType name="AccumulationRegisterRecord.ДенежныеСредстваККМ" category="Record">
+				<xr:TypeId>6e1a2c66-68bc-4b7d-825a-a7cb03508aa0</xr:TypeId>
+				<xr:ValueId>6f042dd2-5473-4897-bc66-552aee45b759</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterManager.ДенежныеСредстваККМ" category="Manager">
+				<xr:TypeId>b4e46e86-2256-4c10-984b-44a5d1c0de04</xr:TypeId>
+				<xr:ValueId>3c536d49-08a5-4e4b-9924-97103179b0c5</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterSelection.ДенежныеСредстваККМ" category="Selection">
+				<xr:TypeId>9bc7790e-c962-4000-b362-5f91dc68c376</xr:TypeId>
+				<xr:ValueId>e9cbd5e9-c879-4fdb-9d10-ad09579fac58</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterList.ДенежныеСредстваККМ" category="List">
+				<xr:TypeId>866b0438-b922-4840-b818-8c5fd0845594</xr:TypeId>
+				<xr:ValueId>7e6527c5-49f4-4260-aab7-964010de7476</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterRecordSet.ДенежныеСредстваККМ" category="RecordSet">
+				<xr:TypeId>c10234a5-0a9e-4f07-b8ca-67dc41027000</xr:TypeId>
+				<xr:ValueId>d3a1cc23-fbd3-42d7-90ae-6b3f46ac9400</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterRecordKey.ДенежныеСредстваККМ" category="RecordKey">
+				<xr:TypeId>a20ee4b0-92ee-476f-9e11-846110836e8d</xr:TypeId>
+				<xr:ValueId>5afe5611-3bba-4813-8cb3-b3503e6d739e</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ДенежныеСредстваККМ</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>e3b0ffae-8470-417b-a969-d0ccd5034ce5</ExtendedConfigurationObject>
+			<RegisterType>Balance</RegisterType>
+		</Properties>
+		<ChildObjects>
+			<Resource uuid="db7d5e2b-2a77-40cc-83ee-de526bb93d05">
+				<InternalInfo/>
+				<Properties>
+					<Name>Сумма</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>078df5d2-f969-4575-ba9c-89346c290dbd</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="0977f4d7-ce2f-43fe-bfb1-06040def5830">
+				<InternalInfo/>
+				<Properties>
+					<Name>КассаККМ</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>79b76565-53ba-45ca-ace3-092666f7b140</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КассыККМ</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</AccumulationRegister>
+</MetaDataObject>

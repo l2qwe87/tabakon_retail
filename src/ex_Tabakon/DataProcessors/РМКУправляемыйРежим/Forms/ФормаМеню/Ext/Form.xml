@@ -236,7 +236,7 @@
 											</Title>
 											<ExtendedTooltip name="ЧекиРасширеннаяПодсказка" id="157"/>
 										</Button>
-										<Button name="Возвраты" id="161">
+										<Button name="Возвраты1" id="163">
 											<Type>UsualButton</Type>
 											<Height>2</Height>
 											<HorizontalStretch>true</HorizontalStretch>
@@ -248,7 +248,21 @@
 													<v8:content>Возвраты от покупателей</v8:content>
 												</v8:item>
 											</Title>
-											<ExtendedTooltip name="ВозвратыРасширеннаяПодсказка" id="162"/>
+											<ExtendedTooltip name="Возвраты1РасширеннаяПодсказка" id="164"/>
+										</Button>
+										<Button name="Заказы" id="161">
+											<Type>UsualButton</Type>
+											<Height>2</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<CommandName>Form.Command.ПоказатьЗаказы</CommandName>
+											<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Заказы покупателей</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЗаказыРасширеннаяПодсказка" id="162"/>
 										</Button>
 										<Button name="ВыгрузитьПродажиЗаПериод" id="154">
 											<Type>UsualButton</Type>
@@ -376,6 +390,9 @@
 											<FileDragMode>AsFile</FileDragMode>
 											<ContextMenu name="ДекорацияЗакрытиеСменыКонтекстноеМеню" id="85"/>
 											<ExtendedTooltip name="ДекорацияЗакрытиеСменыРасширеннаяПодсказка" id="86"/>
+											<Events>
+												<Event name="Click" callType="Before">ТБКДекорацияЗакрытиеСменыНажатиеПеред</Event>
+											</Events>
 										</PictureDecoration>
 										<PictureDecoration name="ДекорацияНастройкаРМК" id="90">
 											<Width>24</Width>
@@ -748,6 +765,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКПоказатьВозвратыПосле</Action>
+		</Command>
+		<Command name="ПоказатьЗаказы" id="1000004">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать заказы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать заказы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКПоказатьЗаказыПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">

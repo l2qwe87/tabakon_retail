@@ -15,15 +15,35 @@ using Microsoft.EntityFrameworkCore;
 using RetailClient.Web.Contracts;
 using RetailClient.Web.Services.Jobs;
 using RetailClient.Web.Services;
+using System.Net.Http;
+using System.Security.Policy;
+using RetailClientTests.Controllers;
+using System.Net.Http.Headers;
 
 namespace RetailClientTests
 {
+
+   
+
+    public class IsmpHttpClient : HttpClient
+    {
+        public IsmpHttpClient(HttpMessageHandler handler) : base(handler) { }
+    }
+
     public class Startup
     {
         private static IServiceScope serviceScope;
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+
+            var host = Configuration.GetSection("IsmpCrpt").GetValue<string>("Host");
+            var timeout = Configuration.GetValue<double>("HttpClient:Timeout");
+
+            Console.WriteLine($"===============");
+            Console.WriteLine($"host : {host}");
+            Console.WriteLine($"timeout  : {timeout}");
+            Console.WriteLine($"===============");
         }
 
         public IConfiguration Configuration { get; }
@@ -35,7 +55,16 @@ namespace RetailClientTests
 
             services.AddDbContextPool<TabakonDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("TabakonDataContext")), 20);
 
-            services.AddSingleton<IJobService, JobService>();
+            services.AddHttpClient<IsmpCrptApiClient>("IsmpCrptApiClient",
+                client =>
+                {
+                    client.BaseAddress = new Uri(Configuration.GetValue<string>("IsmpCrpt:Host"));
+                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                });
+
+
+            //services.AddSingleton<IJobService, JobService>();
+
             services.AddScoped<WorkerRetailVersion, WorkerRetailVersion>();
             services.AddScoped<WorkerPing, WorkerPing>();
             services.AddScoped<WorkerRetailExtConfiguration, WorkerRetailExtConfiguration>();
@@ -54,12 +83,12 @@ namespace RetailClientTests
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             serviceScope = app.ApplicationServices.CreateScope();
-            if (env.IsDevelopment())
+            //if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
@@ -80,29 +109,16 @@ namespace RetailClientTests
                 spa.Options.SourcePath = "dist/tabakon-web-admin";
             });
 
-
-            InitSingeltonServices(serviceScope.ServiceProvider);
         }
 
 
 
-        private void InitSingeltonServices(IServiceProvider serviceProvider)
-        {
 
-            var jobService = serviceProvider.GetService<IJobService>();
-#if RELEASE
-            jobService.AddTask<WorkerRetailDocSelesReport>(TimeSpan.FromMinutes(20));
-            jobService.AddTask<WorkerRetailVersion>(TimeSpan.FromMinutes(25));
-            jobService.AddTask<WorkerRetailExtConfiguration>(TimeSpan.FromMinutes(25));
-            jobService.AddTask<WorkerPing>(TimeSpan.FromMinutes(15));
-            jobService.AddTask<WorkerRetailGetStoreBalance>(TimeSpan.FromMinutes(60));
 #else
             jobService.AddTask<WorkerRetailDocSelesReport>(TimeSpan.FromMinutes(2));
             jobService.AddTask<WorkerRetailVersion>(TimeSpan.FromMinutes(5));
             jobService.AddTask<WorkerRetailExtConfiguration>(TimeSpan.FromMinutes(5));
             jobService.AddTask<WorkerPing>(TimeSpan.FromMinutes(1));
             jobService.AddTask<WorkerRetailGetStoreBalance>(TimeSpan.FromMinutes(5));
-#endif
-        }
     }
 }

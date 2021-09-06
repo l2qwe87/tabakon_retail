@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<InformationRegister uuid="4d2388db-60d8-4d7d-a510-41bc038fb004">
+		<InternalInfo>
+			<xr:GeneratedType name="InformationRegisterRecord.ФИОФизЛиц" category="Record">
+				<xr:TypeId>da535114-50db-4f33-8e03-c146d0c2fc31</xr:TypeId>
+				<xr:ValueId>85a0491d-9551-4f37-84e5-6ceddba2160b</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterManager.ФИОФизЛиц" category="Manager">
+				<xr:TypeId>190441c0-b3fc-4a94-a270-4a0d68da7f46</xr:TypeId>
+				<xr:ValueId>9e47a447-d57c-411e-8d9a-308b46deab04</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterSelection.ФИОФизЛиц" category="Selection">
+				<xr:TypeId>43ad59ec-9a43-4d05-b095-5b09c05cb5af</xr:TypeId>
+				<xr:ValueId>ae83c4bb-9a58-493d-802f-6b168ce60d78</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterList.ФИОФизЛиц" category="List">
+				<xr:TypeId>5e3eaf43-18c7-4851-b342-d1d892b59507</xr:TypeId>
+				<xr:ValueId>ffc577db-e05b-4a53-a6e7-1167308749c4</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordSet.ФИОФизЛиц" category="RecordSet">
+				<xr:TypeId>a8b9f456-4eaf-424d-a330-7c65b5b092f9</xr:TypeId>
+				<xr:ValueId>59d93813-85ad-47dc-9b4b-0691be760282</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordKey.ФИОФизЛиц" category="RecordKey">
+				<xr:TypeId>4145fbb2-5bb5-4b53-922f-0cf77754a5c5</xr:TypeId>
+				<xr:ValueId>59dbbd09-be79-49c7-8989-6b5b6e352ddb</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordManager.ФИОФизЛиц" category="RecordManager">
+				<xr:TypeId>0da4e2ea-901e-48fe-843c-8e150e78f413</xr:TypeId>
+				<xr:ValueId>6c1becf4-26af-433a-abb6-364bd249d2f0</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ФИОФизЛиц</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>1859cf65-c41e-4955-8f47-a1522ee2827b</ExtendedConfigurationObject>
+			<InformationRegisterPeriodicity>Day</InformationRegisterPeriodicity>
+			<WriteMode>Independent</WriteMode>
+		</Properties>
+		<ChildObjects>
+			<Resource uuid="26684e4b-3d71-40ba-b928-986a586193a8">
+				<InternalInfo/>
+				<Properties>
+					<Name>Фамилия</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>4326b39a-578e-4d94-b950-7fb8f48faa58</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="51d97e8b-fa21-44d3-96bd-71e7996ed969">
+				<InternalInfo/>
+				<Properties>
+					<Name>ФизЛицо</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>0d5a181b-0429-41a2-aecc-086ec1abfee7</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</InformationRegister>
+</MetaDataObject>
