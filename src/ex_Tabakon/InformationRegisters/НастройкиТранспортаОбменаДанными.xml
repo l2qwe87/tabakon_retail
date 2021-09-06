@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<InformationRegister uuid="52db76e7-737a-471d-93d6-a7fc6d20aed6">
+		<InternalInfo>
+			<xr:GeneratedType name="InformationRegisterRecord.НастройкиТранспортаОбменаДанными" category="Record">
+				<xr:TypeId>7be4e262-98f3-452e-b331-efb0aa45cd3d</xr:TypeId>
+				<xr:ValueId>e0c0f958-7122-4f91-82f1-d4287badeeda</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterManager.НастройкиТранспортаОбменаДанными" category="Manager">
+				<xr:TypeId>22e4cbf6-12c2-4b0b-ac12-5210c95ec159</xr:TypeId>
+				<xr:ValueId>a9c6c22c-6c1a-426b-9c30-51db1d5a3d3f</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterSelection.НастройкиТранспортаОбменаДанными" category="Selection">
+				<xr:TypeId>864ec6bc-9803-419e-ba3c-6e61e20c24eb</xr:TypeId>
+				<xr:ValueId>1c9b4e8f-f690-4595-ade7-1b1feb8ec474</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterList.НастройкиТранспортаОбменаДанными" category="List">
+				<xr:TypeId>5386b40c-3ece-4b0d-984c-6520d80b29ec</xr:TypeId>
+				<xr:ValueId>26567106-5e14-4f4c-801f-e53b93f64f21</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordSet.НастройкиТранспортаОбменаДанными" category="RecordSet">
+				<xr:TypeId>9737dbfc-02d5-4c37-8f65-f5756155cd08</xr:TypeId>
+				<xr:ValueId>4e75bf3c-56b7-4891-859b-3e9ab2c1ebcb</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordKey.НастройкиТранспортаОбменаДанными" category="RecordKey">
+				<xr:TypeId>f9cfb318-9f5d-406c-bf36-7c8126bdc9c1</xr:TypeId>
+				<xr:ValueId>6862c570-3a41-4cfa-8648-37ab56498071</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordManager.НастройкиТранспортаОбменаДанными" category="RecordManager">
+				<xr:TypeId>516d95cb-ee79-4fb5-912b-62b4574c677b</xr:TypeId>
+				<xr:ValueId>30a4fbf1-c564-4fae-b4f5-337734854b23</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>НастройкиТранспортаОбменаДанными</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>83c860a2-d0d7-4b7c-a127-78d86b155cfa</ExtendedConfigurationObject>
+			<InformationRegisterPeriodicity>Nonperiodical</InformationRegisterPeriodicity>
+			<WriteMode>Independent</WriteMode>
+		</Properties>
+		<ChildObjects>
+			<Resource uuid="770567be-acdb-47ac-b273-ac5454a85b87">
+				<InternalInfo/>
+				<Properties>
+					<Name>FTPСоединениеПользователь</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>0449c160-01e5-4fe4-8759-5b93c484b467</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="1760ce18-4a7f-4873-8f3f-cc70e83ca941">
+				<InternalInfo/>
+				<Properties>
+					<Name>FTPСоединениеПорт</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>0684e4ba-28c7-4032-a43f-a3a4a37ec50b</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>5</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="d2a89b9f-7bdf-4834-b795-5a2ee61acf93">
+				<InternalInfo/>
+				<Properties>
+					<Name>FTPСоединениеПуть</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>bcac012d-b4a9-49bb-9c54-722c741d183c</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="c4688460-8dab-4848-85f7-cf40afc65b3b">
+				<InternalInfo/>
+				<Properties>
+					<Name>Корреспондент</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>7e9fadd6-d0ad-4856-a195-1058f00bf488</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:ExchangePlanRef</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</InformationRegister>
+</MetaDataObject>
