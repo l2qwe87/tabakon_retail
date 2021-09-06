@@ -22,13 +22,32 @@ export class MarkInfoComponent implements OnInit {
     this.props = [
       {label: "Владелец", value: v.cisInfo.ownerName},
       {label: "ИНН", value: v.cisInfo.ownerInn},
-      {label: "Статус", value: v.cisInfo.status},
+      {label: "Статус", value: this.GetStatus(v.cisInfo.status)},
       {label: "Товар", value: v.cisInfo.productName},
     ]
 
     console.log(this.props);
 
   };
+
+
+  private _statusEnum = {
+    "EMITTED" : "Эмитирован. Выпущен",
+    "APPLIED" : "Эмитирован. Получен",
+    "INTRODUCED" : "В обороте",
+    "WRITTEN_OFF" : "Списан",
+    "RETIRED" : "Выбыл",
+    "WITHDRAWN" : "Выбыл",
+    "INTRODUCED_RETURNED" : "Возвращён в оборот",
+    "DISAGGREGATION" : "Расформирован",
+    "DISAGGREGATED" : "Расформирован",
+  };
+
+  public GetStatus(v : string):string
+  {
+    return this._statusEnum[v] ?? v;
+  }
+
   public get  info(): any{
     return this._info
   };
