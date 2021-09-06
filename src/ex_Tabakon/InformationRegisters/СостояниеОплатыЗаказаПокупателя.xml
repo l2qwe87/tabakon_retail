@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<InformationRegister uuid="274120b8-0816-441c-8744-fd04abc42020">
+		<InternalInfo>
+			<xr:GeneratedType name="InformationRegisterRecord.СостояниеОплатыЗаказаПокупателя" category="Record">
+				<xr:TypeId>097beb67-eba2-4ef8-b7ab-5d6a3f095f49</xr:TypeId>
+				<xr:ValueId>c679fef0-97b1-41b8-b966-2b3b20023094</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterManager.СостояниеОплатыЗаказаПокупателя" category="Manager">
+				<xr:TypeId>57db25d0-7580-4b11-8df6-d6c0de96ad8a</xr:TypeId>
+				<xr:ValueId>a564c412-7ef1-4e1a-8cb8-f24aafaabe7c</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterSelection.СостояниеОплатыЗаказаПокупателя" category="Selection">
+				<xr:TypeId>72ce9622-2b55-4446-ad50-663b467879b1</xr:TypeId>
+				<xr:ValueId>ddae8e63-d3e5-4d86-981d-d3f07755e66e</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterList.СостояниеОплатыЗаказаПокупателя" category="List">
+				<xr:TypeId>9b07350f-8982-404b-8aa2-fdf7c91e8362</xr:TypeId>
+				<xr:ValueId>b9229c1f-a349-4814-83ed-0e460b85389f</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordSet.СостояниеОплатыЗаказаПокупателя" category="RecordSet">
+				<xr:TypeId>a835ab9e-e0e2-4239-86bb-3818ae37e2a3</xr:TypeId>
+				<xr:ValueId>7ac9fa03-a509-4f6e-b7f2-f249be95eb9a</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordKey.СостояниеОплатыЗаказаПокупателя" category="RecordKey">
+				<xr:TypeId>68602681-1dc1-4831-b719-10acddb2706d</xr:TypeId>
+				<xr:ValueId>e6711670-8dac-478e-89b2-aa66b45c2c44</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordManager.СостояниеОплатыЗаказаПокупателя" category="RecordManager">
+				<xr:TypeId>cfaa02c4-c1e8-4e4c-96a7-7e4880639849</xr:TypeId>
+				<xr:ValueId>20ef0e27-b513-4f90-a677-74cd5d0565e7</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>СостояниеОплатыЗаказаПокупателя</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>8f518134-2c0a-4f4c-aa84-5301e8395f74</ExtendedConfigurationObject>
+			<InformationRegisterPeriodicity>Second</InformationRegisterPeriodicity>
+			<WriteMode>Independent</WriteMode>
+		</Properties>
+		<ChildObjects>
+			<Resource uuid="75016335-d52f-41e8-894d-a373d11e4fd0">
+				<InternalInfo/>
+				<Properties>
+					<Name>Состояние</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>000256c6-aa38-40fd-a29f-c474697645de</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.СостоянияОплатыЗаказаПокупателя</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="815b193d-1c1c-43a3-8490-551afdced639">
+				<InternalInfo/>
+				<Properties>
+					<Name>ЗаказПокупателя</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>0ddfdc44-0ce0-40c9-a188-b63d0956b2be</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ЗаказПокупателя</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</InformationRegister>
+</MetaDataObject>
