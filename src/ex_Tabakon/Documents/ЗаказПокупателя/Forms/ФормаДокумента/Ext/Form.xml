@@ -158,31 +158,18 @@
 				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="108"/>
 			</Button>
-			<Button name="ФормаПробитьНал" id="639">
+			<Button name="ФормаОплатить" id="639">
 				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.ОплатаНал</CommandName>
+				<CommandName>Form.Command.Оплатить</CommandName>
 				<BackColor>style:ActivityColor</BackColor>
 				<Font bold="true" kind="AutoFont"/>
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Нал</v8:content>
+						<v8:content>Оплатить</v8:content>
 					</v8:item>
 				</Title>
-				<ExtendedTooltip name="ФормаПробитьНалРасширеннаяПодсказка" id="640"/>
-			</Button>
-			<Button name="ФормаПробитьКарта" id="641">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.ОплатаКарта</CommandName>
-				<BackColor>style:ActivityColor</BackColor>
-				<Font bold="true" kind="AutoFont"/>
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Карта</v8:content>
-					</v8:item>
-				</Title>
-				<ExtendedTooltip name="ФормаПробитьКартаРасширеннаяПодсказка" id="642"/>
+				<ExtendedTooltip name="ФормаОплатитьРасширеннаяПодсказка" id="640"/>
 			</Button>
 			<Button name="ФормаОтвязатьЧек" id="643">
 				<Type>CommandBarButton</Type>
@@ -482,7 +469,6 @@
 									<ExtendedTooltip name="ГруппаСтатусРасширеннаяПодсказка" id="429"/>
 									<ChildItems>
 										<InputField name="Статус" id="217">
-											<ReadOnly>true</ReadOnly>
 											<Width>10</Width>
 											<HorizontalStretch>false</HorizontalStretch>
 											<ContextMenu name="СтатусКонтекстноеМеню" id="218"/>
@@ -2308,20 +2294,20 @@
 			</ToolTip>
 			<Action callType="After">ТБКВыкупленПосле</Action>
 		</Command>
-		<Command name="ОплатаНал" id="1000002">
+		<Command name="Оплатить" id="1000002">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Оплата нал</v8:content>
+					<v8:content>Оплатить</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Оплата наличными</v8:content>
+					<v8:content>Перенести в РМК</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action callType="After">ТБКОплатаНалПосле</Action>
+			<Action callType="After">ТБКОплатить</Action>
 		</Command>
 		<Command name="ОтвязатьЧек" id="1000003">
 			<Title>
@@ -2337,21 +2323,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКОтвязатьЧекПосле</Action>
-		</Command>
-		<Command name="ОплатаКарта" id="1000004">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Оплата карта</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Оплата картой</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action callType="After">ТБКОплатаКартаПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
