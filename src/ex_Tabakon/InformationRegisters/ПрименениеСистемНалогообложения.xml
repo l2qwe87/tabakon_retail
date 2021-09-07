@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<InformationRegister uuid="7077e245-73ee-4274-a057-5521284abfa8">
+		<InternalInfo>
+			<xr:GeneratedType name="InformationRegisterRecord.ПрименениеСистемНалогообложения" category="Record">
+				<xr:TypeId>f445dfde-1005-45b7-a10b-6533e5bf1eaf</xr:TypeId>
+				<xr:ValueId>659b588d-9c54-418b-944e-b527d66d11fb</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterManager.ПрименениеСистемНалогообложения" category="Manager">
+				<xr:TypeId>ab8a23ee-939c-4622-ab1b-6f9d3b87751b</xr:TypeId>
+				<xr:ValueId>e2832258-99b1-424f-88d5-cca3d202bf15</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterSelection.ПрименениеСистемНалогообложения" category="Selection">
+				<xr:TypeId>04457af1-fa55-4826-a1d2-16ac373bc57c</xr:TypeId>
+				<xr:ValueId>17b8d068-d189-4ec8-82ae-4928143562a1</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterList.ПрименениеСистемНалогообложения" category="List">
+				<xr:TypeId>fba05fbd-b496-4a19-befe-2936f1883799</xr:TypeId>
+				<xr:ValueId>498838be-7c58-4827-984a-1f1e54f772a2</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordSet.ПрименениеСистемНалогообложения" category="RecordSet">
+				<xr:TypeId>4014c5f9-446d-4e4c-9bf4-b1de4223b895</xr:TypeId>
+				<xr:ValueId>dcff01ee-9b9a-403d-8a08-ffca4c80bd10</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordKey.ПрименениеСистемНалогообложения" category="RecordKey">
+				<xr:TypeId>4c4223b9-b8d3-41f2-b62a-5ae8928d83ff</xr:TypeId>
+				<xr:ValueId>7a2e6316-cdce-4793-8401-aa4ca33cecae</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordManager.ПрименениеСистемНалогообложения" category="RecordManager">
+				<xr:TypeId>29aa84d2-7315-4355-a3c3-d7ec2b58b6e6</xr:TypeId>
+				<xr:ValueId>fe38ff38-996d-4cfe-83f3-b33f8cd69fa8</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ПрименениеСистемНалогообложения</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>2e8eb38a-8069-4eb1-a448-d6f88c8be25e</ExtendedConfigurationObject>
+			<InformationRegisterPeriodicity>Month</InformationRegisterPeriodicity>
+			<WriteMode>Independent</WriteMode>
+		</Properties>
+		<ChildObjects>
+			<Resource uuid="2420fb0e-fe0e-4729-a578-1d9b93cf8e2e">
+				<InternalInfo/>
+				<Properties>
+					<Name>СистемаНалогообложения</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>93812182-5f3b-49a5-8ec9-187d29780954</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ТипыСистемНалогообложенияККТ</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="9f450411-5d2b-4ae2-916c-001119492be1">
+				<InternalInfo/>
+				<Properties>
+					<Name>Организация</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>6958528b-e7c0-4d8b-85f3-90deeedb4e67</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</InformationRegister>
+</MetaDataObject>
