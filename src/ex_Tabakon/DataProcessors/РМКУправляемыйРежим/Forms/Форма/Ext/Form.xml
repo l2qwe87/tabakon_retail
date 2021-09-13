@@ -12,6 +12,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen" callType="After">ТБКПриОткрытииПосле</Event>
+		<Event name="ExternalEvent" callType="Override">ТБКВнешнееСобытиеВместо</Event>
 		<Event name="OnCreateAtServer" callType="Before">ТБКПриСозданииНаСервереПеред</Event>
 		<Event name="OnCreateAtServer" callType="After">ТБКПриСозданииНаСервереПосле</Event>
 		<Event name="ActivationProcessing" callType="After">ТБКОбработкаАктивизацииПосле</Event>
@@ -2498,6 +2499,21 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Адрес ВХ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КодАкции" id="1000004">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код акции</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
