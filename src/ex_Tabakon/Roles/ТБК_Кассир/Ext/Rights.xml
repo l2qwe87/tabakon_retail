@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Rights xmlns="http://v8.1c.ru/8.2/roles" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Rights" version="2.9">
 	<setForNewObjects>false</setForNewObjects>
-	<setForAttributesByDefault>true</setForAttributesByDefault>
+	<setForAttributesByDefault>false</setForAttributesByDefault>
 	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
 	<object>
 		<name>Catalog.Магазины</name>
@@ -192,8 +192,8 @@
 	<object>
 		<name>Document.ЧекККМ.Attribute.ВозвратОтПокупателя</name>
 		<right>
-			<name>Edit</name>
-			<value>false</value>
+			<name>View</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -215,6 +215,17 @@
 		</right>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.Attribute.ЗП_Продаца_Комментарий</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -697,17 +708,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ТБКДанныеВаучера.Resource.Состояние</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.ЧекККМ.TabularSection.Оплата</name>
 		<right>
 			<name>View</name>
@@ -829,6 +829,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.TabularSection.Продавцы</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>DataProcessor.ТБК_ВыгрузкаПродажДляИнвентаризации</name>
 		<right>
 			<name>Use</name>
@@ -841,6 +852,17 @@
 	</object>
 	<object>
 		<name>Document.ПриходныйКассовыйОрдер.Attribute.КассаККМ</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.TabularSection.ОплатаПоставщику</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -1068,14 +1090,25 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ТБКМиграции.Dimension.Идентификатор</name>
+		<name>InformationRegister.ТБК_Константы.Dimension.ИмяКонстанты</name>
 		<right>
 			<name>View</name>
-			<value>false</value>
+			<value>true</value>
 		</right>
 		<right>
 			<name>Edit</name>
-			<value>false</value>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.Attribute.РасходыОтдела_РКО</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -1437,6 +1470,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.Attribute.ВыручкаЗаСменуПоКассе_Комментарий</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ПриходныйОрдерНаТовары.TabularSection.Товары</name>
 		<right>
 			<name>View</name>
@@ -1451,6 +1495,50 @@
 		<name>InformationRegister.ТБК_Константы</name>
 		<right>
 			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ТБК_Константы.StandardAttribute.Active</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ТБК_Константы.StandardAttribute.LineNumber</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ТБК_Константы.StandardAttribute.Recorder</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ТБК_Константы.StandardAttribute.Period</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1727,6 +1815,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.TabularSection.Продавцы.Attribute.Продавец</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ОтчетОРозничныхПродажах.TabularSection.Товары.Attribute.Сумма</name>
 		<right>
 			<name>View</name>
@@ -1777,6 +1876,10 @@
 		<name>Catalog.Контрагенты</name>
 		<right>
 			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
 			<value>true</value>
 		</right>
 		<right>
@@ -1887,6 +1990,17 @@
 		<name>DataProcessor.ТБК_Миграции.Command.М_00017_SetRelease</name>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.TabularSection.ОтчетыОРозничныхПродажах.Attribute.ОтчетОРозничныхПродажах</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -2190,14 +2304,14 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ТБКДанныеВаучера.Dimension.ИдентификаторСкидки</name>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.TabularSection.ВыемкаДенежныхСредств</name>
 		<right>
 			<name>View</name>
-			<value>false</value>
+			<value>true</value>
 		</right>
 		<right>
 			<name>Edit</name>
-			<value>false</value>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -2219,7 +2333,40 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.TabularSection.ВыемкаДенежныхСредств.Attribute.Выемка</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.Attribute.ВозвратОтПокупателяНал</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ВозвратТоваровОтПокупателя.TabularSection.Товары.Attribute.СуммаАвтоматическойСкидки</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.TabularSection.ОтчетыОРозничныхПродажах</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -2516,6 +2663,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.TabularSection.ОтчетыОРозничныхПродажах.Attribute.ОплатаНаличными</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.ТБКМиграции</name>
 		<right>
 			<name>Read</name>
@@ -2552,50 +2710,6 @@
 		<right>
 			<name>UpdateDataHistoryVersionComment</name>
 			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ТБКМиграции.StandardAttribute.Active</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ТБКМиграции.StandardAttribute.LineNumber</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ТБКМиграции.StandardAttribute.Recorder</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ТБКМиграции.StandardAttribute.Period</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -2684,6 +2798,17 @@
 	</object>
 	<object>
 		<name>InformationRegister.КомплектующиеНоменклатуры.Resource.ДоляСтоимости</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.Attribute.КассаККМ</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -2794,6 +2919,17 @@
 	</object>
 	<object>
 		<name>Catalog.УсловияПредоставленияСкидокНаценок.StandardAttribute.Code</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.Attribute.ОплатаНаличными</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -3137,50 +3273,6 @@
 		<right>
 			<name>UpdateDataHistoryVersionComment</name>
 			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ТБКДанныеВаучера.StandardAttribute.Active</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ТБКДанныеВаучера.StandardAttribute.LineNumber</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ТБКДанныеВаучера.StandardAttribute.Recorder</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ТБКДанныеВаучера.StandardAttribute.Period</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -3618,6 +3710,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.Attribute.Магазин</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>DataProcessor.ТБК_Миграции.Command.М_00001_ДатаЗапретИзменениеДанных20200701</name>
 		<right>
 			<name>View</name>
@@ -3626,6 +3729,17 @@
 	</object>
 	<object>
 		<name>Document.ПриходныйОрдерНаТовары.Attribute.ДокументОснование</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.Attribute.ЗП_Продавца_РКО</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -3782,6 +3896,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.Attribute.ВедомостьПродажнеНеУчтено_Комментарий</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.ВидыНоменклатуры</name>
 		<right>
 			<name>Read</name>
@@ -3903,6 +4028,28 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.Attribute.НаличныеКСдаче</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.Attribute.ВедомостьПродажНеУчтено</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.КорректировкаРегистров</name>
 		<right>
 			<name>Read</name>
@@ -3919,17 +4066,6 @@
 		<right>
 			<name>Posting</name>
 			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ТБК_Штрихкоды.Dimension.Штрихкод</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -4168,6 +4304,28 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.Attribute.ВыручкаЗаСменуПоКассе</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.TabularSection.ОплатаПоставщику.Attribute.ЗаКакуюДату</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.Магазины.Attribute.СкладПоступления</name>
 		<right>
 			<name>View</name>
@@ -4218,50 +4376,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ТБК_Штрихкоды.StandardAttribute.Active</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ТБК_Штрихкоды.StandardAttribute.LineNumber</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ТБК_Штрихкоды.StandardAttribute.Recorder</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ТБК_Штрихкоды.StandardAttribute.Period</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>DataProcessor.ПомощникПриемкиОтгрузки</name>
 		<right>
 			<name>Use</name>
@@ -4269,6 +4383,28 @@
 		</right>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.Attribute.Склад</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.TabularSection.ОтчетыОРозничныхПродажах.Attribute.ВозвратОтПокупателяБезНал</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -4285,6 +4421,17 @@
 	</object>
 	<object>
 		<name>Catalog.СкидкиНаценки.Attribute.СпособПредоставления</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.Attribute.ОплатаПоБанковскимКартам</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -4353,17 +4500,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ТБКМиграции.Attribute.Примечание</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>InformationRegister.Штрихкоды.Dimension.Упаковка</name>
 		<right>
 			<name>View</name>
@@ -4386,6 +4522,17 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.ТБК_Константы.Resource.ЗначениеКонстанты</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.НастройкиРМК.Attribute.НазначатьЦенуТоварамСНулевойЦеной</name>
 		<right>
 			<name>View</name>
@@ -4398,6 +4545,28 @@
 	</object>
 	<object>
 		<name>InformationRegister.КомплектующиеНоменклатуры.Dimension.Комплектующая</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.TabularSection.ОплатаПоставщику.Attribute.Сумма</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.TabularSection.ОплатаПоставщику.Attribute.Контрагент</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -4903,6 +5072,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.Attribute.РасходыОтдела_Комментарий</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ЧекККМ.TabularSection.Оплата.Attribute.ВидОплаты</name>
 		<right>
 			<name>View</name>
@@ -5134,6 +5314,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.TabularSection.Продавцы.Attribute.ЭтоГлавныйПродавец</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.СкидкиНаценки.TabularSection.УсловияПредоставления</name>
 		<right>
 			<name>View</name>
@@ -5301,17 +5492,6 @@
 		<right>
 			<name>Edit</name>
 			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ТБК_Штрихкоды.Dimension.Упаковка</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -5656,6 +5836,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.TabularSection.ОтчетыОРозничныхПродажах.Attribute.ВозвратОтПокупателяНал</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.БезопасноеХранилищеДанных</name>
 		<right>
 			<name>Read</name>
@@ -5663,6 +5854,17 @@
 		</right>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.TabularSection.Возвраты</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -6116,6 +6318,17 @@
 	</object>
 	<object>
 		<name>Document.РасходныйКассовыйОрдер.StandardAttribute.Number</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.TabularSection.ОплатаПоставщику.Attribute.РКО</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -6668,6 +6881,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.Attribute.ВозвратОтПокупателяБезНал</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.СценарииОбменовДанными</name>
 		<right>
 			<name>Read</name>
@@ -7057,32 +7281,10 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ТБКМиграции.Resource.Применена</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>DataProcessor.ТБК_Миграции.Command.М_00023_ЧисткаДублейХарактеристик</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ТБКМиграции.Attribute.ДатаПрименения</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -7281,17 +7483,6 @@
 		<right>
 			<name>Edit</name>
 			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ТБК_Штрихкоды.Dimension.ТипШтрихкода</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -7696,14 +7887,25 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ТБК_Штрихкоды.Dimension.Владелец</name>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.TabularSection.ОтчетыОРозничныхПродажах.Attribute.ОплатаПоБанковскимКартам</name>
 		<right>
 			<name>View</name>
-			<value>false</value>
+			<value>true</value>
 		</right>
 		<right>
 			<name>Edit</name>
-			<value>false</value>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.TabularSection.ВыемкаДенежныхСредств.Attribute.ПКО</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -8048,17 +8250,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ТБКДанныеВаучера.Attribute.ФамилияИмяОтчество</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>InformationRegister.СоответствияОбъектовИнформационныхБаз.Dimension.УникальныйИдентификаторПриемника</name>
 		<right>
 			<name>View</name>
@@ -8176,6 +8367,72 @@
 		</right>
 		<right>
 			<name>SwitchToDataHistoryVersion</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.StandardAttribute.Posted</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.StandardAttribute.Date</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.StandardAttribute.Number</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.TabularSection.ВыемкаДенежныхСредств.Attribute.Сумма</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -8912,6 +9169,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.Attribute.ВедомостьПродажНеУчтено_ПКО</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>AccumulationRegister.ТоварыНаСкладах</name>
 		<right>
 			<name>Read</name>
@@ -8956,6 +9224,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.Attribute.РасходыОтдела</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.СтатьиДвиженияДенежныхСредств.Attribute.ХозяйственнаяОперация</name>
 		<right>
 			<name>View</name>
@@ -8988,6 +9267,17 @@
 		<name>DataProcessor.ТБК_Миграции.Command.М_00012_ПроведениеСписаний_Дубль</name>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.Attribute.ЗП_Продавца</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -9230,6 +9520,17 @@
 		<name>DataProcessor.ТБК_Миграции.Command.М_00026_TABAKON_122_ШокМарс</name>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ТБК_ВедомостьОПродажахЗаДень.TabularSection.Продавцы.Attribute.ЭтоДопСмена</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
 			<value>true</value>
 		</right>
 	</object>
