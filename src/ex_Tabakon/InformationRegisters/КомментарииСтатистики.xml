@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<InformationRegister uuid="5eba6aa5-64a6-437e-aecf-9593090c0c68">
+		<InternalInfo>
+			<xr:GeneratedType name="InformationRegisterRecord.КомментарииСтатистики" category="Record">
+				<xr:TypeId>1e2421c2-abd4-42e3-a60c-c176db175d65</xr:TypeId>
+				<xr:ValueId>a0652300-fafa-4bfc-9e50-0c42cf86cb6e</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterManager.КомментарииСтатистики" category="Manager">
+				<xr:TypeId>9dcf5267-f62b-4036-b917-41db1c0ee91a</xr:TypeId>
+				<xr:ValueId>a77341ff-ea0b-407f-8583-d3c42e02f17b</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterSelection.КомментарииСтатистики" category="Selection">
+				<xr:TypeId>664924da-c35a-4224-a860-7a924c1c0756</xr:TypeId>
+				<xr:ValueId>3ffe02c2-44a4-4e2d-a6a9-8fae7bb3ad66</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterList.КомментарииСтатистики" category="List">
+				<xr:TypeId>48d1217c-ef91-4f33-9ac1-f87099467792</xr:TypeId>
+				<xr:ValueId>36aad26f-f4c3-4299-9147-ac90f6abe9ed</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordSet.КомментарииСтатистики" category="RecordSet">
+				<xr:TypeId>85193552-7db3-4199-8e38-e514a3e243ab</xr:TypeId>
+				<xr:ValueId>5e534a52-0d8e-4e8a-bc20-d74e73dd6b58</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordKey.КомментарииСтатистики" category="RecordKey">
+				<xr:TypeId>7d11aa64-155d-4e45-b664-34e26a6c3185</xr:TypeId>
+				<xr:ValueId>fd8473c0-a71a-456f-8b89-18be5047f18b</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordManager.КомментарииСтатистики" category="RecordManager">
+				<xr:TypeId>508b36c1-7dc0-44a2-85fb-1274520210e4</xr:TypeId>
+				<xr:ValueId>e6dd3f7b-e72d-4030-b1ea-4883caab629f</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>КомментарииСтатистики</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>e964753f-7f4c-4f9f-bd17-cdac317c1d35</ExtendedConfigurationObject>
+			<InformationRegisterPeriodicity>Nonperiodical</InformationRegisterPeriodicity>
+			<WriteMode>Independent</WriteMode>
+		</Properties>
+		<ChildObjects>
+			<Resource uuid="e136573c-e328-4c7c-a350-657069c2ca4b">
+				<InternalInfo/>
+				<Properties>
+					<Name>Наименование</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>20c2aba0-e2b2-4e4f-9d48-1515c0ae7b4d</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>1000</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="33fc97a7-010c-4d91-b480-3bfcc619f3a8">
+				<InternalInfo/>
+				<Properties>
+					<Name>ХешНаименования</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>4ffc9d16-c450-4ecb-b8f6-9ec6fe37fc75</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>40</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</InformationRegister>
+</MetaDataObject>
