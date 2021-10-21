@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗакрытьСмену" id="3">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьСменуExtendedTooltip" id="12"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="ЗакрытиеСмены" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрытие смены</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ЗакрытиеСменыРасширеннаяПодсказка" id="19"/>
+			<ChildItems>
+				<CheckBoxField name="ЗакрытьБезZОтчета" id="10">
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗакрытьБезZОтчетаКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ЗакрытьБезZОтчетаExtendedTooltip" id="17"/>
+				</CheckBoxField>
+				<InputField name="КассаККМ" id="1">
+					<DefaultItem>true</DefaultItem>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КассаККМКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КассаККМExtendedTooltip" id="13"/>
+				</InputField>
+				<UsualGroup name="ГруппаСуммаВыемки" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сумма выемки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сумма выемки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<VerticalSpacing>Half</VerticalSpacing>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>Use</ThroughAlign>
+					<ExtendedTooltip name="ГруппаСуммаВыемкиРасширеннаяПодсказка" id="26"/>
+					<ChildItems>
+						<InputField name="СуммаФактическойВыемки" id="8">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сумма выемки</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="СуммаФактическойВыемкиКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="СуммаФактическойВыемкиExtendedTooltip" id="16"/>
+						</InputField>
+						<UsualGroup name="ГруппаОстаток" id="30">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа остаток</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа остаток</v8:content>
+								</v8:item>
+							</ToolTip>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<Group>AlwaysHorizontal</Group>
+							<VerticalSpacing>None</VerticalSpacing>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОстатокРасширеннаяПодсказка" id="31"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаОстатокЗаголовки" id="32">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа остаток заголовки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа остаток заголовки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОстатокЗаголовкиРасширеннаяПодсказка" id="33"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияОстатокВКассеЗаголовок" id="22">
+											<Font bold="true" kind="AutoFont"/>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;link ОстатокПодробнее&gt;Остаток:&lt;/&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+											<ContextMenu name="ДекорацияОстатокВКассеЗаголовокКонтекстноеМеню" id="23"/>
+											<ExtendedTooltip name="ДекорацияОстатокВКассеЗаголовокРасширеннаяПодсказка" id="24"/>
+										</LabelDecoration>
+										<LabelDecoration name="ДекорацияОстатокВКассеАгентскиеЗаголовок" id="36">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>в т.ч. агентские:</v8:content>
+												</v8:item>
+											</Title>
+											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+											<ContextMenu name="ДекорацияОстатокВКассеАгентскиеЗаголовокКонтекстноеМеню" id="37"/>
+											<ExtendedTooltip name="ДекорацияОстатокВКассеАгентскиеЗаголовокРасширеннаяПодсказка" id="38"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаОстатокДанные" id="34">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа остаток данные</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа остаток данные</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОстатокДанныеРасширеннаяПодсказка" id="35"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияОстатокВКассе" id="39">
+											<Font bold="true" kind="AutoFont"/>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;link ОстатокПодробнее&gt;10000 руб.&lt;/&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+											<ContextMenu name="ДекорацияОстатокВКассеКонтекстноеМеню" id="40"/>
+											<ExtendedTooltip name="ДекорацияОстатокВКассеРасширеннаяПодсказка" id="41"/>
+										</LabelDecoration>
+										<LabelDecoration name="ДекорацияОстатокВКассеАгентские" id="42">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>5000 руб.</v8:content>
+												</v8:item>
+											</Title>
+											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+											<ContextMenu name="ДекорацияОстатокВКассеАгентскиеКонтекстноеМеню" id="43"/>
+											<ExtendedTooltip name="ДекорацияОстатокВКассеАгентскиеРасширеннаяПодсказка" id="44"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ДекорацияОстатокПодробнее" id="45">
+							<Visible>false</Visible>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;link ОстатокПодробнее&gt;подробнее&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<ContextMenu name="ДекорацияОстатокПодробнееКонтекстноеМеню" id="46"/>
+							<ExtendedTooltip name="ДекорацияОстатокПодробнееРасширеннаяПодсказка" id="47"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="СверкаСБанком" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сверка с банком</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ThroughAlign>Use</ThroughAlign>
+					<ExtendedTooltip name="СверкаСБанкомРасширеннаяПодсказка" id="21"/>
+					<ChildItems>
+						<CheckBoxField name="ВыполнитьСверкуИтоговПоПлатежнымКартам" id="4">
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВыполнитьСверкуИтоговПоПлатежнымКартамКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ВыполнитьСверкуИтоговПоПлатежнымКартамExtendedTooltip" id="14"/>
+						</CheckBoxField>
+						<InputField name="ЭквайринговыйТерминал" id="6">
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>КассаККМ</xr:Name>
+									<xr:DataPath xsi:type="xs:string">1/0:02e2a680-6122-4f6e-8265-b13cdd7b052d</xr:DataPath>
+									<xr:ValueChange>DontChange</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ChoiceParameters>
+								<app:item name="Отбор.ИспользоватьБезПодключенияОборудования">
+									<app:value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xs:boolean">false</Value>
+									</app:value>
+								</app:item>
+							</ChoiceParameters>
+							<ContextMenu name="ЭквайринговыйТерминалКонтекстноеМеню" id="7"/>
+							<ExtendedTooltip name="ЭквайринговыйТерминалExtendedTooltip" id="15"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+	<BaseForm version="2.9">
+		<VerticalScroll>useIfNecessary</VerticalScroll>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+			<ChildItems>
+				<Button name="ФормаЗакрытьСмену" id="3">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ФормаЗакрытьСменуExtendedTooltip" id="12"/>
+				</Button>
+			</ChildItems>
+		</AutoCommandBar>
+		<ChildItems>
+			<UsualGroup name="ЗакрытиеСмены" id="18">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Закрытие смены</v8:content>
+					</v8:item>
+				</Title>
+				<Group>Vertical</Group>
+				<Representation>NormalSeparation</Representation>
+				<ExtendedTooltip name="ЗакрытиеСменыРасширеннаяПодсказка" id="19"/>
+				<ChildItems>
+					<CheckBoxField name="ЗакрытьБезZОтчета" id="10">
+						<TitleLocation>Right</TitleLocation>
+						<CheckBoxType>Auto</CheckBoxType>
+						<ContextMenu name="ЗакрытьБезZОтчетаКонтекстноеМеню" id="11"/>
+						<ExtendedTooltip name="ЗакрытьБезZОтчетаExtendedTooltip" id="17"/>
+					</CheckBoxField>
+					<InputField name="КассаККМ" id="1">
+						<DefaultItem>true</DefaultItem>
+						<EditMode>EnterOnInput</EditMode>
+						<ContextMenu name="КассаККМКонтекстноеМеню" id="2"/>
+						<ExtendedTooltip name="КассаККМExtendedTooltip" id="13"/>
+					</InputField>
+					<UsualGroup name="ГруппаСуммаВыемки" id="25">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа сумма выемки</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа сумма выемки</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Group>Vertical</Group>
+						<VerticalSpacing>Half</VerticalSpacing>
+						<ShowTitle>false</ShowTitle>
+						<ThroughAlign>Use</ThroughAlign>
+						<ExtendedTooltip name="ГруппаСуммаВыемкиРасширеннаяПодсказка" id="26"/>
+						<ChildItems>
+							<InputField name="СуммаФактическойВыемки" id="8">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Сумма выемки</v8:content>
+									</v8:item>
+								</Title>
+								<ContextMenu name="СуммаФактическойВыемкиКонтекстноеМеню" id="9"/>
+								<ExtendedTooltip name="СуммаФактическойВыемкиExtendedTooltip" id="16"/>
+							</InputField>
+							<UsualGroup name="ГруппаОстаток" id="30">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа остаток</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа остаток</v8:content>
+									</v8:item>
+								</ToolTip>
+								<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+								<Group>AlwaysHorizontal</Group>
+								<VerticalSpacing>None</VerticalSpacing>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаОстатокРасширеннаяПодсказка" id="31"/>
+								<ChildItems>
+									<UsualGroup name="ГруппаОстатокЗаголовки" id="32">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа остаток заголовки</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа остаток заголовки</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Group>Vertical</Group>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаОстатокЗаголовкиРасширеннаяПодсказка" id="33"/>
+										<ChildItems>
+											<LabelDecoration name="ДекорацияОстатокВКассеЗаголовок" id="22">
+												<Font bold="true" kind="AutoFont"/>
+												<Title formatted="true">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>&lt;link ОстатокПодробнее&gt;Остаток:&lt;/&gt;</v8:content>
+													</v8:item>
+												</Title>
+												<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+												<ContextMenu name="ДекорацияОстатокВКассеЗаголовокКонтекстноеМеню" id="23"/>
+												<ExtendedTooltip name="ДекорацияОстатокВКассеЗаголовокРасширеннаяПодсказка" id="24"/>
+											</LabelDecoration>
+											<LabelDecoration name="ДекорацияОстатокВКассеАгентскиеЗаголовок" id="36">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>в т.ч. агентские:</v8:content>
+													</v8:item>
+												</Title>
+												<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+												<ContextMenu name="ДекорацияОстатокВКассеАгентскиеЗаголовокКонтекстноеМеню" id="37"/>
+												<ExtendedTooltip name="ДекорацияОстатокВКассеАгентскиеЗаголовокРасширеннаяПодсказка" id="38"/>
+											</LabelDecoration>
+										</ChildItems>
+									</UsualGroup>
+									<UsualGroup name="ГруппаОстатокДанные" id="34">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа остаток данные</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа остаток данные</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Group>Vertical</Group>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаОстатокДанныеРасширеннаяПодсказка" id="35"/>
+										<ChildItems>
+											<LabelDecoration name="ДекорацияОстатокВКассе" id="39">
+												<Font bold="true" kind="AutoFont"/>
+												<Title formatted="true">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>&lt;link ОстатокПодробнее&gt;10000 руб.&lt;/&gt;</v8:content>
+													</v8:item>
+												</Title>
+												<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+												<ContextMenu name="ДекорацияОстатокВКассеКонтекстноеМеню" id="40"/>
+												<ExtendedTooltip name="ДекорацияОстатокВКассеРасширеннаяПодсказка" id="41"/>
+											</LabelDecoration>
+											<LabelDecoration name="ДекорацияОстатокВКассеАгентские" id="42">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>5000 руб.</v8:content>
+													</v8:item>
+												</Title>
+												<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+												<ContextMenu name="ДекорацияОстатокВКассеАгентскиеКонтекстноеМеню" id="43"/>
+												<ExtendedTooltip name="ДекорацияОстатокВКассеАгентскиеРасширеннаяПодсказка" id="44"/>
+											</LabelDecoration>
+										</ChildItems>
+									</UsualGroup>
+								</ChildItems>
+							</UsualGroup>
+							<LabelDecoration name="ДекорацияОстатокПодробнее" id="45">
+								<Visible>false</Visible>
+								<Title formatted="true">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>&lt;link ОстатокПодробнее&gt;подробнее&lt;/&gt;</v8:content>
+									</v8:item>
+								</Title>
+								<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+								<ContextMenu name="ДекорацияОстатокПодробнееКонтекстноеМеню" id="46"/>
+								<ExtendedTooltip name="ДекорацияОстатокПодробнееРасширеннаяПодсказка" id="47"/>
+							</LabelDecoration>
+						</ChildItems>
+					</UsualGroup>
+					<UsualGroup name="СверкаСБанком" id="20">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сверка с банком</v8:content>
+							</v8:item>
+						</Title>
+						<Group>Vertical</Group>
+						<Representation>NormalSeparation</Representation>
+						<ThroughAlign>Use</ThroughAlign>
+						<ExtendedTooltip name="СверкаСБанкомРасширеннаяПодсказка" id="21"/>
+						<ChildItems>
+							<CheckBoxField name="ВыполнитьСверкуИтоговПоПлатежнымКартам" id="4">
+								<TitleLocation>Right</TitleLocation>
+								<CheckBoxType>Auto</CheckBoxType>
+								<ContextMenu name="ВыполнитьСверкуИтоговПоПлатежнымКартамКонтекстноеМеню" id="5"/>
+								<ExtendedTooltip name="ВыполнитьСверкуИтоговПоПлатежнымКартамExtendedTooltip" id="14"/>
+							</CheckBoxField>
+							<InputField name="ЭквайринговыйТерминал" id="6">
+								<AutoMarkIncomplete>true</AutoMarkIncomplete>
+								<ChoiceParameterLinks>
+									<xr:Link>
+										<xr:Name>КассаККМ</xr:Name>
+										<xr:DataPath xsi:type="xs:string">1/0:02e2a680-6122-4f6e-8265-b13cdd7b052d</xr:DataPath>
+										<xr:ValueChange>DontChange</xr:ValueChange>
+									</xr:Link>
+								</ChoiceParameterLinks>
+								<ChoiceParameters>
+									<app:item name="Отбор.ИспользоватьБезПодключенияОборудования">
+										<app:value xsi:type="FormChoiceListDesTimeValue">
+											<Presentation/>
+											<Value xsi:type="xs:boolean">false</Value>
+										</app:value>
+									</app:item>
+								</ChoiceParameters>
+								<ContextMenu name="ЭквайринговыйТерминалКонтекстноеМеню" id="7"/>
+								<ExtendedTooltip name="ЭквайринговыйТерминалExtendedTooltip" id="15"/>
+							</InputField>
+						</ChildItems>
+					</UsualGroup>
+				</ChildItems>
+			</UsualGroup>
+		</ChildItems>
+		<Attributes/>
+	</BaseForm>
+</Form>

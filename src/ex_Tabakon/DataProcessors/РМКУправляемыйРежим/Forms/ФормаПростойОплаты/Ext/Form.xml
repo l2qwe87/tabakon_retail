@@ -1,0 +1,2217 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Оплата наличными</v8:content>
+		</v8:item>
+	</Title>
+	<EnterKeyBehavior>DefaultButton</EnterKeyBehavior>
+	<AutoTitle>false</AutoTitle>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="ГруппаЗаголовкиКнопки" id="149">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа заголовки кнопки</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗаголовкиКнопкиРасширеннаяПодсказка" id="150"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияЗаголовок" id="151">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<TextColor>#008000</TextColor>
+					<Font ref="sys:DefaultGUIFont" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content> </v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияЗаголовокКонтекстноеМеню" id="152"/>
+					<ExtendedTooltip name="ДекорацияЗаголовокExtendedTooltip" id="153"/>
+				</LabelDecoration>
+				<LabelField name="НадписьЗаголовок" id="134">
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<TextColor>#008000</TextColor>
+					<Font ref="sys:DefaultGUIFont" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ContextMenu name="НадписьЗаголовокКонтекстноеМеню" id="135"/>
+					<ExtendedTooltip name="НадписьЗаголовокРасширеннаяПодсказка" id="136"/>
+				</LabelField>
+				<CommandBar name="ГруппаКоманднаяПанель" id="154">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа командная панель</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справка по акселераторам</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>5</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<HorizontalLocation>Right</HorizontalLocation>
+					<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="155"/>
+					<ChildItems>
+						<Popup name="ГруппаВернееПодменю" id="156">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Справка по акселераторам</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<Picture>
+								<xr:Ref>CommonPicture.СправкаПоАкселераторам</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Representation>Picture</Representation>
+							<ExtendedTooltip name="ГруппаВернееПодменюРасширеннаяПодсказка" id="157"/>
+							<ChildItems>
+								<Popup name="ГруппаПанельПрочееОперации" id="158">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Прочее операции</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ГруппаПанельПрочееОперацииРасширеннаяПодсказка" id="159"/>
+									<ChildItems>
+										<Button name="Команда0Панель" id="160">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>0</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="Команда0ПанельРасширеннаяПодсказка" id="161"/>
+										</Button>
+										<Button name="Команда0ПраваяКлавиатураПанель" id="162">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>0 (правая клавиатура)</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="Команда0ПраваяКлавиатураПанельРасширеннаяПодсказка" id="163"/>
+										</Button>
+										<Button name="Команда1Панель" id="164">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>1</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="Команда1ПанельРасширеннаяПодсказка" id="165"/>
+										</Button>
+										<Button name="Команда1ПраваяКлавиатураПанель" id="166">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>1 (правая клавиатура)</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="Команда1ПраваяКлавиатураПанельРасширеннаяПодсказка" id="167"/>
+										</Button>
+										<Button name="Команда2Панель" id="168">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>2</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="Команда2ПанельРасширеннаяПодсказка" id="169"/>
+										</Button>
+										<Button name="Команда2ПраваяКлавиатураПанель" id="170">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>2 (правая клавиатура)</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="Команда2ПраваяКлавиатураПанельРасширеннаяПодсказка" id="171"/>
+										</Button>
+										<Button name="Команда3Панель" id="172">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>3</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="Команда3ПанельРасширеннаяПодсказка" id="173"/>
+										</Button>
+										<Button name="Команда3ПраваяКлавиатураПанель" id="174">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>3 (правая клавиатура)</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="Команда3ПраваяКлавиатураПанельРасширеннаяПодсказка" id="175"/>
+										</Button>
+										<Button name="Команда4Панель" id="176">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>4</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="Команда4ПанельРасширеннаяПодсказка" id="177"/>
+										</Button>
+										<Button name="Команда4ПраваяКлавиатураПанель" id="178">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>4 (правая клавиатура)</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="Команда4ПраваяКлавиатураПанельРасширеннаяПодсказка" id="179"/>
+										</Button>
+										<Button name="Команда5Панель" id="180">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>5</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="Команда5ПанельРасширеннаяПодсказка" id="181"/>
+										</Button>
+										<Button name="Команда5ПраваяКлавиатураПанель" id="182">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>5 (правая клавиатура)</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="Команда5ПраваяКлавиатураПанельРасширеннаяПодсказка" id="183"/>
+										</Button>
+										<Button name="Команда6Панель" id="184">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>6</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="Команда6ПанельРасширеннаяПодсказка" id="185"/>
+										</Button>
+										<Button name="Команда6ПраваяКлавиатураПанель" id="186">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>6 (правая клавиатура)</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="Команда6ПраваяКлавиатураПанельРасширеннаяПодсказка" id="187"/>
+										</Button>
+										<Button name="Команда7Панель" id="188">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>7</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="Команда7ПанельРасширеннаяПодсказка" id="189"/>
+										</Button>
+										<Button name="Команда7ПраваяКлавиатураПанель" id="190">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>7 (правая клавиатура)</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="Команда7ПраваяКлавиатураПанельРасширеннаяПодсказка" id="191"/>
+										</Button>
+										<Button name="Команда8Панель" id="192">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>8</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="Команда8ПанельРасширеннаяПодсказка" id="193"/>
+										</Button>
+										<Button name="Команда8ПраваяКлавиатураПанель" id="194">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>8 (правая клавиатура)</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="Команда8ПраваяКлавиатураПанельРасширеннаяПодсказка" id="195"/>
+										</Button>
+										<Button name="Команда9Панель" id="196">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>9</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="Команда9ПанельРасширеннаяПодсказка" id="197"/>
+										</Button>
+										<Button name="Команда9ПраваяКлавиатураПанель" id="198">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>9 (правая клавиатура)</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="Команда9ПраваяКлавиатураПанельРасширеннаяПодсказка" id="199"/>
+										</Button>
+										<Button name="КомандаСтеретьПанель" id="200">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Стереть</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="КомандаСтеретьПанельРасширеннаяПодсказка" id="201"/>
+										</Button>
+										<Button name="КомандаСторноПанель" id="202">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сторно</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="КомандаСторноПанельРасширеннаяПодсказка" id="203"/>
+										</Button>
+										<Button name="КомандаТочкаПанель" id="204">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Точка</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="КомандаТочкаПанельРасширеннаяПодсказка" id="205"/>
+										</Button>
+									</ChildItems>
+								</Popup>
+								<Popup name="СпособыПередачиЧека" id="206">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Способы передачи чека</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СпособыПередачиЧекаРасширеннаяПодсказка" id="207"/>
+									<ChildItems>
+										<Button name="КомандаEmailПанель" id="208">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаEmailПанельРасширеннаяПодсказка" id="209"/>
+										</Button>
+										<Button name="КомандаSMSПанель" id="210">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаSMSПанельРасширеннаяПодсказка" id="211"/>
+										</Button>
+									</ChildItems>
+								</Popup>
+							</ChildItems>
+						</Popup>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Контрагент" id="137">
+			<TitleFont ref="style:NormalTextFont" height="14" kind="StyleItem"/>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Font ref="style:NormalTextFont" height="14" kind="StyleItem"/>
+			<ContextMenu name="КонтрагентКонтекстноеМеню" id="138"/>
+			<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="139"/>
+		</InputField>
+		<UsualGroup name="ГруппаОбщая" id="50">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа общая</v8:content>
+				</v8:item>
+			</Title>
+			<Height>8</Height>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОбщаяExtendedTooltip" id="61"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСумм" id="51">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сумм</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<VerticalSpacing>Double</VerticalSpacing>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСуммExtendedTooltip" id="62"/>
+					<ChildItems>
+						<InputField name="ПолеВводимоеЧисло" id="1">
+							<DefaultItem>true</DefaultItem>
+							<ReadOnly>true</ReadOnly>
+							<SkipOnInput>true</SkipOnInput>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Внесено</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="sys:DefaultGUIFont" height="22" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<TitleLocation>Left</TitleLocation>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<Width>30</Width>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2; ЧГ=3,0</v8:content>
+								</v8:item>
+							</EditFormat>
+							<Font ref="sys:DefaultGUIFont" height="22" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="ПолеВводимоеЧислоКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ПолеВводимоеЧислоExtendedTooltip" id="63"/>
+						</InputField>
+						<Pages name="СтраницыСумм" id="140">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страницы сумм</v8:content>
+								</v8:item>
+							</Title>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="СтраницыСуммРасширеннаяПодсказка" id="141"/>
+							<ChildItems>
+								<Page name="СтраницаСумм" id="142">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница сумм</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СтраницаСуммРасширеннаяПодсказка" id="143"/>
+									<ChildItems>
+										<InputField name="ИтогПоЧеку" id="112">
+											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
+											<TitleFont ref="sys:DefaultGUIFont" height="22" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<TitleLocation>Left</TitleLocation>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<Width>30</Width>
+											<Height>1</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Font ref="sys:DefaultGUIFont" height="22" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<ContextMenu name="ИтогПоЧекуКонтекстноеМеню" id="113"/>
+											<ExtendedTooltip name="ИтогПоЧекуРасширеннаяПодсказка" id="114"/>
+										</InputField>
+										<InputField name="СуммаСдачи" id="57">
+											<ReadOnly>true</ReadOnly>
+											<TitleFont ref="sys:DefaultGUIFont" height="22" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<Width>30</Width>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Font ref="sys:DefaultGUIFont" height="22" kind="WindowsFont"/>
+											<ContextMenu name="СуммаСдачиКонтекстноеМеню" id="58"/>
+											<ExtendedTooltip name="СуммаСдачиExtendedTooltip" id="68"/>
+										</InputField>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаПустыхСумм" id="144">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница пустых сумм</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СтраницаПустыхСуммРасширеннаяПодсказка" id="145"/>
+									<ChildItems>
+										<LabelField name="ПустаяСтрока" id="146">
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ПустаяСтрокаКонтекстноеМеню" id="147"/>
+											<ExtendedTooltip name="ПустаяСтрокаРасширеннаяПодсказка" id="148"/>
+										</LabelField>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<UsualGroup name="ГруппаSMSиEmail" id="115">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа SMSи email правая клавиатура</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаSMSиEmailРасширеннаяПодсказка" id="116"/>
+							<ChildItems>
+								<Button name="КомандаEmail" id="117">
+									<Type>UsualButton</Type>
+									<Width>8</Width>
+									<Height>3</Height>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="КомандаEmailРасширеннаяПодсказка" id="118"/>
+								</Button>
+								<Button name="КомандаSMS" id="122">
+									<Type>UsualButton</Type>
+									<Width>8</Width>
+									<Height>3</Height>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="КомандаSMSРасширеннаяПодсказка" id="123"/>
+								</Button>
+								<Button name="КомандаИзменениеПечатиЧека" id="124">
+									<Type>UsualButton</Type>
+									<Visible>false</Visible>
+									<Representation>Picture</Representation>
+									<Width>8</Width>
+									<Height>3</Height>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="КомандаИзменениеПечатиЧекаРасширеннаяПодсказка" id="125"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаДанныеSMSИEmail" id="129">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа данные SMSИEmail</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДанныеSMSИEmailРасширеннаяПодсказка" id="130"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияОтказКлиентаОтСохраненияТелефонаEmail" id="131">
+									<Width>2</Width>
+									<Height>1</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация отказ клиента от сохранения телефона email</v8:content>
+										</v8:item>
+									</Title>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияОтказКлиентаОтСохраненияТелефонаEmailКонтекстноеМеню" id="132"/>
+									<ExtendedTooltip name="ДекорацияОтказКлиентаОтСохраненияТелефонаEmailРасширеннаяПодсказка" id="133"/>
+								</PictureDecoration>
+								<LabelField name="ДанныеSMSИлиEmail" id="126">
+									<TitleLocation>None</TitleLocation>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<Width>45</Width>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<ContextMenu name="ДанныеSMSИлиEmailКонтекстноеМеню" id="127"/>
+									<ExtendedTooltip name="ДанныеSMSИлиEmailРасширеннаяПодсказка" id="128"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<Pages name="ГруппаСтраницы" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страницы</v8:content>
+						</v8:item>
+					</Title>
+					<PagesRepresentation>None</PagesRepresentation>
+					<ExtendedTooltip name="ГруппаСтраницыExtendedTooltip" id="69"/>
+					<ChildItems>
+						<Page name="ГруппаСтраницаПраваяКлавиатура" id="28">
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСтраницаПраваяКлавиатураExtendedTooltip" id="70"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаРядыПраваяКлавиатура" id="29">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ряды</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ряды</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>35</Width>
+									<Height>12</Height>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаРядыПраваяКлавиатураExtendedTooltip" id="71"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаРяд1ПраваяКлавиатура" id="30">
+											<Width>8</Width>
+											<Height>12</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаРяд1ПраваяКлавиатураExtendedTooltip" id="72"/>
+											<ChildItems>
+												<Button name="Команда7ПраваяКлавиатура" id="31">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<CommandName>0</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.РМК_Цифра7</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="Команда7ПраваяКлавиатураExtendedTooltip" id="73"/>
+												</Button>
+												<Button name="Команда4ПраваяКлавиатура" id="32">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<CommandName>0</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.РМК_Цифра4</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="Команда4ПраваяКлавиатураExtendedTooltip" id="74"/>
+												</Button>
+												<Button name="Команда1ПраваяКлавиатура" id="33">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<CommandName>0</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.РМК_Цифра1</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="Команда1ПраваяКлавиатураExtendedTooltip" id="75"/>
+												</Button>
+												<Button name="Команда0ПраваяКлавиатура" id="34">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<CommandName>0</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.РМК_Цифра0</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="Команда0ПраваяКлавиатураExtendedTooltip" id="76"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаРяд2ПраваяКлавиатура" id="35">
+											<Width>8</Width>
+											<Height>12</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаРяд2ПраваяКлавиатураExtendedTooltip" id="77"/>
+											<ChildItems>
+												<Button name="Команда8ПраваяКлавиатура" id="36">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<CommandName>0</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.РМК_Цифра8</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="Команда8ПраваяКлавиатураExtendedTooltip" id="78"/>
+												</Button>
+												<Button name="Команда5ПраваяКлавиатура" id="37">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<CommandName>0</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.РМК_Цифра5</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="Команда5ПраваяКлавиатураExtendedTooltip" id="79"/>
+												</Button>
+												<Button name="Команда2ПраваяКлавиатура" id="38">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<CommandName>0</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.РМК_Цифра2</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="Команда2ПраваяКлавиатураExtendedTooltip" id="80"/>
+												</Button>
+												<Button name="КомандаТочкаПраваяКлавиатура" id="39">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<CommandName>0</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.РМК_ТочкаКалькулятора</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="КомандаТочкаПраваяКлавиатураExtendedTooltip" id="81"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаРяд3ПраваяКлавиатура" id="40">
+											<Width>8</Width>
+											<Height>12</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаРяд3ПраваяКлавиатураExtendedTooltip" id="82"/>
+											<ChildItems>
+												<Button name="Команда9ПраваяКлавиатура" id="41">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<CommandName>0</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.РМК_Цифра9</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="Команда9ПраваяКлавиатураExtendedTooltip" id="83"/>
+												</Button>
+												<Button name="Команда6ПраваяКлавиатура" id="42">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<CommandName>0</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.РМК_Цифра6</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="Команда6ПраваяКлавиатураExtendedTooltip" id="84"/>
+												</Button>
+												<Button name="Команда3ПраваяКлавиатура" id="43">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<CommandName>0</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.РМК_Цифра3</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="Команда3ПраваяКлавиатураExtendedTooltip" id="85"/>
+												</Button>
+												<Button name="КомандаСтеретьПраваяКлавиатура" id="44">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<CommandName>0</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.РМК_Стереть</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="КомандаСтеретьПраваяКлавиатураExtendedTooltip" id="86"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаРяд8" id="45">
+											<Width>8</Width>
+											<Height>12</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаРяд8ExtendedTooltip" id="87"/>
+											<ChildItems>
+												<Button name="КнопкаЗакрытьПраваяКлавиатура" id="46">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<CommandName>0</CommandName>
+													<Picture>
+														<xr:Ref>StdPicture.Close</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="КнопкаЗакрытьПраваяКлавиатураExtendedTooltip" id="88"/>
+												</Button>
+												<PictureField name="ПолеКартинкаПустаяПраваяКлавиатура" id="47">
+													<TitleLocation>None</TitleLocation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<HorizontalStretch>false</HorizontalStretch>
+													<VerticalStretch>false</VerticalStretch>
+													<Border width="1">
+														<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+													</Border>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="ПолеКартинкаПустаяПраваяКлавиатураКонтекстноеМеню" id="48"/>
+													<ExtendedTooltip name="ПолеКартинкаПустаяПраваяКлавиатураExtendedTooltip" id="89"/>
+												</PictureField>
+												<Button name="КомандаEnterПраваяКлавиатура" id="49">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<DefaultButton>true</DefaultButton>
+													<Width>8</Width>
+													<Height>7</Height>
+													<CommandName>Form.Command.КомандаEnter</CommandName>
+													<BackColor>style:ВыборСтандартногоПериодаФонКнопки</BackColor>
+													<Picture>
+														<xr:Ref>CommonPicture.РМК_Enter</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="КомандаEnterПраваяКлавиатураExtendedTooltip" id="90"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+						<Page name="ГруппаСтраницаЛеваяКлавиатура" id="27">
+							<ExtendedTooltip name="ГруппаСтраницаЛеваяКлавиатураРасширеннаяПодсказка" id="91"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаРяды" id="5">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ряды</v8:content>
+										</v8:item>
+									</Title>
+									<Width>35</Width>
+									<Height>12</Height>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаРядыExtendedTooltip" id="92"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаРяд1" id="6">
+											<Width>8</Width>
+											<Height>12</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаРяд1ExtendedTooltip" id="93"/>
+											<ChildItems>
+												<Button name="Команда7" id="7">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<CommandName>0</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.РМК_Цифра7</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="Команда7ExtendedTooltip" id="94"/>
+												</Button>
+												<Button name="Команда4" id="8">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<CommandName>0</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.РМК_Цифра4</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="Команда4ExtendedTooltip" id="95"/>
+												</Button>
+												<Button name="Команда1" id="9">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<CommandName>0</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.РМК_Цифра1</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="Команда1ExtendedTooltip" id="96"/>
+												</Button>
+												<Button name="Команда0" id="10">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<CommandName>0</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.РМК_Цифра0</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="Команда0ExtendedTooltip" id="97"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаРяд2" id="11">
+											<Width>8</Width>
+											<Height>12</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаРяд2ExtendedTooltip" id="98"/>
+											<ChildItems>
+												<Button name="Команда8" id="12">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<CommandName>0</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.РМК_Цифра8</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="Команда8ExtendedTooltip" id="99"/>
+												</Button>
+												<Button name="Команда5" id="13">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<CommandName>0</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.РМК_Цифра5</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="Команда5ExtendedTooltip" id="100"/>
+												</Button>
+												<Button name="Команда2" id="14">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<CommandName>0</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.РМК_Цифра2</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="Команда2ExtendedTooltip" id="101"/>
+												</Button>
+												<Button name="КомандаТочка" id="15">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<CommandName>0</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.РМК_ТочкаКалькулятора</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="КомандаТочкаExtendedTooltip" id="102"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаРяд3" id="16">
+											<Width>8</Width>
+											<Height>12</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаРяд3ExtendedTooltip" id="103"/>
+											<ChildItems>
+												<Button name="Команда9" id="17">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<CommandName>0</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.РМК_Цифра9</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="Команда9ExtendedTooltip" id="104"/>
+												</Button>
+												<Button name="Команда6" id="18">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<CommandName>0</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.РМК_Цифра6</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="Команда6ExtendedTooltip" id="105"/>
+												</Button>
+												<Button name="Команда3" id="19">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<CommandName>0</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.РМК_Цифра3</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="Команда3ExtendedTooltip" id="106"/>
+												</Button>
+												<Button name="КомандаСтереть" id="20">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<CommandName>0</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.РМК_Стереть</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="КомандаСтеретьExtendedTooltip" id="107"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаРяд4" id="21">
+											<Width>8</Width>
+											<Height>12</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаРяд4ExtendedTooltip" id="108"/>
+											<ChildItems>
+												<Button name="КнопкаЗакрыть" id="22">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<CommandName>0</CommandName>
+													<Picture>
+														<xr:Ref>StdPicture.Close</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="КнопкаЗакрытьExtendedTooltip" id="109"/>
+												</Button>
+												<PictureField name="ПолеКартинкаПустая" id="23">
+													<TitleLocation>None</TitleLocation>
+													<Width>8</Width>
+													<Height>3</Height>
+													<HorizontalStretch>false</HorizontalStretch>
+													<VerticalStretch>false</VerticalStretch>
+													<Border width="1">
+														<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+													</Border>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="ПолеКартинкаПустаяКонтекстноеМеню" id="24"/>
+													<ExtendedTooltip name="ПолеКартинкаПустаяExtendedTooltip" id="110"/>
+												</PictureField>
+												<Button name="КомандаEnter" id="25">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<DefaultButton>true</DefaultButton>
+													<DefaultItem>true</DefaultItem>
+													<Width>8</Width>
+													<Height>7</Height>
+													<CommandName>Form.Command.КомандаEnter</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.РМК_Enter</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="КомандаEnterExtendedTooltip" id="111"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+	<Commands>
+		<Command name="КомандаEnter" id="1000002">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Enter</v8:content>
+				</v8:item>
+			</Title>
+			<Action callType="Override">ТБККомандаEnterВместо</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<BaseForm version="2.9">
+		<Title>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Оплата наличными</v8:content>
+			</v8:item>
+		</Title>
+		<EnterKeyBehavior>DefaultButton</EnterKeyBehavior>
+		<AutoTitle>false</AutoTitle>
+		<VerticalScroll>useIfNecessary</VerticalScroll>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+			<Autofill>false</Autofill>
+		</AutoCommandBar>
+		<ChildItems>
+			<UsualGroup name="ГруппаЗаголовкиКнопки" id="149">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа заголовки кнопки</v8:content>
+					</v8:item>
+				</Title>
+				<Group>Horizontal</Group>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаЗаголовкиКнопкиРасширеннаяПодсказка" id="150"/>
+				<ChildItems>
+					<LabelDecoration name="ДекорацияЗаголовок" id="151">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<HorizontalStretch>true</HorizontalStretch>
+						<VerticalStretch>false</VerticalStretch>
+						<TextColor>#008000</TextColor>
+						<Font ref="sys:DefaultGUIFont" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content> </v8:content>
+							</v8:item>
+						</Title>
+						<ContextMenu name="ДекорацияЗаголовокКонтекстноеМеню" id="152"/>
+						<ExtendedTooltip name="ДекорацияЗаголовокExtendedTooltip" id="153"/>
+					</LabelDecoration>
+					<LabelField name="НадписьЗаголовок" id="134">
+						<TitleLocation>None</TitleLocation>
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<TextColor>#008000</TextColor>
+						<Font ref="sys:DefaultGUIFont" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						<ContextMenu name="НадписьЗаголовокКонтекстноеМеню" id="135"/>
+						<ExtendedTooltip name="НадписьЗаголовокРасширеннаяПодсказка" id="136"/>
+					</LabelField>
+					<CommandBar name="ГруппаКоманднаяПанель" id="154">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа командная панель</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Справка по акселераторам</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Width>5</Width>
+						<HorizontalStretch>false</HorizontalStretch>
+						<VerticalStretch>false</VerticalStretch>
+						<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+						<HorizontalLocation>Right</HorizontalLocation>
+						<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="155"/>
+						<ChildItems>
+							<Popup name="ГруппаВернееПодменю" id="156">
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Справка по акселераторам</v8:content>
+									</v8:item>
+								</ToolTip>
+								<HorizontalStretch>false</HorizontalStretch>
+								<VerticalStretch>false</VerticalStretch>
+								<Picture>
+									<xr:Ref>CommonPicture.СправкаПоАкселераторам</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<Representation>Picture</Representation>
+								<ExtendedTooltip name="ГруппаВернееПодменюРасширеннаяПодсказка" id="157"/>
+								<ChildItems>
+									<Popup name="ГруппаПанельПрочееОперации" id="158">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Прочее операции</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ГруппаПанельПрочееОперацииРасширеннаяПодсказка" id="159"/>
+										<ChildItems>
+											<Button name="Команда0Панель" id="160">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>0</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="Команда0ПанельРасширеннаяПодсказка" id="161"/>
+											</Button>
+											<Button name="Команда0ПраваяКлавиатураПанель" id="162">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>0 (правая клавиатура)</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="Команда0ПраваяКлавиатураПанельРасширеннаяПодсказка" id="163"/>
+											</Button>
+											<Button name="Команда1Панель" id="164">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>1</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="Команда1ПанельРасширеннаяПодсказка" id="165"/>
+											</Button>
+											<Button name="Команда1ПраваяКлавиатураПанель" id="166">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>1 (правая клавиатура)</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="Команда1ПраваяКлавиатураПанельРасширеннаяПодсказка" id="167"/>
+											</Button>
+											<Button name="Команда2Панель" id="168">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>2</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="Команда2ПанельРасширеннаяПодсказка" id="169"/>
+											</Button>
+											<Button name="Команда2ПраваяКлавиатураПанель" id="170">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>2 (правая клавиатура)</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="Команда2ПраваяКлавиатураПанельРасширеннаяПодсказка" id="171"/>
+											</Button>
+											<Button name="Команда3Панель" id="172">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>3</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="Команда3ПанельРасширеннаяПодсказка" id="173"/>
+											</Button>
+											<Button name="Команда3ПраваяКлавиатураПанель" id="174">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>3 (правая клавиатура)</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="Команда3ПраваяКлавиатураПанельРасширеннаяПодсказка" id="175"/>
+											</Button>
+											<Button name="Команда4Панель" id="176">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>4</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="Команда4ПанельРасширеннаяПодсказка" id="177"/>
+											</Button>
+											<Button name="Команда4ПраваяКлавиатураПанель" id="178">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>4 (правая клавиатура)</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="Команда4ПраваяКлавиатураПанельРасширеннаяПодсказка" id="179"/>
+											</Button>
+											<Button name="Команда5Панель" id="180">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>5</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="Команда5ПанельРасширеннаяПодсказка" id="181"/>
+											</Button>
+											<Button name="Команда5ПраваяКлавиатураПанель" id="182">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>5 (правая клавиатура)</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="Команда5ПраваяКлавиатураПанельРасширеннаяПодсказка" id="183"/>
+											</Button>
+											<Button name="Команда6Панель" id="184">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>6</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="Команда6ПанельРасширеннаяПодсказка" id="185"/>
+											</Button>
+											<Button name="Команда6ПраваяКлавиатураПанель" id="186">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>6 (правая клавиатура)</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="Команда6ПраваяКлавиатураПанельРасширеннаяПодсказка" id="187"/>
+											</Button>
+											<Button name="Команда7Панель" id="188">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>7</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="Команда7ПанельРасширеннаяПодсказка" id="189"/>
+											</Button>
+											<Button name="Команда7ПраваяКлавиатураПанель" id="190">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>7 (правая клавиатура)</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="Команда7ПраваяКлавиатураПанельРасширеннаяПодсказка" id="191"/>
+											</Button>
+											<Button name="Команда8Панель" id="192">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>8</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="Команда8ПанельРасширеннаяПодсказка" id="193"/>
+											</Button>
+											<Button name="Команда8ПраваяКлавиатураПанель" id="194">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>8 (правая клавиатура)</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="Команда8ПраваяКлавиатураПанельРасширеннаяПодсказка" id="195"/>
+											</Button>
+											<Button name="Команда9Панель" id="196">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>9</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="Команда9ПанельРасширеннаяПодсказка" id="197"/>
+											</Button>
+											<Button name="Команда9ПраваяКлавиатураПанель" id="198">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>9 (правая клавиатура)</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="Команда9ПраваяКлавиатураПанельРасширеннаяПодсказка" id="199"/>
+											</Button>
+											<Button name="КомандаСтеретьПанель" id="200">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Стереть</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="КомандаСтеретьПанельРасширеннаяПодсказка" id="201"/>
+											</Button>
+											<Button name="КомандаСторноПанель" id="202">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Сторно</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="КомандаСторноПанельРасширеннаяПодсказка" id="203"/>
+											</Button>
+											<Button name="КомандаТочкаПанель" id="204">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Точка</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="КомандаТочкаПанельРасширеннаяПодсказка" id="205"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+									<Popup name="СпособыПередачиЧека" id="206">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Способы передачи чека</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="СпособыПередачиЧекаРасширеннаяПодсказка" id="207"/>
+										<ChildItems>
+											<Button name="КомандаEmailПанель" id="208">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="КомандаEmailПанельРасширеннаяПодсказка" id="209"/>
+											</Button>
+											<Button name="КомандаSMSПанель" id="210">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="КомандаSMSПанельРасширеннаяПодсказка" id="211"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+								</ChildItems>
+							</Popup>
+						</ChildItems>
+					</CommandBar>
+				</ChildItems>
+			</UsualGroup>
+			<InputField name="Контрагент" id="137">
+				<TitleFont ref="style:NormalTextFont" height="14" kind="StyleItem"/>
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<Font ref="style:NormalTextFont" height="14" kind="StyleItem"/>
+				<ContextMenu name="КонтрагентКонтекстноеМеню" id="138"/>
+				<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="139"/>
+			</InputField>
+			<UsualGroup name="ГруппаОбщая" id="50">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа общая</v8:content>
+					</v8:item>
+				</Title>
+				<Height>8</Height>
+				<Group>Horizontal</Group>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаОбщаяExtendedTooltip" id="61"/>
+				<ChildItems>
+					<UsualGroup name="ГруппаСумм" id="51">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа сумм</v8:content>
+							</v8:item>
+						</Title>
+						<Group>Vertical</Group>
+						<VerticalSpacing>Double</VerticalSpacing>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ГруппаСуммExtendedTooltip" id="62"/>
+						<ChildItems>
+							<InputField name="ПолеВводимоеЧисло" id="1">
+								<DefaultItem>true</DefaultItem>
+								<ReadOnly>true</ReadOnly>
+								<SkipOnInput>true</SkipOnInput>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Внесено</v8:content>
+									</v8:item>
+								</Title>
+								<TitleFont ref="sys:DefaultGUIFont" height="22" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								<TitleLocation>Left</TitleLocation>
+								<HorizontalAlign>Right</HorizontalAlign>
+								<Width>30</Width>
+								<EditFormat>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧЦ=15; ЧДЦ=2; ЧГ=3,0</v8:content>
+									</v8:item>
+								</EditFormat>
+								<Font ref="sys:DefaultGUIFont" height="22" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								<ContextMenu name="ПолеВводимоеЧислоКонтекстноеМеню" id="2"/>
+								<ExtendedTooltip name="ПолеВводимоеЧислоExtendedTooltip" id="63"/>
+							</InputField>
+							<Pages name="СтраницыСумм" id="140">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Страницы сумм</v8:content>
+									</v8:item>
+								</Title>
+								<PagesRepresentation>None</PagesRepresentation>
+								<ExtendedTooltip name="СтраницыСуммРасширеннаяПодсказка" id="141"/>
+								<ChildItems>
+									<Page name="СтраницаСумм" id="142">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Страница сумм</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="СтраницаСуммРасширеннаяПодсказка" id="143"/>
+										<ChildItems>
+											<InputField name="ИтогПоЧеку" id="112">
+												<ReadOnly>true</ReadOnly>
+												<SkipOnInput>true</SkipOnInput>
+												<TitleFont ref="sys:DefaultGUIFont" height="22" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+												<TitleLocation>Left</TitleLocation>
+												<HorizontalAlign>Right</HorizontalAlign>
+												<Width>30</Width>
+												<Height>1</Height>
+												<HorizontalStretch>true</HorizontalStretch>
+												<Font ref="sys:DefaultGUIFont" height="22" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+												<ContextMenu name="ИтогПоЧекуКонтекстноеМеню" id="113"/>
+												<ExtendedTooltip name="ИтогПоЧекуРасширеннаяПодсказка" id="114"/>
+											</InputField>
+											<InputField name="СуммаСдачи" id="57">
+												<ReadOnly>true</ReadOnly>
+												<TitleFont ref="sys:DefaultGUIFont" height="22" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+												<Width>30</Width>
+												<HorizontalStretch>true</HorizontalStretch>
+												<Font ref="sys:DefaultGUIFont" height="22" kind="WindowsFont"/>
+												<ContextMenu name="СуммаСдачиКонтекстноеМеню" id="58"/>
+												<ExtendedTooltip name="СуммаСдачиExtendedTooltip" id="68"/>
+											</InputField>
+										</ChildItems>
+									</Page>
+									<Page name="СтраницаПустыхСумм" id="144">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Страница пустых сумм</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="СтраницаПустыхСуммРасширеннаяПодсказка" id="145"/>
+										<ChildItems>
+											<LabelField name="ПустаяСтрока" id="146">
+												<TitleLocation>None</TitleLocation>
+												<ContextMenu name="ПустаяСтрокаКонтекстноеМеню" id="147"/>
+												<ExtendedTooltip name="ПустаяСтрокаРасширеннаяПодсказка" id="148"/>
+											</LabelField>
+										</ChildItems>
+									</Page>
+								</ChildItems>
+							</Pages>
+							<UsualGroup name="ГруппаSMSиEmail" id="115">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа SMSи email правая клавиатура</v8:content>
+									</v8:item>
+								</Title>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаSMSиEmailРасширеннаяПодсказка" id="116"/>
+								<ChildItems>
+									<Button name="КомандаEmail" id="117">
+										<Type>UsualButton</Type>
+										<Width>8</Width>
+										<Height>3</Height>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="КомандаEmailРасширеннаяПодсказка" id="118"/>
+									</Button>
+									<Button name="КомандаSMS" id="122">
+										<Type>UsualButton</Type>
+										<Width>8</Width>
+										<Height>3</Height>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="КомандаSMSРасширеннаяПодсказка" id="123"/>
+									</Button>
+									<Button name="КомандаИзменениеПечатиЧека" id="124">
+										<Type>UsualButton</Type>
+										<Visible>false</Visible>
+										<Representation>Picture</Representation>
+										<Width>8</Width>
+										<Height>3</Height>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="КомандаИзменениеПечатиЧекаРасширеннаяПодсказка" id="125"/>
+									</Button>
+								</ChildItems>
+							</UsualGroup>
+							<UsualGroup name="ГруппаДанныеSMSИEmail" id="129">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа данные SMSИEmail</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Horizontal</Group>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаДанныеSMSИEmailРасширеннаяПодсказка" id="130"/>
+								<ChildItems>
+									<PictureDecoration name="ДекорацияОтказКлиентаОтСохраненияТелефонаEmail" id="131">
+										<Width>2</Width>
+										<Height>1</Height>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Декорация отказ клиента от сохранения телефона email</v8:content>
+											</v8:item>
+										</Title>
+										<FileDragMode>AsFile</FileDragMode>
+										<ContextMenu name="ДекорацияОтказКлиентаОтСохраненияТелефонаEmailКонтекстноеМеню" id="132"/>
+										<ExtendedTooltip name="ДекорацияОтказКлиентаОтСохраненияТелефонаEmailРасширеннаяПодсказка" id="133"/>
+									</PictureDecoration>
+									<LabelField name="ДанныеSMSИлиEmail" id="126">
+										<TitleLocation>None</TitleLocation>
+										<HorizontalAlign>Left</HorizontalAlign>
+										<Width>45</Width>
+										<HorizontalStretch>true</HorizontalStretch>
+										<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+										<ContextMenu name="ДанныеSMSИлиEmailКонтекстноеМеню" id="127"/>
+										<ExtendedTooltip name="ДанныеSMSИлиEmailРасширеннаяПодсказка" id="128"/>
+									</LabelField>
+								</ChildItems>
+							</UsualGroup>
+						</ChildItems>
+					</UsualGroup>
+					<Pages name="ГруппаСтраницы" id="26">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа страницы</v8:content>
+							</v8:item>
+						</Title>
+						<PagesRepresentation>None</PagesRepresentation>
+						<ExtendedTooltip name="ГруппаСтраницыExtendedTooltip" id="69"/>
+						<ChildItems>
+							<Page name="ГруппаСтраницаПраваяКлавиатура" id="28">
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаСтраницаПраваяКлавиатураExtendedTooltip" id="70"/>
+								<ChildItems>
+									<UsualGroup name="ГруппаРядыПраваяКлавиатура" id="29">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа ряды</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа ряды</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Width>35</Width>
+										<Height>12</Height>
+										<Group>Horizontal</Group>
+										<Representation>None</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаРядыПраваяКлавиатураExtendedTooltip" id="71"/>
+										<ChildItems>
+											<UsualGroup name="ГруппаРяд1ПраваяКлавиатура" id="30">
+												<Width>8</Width>
+												<Height>12</Height>
+												<HorizontalStretch>false</HorizontalStretch>
+												<VerticalStretch>false</VerticalStretch>
+												<Group>Vertical</Group>
+												<Representation>None</Representation>
+												<ShowTitle>false</ShowTitle>
+												<ExtendedTooltip name="ГруппаРяд1ПраваяКлавиатураExtendedTooltip" id="72"/>
+												<ChildItems>
+													<Button name="Команда7ПраваяКлавиатура" id="31">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<CommandName>0</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.РМК_Цифра7</xr:Ref>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="Команда7ПраваяКлавиатураExtendedTooltip" id="73"/>
+													</Button>
+													<Button name="Команда4ПраваяКлавиатура" id="32">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<CommandName>0</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.РМК_Цифра4</xr:Ref>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="Команда4ПраваяКлавиатураExtendedTooltip" id="74"/>
+													</Button>
+													<Button name="Команда1ПраваяКлавиатура" id="33">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<CommandName>0</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.РМК_Цифра1</xr:Ref>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="Команда1ПраваяКлавиатураExtendedTooltip" id="75"/>
+													</Button>
+													<Button name="Команда0ПраваяКлавиатура" id="34">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<CommandName>0</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.РМК_Цифра0</xr:Ref>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="Команда0ПраваяКлавиатураExtendedTooltip" id="76"/>
+													</Button>
+												</ChildItems>
+											</UsualGroup>
+											<UsualGroup name="ГруппаРяд2ПраваяКлавиатура" id="35">
+												<Width>8</Width>
+												<Height>12</Height>
+												<HorizontalStretch>false</HorizontalStretch>
+												<VerticalStretch>false</VerticalStretch>
+												<Group>Vertical</Group>
+												<Representation>None</Representation>
+												<ShowTitle>false</ShowTitle>
+												<ExtendedTooltip name="ГруппаРяд2ПраваяКлавиатураExtendedTooltip" id="77"/>
+												<ChildItems>
+													<Button name="Команда8ПраваяКлавиатура" id="36">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<CommandName>0</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.РМК_Цифра8</xr:Ref>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="Команда8ПраваяКлавиатураExtendedTooltip" id="78"/>
+													</Button>
+													<Button name="Команда5ПраваяКлавиатура" id="37">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<CommandName>0</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.РМК_Цифра5</xr:Ref>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="Команда5ПраваяКлавиатураExtendedTooltip" id="79"/>
+													</Button>
+													<Button name="Команда2ПраваяКлавиатура" id="38">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<CommandName>0</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.РМК_Цифра2</xr:Ref>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="Команда2ПраваяКлавиатураExtendedTooltip" id="80"/>
+													</Button>
+													<Button name="КомандаТочкаПраваяКлавиатура" id="39">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<CommandName>0</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.РМК_ТочкаКалькулятора</xr:Ref>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="КомандаТочкаПраваяКлавиатураExtendedTooltip" id="81"/>
+													</Button>
+												</ChildItems>
+											</UsualGroup>
+											<UsualGroup name="ГруппаРяд3ПраваяКлавиатура" id="40">
+												<Width>8</Width>
+												<Height>12</Height>
+												<HorizontalStretch>false</HorizontalStretch>
+												<VerticalStretch>false</VerticalStretch>
+												<Group>Vertical</Group>
+												<Representation>None</Representation>
+												<ShowTitle>false</ShowTitle>
+												<ExtendedTooltip name="ГруппаРяд3ПраваяКлавиатураExtendedTooltip" id="82"/>
+												<ChildItems>
+													<Button name="Команда9ПраваяКлавиатура" id="41">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<CommandName>0</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.РМК_Цифра9</xr:Ref>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="Команда9ПраваяКлавиатураExtendedTooltip" id="83"/>
+													</Button>
+													<Button name="Команда6ПраваяКлавиатура" id="42">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<CommandName>0</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.РМК_Цифра6</xr:Ref>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="Команда6ПраваяКлавиатураExtendedTooltip" id="84"/>
+													</Button>
+													<Button name="Команда3ПраваяКлавиатура" id="43">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<CommandName>0</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.РМК_Цифра3</xr:Ref>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="Команда3ПраваяКлавиатураExtendedTooltip" id="85"/>
+													</Button>
+													<Button name="КомандаСтеретьПраваяКлавиатура" id="44">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<CommandName>0</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.РМК_Стереть</xr:Ref>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="КомандаСтеретьПраваяКлавиатураExtendedTooltip" id="86"/>
+													</Button>
+												</ChildItems>
+											</UsualGroup>
+											<UsualGroup name="ГруппаРяд8" id="45">
+												<Width>8</Width>
+												<Height>12</Height>
+												<HorizontalStretch>false</HorizontalStretch>
+												<VerticalStretch>false</VerticalStretch>
+												<Group>Vertical</Group>
+												<Representation>None</Representation>
+												<ShowTitle>false</ShowTitle>
+												<ExtendedTooltip name="ГруппаРяд8ExtendedTooltip" id="87"/>
+												<ChildItems>
+													<Button name="КнопкаЗакрытьПраваяКлавиатура" id="46">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<CommandName>0</CommandName>
+														<Picture>
+															<xr:Ref>StdPicture.Close</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="КнопкаЗакрытьПраваяКлавиатураExtendedTooltip" id="88"/>
+													</Button>
+													<PictureField name="ПолеКартинкаПустаяПраваяКлавиатура" id="47">
+														<TitleLocation>None</TitleLocation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<HorizontalStretch>false</HorizontalStretch>
+														<VerticalStretch>false</VerticalStretch>
+														<Border width="1">
+															<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+														</Border>
+														<FileDragMode>AsFile</FileDragMode>
+														<ContextMenu name="ПолеКартинкаПустаяПраваяКлавиатураКонтекстноеМеню" id="48"/>
+														<ExtendedTooltip name="ПолеКартинкаПустаяПраваяКлавиатураExtendedTooltip" id="89"/>
+													</PictureField>
+													<Button name="КомандаEnterПраваяКлавиатура" id="49">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<DefaultButton>true</DefaultButton>
+														<Width>8</Width>
+														<Height>7</Height>
+														<CommandName>Form.Command.КомандаEnter</CommandName>
+														<BackColor>style:ВыборСтандартногоПериодаФонКнопки</BackColor>
+														<Picture>
+															<xr:Ref>CommonPicture.РМК_Enter</xr:Ref>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="КомандаEnterПраваяКлавиатураExtendedTooltip" id="90"/>
+													</Button>
+												</ChildItems>
+											</UsualGroup>
+										</ChildItems>
+									</UsualGroup>
+								</ChildItems>
+							</Page>
+							<Page name="ГруппаСтраницаЛеваяКлавиатура" id="27">
+								<ExtendedTooltip name="ГруппаСтраницаЛеваяКлавиатураРасширеннаяПодсказка" id="91"/>
+								<ChildItems>
+									<UsualGroup name="ГруппаРяды" id="5">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа ряды</v8:content>
+											</v8:item>
+										</Title>
+										<Width>35</Width>
+										<Height>12</Height>
+										<Group>Horizontal</Group>
+										<Representation>None</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаРядыExtendedTooltip" id="92"/>
+										<ChildItems>
+											<UsualGroup name="ГруппаРяд1" id="6">
+												<Width>8</Width>
+												<Height>12</Height>
+												<HorizontalStretch>false</HorizontalStretch>
+												<VerticalStretch>false</VerticalStretch>
+												<Group>Vertical</Group>
+												<Representation>None</Representation>
+												<ShowTitle>false</ShowTitle>
+												<ExtendedTooltip name="ГруппаРяд1ExtendedTooltip" id="93"/>
+												<ChildItems>
+													<Button name="Команда7" id="7">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<CommandName>0</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.РМК_Цифра7</xr:Ref>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="Команда7ExtendedTooltip" id="94"/>
+													</Button>
+													<Button name="Команда4" id="8">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<CommandName>0</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.РМК_Цифра4</xr:Ref>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="Команда4ExtendedTooltip" id="95"/>
+													</Button>
+													<Button name="Команда1" id="9">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<CommandName>0</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.РМК_Цифра1</xr:Ref>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="Команда1ExtendedTooltip" id="96"/>
+													</Button>
+													<Button name="Команда0" id="10">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<CommandName>0</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.РМК_Цифра0</xr:Ref>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="Команда0ExtendedTooltip" id="97"/>
+													</Button>
+												</ChildItems>
+											</UsualGroup>
+											<UsualGroup name="ГруппаРяд2" id="11">
+												<Width>8</Width>
+												<Height>12</Height>
+												<HorizontalStretch>false</HorizontalStretch>
+												<VerticalStretch>false</VerticalStretch>
+												<Group>Vertical</Group>
+												<Representation>None</Representation>
+												<ShowTitle>false</ShowTitle>
+												<ExtendedTooltip name="ГруппаРяд2ExtendedTooltip" id="98"/>
+												<ChildItems>
+													<Button name="Команда8" id="12">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<CommandName>0</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.РМК_Цифра8</xr:Ref>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="Команда8ExtendedTooltip" id="99"/>
+													</Button>
+													<Button name="Команда5" id="13">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<CommandName>0</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.РМК_Цифра5</xr:Ref>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="Команда5ExtendedTooltip" id="100"/>
+													</Button>
+													<Button name="Команда2" id="14">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<CommandName>0</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.РМК_Цифра2</xr:Ref>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="Команда2ExtendedTooltip" id="101"/>
+													</Button>
+													<Button name="КомандаТочка" id="15">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<CommandName>0</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.РМК_ТочкаКалькулятора</xr:Ref>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="КомандаТочкаExtendedTooltip" id="102"/>
+													</Button>
+												</ChildItems>
+											</UsualGroup>
+											<UsualGroup name="ГруппаРяд3" id="16">
+												<Width>8</Width>
+												<Height>12</Height>
+												<HorizontalStretch>false</HorizontalStretch>
+												<VerticalStretch>false</VerticalStretch>
+												<Group>Vertical</Group>
+												<Representation>None</Representation>
+												<ShowTitle>false</ShowTitle>
+												<ExtendedTooltip name="ГруппаРяд3ExtendedTooltip" id="103"/>
+												<ChildItems>
+													<Button name="Команда9" id="17">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<CommandName>0</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.РМК_Цифра9</xr:Ref>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="Команда9ExtendedTooltip" id="104"/>
+													</Button>
+													<Button name="Команда6" id="18">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<CommandName>0</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.РМК_Цифра6</xr:Ref>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="Команда6ExtendedTooltip" id="105"/>
+													</Button>
+													<Button name="Команда3" id="19">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<CommandName>0</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.РМК_Цифра3</xr:Ref>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="Команда3ExtendedTooltip" id="106"/>
+													</Button>
+													<Button name="КомандаСтереть" id="20">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<CommandName>0</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.РМК_Стереть</xr:Ref>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="КомандаСтеретьExtendedTooltip" id="107"/>
+													</Button>
+												</ChildItems>
+											</UsualGroup>
+											<UsualGroup name="ГруппаРяд4" id="21">
+												<Width>8</Width>
+												<Height>12</Height>
+												<HorizontalStretch>false</HorizontalStretch>
+												<VerticalStretch>false</VerticalStretch>
+												<Group>Vertical</Group>
+												<Representation>None</Representation>
+												<ShowTitle>false</ShowTitle>
+												<ExtendedTooltip name="ГруппаРяд4ExtendedTooltip" id="108"/>
+												<ChildItems>
+													<Button name="КнопкаЗакрыть" id="22">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<CommandName>0</CommandName>
+														<Picture>
+															<xr:Ref>StdPicture.Close</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="КнопкаЗакрытьExtendedTooltip" id="109"/>
+													</Button>
+													<PictureField name="ПолеКартинкаПустая" id="23">
+														<TitleLocation>None</TitleLocation>
+														<Width>8</Width>
+														<Height>3</Height>
+														<HorizontalStretch>false</HorizontalStretch>
+														<VerticalStretch>false</VerticalStretch>
+														<Border width="1">
+															<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+														</Border>
+														<FileDragMode>AsFile</FileDragMode>
+														<ContextMenu name="ПолеКартинкаПустаяКонтекстноеМеню" id="24"/>
+														<ExtendedTooltip name="ПолеКартинкаПустаяExtendedTooltip" id="110"/>
+													</PictureField>
+													<Button name="КомандаEnter" id="25">
+														<Type>UsualButton</Type>
+														<Representation>Picture</Representation>
+														<DefaultButton>true</DefaultButton>
+														<DefaultItem>true</DefaultItem>
+														<Width>8</Width>
+														<Height>7</Height>
+														<CommandName>Form.Command.КомандаEnter</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.РМК_Enter</xr:Ref>
+															<xr:LoadTransparent>false</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="КомандаEnterExtendedTooltip" id="111"/>
+													</Button>
+												</ChildItems>
+											</UsualGroup>
+										</ChildItems>
+									</UsualGroup>
+								</ChildItems>
+							</Page>
+						</ChildItems>
+					</Pages>
+				</ChildItems>
+			</UsualGroup>
+		</ChildItems>
+		<Attributes/>
+		<Commands>
+			<Command name="КомандаEnter" id="1000001">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Enter</v8:content>
+					</v8:item>
+				</Title>
+				<Action callType="Before">КомандаEnter</Action>
+				<CurrentRowUse>DontUse</CurrentRowUse>
+			</Command>
+		</Commands>
+	</BaseForm>
+</Form>
