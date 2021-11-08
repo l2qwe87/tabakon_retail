@@ -34,6 +34,7 @@
 	shiftNumber     = Fptr.getParamInt(Fptr.LIBFPTR_PARAM_SHIFT_NUMBER);    	
 	
 	ШиринаЛенты = Fptr.getParamInt(Fptr.LIBFPTR_PARAM_RECEIPT_LINE_LENGTH);
+	флЭтоНеСтандартныйФормат = Ложь;
 	Если ШиринаЛенты = 48 тогда флЭтоНеСтандартныйФормат = истина; КонецЕсли;
 	
 	Fptr.setParam(Fptr.LIBFPTR_PARAM_FN_DATA_TYPE, Fptr.LIBFPTR_FNDT_REG_INFO);
