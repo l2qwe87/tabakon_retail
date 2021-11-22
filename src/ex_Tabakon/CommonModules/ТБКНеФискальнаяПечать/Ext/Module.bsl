@@ -144,23 +144,23 @@
 	ПечатьСтроки(Fptr,Стр);  
 	
 	//фискальные данные
-	Если флЭтоНеСтандартныйФормат тогда
-		ПечатьСтроки(Fptr,"ЗН ККТ "	+	serialNumber,, Истина);
-		ПечатьСтроки(Fptr,"РН ККТ "	+	registrationNumber,, Истина);
-		ПечатьСтроки(Fptr,"ИНН "	+	organizationVATIN,, Истина);
-		ПечатьСтроки(Fptr,"ФН "		+	fnSerial,, Истина);
-		ПечатьСтроки(Fptr,"ФД "		+	documentNumber,, Истина);
-		ПечатьСтроки(Fptr,"ФП 2996364181",, Истина);
-		ПечатьСтроки(Fptr,"ЧЕК 00"+(receiptNumber+1)+" ПРИХОД",, Истина);
-		Если Строка(СНО) = "Общая" тогда
-			ПечатьСтроки(Fptr,"СНО ОСН",, Истина);
-		иначе
-			ПечатьСтроки(Fptr,"СНО УСН доход-расход",, Истина);
-		КонецЕсли;
-		ПечатьСтроки(Fptr,Лев(Строка(ТекущаяДата()),16),, Истина);
-		ПечатьСтроки(Fptr,"СМЕНА 000"+shiftNumber,, Истина);    
-		Fptr.setParam(Fptr.LIBFPTR_PARAM_ALIGNMENT, Fptr.LIBFPTR_ALIGNMENT_center); 	
-	иначе
+	//Если флЭтоНеСтандартныйФормат тогда
+	//	ПечатьСтроки(Fptr,"ЗН ККТ "	+	serialNumber,, Истина);
+	//	ПечатьСтроки(Fptr,"РН ККТ "	+	registrationNumber,, Истина);
+	//	ПечатьСтроки(Fptr,"ИНН "	+	organizationVATIN,, Истина);
+	//	ПечатьСтроки(Fptr,"ФН "		+	fnSerial,, Истина);
+	//	ПечатьСтроки(Fptr,"ФД "		+	documentNumber,, Истина);
+	//	ПечатьСтроки(Fptr,"ФП 2996364181",, Истина);
+	//	ПечатьСтроки(Fptr,"ЧЕК 00"+(receiptNumber+1)+" ПРИХОД",, Истина);
+	//	Если Строка(СНО) = "Общая" тогда
+	//		ПечатьСтроки(Fptr,"СНО ОСН",, Истина);
+	//	иначе
+	//		ПечатьСтроки(Fptr,"СНО УСН доход-расход",, Истина);
+	//	КонецЕсли;
+	//	ПечатьСтроки(Fptr,Лев(Строка(ТекущаяДата()),16),, Истина);
+	//	ПечатьСтроки(Fptr,"СМЕНА 000"+shiftNumber,, Истина);    
+	//	Fptr.setParam(Fptr.LIBFPTR_PARAM_ALIGNMENT, Fptr.LIBFPTR_ALIGNMENT_center); 	
+	//иначе
 		ПечатьСтроки(Fptr,"ЗН ККТ "	+	serialNumber);
 		ПечатьСтроки(Fptr,"РН ККТ "	+	registrationNumber);
 		ПечатьСтроки(Fptr,"ИНН "	+	organizationVATIN);
@@ -176,7 +176,7 @@
 		ПечатьСтроки(Fptr,Лев(Строка(ТекущаяДата()),16) + "   СМЕНА 000"+shiftNumber,, Истина); 
 		
 		Fptr.setParam(Fptr.LIBFPTR_PARAM_ALIGNMENT, Fptr.LIBFPTR_ALIGNMENT_LEFT); 	
-	КонецЕсли;
+	//КонецЕсли;
 	
 	Fptr.setParam(Fptr.LIBFPTR_PARAM_BARCODE, "tt=20211015T1222&s=2.00&fn=996005591440300344360&i=188&fp=919818984&n=1");
 	Fptr.setParam(Fptr.LIBFPTR_PARAM_BARCODE_TYPE, Fptr.LIBFPTR_BT_QR);
