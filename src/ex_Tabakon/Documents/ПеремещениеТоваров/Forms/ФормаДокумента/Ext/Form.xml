@@ -1006,6 +1006,11 @@
 							<ContextMenu name="СуммаВсегоКонтекстноеМеню" id="48"/>
 							<ExtendedTooltip name="СуммаВсегоExtendedTooltip" id="227"/>
 						</InputField>
+						<InputField name="ВсегоШтук" id="479">
+							<DataPath>ВсегоШтук</DataPath>
+							<ContextMenu name="ВсегоШтукКонтекстноеМеню" id="480"/>
+							<ExtendedTooltip name="ВсегоШтукРасширеннаяПодсказка" id="481"/>
+						</InputField>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -1162,6 +1167,22 @@
 		</UsualGroup>
 	</ChildItems>
 	<Attributes>
+		<Attribute name="ВсегоШтук" id="1000000">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего штук</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
