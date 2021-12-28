@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<InformationRegister uuid="73adb3a4-7462-42e7-b9be-8a9e355bb33e">
+		<InternalInfo>
+			<xr:GeneratedType name="InformationRegisterRecord.ХранилищеСертификатов" category="Record">
+				<xr:TypeId>699ae364-5ee0-46b4-8ad5-9830ea91f540</xr:TypeId>
+				<xr:ValueId>a4949491-f99b-4557-b46b-dad5ae2f16e1</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterManager.ХранилищеСертификатов" category="Manager">
+				<xr:TypeId>48979c44-cac5-4e85-a467-d98386491e02</xr:TypeId>
+				<xr:ValueId>589f818d-4814-44d3-8cb3-b06fa677ff93</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterSelection.ХранилищеСертификатов" category="Selection">
+				<xr:TypeId>2073c8ef-90f7-41e5-91bb-8b10bd2aee53</xr:TypeId>
+				<xr:ValueId>dfab5f1a-191a-4934-adc3-d74c08633129</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterList.ХранилищеСертификатов" category="List">
+				<xr:TypeId>d9f0d025-c7aa-493b-a561-5de53ac36943</xr:TypeId>
+				<xr:ValueId>a01eda48-d1a6-47e7-8f73-eb37f9a19eed</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordSet.ХранилищеСертификатов" category="RecordSet">
+				<xr:TypeId>1907cf89-e3e3-4a23-a2e0-a88ef0a3cf5a</xr:TypeId>
+				<xr:ValueId>385bd49a-b25c-4f63-9fee-2d4e3bc7e660</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordKey.ХранилищеСертификатов" category="RecordKey">
+				<xr:TypeId>61992358-39b1-4cf8-a05e-ed27a3ccb388</xr:TypeId>
+				<xr:ValueId>f2d4cf97-acc7-4f29-a1bd-e3eda6250720</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordManager.ХранилищеСертификатов" category="RecordManager">
+				<xr:TypeId>3b56ba75-9a20-46bf-b808-2e6e3e6139d6</xr:TypeId>
+				<xr:ValueId>a5fb3a23-87d4-4d89-a78e-a5c18d9ec2a0</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ХранилищеСертификатов</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>e77271f5-9383-4c66-ae7a-ee43abceeb38</ExtendedConfigurationObject>
+			<InformationRegisterPeriodicity>Nonperiodical</InformationRegisterPeriodicity>
+			<WriteMode>Independent</WriteMode>
+		</Properties>
+		<ChildObjects>
+			<Resource uuid="c09555bb-77ad-46f1-b5bf-125d9c4fbda3">
+				<InternalInfo/>
+				<Properties>
+					<Name>Наименование</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>293dfd89-28df-43fa-9760-16eeddc6410b</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>256</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="b908d65b-0cca-4013-b67d-85ce8c2aef5f">
+				<InternalInfo/>
+				<Properties>
+					<Name>ДатаНачала</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>af3199ac-9cf3-4509-8423-fac58c1a5c57</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="eff6f502-3850-41d4-b308-2a16eb46b916">
+				<InternalInfo/>
+				<Properties>
+					<Name>ДатаОкончания</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>a72f841c-7d9e-4e08-a410-c41cfce0e703</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="03ae8867-b233-4e10-aa5c-36f74fc7f8f1">
+				<InternalInfo/>
+				<Properties>
+					<Name>Идентификатор</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>22249106-cee9-48ee-b3c1-a38092d20dad</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>40</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</InformationRegister>
+</MetaDataObject>

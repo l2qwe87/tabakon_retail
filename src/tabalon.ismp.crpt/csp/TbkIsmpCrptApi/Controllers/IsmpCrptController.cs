@@ -106,6 +106,10 @@ namespace TbkIsmpCrptApi.Controllers
                 {
                     price_length += 2;
                 }
+                if (qr.Length == gtin_length + serialNumber_length + price_length)
+                {
+                    sign_length = 0;
+                }
 
                 if (qr.Length != gtin_length + serialNumber_length + price_length + sign_length)
                 {
@@ -116,7 +120,6 @@ namespace TbkIsmpCrptApi.Controllers
                 }
                 else
                 {
-
                     _gtin = qr.Substring(0, gtin_length);
                     _serialNumber = qr.Substring(gtin_length, serialNumber_length);
                     _price = qr.Substring(gtin_length + serialNumber_length, price_length);
