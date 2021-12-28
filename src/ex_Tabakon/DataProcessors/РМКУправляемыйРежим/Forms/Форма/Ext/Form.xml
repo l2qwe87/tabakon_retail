@@ -87,6 +87,11 @@
 					<CommandName>Form.Command.Debug_ОбработатьМарку</CommandName>
 					<ExtendedTooltip name="Debug_ОбработатьМаркуРасширеннаяПодсказка" id="550"/>
 				</Button>
+				<Button name="Debug_ВнешнееСобытие" id="571">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Debug_ВнешнееСобытие</CommandName>
+					<ExtendedTooltip name="Debug_ВнешнееСобытиеРасширеннаяПодсказка" id="572"/>
+				</Button>
 			</ChildItems>
 		</UsualGroup>
 		<LabelField name="НадписьЗаголовок" id="474">
@@ -1181,7 +1186,7 @@
 							</SearchControlAddition>
 							<Events>
 								<Event name="OnActivateRow" callType="After">ТБКТоварыПриАктивизацииСтрокиПосле</Event>
-								<Event name="de65638d-a806-4a76-bc10-f62bbc86e0e7" callType="After">ТБКТоварыПослеУдаленияПосле</Event>
+								<Event name="AfterDeleteRow" callType="After">ТБКТоварыПослеУдаленияПосле</Event>
 							</Events>
 							<ChildItems>
 								<InputField name="ТоварыПродавец" id="44">
@@ -1239,6 +1244,7 @@
 								</LabelField>
 								<PictureField name="ТоварыПроверкаМаркиСтатус" id="568">
 									<DataPath>Объект.Товары.ПроверкаМаркиСтатус</DataPath>
+									<Visible>false</Visible>
 									<TitleLocation>None</TitleLocation>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>2</Width>
