@@ -2433,6 +2433,12 @@
 							</Title>
 							<ExtendedTooltip name="КнопкаОтключитьЭквайрингРасширеннаяПодсказка" id="561"/>
 						</Button>
+						<CheckBoxField name="ИспользоватьПробитиеБлока" id="573">
+							<DataPath>ИспользоватьПробитиеБлока</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьПробитиеБлокаКонтекстноеМеню" id="574"/>
+							<ExtendedTooltip name="ИспользоватьПробитиеБлокаРасширеннаяПодсказка" id="575"/>
+						</CheckBoxField>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -2711,6 +2717,17 @@
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьПробитиеБлока" id="1000008">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать пробитие блока</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
