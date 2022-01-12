@@ -28,6 +28,9 @@
 			<Comment/>
 			<ObjectBelonging>Adopted</ObjectBelonging>
 			<ExtendedConfigurationObject>b7fb602b-73ed-40e9-9b94-88e47819fe72</ExtendedConfigurationObject>
+			<CodeLength>11</CodeLength>
+			<CodeType>String</CodeType>
+			<CodeAllowedLength>Fixed</CodeAllowedLength>
 		</Properties>
 		<ChildObjects>
 			<Attribute uuid="c0da2d21-c9b4-438f-acce-8776a122e74a">
@@ -75,6 +78,80 @@
 					<ExtendedConfigurationObject>e8890aa3-da60-4c66-aec2-dd0f6f1c23b8</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>cfg:EnumRef.СтавкиНДС</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="8987dc51-14a7-4fd1-8930-7361dfe26c04">
+				<InternalInfo/>
+				<Properties>
+					<Name>ОбъемДАЛ</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>3d60d30c-5b63-462f-8f6c-4db7712b0d9b</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>18</v8:Digits>
+							<v8:FractionDigits>6</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="12bb9bed-b2bd-4432-a43a-a090e8d201c6">
+				<InternalInfo/>
+				<Properties>
+					<Name>Артикул</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>e6753c62-ddc8-41e5-93cb-913b89b5d59f</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>25</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="ebf91ed6-688b-4035-8b8a-283b4b84700d">
+				<InternalInfo/>
+				<Properties>
+					<Name>ПроизводительИмпортерАлкогольнойПродукции</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>13b520c3-b878-46c5-bdd5-92f663bedbfd</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="9cb5f106-3ddc-4ebe-835f-b05c0a284bf2">
+				<InternalInfo/>
+				<Properties>
+					<Name>Крепость</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>01af5ab1-ff3e-4d65-87d3-30c2626ceb62</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>5</v8:Digits>
+							<v8:FractionDigits>3</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="c78dcfb5-1612-42a4-a022-3cd21d37cad0">
+				<InternalInfo/>
+				<Properties>
+					<Name>ЕдиницаИзмерения</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>d2660556-9546-4991-88f3-590612375006</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.БазовыеЕдиницыИзмерения</v8:Type>
 					</Type>
 				</Properties>
 			</Attribute>

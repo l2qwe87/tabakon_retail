@@ -22,7 +22,6 @@
 КонецФункции
 
 
-
 //вхПараметры - структура
 //	UserName - string
 //  Password - string

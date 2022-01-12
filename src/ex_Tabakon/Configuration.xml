@@ -47,7 +47,7 @@
 			</UsePurposes>
 			<ScriptVariant>Russian</ScriptVariant>
 			<Vendor/>
-			<Version>1.3.6.9</Version>
+			<Version>1.3.7.0</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
@@ -125,6 +125,8 @@
 			<CommonPicture>КонтактнаяИнформацияПерейтиПоСсылке</CommonPicture>
 			<CommonPicture>Подарок</CommonPicture>
 			<CommonPicture>МенюДополнительныеФункции</CommonPicture>
+			<CommonPicture>СтатусыОбработкиДокументовБЭД</CommonPicture>
+			<SessionParameter>ТБК_WS_Клиент</SessionParameter>
 			<Role>ТБК_Кассир</Role>
 			<Role>ДобавлениеИзменениеЧековККМ</Role>
 			<CommonModule>ШтрихкодированиеИС</CommonModule>
@@ -151,6 +153,9 @@
 			<CommonModule>РасчетСтатусовОформленияИСМП</CommonModule>
 			<CommonModule>ШтрихкодированиеИСКлиентСервер</CommonModule>
 			<CommonModule>ДатыЗапретаИзменения</CommonModule>
+			<CommonModule>ТБК_WS</CommonModule>
+			<CommonModule>ТБК_WS_Клиент</CommonModule>
+			<CommonModule>ФоновоеВыполнение</CommonModule>
 			<CommonModule>ТБКНеФискальнаяПечать</CommonModule>
 			<ExchangePlan>ОбменРозницаУправлениеТорговлей103</ExchangePlan>
 			<WebService>ws_tbk</WebService>
@@ -193,6 +198,8 @@
 			<Catalog>ПодключаемоеОборудование</Catalog>
 			<Catalog>ИнформационныеКарты</Catalog>
 			<Catalog>АналитикаХозяйственныхОпераций</Catalog>
+			<Catalog>БазовыеЕдиницыИзмерения</Catalog>
+			<Catalog>КлассификаторАлкогольнойПродукцииЕГАИС</Catalog>
 			<Document>ТБК_ВедомостьОПродажахЗаДень</Document>
 			<Document>ОтчетОРозничныхПродажах</Document>
 			<Document>ЧекККМ</Document>
@@ -246,6 +253,7 @@
 			<DataProcessor>ПечатьЭтикетокИЦенников</DataProcessor>
 			<DataProcessor>СозданиеЧековКоррекции</DataProcessor>
 			<DataProcessor>ТБК_ПочинитьВыемку</DataProcessor>
+			<DataProcessor>ТБК_Маркировка</DataProcessor>
 			<DataProcessor>ЗакрытиеКассовойСмены</DataProcessor>
 			<InformationRegister>СостоянияОднократныхСкидокИКупонов</InformationRegister>
 			<InformationRegister>ТБКДанныеВаучера</InformationRegister>
