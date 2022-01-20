@@ -1185,6 +1185,7 @@
 								<ExtendedTooltip name="ТоварыУправлениеПоискомРасширеннаяПодсказка" id="347"/>
 							</SearchControlAddition>
 							<Events>
+								<Event name="Selection" callType="After">ТБКТоварыВыборПосле</Event>
 								<Event name="OnActivateRow" callType="After">ТБКТоварыПриАктивизацииСтрокиПосле</Event>
 								<Event name="AfterDeleteRow" callType="After">ТБКТоварыПослеУдаленияПосле</Event>
 							</Events>
@@ -1244,12 +1245,11 @@
 								</LabelField>
 								<PictureField name="ТоварыПроверкаМаркиСтатус" id="568">
 									<DataPath>Объект.Товары.ПроверкаМаркиСтатус</DataPath>
-									<Visible>false</Visible>
 									<TitleLocation>None</TitleLocation>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>2</Width>
 									<ValuesPicture>
-										<xr:Ref>CommonPicture.СтатусыОбработкиДокументовБЭД</xr:Ref>
+										<xr:Ref>CommonPicture.СтатусыОбработкиДокументовБЭД1</xr:Ref>
 										<xr:LoadTransparent>true</xr:LoadTransparent>
 									</ValuesPicture>
 									<ContextMenu name="ТоварыПроверкаМаркиСтатусКонтекстноеМеню" id="569"/>
@@ -2699,6 +2699,54 @@
 								<v8:FractionDigits>0</v8:FractionDigits>
 								<v8:AllowedSign>Any</v8:AllowedSign>
 							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+					<Column name="ПроверкаМаркиИНН" id="8">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Проверка марки ИНН</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="Объект.АкцизныеМарки">
+					<Column name="ПроверкаМаркиСтатус" id="1000000">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Проверка марки статус</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>10</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+					<Column name="ПроверкаМаркиИНН" id="1000001">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Проверка марки ИНН</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
 						</Type>
 					</Column>
 				</AdditionalColumns>
