@@ -1185,6 +1185,7 @@
 								<ExtendedTooltip name="ТоварыУправлениеПоискомРасширеннаяПодсказка" id="347"/>
 							</SearchControlAddition>
 							<Events>
+								<Event name="OnEditEnd" callType="After">ТБКТоварыПриОкончанииРедактированияПосле</Event>
 								<Event name="Selection" callType="After">ТБКТоварыВыборПосле</Event>
 								<Event name="OnActivateRow" callType="After">ТБКТоварыПриАктивизацииСтрокиПосле</Event>
 								<Event name="AfterDeleteRow" callType="After">ТБКТоварыПослеУдаленияПосле</Event>
