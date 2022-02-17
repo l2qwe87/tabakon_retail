@@ -21,5 +21,25 @@
         </Partition>
       </Partitions>
     </MeasureGroup>
+    <MeasureGroup>
+      <ID>Номенклатура Остатки Последние</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="c27d82aa-f2ac-4b55-b31e-2cee6fbc7eaf">
+          <ID>Номенклатура Остатки Последние</ID>
+          <Name>Номенклатура Остатки Последние</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="8b81b234-ab17-4517-8573-e246ec263cbb">
+            <DataSourceViewID>OLAP</DataSourceViewID>
+            <TableID>dbo_НоменклатураОстаткиПоследние</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
   </MeasureGroups>
 </Cube>
