@@ -211,6 +211,18 @@
           <AttributeID>Расчетная Базовая</AttributeID>
           <Name>Цена Расчетная Базовая</Name>
         </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8edf8913-4d29-4233-86b3-45440ab6cb3c">
+          <AttributeID>Количество Остаток Оптовый</AttributeID>
+          <Name>Количество Остаток Оптовый</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="cdff0535-312d-4507-abe7-ab635f484fc8">
+          <AttributeID>Количество Остаток Розничный</AttributeID>
+          <Name>Количество Остаток Розничный</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="12fe4db0-e188-4a6e-93ce-f8530e1e0191">
+          <AttributeID>Основной Поставщик</AttributeID>
+          <Name>Основной Поставщик</Name>
+        </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
       <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
@@ -219,7 +231,7 @@
     </Attribute>
     <Attribute dwd:design-time-name="86fe2278-d942-4922-b296-6f08d21cc0bb">
       <ID>Родитель</ID>
-      <Name>Родитель</Name>
+      <Name>Номенклатура иерархия</Name>
       <Usage>Parent</Usage>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="929b53e7-bdff-4757-b83b-534ae77cba78">
@@ -472,6 +484,52 @@
           <Source xsi:type="ColumnBinding" dwd:design-time-name="a57144a0-b75d-4de3-9d58-661f8688e43d">
             <TableID>vwНоменклатура</TableID>
             <ColumnID>Расчетная_Базовая</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ef70d1e9-ac19-4dbd-bb95-bf0749989324">
+      <ID>Количество Остаток Оптовый</ID>
+      <Name>Количество Остаток Оптовый</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="40ee8059-f978-4e46-8f29-760a2455d774">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2815edaf-717f-4e6f-8756-7d1fd38cfd66">
+            <TableID>vwНоменклатура</TableID>
+            <ColumnID>КоличествоОстатокОптовый</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c9a9ed39-1830-40d5-a6f7-252f211342d6">
+      <ID>Количество Остаток Розничный</ID>
+      <Name>Количество Остаток Розничный</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e8569425-bb55-462f-8080-696525a29535">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d81f1308-dc6f-468d-be18-a5cb7ee3139b">
+            <TableID>vwНоменклатура</TableID>
+            <ColumnID>КоличествоОстатокРозничный</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3730b046-ebee-4024-b1a6-c52bb73a9a47">
+      <ID>Основной Поставщик</ID>
+      <Name>Основной Поставщик</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e0133d0c-813d-487e-902e-9574a6107a95">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="712d529b-1f95-46f4-b549-b665a4c4451e">
+            <TableID>vwНоменклатура</TableID>
+            <ColumnID>ОсновнойПоставщик</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>

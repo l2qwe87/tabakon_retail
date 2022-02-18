@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="44" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-8263" scrolltop="-5000" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="23865" y="16775" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="44" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-8263" scrolltop="-5000" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="23865" y="10557" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
             </font>
@@ -297,6 +297,15 @@
         <Attribute dwd:design-time-name="250fb6ff-6aea-4305-8d1a-6d44b94cdbfa">
           <AttributeID>Расчетная Базовая</AttributeID>
         </Attribute>
+        <Attribute dwd:design-time-name="abf10e29-86fb-438c-9cae-a17c4cf274d7">
+          <AttributeID>Количество Остаток Оптовый</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="07447a0c-5c05-4020-8e3e-eaf3ce675e1b">
+          <AttributeID>Количество Остаток Розничный</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c031c9a3-36eb-4d4b-aa52-5b00da88aae5">
+          <AttributeID>Основной Поставщик</AttributeID>
+        </Attribute>
       </Attributes>
     </Dimension>
     <Dimension dwd:design-time-name="a022735e-e580-4119-95c6-884e75e24217">
@@ -308,15 +317,31 @@
           <AttributeID>Ссылка</AttributeID>
           <AggregationUsage>None</AggregationUsage>
         </Attribute>
-        <Attribute dwd:design-time-name="fb83a30f-cabe-49d5-9e62-4ff1b53db0ff">
-          <AttributeID>Код</AttributeID>
-          <AggregationUsage>None</AggregationUsage>
-        </Attribute>
         <Attribute dwd:design-time-name="773ce324-361c-4513-8c7a-ff29c6e41036">
           <AttributeID>Наименование</AttributeID>
           <AggregationUsage>None</AggregationUsage>
         </Attribute>
+        <Attribute dwd:design-time-name="0742ddea-ac9b-4e90-b342-2029093021a0">
+          <AttributeID>Почтовый Ящик</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d1d0cede-93ce-4074-9d8d-3cf0a92993d9">
+          <AttributeID>Адрес</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6eb11800-47f8-476e-9ae3-5ef9c1f80a16">
+          <AttributeID>Город</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0ab98df3-fdb6-4051-986e-4ed667f620cc">
+          <AttributeID>Код</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a76d0cfd-376d-4e9c-9224-da4b61bf7904">
+          <AttributeID>Вид Склада</AttributeID>
+        </Attribute>
       </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="79626921-7a2a-4399-bba6-0075a0e3d341">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
     </Dimension>
     <Dimension dwd:design-time-name="8aee80be-dcd5-4fe2-a61f-70dc03ee096c">
       <ID>Календарь</ID>
@@ -337,6 +362,9 @@
         </Attribute>
         <Attribute dwd:design-time-name="9cdcaa27-ad77-451b-a79c-9dcd24c47ea4">
           <AttributeID>Year Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="52f46e56-a600-47aa-9b8a-ddd3da40f526">
+          <AttributeID>Month</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>

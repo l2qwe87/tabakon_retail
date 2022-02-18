@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2877" scrolltop="-4062" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="8758" y="17463" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2877" scrolltop="-4062" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="9763" y="18547" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
             </font>
@@ -19,9 +19,9 @@
           <layoutmanager>
             <ddsxmlobj />
           </layoutmanager>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Склады" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3228" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Склады" left="-1700" top="-2805" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="7012" height="10212" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
-              <ddsxmlobjectstreaminitwrapper binary="000e00009c0c0000a50a0000" />
+              <ddsxmlobjectstreaminitwrapper binary="000e0000641b0000e4270000" />
             </control>
             <layoutobject>
               <ddsxmlobj>
@@ -55,15 +55,51 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
-      <Value>20</Value>
+      <Value>-1700</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
-      <Value>0</Value>
+      <Value>-2805</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
       <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="128">
+            <Shape Id="Ссылка" Expanded="false">
+              <Attributes>
+                <Attribute Id="Ссылка" />
+                <Attribute Id="Адрес" />
+                <Attribute Id="Код" />
+                <Attribute Id="Наименование" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Вид Склада" Expanded="false">
+              <Attributes>
+                <Attribute Id="Вид Склада" />
+              </Attributes>
+              <Position x="185" y="20" />
+            </Shape>
+            <Shape Id="Город" Expanded="false">
+              <Attributes>
+                <Attribute Id="Город" />
+              </Attributes>
+              <Position x="185" y="68" />
+            </Shape>
+            <Shape Id="Почтовый Ящик" Expanded="false">
+              <Attributes>
+                <Attribute Id="Почтовый Ящик" />
+              </Attributes>
+              <Position x="185" y="116" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
     </Annotation>
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
@@ -73,9 +109,7 @@
   </Source>
   <Type>Organization</Type>
   <UnknownMember>Visible</UnknownMember>
-  <ErrorConfiguration dwd:design-time-name="cdff504d-b79b-49e1-aedd-54ec5d1baa2f">
-    <KeyDuplicate>ReportAndStop</KeyDuplicate>
-  </ErrorConfiguration>
+  <ErrorConfiguration dwd:design-time-name="cdff504d-b79b-49e1-aedd-54ec5d1baa2f" />
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
     <Attribute dwd:design-time-name="c4cf493c-309a-4765-8393-3beeadb9352e">
@@ -93,33 +127,40 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <NameColumn dwd:design-time-name="1a868f83-261b-440a-9133-fa0242715cc9">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="eade9bcb-0ada-4858-8627-7296677e2112">
+          <TableID>dbo_Склады</TableID>
+          <ColumnID>Наименование</ColumnID>
+        </Source>
+      </NameColumn>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="536fea89-750f-433d-af16-8c878cdfba79">
-          <AttributeID>Код</AttributeID>
-          <Name>Код</Name>
-        </AttributeRelationship>
         <AttributeRelationship dwd:design-time-name="31b2b3e3-58e7-42b1-b0f7-a269a15ed8ee">
           <AttributeID>Наименование</AttributeID>
           <Name>Наименование</Name>
         </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="bdd30ceb-ef63-421c-9e2a-37195bad5fc7">
+          <AttributeID>Почтовый Ящик</AttributeID>
+          <Name>Почтовый Ящик</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="fb9aa762-9264-4aca-8369-6e1be217042b">
+          <AttributeID>Адрес</AttributeID>
+          <Name>Адрес</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="047f5196-18a7-47d0-a043-1749f8f3cc27">
+          <AttributeID>Город</AttributeID>
+          <Name>Город</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="19e1e31b-9807-473f-a5d9-2cb97a3c5ddf">
+          <AttributeID>Код</AttributeID>
+          <Name>Код</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d1d98566-98b8-4b9e-928f-eb07817ef54d">
+          <AttributeID>Вид Склада</AttributeID>
+          <Name>Вид Склада</Name>
+        </AttributeRelationship>
       </AttributeRelationships>
-      <OrderBy>Key</OrderBy>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="3c80d7d8-3ec4-4b3a-b449-ba2b73e5d464">
-      <ID>Код</ID>
-      <Name>Код</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="d44729a2-3867-4501-b041-6ff9a68918aa">
-          <DataType>WChar</DataType>
-          <DataSize>255</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="3b9cf459-d99b-493b-895a-069651feda3c">
-            <TableID>dbo_Склады</TableID>
-            <ColumnID>Код</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
       <OrderBy>Key</OrderBy>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
@@ -149,6 +190,114 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
+    <Attribute dwd:design-time-name="2f95aae6-2079-477c-bbbd-17e4bdcc4e71">
+      <ID>Почтовый Ящик</ID>
+      <Name>Почтовый Ящик</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="76880d30-4f28-49a2-9e1b-2c4ceab4d674">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2ee5d5df-7487-4a58-92fa-48551cd5e56d">
+            <TableID>dbo_Склады</TableID>
+            <ColumnID>ПочтовыйЯщик</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2056acbc-3abf-49b1-b67a-b7e63bbf1852">
+      <ID>Адрес</ID>
+      <Name>Адрес</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="887f79b0-7172-4ca9-a43c-88ecb9c18845">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4801e8e5-1767-4fdf-a13c-85f53095b7c8">
+            <TableID>dbo_Склады</TableID>
+            <ColumnID>Адрес</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="73042cf4-3aad-4336-ba66-38ef3402da88">
+      <ID>Город</ID>
+      <Name>Город</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6be70584-d505-49aa-a876-4ffd1b386178">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ff77cfe1-7978-477a-8a75-d196c941c56b">
+            <TableID>dbo_Склады</TableID>
+            <ColumnID>Город</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="89e8c4e8-7c00-482c-b883-6e329ecd4919">
+      <ID>Код</ID>
+      <Name>Код</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a0a50238-53da-4967-b2bf-e2ad92545843">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d55697e9-d456-48af-b484-04a8d0530a3c">
+            <TableID>dbo_Склады</TableID>
+            <ColumnID>Код</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="04322aa3-3fbd-4715-be47-0f2a983c42be">
+      <ID>Вид Склада</ID>
+      <Name>Вид Склада</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c2c897bc-e584-4f14-919b-6839e8be2797">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="67ee625c-c2a3-4c20-b0f3-eb36ed1fb86d">
+            <TableID>dbo_Склады</TableID>
+            <ColumnID>ВидСклада</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
   </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="671b8585-d07d-4272-a09b-9d2fb37d32a4">
+      <ID>Hierarchy</ID>
+      <Name>Склад</Name>
+      <Levels>
+        <Level dwd:design-time-name="e1feb55a-3522-4cb0-87fd-d8db21666f4e">
+          <ID>Город</ID>
+          <Name>Город</Name>
+          <SourceAttributeID>Город</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="8bd1eb63-b5e3-4c64-9869-832f6485b4bd">
+          <ID>Вид Склада</ID>
+          <Name>Вид Склада</Name>
+          <SourceAttributeID>Вид Склада</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="54e2f5a8-f0f4-4f89-8376-f387fbf4134d">
+          <ID>Почтовый Ящик</ID>
+          <Name>Почтовый Ящик</Name>
+          <SourceAttributeID>Почтовый Ящик</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="6629159d-e833-49d1-b6d9-b43d3be8fa9c">
+          <ID>Ссылка</ID>
+          <Name>Ссылка</Name>
+          <SourceAttributeID>Ссылка</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
   <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
 </Dimension>

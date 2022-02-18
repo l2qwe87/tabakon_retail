@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2322" scrolltop="-8423" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="9763" y="16775" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2322" scrolltop="-8423" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="9763" y="18547" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
             </font>
@@ -19,7 +19,7 @@
           <layoutmanager>
             <ddsxmlobj />
           </layoutmanager>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Календарь" left="-2123" top="-5583" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="6880" height="19737" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Календарь" left="-2123" top="-5583" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="6880" height="19737" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000e0000e01a0000194d0000" />
             </control>
@@ -110,6 +110,10 @@
           <AttributeID>Year Quarter</AttributeID>
           <Name>Квартал</Name>
         </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9ae09076-8999-4ef5-86d9-6ec947366f75">
+          <AttributeID>Month</AttributeID>
+          <Name>Месяц№</Name>
+        </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
@@ -134,15 +138,22 @@
       <ID>Month Name Short</ID>
       <Name>Месяц</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="54d5fdbb-4ab0-4989-8308-a893c69c5ee6">
-          <DataType>WChar</DataType>
-          <DataSize>3</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="f9ad1711-13b2-4a4e-98c3-d9f5f7c38206">
+        <KeyColumn dwd:design-time-name="1220746d-43d1-4ea5-93df-63523bc1b912">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bfff98c2-548d-46db-99a9-4f1c7d8e96d3">
             <TableID>Календарь</TableID>
-            <ColumnID>month_name_short</ColumnID>
+            <ColumnID>month_</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <NameColumn dwd:design-time-name="177accdb-dd35-49df-bc2d-d4970e21e802">
+        <DataType>WChar</DataType>
+        <DataSize>3</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="d9d2f9df-d957-49fd-bd55-40269854d0d9">
+          <TableID>Календарь</TableID>
+          <ColumnID>month_name_short</ColumnID>
+        </Source>
+      </NameColumn>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -150,15 +161,29 @@
       <ID>Year Month 1</ID>
       <Name>Год Месяц</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="25a6abfe-06a4-4192-b95c-3617988ebbab">
-          <DataType>WChar</DataType>
-          <DataSize>8</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="9b0e679e-9666-4d0a-b511-1dc6b2ae9f6f">
+        <KeyColumn dwd:design-time-name="8fe2ea51-0914-4d86-9cf8-30552fc4181c">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="84aac9ff-4bd9-475b-8545-cfe94d9bd164">
             <TableID>Календарь</TableID>
-            <ColumnID>year_month</ColumnID>
+            <ColumnID>year_</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="d1e3c7ad-ef41-4bab-a405-ada6c8cf9c2d">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4944dd6b-2eb9-4cfa-b865-95dca52a966a">
+            <TableID>Календарь</TableID>
+            <ColumnID>month_</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <NameColumn dwd:design-time-name="d15db77d-d42e-444b-b0b0-6b6f2579d98f">
+        <DataType>WChar</DataType>
+        <DataSize>8</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="0b1ee818-74de-4ca0-83e6-e59e1a429dac">
+          <TableID>Календарь</TableID>
+          <ColumnID>year_month</ColumnID>
+        </Source>
+      </NameColumn>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -172,6 +197,21 @@
           <Source xsi:type="ColumnBinding" dwd:design-time-name="e5919ad2-6ab1-45e5-b9bd-580661f346fb">
             <TableID>Календарь</TableID>
             <ColumnID>year_quarter</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="dfedf9a7-7157-4df4-85ab-cca7ea1caf15">
+      <ID>Month</ID>
+      <Name>Месяц№</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b8a83881-f9a7-427e-8536-92b0679f462d">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ab849985-40f6-4c1f-9662-9760667ee2e0">
+            <TableID>Календарь</TableID>
+            <ColumnID>month_</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
