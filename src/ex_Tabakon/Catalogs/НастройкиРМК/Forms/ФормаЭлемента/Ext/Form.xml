@@ -585,6 +585,12 @@
 							<ContextMenu name="ЧасНачалаКонтекстноеМеню" id="480"/>
 							<ExtendedTooltip name="ЧасНачалаРасширеннаяПодсказка" id="481"/>
 						</InputField>
+						<CheckBoxField name="ДоступнаПроверкаОрганизаций" id="482">
+							<DataPath>ДоступнаПроверкаОрганизаций</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ДоступнаПроверкаОрганизацийКонтекстноеМеню" id="483"/>
+							<ExtendedTooltip name="ДоступнаПроверкаОрганизацийРасширеннаяПодсказка" id="484"/>
+						</CheckBoxField>
 					</ChildItems>
 				</Page>
 				<Page name="ГруппаКнопкиНижнейПанели" id="62">
@@ -1385,6 +1391,17 @@
 					<v8:FractionDigits>0</v8:FractionDigits>
 					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДоступнаПроверкаОрганизаций" id="1000002">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступна проверка организаций</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
