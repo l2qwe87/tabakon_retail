@@ -41,5 +41,65 @@
         </Partition>
       </Partitions>
     </MeasureGroup>
+    <MeasureGroup>
+      <ID>Vw Отчет О Розничных Продажах По Всем</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="3d840b28-41c9-4fe7-b535-3d7c62acb7b9">
+          <ID>Vw Отчет О Розничных Продажах По Всем</ID>
+          <Name>Vw Отчет О Розничных Продажах По Всем</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="435b17c5-44b9-4878-8a9f-2880c255959f">
+            <DataSourceViewID>OLAP</DataSourceViewID>
+            <TableID>dbo_vwОтчетОРозничныхПродажахПоВсем</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Vw Возврат Товаров От Покупателя По Всем</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="a90f1f95-cb71-4a34-a41d-243ca5f46be6">
+          <ID>Vw Возврат Товаров От Покупателя По Всем</ID>
+          <Name>Vw Возврат Товаров От Покупателя По Всем</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="85524e8e-b736-4bf8-b273-56431e7a9163">
+            <DataSourceViewID>OLAP</DataSourceViewID>
+            <TableID>dbo_vwВозвратТоваровОтПокупателяПоВсем</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Возврат Товаров От Покупателя</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="8c610a81-fbf1-4d75-9d28-72600b7a8eb1">
+          <ID>Возврат Товаров От Покупателя</ID>
+          <Name>Возврат Товаров От Покупателя</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="fdb4d411-c09e-45b3-ac9e-b4e6fc7b73aa">
+            <DataSourceViewID>OLAP</DataSourceViewID>
+            <TableID>dbo_ВозвратТоваровОтПокупателя</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
   </MeasureGroups>
 </Cube>
