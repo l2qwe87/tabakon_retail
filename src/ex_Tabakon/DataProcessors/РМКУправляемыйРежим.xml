@@ -297,6 +297,96 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
+					<Attribute uuid="c1e06605-86cb-4f70-a12f-27bbb71798e3">
+						<InternalInfo/>
+						<Properties>
+							<Name>КлючСвязи</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>edba816c-b571-48bb-b732-87deb1f29be6</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>5</v8:Digits>
+									<v8:FractionDigits>0</v8:FractionDigits>
+									<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+			<TabularSection uuid="ff37274a-58f1-47a8-bd84-907d10103516">
+				<InternalInfo>
+					<xr:GeneratedType name="DataProcessorTabularSection.РМКУправляемыйРежим.АкцизныеМарки" category="TabularSection">
+						<xr:TypeId>09c18f00-6ce4-428f-953c-c97de8502e94</xr:TypeId>
+						<xr:ValueId>f56579d4-a6ba-444b-9bbf-0b3a49a59fd3</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DataProcessorTabularSectionRow.РМКУправляемыйРежим.АкцизныеМарки" category="TabularSectionRow">
+						<xr:TypeId>115e2388-4ad0-44a3-8d30-2654284fcad5</xr:TypeId>
+						<xr:ValueId>666a8611-3a68-4810-b398-3ea80e502ec7</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>АкцизныеМарки</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>0b8589fc-61f4-4ad7-a05b-aaba55a5e22f</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="1ed11dbf-3d3d-4abc-a87c-2cda9704ab6c">
+						<InternalInfo/>
+						<Properties>
+							<Name>КлючСвязи</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>0b861bd8-99b2-43ce-a86f-1dd9d604d861</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>5</v8:Digits>
+									<v8:FractionDigits>0</v8:FractionDigits>
+									<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="7cc0d6b3-57ee-41b0-9a12-8cd453a370a3">
+						<InternalInfo/>
+						<Properties>
+							<Name>КодАкцизнойМарки</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>7a8022f8-bf6f-486c-912b-fcebc66bf95e</ExtendedConfigurationObject>
+							<Type>
+								<v8:TypeSet>cfg:DefinedType.КодАкцизнойМарки</v8:TypeSet>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="c6eee194-535a-4fcc-9ac5-5e81065f955b">
+						<InternalInfo/>
+						<Properties>
+							<Name>АкцизнаяМарка</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>4da46003-17a7-4f7e-a661-7fe70b45a290</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.ШтрихкодыУпаковокТоваров</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="be991aa2-7b3f-4853-993f-093cb824eccf">
+						<InternalInfo/>
+						<Properties>
+							<Name>ШтрихкодУпаковки</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>8dab0003-b931-4655-8bee-ed77894503a8</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.ШтрихкодыУпаковокТоваров</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
 				</ChildObjects>
 			</TabularSection>
 			<Form>ТБКФормаВаучер</Form>
