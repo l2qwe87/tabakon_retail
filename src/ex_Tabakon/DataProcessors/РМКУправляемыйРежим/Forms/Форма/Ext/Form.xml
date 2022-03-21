@@ -766,7 +766,7 @@
 											<ContextMenu name="КартинкаЧО05НаличныеКонтекстноеМеню" id="440"/>
 											<ExtendedTooltip name="КартинкаЧО05НаличныеРасширеннаяПодсказка" id="441"/>
 											<Events>
-												<Event name="Click" callType="Override">ТБККартинкаЧО05НаличныеНажатиеВместо</Event>
+												<Event name="Click" callType="ChangeAndValidate">ТБККартинкаЧО05НаличныеНажатиеИзменениеИКонтроль</Event>
 											</Events>
 										</PictureField>
 										<PictureField name="КартинкаЧО06ПлатежнаяКарта" id="442">
@@ -793,6 +793,9 @@
 											<FileDragMode>AsFile</FileDragMode>
 											<ContextMenu name="КартинкаЧО06ПлатежнаяКартаКонтекстноеМеню" id="443"/>
 											<ExtendedTooltip name="КартинкаЧО06ПлатежнаяКартаРасширеннаяПодсказка" id="444"/>
+											<Events>
+												<Event name="Click" callType="Override">ТБККартинкаЧО06ПлатежнаяКартаНажатиеВместо</Event>
+											</Events>
 										</PictureField>
 										<PictureField name="КартинкаЧО10БезналичныеПлатежи" id="535">
 											<TitleLocation>None</TitleLocation>
@@ -1476,6 +1479,13 @@
 									<Font ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
 									<ContextMenu name="ТоварыОстатокКонтекстноеМеню" id="69"/>
 									<ExtendedTooltip name="ТоварыОстатокExtendedTooltip" id="261"/>
+								</InputField>
+								<InputField name="ТоварыКодУценки" id="576">
+									<DataPath>Объект.Товары.КодУценки</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТоварыКодУценкиКонтекстноеМеню" id="577"/>
+									<ExtendedTooltip name="ТоварыКодУценкиРасширеннаяПодсказка" id="578"/>
 								</InputField>
 								<InputField name="ТоварыОрганизация" id="136">
 									<DataPath>Объект.Товары.Организация</DataPath>
