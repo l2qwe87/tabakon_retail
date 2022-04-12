@@ -2444,6 +2444,19 @@
 							</Title>
 							<ExtendedTooltip name="КнопкаОтключитьЭквайрингРасширеннаяПодсказка" id="561"/>
 						</Button>
+						<Button name="ОткрытьПочту" id="579">
+							<Type>UsualButton</Type>
+							<Width>12</Width>
+							<Height>4</Height>
+							<CommandName>Form.Command.ОткрытьПочту</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Открыть почту</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ОткрытьПочтуРасширеннаяПодсказка" id="580"/>
+						</Button>
 						<CheckBoxField name="ИспользоватьПробитиеБлока" id="573">
 							<DataPath>ИспользоватьПробитиеБлока</DataPath>
 							<CheckBoxType>Auto</CheckBoxType>
@@ -2996,6 +3009,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКDebug_ВнешнееСобытиеПосле</Action>
+		</Command>
+		<Command name="ОткрытьПочту" id="1000006">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть почту</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть почту</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКОткрытьПочтуПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">

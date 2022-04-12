@@ -264,11 +264,19 @@
 											</Title>
 											<ExtendedTooltip name="ЗаказыРасширеннаяПодсказка" id="162"/>
 										</Button>
-										<Button name="ВыгрузитьПродажиЗаПериод" id="154">
+										<Button name="ВыгрузитьПродажиЗаПериод1" id="165">
 											<Type>UsualButton</Type>
 											<Height>2</Height>
 											<HorizontalStretch>true</HorizontalStretch>
 											<CommandName>Form.Command.ВыгрузитьПродажиЗаПериод</CommandName>
+											<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<ExtendedTooltip name="ВыгрузитьПродажиЗаПериод1РасширеннаяПодсказка" id="166"/>
+										</Button>
+										<Button name="ВыгрузитьПродажиЗаПериод" id="154">
+											<Type>UsualButton</Type>
+											<Height>2</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<CommandName>Form.Command.ОткрытьПочту</CommandName>
 											<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 											<ExtendedTooltip name="ВыгрузитьПродажиЗаПериодРасширеннаяПодсказка" id="155"/>
 										</Button>
@@ -780,6 +788,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКПоказатьЗаказыПосле</Action>
+		</Command>
+		<Command name="ОткрытьПочту" id="1000005">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть почту</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть почту</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКОткрытьПочтуПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
