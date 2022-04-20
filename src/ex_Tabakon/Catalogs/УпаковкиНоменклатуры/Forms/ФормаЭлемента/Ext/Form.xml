@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="11">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="12"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="13">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="16"/>
+			</Button>
+			<Popup name="ПодменюПечать" id="17">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Печать</v8:content>
+					</v8:item>
+				</Title>
+				<Picture>
+					<xr:Ref>StdPicture.Print</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Representation>Picture</Representation>
+				<ExtendedTooltip name="ПодменюПечатьРасширеннаяПодсказка" id="18"/>
+			</Popup>
+			<Popup name="ПодменюСоздатьНаОсновании" id="21">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Создать на основании</v8:content>
+					</v8:item>
+				</Title>
+				<Picture>
+					<xr:Ref>CommonPicture.ЗаполнитьПоШаблону</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Representation>Picture</Representation>
+				<ExtendedTooltip name="ПодменюСоздатьНаОснованииРасширеннаяПодсказка" id="22"/>
+				<ChildItems>
+					<Button name="ФормаОбщаяКомандаСозданиеСвязанныхОбъектов" id="23">
+						<Type>CommandBarButton</Type>
+						<CommandName>0</CommandName>
+						<DataPath>Объект.Ref</DataPath>
+						<ExtendedTooltip name="ФормаОбщаяКомандаСозданиеСвязанныхОбъектовРасширеннаяПодсказка" id="-12"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+			<ButtonGroup name="ГруппаКомандыФормы" id="49">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Команды формы</v8:content>
+					</v8:item>
+				</Title>
+				<CommandSource>Form</CommandSource>
+				<ExtendedTooltip name="ГруппаКомандыФормыРасширеннаяПодсказка" id="50"/>
+			</ButtonGroup>
+			<Button name="ФормаСправка" id="53">
+				<Type>CommandBarButton</Type>
+				<CommandName>0</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="54"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<LabelDecoration name="ДекорацияПредупреждение" id="29">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<TextColor>style:ButtonTextColor</TextColor>
+			<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Упаковка общая для набора упаковок</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияПредупреждениеКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="ДекорацияПредупреждениеExtendedTooltip" id="31"/>
+		</LabelDecoration>
+		<InputField name="Владелец" id="3">
+			<DataPath>Объект.Owner</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ВладелецКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ВладелецExtendedTooltip" id="32"/>
+		</InputField>
+		<UsualGroup name="ГруппаКоэффициентЕдиницаИзмерения" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа коэффициент единица измерения</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКоэффициентЕдиницаИзмеренияExtendedTooltip" id="33"/>
+			<ChildItems>
+				<InputField name="ЕдиницаИзмерения" id="5">
+					<DataPath>Объект.ЕдиницаИзмерения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>15</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="ЕдиницаИзмеренияКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ЕдиницаИзмеренияExtendedTooltip" id="34"/>
+				</InputField>
+				<InputField name="Коэффициент" id="7">
+					<DataPath>Объект.Коэффициент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>10</Width>
+					<ContextMenu name="КоэффициентКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="КоэффициентExtendedTooltip" id="35"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<SkipOnInput>true</SkipOnInput>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="36"/>
+		</InputField>
+		<InputField name="СкладскаяГруппа" id="26">
+			<ContextMenu name="СкладскаяГруппаКонтекстноеМеню" id="27"/>
+			<ExtendedTooltip name="СкладскаяГруппаExtendedTooltip" id="37"/>
+		</InputField>
+		<InputField name="Вес" id="9">
+			<DataPath>Объект.Вес</DataPath>
+			<Width>10</Width>
+			<ContextMenu name="ВесКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ВесExtendedTooltip" id="38"/>
+		</InputField>
+		<InputField name="Объем" id="14">
+			<DataPath>Объект.Объем</DataPath>
+			<Width>10</Width>
+			<ContextMenu name="ОбъемКонтекстноеМеню" id="15"/>
+			<ExtendedTooltip name="ОбъемExtendedTooltip" id="39"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1000001">
+			<Type>
+				<v8:Type>cfg:CatalogObject.УпаковкиНоменклатуры</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<BaseForm version="2.9">
+		<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+		<VerticalScroll>useIfNecessary</VerticalScroll>
+		<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+			<Autofill>false</Autofill>
+			<ChildItems>
+				<Button name="ФормаЗаписатьИЗакрыть" id="11">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="12"/>
+				</Button>
+				<Button name="ФормаЗаписать" id="13">
+					<Type>CommandBarButton</Type>
+					<Representation>Picture</Representation>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="16"/>
+				</Button>
+				<Popup name="ПодменюПечать" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Печать</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>StdPicture.Print</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Representation>Picture</Representation>
+					<ExtendedTooltip name="ПодменюПечатьРасширеннаяПодсказка" id="18"/>
+				</Popup>
+				<Popup name="ПодменюСоздатьНаОсновании" id="21">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Создать на основании</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.ЗаполнитьПоШаблону</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Representation>Picture</Representation>
+					<ExtendedTooltip name="ПодменюСоздатьНаОснованииРасширеннаяПодсказка" id="22"/>
+					<ChildItems>
+						<Button name="ФормаОбщаяКомандаСозданиеСвязанныхОбъектов" id="23">
+							<Type>CommandBarButton</Type>
+							<CommandName>0</CommandName>
+							<DataPath>Объект.Ref</DataPath>
+							<ExtendedTooltip name="ФормаОбщаяКомандаСозданиеСвязанныхОбъектовРасширеннаяПодсказка" id="-12"/>
+						</Button>
+					</ChildItems>
+				</Popup>
+				<ButtonGroup name="ГруппаКомандыФормы" id="49">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команды формы</v8:content>
+						</v8:item>
+					</Title>
+					<CommandSource>Form</CommandSource>
+					<ExtendedTooltip name="ГруппаКомандыФормыРасширеннаяПодсказка" id="50"/>
+				</ButtonGroup>
+				<Button name="ФормаСправка" id="53">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="54"/>
+				</Button>
+			</ChildItems>
+		</AutoCommandBar>
+		<ChildItems>
+			<LabelDecoration name="ДекорацияПредупреждение" id="29">
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<TextColor>style:ButtonTextColor</TextColor>
+				<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Упаковка общая для набора упаковок</v8:content>
+					</v8:item>
+				</Title>
+				<ContextMenu name="ДекорацияПредупреждениеКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="ДекорацияПредупреждениеExtendedTooltip" id="31"/>
+			</LabelDecoration>
+			<InputField name="Владелец" id="3">
+				<DataPath>Объект.Owner</DataPath>
+				<ReadOnly>true</ReadOnly>
+				<EditMode>EnterOnInput</EditMode>
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<ContextMenu name="ВладелецКонтекстноеМеню" id="4"/>
+				<ExtendedTooltip name="ВладелецExtendedTooltip" id="32"/>
+			</InputField>
+			<UsualGroup name="ГруппаКоэффициентЕдиницаИзмерения" id="28">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа коэффициент единица измерения</v8:content>
+					</v8:item>
+				</Title>
+				<Group>Horizontal</Group>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаКоэффициентЕдиницаИзмеренияExtendedTooltip" id="33"/>
+				<ChildItems>
+					<InputField name="ЕдиницаИзмерения" id="5">
+						<DataPath>Объект.ЕдиницаИзмерения</DataPath>
+						<EditMode>EnterOnInput</EditMode>
+						<Width>15</Width>
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<ContextMenu name="ЕдиницаИзмеренияКонтекстноеМеню" id="6"/>
+						<ExtendedTooltip name="ЕдиницаИзмеренияExtendedTooltip" id="34"/>
+					</InputField>
+					<InputField name="Коэффициент" id="7">
+						<DataPath>Объект.Коэффициент</DataPath>
+						<EditMode>EnterOnInput</EditMode>
+						<Width>10</Width>
+						<ContextMenu name="КоэффициентКонтекстноеМеню" id="8"/>
+						<ExtendedTooltip name="КоэффициентExtendedTooltip" id="35"/>
+					</InputField>
+				</ChildItems>
+			</UsualGroup>
+			<InputField name="Наименование" id="1">
+				<DataPath>Объект.Description</DataPath>
+				<SkipOnInput>true</SkipOnInput>
+				<EditMode>EnterOnInput</EditMode>
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<HorizontalStretch>true</HorizontalStretch>
+				<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+				<ExtendedTooltip name="НаименованиеExtendedTooltip" id="36"/>
+			</InputField>
+			<InputField name="СкладскаяГруппа" id="26">
+				<ContextMenu name="СкладскаяГруппаКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="СкладскаяГруппаExtendedTooltip" id="37"/>
+			</InputField>
+			<InputField name="Вес" id="9">
+				<DataPath>Объект.Вес</DataPath>
+				<Width>10</Width>
+				<ContextMenu name="ВесКонтекстноеМеню" id="10"/>
+				<ExtendedTooltip name="ВесExtendedTooltip" id="38"/>
+			</InputField>
+			<InputField name="Объем" id="14">
+				<DataPath>Объект.Объем</DataPath>
+				<Width>10</Width>
+				<ContextMenu name="ОбъемКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ОбъемExtendedTooltip" id="39"/>
+			</InputField>
+		</ChildItems>
+		<Attributes>
+			<Attribute name="Объект" id="1000001">
+				<Type>
+					<v8:Type>cfg:CatalogObject.УпаковкиНоменклатуры</v8:Type>
+				</Type>
+				<MainAttribute>true</MainAttribute>
+				<SavedData>true</SavedData>
+			</Attribute>
+		</Attributes>
+	</BaseForm>
+</Form>
