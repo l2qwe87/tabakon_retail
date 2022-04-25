@@ -1965,6 +1965,9 @@
 									<FileDragMode>AsFile</FileDragMode>
 									<ContextMenu name="КартинкаПО14ПродавецКонтекстноеМеню" id="395"/>
 									<ExtendedTooltip name="КартинкаПО14ПродавецРасширеннаяПодсказка" id="396"/>
+									<Events>
+										<Event name="Click" callType="Before">ТБККартинкаПО14ПродавецНажатиеПеред</Event>
+									</Events>
 								</PictureField>
 								<PictureField name="КартинкаПО15ПродолжитьЧек" id="397">
 									<Title>
@@ -2463,6 +2466,35 @@
 							<ContextMenu name="ИспользоватьПробитиеБлокаКонтекстноеМеню" id="574"/>
 							<ExtendedTooltip name="ИспользоватьПробитиеБлокаРасширеннаяПодсказка" id="575"/>
 						</CheckBoxField>
+						<UsualGroup name="ГруппаПокупкиСотрудников" id="586">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа покупки сотрудников</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаПокупкиСотрудниковРасширеннаяПодсказка" id="587"/>
+							<ChildItems>
+								<CheckBoxField name="ПокупкаСотрудника" id="581">
+									<DataPath>ПокупкаСотрудника</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПокупкаСотрудникаКонтекстноеМеню" id="582"/>
+									<ExtendedTooltip name="ПокупкаСотрудникаРасширеннаяПодсказка" id="583"/>
+								</CheckBoxField>
+								<Button name="ПолучитьЦеныПокупкаСотрудника" id="584">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПолучитьЦеныПокупкаСотрудника</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Получить цены для сотрудников</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ПолучитьЦеныПокупкаСотрудникаРасширеннаяПодсказка" id="585"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -2813,6 +2845,17 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="ПокупкаСотрудника" id="1000010">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Покупка сотрудника</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -3024,6 +3067,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКОткрытьПочтуПосле</Action>
+		</Command>
+		<Command name="ПолучитьЦеныПокупкаСотрудника" id="1000007">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить цены покупка сотрудника</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить цены покупка сотрудника</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКПолучитьЦеныПокупкаСотрудникаПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
