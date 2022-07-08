@@ -58,6 +58,11 @@
 					<CommandName>Form.Command.ЗаказыДляОтмены</CommandName>
 					<ExtendedTooltip name="ЗаказыДляОтменыРасширеннаяПодсказка" id="565"/>
 				</Button>
+				<Button name="ЗаявкиМагазина" id="588">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЗаявкиМагазина</CommandName>
+					<ExtendedTooltip name="ЗаявкиМагазинаРасширеннаяПодсказка" id="589"/>
+				</Button>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="Debug" id="551">
@@ -3082,6 +3087,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКПолучитьЦеныПокупкаСотрудникаПосле</Action>
+		</Command>
+		<Command name="ЗаявкиМагазина" id="1000008">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявки магазина</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказы покупателей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКЗаявкиМагазинаПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
