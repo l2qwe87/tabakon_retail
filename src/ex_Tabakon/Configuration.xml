@@ -47,7 +47,7 @@
 			</UsePurposes>
 			<ScriptVariant>Russian</ScriptVariant>
 			<Vendor/>
-			<Version>1.4.2.8</Version>
+			<Version>2.0.0.1</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
@@ -74,6 +74,7 @@
 			<StyleItem>ТекстЗапрещеннойЯчейкиЦвет</StyleItem>
 			<StyleItem>ГруппаВариантовОтчетовЦвет82</StyleItem>
 			<StyleItem>ВыборСтандартногоПериодаФонКнопки</StyleItem>
+			<StyleItem>ПросроченныеДанныеЦвет</StyleItem>
 			<CommonPicture>СерииНоменклатурыКолонкаСтатусов</CommonPicture>
 			<CommonPicture>СтатусыУказанияСерий</CommonPicture>
 			<CommonPicture>СправкаПоАкселераторам</CommonPicture>
@@ -162,7 +163,6 @@
 			<CommonModule>ТБКНеФискальнаяПечать</CommonModule>
 			<CommonModule>СкидкиНаценкиСервер</CommonModule>
 			<CommonModule>ОбработкаТабличнойЧастиТоварыСервер</CommonModule>
-			<CommonModule>ТБК_Шифрование</CommonModule>
 			<ExchangePlan>ОбменРозницаУправлениеТорговлей103</ExchangePlan>
 			<WebService>ws_tbk</WebService>
 			<DefinedType>Номенклатура</DefinedType>
@@ -210,6 +210,7 @@
 			<Catalog>КлассификаторАлкогольнойПродукцииЕГАИС</Catalog>
 			<Catalog>Справки2ЕГАИС</Catalog>
 			<Catalog>НаборыУпаковок</Catalog>
+			<Catalog>СтраныМира</Catalog>
 			<Document>ТБК_ВедомостьОПродажахЗаДень</Document>
 			<Document>ОтчетОРозничныхПродажах</Document>
 			<Document>ЧекККМ</Document>
@@ -232,6 +233,7 @@
 			<Document>ТТНИсходящаяЕГАИС</Document>
 			<Document>ТТНВходящаяЕГАИС</Document>
 			<Document>ТБК_ЗаявкаОтМагазина</Document>
+			<Document>СборкаТоваров</Document>
 			<Enum>ВариантыВеденияДополнительныхДанныхПоНоменклатуре</Enum>
 			<Enum>ВидыПродукцииИС</Enum>
 			<Enum>ВидыОперацийЧекККМ</Enum>
@@ -259,6 +261,7 @@
 			<Enum>СостоянияОплатыЗаказаПокупателя</Enum>
 			<Enum>ТБК_ВидыОперацийЗаявокОтМагазина</Enum>
 			<Enum>ТБК_ВидыПричинЗаявокНаПоступление</Enum>
+			<Enum>ВидыОперацийКомплектацияНоменклатуры</Enum>
 			<Report>ОтчетПоЧекам</Report>
 			<DataProcessor>РМКУправляемыйРежим</DataProcessor>
 			<DataProcessor>ТБК_Оле</DataProcessor>
@@ -272,6 +275,7 @@
 			<DataProcessor>ТБК_Маркировка</DataProcessor>
 			<DataProcessor>ЗакрытиеКассовойСмены</DataProcessor>
 			<DataProcessor>ТБК_ПоказатьПокупкиПоГруппам</DataProcessor>
+			<DataProcessor>КонвертацияОбъектовИнформационныхБаз</DataProcessor>
 			<InformationRegister>СостоянияОднократныхСкидокИКупонов</InformationRegister>
 			<InformationRegister>ТБКДанныеВаучера</InformationRegister>
 			<InformationRegister>Штрихкоды</InformationRegister>
@@ -294,7 +298,9 @@
 			<InformationRegister>ВременныеИдентификаторыЗапросов</InformationRegister>
 			<InformationRegister>ТБК_ПокупкиСотрудников</InformationRegister>
 			<InformationRegister>ТБК_ДанныеПоЗаявкамМагазинов</InformationRegister>
-			<InformationRegister>ТБК_ИсторияПокупокРозница</InformationRegister>
+			<InformationRegister>ТБК_ДанныеПоПроизвольнымБукетам</InformationRegister>
+			<InformationRegister>ЦеныНоменклатуры</InformationRegister>
+			<InformationRegister>ДействующиеЦеныНоменклатуры</InformationRegister>
 			<AccumulationRegister>ТоварыНаСкладах</AccumulationRegister>
 			<AccumulationRegister>ДенежныеСредстваККМ</AccumulationRegister>
 			<AccumulationRegister>Продажи</AccumulationRegister>

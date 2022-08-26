@@ -2500,15 +2500,15 @@
 								</Button>
 							</ChildItems>
 						</UsualGroup>
+						<Button name="ВвестиНомерБукета" id="590">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ВвестиНомерБукета</CommandName>
+							<ExtendedTooltip name="ВвестиНомерБукетаРасширеннаяПодсказка" id="591"/>
+						</Button>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
-		<InputField name="ТБК_IDКлиента" id="593">
-			<DataPath>Объект.ТБК_IDКлиента</DataPath>
-			<ContextMenu name="ТБК_IDКлиентаКонтекстноеМеню" id="594"/>
-			<ExtendedTooltip name="ТБК_IDКлиентаРасширеннаяПодсказка" id="595"/>
-		</InputField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="ТекущаяКассаККМ" id="1000000">
@@ -2774,6 +2774,15 @@
 								<v8:content>Проверка марки ИНН</v8:content>
 							</v8:item>
 						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="Реквизит1" id="6">
 						<Type>
 							<v8:Type>xs:string</v8:Type>
 							<v8:StringQualifiers>
@@ -3107,6 +3116,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКЗаявкиМагазинаПосле</Action>
+		</Command>
+		<Command name="ВвестиНомерБукета" id="1000009">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввести номер букета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввести номер букета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКВвестиНомерБукетаПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
