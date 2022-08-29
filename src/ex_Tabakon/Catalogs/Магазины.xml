@@ -78,6 +78,241 @@
 					</Type>
 				</Properties>
 			</Attribute>
+			<Attribute uuid="d9d6efab-3c2d-4fe9-943e-889fef09828b">
+				<Properties>
+					<Name>Расш_SamosaleApiКлюч</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расш samosale api ключ</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillFromFillingValue>false</FillFromFillingValue>
+					<FillValue xsi:type="xs:string"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<Use>ForItem</Use>
+					<Indexing>DontIndex</Indexing>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="301d0f93-aa95-43cb-8b61-5e76af809940">
+				<InternalInfo/>
+				<Properties>
+					<Name>ИспользоватьПрименениеЦен</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>e5637000-a435-4476-91d3-9647e24a641f</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="de6bd1eb-214d-474b-bac8-1424110a9b9d">
+				<InternalInfo/>
+				<Properties>
+					<Name>ВидМинимальныхЦенПродажи</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>673052b3-33c8-4689-957b-da07499181e0</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВидыЦен</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="66d750ce-dd2a-4ab3-9e8c-12d834a2e10d">
+				<InternalInfo/>
+				<Properties>
+					<Name>МетодРасчетаПотребности</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>6dd4e579-553c-48a5-8926-a028bbb40fe2</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.МетодыРасчетаПотребности</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="a24d8c3a-4196-4dc3-b27d-0992933bfaaf">
+				<InternalInfo/>
+				<Properties>
+					<Name>ПлощадьТорговогоЗала</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>8abba579-d7cf-41f5-bc2b-e24cf0581d27</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="e091912b-61dd-4065-93fb-a61917e7cff0">
+				<InternalInfo/>
+				<Properties>
+					<Name>ИспользоватьОрдернуюСхемуПриПоступлении</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>bd8894b0-2b95-429e-a125-85ea23bf3f14</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="d99d982d-72d7-4726-a601-c70f48a2e86c">
+				<InternalInfo/>
+				<Properties>
+					<Name>ИспользоватьОрдернуюСхемуПриОтгрузке</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>5c3f83b8-028b-4043-858f-aef5d9e868d3</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="e5602279-e9e5-4544-afd7-a34af101c3d3">
+				<InternalInfo/>
+				<Properties>
+					<Name>КонтролироватьАссортимент</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>0f9ac4cf-fbe0-46c0-9218-916dc7940fc4</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="92204fce-38f2-43c8-9df0-df004b4289bf">
+				<InternalInfo/>
+				<Properties>
+					<Name>ИспользоватьОрдернуюСхемуПриОтраженииИзлишковНедостач</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>6a22334f-65cf-4d32-8276-640cdf7d2741</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="1591b4b4-998a-48a4-9d02-96c583d5ef8a">
+				<InternalInfo/>
+				<Properties>
+					<Name>ИспользоватьПрямуюИнкассацию</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>15b15cd5-55f9-425b-845c-032dbecac11f</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="3991c825-9b09-4f19-a82b-d68e1e369bf4">
+				<InternalInfo/>
+				<Properties>
+					<Name>КонтролироватьАссортиментВЗаказеПокупателя</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>e0787406-997f-4206-96ea-5b0f5bd956d8</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="fa128526-b418-4dad-9b57-1a601a26ad2c">
+				<InternalInfo/>
+				<Properties>
+					<Name>ФорматМагазина</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>bbdcf6e8-f3be-4ee1-8dd9-96e1ca8ca9d6</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ФорматыМагазинов</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="cf4b43d0-0ede-49aa-b51e-54c87af6df79">
+				<InternalInfo/>
+				<Properties>
+					<Name>ПравилоЦенообразования</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>2a452432-ed71-4894-b1b2-19ac9163ca29</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ПравилаЦенообразования</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="492b69ff-7216-4da1-b759-6e9bbda33e57">
+				<InternalInfo/>
+				<Properties>
+					<Name>ПорядокОкругленияСуммыЧекаВПользуПокупателя</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>86b88199-762e-432d-a366-26cbd7dc74ac</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ПорядкиОкругления</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="159efe0f-acc5-4c8d-8809-3db8a7401f41">
+				<InternalInfo/>
+				<Properties>
+					<Name>ТипОкругленияЧекаВПользуПокупателя</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>f7cb2250-94b9-43c7-b0d8-bf4619840333</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="3228dec8-9e22-4da8-95b1-57f9bb688d21">
+				<InternalInfo/>
+				<Properties>
+					<Name>СегментИсключаемойНоменклатуры</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>66f305ed-8e9e-4d99-ac5c-3c2aa7726126</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СегментыНоменклатуры</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Form>ФормаЭлемента</Form>
 		</ChildObjects>
 	</Catalog>
 </MetaDataObject>
