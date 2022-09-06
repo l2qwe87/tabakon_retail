@@ -19,14 +19,16 @@ namespace Tabakon.DBContextMigration
 
             return builder.Build();
         }
-        public MigratioTabakonDBContext(DbContextOptions<TabakonDBContext> options)
+        internal MigratioTabakonDBContext(DbContextOptions<TabakonDBContext> options)
             : base(options)
         { }
+        //public MigratioTabakonDBContext()
+        //    : base()
+        //{ }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-           
-
-            optionsBuilder.UseSqlServer(GetConfiguration().GetConnectionString("TabakonDataContext"));
+            //optionsBuilder.UseSqlServer(GetConfiguration().GetConnectionString("TabakonDataContext"));
+            optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=TEST_tabakon;User ID=sa_web;Password=6;Application Name=Tabakon");
 
         }
     }

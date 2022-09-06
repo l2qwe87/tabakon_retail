@@ -11,7 +11,8 @@ namespace Tabakon.Entity
     public enum DocType 
     {
         Unknown = 0,
-        SelesReport = 1
+        SelesReport = 1,
+        CashierCheck = 2
     }
 
     public abstract class AbstractCacheEntity
