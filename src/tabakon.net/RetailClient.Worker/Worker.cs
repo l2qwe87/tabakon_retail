@@ -26,11 +26,13 @@ namespace RetailClient.Worker
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
+            _jobService.AddTask<WorkerRetailDocCashierCheck>(TimeSpan.FromHours(4));
             _jobService.AddTask<WorkerRetailDocSelesReport>(TimeSpan.FromMinutes(20));
             _jobService.AddTask<WorkerRetailVersion>(TimeSpan.FromMinutes(25));
             _jobService.AddTask<WorkerRetailExtConfiguration>(TimeSpan.FromMinutes(25));
             _jobService.AddTask<WorkerPing>(TimeSpan.FromMinutes(15));
             _jobService.AddTask<WorkerRetailGetStoreBalance>(TimeSpan.FromMinutes(60));
+            
 
             while (!stoppingToken.IsCancellationRequested)
             {
