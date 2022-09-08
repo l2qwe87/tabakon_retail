@@ -30,6 +30,7 @@ namespace RetailClient.Web.Services.Jobs
                 var retailEndpointsRepo = scope.ServiceProvider.GetRequiredService<IRetailEndpointsRepo>();
                 endpoints = await retailEndpointsRepo
                     .GetRetailEndpoints()
+                    .Where(e => e.RetailEndpointHost.Contains("101.0.22"))
                     .AsNoTracking()
                     .ToListAsync();
 #if DEBUG
