@@ -162,7 +162,9 @@ namespace RetailClient
                 var requestProp = new HttpRequestMessageProperty();
                 requestProp.Headers["Authorization"] = "Basic 0JDQtNC80LjQvToxNTk3NTM=";
                 OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestProp;
-                var response = ws.GetAsync(method, @paramStr).Result;
+                var task = ws.GetAsync(method, @paramStr);
+                Task.WaitAll(task);
+                var response = task.Result;
                 return response.Body.@return;
             }
         }
