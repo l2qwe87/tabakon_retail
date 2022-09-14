@@ -2500,10 +2500,15 @@
 								</Button>
 							</ChildItems>
 						</UsualGroup>
-						<Button name="ВвестиНомерБукета" id="590">
+						<Button name="ВвестиНомерБукета" id="592">
 							<Type>UsualButton</Type>
 							<CommandName>Form.Command.ВвестиНомерБукета</CommandName>
-							<ExtendedTooltip name="ВвестиНомерБукетаРасширеннаяПодсказка" id="591"/>
+							<ExtendedTooltip name="ВвестиНомерБукетаРасширеннаяПодсказка" id="593"/>
+						</Button>
+						<Button name="ВвестиНомерСоставногоБукета" id="590">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ВвестиНомерСоставногоБукета</CommandName>
+							<ExtendedTooltip name="ВвестиНомерСоставногоБукетаРасширеннаяПодсказка" id="591"/>
 						</Button>
 					</ChildItems>
 				</UsualGroup>
@@ -3117,7 +3122,22 @@
 			</ToolTip>
 			<Action callType="After">ТБКЗаявкиМагазинаПосле</Action>
 		</Command>
-		<Command name="ВвестиНомерБукета" id="1000009">
+		<Command name="ВвестиНомерСоставногоБукета" id="1000009">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввести номер составного букета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввести номер составного букета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКВвестиНомерСоставногоБукетаПосле</Action>
+		</Command>
+		<Command name="ВвестиНомерБукета" id="1000010">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -3127,7 +3147,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Ввести номер букета</v8:content>
+					<v8:content>Ввести номер составного букета</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКВвестиНомерБукетаПосле</Action>
