@@ -21,7 +21,7 @@ namespace RetailClient.Web.Services.Jobs
                 var arr = new List<string>();
                 var dateBegin = DateTime.Now.Date.AddDays(-50);
 #if RELEASE
-                dateBegin = DateTime.Now.Date.AddDays(-5);
+                dateBegin = DateTime.Now.Date.AddDays(-7);
 #endif
                 while (dateBegin < DateTime.Now)
                 {
