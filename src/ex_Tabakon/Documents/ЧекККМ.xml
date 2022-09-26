@@ -350,6 +350,23 @@
 							</Type>
 						</Properties>
 					</Attribute>
+					<Attribute uuid="cfc8cbd0-9d03-4b09-b1c1-661fb5b08e9f">
+						<InternalInfo/>
+						<Properties>
+							<Name>Сумма</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>ca7d6b9c-525d-4c64-a2d6-708d3a5893e7</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>15</v8:Digits>
+									<v8:FractionDigits>2</v8:FractionDigits>
+									<v8:AllowedSign>Any</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
 				</ChildObjects>
 			</TabularSection>
 			<TabularSection uuid="b42e03a0-37fd-4bcf-8d7d-dd3848e9846b">
@@ -379,6 +396,55 @@
 							<ExtendedConfigurationObject>06d90247-2515-4557-b425-4db2f445ed22</ExtendedConfigurationObject>
 							<Type>
 								<v8:Type>cfg:CatalogRef.ШтрихкодыУпаковокТоваров</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+			<TabularSection uuid="0074b179-3b52-4d4b-a31a-3486854b5eb5">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.ЧекККМ.СкидкиНаценки" category="TabularSection">
+						<xr:TypeId>5632cd95-030b-490c-ab19-1fe2f916a37b</xr:TypeId>
+						<xr:ValueId>87ca9bd8-6f07-4afa-9538-8627a3b17053</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.ЧекККМ.СкидкиНаценки" category="TabularSectionRow">
+						<xr:TypeId>6ee902af-887e-4d21-8bd8-e31a594500a6</xr:TypeId>
+						<xr:ValueId>febffbd8-bf9e-46e3-966e-760807428822</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>СкидкиНаценки</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>aedc9344-031f-4c31-9676-e1df749ff30e</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="0497fad3-9f15-45e2-8623-f1c8b3e62314">
+						<InternalInfo/>
+						<Properties>
+							<Name>Сумма</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>540a8681-2326-4b28-9766-a29b005aef82</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>15</v8:Digits>
+									<v8:FractionDigits>2</v8:FractionDigits>
+									<v8:AllowedSign>Any</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="f16d29bf-de63-437e-bc2e-4db9955978c4">
+						<InternalInfo/>
+						<Properties>
+							<Name>СкидкаНаценка</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>1e2ee1a3-cbd6-47cd-b055-c0b1bfaeb618</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.СкидкиНаценки</v8:Type>
 							</Type>
 						</Properties>
 					</Attribute>
