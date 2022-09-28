@@ -38,9 +38,13 @@
 		эл.Вставить("CashierCheckReportNumber",резДокументы.Номер);		
 		эл.Вставить("CashierCheckReportOperation",?(резДокументы.ВидОперации = Перечисления.ВидыОперацийЧекККМ.Продажа, "Sale", "Return"));
 		эл.Вставить("CashierCheckReportSum",резДокументы.СуммаДокумента);
-		эл.Вставить("CashierCheckReportOwnerRef",резДокументы.СуммаДокумента);
-		эл.Вставить("CashierCheckReportOwnerFriendlyName",резДокументы.СуммаДокумента);
-		эл.Вставить("CashierCheckReportSum",резДокументы.СуммаДокумента);
+		
+		эл.Вставить("CashierCheckReportOwnerRef",Строка(резДокументы.Ответственный.УникальныйИдентификатор()));
+		эл.Вставить("CashierCheckReportOwnerFriendlyName",Строка(резДокументы.Ответственный));
+		
+		эл.Вставить("CashierCheckReportSellerRef",Строка(резДокументы.Продавец.УникальныйИдентификатор()));
+		эл.Вставить("CashierCheckReportSellerFriendlyName",Строка(резДокументы.Продавец));
+		
 		эл.Вставить("StoreRef",Строка(резДокументы.КассаККММагазин.Ссылка.УникальныйИдентификатор()));
 		
 		эл.Вставить("CashierCheckReportIsSale",?(резДокументы.ВидОперации = Перечисления.ВидыОперацийЧекККМ.Продажа, true, false));
