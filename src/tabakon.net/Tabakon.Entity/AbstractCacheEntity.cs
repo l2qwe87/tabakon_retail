@@ -11,7 +11,8 @@ namespace Tabakon.Entity
     public enum DocType 
     {
         Unknown = 0,
-        SelesReport = 1
+        SelesReport = 1,
+        CashierCheck = 2
     }
 
     public abstract class AbstractCacheEntity
@@ -50,29 +51,7 @@ namespace Tabakon.Entity
         public string DocRef { get; set; }
         public DateTime DocDate { get; set; }
         public DocType DocType { get; set; }
-        public override AbstractCacheEntity PopulateData(string json)
-        {
-            base.PopulateData(json);
-
-            var jObject = JObject.Parse(json);
-            this.DocRef = jObject.Value<string>("RetailSalesReportRef");
-            try
-            {
-                this.DocDate = DateTime.ParseExact(jObject.Value<string>("RetailSalesReportDate"), "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
-            }
-            catch 
-            {
-                try
-                {
-                    this.DocDate = DateTime.ParseExact(jObject.Value<string>("RetailSalesReportDate"), "MM/dd/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
-                }
-                catch { 
-                }
-            }
-            //this.DocDate = jObject.Value<DateTime>("RetailSalesReportDate");
-
-            return this;
-        }
+        
 
         public override Expression<Func<TSource, bool>> IsEquals<TSource>()
         {

@@ -111,10 +111,10 @@ namespace RetailClient
         }       
 
 
-        public struct GetRetailDocSelesReportParams
+        public struct GetPeriodReportParams
         {
             private readonly DateTime _date;
-            public GetRetailDocSelesReportParams(DateTime date) {
+            public GetPeriodReportParams(DateTime date) {
                 _date = date;
             }
             public string DateFrom => _date.ToString("yyyyMMdd");
@@ -123,8 +123,18 @@ namespace RetailClient
         public async Task<string> GetRetailDocSelesReport(DateTime date)
         {
 
-            GetRetailDocSelesReportParams pr = new GetRetailDocSelesReportParams(date);
+            GetPeriodReportParams pr = new GetPeriodReportParams(date);
             var method = "DailySelesReport";
+            var @params = JsonConvert.SerializeObject(pr);
+            await this.PingAsync();
+            return Get(method, @params);
+        }
+
+        public async Task<string> GetRetailDocCashierCheck(DateTime date)
+        {
+
+            GetPeriodReportParams pr = new GetPeriodReportParams(date);
+            var method = "CashierCheck";
             var @params = JsonConvert.SerializeObject(pr);
             await this.PingAsync();
             return Get(method, @params);
@@ -152,7 +162,9 @@ namespace RetailClient
                 var requestProp = new HttpRequestMessageProperty();
                 requestProp.Headers["Authorization"] = "Basic 0JDQtNC80LjQvToxNTk3NTM=";
                 OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestProp;
-                var response = ws.GetAsync(method, @paramStr).Result;
+                var task = ws.GetAsync(method, @paramStr);
+                Task.WaitAll(task);
+                var response = task.Result;
                 return response.Body.@return;
             }
         }

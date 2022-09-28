@@ -8,7 +8,7 @@ namespace Tabakon.DAL
     public class TabakonDBContext : DbContext
     {
         //public TabakonDBContext()
-        //{   
+        //{
         //}
         public TabakonDBContext(DbContextOptions<TabakonDBContext> options)
             : base(options)
@@ -20,7 +20,8 @@ namespace Tabakon.DAL
         public virtual DbSet<RetailPing> RetailPing {get;set;}
         public virtual DbSet<RetailDocSelesReport> RetailDocSelesReport { get; set; }
         public virtual DbSet<RetailGetStoreBalance> RetailGetStoreBalance { get; set; }
-        
+        public virtual DbSet<RetailDocCashierCheck> RetailDocCashierCheck { get; set; }
+
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -64,8 +65,15 @@ namespace Tabakon.DAL
                 m.HasIndex(a => a.DocType);
                 m.HasIndex(a => new { a.DocDate, a.DocType });
                 m.HasOne(a => a.RetailEndpoint).WithMany().HasForeignKey(f => f.RetailEndpointIdentity);
-            }); 
+            });
 
+            modelBuilder.Entity<RetailDocCashierCheck>(m => {
+                m.HasKey(a => new { a.RetailEndpointIdentity, a.DocRef });
+                m.HasIndex(a => a.DocRef);
+                m.HasIndex(a => a.DocType);
+                m.HasIndex(a => new { a.DocDate, a.DocType });
+                m.HasOne(a => a.RetailEndpoint).WithMany().HasForeignKey(f => f.RetailEndpointIdentity);
+            });
 
         }
     }
