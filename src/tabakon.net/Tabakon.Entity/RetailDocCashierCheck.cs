@@ -1,13 +1,25 @@
 using Newtonsoft.Json.Linq;
 using System;
+using System.Collections.Generic;
 using System.Globalization;
 
 namespace Tabakon.Entity
 {
+
     public class RetailDocCashierCheck : AbstractDocEntity
     {
         public decimal Sum { get; set; }
         public string StoreRef { get; set; }
+        public string Operation { get; set; }
+        public string OwnerRef { get; set; }
+        public string OwnerFriendlyName { get; set; }
+        public string SellerRef { get; set; }
+        public string SellerFriendlyName { get; set; }
+        public bool IsSale { get; set; }
+
+        public List<PaymentDetail> PaymentDetail { get; set; }
+        public List<DiscountDetail> DiscountDetail { get; set; }
+
         public RetailDocCashierCheck() : base()
         {
             DocType = DocType.CashierCheck;
@@ -19,7 +31,19 @@ namespace Tabakon.Entity
             var jObject = JObject.Parse(json);
             this.DocRef = jObject.Value<string>("CashierCheckReportRef");
             this.StoreRef = jObject.Value<string>("StoreRef");
+            this.IsSale = jObject.Value<bool>("CashierCheckReportIsSale");
             this.Sum = jObject.Value<decimal>("CashierCheckReportSum");
+
+            this.Operation = jObject.Value<string>("Operation");
+
+            this.OwnerRef = jObject.Value<string>("CashierCheckReportOwnerRef");
+            this.OwnerFriendlyName = jObject.Value<string>("CashierCheckReportOwnerFriendlyName");
+            this.SellerRef = jObject.Value<string>("CashierCheckReportSellerRef");
+            this.SellerFriendlyName = jObject.Value<string>("CashierCheckReportSellerFriendlyName");
+
+            this.PaymentDetail = jObject["CashierCheckPaymentDetail"]?.ToObject<List<PaymentDetail>>();
+            this.DiscountDetail = jObject["CashierCheckDiscountDetail"]?.ToObject<List<DiscountDetail>>();
+
             try
             {
                 this.DocDate = DateTime.ParseExact(jObject.Value<string>("CashierCheckReportDate"), "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
@@ -37,5 +61,17 @@ namespace Tabakon.Entity
 
             return this;
         }
+    }
+
+    public class PaymentDetail {
+        public Guid PaymentDetailId { get; set; }
+        public bool IsCash { get; set; }
+        public decimal Sum { get; set; }
+    }
+
+    public class DiscountDetail {
+        public Guid DiscountDetailId { get; set; }
+        public string Discount { get; set; }
+        public decimal Sum { get; set; }
     }
 }

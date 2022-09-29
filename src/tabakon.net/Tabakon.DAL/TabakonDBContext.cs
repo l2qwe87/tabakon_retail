@@ -22,6 +22,9 @@ namespace Tabakon.DAL
         public virtual DbSet<RetailGetStoreBalance> RetailGetStoreBalance { get; set; }
         public virtual DbSet<RetailDocCashierCheck> RetailDocCashierCheck { get; set; }
 
+        public virtual DbSet<PaymentDetail> RetailDocCashierCheck_PaymentDetail { get; set; }
+        public virtual DbSet<DiscountDetail> RetailDocCashierCheck_DiscountDetail { get; set; }
+
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -73,6 +76,21 @@ namespace Tabakon.DAL
                 m.HasIndex(a => a.DocType);
                 m.HasIndex(a => new { a.DocDate, a.DocType });
                 m.HasOne(a => a.RetailEndpoint).WithMany().HasForeignKey(f => f.RetailEndpointIdentity);
+
+
+                m.HasMany(a => a.PaymentDetail); 
+                m.HasMany(a => a.DiscountDetail);
+                
+            });
+
+            modelBuilder.Entity<PaymentDetail>(m => {
+                m.HasKey(a => a.PaymentDetailId );
+                m.Property(a => a.PaymentDetailId).HasDefaultValueSql("NEWID()");
+            });
+
+            modelBuilder.Entity<DiscountDetail>(m => {
+                m.HasKey(a => a.DiscountDetailId);
+                m.Property(a => a.DiscountDetailId).HasDefaultValueSql("NEWID()");
             });
 
         }
