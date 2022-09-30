@@ -1,16 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using RetailClient;
 using RetailClient.Web.Contracts;
-using RetailClient.Web.Services.Jobs;
-using Tabakon.DAL;
-using Tabakon.Entity;
 
 namespace RetailClientTests.Controllers
 {
@@ -31,25 +24,77 @@ namespace RetailClientTests.Controllers
             this.serviceProvider = serviceProvider;
         }
 
+
+        [HttpGet("Total")]
+        public async Task<object> GetTotalInfo([FromQuery] DateTime date)
+        {
+            var query = retailEndpointsRepo.GetRetailCashierCheck()
+               .IgnoreAutoIncludes()
+               .Where(r => r.Date == date.Date)
+               .GroupBy(r => r.Date)
+               .Select(g => new {
+                   Date = g.Key.Date,
+                   SumSale = g.Sum(r => r.IsSale ? r.Sum : 0),
+                   SumReturn = g.Sum(r => r.IsSale ? 0 : -r.Sum),
+                   Sum = g.Sum(r => r.IsSale ? r.Sum : -r.Sum),
+                   SumCash = g.Sum(r => r.IsSale ? r.SumCash : -r.SumCash),
+                   SumTerminal = g.Sum(r => r.IsSale ? r.SumTerminal : -r.SumTerminal),
+               });
+
+            var data = await query.ToListAsync();
+
+            var result = data;
+
+            return result;
+        }
+
+        [HttpGet("Info")]
+        public async Task<object> GetInfo([FromQuery] DateTime date)
+        {
+            var query = retailEndpointsRepo.GetRetailCashierCheck()
+               .IgnoreAutoIncludes()
+               .Where(r => r.Date == date.Date)
+               .GroupBy(r => new { r.Date, r.RetailEndpointIdentity, r.StoreRef })
+               .Select(g => new {
+                   Date = g.Key.Date,
+                   RetailEndpointIdentity = g.Key.RetailEndpointIdentity,
+                   StoreRef = g.Key.StoreRef,
+                   SumSale = g.Sum(r => r.IsSale ? r.Sum : 0),
+                   SumReturn = g.Sum(r => r.IsSale ? 0 : -r.Sum),
+                   Sum = g.Sum(r => r.IsSale ? r.Sum : -r.Sum),
+                   SumCash = g.Sum(r => r.IsSale ? r.SumCash : -r.SumCash),
+                   SumTerminal = g.Sum(r => r.IsSale ? r.SumTerminal : -r.SumTerminal),
+               });
+
+            var data = await query.ToListAsync();
+
+            var result = data;
+
+            return result;
+        }
+
         [HttpGet("{retailEndpointIdentity}/Info")]
-        public async Task<object> GetInfo(string retailEndpointIdentity)
+        public async Task<object> GetInfoByRetailEndpointIdentity(string retailEndpointIdentity, [FromQuery] DateTime dateFrom)
         {
 
             var data = await retailEndpointsRepo.GetRetailCashierCheck()
-                .Include(r => r.PaymentDetail)
+                .IgnoreAutoIncludes()
+                .Where(r => r.Date >= dateFrom)
                 .Where(r => r.RetailEndpointIdentity == retailEndpointIdentity)
-                .ToListAsync();
-
-           var result = data.GroupBy(r => new { r.Date, r.RetailEndpointIdentity})
+                .GroupBy(r => new { r.Date, r.RetailEndpointIdentity, r.StoreRef })
                 .Select(g => new {
                     Date = g.Key.Date,
                     RetailEndpointIdentity = g.Key.RetailEndpointIdentity,
+                    StoreRef = g.Key.StoreRef,
                     SumSale = g.Sum(r => r.IsSale ? r.Sum : 0),
                     SumReturn = g.Sum(r => r.IsSale ? 0 : -r.Sum),
                     Sum = g.Sum(r => r.IsSale ? r.Sum : -r.Sum),
-                    SumCash = g.Sum(r => r.PaymentDetail.Where(p => p.IsCash).Sum(s => r.IsSale ? s.Sum : -s.Sum)),
-                    SumTerminal = g.Sum(r => r.PaymentDetail.Where(p => !p.IsCash).Sum(s => s.Sum))
-                });
+                    SumCash = g.Sum(r => r.IsSale ? r.SumCash : -r.SumCash),
+                    SumTerminal = g.Sum(r => r.IsSale ? r.SumTerminal : -r.SumTerminal),
+                })
+                .ToListAsync();
+
+            var result = data;
                 
             return result;
 
