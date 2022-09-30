@@ -2,12 +2,14 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 
 namespace Tabakon.Entity
 {
 
     public class RetailDocCashierCheck : AbstractDocEntity
     {
+        public DateTime Date { get; set; }
         public decimal Sum { get; set; }
         public string StoreRef { get; set; }
         public string Operation { get; set; }
@@ -16,6 +18,9 @@ namespace Tabakon.Entity
         public string SellerRef { get; set; }
         public string SellerFriendlyName { get; set; }
         public bool IsSale { get; set; }
+
+        public decimal SumCash { get; set; }
+        public decimal SumTerminal { get; set; }
 
         public List<PaymentDetail> PaymentDetail { get; set; }
         public List<DiscountDetail> DiscountDetail { get; set; }
@@ -29,12 +34,13 @@ namespace Tabakon.Entity
             base.PopulateData(json);
 
             var jObject = JObject.Parse(json);
+            //jObject
             this.DocRef = jObject.Value<string>("CashierCheckReportRef");
             this.StoreRef = jObject.Value<string>("StoreRef");
             this.IsSale = jObject.Value<bool>("CashierCheckReportIsSale");
             this.Sum = jObject.Value<decimal>("CashierCheckReportSum");
 
-            this.Operation = jObject.Value<string>("Operation");
+            this.Operation = jObject.Value<string>("CashierCheckReportOperation");
 
             this.OwnerRef = jObject.Value<string>("CashierCheckReportOwnerRef");
             this.OwnerFriendlyName = jObject.Value<string>("CashierCheckReportOwnerFriendlyName");
@@ -43,6 +49,12 @@ namespace Tabakon.Entity
 
             this.PaymentDetail = jObject["CashierCheckPaymentDetail"]?.ToObject<List<PaymentDetail>>();
             this.DiscountDetail = jObject["CashierCheckDiscountDetail"]?.ToObject<List<DiscountDetail>>();
+
+            this.SumTerminal = this.PaymentDetail?.Where(p => !p.IsCash).Sum(p => p.Sum) ?? 0;
+            this.SumCash = this.PaymentDetail?.Where(p => p.IsCash).Sum(p => p.Sum) ?? 0;
+            if (this.SumCash > -this.SumTerminal + this.Sum) {
+                this.SumCash = -this.SumTerminal + this.Sum;
+            }
 
             try
             {

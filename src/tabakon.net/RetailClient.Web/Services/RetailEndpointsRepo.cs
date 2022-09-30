@@ -27,6 +27,11 @@ namespace RetailClient.Web.Services
             return endpoints;
         }
 
+        public IQueryable<RetailDocCashierCheck> GetRetailCashierCheck()
+        {
+            return ctx.RetailDocCashierCheck.Select(r => r);
+        }
+
         public IQueryable<RetailVersion> GetRetailEndpointsVersion()
         { 
             var versions = ctx.RetailVersion

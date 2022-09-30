@@ -10,6 +10,8 @@ namespace RetailClient.Web.Contracts
     {
         IQueryable<RetailEndpoint> GetRetailEndpoints();
 
+        IQueryable<RetailDocCashierCheck> GetRetailCashierCheck();
+
         IQueryable<RetailVersion> GetRetailEndpointsVersion();
 
         IQueryable<RetailExtConfiguration> GetRetailExtConfiguration();

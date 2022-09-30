@@ -71,16 +71,24 @@ namespace Tabakon.DAL
             });
 
             modelBuilder.Entity<RetailDocCashierCheck>(m => {
+                m.Property(a => a.Date)
+                    .HasColumnType("Date")
+                    .HasComputedColumnSql("CAST([DocDate] as Date)");
+
                 m.HasKey(a => new { a.RetailEndpointIdentity, a.DocRef });
                 m.HasIndex(a => a.DocRef);
                 m.HasIndex(a => a.DocType);
                 m.HasIndex(a => new { a.DocDate, a.DocType });
+                m.HasIndex(a => a.Date);
                 m.HasOne(a => a.RetailEndpoint).WithMany().HasForeignKey(f => f.RetailEndpointIdentity);
 
-
-                m.HasMany(a => a.PaymentDetail); 
+                m.HasMany(a => a.PaymentDetail);
+                m.Navigation(a => a.PaymentDetail).AutoInclude();
                 m.HasMany(a => a.DiscountDetail);
-                
+                m.Navigation(a => a.DiscountDetail).AutoInclude();
+
+                m.Property(a => a.SumCash).HasDefaultValue(0);
+                m.Property(a => a.SumTerminal).HasDefaultValue(0);
             });
 
             modelBuilder.Entity<PaymentDetail>(m => {

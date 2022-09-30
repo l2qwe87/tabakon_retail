@@ -22,6 +22,7 @@ namespace Tabakon.DBContextMigration
         internal MigratioTabakonDBContext(DbContextOptions<TabakonDBContext> options)
             : base(options)
         { }
+
         //public MigratioTabakonDBContext()
         //    : base()
         //{ }

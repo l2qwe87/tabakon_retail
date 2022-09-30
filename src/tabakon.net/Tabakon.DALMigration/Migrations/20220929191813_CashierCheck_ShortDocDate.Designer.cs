@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tabakon.DBContextMigration;
 
 namespace Tabakon.DALMigration.Migrations
 {
     [DbContext(typeof(MigratioTabakonDBContext))]
-    partial class MigratioTabakonDBContextModelSnapshot : ModelSnapshot
+    [Migration("20220929191813_CashierCheck_ShortDocDate")]
+    partial class CashierCheck_ShortDocDate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -120,19 +122,7 @@ namespace Tabakon.DALMigration.Migrations
                     b.Property<decimal>("Sum")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<decimal>("SumCash")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("decimal(18,2)")
-                        .HasDefaultValue(0m);
-
-                    b.Property<decimal>("SumTerminal")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("decimal(18,2)")
-                        .HasDefaultValue(0m);
-
                     b.HasKey("RetailEndpointIdentity", "DocRef");
-
-                    b.HasIndex("Date");
 
                     b.HasIndex("DocRef");
 
