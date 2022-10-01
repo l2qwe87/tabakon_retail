@@ -35,6 +35,10 @@
             <button mat-raised-button color="accent" class="mr-2" (click)="run_apply_cfe()">Отправить сигнал на обновление расширения</button>
             <button mat-raised-button color="accent" class="mr-2" (click)="run_exRetailOle()">Отправить сигнал на запуск обмена с УТ</button>
         </p>
-        
+
+        <mat-divider class="mt-4"></mat-divider>
+        <p class="detail-label">Данные по кассе</p>
+        <app-cashier-check-info-endpoint [retailEndpointIdentity]="retailEndpointIdentity"></app-cashier-check-info-endpoint>        
     </div>
 </td-layout-card-over>
+

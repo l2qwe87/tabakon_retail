@@ -21,6 +21,7 @@ import { CommonComponentsModule } from './common-components-module/common-compon
 import { HttpClientModule } from '@angular/common/http';
 import { EndpointsGridComponent } from './stats/endpoints-grid/endpoints-grid.component';
 import { EndpointsService } from './services/endpoints.service';
+import { CashierCheckService } from './services/cashier-check.service';
 import { EndpointVersionComponent } from './stats/endpoint-version/endpoint-version.component';
 import { EndpointDetailComponent } from './stats/endpoint-detail/endpoint-detail.component';
 import { EndpointExtConfigurationComponent } from './stats/endpoint-ext-configuration/endpoint-ext-configuration.component';
@@ -28,6 +29,7 @@ import { CovalentLoadingModule } from '@covalent/core/loading';
 import { CovalentDialogsModule } from '@covalent/core/dialogs';
 import { CheckMarkComponent } from './mark/check-mark/check-mark.component';
 import { MarkInfoComponent } from './mark/mark-info/mark-info.component';
+import { CashierCheckInfoEndpointComponent } from './stats/cashier-check-info-endpoint/cashier-check-info-endpoint.component';
 
 
 
@@ -40,7 +42,8 @@ import { MarkInfoComponent } from './mark/mark-info/mark-info.component';
     EndpointDetailComponent,
     EndpointExtConfigurationComponent,
     CheckMarkComponent,
-    MarkInfoComponent
+    MarkInfoComponent,
+    CashierCheckInfoEndpointComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +69,8 @@ import { MarkInfoComponent } from './mark/mark-info/mark-info.component';
     
   ],
   providers: [
-    { provide : EndpointsService }
+    { provide : EndpointsService },
+    { provide : CashierCheckService }
   ],
   bootstrap: [AppComponent]
 })
