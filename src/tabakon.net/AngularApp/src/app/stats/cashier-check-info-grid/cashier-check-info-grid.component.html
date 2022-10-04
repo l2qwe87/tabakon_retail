@@ -3,18 +3,62 @@
 
     <thead>
         <tr td-data-table-column-row>
-          <th td-data-table-column [name]="'date'" [sortable]="true">Дата</th>
-          <th td-data-table-column [name]="'date'" [sortable]="true">retailEndpointName</th>
-          <th td-data-table-column [name]="'sumSale'" [sortable]="true">Продажа</th>
-          <th td-data-table-column [name]="'sumReturn'" [sortable]="true">Возврат</th>
-          <th td-data-table-column [name]="'sumTerminal'" [sortable]="true">Терминал</th>
-          <th td-data-table-column [name]="'sumCash'" [sortable]="true">Наличные</th>
+          <th td-data-table-column [name]="'date'" >
+            Дата
+          </th>
+          
+          <th td-data-table-column 
+            [name]="'retailEndpointName'" 
+            [sortable]="true"
+            [active]="sortBy == 'retailEndpointName'"
+            (sortChange)="sort($event)"
+            [sortOrder]="sortOrder">
+            Наименвоание склада в 1С
+          </th>
+          
+          <th td-data-table-column 
+            [name]="'sumSale'"
+            [sortable]="true"
+            [active]="sortBy == 'sumSale'"
+            (sortChange)="sort($event)"
+            [sortOrder]="sortOrder">
+            Продажа
+          </th>
+          
+          <th td-data-table-column 
+            [name]="'sumReturn'" 
+            [sortable]="true"
+            [active]="sortBy == 'sumReturn'"
+            (sortChange)="sort($event)"
+            [sortOrder]="sortOrder">
+            Возврат
+          </th>
+          
+          <th td-data-table-column 
+            [name]="'sumTerminal'" 
+            [sortable]="true"
+            [active]="sortBy == 'sumTerminal'"
+            (sortChange)="sort($event)"
+            [sortOrder]="sortOrder">
+            Терминал
+          </th>
+
+          <th td-data-table-column
+            [name]="'sumCash'"
+            [sortable]="true"
+            [active]="sortBy == 'sumCash'"
+            (sortChange)="sort($event)"
+            [sortOrder]="sortOrder">
+            Наличные
+          </th>
         </tr>
     </thead>
-    <tbody *ngIf="data$ | async as checkInfo">
+    <tbody>
         <tr td-data-table-row   *ngFor="let row of checkInfo; let npp = index">
           <td td-data-table-cell>{{row.date | date:'dd.MM.yyyy'}}</td>
-          <td td-data-table-cell>{{row.retailEndpointName}}</td>
+          <td td-data-table-cell><a [routerLink]="['/endpoints/', row.retailEndpointIdentity]" mat-button color="primary">
+            <mat-icon>drag_indicator</mat-icon> {{ row.retailEndpointName }}</a>
+          </td>
           <td td-data-table-cell>{{row.sumSale}}</td>
           <td td-data-table-cell>{{row.sumReturn}}</td>
           <td td-data-table-cell>{{row.sumTerminal}}</td>
