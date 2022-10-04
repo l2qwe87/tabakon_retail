@@ -1,4 +1,5 @@
-export class CashierCheckInfo{
+export interface ICashierCheckInfo{
+    retailEndpointIdentity: string;
     date: Date;
     sumSale: number;
     sumReturn: number;

@@ -30,6 +30,9 @@ import { CovalentDialogsModule } from '@covalent/core/dialogs';
 import { CheckMarkComponent } from './mark/check-mark/check-mark.component';
 import { MarkInfoComponent } from './mark/mark-info/mark-info.component';
 import { CashierCheckInfoEndpointComponent } from './stats/cashier-check-info-endpoint/cashier-check-info-endpoint.component';
+import { CashierCheckInfoGridComponent } from './stats/cashier-check-info-grid/cashier-check-info-grid.component';
+import { CashierCheckInfoTotalComponent } from './stats/cashier-check-info-total/cashier-check-info-total.component';
+import { CashierCheckInfoPageComponent } from './stats/cashier-check-info-page/cashier-check-info-page.component';
 
 
 
@@ -43,7 +46,10 @@ import { CashierCheckInfoEndpointComponent } from './stats/cashier-check-info-en
     EndpointExtConfigurationComponent,
     CheckMarkComponent,
     MarkInfoComponent,
-    CashierCheckInfoEndpointComponent
+    CashierCheckInfoEndpointComponent,
+    CashierCheckInfoGridComponent,
+    CashierCheckInfoTotalComponent,
+    CashierCheckInfoPageComponent
   ],
   imports: [
     BrowserModule,

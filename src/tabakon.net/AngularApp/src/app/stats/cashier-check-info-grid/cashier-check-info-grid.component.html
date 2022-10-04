@@ -1,0 +1,24 @@
+
+<div *ngIf="data$ | async as checkInfo">
+
+    <thead>
+        <tr td-data-table-column-row>
+          <th td-data-table-column [name]="'date'" [sortable]="true">Дата</th>
+          <th td-data-table-column [name]="'date'" [sortable]="true">retailEndpointName</th>
+          <th td-data-table-column [name]="'sumSale'" [sortable]="true">Продажа</th>
+          <th td-data-table-column [name]="'sumReturn'" [sortable]="true">Возврат</th>
+          <th td-data-table-column [name]="'sumTerminal'" [sortable]="true">Терминал</th>
+          <th td-data-table-column [name]="'sumCash'" [sortable]="true">Наличные</th>
+        </tr>
+    </thead>
+    <tbody *ngIf="data$ | async as checkInfo">
+        <tr td-data-table-row   *ngFor="let row of checkInfo; let npp = index">
+          <td td-data-table-cell>{{row.date | date:'dd.MM.yyyy'}}</td>
+          <td td-data-table-cell>{{row.retailEndpointName}}</td>
+          <td td-data-table-cell>{{row.sumSale}}</td>
+          <td td-data-table-cell>{{row.sumReturn}}</td>
+          <td td-data-table-cell>{{row.sumTerminal}}</td>
+          <td td-data-table-cell>{{row.sumCash}}</td>
+        </tr>
+    </tbody>
+</div>

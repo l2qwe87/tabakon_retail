@@ -26,7 +26,9 @@ namespace RetailClient.Worker
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            _jobService.AddTask<WorkerRetailDocCashierCheck>(TimeSpan.FromHours(4));
+            _jobService.AddTask<WorkerRetailDocCashierCheck_1Day>(TimeSpan.FromMinutes(20));
+            _jobService.AddTask<WorkerRetailDocCashierCheck_2Day>(TimeSpan.FromHours(1));
+            _jobService.AddTask<WorkerRetailDocCashierCheck_5Day>(TimeSpan.FromHours(4));
             _jobService.AddTask<WorkerRetailDocSelesReport>(TimeSpan.FromMinutes(20));
             _jobService.AddTask<WorkerRetailVersion>(TimeSpan.FromMinutes(25));
             _jobService.AddTask<WorkerRetailExtConfiguration>(TimeSpan.FromMinutes(25));
