@@ -24,6 +24,7 @@ namespace Tabakon.DAL
 
         public virtual DbSet<PaymentDetail> RetailDocCashierCheck_PaymentDetail { get; set; }
         public virtual DbSet<DiscountDetail> RetailDocCashierCheck_DiscountDetail { get; set; }
+        public virtual DbSet<GoodsDetail> RetailDocCashierCheck_GoodsDetail { get; set; }
 
 
 
@@ -84,8 +85,12 @@ namespace Tabakon.DAL
 
                 m.HasMany(a => a.PaymentDetail);
                 m.Navigation(a => a.PaymentDetail).AutoInclude();
+                
                 m.HasMany(a => a.DiscountDetail);
                 m.Navigation(a => a.DiscountDetail).AutoInclude();
+                
+                m.HasMany(a => a.GoodsDetail);
+                m.Navigation(a => a.GoodsDetail).AutoInclude();
 
                 m.Property(a => a.SumCash).HasDefaultValue(0);
                 m.Property(a => a.SumTerminal).HasDefaultValue(0);
@@ -99,6 +104,15 @@ namespace Tabakon.DAL
             modelBuilder.Entity<DiscountDetail>(m => {
                 m.HasKey(a => a.DiscountDetailId);
                 m.Property(a => a.DiscountDetailId).HasDefaultValueSql("NEWID()");
+            });
+
+            modelBuilder.Entity<GoodsDetail>(m => {
+                m.HasKey(a => a.GoodsDetailId);
+                m.Property(a => a.GoodsDetailId).HasDefaultValueSql("NEWID()");
+
+                m.Property(a => a.Count).HasDefaultValue(0);
+                m.Property(a => a.Price).HasDefaultValue(0);
+                m.Property(a => a.Sum).HasDefaultValue(0);
             });
 
         }

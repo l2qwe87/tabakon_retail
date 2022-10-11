@@ -24,6 +24,7 @@ namespace Tabakon.Entity
 
         public List<PaymentDetail> PaymentDetail { get; set; }
         public List<DiscountDetail> DiscountDetail { get; set; }
+        public List<GoodsDetail> GoodsDetail { get; set; }
 
         public RetailDocCashierCheck() : base()
         {
@@ -49,6 +50,7 @@ namespace Tabakon.Entity
 
             this.PaymentDetail = jObject["CashierCheckPaymentDetail"]?.ToObject<List<PaymentDetail>>();
             this.DiscountDetail = jObject["CashierCheckDiscountDetail"]?.ToObject<List<DiscountDetail>>();
+            this.GoodsDetail = jObject["CashierCheckGoodsDetail"]?.ToObject<List<GoodsDetail>>();
 
             this.SumTerminal = this.PaymentDetail?.Where(p => !p.IsCash).Sum(p => p.Sum) ?? 0;
             this.SumCash = this.PaymentDetail?.Where(p => p.IsCash).Sum(p => p.Sum) ?? 0;
@@ -84,6 +86,15 @@ namespace Tabakon.Entity
     public class DiscountDetail {
         public Guid DiscountDetailId { get; set; }
         public string Discount { get; set; }
+        public decimal Sum { get; set; }
+    }
+
+    public class GoodsDetail
+    {
+        public Guid GoodsDetailId { get; set; }
+        public string Goods { get; set; }
+        public decimal Count { get; set; }
+        public decimal Price { get; set; }
         public decimal Sum { get; set; }
     }
 }
