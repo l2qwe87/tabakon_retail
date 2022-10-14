@@ -50,7 +50,37 @@ namespace RetailClient.Worker
                     });
 
 
+                    
+                    var jobConfig = new JobConfig();
+                    //Version
+                    if (args.Contains("Version") || args.Length == 0)
+                    {
+                        jobConfig.Version = true;
+                    }
+                    //Ping
+                    if (args.Contains("Ping") || args.Length == 0)
+                    {
+                        jobConfig.Ping = true;
+                    }
+                    //StoreBalance
+                    if (args.Contains("StoreBalance") || args.Length == 0)
+                    {
+                        jobConfig.StoreBalance = true;
+                    }
+                    //SelesReport
+                    if (args.Contains("SelesReport") || args.Length == 0)
+                    {
+                        jobConfig.SelesReport = true;
+                    }
+                    //CashierCheck
+                    if (args.Contains("CashierCheck") || args.Length == 0)
+                    {
+                        jobConfig.CashierCheck = true;
+                    }
+                    
                     services.AddSingleton<IJobService, JobService>();
+                    services.AddSingleton<JobConfig>(jobConfig);
+
                     services.AddScoped<WorkerRetailVersion, WorkerRetailVersion>();
                     services.AddScoped<WorkerPing, WorkerPing>();
                     services.AddScoped<WorkerRetailExtConfiguration, WorkerRetailExtConfiguration>();
@@ -64,5 +94,13 @@ namespace RetailClient.Worker
 
                     services.AddHostedService<Worker>();
                 });
+    }
+
+    public class JobConfig { 
+        public bool Version { get; set; }
+        public bool Ping { get; set; }
+        public bool StoreBalance { get; set; }
+        public bool SelesReport { get; set; }
+        public bool CashierCheck { get; set; }
     }
 }
