@@ -1,17 +1,17 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="96694bac-14be-4890-af82-f28d14da1839" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="87d2da33-91e1-45b7-8601-de645541f675" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>OLAP</ID>
   <MeasureGroups>
     <MeasureGroup>
       <ID>Отчет О Розничных Продажах</ID>
       <Partitions>
-        <Partition dwd:design-time-name="cbedb5db-39a5-44f4-ad32-8edad98b2fb4">
+        <Partition dwd:design-time-name="526ca89c-4b79-4ac2-9700-9500b4634d1a">
           <ID>Отчет О Розничных Продажах</ID>
           <Name>Отчет О Розничных Продажах</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="48ab4209-d0c5-49ca-bf11-577f98f39194">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="2ce327b1-c02a-441a-8ea8-e13614b428b7">
             <DataSourceViewID>OLAP</DataSourceViewID>
             <TableID>dbo_ОтчетОРозничныхПродажах</TableID>
           </Source>
@@ -24,14 +24,14 @@
     <MeasureGroup>
       <ID>Номенклатура Остатки Последние</ID>
       <Partitions>
-        <Partition dwd:design-time-name="676c3c6c-3e19-4c31-a276-631a76667865">
+        <Partition dwd:design-time-name="6e6c0ea7-e04b-4fd6-94ba-c84e9c772faa">
           <ID>Номенклатура Остатки Последние</ID>
           <Name>Номенклатура Остатки Последние</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="014df5e8-80ee-4844-90f9-658ec459d9cf">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="0a7b12d1-3d9d-4986-bfab-02c92a154e6e">
             <DataSourceViewID>OLAP</DataSourceViewID>
             <TableID>dbo_НоменклатураОстаткиПоследние</TableID>
           </Source>
@@ -44,14 +44,14 @@
     <MeasureGroup>
       <ID>Vw Отчет О Розничных Продажах По Всем</ID>
       <Partitions>
-        <Partition dwd:design-time-name="070d324f-d8b6-46a3-8612-99449b52677d">
+        <Partition dwd:design-time-name="4ceb6085-a75c-47e9-8720-84ca01b636bf">
           <ID>Vw Отчет О Розничных Продажах По Всем</ID>
           <Name>Vw Отчет О Розничных Продажах По Всем</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="93194867-3a57-4502-9e2b-c71e64da890b">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="d2575ddf-75a6-4ea2-a9d1-d4bc165779c3">
             <DataSourceViewID>OLAP</DataSourceViewID>
             <TableID>dbo_vwОтчетОРозничныхПродажахПоВсем</TableID>
           </Source>
@@ -64,14 +64,14 @@
     <MeasureGroup>
       <ID>Vw Возврат Товаров От Покупателя По Всем</ID>
       <Partitions>
-        <Partition dwd:design-time-name="151b28fd-573e-4e78-a463-977350b14181">
+        <Partition dwd:design-time-name="555f23fb-a18c-4b7e-a017-975f874b80aa">
           <ID>Vw Возврат Товаров От Покупателя По Всем</ID>
           <Name>Vw Возврат Товаров От Покупателя По Всем</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="1c7759ff-b22c-4a3b-988d-4276c6ab5b0c">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="62d0205b-4266-427e-b2f9-06d96cb5567d">
             <DataSourceViewID>OLAP</DataSourceViewID>
             <TableID>dbo_vwВозвратТоваровОтПокупателяПоВсем</TableID>
           </Source>
@@ -84,14 +84,14 @@
     <MeasureGroup>
       <ID>Возврат Товаров От Покупателя</ID>
       <Partitions>
-        <Partition dwd:design-time-name="c69cc935-fac0-4182-86b0-b3b62452c431">
+        <Partition dwd:design-time-name="fe320168-625f-4985-a484-91b7481a5213">
           <ID>Возврат Товаров От Покупателя</ID>
           <Name>Возврат Товаров От Покупателя</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="99e338d8-ed32-41b0-a79b-c7a89ac985ac">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="c44466d4-fc31-4b2f-b7e5-ee102cb6bb36">
             <DataSourceViewID>OLAP</DataSourceViewID>
             <TableID>dbo_ВозвратТоваровОтПокупателя</TableID>
           </Source>
@@ -104,14 +104,14 @@
     <MeasureGroup>
       <ID>Товары Остатки</ID>
       <Partitions>
-        <Partition dwd:design-time-name="d5100961-8db1-49ae-ad55-86b3afc4dc97">
+        <Partition dwd:design-time-name="362f333d-0be7-45eb-bc66-ff9acef462f3">
           <ID>Товары Остатки</ID>
           <Name>Товары Остатки</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="708ffaed-d1fd-4fcd-9a2a-5178ca0a2952">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="f18a60de-9249-4629-b7c8-4cf6024a4162">
             <DataSourceViewID>OLAP</DataSourceViewID>
             <TableID>dbo_ТоварыОстатки</TableID>
           </Source>
@@ -124,14 +124,14 @@
     <MeasureGroup>
       <ID>Реализация Товаров Услуг</ID>
       <Partitions>
-        <Partition dwd:design-time-name="ee212a7f-18cb-46a9-8bc9-7150c3e26072">
+        <Partition dwd:design-time-name="85323466-fda4-4bfe-81cb-aed95587cc2e">
           <ID>Реализация Товаров Услуг</ID>
           <Name>Реализация Товаров Услуг</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="94450f12-b9f5-4bc9-a7c9-6f8dd90e3117">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="c083bcd6-03c5-4c40-9774-a4c1b7a68a72">
             <DataSourceViewID>OLAP</DataSourceViewID>
             <TableID>dbo_РеализацияТоваровУслуг</TableID>
           </Source>
@@ -144,14 +144,14 @@
     <MeasureGroup>
       <ID>Возврат Товаров Поставщику</ID>
       <Partitions>
-        <Partition dwd:design-time-name="5f6d5ce3-4659-415d-94b4-b0a0d1eee5de">
+        <Partition dwd:design-time-name="1fd8817a-5a9c-4c37-b0f4-9090335f31b1">
           <ID>Возврат Товаров Поставщику</ID>
           <Name>Возврат Товаров Поставщику</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="5e9c2b51-138a-4c2f-ae7e-03c0dd2d35d4">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="e64003eb-4a87-433e-9f5d-a36face1a3e4">
             <DataSourceViewID>OLAP</DataSourceViewID>
             <TableID>dbo_ВозвратТоваровПоставщику</TableID>
           </Source>
@@ -164,16 +164,16 @@
     <MeasureGroup>
       <ID>Чеки</ID>
       <Partitions>
-        <Partition dwd:design-time-name="025e8b45-9e61-48fe-a42b-71f953ce8cc7">
+        <Partition dwd:design-time-name="de9bb6ff-18d6-4ad2-aa11-476c5048af2f">
           <ID>Чеки</ID>
           <Name>Чеки</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="8dd83595-75ec-4ce6-84d1-1bd4c7c71644">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="df09c755-489b-4334-909a-d0422a5689e7">
             <DataSourceViewID>OLAP</DataSourceViewID>
-            <TableID>dbo_RetailDocCashierCheck</TableID>
+            <TableID>RetailDocCashierCheck_Detail</TableID>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
