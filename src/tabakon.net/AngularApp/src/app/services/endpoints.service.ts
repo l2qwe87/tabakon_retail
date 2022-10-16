@@ -39,6 +39,18 @@ export class EndpointsService extends mixinHttp(class {},{ baseUrl: ""}){
   }
 
   @TdGET({
+    path: '/api/RetailEndpoints/UpdateData/:retailEndpointIdentity',
+  })
+  updateData(
+    @TdParam('retailEndpointIdentity') retailEndpointIdentity : string, 
+    @TdResponse() response?: Observable<HttpResponse<any>>
+  ): Observable<RetailVersion> {
+    return response.pipe(
+      map(r => r as unknown as RetailVersion)
+    );
+  }
+
+  @TdGET({
     path: '/api/RetailEndpoints/RetailVersion/:retailEndpointIdentity',
   })
   getRetailVersion(

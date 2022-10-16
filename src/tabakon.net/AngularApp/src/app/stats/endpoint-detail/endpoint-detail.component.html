@@ -40,8 +40,9 @@
         <div class="mt-4 pt-4">
             <h2 class="label">Данные по кассе</h2>
             
-                
-            <app-cashier-check-info-endpoint [retailEndpointIdentity]="retailEndpointIdentity"></app-cashier-check-info-endpoint>
+            <div *tdLoading="'endpointCash'; color:'primary'">
+                <app-cashier-check-info-endpoint [retailEndpointIdentity]="retailEndpointIdentity"></app-cashier-check-info-endpoint>
+            </div>
         </div>
     </div>
 </td-layout-card-over>

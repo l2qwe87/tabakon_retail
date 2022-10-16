@@ -67,10 +67,32 @@ namespace RetailClientTests.Controllers
             });
         }
 
+        [HttpGet("UpdateData/{retailEndpointIdentity}")]
+        public async Task<RetailVersion> UpdateData(string retailEndpointIdentity)
+        {
+
+            var jobs = new[] {
+                typeof(WorkerRetailVersion), 
+                typeof(WorkerRetailDocCashierCheck_2Day),
+                typeof(WorkerRetailExtConfiguration)
+            };
+            foreach (var jobType in jobs)
+            {
+                var worker = serviceProvider.GetService(jobType) as ITask;
+                await worker.RunAsync(serviceProvider, e => e.RetailEndpointIdentity == retailEndpointIdentity);
+            }
+
+            var data = retailEndpointsRepo.GetRetailEndpointsVersion();
+            data = data.Where(v => v.RetailEndpointIdentity == retailEndpointIdentity);
+            return await data
+                .AsNoTracking()
+                .FirstOrDefaultAsync();
+        }
+
         [HttpGet("RetailVersion/{retailEndpointIdentity}")]
         public async Task<RetailVersion> GetRetailVersion(string retailEndpointIdentity)
         {
-            var workerRetailVersion = serviceProvider.GetService<WorkerRetailVersion>();
+            var workerRetailVersion = serviceProvider.GetService<WorkerRetailExtConfiguration>();
             await workerRetailVersion.RunAsync(serviceProvider, e => e.RetailEndpointIdentity == retailEndpointIdentity);
 
             var data = retailEndpointsRepo.GetRetailEndpointsVersion();

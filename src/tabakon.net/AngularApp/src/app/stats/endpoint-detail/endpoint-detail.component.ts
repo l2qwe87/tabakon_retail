@@ -114,17 +114,23 @@ export class EndpointDetailComponent implements OnInit, OnDestroy {
   updateData():void{
 
     this._loadingService.register("endpointDetail");
-
+    this._loadingService.register("endpointCash");
+    
     this._subs.push(
       this.endpointsService.getRetailVersion(this.retailEndpointIdentity).pipe(
         first(),
         tap(v => this.retailEndpoint.extData.retailVersion = v),
         switchMap(v => this.endpointsService.getRetailExtConfiguration(this.retailEndpointIdentity)),
         first(),
-        tap(v => this.retailEndpoint.extData.retailExtConfiguration = v),
+        tap(v => this.retailEndpoint.extData.retailExtConfiguration = v)
       ).subscribe(v => {
         this._loadingService.resolve("endpointDetail");
       }),
+
+      this.endpointsService.updateData(this.retailEndpointIdentity).pipe(
+        first(),
+      ).subscribe( _ => this._loadingService.resolve("endpointCash")),
+      
     )
   }
 
