@@ -536,7 +536,6 @@
 							<ExtendedTooltip name="ПродавцыПодробноРасширеннаяПодсказка" id="219"/>
 						</Button>
 						<Table name="Продавцы" id="193">
-							<Visible>false</Visible>
 							<AutoMaxWidth>false</AutoMaxWidth>
 							<HeightInTableRows>3</HeightInTableRows>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
@@ -591,18 +590,24 @@
 								</InputField>
 								<CheckBoxField name="ПродавцыЭтоГлавныйПродавец" id="212">
 									<DataPath>Объект.Продавцы.ЭтоГлавныйПродавец</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ПродавцыЭтоГлавныйПродавецКонтекстноеМеню" id="213"/>
 									<ExtendedTooltip name="ПродавцыЭтоГлавныйПродавецРасширеннаяПодсказка" id="214"/>
 								</CheckBoxField>
-								<CheckBoxField name="ПродавцыЭтоДопСмена" id="215">
-									<DataPath>Объект.Продавцы.ЭтоДопСмена</DataPath>
+								<InputField name="ПродавцыТипПродавца" id="225">
+									<DataPath>Объект.Продавцы.ТипПродавца</DataPath>
 									<EditMode>EnterOnInput</EditMode>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ПродавцыЭтоДопСменаКонтекстноеМеню" id="216"/>
-									<ExtendedTooltip name="ПродавцыЭтоДопСменаРасширеннаяПодсказка" id="217"/>
-								</CheckBoxField>
+									<ContextMenu name="ПродавцыТипПродавцаКонтекстноеМеню" id="226"/>
+									<ExtendedTooltip name="ПродавцыТипПродавцаРасширеннаяПодсказка" id="227"/>
+								</InputField>
+								<InputField name="ПродавцыВремяСмены" id="228">
+									<DataPath>Объект.Продавцы.ВремяСмены</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПродавцыВремяСменыКонтекстноеМеню" id="229"/>
+									<ExtendedTooltip name="ПродавцыВремяСменыРасширеннаяПодсказка" id="230"/>
+								</InputField>
 							</ChildItems>
 						</Table>
 					</ChildItems>
