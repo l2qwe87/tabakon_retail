@@ -9,14 +9,14 @@ using Tabakon.Entity;
 
 namespace RetailClient.Web.Services.Jobs
 {
-    public class WorkerRetailDocSelesReport : WorkerT
+    public class WorkerRetailDocSelesReport_NEW : WorkerT
     {
-        public WorkerRetailDocSelesReport(IServiceProvider serviceProvider) : base(serviceProvider) { }
+        public WorkerRetailDocSelesReport_NEW(IServiceProvider serviceProvider) : base(serviceProvider) { }
 
         public override async Task RunAsync(IServiceProvider serviceProvider, Func<RetailEndpoint, bool> predicat = null)
         {
             var alwaysSaveResult = false;
-            var result = await DoWorkAsync<RetailDocSelesReport>(alwaysSaveResult, async (endpoint) =>
+            var result = await DoWorkAsync<RetailDocSelesReport_NEW>(alwaysSaveResult, async (endpoint) =>
             {
                 var arr = new List<string>();
                 var dateBegin = DateTime.Now.Date.AddDays(-50);
@@ -28,20 +28,20 @@ namespace RetailClient.Web.Services.Jobs
                     var ws = new RetailWSClient(endpoint.RetailEndpointHost, endpoint.RetailEndpointUrl);
                     try
                     {
-                        var json = await ws.GetRetailDocSelesReport(dateBegin);
+                        var json = await ws.GetRetailDocSelesReport_NEW(dateBegin);
                         var jArray = JArray.Parse(json);
                         var docs = jArray.Select(e => e.ToString()).ToList();
                         arr.AddRange(docs);
                     }
                     catch (Exception e)
                     {
-                        //arr.Add(e.Message);
-                        var _logger = serviceProvider.GetService<ILogger<WorkerRetailDocSelesReport>>();
+                        var _logger = serviceProvider.GetService<ILogger<WorkerRetailDocSelesReport_NEW>>();
                         _logger.LogError(e, $"{endpoint.RetailEndpointHost} \n{e.Message}");
                     }
                     dateBegin = dateBegin.AddDays(1);
                 }
-                var logger = serviceProvider.GetService<ILogger<WorkerRetailDocSelesReport>>();
+
+                var logger = serviceProvider.GetService<ILogger<WorkerRetailDocSelesReport_NEW>>();
 
                 logger.LogInformation($"WorkerRetailDocSelesReport : {endpoint.RetailEndpointName} : {arr.Count()}");
 

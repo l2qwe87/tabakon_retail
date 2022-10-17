@@ -6,9 +6,12 @@ using System.Text;
 
 namespace Tabakon.Entity
 {
-    public class RetailDocSelesReport : AbstractDocEntity
+
+    public class RetailDocSelesReport_NEW : AbstractRetailDocSelesReport { }
+    public class RetailDocSelesReport : AbstractRetailDocSelesReport { }
+    public class AbstractRetailDocSelesReport : AbstractDocEntity
     {
-        public RetailDocSelesReport() : base() 
+        public AbstractRetailDocSelesReport() : base() 
         {
             DocType = DocType.SelesReport;
         }

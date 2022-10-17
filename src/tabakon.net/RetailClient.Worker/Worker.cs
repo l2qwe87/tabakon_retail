@@ -49,6 +49,7 @@ namespace RetailClient.Worker
             if (_jobConfig.SelesReport)
             {
                 _jobService.AddTask<WorkerRetailDocSelesReport>(TimeSpan.FromMinutes(20));
+                _jobService.AddTask<WorkerRetailDocSelesReport_NEW>(TimeSpan.FromMinutes(20));
             }
             //CashierCheck
             if (_jobConfig.CashierCheck)

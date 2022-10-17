@@ -86,6 +86,7 @@ namespace RetailClient.Worker
                     services.AddScoped<WorkerRetailExtConfiguration, WorkerRetailExtConfiguration>();
                     services.AddScoped<WorkerRetailGetStoreBalance, WorkerRetailGetStoreBalance>();
                     services.AddScoped<WorkerRetailDocSelesReport, WorkerRetailDocSelesReport>();
+                    services.AddScoped<WorkerRetailDocSelesReport_NEW, WorkerRetailDocSelesReport_NEW>();
                     services.AddScoped<WorkerRetailDocCashierCheck_1Day, WorkerRetailDocCashierCheck_1Day>();
                     services.AddScoped<WorkerRetailDocCashierCheck_2Day, WorkerRetailDocCashierCheck_2Day>();
                     services.AddScoped<WorkerRetailDocCashierCheck_5Day, WorkerRetailDocCashierCheck_5Day>();

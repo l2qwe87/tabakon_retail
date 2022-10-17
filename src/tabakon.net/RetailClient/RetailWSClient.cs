@@ -120,11 +120,22 @@ namespace RetailClient
             public string DateFrom => _date.ToString("yyyyMMdd");
             public string DateTo => _date.ToString("yyyyMMdd");
         }
+
         public async Task<string> GetRetailDocSelesReport(DateTime date)
         {
 
             GetPeriodReportParams pr = new GetPeriodReportParams(date);
             var method = "DailySelesReport";
+            var @params = JsonConvert.SerializeObject(pr);
+            await this.PingAsync();
+            return Get(method, @params);
+        }
+
+        public async Task<string> GetRetailDocSelesReport_NEW(DateTime date)
+        {
+
+            GetPeriodReportParams pr = new GetPeriodReportParams(date);
+            var method = "DailySelesReport_NEW";
             var @params = JsonConvert.SerializeObject(pr);
             await this.PingAsync();
             return Get(method, @params);
