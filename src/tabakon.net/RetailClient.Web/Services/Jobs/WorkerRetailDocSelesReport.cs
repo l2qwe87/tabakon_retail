@@ -16,7 +16,7 @@ namespace RetailClient.Web.Services.Jobs
         public override async Task RunAsync(IServiceProvider serviceProvider, Func<RetailEndpoint, bool> predicat = null)
         {
             var alwaysSaveResult = false;
-            var result = await DoWorkAsync<RetailDocSelesReport>(alwaysSaveResult, async (endpoint) =>
+            await DoWorkAsync<RetailDocSelesReport>(alwaysSaveResult, async (endpoint) =>
             {
                 var arr = new List<string>();
                 var dateBegin = DateTime.Now.Date.AddDays(-50);

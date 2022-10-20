@@ -22,7 +22,7 @@ namespace RetailClient.Web.Services.Jobs
 
         public abstract Task RunAsync(IServiceProvider serviceProvider, Func<RetailEndpoint, bool> predicat = null);
 
-        protected async Task<IEnumerable<T>> DoWorkAsync<T>(bool alwaysSaveResult, Func<RetailEndpoint, Task<IEnumerable<string>>> func, Func<RetailEndpoint, bool> predicat) where T : AbstractCacheEntity
+        protected async Task DoWorkAsync<T>(bool alwaysSaveResult, Func<RetailEndpoint, Task<IEnumerable<string>>> func, Func<RetailEndpoint, bool> predicat) where T : AbstractCacheEntity
         {
             IEnumerable<RetailEndpoint> endpoints = null;
             using (var scope = serviceProvider.CreateScope())
@@ -33,9 +33,9 @@ namespace RetailClient.Web.Services.Jobs
                     .AsNoTracking()
                     .ToListAsync();
 #if DEBUG
-                endpoints = endpoints.Concat(endpoints).Concat(endpoints).Concat(endpoints)
-                    .Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints)
-                    .Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints);
+                //endpoints = endpoints.Concat(endpoints).Concat(endpoints).Concat(endpoints)
+                //    .Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints)
+                //    .Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints);
 #endif
             }
             if (predicat != null) {
@@ -77,12 +77,12 @@ namespace RetailClient.Web.Services.Jobs
             //});
             await Task.WhenAll(tasks);
 
-            using (var scope = serviceProvider.CreateScope())
-            {
-                var ctx = scope.ServiceProvider.GetRequiredService<TabakonDBContext>();
-                var result = await ctx.Set<T>().Select(r => r).AsNoTracking().ToListAsync();
-                return result;
-            }
+            //using (var scope = serviceProvider.CreateScope())
+            //{
+            //    var ctx = scope.ServiceProvider.GetRequiredService<TabakonDBContext>();
+            //    var result = await ctx.Set<T>().Select(r => r).AsNoTracking().ToListAsync();
+            //    return result;
+            //}
         }
 
 

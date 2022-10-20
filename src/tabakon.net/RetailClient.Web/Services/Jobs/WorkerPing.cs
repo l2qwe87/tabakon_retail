@@ -13,7 +13,7 @@ namespace RetailClient.Web.Services.Jobs
         public override async Task RunAsync(IServiceProvider serviceProvider, Func<RetailEndpoint, bool> predicat = null)
         {
             var alwaysSaveResult = true;
-            var result = await DoWorkAsync<RetailPing>(alwaysSaveResult, async (endpoint) =>
+            await DoWorkAsync<RetailPing>(alwaysSaveResult, async (endpoint) =>
             {
                 var ws = new RetailWSClient(endpoint.RetailEndpointHost, endpoint.RetailEndpointUrl);
                 try
