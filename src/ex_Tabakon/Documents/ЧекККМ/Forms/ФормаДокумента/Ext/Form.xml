@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 		<ChildItems>
@@ -50,6 +53,7 @@
 					<Button name="ФормаДокументЧекККМСоздатьНаОсновании1" id="742">
 						<Type>CommandBarButton</Type>
 						<CommandName>0</CommandName>
+						<DataPath>Объект.Ref</DataPath>
 						<Title>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
@@ -61,26 +65,31 @@
 					<Button name="ФормаОбработкаСозданиеЧековКоррекцииЧекКоррекции" id="793">
 						<Type>CommandBarButton</Type>
 						<CommandName>0</CommandName>
+						<DataPath>Объект.Ref</DataPath>
 						<ExtendedTooltip name="ФормаОбработкаСозданиеЧековКоррекцииЧекКоррекцииРасширеннаяПодсказка" id="794"/>
 					</Button>
 					<Button name="ФормаДокументПриходныйКассовыйОрдерСоздатьНаОсновании" id="762">
 						<Type>CommandBarButton</Type>
 						<CommandName>0</CommandName>
+						<DataPath>Объект.Ref</DataPath>
 						<ExtendedTooltip name="ФормаДокументПриходныйКассовыйОрдерСоздатьНаОснованииРасширеннаяПодсказка" id="763"/>
 					</Button>
 					<Button name="ФормаДокументОплатаОтПокупателяПлатежнойКартойСоздатьНаОсновании" id="760">
 						<Type>CommandBarButton</Type>
 						<CommandName>0</CommandName>
+						<DataPath>Объект.Ref</DataPath>
 						<ExtendedTooltip name="ФормаДокументОплатаОтПокупателяПлатежнойКартойСоздатьНаОснованииРасширеннаяПодсказка" id="761"/>
 					</Button>
 					<Button name="ФормаОбщаяКомандаСозданиеСвязанныхОбъектов" id="689">
 						<Type>CommandBarButton</Type>
 						<CommandName>0</CommandName>
+						<DataPath>Объект.Ref</DataPath>
 						<ExtendedTooltip name="ФормаОбщаяКомандаСозданиеСвязанныхОбъектовРасширеннаяПодсказка" id="690"/>
 					</Button>
 					<Button name="ФормаРасходныйКассовыйОрдер" id="776">
 						<Type>CommandBarButton</Type>
 						<CommandName>0</CommandName>
+						<DataPath>Объект.Ref</DataPath>
 						<ExtendedTooltip name="ФормаРасходныйКассовыйОрдерРасширеннаяПодсказка" id="777"/>
 					</Button>
 				</ChildItems>
@@ -142,11 +151,13 @@
 					<Button name="ФормаРегистрСведенийЛогДействийКассираВРМКОткрытьПоЗначениюЧекККМ" id="667">
 						<Type>CommandBarButton</Type>
 						<CommandName>0</CommandName>
+						<DataPath>Объект.Ref</DataPath>
 						<ExtendedTooltip name="ФормаРегистрСведенийЛогДействийКассираВРМКОткрытьПоЗначениюЧекККМРасширеннаяПодсказка" id="668"/>
 					</Button>
 					<Button name="ФормаРегистрСведенийПротоколПередачиДокументовДисконтномуСерверуПротоколПередачиДокументаДисконтномуСерверу" id="669">
 						<Type>CommandBarButton</Type>
 						<CommandName>0</CommandName>
+						<DataPath>Объект.Ref</DataPath>
 						<ExtendedTooltip name="ФормаРегистрСведенийПротоколПередачиДокументовДисконтномуСерверуПротоколПередачиДокументаДисконтномуСерверуРасширеннаяПодсказка" id="670"/>
 					</Button>
 				</ChildItems>
@@ -165,11 +176,13 @@
 					<Button name="ФормаОбщаяКомандаЗаполнениеОбъекта" id="705">
 						<Type>CommandBarButton</Type>
 						<CommandName>0</CommandName>
+						<DataPath>Объект.Ref</DataPath>
 						<ExtendedTooltip name="ФормаОбщаяКомандаЗаполнениеОбъектаРасширеннаяПодсказка" id="706"/>
 					</Button>
 					<Button name="ФормаОбщаяКомандаОтчетыОбъекта" id="707">
 						<Type>CommandBarButton</Type>
 						<CommandName>0</CommandName>
+						<DataPath>Объект.Ref</DataPath>
 						<ExtendedTooltip name="ФормаОбщаяКомандаОтчетыОбъектаРасширеннаяПодсказка" id="708"/>
 					</Button>
 					<Button name="ФормаОтменитьОплатуВПлатежнойСистеме" id="812">
@@ -267,6 +280,7 @@
 											<ExtendedTooltip name="ДатаНомерExtendedTooltip" id="324"/>
 											<ChildItems>
 												<InputField name="Номер" id="189">
+													<DataPath>Объект.Number</DataPath>
 													<SkipOnInput>true</SkipOnInput>
 													<EditMode>EnterOnInput</EditMode>
 													<Width>8</Width>
@@ -275,6 +289,7 @@
 													<ExtendedTooltip name="НомерExtendedTooltip" id="325"/>
 												</InputField>
 												<InputField name="Дата" id="191">
+													<DataPath>Объект.Date</DataPath>
 													<SkipOnInput>true</SkipOnInput>
 													<Title>
 														<v8:item>
@@ -289,6 +304,7 @@
 													<ExtendedTooltip name="ДатаExtendedTooltip" id="326"/>
 												</InputField>
 												<LabelField name="ДоговорКонтрагента" id="719">
+													<DataPath>Объект.ДоговорКонтрагента</DataPath>
 													<TitleLocation>None</TitleLocation>
 													<GroupHorizontalAlign>Right</GroupHorizontalAlign>
 													<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
@@ -298,12 +314,14 @@
 											</ChildItems>
 										</UsualGroup>
 										<InputField name="ДокументРасчета" id="750">
+											<DataPath>Объект.ДокументРасчета</DataPath>
 											<Enabled>false</Enabled>
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<ContextMenu name="ДокументРасчетаКонтекстноеМеню" id="751"/>
 											<ExtendedTooltip name="ДокументРасчетаРасширеннаяПодсказка" id="752"/>
 										</InputField>
 										<InputField name="Контрагент" id="744">
+											<DataPath>Объект.Контрагент</DataPath>
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<ContextMenu name="КонтрагентКонтекстноеМеню" id="745"/>
 											<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="746"/>
@@ -321,6 +339,7 @@
 											<ExtendedTooltip name="ГруппаДисконтнаяКартаРасширеннаяПодсказка" id="550"/>
 											<ChildItems>
 												<InputField name="ДисконтнаяКарта" id="9">
+													<DataPath>Объект.ДисконтнаяКарта</DataPath>
 													<EditMode>EnterOnInput</EditMode>
 													<AutoMaxWidth>false</AutoMaxWidth>
 													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
@@ -335,6 +354,7 @@
 											</ChildItems>
 										</UsualGroup>
 										<InputField name="ВладелецДисконтнойКарты" id="7">
+											<DataPath>Объект.ВладелецДисконтнойКарты</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<SkipOnInput>true</SkipOnInput>
 											<Title>
@@ -350,6 +370,7 @@
 											<ExtendedTooltip name="ВладелецДисконтнойКартыExtendedTooltip" id="328"/>
 										</InputField>
 										<InputField name="ЧекККМПродажа" id="25">
+											<DataPath>Объект.ЧекККМПродажа</DataPath>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -371,6 +392,7 @@
 											<ExtendedTooltip name="ЧекККМПродажаExtendedTooltip" id="329"/>
 										</InputField>
 										<InputField name="Продавец" id="29">
+											<DataPath>Объект.Продавец</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<ChoiceParameters>
@@ -384,6 +406,11 @@
 											<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 											<ContextMenu name="ПродавецКонтекстноеМеню" id="30"/>
 											<ExtendedTooltip name="ПродавецExtendedTooltip" id="330"/>
+										</InputField>
+										<InputField name="Samosale_НомерТелефона" id="818">
+											<DataPath>Объект.Samosale_НомерТелефона</DataPath>
+											<ContextMenu name="Samosale_НомерТелефонаКонтекстноеМеню" id="819"/>
+											<ExtendedTooltip name="Samosale_НомерТелефонаРасширеннаяПодсказка" id="820"/>
 										</InputField>
 										<UsualGroup name="ГруппаОснование" id="487">
 											<Title>
@@ -422,6 +449,7 @@
 									<ExtendedTooltip name="ШапкаПравоExtendedTooltip" id="331"/>
 									<ChildItems>
 										<InputField name="ВидОперации" id="5">
+											<DataPath>Объект.ВидОперации</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<ChoiceListHeight>3</ChoiceListHeight>
@@ -431,6 +459,7 @@
 											<ExtendedTooltip name="ВидОперацииExtendedTooltip" id="333"/>
 										</InputField>
 										<InputField name="АналитикаХозяйственнойОперации" id="35">
+											<DataPath>Объект.АналитикаХозяйственнойОперации</DataPath>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -442,7 +471,7 @@
 											<ChoiceParameterLinks>
 												<xr:Link>
 													<xr:Name>ВидОперации</xr:Name>
-													<xr:DataPath xsi:type="xs:string">1/0:c3e036cf-2439-4519-8e8b-1755595bff91</xr:DataPath>
+													<xr:DataPath xsi:type="xs:string">1</xr:DataPath>
 													<xr:ValueChange>Clear</xr:ValueChange>
 												</xr:Link>
 											</ChoiceParameterLinks>
@@ -459,6 +488,7 @@
 											<ExtendedTooltip name="АналитикаХозяйственнойОперацииExtendedTooltip" id="334"/>
 										</InputField>
 										<InputField name="КассаККМ" id="11">
+											<DataPath>Объект.КассаККМ</DataPath>
 											<DefaultItem>true</DefaultItem>
 											<EditMode>EnterOnInput</EditMode>
 											<AutoMaxWidth>false</AutoMaxWidth>
@@ -467,6 +497,7 @@
 											<ExtendedTooltip name="КассаККМExtendedTooltip" id="335"/>
 										</InputField>
 										<InputField name="Магазин" id="23">
+											<DataPath>Объект.Магазин</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
@@ -476,6 +507,7 @@
 											<ExtendedTooltip name="МагазинExtendedTooltip" id="336"/>
 										</InputField>
 										<InputField name="Организация" id="183">
+											<DataPath>Объект.Организация</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<SkipOnInput>true</SkipOnInput>
 											<AutoMaxWidth>false</AutoMaxWidth>
@@ -484,6 +516,7 @@
 											<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="337"/>
 										</InputField>
 										<LabelField name="СистемаНалогообложения" id="795">
+											<DataPath>Объект.СистемаНалогообложения</DataPath>
 											<ContextMenu name="СистемаНалогообложенияКонтекстноеМеню" id="796"/>
 											<ExtendedTooltip name="СистемаНалогообложенияРасширеннаяПодсказка" id="797"/>
 										</LabelField>
@@ -504,6 +537,7 @@
 													<ExtendedTooltip name="ДекорацияНДСРасширеннаяПодсказка" id="802"/>
 												</LabelDecoration>
 												<CheckBoxField name="ЦенаВключаетНДС" id="803">
+													<DataPath>Объект.ЦенаВключаетНДС</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>Right</TitleLocation>
 													<CheckBoxType>Auto</CheckBoxType>
@@ -540,6 +574,7 @@
 							</ChildItems>
 						</UsualGroup>
 						<InputField name="Ответственный" id="19">
+							<DataPath>Объект.Ответственный</DataPath>
 							<EditMode>EnterOnInput</EditMode>
 							<AutoMaxWidth>false</AutoMaxWidth>
 							<ContextMenu name="ОтветственныйКонтекстноеМеню" id="20"/>
@@ -554,6 +589,7 @@
 							<v8:content>Товары</v8:content>
 						</v8:item>
 					</Title>
+					<TitleDataPath>Объект.Товары.RowsCount</TitleDataPath>
 					<ExtendedTooltip name="ГруппаТоварыExtendedTooltip" id="340"/>
 					<ChildItems>
 						<Table name="Товары" id="39">
@@ -561,6 +597,7 @@
 							<SkipOnInput>false</SkipOnInput>
 							<AutoAddIncomplete>false</AutoAddIncomplete>
 							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.Товары</DataPath>
 							<SearchStringLocation>None</SearchStringLocation>
 							<ViewStatusLocation>None</ViewStatusLocation>
 							<SearchControlLocation>None</SearchControlLocation>
@@ -751,6 +788,7 @@
 							</SearchControlAddition>
 							<ChildItems>
 								<LabelField name="ТоварыНомерСтроки" id="42">
+									<DataPath>Объект.Товары.LineNumber</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>1</Width>
 									<HorizontalStretch>false</HorizontalStretch>
@@ -758,6 +796,7 @@
 									<ExtendedTooltip name="ТоварыНомерСтрокиExtendedTooltip" id="357"/>
 								</LabelField>
 								<LabelField name="ТоварыНоменклатураКод" id="300">
+									<DataPath>Объект.Товары.Номенклатура.Code</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>8</Width>
 									<HorizontalStretch>false</HorizontalStretch>
@@ -765,6 +804,7 @@
 									<ExtendedTooltip name="ТоварыНоменклатураКодExtendedTooltip" id="359"/>
 								</LabelField>
 								<LabelField name="ТоварыНоменклатураАртикул" id="302">
+									<DataPath>Объект.Товары.Номенклатура.Артикул</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>8</Width>
 									<HorizontalStretch>false</HorizontalStretch>
@@ -772,6 +812,7 @@
 									<ExtendedTooltip name="ТоварыНоменклатураАртикулExtendedTooltip" id="360"/>
 								</LabelField>
 								<InputField name="ТоварыНоменклатура" id="44">
+									<DataPath>Объект.Товары.Номенклатура</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<DropListButton>false</DropListButton>
 									<ChoiceButton>true</ChoiceButton>
@@ -788,6 +829,7 @@
 									<ExtendedTooltip name="ТоварыНоменклатураExtendedTooltip" id="361"/>
 								</InputField>
 								<InputField name="ТоварыХарактеристика" id="46">
+									<DataPath>Объект.Товары.Характеристика</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<DropListButton>false</DropListButton>
 									<ChoiceButton>true</ChoiceButton>
@@ -808,6 +850,7 @@
 									<ExtendedTooltip name="ГруппаТоварыКоличествоУпаковокРасширеннаяПодсказка" id="484"/>
 									<ChildItems>
 										<PictureField name="ТоварыСтатусыСерийИПодарочныхСертификатов" id="480">
+											<DataPath>Объект.Товары.СтатусыСерийИПодарочныхСертификатов</DataPath>
 											<TitleLocation>None</TitleLocation>
 											<EditMode>EnterOnInput</EditMode>
 											<Width>1</Width>
@@ -820,6 +863,7 @@
 											<ExtendedTooltip name="ТоварыСтатусыСерийИПодарочныхСертификатовРасширеннаяПодсказка" id="482"/>
 										</PictureField>
 										<InputField name="ТоварыКоличествоУпаковок" id="205">
+											<DataPath>Объект.Товары.КоличествоУпаковок</DataPath>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -845,6 +889,7 @@
 									<ExtendedTooltip name="ТоварыУпаковкаЕдиницаИзмеренияExtendedTooltip" id="364"/>
 									<ChildItems>
 										<InputField name="ТоварыУпаковка" id="201">
+											<DataPath>Объект.Товары.Упаковка</DataPath>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -862,6 +907,7 @@
 											<ExtendedTooltip name="ТоварыУпаковкаExtendedTooltip" id="365"/>
 										</InputField>
 										<LabelField name="ТоварыНоменклатураЕдиницаИзмерения" id="203">
+											<DataPath>Объект.Товары.Номенклатура.ЕдиницаИзмерения</DataPath>
 											<TitleLocation>None</TitleLocation>
 											<EditMode>EnterOnInput</EditMode>
 											<Width>5</Width>
@@ -871,12 +917,14 @@
 									</ChildItems>
 								</ColumnGroup>
 								<InputField name="ТоварыЦена" id="54">
+									<DataPath>Объект.Товары.Цена</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>9</Width>
 									<ContextMenu name="ТоварыЦенаКонтекстноеМеню" id="55"/>
 									<ExtendedTooltip name="ТоварыЦенаExtendedTooltip" id="367"/>
 								</InputField>
 								<InputField name="ТоварыПроцентАвтоматическойСкидки" id="243">
+									<DataPath>Объект.Товары.ПроцентАвтоматическойСкидки</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
@@ -891,6 +939,7 @@
 									<ExtendedTooltip name="ТоварыПроцентАвтоматическойСкидкиExtendedTooltip" id="368"/>
 								</InputField>
 								<InputField name="ТоварыСуммаАвтоматическойСкидки" id="245">
+									<DataPath>Объект.Товары.СуммаАвтоматическойСкидки</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
@@ -904,6 +953,7 @@
 									<ExtendedTooltip name="ТоварыСуммаАвтоматическойСкидкиExtendedTooltip" id="369"/>
 								</InputField>
 								<InputField name="ТоварыПроцентРучнойСкидки" id="239">
+									<DataPath>Объект.Товары.ПроцентРучнойСкидки</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -917,6 +967,7 @@
 									<ExtendedTooltip name="ТоварыПроцентРучнойСкидкиExtendedTooltip" id="370"/>
 								</InputField>
 								<InputField name="ТоварыСуммаРучнойСкидки" id="241">
+									<DataPath>Объект.Товары.СуммаРучнойСкидки</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -929,6 +980,7 @@
 									<ExtendedTooltip name="ТоварыСуммаРучнойСкидкиExtendedTooltip" id="371"/>
 								</InputField>
 								<InputField name="ТоварыСуммаСкидкиОплатыБонусом" id="543">
+									<DataPath>Объект.Товары.СуммаСкидкиОплатыБонусом</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
@@ -942,6 +994,7 @@
 									<ExtendedTooltip name="ТоварыСуммаСкидкиОплатыБонусомРасширеннаяПодсказка" id="545"/>
 								</InputField>
 								<InputField name="ТоварыСумма" id="56">
+									<DataPath>Объект.Товары.Сумма</DataPath>
 									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>9</Width>
@@ -949,6 +1002,7 @@
 									<ExtendedTooltip name="ТоварыСуммаExtendedTooltip" id="372"/>
 								</InputField>
 								<InputField name="ТоварыСуммаВсего" id="217">
+									<DataPath>Объект.Товары.СуммаВсего</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
@@ -962,6 +1016,7 @@
 									<ExtendedTooltip name="ТоварыСуммаВсегоExtendedTooltip" id="373"/>
 								</InputField>
 								<InputField name="ТоварыСтавкаНДС" id="58">
+									<DataPath>Объект.Товары.СтавкаНДС</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>7</Width>
 									<HorizontalStretch>false</HorizontalStretch>
@@ -996,6 +1051,7 @@
 									<ExtendedTooltip name="ТоварыСтавкаНДСExtendedTooltip" id="374"/>
 								</InputField>
 								<InputField name="ТоварыСуммаНДС" id="60">
+									<DataPath>Объект.Товары.СуммаНДС</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>9</Width>
@@ -1003,6 +1059,7 @@
 									<ExtendedTooltip name="ТоварыСуммаНДСExtendedTooltip" id="375"/>
 								</InputField>
 								<InputField name="ТоварыПродавец" id="78">
+									<DataPath>Объект.Товары.Продавец</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ChoiceParameters>
 										<app:item name="Отбор.Сотрудник">
@@ -1016,6 +1073,7 @@
 									<ExtendedTooltip name="ТоварыПродавецExtendedTooltip" id="376"/>
 								</InputField>
 								<InputField name="ТоварыСклад" id="223">
+									<DataPath>Объект.Товары.Склад</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ТоварыСкладКонтекстноеМеню" id="224"/>
 									<ExtendedTooltip name="ТоварыСкладExtendedTooltip" id="377"/>
@@ -1033,6 +1091,7 @@
 									<ExtendedTooltip name="ТоварыГруппаЗаказКлиентаРасширеннаяПодсказка" id="450"/>
 									<ChildItems>
 										<InputField name="ТоварыЗаказПокупателя" id="451">
+											<DataPath>Объект.Товары.ЗаказПокупателя</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<EditMode>EnterOnInput</EditMode>
 											<Width>16</Width>
@@ -1040,6 +1099,7 @@
 											<ExtendedTooltip name="ТоварыЗаказПокупателяРасширеннаяПодсказка" id="453"/>
 										</InputField>
 										<InputField name="ТоварыКодСтроки" id="454">
+											<DataPath>Объект.Товары.КодСтроки</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<EditMode>EnterOnInput</EditMode>
 											<Width>8</Width>
@@ -1049,6 +1109,7 @@
 									</ChildItems>
 								</ColumnGroup>
 								<CheckBoxField name="ТоварыРезервировать" id="457">
+									<DataPath>Объект.Товары.Резервировать</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
@@ -1072,6 +1133,7 @@
 							<v8:content>Скидки</v8:content>
 						</v8:item>
 					</Title>
+					<TitleDataPath>Объект.СкидкиНаценки.RowsCount</TitleDataPath>
 					<ExtendedTooltip name="ГруппаСкидкиExtendedTooltip" id="378"/>
 					<ChildItems>
 						<Table name="Скидки" id="151">
@@ -1082,6 +1144,7 @@
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.СкидкиНаценки</DataPath>
 							<SearchStringLocation>None</SearchStringLocation>
 							<ViewStatusLocation>None</ViewStatusLocation>
 							<SearchControlLocation>None</SearchControlLocation>
@@ -1140,6 +1203,7 @@
 							</SearchControlAddition>
 							<ChildItems>
 								<LabelField name="СкидкиНомерСтроки" id="154">
+									<DataPath>Объект.СкидкиНаценки.LineNumber</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>1</Width>
 									<HorizontalStretch>false</HorizontalStretch>
@@ -1147,6 +1211,7 @@
 									<ExtendedTooltip name="СкидкиНомерСтрокиExtendedTooltip" id="380"/>
 								</LabelField>
 								<InputField name="СкидкиНомерСтрокиОсновойТаблицы" id="270">
+									<DataPath>Объект.СкидкиНаценки.НомерСтрокиОсновойТаблицы</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>8</Width>
 									<HorizontalStretch>false</HorizontalStretch>
@@ -1154,6 +1219,7 @@
 									<ExtendedTooltip name="СкидкиНомерСтрокиОсновойТаблицыExtendedTooltip" id="381"/>
 								</InputField>
 								<LabelField name="СкидкиНоменклатураКод" id="304">
+									<DataPath>Объект.СкидкиНаценки.Номенклатура.Code</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>8</Width>
 									<HorizontalStretch>false</HorizontalStretch>
@@ -1161,6 +1227,7 @@
 									<ExtendedTooltip name="СкидкиНоменклатураКодExtendedTooltip" id="382"/>
 								</LabelField>
 								<LabelField name="СкидкиНоменклатураАртикул" id="306">
+									<DataPath>Объект.СкидкиНаценки.Номенклатура.Артикул</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>8</Width>
 									<HorizontalStretch>false</HorizontalStretch>
@@ -1168,29 +1235,35 @@
 									<ExtendedTooltip name="СкидкиНоменклатураАртикулExtendedTooltip" id="383"/>
 								</LabelField>
 								<InputField name="СкидкиНоменклатура" id="266">
+									<DataPath>Объект.СкидкиНаценки.Номенклатура</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="СкидкиНоменклатураКонтекстноеМеню" id="267"/>
 									<ExtendedTooltip name="СкидкиНоменклатураExtendedTooltip" id="384"/>
 								</InputField>
 								<InputField name="СкидкиХарактеристика" id="268">
+									<DataPath>Объект.СкидкиНаценки.Характеристика</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="СкидкиХарактеристикаКонтекстноеМеню" id="269"/>
 									<ExtendedTooltip name="СкидкиХарактеристикаExtendedTooltip" id="385"/>
 								</InputField>
 								<InputField name="СкидкиСкидкаНаценка" id="158">
+									<DataPath>Объект.СкидкиНаценки.СкидкаНаценка</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="СкидкиСкидкаНаценкаКонтекстноеМеню" id="159"/>
 									<ExtendedTooltip name="СкидкиСкидкаНаценкаExtendedTooltip" id="386"/>
 								</InputField>
 								<InputField name="СкидкиСумма" id="160">
+									<DataPath>Объект.СкидкиНаценки.Сумма</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.СкидкиНаценки.TotalСумма</FooterDataPath>
 									<Width>9</Width>
 									<ContextMenu name="СкидкиСуммаКонтекстноеМеню" id="161"/>
 									<ExtendedTooltip name="СкидкиСуммаExtendedTooltip" id="387"/>
 								</InputField>
 								<CheckBoxField name="СкидкиОграниченаМинимальнойЦеной" id="312">
+									<DataPath>Объект.СкидкиНаценки.ОграниченаМинимальнойЦеной</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -1213,6 +1286,7 @@
 							<v8:content>Оплата</v8:content>
 						</v8:item>
 					</Title>
+					<TitleDataPath>Объект.Оплата.RowsCount</TitleDataPath>
 					<ExtendedTooltip name="ГруппаОплатаExtendedTooltip" id="389"/>
 					<ChildItems>
 						<UsualGroup name="ГруппаОплатаШапка" id="766">
@@ -1228,6 +1302,7 @@
 							<ExtendedTooltip name="ГруппаОплатаШапкаРасширеннаяПодсказка" id="767"/>
 							<ChildItems>
 								<CheckBoxField name="ОперацияСДенежнымиСредствами" id="747">
+									<DataPath>Объект.ОперацияСДенежнымиСредствами</DataPath>
 									<TitleLocation>Right</TitleLocation>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ОперацияСДенежнымиСредствамиКонтекстноеМеню" id="748"/>
@@ -1324,6 +1399,7 @@
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.Оплата</DataPath>
 							<SearchStringLocation>None</SearchStringLocation>
 							<ViewStatusLocation>None</ViewStatusLocation>
 							<SearchControlLocation>None</SearchControlLocation>
@@ -1449,6 +1525,7 @@
 							</SearchControlAddition>
 							<ChildItems>
 								<LabelField name="ОплатаНомерСтроки" id="86">
+									<DataPath>Объект.Оплата.LineNumber</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>1</Width>
 									<HorizontalStretch>false</HorizontalStretch>
@@ -1456,13 +1533,16 @@
 									<ExtendedTooltip name="ОплатаНомерСтрокиExtendedTooltip" id="394"/>
 								</LabelField>
 								<InputField name="ОплатаВидОплаты" id="88">
+									<DataPath>Объект.Оплата.ВидОплаты</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ОплатаВидОплатыКонтекстноеМеню" id="89"/>
 									<ExtendedTooltip name="ОплатаВидОплатыExtendedTooltip" id="395"/>
 								</InputField>
 								<InputField name="ОплатаСумма" id="90">
+									<DataPath>Объект.Оплата.Сумма</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.Оплата.TotalСумма</FooterDataPath>
 									<Width>9</Width>
 									<DropListButton>true</DropListButton>
 									<ChoiceListButton>true</ChoiceListButton>
@@ -1470,6 +1550,7 @@
 									<ExtendedTooltip name="ОплатаСуммаExtendedTooltip" id="397"/>
 								</InputField>
 								<InputField name="ОплатаЭквайринговыйТерминал" id="262">
+									<DataPath>Объект.Оплата.ЭквайринговыйТерминал</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -1480,12 +1561,12 @@
 									<ChoiceParameterLinks>
 										<xr:Link>
 											<xr:Name>Отбор.Касса</xr:Name>
-											<xr:DataPath xsi:type="xs:string">1/0:f0e877d7-57fa-464b-8c4d-139acf9a8b9e</xr:DataPath>
+											<xr:DataPath xsi:type="xs:string">1</xr:DataPath>
 											<xr:ValueChange>Clear</xr:ValueChange>
 										</xr:Link>
 										<xr:Link>
 											<xr:Name>Отбор.Организация</xr:Name>
-											<xr:DataPath xsi:type="xs:string">1/0:c1056292-8a4f-4583-89ea-b69e8144ed62</xr:DataPath>
+											<xr:DataPath xsi:type="xs:string">1</xr:DataPath>
 											<xr:ValueChange>Clear</xr:ValueChange>
 										</xr:Link>
 									</ChoiceParameterLinks>
@@ -1493,6 +1574,7 @@
 									<ExtendedTooltip name="ОплатаЭквайринговыйТерминалExtendedTooltip" id="396"/>
 								</InputField>
 								<InputField name="ОплатаПроцентКомиссии" id="92">
+									<DataPath>Объект.Оплата.ПроцентКомиссии</DataPath>
 									<SkipOnInput>true</SkipOnInput>
 									<Title>
 										<v8:item>
@@ -1507,8 +1589,10 @@
 									<ExtendedTooltip name="ОплатаПроцентКомиссииРасширеннаяПодсказка" id="398"/>
 								</InputField>
 								<InputField name="ОплатаСуммаКомиссии" id="94">
+									<DataPath>Объект.Оплата.СуммаКомиссии</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.Оплата.TotalСуммаКомиссии</FooterDataPath>
 									<Width>9</Width>
 									<ContextMenu name="ОплатаСуммаКомиссииКонтекстноеМеню" id="95"/>
 									<ExtendedTooltip name="ОплатаСуммаКомиссииРасширеннаяПодсказка" id="399"/>
@@ -1524,6 +1608,7 @@
 									<ExtendedTooltip name="ОплатаГруппаБонусыРасширеннаяПодсказка" id="513"/>
 									<ChildItems>
 										<InputField name="ОплатаСуммаБонусовВСкидках" id="514">
+											<DataPath>Объект.Оплата.СуммаБонусовВСкидках</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<Title>
 												<v8:item>
@@ -1532,18 +1617,22 @@
 												</v8:item>
 											</Title>
 											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.Оплата.TotalСуммаБонусовВСкидках</FooterDataPath>
 											<Width>9</Width>
 											<ContextMenu name="ОплатаСуммаБонусовВСкидкахКонтекстноеМеню" id="515"/>
 											<ExtendedTooltip name="ОплатаСуммаБонусовВСкидкахРасширеннаяПодсказка" id="516"/>
 										</InputField>
 										<InputField name="ОплатаКоличествоБонусов" id="517">
+											<DataPath>Объект.Оплата.КоличествоБонусов</DataPath>
 											<Visible>false</Visible>
 											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.Оплата.TotalКоличествоБонусов</FooterDataPath>
 											<Width>10</Width>
 											<ContextMenu name="ОплатаКоличествоБонусовКонтекстноеМеню" id="518"/>
 											<ExtendedTooltip name="ОплатаКоличествоБонусовРасширеннаяПодсказка" id="519"/>
 										</InputField>
 										<InputField name="ОплатаКоличествоБонусовВСкидках" id="520">
+											<DataPath>Объект.Оплата.КоличествоБонусовВСкидках</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<Title>
 												<v8:item>
@@ -1552,11 +1641,13 @@
 												</v8:item>
 											</Title>
 											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.Оплата.TotalКоличествоБонусовВСкидках</FooterDataPath>
 											<Width>10</Width>
 											<ContextMenu name="ОплатаКоличествоБонусовВСкидкахКонтекстноеМеню" id="521"/>
 											<ExtendedTooltip name="ОплатаКоличествоБонусовВСкидкахРасширеннаяПодсказка" id="522"/>
 										</InputField>
 										<InputField name="ОплатаБонуснаяПрограммаЛояльности" id="523">
+											<DataPath>Объект.Оплата.БонуснаяПрограммаЛояльности</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ОплатаБонуснаяПрограммаЛояльностиКонтекстноеМеню" id="524"/>
@@ -1565,6 +1656,7 @@
 									</ChildItems>
 								</ColumnGroup>
 								<InputField name="ОплатаДоговорПлатежногоАгента" id="556">
+									<DataPath>Объект.Оплата.ДоговорКонтрагента</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
@@ -1587,6 +1679,7 @@
 							<v8:content>Подарки</v8:content>
 						</v8:item>
 					</Title>
+					<TitleDataPath>Объект.Подарки.RowsCount</TitleDataPath>
 					<ExtendedTooltip name="ГруппаПодаркиExtendedTooltip" id="400"/>
 					<ChildItems>
 						<Table name="Подарки" id="125">
@@ -1596,6 +1689,7 @@
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.Подарки</DataPath>
 							<SearchStringLocation>None</SearchStringLocation>
 							<ViewStatusLocation>None</ViewStatusLocation>
 							<SearchControlLocation>None</SearchControlLocation>
@@ -1637,6 +1731,7 @@
 							</SearchControlAddition>
 							<ChildItems>
 								<LabelField name="ПодаркиНомерСтроки" id="128">
+									<DataPath>Объект.Подарки.LineNumber</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>1</Width>
@@ -1645,6 +1740,7 @@
 									<ExtendedTooltip name="ПодаркиНомерСтрокиExtendedTooltip" id="404"/>
 								</LabelField>
 								<InputField name="ПодаркиСкидкаНаценка" id="130">
+									<DataPath>Объект.Подарки.СкидкаНаценка</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
@@ -1657,6 +1753,7 @@
 									<ExtendedTooltip name="ПодаркиСкидкаНаценкаExtendedTooltip" id="405"/>
 								</InputField>
 								<LabelField name="ПодаркиНоменклатураКод" id="308">
+									<DataPath>Объект.Подарки.Номенклатура.Code</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>8</Width>
@@ -1665,6 +1762,7 @@
 									<ExtendedTooltip name="ПодаркиНоменклатураКодExtendedTooltip" id="406"/>
 								</LabelField>
 								<LabelField name="ПодаркиНоменклатураАртикул" id="310">
+									<DataPath>Объект.Подарки.Номенклатура.Артикул</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>8</Width>
@@ -1673,12 +1771,14 @@
 									<ExtendedTooltip name="ПодаркиНоменклатураАртикулExtendedTooltip" id="407"/>
 								</LabelField>
 								<InputField name="ПодаркиНоменклатура" id="132">
+									<DataPath>Объект.Подарки.Номенклатура</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ПодаркиНоменклатураКонтекстноеМеню" id="133"/>
 									<ExtendedTooltip name="ПодаркиНоменклатураExtendedTooltip" id="408"/>
 								</InputField>
 								<InputField name="ПодаркиХарактеристикаНоменклатуры" id="134">
+									<DataPath>Объект.Подарки.Характеристика</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ПодаркиХарактеристикаНоменклатурыКонтекстноеМеню" id="135"/>
@@ -1696,6 +1796,7 @@
 									<ExtendedTooltip name="ПодаркиУпаковкаЕдиницаИзмеренияExtendedTooltip" id="410"/>
 									<ChildItems>
 										<InputField name="ПодаркиУпаковка" id="226">
+											<DataPath>Объект.Подарки.Упаковка</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<Title>
 												<v8:item>
@@ -1709,6 +1810,7 @@
 											<ExtendedTooltip name="ПодаркиУпаковкаExtendedTooltip" id="411"/>
 										</InputField>
 										<LabelField name="ПодаркиНоменклатураЕдиницаИзмерения" id="228">
+											<DataPath>Объект.Подарки.Номенклатура.ЕдиницаИзмерения</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<TitleLocation>None</TitleLocation>
 											<EditMode>EnterOnInput</EditMode>
@@ -1723,6 +1825,7 @@
 									<ExtendedTooltip name="ГруппаПодаркиКоличествоУпаковокРасширеннаяПодсказка" id="715"/>
 									<ChildItems>
 										<PictureField name="СтатусыСерийИПодарочныхСертификатов" id="716">
+											<DataPath>Объект.Подарки.СтатусыСерийИПодарочныхСертификатов</DataPath>
 											<TitleLocation>None</TitleLocation>
 											<EditMode>EnterOnInput</EditMode>
 											<ValuesPicture>
@@ -1734,6 +1837,7 @@
 											<ExtendedTooltip name="СтатусыСерийИПодарочныхСертификатовРасширеннаяПодсказка" id="718"/>
 										</PictureField>
 										<InputField name="ПодаркиКоличествоУпаковок" id="230">
+											<DataPath>Объект.Подарки.КоличествоУпаковок</DataPath>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -1748,23 +1852,27 @@
 									</ChildItems>
 								</ColumnGroup>
 								<InputField name="ПодаркиЦена" id="142">
+									<DataPath>Объект.Подарки.Цена</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>9</Width>
 									<ContextMenu name="ПодаркиЦенаКонтекстноеМеню" id="143"/>
 									<ExtendedTooltip name="ПодаркиЦенаExtendedTooltip" id="414"/>
 								</InputField>
 								<InputField name="ПодаркиСумма" id="144">
+									<DataPath>Объект.Подарки.Сумма</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.Подарки.TotalСумма</FooterDataPath>
 									<Width>9</Width>
 									<ContextMenu name="ПодаркиСуммаКонтекстноеМеню" id="145"/>
 									<ExtendedTooltip name="ПодаркиСуммаExtendedTooltip" id="415"/>
 								</InputField>
 								<InputField name="ПодаркиСклад" id="146">
+									<DataPath>Объект.Подарки.Склад</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ChoiceParameterLinks>
 										<xr:Link>
 											<xr:Name>Отбор.Магазин</xr:Name>
-											<xr:DataPath xsi:type="xs:string">1/0:1c694a50-94cc-4d6f-9f02-efbaae8daf1a</xr:DataPath>
+											<xr:DataPath xsi:type="xs:string">1</xr:DataPath>
 											<xr:ValueChange>Clear</xr:ValueChange>
 										</xr:Link>
 									</ChoiceParameterLinks>
@@ -1792,6 +1900,7 @@
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.УправляемыеСкидки</DataPath>
 							<SearchStringLocation>None</SearchStringLocation>
 							<ViewStatusLocation>None</ViewStatusLocation>
 							<SearchControlLocation>None</SearchControlLocation>
@@ -1825,11 +1934,13 @@
 							</SearchControlAddition>
 							<ChildItems>
 								<LabelField name="КупоныНомерСтроки" id="120">
+									<DataPath>Объект.УправляемыеСкидки.LineNumber</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="КупоныНомерСтрокиКонтекстноеМеню" id="121"/>
 									<ExtendedTooltip name="КупоныНомерСтрокиExtendedTooltip" id="419"/>
 								</LabelField>
 								<InputField name="КупоныСкидкаНаценка" id="122">
+									<DataPath>Объект.УправляемыеСкидки.СкидкаНаценка</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="КупоныСкидкаНаценкаКонтекстноеМеню" id="123"/>
 									<ExtendedTooltip name="КупоныСкидкаНаценкаExtendedTooltip" id="420"/>
@@ -1851,6 +1962,7 @@
 							<v8:content>Группа элементов, связанных с начислением бонусных баллов</v8:content>
 						</v8:item>
 					</ToolTip>
+					<TitleDataPath>Объект.БонусныеБаллыКНачислению.RowsCount</TitleDataPath>
 					<ExtendedTooltip name="ГруппаБонусныеБаллыРасширеннаяПодсказка" id="490"/>
 					<ChildItems>
 						<LabelDecoration name="ДекорацияБонусы" id="546">
@@ -1873,6 +1985,7 @@
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.БонусныеБаллыКНачислению</DataPath>
 							<SearchStringLocation>None</SearchStringLocation>
 							<ViewStatusLocation>None</ViewStatusLocation>
 							<SearchControlLocation>None</SearchControlLocation>
@@ -1906,6 +2019,7 @@
 							</SearchControlAddition>
 							<ChildItems>
 								<LabelField name="БонусныеБаллыКНачислениюНомерСтроки" id="495">
+									<DataPath>Объект.БонусныеБаллыКНачислению.LineNumber</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>1</Width>
 									<HorizontalStretch>false</HorizontalStretch>
@@ -1913,6 +2027,7 @@
 									<ExtendedTooltip name="БонусныеБаллыКНачислениюНомерСтрокиРасширеннаяПодсказка" id="497"/>
 								</LabelField>
 								<InputField name="БонусныеБаллыКНачислениюКлючСвязи" id="528">
+									<DataPath>Объект.БонусныеБаллыКНачислению.КлючСвязи</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -1926,6 +2041,7 @@
 									<ExtendedTooltip name="БонусныеБаллыКНачислениюКлючСвязиРасширеннаяПодсказка" id="530"/>
 								</InputField>
 								<LabelField name="БонусныеБаллыКНачислениюНоменклатураКод" id="537">
+									<DataPath>Объект.БонусныеБаллыКНачислению.Номенклатура.Code</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>8</Width>
 									<HorizontalStretch>false</HorizontalStretch>
@@ -1933,6 +2049,7 @@
 									<ExtendedTooltip name="БонусныеБаллыКНачислениюНоменклатураКодРасширеннаяПодсказка" id="539"/>
 								</LabelField>
 								<LabelField name="БонусныеБаллыКНачислениюНоменклатураАртикул" id="540">
+									<DataPath>Объект.БонусныеБаллыКНачислению.Номенклатура.Артикул</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>8</Width>
 									<HorizontalStretch>false</HorizontalStretch>
@@ -1940,38 +2057,46 @@
 									<ExtendedTooltip name="БонусныеБаллыКНачислениюНоменклатураАртикулРасширеннаяПодсказка" id="542"/>
 								</LabelField>
 								<InputField name="БонусныеБаллыКНачислениюНоменклатура" id="531">
+									<DataPath>Объект.БонусныеБаллыКНачислению.Номенклатура</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="БонусныеБаллыКНачислениюНоменклатураКонтекстноеМеню" id="532"/>
 									<ExtendedTooltip name="БонусныеБаллыКНачислениюНоменклатураРасширеннаяПодсказка" id="533"/>
 								</InputField>
 								<InputField name="БонусныеБаллыКНачислениюХарактеристика" id="534">
+									<DataPath>Объект.БонусныеБаллыКНачислению.Характеристика</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="БонусныеБаллыКНачислениюХарактеристикаКонтекстноеМеню" id="535"/>
 									<ExtendedTooltip name="БонусныеБаллыКНачислениюХарактеристикаРасширеннаяПодсказка" id="536"/>
 								</InputField>
 								<InputField name="БонусныеБаллыКНачислениюБонуснаяПрограммаЛояльности" id="498">
+									<DataPath>Объект.БонусныеБаллыКНачислению.БонуснаяПрограммаЛояльности</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>10</Width>
 									<ContextMenu name="БонусныеБаллыКНачислениюБонуснаяПрограммаЛояльностиКонтекстноеМеню" id="499"/>
 									<ExtendedTooltip name="БонусныеБаллыКНачислениюБонуснаяПрограммаЛояльностиРасширеннаяПодсказка" id="500"/>
 								</InputField>
 								<InputField name="БонусныеБаллыКНачислениюСкидкаНаценка" id="613">
+									<DataPath>Объект.БонусныеБаллыКНачислению.СкидкаНаценка</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="БонусныеБаллыКНачислениюСкидкаНаценкаКонтекстноеМеню" id="614"/>
 									<ExtendedTooltip name="БонусныеБаллыКНачислениюСкидкаНаценкаРасширеннаяПодсказка" id="615"/>
 								</InputField>
 								<InputField name="БонусныеБаллыКНачислениюДатаНачисления" id="501">
+									<DataPath>Объект.БонусныеБаллыКНачислению.ДатаНачисления</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="БонусныеБаллыКНачислениюДатаНачисленияКонтекстноеМеню" id="502"/>
 									<ExtendedTooltip name="БонусныеБаллыКНачислениюДатаНачисленияРасширеннаяПодсказка" id="503"/>
 								</InputField>
 								<InputField name="БонусныеБаллыКНачислениюДатаСписания" id="504">
+									<DataPath>Объект.БонусныеБаллыКНачислению.ДатаСписания</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="БонусныеБаллыКНачислениюДатаСписанияКонтекстноеМеню" id="505"/>
 									<ExtendedTooltip name="БонусныеБаллыКНачислениюДатаСписанияРасширеннаяПодсказка" id="506"/>
 								</InputField>
 								<InputField name="БонусныеБаллыКНачислениюСуммаБонусныхБаллов" id="507">
+									<DataPath>Объект.БонусныеБаллыКНачислению.КоличествоБонусныхБаллов</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.БонусныеБаллыКНачислению.TotalКоличествоБонусныхБаллов</FooterDataPath>
 									<Width>9</Width>
 									<ContextMenu name="БонусныеБаллыКНачислениюСуммаБонусныхБалловКонтекстноеМеню" id="508"/>
 									<ExtendedTooltip name="БонусныеБаллыКНачислениюСуммаБонусныхБалловРасширеннаяПодсказка" id="509"/>
@@ -1990,6 +2115,7 @@
 					<ExtendedTooltip name="СтраницаКомментарийРасширеннаяПодсказка" id="625"/>
 					<ChildItems>
 						<InputField name="Комментарий" id="626">
+							<DataPath>Объект.Комментарий</DataPath>
 							<TitleLocation>None</TitleLocation>
 							<EditMode>EnterOnInput</EditMode>
 							<AutoMaxWidth>false</AutoMaxWidth>
@@ -2046,6 +2172,7 @@
 						<Button name="ОбщаяКомандаФискальныеОперации" id="806">
 							<Type>Hyperlink</Type>
 							<CommandName>0</CommandName>
+							<DataPath>Объект.Ref</DataPath>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -2126,6 +2253,7 @@
 									<ExtendedTooltip name="СуммаВсегоExtendedTooltip" id="653"/>
 								</InputField>
 								<InputField name="СуммаНДС" id="654">
+									<DataPath>Объект.Товары.TotalСуммаНДС</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
@@ -2189,6 +2317,306 @@
 		</UsualGroup>
 	</ChildItems>
 	<Attributes>
+		<Attribute name="Объект" id="1000001">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ЧекККМ</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+			<Columns>
+				<AdditionalColumns table="Объект.Оплата">
+					<Column name="ТипОплаты" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Тип оплаты</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:EnumRef.ТипыОплатЧекаККМ</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="Объект.СкидкиНаценки">
+					<Column name="Номенклатура" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Номенклатура</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+						</Type>
+					</Column>
+					<Column name="Характеристика" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Характеристика</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+						</Type>
+					</Column>
+					<Column name="НомерСтрокиОсновойТаблицы" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>№ в "Товарах"</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>10</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+					<Column name="ХарактеристикиИспользуются" id="4">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Характеристики используются</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="СкидкаЗапрещенаКПросмору" id="5">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Скидка запрещена к просмору</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="Объект.БонусныеБаллыКНачислению">
+					<Column name="Номенклатура" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Номенклатура</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+						</Type>
+					</Column>
+					<Column name="Характеристика" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Характеристика</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+						</Type>
+					</Column>
+					<Column name="ХарактеристикиИспользуются" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Характеристики используются</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="Объект.Подарки">
+					<Column name="ХарактеристикиИспользуются" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Характеристики используются</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="ИспользоватьСерийныеНомера" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Использовать номера подарочных сертификатов</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="СтатусыСерийИПодарочныхСертификатов" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Статусы серий и подарочных сертификатов</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>10</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="Объект.Товары">
+					<Column name="СуммаВсего" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма всего</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>15</v8:Digits>
+								<v8:FractionDigits>2</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+					<Column name="ХарактеристикиИспользуются" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Характеристики используются</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="ТипНоменклатуры" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Тип номенклатуры</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:EnumRef.ТипыНоменклатуры</v8:Type>
+						</Type>
+					</Column>
+					<Column name="ИспользоватьСерийныеНомера" id="4">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Использовать номера подарочных сертификатов</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="СтатусыСерийИПодарочныхСертификатов" id="5">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Статусы серий и подарочных сертификатов</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>10</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+					<Column name="ДоговорКонтрагента" id="6">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Договор платежного агента</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+						</Type>
+					</Column>
+					<Column name="КоличествоАкцизныхМарок" id="7">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Количество акцизных марок</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>5</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+					<Column name="ВидНалога" id="9">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Вид налога</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:EnumRef.ТипыСистемНалогообложенияККТ</v8:Type>
+						</Type>
+					</Column>
+					<Column name="НДСПоСтрочно" id="11">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>НДСПо строчно</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="ОсобенностиУчетаНоменклатуры" id="12">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Особенности учета номенклатуры</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:EnumRef.ОсобенностиУчетаНоменклатуры</v8:Type>
+						</Type>
+					</Column>
+					<Column name="НоменклатураЕГАИС" id="13">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Номенклатура ЕГАИС</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:CatalogRef.КлассификаторАлкогольнойПродукцииЕГАИС</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -3008,6 +3436,9 @@
 	</Commands>
 	<BaseForm version="2.9">
 		<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+		<AutoTime>CurrentOrLast</AutoTime>
+		<UsePostingMode>Auto</UsePostingMode>
+		<RepostOnWrite>true</RepostOnWrite>
 		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 			<Autofill>false</Autofill>
 			<ChildItems>
@@ -3057,6 +3488,7 @@
 						<Button name="ФормаДокументЧекККМСоздатьНаОсновании1" id="742">
 							<Type>CommandBarButton</Type>
 							<CommandName>0</CommandName>
+							<DataPath>Объект.Ref</DataPath>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -3068,26 +3500,31 @@
 						<Button name="ФормаОбработкаСозданиеЧековКоррекцииЧекКоррекции" id="793">
 							<Type>CommandBarButton</Type>
 							<CommandName>0</CommandName>
+							<DataPath>Объект.Ref</DataPath>
 							<ExtendedTooltip name="ФормаОбработкаСозданиеЧековКоррекцииЧекКоррекцииРасширеннаяПодсказка" id="794"/>
 						</Button>
 						<Button name="ФормаДокументПриходныйКассовыйОрдерСоздатьНаОсновании" id="762">
 							<Type>CommandBarButton</Type>
 							<CommandName>0</CommandName>
+							<DataPath>Объект.Ref</DataPath>
 							<ExtendedTooltip name="ФормаДокументПриходныйКассовыйОрдерСоздатьНаОснованииРасширеннаяПодсказка" id="763"/>
 						</Button>
 						<Button name="ФормаДокументОплатаОтПокупателяПлатежнойКартойСоздатьНаОсновании" id="760">
 							<Type>CommandBarButton</Type>
 							<CommandName>0</CommandName>
+							<DataPath>Объект.Ref</DataPath>
 							<ExtendedTooltip name="ФормаДокументОплатаОтПокупателяПлатежнойКартойСоздатьНаОснованииРасширеннаяПодсказка" id="761"/>
 						</Button>
 						<Button name="ФормаОбщаяКомандаСозданиеСвязанныхОбъектов" id="689">
 							<Type>CommandBarButton</Type>
 							<CommandName>0</CommandName>
+							<DataPath>Объект.Ref</DataPath>
 							<ExtendedTooltip name="ФормаОбщаяКомандаСозданиеСвязанныхОбъектовРасширеннаяПодсказка" id="690"/>
 						</Button>
 						<Button name="ФормаРасходныйКассовыйОрдер" id="776">
 							<Type>CommandBarButton</Type>
 							<CommandName>0</CommandName>
+							<DataPath>Объект.Ref</DataPath>
 							<ExtendedTooltip name="ФормаРасходныйКассовыйОрдерРасширеннаяПодсказка" id="777"/>
 						</Button>
 					</ChildItems>
@@ -3149,11 +3586,13 @@
 						<Button name="ФормаРегистрСведенийЛогДействийКассираВРМКОткрытьПоЗначениюЧекККМ" id="667">
 							<Type>CommandBarButton</Type>
 							<CommandName>0</CommandName>
+							<DataPath>Объект.Ref</DataPath>
 							<ExtendedTooltip name="ФормаРегистрСведенийЛогДействийКассираВРМКОткрытьПоЗначениюЧекККМРасширеннаяПодсказка" id="668"/>
 						</Button>
 						<Button name="ФормаРегистрСведенийПротоколПередачиДокументовДисконтномуСерверуПротоколПередачиДокументаДисконтномуСерверу" id="669">
 							<Type>CommandBarButton</Type>
 							<CommandName>0</CommandName>
+							<DataPath>Объект.Ref</DataPath>
 							<ExtendedTooltip name="ФормаРегистрСведенийПротоколПередачиДокументовДисконтномуСерверуПротоколПередачиДокументаДисконтномуСерверуРасширеннаяПодсказка" id="670"/>
 						</Button>
 					</ChildItems>
@@ -3172,11 +3611,13 @@
 						<Button name="ФормаОбщаяКомандаЗаполнениеОбъекта" id="705">
 							<Type>CommandBarButton</Type>
 							<CommandName>0</CommandName>
+							<DataPath>Объект.Ref</DataPath>
 							<ExtendedTooltip name="ФормаОбщаяКомандаЗаполнениеОбъектаРасширеннаяПодсказка" id="706"/>
 						</Button>
 						<Button name="ФормаОбщаяКомандаОтчетыОбъекта" id="707">
 							<Type>CommandBarButton</Type>
 							<CommandName>0</CommandName>
+							<DataPath>Объект.Ref</DataPath>
 							<ExtendedTooltip name="ФормаОбщаяКомандаОтчетыОбъектаРасширеннаяПодсказка" id="708"/>
 						</Button>
 						<Button name="ФормаОтменитьОплатуВПлатежнойСистеме" id="812">
@@ -3265,6 +3706,7 @@
 												<ExtendedTooltip name="ДатаНомерExtendedTooltip" id="324"/>
 												<ChildItems>
 													<InputField name="Номер" id="189">
+														<DataPath>Объект.Number</DataPath>
 														<SkipOnInput>true</SkipOnInput>
 														<EditMode>EnterOnInput</EditMode>
 														<Width>8</Width>
@@ -3273,6 +3715,7 @@
 														<ExtendedTooltip name="НомерExtendedTooltip" id="325"/>
 													</InputField>
 													<InputField name="Дата" id="191">
+														<DataPath>Объект.Date</DataPath>
 														<SkipOnInput>true</SkipOnInput>
 														<Title>
 															<v8:item>
@@ -3287,6 +3730,7 @@
 														<ExtendedTooltip name="ДатаExtendedTooltip" id="326"/>
 													</InputField>
 													<LabelField name="ДоговорКонтрагента" id="719">
+														<DataPath>Объект.ДоговорКонтрагента</DataPath>
 														<TitleLocation>None</TitleLocation>
 														<GroupHorizontalAlign>Right</GroupHorizontalAlign>
 														<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
@@ -3296,12 +3740,14 @@
 												</ChildItems>
 											</UsualGroup>
 											<InputField name="ДокументРасчета" id="750">
+												<DataPath>Объект.ДокументРасчета</DataPath>
 												<Enabled>false</Enabled>
 												<AutoMaxWidth>false</AutoMaxWidth>
 												<ContextMenu name="ДокументРасчетаКонтекстноеМеню" id="751"/>
 												<ExtendedTooltip name="ДокументРасчетаРасширеннаяПодсказка" id="752"/>
 											</InputField>
 											<InputField name="Контрагент" id="744">
+												<DataPath>Объект.Контрагент</DataPath>
 												<AutoMaxWidth>false</AutoMaxWidth>
 												<ContextMenu name="КонтрагентКонтекстноеМеню" id="745"/>
 												<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="746"/>
@@ -3319,6 +3765,7 @@
 												<ExtendedTooltip name="ГруппаДисконтнаяКартаРасширеннаяПодсказка" id="550"/>
 												<ChildItems>
 													<InputField name="ДисконтнаяКарта" id="9">
+														<DataPath>Объект.ДисконтнаяКарта</DataPath>
 														<EditMode>EnterOnInput</EditMode>
 														<AutoMaxWidth>false</AutoMaxWidth>
 														<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
@@ -3333,6 +3780,7 @@
 												</ChildItems>
 											</UsualGroup>
 											<InputField name="ВладелецДисконтнойКарты" id="7">
+												<DataPath>Объект.ВладелецДисконтнойКарты</DataPath>
 												<ReadOnly>true</ReadOnly>
 												<SkipOnInput>true</SkipOnInput>
 												<Title>
@@ -3348,6 +3796,7 @@
 												<ExtendedTooltip name="ВладелецДисконтнойКартыExtendedTooltip" id="328"/>
 											</InputField>
 											<InputField name="ЧекККМПродажа" id="25">
+												<DataPath>Объект.ЧекККМПродажа</DataPath>
 												<Title>
 													<v8:item>
 														<v8:lang>ru</v8:lang>
@@ -3369,6 +3818,7 @@
 												<ExtendedTooltip name="ЧекККМПродажаExtendedTooltip" id="329"/>
 											</InputField>
 											<InputField name="Продавец" id="29">
+												<DataPath>Объект.Продавец</DataPath>
 												<EditMode>EnterOnInput</EditMode>
 												<AutoMaxWidth>false</AutoMaxWidth>
 												<ChoiceParameters>
@@ -3420,6 +3870,7 @@
 										<ExtendedTooltip name="ШапкаПравоExtendedTooltip" id="331"/>
 										<ChildItems>
 											<InputField name="ВидОперации" id="5">
+												<DataPath>Объект.ВидОперации</DataPath>
 												<EditMode>EnterOnInput</EditMode>
 												<AutoMaxWidth>false</AutoMaxWidth>
 												<ChoiceListHeight>3</ChoiceListHeight>
@@ -3429,6 +3880,7 @@
 												<ExtendedTooltip name="ВидОперацииExtendedTooltip" id="333"/>
 											</InputField>
 											<InputField name="АналитикаХозяйственнойОперации" id="35">
+												<DataPath>Объект.АналитикаХозяйственнойОперации</DataPath>
 												<Title>
 													<v8:item>
 														<v8:lang>ru</v8:lang>
@@ -3440,7 +3892,7 @@
 												<ChoiceParameterLinks>
 													<xr:Link>
 														<xr:Name>ВидОперации</xr:Name>
-														<xr:DataPath xsi:type="xs:string">1/0:c3e036cf-2439-4519-8e8b-1755595bff91</xr:DataPath>
+														<xr:DataPath xsi:type="xs:string">1</xr:DataPath>
 														<xr:ValueChange>Clear</xr:ValueChange>
 													</xr:Link>
 												</ChoiceParameterLinks>
@@ -3457,6 +3909,7 @@
 												<ExtendedTooltip name="АналитикаХозяйственнойОперацииExtendedTooltip" id="334"/>
 											</InputField>
 											<InputField name="КассаККМ" id="11">
+												<DataPath>Объект.КассаККМ</DataPath>
 												<DefaultItem>true</DefaultItem>
 												<EditMode>EnterOnInput</EditMode>
 												<AutoMaxWidth>false</AutoMaxWidth>
@@ -3465,6 +3918,7 @@
 												<ExtendedTooltip name="КассаККМExtendedTooltip" id="335"/>
 											</InputField>
 											<InputField name="Магазин" id="23">
+												<DataPath>Объект.Магазин</DataPath>
 												<ReadOnly>true</ReadOnly>
 												<SkipOnInput>true</SkipOnInput>
 												<EditMode>EnterOnInput</EditMode>
@@ -3474,6 +3928,7 @@
 												<ExtendedTooltip name="МагазинExtendedTooltip" id="336"/>
 											</InputField>
 											<InputField name="Организация" id="183">
+												<DataPath>Объект.Организация</DataPath>
 												<ReadOnly>true</ReadOnly>
 												<SkipOnInput>true</SkipOnInput>
 												<AutoMaxWidth>false</AutoMaxWidth>
@@ -3482,6 +3937,7 @@
 												<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="337"/>
 											</InputField>
 											<LabelField name="СистемаНалогообложения" id="795">
+												<DataPath>Объект.СистемаНалогообложения</DataPath>
 												<ContextMenu name="СистемаНалогообложенияКонтекстноеМеню" id="796"/>
 												<ExtendedTooltip name="СистемаНалогообложенияРасширеннаяПодсказка" id="797"/>
 											</LabelField>
@@ -3502,6 +3958,7 @@
 														<ExtendedTooltip name="ДекорацияНДСРасширеннаяПодсказка" id="802"/>
 													</LabelDecoration>
 													<CheckBoxField name="ЦенаВключаетНДС" id="803">
+														<DataPath>Объект.ЦенаВключаетНДС</DataPath>
 														<ReadOnly>true</ReadOnly>
 														<TitleLocation>Right</TitleLocation>
 														<CheckBoxType>Auto</CheckBoxType>
@@ -3538,6 +3995,7 @@
 								</ChildItems>
 							</UsualGroup>
 							<InputField name="Ответственный" id="19">
+								<DataPath>Объект.Ответственный</DataPath>
 								<EditMode>EnterOnInput</EditMode>
 								<AutoMaxWidth>false</AutoMaxWidth>
 								<ContextMenu name="ОтветственныйКонтекстноеМеню" id="20"/>
@@ -3552,6 +4010,7 @@
 								<v8:content>Товары</v8:content>
 							</v8:item>
 						</Title>
+						<TitleDataPath>Объект.Товары.RowsCount</TitleDataPath>
 						<ExtendedTooltip name="ГруппаТоварыExtendedTooltip" id="340"/>
 						<ChildItems>
 							<Table name="Товары" id="39">
@@ -3559,6 +4018,7 @@
 								<SkipOnInput>false</SkipOnInput>
 								<AutoAddIncomplete>false</AutoAddIncomplete>
 								<FileDragMode>AsFile</FileDragMode>
+								<DataPath>Объект.Товары</DataPath>
 								<SearchStringLocation>None</SearchStringLocation>
 								<ViewStatusLocation>None</ViewStatusLocation>
 								<SearchControlLocation>None</SearchControlLocation>
@@ -3749,6 +4209,7 @@
 								</SearchControlAddition>
 								<ChildItems>
 									<LabelField name="ТоварыНомерСтроки" id="42">
+										<DataPath>Объект.Товары.LineNumber</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<Width>1</Width>
 										<HorizontalStretch>false</HorizontalStretch>
@@ -3756,6 +4217,7 @@
 										<ExtendedTooltip name="ТоварыНомерСтрокиExtendedTooltip" id="357"/>
 									</LabelField>
 									<LabelField name="ТоварыНоменклатураКод" id="300">
+										<DataPath>Объект.Товары.Номенклатура.Code</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<Width>8</Width>
 										<HorizontalStretch>false</HorizontalStretch>
@@ -3763,6 +4225,7 @@
 										<ExtendedTooltip name="ТоварыНоменклатураКодExtendedTooltip" id="359"/>
 									</LabelField>
 									<LabelField name="ТоварыНоменклатураАртикул" id="302">
+										<DataPath>Объект.Товары.Номенклатура.Артикул</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<Width>8</Width>
 										<HorizontalStretch>false</HorizontalStretch>
@@ -3770,6 +4233,7 @@
 										<ExtendedTooltip name="ТоварыНоменклатураАртикулExtendedTooltip" id="360"/>
 									</LabelField>
 									<InputField name="ТоварыНоменклатура" id="44">
+										<DataPath>Объект.Товары.Номенклатура</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<DropListButton>false</DropListButton>
 										<ChoiceButton>true</ChoiceButton>
@@ -3786,6 +4250,7 @@
 										<ExtendedTooltip name="ТоварыНоменклатураExtendedTooltip" id="361"/>
 									</InputField>
 									<InputField name="ТоварыХарактеристика" id="46">
+										<DataPath>Объект.Товары.Характеристика</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<DropListButton>false</DropListButton>
 										<ChoiceButton>true</ChoiceButton>
@@ -3806,6 +4271,7 @@
 										<ExtendedTooltip name="ГруппаТоварыКоличествоУпаковокРасширеннаяПодсказка" id="484"/>
 										<ChildItems>
 											<PictureField name="ТоварыСтатусыСерийИПодарочныхСертификатов" id="480">
+												<DataPath>Объект.Товары.СтатусыСерийИПодарочныхСертификатов</DataPath>
 												<TitleLocation>None</TitleLocation>
 												<EditMode>EnterOnInput</EditMode>
 												<Width>1</Width>
@@ -3818,6 +4284,7 @@
 												<ExtendedTooltip name="ТоварыСтатусыСерийИПодарочныхСертификатовРасширеннаяПодсказка" id="482"/>
 											</PictureField>
 											<InputField name="ТоварыКоличествоУпаковок" id="205">
+												<DataPath>Объект.Товары.КоличествоУпаковок</DataPath>
 												<Title>
 													<v8:item>
 														<v8:lang>ru</v8:lang>
@@ -3843,6 +4310,7 @@
 										<ExtendedTooltip name="ТоварыУпаковкаЕдиницаИзмеренияExtendedTooltip" id="364"/>
 										<ChildItems>
 											<InputField name="ТоварыУпаковка" id="201">
+												<DataPath>Объект.Товары.Упаковка</DataPath>
 												<Title>
 													<v8:item>
 														<v8:lang>ru</v8:lang>
@@ -3860,6 +4328,7 @@
 												<ExtendedTooltip name="ТоварыУпаковкаExtendedTooltip" id="365"/>
 											</InputField>
 											<LabelField name="ТоварыНоменклатураЕдиницаИзмерения" id="203">
+												<DataPath>Объект.Товары.Номенклатура.ЕдиницаИзмерения</DataPath>
 												<TitleLocation>None</TitleLocation>
 												<EditMode>EnterOnInput</EditMode>
 												<Width>5</Width>
@@ -3869,12 +4338,14 @@
 										</ChildItems>
 									</ColumnGroup>
 									<InputField name="ТоварыЦена" id="54">
+										<DataPath>Объект.Товары.Цена</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<Width>9</Width>
 										<ContextMenu name="ТоварыЦенаКонтекстноеМеню" id="55"/>
 										<ExtendedTooltip name="ТоварыЦенаExtendedTooltip" id="367"/>
 									</InputField>
 									<InputField name="ТоварыПроцентАвтоматическойСкидки" id="243">
+										<DataPath>Объект.Товары.ПроцентАвтоматическойСкидки</DataPath>
 										<ReadOnly>true</ReadOnly>
 										<Title>
 											<v8:item>
@@ -3889,6 +4360,7 @@
 										<ExtendedTooltip name="ТоварыПроцентАвтоматическойСкидкиExtendedTooltip" id="368"/>
 									</InputField>
 									<InputField name="ТоварыСуммаАвтоматическойСкидки" id="245">
+										<DataPath>Объект.Товары.СуммаАвтоматическойСкидки</DataPath>
 										<ReadOnly>true</ReadOnly>
 										<Title>
 											<v8:item>
@@ -3902,6 +4374,7 @@
 										<ExtendedTooltip name="ТоварыСуммаАвтоматическойСкидкиExtendedTooltip" id="369"/>
 									</InputField>
 									<InputField name="ТоварыПроцентРучнойСкидки" id="239">
+										<DataPath>Объект.Товары.ПроцентРучнойСкидки</DataPath>
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
@@ -3915,6 +4388,7 @@
 										<ExtendedTooltip name="ТоварыПроцентРучнойСкидкиExtendedTooltip" id="370"/>
 									</InputField>
 									<InputField name="ТоварыСуммаРучнойСкидки" id="241">
+										<DataPath>Объект.Товары.СуммаРучнойСкидки</DataPath>
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
@@ -3927,6 +4401,7 @@
 										<ExtendedTooltip name="ТоварыСуммаРучнойСкидкиExtendedTooltip" id="371"/>
 									</InputField>
 									<InputField name="ТоварыСуммаСкидкиОплатыБонусом" id="543">
+										<DataPath>Объект.Товары.СуммаСкидкиОплатыБонусом</DataPath>
 										<ReadOnly>true</ReadOnly>
 										<Title>
 											<v8:item>
@@ -3940,6 +4415,7 @@
 										<ExtendedTooltip name="ТоварыСуммаСкидкиОплатыБонусомРасширеннаяПодсказка" id="545"/>
 									</InputField>
 									<InputField name="ТоварыСумма" id="56">
+										<DataPath>Объект.Товары.Сумма</DataPath>
 										<Visible>false</Visible>
 										<EditMode>EnterOnInput</EditMode>
 										<Width>9</Width>
@@ -3947,6 +4423,7 @@
 										<ExtendedTooltip name="ТоварыСуммаExtendedTooltip" id="372"/>
 									</InputField>
 									<InputField name="ТоварыСуммаВсего" id="217">
+										<DataPath>Объект.Товары.СуммаВсего</DataPath>
 										<ReadOnly>true</ReadOnly>
 										<Title>
 											<v8:item>
@@ -3960,6 +4437,7 @@
 										<ExtendedTooltip name="ТоварыСуммаВсегоExtendedTooltip" id="373"/>
 									</InputField>
 									<InputField name="ТоварыСтавкаНДС" id="58">
+										<DataPath>Объект.Товары.СтавкаНДС</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<Width>7</Width>
 										<HorizontalStretch>false</HorizontalStretch>
@@ -3994,6 +4472,7 @@
 										<ExtendedTooltip name="ТоварыСтавкаНДСExtendedTooltip" id="374"/>
 									</InputField>
 									<InputField name="ТоварыСуммаНДС" id="60">
+										<DataPath>Объект.Товары.СуммаНДС</DataPath>
 										<ReadOnly>true</ReadOnly>
 										<EditMode>EnterOnInput</EditMode>
 										<Width>9</Width>
@@ -4001,6 +4480,7 @@
 										<ExtendedTooltip name="ТоварыСуммаНДСExtendedTooltip" id="375"/>
 									</InputField>
 									<InputField name="ТоварыПродавец" id="78">
+										<DataPath>Объект.Товары.Продавец</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<ChoiceParameters>
 											<app:item name="Отбор.Сотрудник">
@@ -4014,6 +4494,7 @@
 										<ExtendedTooltip name="ТоварыПродавецExtendedTooltip" id="376"/>
 									</InputField>
 									<InputField name="ТоварыСклад" id="223">
+										<DataPath>Объект.Товары.Склад</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<ContextMenu name="ТоварыСкладКонтекстноеМеню" id="224"/>
 										<ExtendedTooltip name="ТоварыСкладExtendedTooltip" id="377"/>
@@ -4031,6 +4512,7 @@
 										<ExtendedTooltip name="ТоварыГруппаЗаказКлиентаРасширеннаяПодсказка" id="450"/>
 										<ChildItems>
 											<InputField name="ТоварыЗаказПокупателя" id="451">
+												<DataPath>Объект.Товары.ЗаказПокупателя</DataPath>
 												<ReadOnly>true</ReadOnly>
 												<EditMode>EnterOnInput</EditMode>
 												<Width>16</Width>
@@ -4038,6 +4520,7 @@
 												<ExtendedTooltip name="ТоварыЗаказПокупателяРасширеннаяПодсказка" id="453"/>
 											</InputField>
 											<InputField name="ТоварыКодСтроки" id="454">
+												<DataPath>Объект.Товары.КодСтроки</DataPath>
 												<ReadOnly>true</ReadOnly>
 												<EditMode>EnterOnInput</EditMode>
 												<Width>8</Width>
@@ -4047,6 +4530,7 @@
 										</ChildItems>
 									</ColumnGroup>
 									<CheckBoxField name="ТоварыРезервировать" id="457">
+										<DataPath>Объект.Товары.Резервировать</DataPath>
 										<ReadOnly>true</ReadOnly>
 										<Title>
 											<v8:item>
@@ -4070,6 +4554,7 @@
 								<v8:content>Скидки</v8:content>
 							</v8:item>
 						</Title>
+						<TitleDataPath>Объект.СкидкиНаценки.RowsCount</TitleDataPath>
 						<ExtendedTooltip name="ГруппаСкидкиExtendedTooltip" id="378"/>
 						<ChildItems>
 							<Table name="Скидки" id="151">
@@ -4080,6 +4565,7 @@
 								<EnableStartDrag>true</EnableStartDrag>
 								<EnableDrag>true</EnableDrag>
 								<FileDragMode>AsFile</FileDragMode>
+								<DataPath>Объект.СкидкиНаценки</DataPath>
 								<SearchStringLocation>None</SearchStringLocation>
 								<ViewStatusLocation>None</ViewStatusLocation>
 								<SearchControlLocation>None</SearchControlLocation>
@@ -4138,6 +4624,7 @@
 								</SearchControlAddition>
 								<ChildItems>
 									<LabelField name="СкидкиНомерСтроки" id="154">
+										<DataPath>Объект.СкидкиНаценки.LineNumber</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<Width>1</Width>
 										<HorizontalStretch>false</HorizontalStretch>
@@ -4145,6 +4632,7 @@
 										<ExtendedTooltip name="СкидкиНомерСтрокиExtendedTooltip" id="380"/>
 									</LabelField>
 									<InputField name="СкидкиНомерСтрокиОсновойТаблицы" id="270">
+										<DataPath>Объект.СкидкиНаценки.НомерСтрокиОсновойТаблицы</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<Width>8</Width>
 										<HorizontalStretch>false</HorizontalStretch>
@@ -4152,6 +4640,7 @@
 										<ExtendedTooltip name="СкидкиНомерСтрокиОсновойТаблицыExtendedTooltip" id="381"/>
 									</InputField>
 									<LabelField name="СкидкиНоменклатураКод" id="304">
+										<DataPath>Объект.СкидкиНаценки.Номенклатура.Code</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<Width>8</Width>
 										<HorizontalStretch>false</HorizontalStretch>
@@ -4159,6 +4648,7 @@
 										<ExtendedTooltip name="СкидкиНоменклатураКодExtendedTooltip" id="382"/>
 									</LabelField>
 									<LabelField name="СкидкиНоменклатураАртикул" id="306">
+										<DataPath>Объект.СкидкиНаценки.Номенклатура.Артикул</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<Width>8</Width>
 										<HorizontalStretch>false</HorizontalStretch>
@@ -4166,29 +4656,35 @@
 										<ExtendedTooltip name="СкидкиНоменклатураАртикулExtendedTooltip" id="383"/>
 									</LabelField>
 									<InputField name="СкидкиНоменклатура" id="266">
+										<DataPath>Объект.СкидкиНаценки.Номенклатура</DataPath>
 										<ReadOnly>true</ReadOnly>
 										<EditMode>EnterOnInput</EditMode>
 										<ContextMenu name="СкидкиНоменклатураКонтекстноеМеню" id="267"/>
 										<ExtendedTooltip name="СкидкиНоменклатураExtendedTooltip" id="384"/>
 									</InputField>
 									<InputField name="СкидкиХарактеристика" id="268">
+										<DataPath>Объект.СкидкиНаценки.Характеристика</DataPath>
 										<ReadOnly>true</ReadOnly>
 										<EditMode>EnterOnInput</EditMode>
 										<ContextMenu name="СкидкиХарактеристикаКонтекстноеМеню" id="269"/>
 										<ExtendedTooltip name="СкидкиХарактеристикаExtendedTooltip" id="385"/>
 									</InputField>
 									<InputField name="СкидкиСкидкаНаценка" id="158">
+										<DataPath>Объект.СкидкиНаценки.СкидкаНаценка</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<ContextMenu name="СкидкиСкидкаНаценкаКонтекстноеМеню" id="159"/>
 										<ExtendedTooltip name="СкидкиСкидкаНаценкаExtendedTooltip" id="386"/>
 									</InputField>
 									<InputField name="СкидкиСумма" id="160">
+										<DataPath>Объект.СкидкиНаценки.Сумма</DataPath>
 										<EditMode>EnterOnInput</EditMode>
+										<FooterDataPath>Объект.СкидкиНаценки.TotalСумма</FooterDataPath>
 										<Width>9</Width>
 										<ContextMenu name="СкидкиСуммаКонтекстноеМеню" id="161"/>
 										<ExtendedTooltip name="СкидкиСуммаExtendedTooltip" id="387"/>
 									</InputField>
 									<CheckBoxField name="СкидкиОграниченаМинимальнойЦеной" id="312">
+										<DataPath>Объект.СкидкиНаценки.ОграниченаМинимальнойЦеной</DataPath>
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
@@ -4211,6 +4707,7 @@
 								<v8:content>Оплата</v8:content>
 							</v8:item>
 						</Title>
+						<TitleDataPath>Объект.Оплата.RowsCount</TitleDataPath>
 						<ExtendedTooltip name="ГруппаОплатаExtendedTooltip" id="389"/>
 						<ChildItems>
 							<UsualGroup name="ГруппаОплатаШапка" id="766">
@@ -4226,6 +4723,7 @@
 								<ExtendedTooltip name="ГруппаОплатаШапкаРасширеннаяПодсказка" id="767"/>
 								<ChildItems>
 									<CheckBoxField name="ОперацияСДенежнымиСредствами" id="747">
+										<DataPath>Объект.ОперацияСДенежнымиСредствами</DataPath>
 										<TitleLocation>Right</TitleLocation>
 										<CheckBoxType>Auto</CheckBoxType>
 										<ContextMenu name="ОперацияСДенежнымиСредствамиКонтекстноеМеню" id="748"/>
@@ -4322,6 +4820,7 @@
 								<EnableStartDrag>true</EnableStartDrag>
 								<EnableDrag>true</EnableDrag>
 								<FileDragMode>AsFile</FileDragMode>
+								<DataPath>Объект.Оплата</DataPath>
 								<SearchStringLocation>None</SearchStringLocation>
 								<ViewStatusLocation>None</ViewStatusLocation>
 								<SearchControlLocation>None</SearchControlLocation>
@@ -4447,6 +4946,7 @@
 								</SearchControlAddition>
 								<ChildItems>
 									<LabelField name="ОплатаНомерСтроки" id="86">
+										<DataPath>Объект.Оплата.LineNumber</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<Width>1</Width>
 										<HorizontalStretch>false</HorizontalStretch>
@@ -4454,13 +4954,16 @@
 										<ExtendedTooltip name="ОплатаНомерСтрокиExtendedTooltip" id="394"/>
 									</LabelField>
 									<InputField name="ОплатаВидОплаты" id="88">
+										<DataPath>Объект.Оплата.ВидОплаты</DataPath>
 										<ReadOnly>true</ReadOnly>
 										<EditMode>EnterOnInput</EditMode>
 										<ContextMenu name="ОплатаВидОплатыКонтекстноеМеню" id="89"/>
 										<ExtendedTooltip name="ОплатаВидОплатыExtendedTooltip" id="395"/>
 									</InputField>
 									<InputField name="ОплатаСумма" id="90">
+										<DataPath>Объект.Оплата.Сумма</DataPath>
 										<EditMode>EnterOnInput</EditMode>
+										<FooterDataPath>Объект.Оплата.TotalСумма</FooterDataPath>
 										<Width>9</Width>
 										<DropListButton>true</DropListButton>
 										<ChoiceListButton>true</ChoiceListButton>
@@ -4468,6 +4971,7 @@
 										<ExtendedTooltip name="ОплатаСуммаExtendedTooltip" id="397"/>
 									</InputField>
 									<InputField name="ОплатаЭквайринговыйТерминал" id="262">
+										<DataPath>Объект.Оплата.ЭквайринговыйТерминал</DataPath>
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
@@ -4478,12 +4982,12 @@
 										<ChoiceParameterLinks>
 											<xr:Link>
 												<xr:Name>Отбор.Касса</xr:Name>
-												<xr:DataPath xsi:type="xs:string">1/0:f0e877d7-57fa-464b-8c4d-139acf9a8b9e</xr:DataPath>
+												<xr:DataPath xsi:type="xs:string">1</xr:DataPath>
 												<xr:ValueChange>Clear</xr:ValueChange>
 											</xr:Link>
 											<xr:Link>
 												<xr:Name>Отбор.Организация</xr:Name>
-												<xr:DataPath xsi:type="xs:string">1/0:c1056292-8a4f-4583-89ea-b69e8144ed62</xr:DataPath>
+												<xr:DataPath xsi:type="xs:string">1</xr:DataPath>
 												<xr:ValueChange>Clear</xr:ValueChange>
 											</xr:Link>
 										</ChoiceParameterLinks>
@@ -4491,6 +4995,7 @@
 										<ExtendedTooltip name="ОплатаЭквайринговыйТерминалExtendedTooltip" id="396"/>
 									</InputField>
 									<InputField name="ОплатаПроцентКомиссии" id="92">
+										<DataPath>Объект.Оплата.ПроцентКомиссии</DataPath>
 										<SkipOnInput>true</SkipOnInput>
 										<Title>
 											<v8:item>
@@ -4505,8 +5010,10 @@
 										<ExtendedTooltip name="ОплатаПроцентКомиссииРасширеннаяПодсказка" id="398"/>
 									</InputField>
 									<InputField name="ОплатаСуммаКомиссии" id="94">
+										<DataPath>Объект.Оплата.СуммаКомиссии</DataPath>
 										<ReadOnly>true</ReadOnly>
 										<EditMode>EnterOnInput</EditMode>
+										<FooterDataPath>Объект.Оплата.TotalСуммаКомиссии</FooterDataPath>
 										<Width>9</Width>
 										<ContextMenu name="ОплатаСуммаКомиссииКонтекстноеМеню" id="95"/>
 										<ExtendedTooltip name="ОплатаСуммаКомиссииРасширеннаяПодсказка" id="399"/>
@@ -4522,6 +5029,7 @@
 										<ExtendedTooltip name="ОплатаГруппаБонусыРасширеннаяПодсказка" id="513"/>
 										<ChildItems>
 											<InputField name="ОплатаСуммаБонусовВСкидках" id="514">
+												<DataPath>Объект.Оплата.СуммаБонусовВСкидках</DataPath>
 												<ReadOnly>true</ReadOnly>
 												<Title>
 													<v8:item>
@@ -4530,18 +5038,22 @@
 													</v8:item>
 												</Title>
 												<EditMode>EnterOnInput</EditMode>
+												<FooterDataPath>Объект.Оплата.TotalСуммаБонусовВСкидках</FooterDataPath>
 												<Width>9</Width>
 												<ContextMenu name="ОплатаСуммаБонусовВСкидкахКонтекстноеМеню" id="515"/>
 												<ExtendedTooltip name="ОплатаСуммаБонусовВСкидкахРасширеннаяПодсказка" id="516"/>
 											</InputField>
 											<InputField name="ОплатаКоличествоБонусов" id="517">
+												<DataPath>Объект.Оплата.КоличествоБонусов</DataPath>
 												<Visible>false</Visible>
 												<EditMode>EnterOnInput</EditMode>
+												<FooterDataPath>Объект.Оплата.TotalКоличествоБонусов</FooterDataPath>
 												<Width>10</Width>
 												<ContextMenu name="ОплатаКоличествоБонусовКонтекстноеМеню" id="518"/>
 												<ExtendedTooltip name="ОплатаКоличествоБонусовРасширеннаяПодсказка" id="519"/>
 											</InputField>
 											<InputField name="ОплатаКоличествоБонусовВСкидках" id="520">
+												<DataPath>Объект.Оплата.КоличествоБонусовВСкидках</DataPath>
 												<ReadOnly>true</ReadOnly>
 												<Title>
 													<v8:item>
@@ -4550,11 +5062,13 @@
 													</v8:item>
 												</Title>
 												<EditMode>EnterOnInput</EditMode>
+												<FooterDataPath>Объект.Оплата.TotalКоличествоБонусовВСкидках</FooterDataPath>
 												<Width>10</Width>
 												<ContextMenu name="ОплатаКоличествоБонусовВСкидкахКонтекстноеМеню" id="521"/>
 												<ExtendedTooltip name="ОплатаКоличествоБонусовВСкидкахРасширеннаяПодсказка" id="522"/>
 											</InputField>
 											<InputField name="ОплатаБонуснаяПрограммаЛояльности" id="523">
+												<DataPath>Объект.Оплата.БонуснаяПрограммаЛояльности</DataPath>
 												<ReadOnly>true</ReadOnly>
 												<EditMode>EnterOnInput</EditMode>
 												<ContextMenu name="ОплатаБонуснаяПрограммаЛояльностиКонтекстноеМеню" id="524"/>
@@ -4563,6 +5077,7 @@
 										</ChildItems>
 									</ColumnGroup>
 									<InputField name="ОплатаДоговорПлатежногоАгента" id="556">
+										<DataPath>Объект.Оплата.ДоговорКонтрагента</DataPath>
 										<ReadOnly>true</ReadOnly>
 										<Title>
 											<v8:item>
@@ -4585,6 +5100,7 @@
 								<v8:content>Подарки</v8:content>
 							</v8:item>
 						</Title>
+						<TitleDataPath>Объект.Подарки.RowsCount</TitleDataPath>
 						<ExtendedTooltip name="ГруппаПодаркиExtendedTooltip" id="400"/>
 						<ChildItems>
 							<Table name="Подарки" id="125">
@@ -4594,6 +5110,7 @@
 								<EnableStartDrag>true</EnableStartDrag>
 								<EnableDrag>true</EnableDrag>
 								<FileDragMode>AsFile</FileDragMode>
+								<DataPath>Объект.Подарки</DataPath>
 								<SearchStringLocation>None</SearchStringLocation>
 								<ViewStatusLocation>None</ViewStatusLocation>
 								<SearchControlLocation>None</SearchControlLocation>
@@ -4635,6 +5152,7 @@
 								</SearchControlAddition>
 								<ChildItems>
 									<LabelField name="ПодаркиНомерСтроки" id="128">
+										<DataPath>Объект.Подарки.LineNumber</DataPath>
 										<ReadOnly>true</ReadOnly>
 										<EditMode>EnterOnInput</EditMode>
 										<Width>1</Width>
@@ -4643,6 +5161,7 @@
 										<ExtendedTooltip name="ПодаркиНомерСтрокиExtendedTooltip" id="404"/>
 									</LabelField>
 									<InputField name="ПодаркиСкидкаНаценка" id="130">
+										<DataPath>Объект.Подарки.СкидкаНаценка</DataPath>
 										<ReadOnly>true</ReadOnly>
 										<Title>
 											<v8:item>
@@ -4655,6 +5174,7 @@
 										<ExtendedTooltip name="ПодаркиСкидкаНаценкаExtendedTooltip" id="405"/>
 									</InputField>
 									<LabelField name="ПодаркиНоменклатураКод" id="308">
+										<DataPath>Объект.Подарки.Номенклатура.Code</DataPath>
 										<ReadOnly>true</ReadOnly>
 										<EditMode>EnterOnInput</EditMode>
 										<Width>8</Width>
@@ -4663,6 +5183,7 @@
 										<ExtendedTooltip name="ПодаркиНоменклатураКодExtendedTooltip" id="406"/>
 									</LabelField>
 									<LabelField name="ПодаркиНоменклатураАртикул" id="310">
+										<DataPath>Объект.Подарки.Номенклатура.Артикул</DataPath>
 										<ReadOnly>true</ReadOnly>
 										<EditMode>EnterOnInput</EditMode>
 										<Width>8</Width>
@@ -4671,12 +5192,14 @@
 										<ExtendedTooltip name="ПодаркиНоменклатураАртикулExtendedTooltip" id="407"/>
 									</LabelField>
 									<InputField name="ПодаркиНоменклатура" id="132">
+										<DataPath>Объект.Подарки.Номенклатура</DataPath>
 										<ReadOnly>true</ReadOnly>
 										<EditMode>EnterOnInput</EditMode>
 										<ContextMenu name="ПодаркиНоменклатураКонтекстноеМеню" id="133"/>
 										<ExtendedTooltip name="ПодаркиНоменклатураExtendedTooltip" id="408"/>
 									</InputField>
 									<InputField name="ПодаркиХарактеристикаНоменклатуры" id="134">
+										<DataPath>Объект.Подарки.Характеристика</DataPath>
 										<ReadOnly>true</ReadOnly>
 										<EditMode>EnterOnInput</EditMode>
 										<ContextMenu name="ПодаркиХарактеристикаНоменклатурыКонтекстноеМеню" id="135"/>
@@ -4694,6 +5217,7 @@
 										<ExtendedTooltip name="ПодаркиУпаковкаЕдиницаИзмеренияExtendedTooltip" id="410"/>
 										<ChildItems>
 											<InputField name="ПодаркиУпаковка" id="226">
+												<DataPath>Объект.Подарки.Упаковка</DataPath>
 												<ReadOnly>true</ReadOnly>
 												<Title>
 													<v8:item>
@@ -4707,6 +5231,7 @@
 												<ExtendedTooltip name="ПодаркиУпаковкаExtendedTooltip" id="411"/>
 											</InputField>
 											<LabelField name="ПодаркиНоменклатураЕдиницаИзмерения" id="228">
+												<DataPath>Объект.Подарки.Номенклатура.ЕдиницаИзмерения</DataPath>
 												<ReadOnly>true</ReadOnly>
 												<TitleLocation>None</TitleLocation>
 												<EditMode>EnterOnInput</EditMode>
@@ -4721,6 +5246,7 @@
 										<ExtendedTooltip name="ГруппаПодаркиКоличествоУпаковокРасширеннаяПодсказка" id="715"/>
 										<ChildItems>
 											<PictureField name="СтатусыСерийИПодарочныхСертификатов" id="716">
+												<DataPath>Объект.Подарки.СтатусыСерийИПодарочныхСертификатов</DataPath>
 												<TitleLocation>None</TitleLocation>
 												<EditMode>EnterOnInput</EditMode>
 												<ValuesPicture>
@@ -4732,6 +5258,7 @@
 												<ExtendedTooltip name="СтатусыСерийИПодарочныхСертификатовРасширеннаяПодсказка" id="718"/>
 											</PictureField>
 											<InputField name="ПодаркиКоличествоУпаковок" id="230">
+												<DataPath>Объект.Подарки.КоличествоУпаковок</DataPath>
 												<Title>
 													<v8:item>
 														<v8:lang>ru</v8:lang>
@@ -4746,23 +5273,27 @@
 										</ChildItems>
 									</ColumnGroup>
 									<InputField name="ПодаркиЦена" id="142">
+										<DataPath>Объект.Подарки.Цена</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<Width>9</Width>
 										<ContextMenu name="ПодаркиЦенаКонтекстноеМеню" id="143"/>
 										<ExtendedTooltip name="ПодаркиЦенаExtendedTooltip" id="414"/>
 									</InputField>
 									<InputField name="ПодаркиСумма" id="144">
+										<DataPath>Объект.Подарки.Сумма</DataPath>
 										<EditMode>EnterOnInput</EditMode>
+										<FooterDataPath>Объект.Подарки.TotalСумма</FooterDataPath>
 										<Width>9</Width>
 										<ContextMenu name="ПодаркиСуммаКонтекстноеМеню" id="145"/>
 										<ExtendedTooltip name="ПодаркиСуммаExtendedTooltip" id="415"/>
 									</InputField>
 									<InputField name="ПодаркиСклад" id="146">
+										<DataPath>Объект.Подарки.Склад</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<ChoiceParameterLinks>
 											<xr:Link>
 												<xr:Name>Отбор.Магазин</xr:Name>
-												<xr:DataPath xsi:type="xs:string">1/0:1c694a50-94cc-4d6f-9f02-efbaae8daf1a</xr:DataPath>
+												<xr:DataPath xsi:type="xs:string">1</xr:DataPath>
 												<xr:ValueChange>Clear</xr:ValueChange>
 											</xr:Link>
 										</ChoiceParameterLinks>
@@ -4790,6 +5321,7 @@
 								<EnableStartDrag>true</EnableStartDrag>
 								<EnableDrag>true</EnableDrag>
 								<FileDragMode>AsFile</FileDragMode>
+								<DataPath>Объект.УправляемыеСкидки</DataPath>
 								<SearchStringLocation>None</SearchStringLocation>
 								<ViewStatusLocation>None</ViewStatusLocation>
 								<SearchControlLocation>None</SearchControlLocation>
@@ -4823,11 +5355,13 @@
 								</SearchControlAddition>
 								<ChildItems>
 									<LabelField name="КупоныНомерСтроки" id="120">
+										<DataPath>Объект.УправляемыеСкидки.LineNumber</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<ContextMenu name="КупоныНомерСтрокиКонтекстноеМеню" id="121"/>
 										<ExtendedTooltip name="КупоныНомерСтрокиExtendedTooltip" id="419"/>
 									</LabelField>
 									<InputField name="КупоныСкидкаНаценка" id="122">
+										<DataPath>Объект.УправляемыеСкидки.СкидкаНаценка</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<ContextMenu name="КупоныСкидкаНаценкаКонтекстноеМеню" id="123"/>
 										<ExtendedTooltip name="КупоныСкидкаНаценкаExtendedTooltip" id="420"/>
@@ -4849,6 +5383,7 @@
 								<v8:content>Группа элементов, связанных с начислением бонусных баллов</v8:content>
 							</v8:item>
 						</ToolTip>
+						<TitleDataPath>Объект.БонусныеБаллыКНачислению.RowsCount</TitleDataPath>
 						<ExtendedTooltip name="ГруппаБонусныеБаллыРасширеннаяПодсказка" id="490"/>
 						<ChildItems>
 							<LabelDecoration name="ДекорацияБонусы" id="546">
@@ -4871,6 +5406,7 @@
 								<EnableStartDrag>true</EnableStartDrag>
 								<EnableDrag>true</EnableDrag>
 								<FileDragMode>AsFile</FileDragMode>
+								<DataPath>Объект.БонусныеБаллыКНачислению</DataPath>
 								<SearchStringLocation>None</SearchStringLocation>
 								<ViewStatusLocation>None</ViewStatusLocation>
 								<SearchControlLocation>None</SearchControlLocation>
@@ -4904,6 +5440,7 @@
 								</SearchControlAddition>
 								<ChildItems>
 									<LabelField name="БонусныеБаллыКНачислениюНомерСтроки" id="495">
+										<DataPath>Объект.БонусныеБаллыКНачислению.LineNumber</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<Width>1</Width>
 										<HorizontalStretch>false</HorizontalStretch>
@@ -4911,6 +5448,7 @@
 										<ExtendedTooltip name="БонусныеБаллыКНачислениюНомерСтрокиРасширеннаяПодсказка" id="497"/>
 									</LabelField>
 									<InputField name="БонусныеБаллыКНачислениюКлючСвязи" id="528">
+										<DataPath>Объект.БонусныеБаллыКНачислению.КлючСвязи</DataPath>
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
@@ -4924,6 +5462,7 @@
 										<ExtendedTooltip name="БонусныеБаллыКНачислениюКлючСвязиРасширеннаяПодсказка" id="530"/>
 									</InputField>
 									<LabelField name="БонусныеБаллыКНачислениюНоменклатураКод" id="537">
+										<DataPath>Объект.БонусныеБаллыКНачислению.Номенклатура.Code</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<Width>8</Width>
 										<HorizontalStretch>false</HorizontalStretch>
@@ -4931,6 +5470,7 @@
 										<ExtendedTooltip name="БонусныеБаллыКНачислениюНоменклатураКодРасширеннаяПодсказка" id="539"/>
 									</LabelField>
 									<LabelField name="БонусныеБаллыКНачислениюНоменклатураАртикул" id="540">
+										<DataPath>Объект.БонусныеБаллыКНачислению.Номенклатура.Артикул</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<Width>8</Width>
 										<HorizontalStretch>false</HorizontalStretch>
@@ -4938,38 +5478,46 @@
 										<ExtendedTooltip name="БонусныеБаллыКНачислениюНоменклатураАртикулРасширеннаяПодсказка" id="542"/>
 									</LabelField>
 									<InputField name="БонусныеБаллыКНачислениюНоменклатура" id="531">
+										<DataPath>Объект.БонусныеБаллыКНачислению.Номенклатура</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<ContextMenu name="БонусныеБаллыКНачислениюНоменклатураКонтекстноеМеню" id="532"/>
 										<ExtendedTooltip name="БонусныеБаллыКНачислениюНоменклатураРасширеннаяПодсказка" id="533"/>
 									</InputField>
 									<InputField name="БонусныеБаллыКНачислениюХарактеристика" id="534">
+										<DataPath>Объект.БонусныеБаллыКНачислению.Характеристика</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<ContextMenu name="БонусныеБаллыКНачислениюХарактеристикаКонтекстноеМеню" id="535"/>
 										<ExtendedTooltip name="БонусныеБаллыКНачислениюХарактеристикаРасширеннаяПодсказка" id="536"/>
 									</InputField>
 									<InputField name="БонусныеБаллыКНачислениюБонуснаяПрограммаЛояльности" id="498">
+										<DataPath>Объект.БонусныеБаллыКНачислению.БонуснаяПрограммаЛояльности</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<Width>10</Width>
 										<ContextMenu name="БонусныеБаллыКНачислениюБонуснаяПрограммаЛояльностиКонтекстноеМеню" id="499"/>
 										<ExtendedTooltip name="БонусныеБаллыКНачислениюБонуснаяПрограммаЛояльностиРасширеннаяПодсказка" id="500"/>
 									</InputField>
 									<InputField name="БонусныеБаллыКНачислениюСкидкаНаценка" id="613">
+										<DataPath>Объект.БонусныеБаллыКНачислению.СкидкаНаценка</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<ContextMenu name="БонусныеБаллыКНачислениюСкидкаНаценкаКонтекстноеМеню" id="614"/>
 										<ExtendedTooltip name="БонусныеБаллыКНачислениюСкидкаНаценкаРасширеннаяПодсказка" id="615"/>
 									</InputField>
 									<InputField name="БонусныеБаллыКНачислениюДатаНачисления" id="501">
+										<DataPath>Объект.БонусныеБаллыКНачислению.ДатаНачисления</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<ContextMenu name="БонусныеБаллыКНачислениюДатаНачисленияКонтекстноеМеню" id="502"/>
 										<ExtendedTooltip name="БонусныеБаллыКНачислениюДатаНачисленияРасширеннаяПодсказка" id="503"/>
 									</InputField>
 									<InputField name="БонусныеБаллыКНачислениюДатаСписания" id="504">
+										<DataPath>Объект.БонусныеБаллыКНачислению.ДатаСписания</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<ContextMenu name="БонусныеБаллыКНачислениюДатаСписанияКонтекстноеМеню" id="505"/>
 										<ExtendedTooltip name="БонусныеБаллыКНачислениюДатаСписанияРасширеннаяПодсказка" id="506"/>
 									</InputField>
 									<InputField name="БонусныеБаллыКНачислениюСуммаБонусныхБаллов" id="507">
+										<DataPath>Объект.БонусныеБаллыКНачислению.КоличествоБонусныхБаллов</DataPath>
 										<EditMode>EnterOnInput</EditMode>
+										<FooterDataPath>Объект.БонусныеБаллыКНачислению.TotalКоличествоБонусныхБаллов</FooterDataPath>
 										<Width>9</Width>
 										<ContextMenu name="БонусныеБаллыКНачислениюСуммаБонусныхБалловКонтекстноеМеню" id="508"/>
 										<ExtendedTooltip name="БонусныеБаллыКНачислениюСуммаБонусныхБалловРасширеннаяПодсказка" id="509"/>
@@ -4988,6 +5536,7 @@
 						<ExtendedTooltip name="СтраницаКомментарийРасширеннаяПодсказка" id="625"/>
 						<ChildItems>
 							<InputField name="Комментарий" id="626">
+								<DataPath>Объект.Комментарий</DataPath>
 								<TitleLocation>None</TitleLocation>
 								<EditMode>EnterOnInput</EditMode>
 								<AutoMaxWidth>false</AutoMaxWidth>
@@ -5044,6 +5593,7 @@
 							<Button name="ОбщаяКомандаФискальныеОперации" id="806">
 								<Type>Hyperlink</Type>
 								<CommandName>0</CommandName>
+								<DataPath>Объект.Ref</DataPath>
 								<Title>
 									<v8:item>
 										<v8:lang>ru</v8:lang>
@@ -5124,6 +5674,7 @@
 										<ExtendedTooltip name="СуммаВсегоExtendedTooltip" id="653"/>
 									</InputField>
 									<InputField name="СуммаНДС" id="654">
+										<DataPath>Объект.Товары.TotalСуммаНДС</DataPath>
 										<ReadOnly>true</ReadOnly>
 										<Title>
 											<v8:item>
@@ -5187,6 +5738,306 @@
 			</UsualGroup>
 		</ChildItems>
 		<Attributes>
+			<Attribute name="Объект" id="1000001">
+				<Type>
+					<v8:Type>cfg:DocumentObject.ЧекККМ</v8:Type>
+				</Type>
+				<MainAttribute>true</MainAttribute>
+				<SavedData>true</SavedData>
+				<UseAlways>
+					<Field>Объект.RegisterRecords</Field>
+				</UseAlways>
+				<Columns>
+					<AdditionalColumns table="Объект.Оплата">
+						<Column name="ТипОплаты" id="1">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тип оплаты</v8:content>
+								</v8:item>
+							</Title>
+							<Type>
+								<v8:Type>cfg:EnumRef.ТипыОплатЧекаККМ</v8:Type>
+							</Type>
+						</Column>
+					</AdditionalColumns>
+					<AdditionalColumns table="Объект.СкидкиНаценки">
+						<Column name="Номенклатура" id="1">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номенклатура</v8:content>
+								</v8:item>
+							</Title>
+							<Type>
+								<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+							</Type>
+						</Column>
+						<Column name="Характеристика" id="2">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Характеристика</v8:content>
+								</v8:item>
+							</Title>
+							<Type>
+								<v8:Type>cfg:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+							</Type>
+						</Column>
+						<Column name="НомерСтрокиОсновойТаблицы" id="3">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>№ в "Товарах"</v8:content>
+								</v8:item>
+							</Title>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>10</v8:Digits>
+									<v8:FractionDigits>0</v8:FractionDigits>
+									<v8:AllowedSign>Any</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Column>
+						<Column name="ХарактеристикиИспользуются" id="4">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Характеристики используются</v8:content>
+								</v8:item>
+							</Title>
+							<Type>
+								<v8:Type>xs:boolean</v8:Type>
+							</Type>
+						</Column>
+						<Column name="СкидкаЗапрещенаКПросмору" id="5">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Скидка запрещена к просмору</v8:content>
+								</v8:item>
+							</Title>
+							<Type>
+								<v8:Type>xs:boolean</v8:Type>
+							</Type>
+						</Column>
+					</AdditionalColumns>
+					<AdditionalColumns table="Объект.БонусныеБаллыКНачислению">
+						<Column name="Номенклатура" id="1">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номенклатура</v8:content>
+								</v8:item>
+							</Title>
+							<Type>
+								<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+							</Type>
+						</Column>
+						<Column name="Характеристика" id="2">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Характеристика</v8:content>
+								</v8:item>
+							</Title>
+							<Type>
+								<v8:Type>cfg:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+							</Type>
+						</Column>
+						<Column name="ХарактеристикиИспользуются" id="3">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Характеристики используются</v8:content>
+								</v8:item>
+							</Title>
+							<Type>
+								<v8:Type>xs:boolean</v8:Type>
+							</Type>
+						</Column>
+					</AdditionalColumns>
+					<AdditionalColumns table="Объект.Подарки">
+						<Column name="ХарактеристикиИспользуются" id="1">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Характеристики используются</v8:content>
+								</v8:item>
+							</Title>
+							<Type>
+								<v8:Type>xs:boolean</v8:Type>
+							</Type>
+						</Column>
+						<Column name="ИспользоватьСерийныеНомера" id="2">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Использовать номера подарочных сертификатов</v8:content>
+								</v8:item>
+							</Title>
+							<Type>
+								<v8:Type>xs:boolean</v8:Type>
+							</Type>
+						</Column>
+						<Column name="СтатусыСерийИПодарочныхСертификатов" id="3">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Статусы серий и подарочных сертификатов</v8:content>
+								</v8:item>
+							</Title>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>10</v8:Digits>
+									<v8:FractionDigits>0</v8:FractionDigits>
+									<v8:AllowedSign>Any</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Column>
+					</AdditionalColumns>
+					<AdditionalColumns table="Объект.Товары">
+						<Column name="СуммаВсего" id="1">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сумма всего</v8:content>
+								</v8:item>
+							</Title>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>15</v8:Digits>
+									<v8:FractionDigits>2</v8:FractionDigits>
+									<v8:AllowedSign>Any</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Column>
+						<Column name="ХарактеристикиИспользуются" id="2">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Характеристики используются</v8:content>
+								</v8:item>
+							</Title>
+							<Type>
+								<v8:Type>xs:boolean</v8:Type>
+							</Type>
+						</Column>
+						<Column name="ТипНоменклатуры" id="3">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тип номенклатуры</v8:content>
+								</v8:item>
+							</Title>
+							<Type>
+								<v8:Type>cfg:EnumRef.ТипыНоменклатуры</v8:Type>
+							</Type>
+						</Column>
+						<Column name="ИспользоватьСерийныеНомера" id="4">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Использовать номера подарочных сертификатов</v8:content>
+								</v8:item>
+							</Title>
+							<Type>
+								<v8:Type>xs:boolean</v8:Type>
+							</Type>
+						</Column>
+						<Column name="СтатусыСерийИПодарочныхСертификатов" id="5">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Статусы серий и подарочных сертификатов</v8:content>
+								</v8:item>
+							</Title>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>10</v8:Digits>
+									<v8:FractionDigits>0</v8:FractionDigits>
+									<v8:AllowedSign>Any</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Column>
+						<Column name="ДоговорКонтрагента" id="6">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Договор платежного агента</v8:content>
+								</v8:item>
+							</Title>
+							<Type>
+								<v8:Type>cfg:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+							</Type>
+						</Column>
+						<Column name="КоличествоАкцизныхМарок" id="7">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Количество акцизных марок</v8:content>
+								</v8:item>
+							</Title>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>5</v8:Digits>
+									<v8:FractionDigits>0</v8:FractionDigits>
+									<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Column>
+						<Column name="ВидНалога" id="9">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вид налога</v8:content>
+								</v8:item>
+							</Title>
+							<Type>
+								<v8:Type>cfg:EnumRef.ТипыСистемНалогообложенияККТ</v8:Type>
+							</Type>
+						</Column>
+						<Column name="НДСПоСтрочно" id="11">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>НДСПо строчно</v8:content>
+								</v8:item>
+							</Title>
+							<Type>
+								<v8:Type>xs:boolean</v8:Type>
+							</Type>
+						</Column>
+						<Column name="ОсобенностиУчетаНоменклатуры" id="12">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Особенности учета номенклатуры</v8:content>
+								</v8:item>
+							</Title>
+							<Type>
+								<v8:Type>cfg:EnumRef.ОсобенностиУчетаНоменклатуры</v8:Type>
+							</Type>
+						</Column>
+						<Column name="НоменклатураЕГАИС" id="13">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номенклатура ЕГАИС</v8:content>
+								</v8:item>
+							</Title>
+							<Type>
+								<v8:Type>cfg:CatalogRef.КлассификаторАлкогольнойПродукцииЕГАИС</v8:Type>
+							</Type>
+						</Column>
+					</AdditionalColumns>
+				</Columns>
+			</Attribute>
 			<ConditionalAppearance>
 				<dcsset:item>
 					<dcsset:selection>
