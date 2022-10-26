@@ -124,6 +124,7 @@
 			<ExtendedTooltip name="ГруппаКоманднаяПанельExtendedTooltip" id="164"/>
 			<ChildItems>
 				<Popup name="ГруппаВернееПодменю" id="104">
+					<Visible>false</Visible>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1146,6 +1147,17 @@
 							<Width>22</Width>
 							<ExtendedTooltip name="ГруппаБонусыРасширеннаяПодсказка" id="599"/>
 							<ChildItems>
+								<InputField name="ТелефонКлиента" id="616">
+									<DataPath>ТелефонКлиента</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Телефон</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТелефонКлиентаКонтекстноеМеню" id="617"/>
+									<ExtendedTooltip name="ТелефонКлиентаРасширеннаяПодсказка" id="618"/>
+								</InputField>
 								<InputField name="ИмяКлиента" id="610">
 									<DataPath>ИмяКлиента</DataPath>
 									<ReadOnly>true</ReadOnly>
@@ -1154,6 +1166,7 @@
 								</InputField>
 								<InputField name="ТБК_IDКлиента" id="593">
 									<DataPath>Объект.ТБК_IDКлиента</DataPath>
+									<Visible>false</Visible>
 									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
@@ -1194,6 +1207,19 @@
 									<ContextMenu name="КоличествоБалловСписаноКонтекстноеМеню" id="614"/>
 									<ExtendedTooltip name="КоличествоБалловСписаноРасширеннаяПодсказка" id="615"/>
 								</InputField>
+								<Button name="НайтиПоТелефону" id="621">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.НайтиПоТелефону</CommandName>
+									<TextColor>web:MediumSeaGreen</TextColor>
+									<Font height="10" kind="AutoFont"/>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Найти по телефону</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="НайтиПоТелефонуРасширеннаяПодсказка" id="622"/>
+								</Button>
 								<Button name="ОбновитьКоличествоБалловКоторыеМожноСписать" id="606">
 									<Type>UsualButton</Type>
 									<CommandName>Form.Command.ОбновитьКоличествоБалловКоторыеМожноСписать</CommandName>
@@ -2587,6 +2613,11 @@
 								</Button>
 							</ChildItems>
 						</UsualGroup>
+						<Button name="ПоказатьПанельЛояльность" id="623">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ПоказатьСкрытьПанельЛояльность</CommandName>
+							<ExtendedTooltip name="ПоказатьПанельЛояльностьРасширеннаяПодсказка" id="624"/>
+						</Button>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -3026,6 +3057,21 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ТелефонКлиента" id="1000016">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Телефон</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>12</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -3297,6 +3343,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКСписатьБаллыПосле</Action>
+		</Command>
+		<Command name="НайтиПоТелефону" id="1000011">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти по телефону</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти по телефону</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКНайтиПоТелефонуПосле</Action>
+		</Command>
+		<Command name="ПоказатьСкрытьПанельЛояльность" id="1000012">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать/Скрыть панель лояльность</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать скрыть панель лояльность</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКПоказатьПанельЛояльностьПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
