@@ -92,18 +92,24 @@ namespace RetailClient.Web.Services.Jobs
             var wsResultArray = await func(endpoint);
             var result = new List<T>();
 
-            foreach (var wsResult in wsResultArray)
+            using (var scope = serviceProvider.CreateScope())
             {
-                using (var scope = serviceProvider.CreateScope())
+                var ctx = scope.ServiceProvider.GetRequiredService<TabakonDBContext>();
+                var dbset = ctx.Set<T>();
+                foreach (var wsResult in wsResultArray)
                 {
-                    var ctx = scope.ServiceProvider.GetRequiredService<TabakonDBContext>();
-                    var dbset = ctx.Set<T>();
-
                     AbstractCacheEntity entity = Activator.CreateInstance<T>()
                         .PopulateData(endpoint)
                         .PopulateData(wsResult);
 
-                    entity = dbset.FirstOrDefault(entity.IsEquals<T>().Compile());
+                    if (entity is AbstractDocEntity) {
+                        entity = dbset.FirstOrDefault(e => (e as AbstractDocEntity).DocRef == (entity as AbstractDocEntity).DocRef);
+                    }
+                    else{
+                        entity = dbset.FirstOrDefault(entity.IsEquals<T>().Compile());
+                    }
+
+                    
                     if (entity == null)
                     {
                         entity = (Activator.CreateInstance<T>())
@@ -117,9 +123,9 @@ namespace RetailClient.Web.Services.Jobs
                     entity.LastCheck = DateTime.Now;
                     entity.PopulateData(wsResult);
 
-                    await ctx.SaveChangesAsync();
                     result.Add(entity as T);
                 }
+                await ctx.SaveChangesAsync();
             }
 
             return result;
