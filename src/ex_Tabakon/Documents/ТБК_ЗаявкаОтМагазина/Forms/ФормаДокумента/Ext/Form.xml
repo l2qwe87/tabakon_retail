@@ -152,6 +152,10 @@
 				<ContextMenu name="ТоварыУправлениеПоискомКонтекстноеМеню" id="33"/>
 				<ExtendedTooltip name="ТоварыУправлениеПоискомРасширеннаяПодсказка" id="34"/>
 			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">ТоварыПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">ТоварыПередУдалением</Event>
+			</Events>
 			<ChildItems>
 				<LabelField name="ТоварыНомерСтроки" id="35">
 					<DataPath>Объект.Товары.LineNumber</DataPath>
@@ -180,9 +184,28 @@
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ТоварыКоличествоКонтекстноеМеню" id="45"/>
 					<ExtendedTooltip name="ТоварыКоличествоРасширеннаяПодсказка" id="46"/>
+					<Events>
+						<Event name="OnChange">ТоварыКоличествоПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ТоварыКоличествоФакт" id="67">
+					<DataPath>Объект.Товары.КоличествоФакт</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТоварыКоличествоФактКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="ТоварыКоличествоФактРасширеннаяПодсказка" id="69"/>
 				</InputField>
 			</ChildItems>
 		</Table>
+		<LabelField name="ТоварыИтогКоличество" id="73">
+			<DataPath>Объект.Товары.TotalКоличество</DataPath>
+			<ContextMenu name="ТоварыИтогКоличествоКонтекстноеМеню" id="74"/>
+			<ExtendedTooltip name="ТоварыИтогКоличествоРасширеннаяПодсказка" id="75"/>
+		</LabelField>
+		<LabelField name="ТоварыИтогКоличествоФакт" id="70">
+			<DataPath>Объект.Товары.TotalКоличествоФакт</DataPath>
+			<ContextMenu name="ТоварыИтогКоличествоФактКонтекстноеМеню" id="71"/>
+			<ExtendedTooltip name="ТоварыИтогКоличествоФактРасширеннаяПодсказка" id="72"/>
+		</LabelField>
 		<InputField name="Комментарий" id="16">
 			<DataPath>Объект.Комментарий</DataPath>
 			<EditMode>EnterOnInput</EditMode>
