@@ -1203,6 +1203,12 @@
 											<Shape>Usual</Shape>
 											<ExtendedTooltip name="НайтиКлиентаРасширеннаяПодсказка" id="598"/>
 										</Button>
+										<Button name="НачислитьБаллы" id="648">
+											<Type>UsualButton</Type>
+											<Visible>false</Visible>
+											<CommandName>Form.Command.НачислитьБаллы</CommandName>
+											<ExtendedTooltip name="НачислитьБаллыРасширеннаяПодсказка" id="649"/>
+										</Button>
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="Группа2_" id="599">
@@ -1394,6 +1400,13 @@
 													</Title>
 													<ExtendedTooltip name="СписатьБаллыРасширеннаяПодсказка" id="634"/>
 												</Button>
+												<CheckBoxField name="АкцияУтилизация" id="650">
+													<DataPath>АкцияУтилизация</DataPath>
+													<Visible>false</Visible>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="АкцияУтилизацияКонтекстноеМеню" id="651"/>
+													<ExtendedTooltip name="АкцияУтилизацияРасширеннаяПодсказка" id="652"/>
+												</CheckBoxField>
 											</ChildItems>
 										</UsualGroup>
 									</ChildItems>
@@ -3370,6 +3383,17 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="АкцияУтилизация" id="1000022">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Акция утилизация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -3686,6 +3710,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">Расш_SamosaleСписатьБаллыПосле</Action>
+		</Command>
+		<Command name="НачислитьБаллы" id="1000014">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начислить баллы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начислить баллы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКНачислитьБаллыПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
