@@ -114,6 +114,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen" callType="After">ТБКПриОткрытииПосле</Event>
+		<Event name="BeforeWrite" callType="Before">ТБКПередЗаписьюПеред</Event>
 		<Event name="BeforeWrite" callType="After">ТБКПередЗаписьюПосле</Event>
 		<Event name="OnCreateAtServer" callType="After">ТБКПриСозданииНаСервереПосле</Event>
 	</Events>
