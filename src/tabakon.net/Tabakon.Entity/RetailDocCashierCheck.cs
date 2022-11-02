@@ -17,6 +17,7 @@ namespace Tabakon.Entity
         public string OwnerFriendlyName { get; set; }
         public string SellerRef { get; set; }
         public string SellerFriendlyName { get; set; }
+        public string CashierCheckReportFriendlyName { get; set; }
         public bool IsSale { get; set; }
 
         public decimal SumCash { get; set; }
@@ -47,6 +48,7 @@ namespace Tabakon.Entity
             this.OwnerFriendlyName = jObject.Value<string>("CashierCheckReportOwnerFriendlyName");
             this.SellerRef = jObject.Value<string>("CashierCheckReportSellerRef");
             this.SellerFriendlyName = jObject.Value<string>("CashierCheckReportSellerFriendlyName");
+            this.CashierCheckReportFriendlyName = jObject.Value<string>("CashierCheckReportFriendlyName");
 
             this.PaymentDetail = jObject["CashierCheckPaymentDetail"]?.ToObject<List<PaymentDetail>>();
             this.DiscountDetail = jObject["CashierCheckDiscountDetail"]?.ToObject<List<DiscountDetail>>();

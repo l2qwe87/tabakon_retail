@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tabakon.DBContextMigration;
 
 namespace Tabakon.DALMigration.Migrations
 {
     [DbContext(typeof(MigratioTabakonDBContext))]
-    partial class MigratioTabakonDBContextModelSnapshot : ModelSnapshot
+    [Migration("20221102095116_CashierCheckReportFriendlyName")]
+    partial class CashierCheckReportFriendlyName
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
