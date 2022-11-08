@@ -19,17 +19,446 @@
 		<Event name="OnClose" callType="After">ТБКПриЗакрытииПосле</Event>
 	</Events>
 	<ChildItems>
-		<LabelDecoration name="ВерсияР" id="543">
-			<Title formatted="false">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Версия Р</v8:content>
-				</v8:item>
-			</Title>
-			<GroupHorizontalAlign>Left</GroupHorizontalAlign>
-			<ContextMenu name="ВерсияРКонтекстноеМеню" id="544"/>
-			<ExtendedTooltip name="ВерсияРРасширеннаяПодсказка" id="545"/>
-		</LabelDecoration>
+		<UsualGroup name="Группа2" id="631">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="632"/>
+			<ChildItems>
+				<LabelDecoration name="ВерсияР" id="543">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Версия Р</v8:content>
+						</v8:item>
+					</Title>
+					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+					<ContextMenu name="ВерсияРКонтекстноеМеню" id="544"/>
+					<ExtendedTooltip name="ВерсияРРасширеннаяПодсказка" id="545"/>
+				</LabelDecoration>
+				<CommandBar name="ГруппаКоманднаяПанель" id="103">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа командная панель</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справка по акселераторам</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalLocation>Right</HorizontalLocation>
+					<ExtendedTooltip name="ГруппаКоманднаяПанельExtendedTooltip" id="164"/>
+					<ChildItems>
+						<Popup name="ГруппаВернееПодменю" id="104">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Акселераторы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Справка по акселераторам</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Picture>
+								<xr:Ref>CommonPicture.СправкаПоАкселераторам</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<Representation>Picture</Representation>
+							<ExtendedTooltip name="ГруппаВернееПодменюExtendedTooltip" id="165"/>
+							<ChildItems>
+								<Popup name="ГруппаПанельЧастотныхОпераций" id="128">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Частотные операции</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ГруппаПанельЧастотныхОперацийExtendedTooltip" id="166"/>
+									<ChildItems>
+										<Button name="КомандаЧО01МенюАкселераторы" id="129">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаЧО01МенюАкселераторыExtendedTooltip" id="167"/>
+										</Button>
+										<Button name="КомандаЧО02ПоискАкселераторы" id="130">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаЧО02ПоискАкселераторыExtendedTooltip" id="168"/>
+										</Button>
+										<Button name="КомандаЧО03РедактированиеСтрокиАкселераторы" id="131">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаЧО03РедактированиеСтрокиАкселераторыExtendedTooltip" id="169"/>
+										</Button>
+										<Button name="КомандаЧО04ВозвратАкселераторы" id="132">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаЧО04ВозвратАкселераторыExtendedTooltip" id="170"/>
+										</Button>
+										<Button name="КомандаЧО09ОперацияДСАкселераторы" id="505">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Без отгрузки (Shift+F10)</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="КомандаЧО09ОперацияДСАкселераторыРасширеннаяПодсказка" id="506"/>
+										</Button>
+										<Button name="КомандаЧО08ОплатаБонусамиАкселераторы" id="300">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаЧО08ОплатаБонусамиАкселераторыРасширеннаяПодсказка" id="301"/>
+										</Button>
+										<Button name="КомандаЧО05НаличныеАкселераторы" id="133">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаЧО05НаличныеАкселераторыExtendedTooltip" id="171"/>
+										</Button>
+										<Button name="КомандаЧО06ПлатежнаяКартаАкселераторы" id="134">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаЧО06ПлатежнаяКартаАкселераторыExtendedTooltip" id="172"/>
+										</Button>
+										<Button name="КомандаЧО07СложнаяОплатаАкселераторы" id="135">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаЧО07СложнаяОплатаАкселераторыExtendedTooltip" id="173"/>
+										</Button>
+									</ChildItems>
+								</Popup>
+								<Popup name="ГруппаПанельПрочихОпераций" id="105">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Прочие операции</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ГруппаПанельПрочихОперацийExtendedTooltip" id="174"/>
+									<ChildItems>
+										<Button name="КомандаПО01БыстрыеТоварыАкселераторы" id="106">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаПО01БыстрыеТоварыАкселераторыExtendedTooltip" id="175"/>
+										</Button>
+										<Button name="КомандаПО02ВвестиВнесениеДенегАкселераторы" id="107">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаПО02ВвестиВнесениеДенегАкселераторыExtendedTooltip" id="176"/>
+										</Button>
+										<Button name="КомандаПО03ЗаменитьПраваАкселераторы" id="108">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаПО03ЗаменитьПраваАкселераторыExtendedTooltip" id="177"/>
+										</Button>
+										<Button name="КомандаПО04ОтложитьЧекАкселераторы" id="109">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаПО04ОтложитьЧекАкселераторыExtendedTooltip" id="178"/>
+										</Button>
+										<Button name="КомандаПО05ВвестиАннулированиеАкселераторы" id="110">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаПО05ВвестиАннулированиеАкселераторыExtendedTooltip" id="179"/>
+										</Button>
+										<Button name="КомандаПО06ВвестиШтрихкодАкселераторы" id="111">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаПО06ВвестиШтрихкодАкселераторыExtendedTooltip" id="180"/>
+										</Button>
+										<Button name="КомандаПО07ОткрытьДенежныйЯщикАкселераторы" id="112">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаПО07ОткрытьДенежныйЯщикАкселераторыExtendedTooltip" id="181"/>
+										</Button>
+										<Button name="КомандаПО08РасчетСкидокАкселераторы" id="113">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаПО08РасчетСкидокАкселераторыExtendedTooltip" id="182"/>
+										</Button>
+										<Button name="КомандаПО09ПечатьАкселераторы" id="114">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаПО09ПечатьАкселераторыExtendedTooltip" id="183"/>
+										</Button>
+										<Button name="КомандаПО10НапечататьПоследнийСлипЧекАкселераторы" id="115">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаПО10НапечататьПоследнийСлипЧекАкселераторыExtendedTooltip" id="184"/>
+										</Button>
+										<Button name="КомандаПО11ВыходАкселераторы" id="116">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаПО11ВыходАкселераторыExtendedTooltip" id="185"/>
+										</Button>
+										<Button name="КомандаПО12ПолучитьВесАкселераторы" id="117">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаПО12ПолучитьВесАкселераторыExtendedTooltip" id="186"/>
+										</Button>
+										<Button name="КомандаПО13ВвестиВыемкаДенегАкселераторы" id="118">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаПО13ВвестиВыемкаДенегАкселераторыExtendedTooltip" id="187"/>
+										</Button>
+										<Button name="КомандаПО14ПродавецАкселераторы" id="119">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаПО14ПродавецАкселераторыExtendedTooltip" id="188"/>
+										</Button>
+										<Button name="КомандаПО15ПродолжитьЧекАкселераторы" id="120">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаПО15ПродолжитьЧекАкселераторыExtendedTooltip" id="189"/>
+										</Button>
+										<Button name="КомандаПО16ВвестиВозвратТовараОтРозничногоПокупателяАкселераторы" id="121">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаПО16ВвестиВозвратТовараОтРозничногоПокупателяАкселераторыExtendedTooltip" id="190"/>
+										</Button>
+										<Button name="КомандаПО30ВозвратПоследнегоЧекаАкселераторы" id="500">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаПО30ВозвратПоследнегоЧекаАкселераторыРасширеннаяПодсказка" id="501"/>
+										</Button>
+										<Button name="КомандаПО17ВвестиИнформационнуюКартуАкселераторы" id="122">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаПО17ВвестиИнформационнуюКартуАкселераторыExtendedTooltip" id="191"/>
+										</Button>
+										<Button name="КомандаПО18ОткрытьПодарочныеСертификатыАкселераторы" id="123">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаПО18ОткрытьПодарочныеСертификатыАкселераторыExtendedTooltip" id="192"/>
+										</Button>
+										<Button name="КомандаПО19УправляемыеСкидкиАкселераторы" id="124">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаПО19УправляемыеСкидкиАкселераторыExtendedTooltip" id="193"/>
+										</Button>
+										<Button name="КомандаПО20ЗаменаКартыАкселераторы" id="125">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаПО20ЗаменаКартыАкселераторыExtendedTooltip" id="194"/>
+										</Button>
+										<Button name="КомандаПО21ПробитьЧекАкселераторы" id="126">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КомандаПО21ПробитьЧекАкселераторыExtendedTooltip" id="195"/>
+										</Button>
+									</ChildItems>
+								</Popup>
+								<Popup name="ГруппаПанельБыстрыхТоваров" id="127">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Быстрые товары</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ГруппаПанельБыстрыхТоваровExtendedTooltip" id="196"/>
+								</Popup>
+								<Popup name="ГруппаПанельРучныхСкидок" id="138">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ручные скидки</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ГруппаПанельРучныхСкидокExtendedTooltip" id="197"/>
+									<ChildItems>
+										<Popup name="ГруппаРучныеСкидкиВЧеке" id="139">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ручные скидки в чеке</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ГруппаРучныеСкидкиВЧекеExtendedTooltip" id="198"/>
+											<ChildItems>
+												<Button name="КомандаСкидкаПроцентВЧеке" id="140">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<ExtendedTooltip name="КомандаСкидкаПроцентВЧекеExtendedTooltip" id="199"/>
+												</Button>
+												<Button name="КомандаСкидкаСуммаВЧеке" id="141">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<ExtendedTooltip name="КомандаСкидкаСуммаВЧекеExtendedTooltip" id="200"/>
+												</Button>
+												<Button name="КомандаНаценкаПроцентВЧеке" id="142">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<ExtendedTooltip name="КомандаНаценкаПроцентВЧекеExtendedTooltip" id="201"/>
+												</Button>
+												<Button name="КомандаНаценкаСуммаВЧеке" id="143">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<ExtendedTooltip name="КомандаНаценкаСуммаВЧекеExtendedTooltip" id="202"/>
+												</Button>
+												<Button name="КомандаОтменаСкидокВЧеке" id="144">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<ExtendedTooltip name="КомандаОтменаСкидокВЧекеExtendedTooltip" id="203"/>
+												</Button>
+											</ChildItems>
+										</Popup>
+										<Popup name="ГруппаРучныеСкидкиВСтроке" id="145">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ручные скидки в строке</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ГруппаРучныеСкидкиВСтрокеExtendedTooltip" id="204"/>
+											<ChildItems>
+												<Button name="КомандаСкидкаПроцентВСтроке" id="146">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<ExtendedTooltip name="КомандаСкидкаПроцентВСтрокеExtendedTooltip" id="205"/>
+												</Button>
+												<Button name="КомандаСкидкаСуммаВСтроке" id="147">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<ExtendedTooltip name="КомандаСкидкаСуммаВСтрокеExtendedTooltip" id="206"/>
+												</Button>
+												<Button name="КомандаНаценкаПроцентВСтроке" id="148">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<ExtendedTooltip name="КомандаНаценкаПроцентВСтрокеExtendedTooltip" id="207"/>
+												</Button>
+												<Button name="КомандаНаценкаСуммаВСтроке" id="149">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<ExtendedTooltip name="КомандаНаценкаСуммаВСтрокеExtendedTooltip" id="208"/>
+												</Button>
+												<Button name="КомандаОтменаСкидокВСтроке" id="150">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<ExtendedTooltip name="КомандаОтменаСкидокВСтрокеExtendedTooltip" id="209"/>
+												</Button>
+											</ChildItems>
+										</Popup>
+									</ChildItems>
+								</Popup>
+								<Popup name="ГруппаПоискНоменклатуры" id="151">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Поиск номенклатуры</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ГруппаПоискНоменклатурыExtendedTooltip" id="210"/>
+									<ChildItems>
+										<Button name="ПоискВезде" id="154">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ПоискВездеExtendedTooltip" id="211"/>
+										</Button>
+										<Button name="ПоискВезде_ПраваяКлавиатура" id="155">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ПоискВезде_ПраваяКлавиатураExtendedTooltip" id="212"/>
+										</Button>
+										<Button name="ПоискНаименование" id="158">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ПоискНаименованиеExtendedTooltip" id="213"/>
+										</Button>
+										<Button name="ПоискНаименование_ПраваяКлавиатура" id="159">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ПоискНаименование_ПраваяКлавиатураExtendedTooltip" id="214"/>
+										</Button>
+										<Button name="ПоискКод" id="156">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ПоискКодExtendedTooltip" id="215"/>
+										</Button>
+										<Button name="ПоискКод_ПраваяКлавиатура" id="157">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ПоискКод_ПраваяКлавиатураExtendedTooltip" id="216"/>
+										</Button>
+										<Button name="ПоискШтрихкод" id="160">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ПоискШтрихкодExtendedTooltip" id="217"/>
+										</Button>
+										<Button name="ПоискШтрихкод_ПраваяКлавиатура" id="161">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ПоискШтрихкод_ПраваяКлавиатураExtendedTooltip" id="218"/>
+										</Button>
+										<Button name="ПоискАртикул" id="152">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ПоискАртикулExtendedTooltip" id="219"/>
+										</Button>
+										<Button name="ПоискАртикул_ПраваяКлавиатура" id="153">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Поиск артикул (правая клавиатура)</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ПоискАртикул_ПраваяКлавиатураExtendedTooltip" id="220"/>
+										</Button>
+										<Button name="ПоискSKU" id="296">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ПоискSKUРасширеннаяПодсказка" id="297"/>
+										</Button>
+										<Button name="ПоискSKU_ПраваяКлавиатура" id="298">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ПоискSKU_ПраваяКлавиатураРасширеннаяПодсказка" id="299"/>
+										</Button>
+										<Button name="ПоискКод_ПолноеСоответствие" id="318">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ПоискКод_ПолноеСоответствиеРасширеннаяПодсказка" id="319"/>
+										</Button>
+										<Button name="ПоискКод_ПолноеСоответствие_ПраваяКлавиатура" id="320">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ПоискКод_ПолноеСоответствие_ПраваяКлавиатураРасширеннаяПодсказка" id="321"/>
+										</Button>
+										<Button name="ПоискШтрихкод_ПолноеСоответствие" id="322">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ПоискШтрихкод_ПолноеСоответствиеРасширеннаяПодсказка" id="323"/>
+										</Button>
+										<Button name="ПоискШтрихкод_ПолноеСоответствие_ПраваяКлавиатура" id="324">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ПоискШтрихкод_ПолноеСоответствие_ПраваяКлавиатураРасширеннаяПодсказка" id="325"/>
+										</Button>
+										<Button name="ПоискАртикул_ПолноеСоответствие" id="326">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ПоискАртикул_ПолноеСоответствиеРасширеннаяПодсказка" id="327"/>
+										</Button>
+										<Button name="ПоискАртикул_ПолноеСоответствие_ПраваяКлавиатура" id="328">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ПоискАртикул_ПолноеСоответствие_ПраваяКлавиатураРасширеннаяПодсказка" id="329"/>
+										</Button>
+									</ChildItems>
+								</Popup>
+							</ChildItems>
+						</Popup>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
 		<InputField name="ТекущаяКассаККМ" id="540">
 			<DataPath>ТекущаяКассаККМ</DataPath>
 			<OpenButton>false</OpenButton>
@@ -107,429 +536,6 @@
 			<ContextMenu name="НадписьЗаголовокКонтекстноеМеню" id="475"/>
 			<ExtendedTooltip name="НадписьЗаголовокРасширеннаяПодсказка" id="476"/>
 		</LabelField>
-		<CommandBar name="ГруппаКоманднаяПанель" id="103">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа командная панель</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Справка по акселераторам</v8:content>
-				</v8:item>
-			</ToolTip>
-			<HorizontalLocation>Right</HorizontalLocation>
-			<ExtendedTooltip name="ГруппаКоманднаяПанельExtendedTooltip" id="164"/>
-			<ChildItems>
-				<Popup name="ГруппаВернееПодменю" id="104">
-					<Visible>false</Visible>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Акселераторы</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Справка по акселераторам</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Picture>
-						<xr:Ref>CommonPicture.СправкаПоАкселераторам</xr:Ref>
-						<xr:LoadTransparent>false</xr:LoadTransparent>
-					</Picture>
-					<Representation>Picture</Representation>
-					<ExtendedTooltip name="ГруппаВернееПодменюExtendedTooltip" id="165"/>
-					<ChildItems>
-						<Popup name="ГруппаПанельЧастотныхОпераций" id="128">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Частотные операции</v8:content>
-								</v8:item>
-							</Title>
-							<ExtendedTooltip name="ГруппаПанельЧастотныхОперацийExtendedTooltip" id="166"/>
-							<ChildItems>
-								<Button name="КомандаЧО01МенюАкселераторы" id="129">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаЧО01МенюАкселераторыExtendedTooltip" id="167"/>
-								</Button>
-								<Button name="КомандаЧО02ПоискАкселераторы" id="130">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаЧО02ПоискАкселераторыExtendedTooltip" id="168"/>
-								</Button>
-								<Button name="КомандаЧО03РедактированиеСтрокиАкселераторы" id="131">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаЧО03РедактированиеСтрокиАкселераторыExtendedTooltip" id="169"/>
-								</Button>
-								<Button name="КомандаЧО04ВозвратАкселераторы" id="132">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаЧО04ВозвратАкселераторыExtendedTooltip" id="170"/>
-								</Button>
-								<Button name="КомандаЧО09ОперацияДСАкселераторы" id="505">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Без отгрузки (Shift+F10)</v8:content>
-										</v8:item>
-									</Title>
-									<ExtendedTooltip name="КомандаЧО09ОперацияДСАкселераторыРасширеннаяПодсказка" id="506"/>
-								</Button>
-								<Button name="КомандаЧО08ОплатаБонусамиАкселераторы" id="300">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаЧО08ОплатаБонусамиАкселераторыРасширеннаяПодсказка" id="301"/>
-								</Button>
-								<Button name="КомандаЧО05НаличныеАкселераторы" id="133">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаЧО05НаличныеАкселераторыExtendedTooltip" id="171"/>
-								</Button>
-								<Button name="КомандаЧО06ПлатежнаяКартаАкселераторы" id="134">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаЧО06ПлатежнаяКартаАкселераторыExtendedTooltip" id="172"/>
-								</Button>
-								<Button name="КомандаЧО07СложнаяОплатаАкселераторы" id="135">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаЧО07СложнаяОплатаАкселераторыExtendedTooltip" id="173"/>
-								</Button>
-							</ChildItems>
-						</Popup>
-						<Popup name="ГруппаПанельПрочихОпераций" id="105">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Прочие операции</v8:content>
-								</v8:item>
-							</Title>
-							<ExtendedTooltip name="ГруппаПанельПрочихОперацийExtendedTooltip" id="174"/>
-							<ChildItems>
-								<Button name="КомандаПО01БыстрыеТоварыАкселераторы" id="106">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаПО01БыстрыеТоварыАкселераторыExtendedTooltip" id="175"/>
-								</Button>
-								<Button name="КомандаПО02ВвестиВнесениеДенегАкселераторы" id="107">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаПО02ВвестиВнесениеДенегАкселераторыExtendedTooltip" id="176"/>
-								</Button>
-								<Button name="КомандаПО03ЗаменитьПраваАкселераторы" id="108">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаПО03ЗаменитьПраваАкселераторыExtendedTooltip" id="177"/>
-								</Button>
-								<Button name="КомандаПО04ОтложитьЧекАкселераторы" id="109">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаПО04ОтложитьЧекАкселераторыExtendedTooltip" id="178"/>
-								</Button>
-								<Button name="КомандаПО05ВвестиАннулированиеАкселераторы" id="110">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаПО05ВвестиАннулированиеАкселераторыExtendedTooltip" id="179"/>
-								</Button>
-								<Button name="КомандаПО06ВвестиШтрихкодАкселераторы" id="111">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаПО06ВвестиШтрихкодАкселераторыExtendedTooltip" id="180"/>
-								</Button>
-								<Button name="КомандаПО07ОткрытьДенежныйЯщикАкселераторы" id="112">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаПО07ОткрытьДенежныйЯщикАкселераторыExtendedTooltip" id="181"/>
-								</Button>
-								<Button name="КомандаПО08РасчетСкидокАкселераторы" id="113">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаПО08РасчетСкидокАкселераторыExtendedTooltip" id="182"/>
-								</Button>
-								<Button name="КомандаПО09ПечатьАкселераторы" id="114">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаПО09ПечатьАкселераторыExtendedTooltip" id="183"/>
-								</Button>
-								<Button name="КомандаПО10НапечататьПоследнийСлипЧекАкселераторы" id="115">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаПО10НапечататьПоследнийСлипЧекАкселераторыExtendedTooltip" id="184"/>
-								</Button>
-								<Button name="КомандаПО11ВыходАкселераторы" id="116">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаПО11ВыходАкселераторыExtendedTooltip" id="185"/>
-								</Button>
-								<Button name="КомандаПО12ПолучитьВесАкселераторы" id="117">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаПО12ПолучитьВесАкселераторыExtendedTooltip" id="186"/>
-								</Button>
-								<Button name="КомандаПО13ВвестиВыемкаДенегАкселераторы" id="118">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаПО13ВвестиВыемкаДенегАкселераторыExtendedTooltip" id="187"/>
-								</Button>
-								<Button name="КомандаПО14ПродавецАкселераторы" id="119">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаПО14ПродавецАкселераторыExtendedTooltip" id="188"/>
-								</Button>
-								<Button name="КомандаПО15ПродолжитьЧекАкселераторы" id="120">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаПО15ПродолжитьЧекАкселераторыExtendedTooltip" id="189"/>
-								</Button>
-								<Button name="КомандаПО16ВвестиВозвратТовараОтРозничногоПокупателяАкселераторы" id="121">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаПО16ВвестиВозвратТовараОтРозничногоПокупателяАкселераторыExtendedTooltip" id="190"/>
-								</Button>
-								<Button name="КомандаПО30ВозвратПоследнегоЧекаАкселераторы" id="500">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаПО30ВозвратПоследнегоЧекаАкселераторыРасширеннаяПодсказка" id="501"/>
-								</Button>
-								<Button name="КомандаПО17ВвестиИнформационнуюКартуАкселераторы" id="122">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаПО17ВвестиИнформационнуюКартуАкселераторыExtendedTooltip" id="191"/>
-								</Button>
-								<Button name="КомандаПО18ОткрытьПодарочныеСертификатыАкселераторы" id="123">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаПО18ОткрытьПодарочныеСертификатыАкселераторыExtendedTooltip" id="192"/>
-								</Button>
-								<Button name="КомандаПО19УправляемыеСкидкиАкселераторы" id="124">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаПО19УправляемыеСкидкиАкселераторыExtendedTooltip" id="193"/>
-								</Button>
-								<Button name="КомандаПО20ЗаменаКартыАкселераторы" id="125">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаПО20ЗаменаКартыАкселераторыExtendedTooltip" id="194"/>
-								</Button>
-								<Button name="КомандаПО21ПробитьЧекАкселераторы" id="126">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаПО21ПробитьЧекАкселераторыExtendedTooltip" id="195"/>
-								</Button>
-							</ChildItems>
-						</Popup>
-						<Popup name="ГруппаПанельБыстрыхТоваров" id="127">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Быстрые товары</v8:content>
-								</v8:item>
-							</Title>
-							<ExtendedTooltip name="ГруппаПанельБыстрыхТоваровExtendedTooltip" id="196"/>
-						</Popup>
-						<Popup name="ГруппаПанельРучныхСкидок" id="138">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Ручные скидки</v8:content>
-								</v8:item>
-							</Title>
-							<ExtendedTooltip name="ГруппаПанельРучныхСкидокExtendedTooltip" id="197"/>
-							<ChildItems>
-								<Popup name="ГруппаРучныеСкидкиВЧеке" id="139">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Ручные скидки в чеке</v8:content>
-										</v8:item>
-									</Title>
-									<ExtendedTooltip name="ГруппаРучныеСкидкиВЧекеExtendedTooltip" id="198"/>
-									<ChildItems>
-										<Button name="КомандаСкидкаПроцентВЧеке" id="140">
-											<Type>CommandBarButton</Type>
-											<CommandName>0</CommandName>
-											<ExtendedTooltip name="КомандаСкидкаПроцентВЧекеExtendedTooltip" id="199"/>
-										</Button>
-										<Button name="КомандаСкидкаСуммаВЧеке" id="141">
-											<Type>CommandBarButton</Type>
-											<CommandName>0</CommandName>
-											<ExtendedTooltip name="КомандаСкидкаСуммаВЧекеExtendedTooltip" id="200"/>
-										</Button>
-										<Button name="КомандаНаценкаПроцентВЧеке" id="142">
-											<Type>CommandBarButton</Type>
-											<CommandName>0</CommandName>
-											<ExtendedTooltip name="КомандаНаценкаПроцентВЧекеExtendedTooltip" id="201"/>
-										</Button>
-										<Button name="КомандаНаценкаСуммаВЧеке" id="143">
-											<Type>CommandBarButton</Type>
-											<CommandName>0</CommandName>
-											<ExtendedTooltip name="КомандаНаценкаСуммаВЧекеExtendedTooltip" id="202"/>
-										</Button>
-										<Button name="КомандаОтменаСкидокВЧеке" id="144">
-											<Type>CommandBarButton</Type>
-											<CommandName>0</CommandName>
-											<ExtendedTooltip name="КомандаОтменаСкидокВЧекеExtendedTooltip" id="203"/>
-										</Button>
-									</ChildItems>
-								</Popup>
-								<Popup name="ГруппаРучныеСкидкиВСтроке" id="145">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Ручные скидки в строке</v8:content>
-										</v8:item>
-									</Title>
-									<ExtendedTooltip name="ГруппаРучныеСкидкиВСтрокеExtendedTooltip" id="204"/>
-									<ChildItems>
-										<Button name="КомандаСкидкаПроцентВСтроке" id="146">
-											<Type>CommandBarButton</Type>
-											<CommandName>0</CommandName>
-											<ExtendedTooltip name="КомандаСкидкаПроцентВСтрокеExtendedTooltip" id="205"/>
-										</Button>
-										<Button name="КомандаСкидкаСуммаВСтроке" id="147">
-											<Type>CommandBarButton</Type>
-											<CommandName>0</CommandName>
-											<ExtendedTooltip name="КомандаСкидкаСуммаВСтрокеExtendedTooltip" id="206"/>
-										</Button>
-										<Button name="КомандаНаценкаПроцентВСтроке" id="148">
-											<Type>CommandBarButton</Type>
-											<CommandName>0</CommandName>
-											<ExtendedTooltip name="КомандаНаценкаПроцентВСтрокеExtendedTooltip" id="207"/>
-										</Button>
-										<Button name="КомандаНаценкаСуммаВСтроке" id="149">
-											<Type>CommandBarButton</Type>
-											<CommandName>0</CommandName>
-											<ExtendedTooltip name="КомандаНаценкаСуммаВСтрокеExtendedTooltip" id="208"/>
-										</Button>
-										<Button name="КомандаОтменаСкидокВСтроке" id="150">
-											<Type>CommandBarButton</Type>
-											<CommandName>0</CommandName>
-											<ExtendedTooltip name="КомандаОтменаСкидокВСтрокеExtendedTooltip" id="209"/>
-										</Button>
-									</ChildItems>
-								</Popup>
-							</ChildItems>
-						</Popup>
-						<Popup name="ГруппаПоискНоменклатуры" id="151">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Поиск номенклатуры</v8:content>
-								</v8:item>
-							</Title>
-							<ExtendedTooltip name="ГруппаПоискНоменклатурыExtendedTooltip" id="210"/>
-							<ChildItems>
-								<Button name="ПоискВезде" id="154">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="ПоискВездеExtendedTooltip" id="211"/>
-								</Button>
-								<Button name="ПоискВезде_ПраваяКлавиатура" id="155">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="ПоискВезде_ПраваяКлавиатураExtendedTooltip" id="212"/>
-								</Button>
-								<Button name="ПоискНаименование" id="158">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="ПоискНаименованиеExtendedTooltip" id="213"/>
-								</Button>
-								<Button name="ПоискНаименование_ПраваяКлавиатура" id="159">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="ПоискНаименование_ПраваяКлавиатураExtendedTooltip" id="214"/>
-								</Button>
-								<Button name="ПоискКод" id="156">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="ПоискКодExtendedTooltip" id="215"/>
-								</Button>
-								<Button name="ПоискКод_ПраваяКлавиатура" id="157">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="ПоискКод_ПраваяКлавиатураExtendedTooltip" id="216"/>
-								</Button>
-								<Button name="ПоискШтрихкод" id="160">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="ПоискШтрихкодExtendedTooltip" id="217"/>
-								</Button>
-								<Button name="ПоискШтрихкод_ПраваяКлавиатура" id="161">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="ПоискШтрихкод_ПраваяКлавиатураExtendedTooltip" id="218"/>
-								</Button>
-								<Button name="ПоискАртикул" id="152">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="ПоискАртикулExtendedTooltip" id="219"/>
-								</Button>
-								<Button name="ПоискАртикул_ПраваяКлавиатура" id="153">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Поиск артикул (правая клавиатура)</v8:content>
-										</v8:item>
-									</Title>
-									<ExtendedTooltip name="ПоискАртикул_ПраваяКлавиатураExtendedTooltip" id="220"/>
-								</Button>
-								<Button name="ПоискSKU" id="296">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="ПоискSKUРасширеннаяПодсказка" id="297"/>
-								</Button>
-								<Button name="ПоискSKU_ПраваяКлавиатура" id="298">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="ПоискSKU_ПраваяКлавиатураРасширеннаяПодсказка" id="299"/>
-								</Button>
-								<Button name="ПоискКод_ПолноеСоответствие" id="318">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="ПоискКод_ПолноеСоответствиеРасширеннаяПодсказка" id="319"/>
-								</Button>
-								<Button name="ПоискКод_ПолноеСоответствие_ПраваяКлавиатура" id="320">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="ПоискКод_ПолноеСоответствие_ПраваяКлавиатураРасширеннаяПодсказка" id="321"/>
-								</Button>
-								<Button name="ПоискШтрихкод_ПолноеСоответствие" id="322">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="ПоискШтрихкод_ПолноеСоответствиеРасширеннаяПодсказка" id="323"/>
-								</Button>
-								<Button name="ПоискШтрихкод_ПолноеСоответствие_ПраваяКлавиатура" id="324">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="ПоискШтрихкод_ПолноеСоответствие_ПраваяКлавиатураРасширеннаяПодсказка" id="325"/>
-								</Button>
-								<Button name="ПоискАртикул_ПолноеСоответствие" id="326">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="ПоискАртикул_ПолноеСоответствиеРасширеннаяПодсказка" id="327"/>
-								</Button>
-								<Button name="ПоискАртикул_ПолноеСоответствие_ПраваяКлавиатура" id="328">
-									<Type>CommandBarButton</Type>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="ПоискАртикул_ПолноеСоответствие_ПраваяКлавиатураРасширеннаяПодсказка" id="329"/>
-								</Button>
-							</ChildItems>
-						</Popup>
-					</ChildItems>
-				</Popup>
-			</ChildItems>
-		</CommandBar>
 		<UsualGroup name="ГруппаЗаголовкиКнопки" id="102">
 			<Title>
 				<v8:item>
@@ -1138,6 +1144,7 @@
 									<v8:content>Программа лояльности</v8:content>
 								</v8:item>
 							</Title>
+							<TitleFont ref="style:TextFont" faceName="Myanmar Text" height="11" kind="StyleItem"/>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -1155,12 +1162,14 @@
 											<v8:content>Телефон</v8:content>
 										</v8:item>
 									</Title>
+									<TitleFont ref="style:TextFont" height="10" bold="false" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 									<ContextMenu name="ТелефонКлиентаКонтекстноеМеню" id="617"/>
 									<ExtendedTooltip name="ТелефонКлиентаРасширеннаяПодсказка" id="618"/>
 								</InputField>
 								<InputField name="ИмяКлиента" id="610">
 									<DataPath>ИмяКлиента</DataPath>
 									<ReadOnly>true</ReadOnly>
+									<TitleFont ref="style:TextFont" kind="StyleItem"/>
 									<ContextMenu name="ИмяКлиентаКонтекстноеМеню" id="611"/>
 									<ExtendedTooltip name="ИмяКлиентаРасширеннаяПодсказка" id="612"/>
 								</InputField>
@@ -1183,7 +1192,7 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Накоплено баллов</v8:content>
+											<v8:content>Накоплено</v8:content>
 										</v8:item>
 									</Title>
 									<ContextMenu name="КоличествоНакопленныхБалловКонтекстноеМеню" id="601"/>
@@ -1198,12 +1207,19 @@
 											<v8:content>Можно списать</v8:content>
 										</v8:item>
 									</Title>
+									<TitleFont ref="style:TextFont" height="8" kind="StyleItem"/>
 									<ContextMenu name="КоличествоБалловМожноСписатьКонтекстноеМеню" id="604"/>
 									<ExtendedTooltip name="КоличествоБалловМожноСписатьРасширеннаяПодсказка" id="605"/>
 								</InputField>
 								<InputField name="КоличествоБалловСписано" id="613">
 									<DataPath>КоличествоБалловСписано</DataPath>
 									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Списано</v8:content>
+										</v8:item>
+									</Title>
 									<ContextMenu name="КоличествоБалловСписаноКонтекстноеМеню" id="614"/>
 									<ExtendedTooltip name="КоличествоБалловСписаноРасширеннаяПодсказка" id="615"/>
 								</InputField>
@@ -1211,7 +1227,7 @@
 									<Type>UsualButton</Type>
 									<CommandName>Form.Command.НайтиПоТелефону</CommandName>
 									<TextColor>web:MediumSeaGreen</TextColor>
-									<Font height="10" kind="AutoFont"/>
+									<Font ref="style:TextFont" height="11" kind="StyleItem"/>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -1220,26 +1236,80 @@
 									</Title>
 									<ExtendedTooltip name="НайтиПоТелефонуРасширеннаяПодсказка" id="622"/>
 								</Button>
-								<Button name="ОбновитьКоличествоБалловКоторыеМожноСписать" id="606">
-									<Type>UsualButton</Type>
-									<CommandName>Form.Command.ОбновитьКоличествоБалловКоторыеМожноСписать</CommandName>
-									<TextColor>web:MediumSeaGreen</TextColor>
-									<Font height="10" kind="AutoFont"/>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Обновить</v8:content>
-										</v8:item>
-									</Title>
-									<ExtendedTooltip name="ОбновитьКоличествоБалловКоторыеМожноСписатьРасширеннаяПодсказка" id="607"/>
-								</Button>
 								<Button name="СписатьБаллы" id="608">
 									<Type>UsualButton</Type>
 									<CommandName>Form.Command.СписатьБаллы</CommandName>
 									<TextColor>web:MediumSeaGreen</TextColor>
-									<Font height="10" kind="AutoFont"/>
+									<Font ref="style:TextFont" height="11" kind="StyleItem"/>
 									<ExtendedTooltip name="СписатьБаллыРасширеннаяПодсказка" id="609"/>
 								</Button>
+								<UsualGroup name="ГруппаДоп" id="629">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа доп</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа доп</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаДопРасширеннаяПодсказка" id="630"/>
+									<ChildItems>
+										<Button name="ОчиститьПоляпрограммыЛояльности" id="627">
+											<Type>UsualButton</Type>
+											<Representation>Picture</Representation>
+											<CommandName>Form.Command.ОчиститьПоляпрограммыЛояльности</CommandName>
+											<TextColor>web:MediumSeaGreen</TextColor>
+											<Font height="11" kind="AutoFont"/>
+											<Picture>
+												<xr:Ref>StdPicture.CancelSearch</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="ОчиститьПоляпрограммыЛояльностиРасширеннаяПодсказка" id="628"/>
+										</Button>
+										<Button name="ОбновитьКоличествоБалловКоторыеМожноСписать" id="606">
+											<Type>UsualButton</Type>
+											<Representation>Picture</Representation>
+											<CommandName>Form.Command.ОбновитьКоличествоБалловКоторыеМожноСписать</CommandName>
+											<TextColor>web:MediumSeaGreen</TextColor>
+											<Font ref="style:TextFont" height="11" kind="StyleItem"/>
+											<Picture>
+												<xr:Ref>StdPicture.Refresh</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Обновить</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ОбновитьКоличествоБалловКоторыеМожноСписатьРасширеннаяПодсказка" id="607"/>
+										</Button>
+										<Button name="УзнатьКоличествоБалловПоТелефону" id="625">
+											<Type>UsualButton</Type>
+											<Representation>Picture</Representation>
+											<CommandName>Form.Command.УзнатьКоличествоБалловПоТелефону</CommandName>
+											<TextColor>web:MediumSeaGreen</TextColor>
+											<Picture>
+												<xr:Ref>StdPicture.Find</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Узнать кол.баллов по тел.</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="УзнатьКоличествоБалловПоТелефонуРасширеннаяПодсказка" id="626"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
@@ -3373,6 +3443,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКПоказатьПанельЛояльностьПосле</Action>
+		</Command>
+		<Command name="УзнатьКоличествоБалловПоТелефону" id="1000014">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Узнать количество баллов по телефону</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Узнать количество баллов по телефону</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКУзнатьКоличествоБалловПоТелефону1После</Action>
+		</Command>
+		<Command name="ОчиститьПоляпрограммыЛояльности" id="1000013">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить поля программы лояльности</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКОчиститьПоляпрограммыЛояльностиПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
