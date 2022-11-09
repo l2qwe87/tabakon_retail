@@ -1137,14 +1137,13 @@
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="ГруппаБонусы" id="598">
-							<Visible>false</Visible>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Программа лояльности</v8:content>
 								</v8:item>
 							</Title>
-							<TitleFont ref="style:TextFont" faceName="Myanmar Text" height="11" kind="StyleItem"/>
+							<TitleFont ref="style:TextFont" faceName="Myanmar Text" height="10" kind="StyleItem"/>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -1163,8 +1162,12 @@
 										</v8:item>
 									</Title>
 									<TitleFont ref="style:TextFont" height="10" bold="false" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Mask>+79999999999</Mask>
 									<ContextMenu name="ТелефонКлиентаКонтекстноеМеню" id="617"/>
 									<ExtendedTooltip name="ТелефонКлиентаРасширеннаяПодсказка" id="618"/>
+									<Events>
+										<Event name="AutoComplete" callType="After">ТБКТелефонКлиентаАвтоПодборПосле</Event>
+									</Events>
 								</InputField>
 								<InputField name="ИмяКлиента" id="610">
 									<DataPath>ИмяКлиента</DataPath>
