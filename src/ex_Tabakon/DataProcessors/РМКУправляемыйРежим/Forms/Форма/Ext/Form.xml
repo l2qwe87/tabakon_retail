@@ -2746,6 +2746,17 @@
 							<CommandName>Form.Command.ПоказатьСкрытьПанельЛояльность</CommandName>
 							<ExtendedTooltip name="ПоказатьПанельЛояльностьРасширеннаяПодсказка" id="624"/>
 						</Button>
+						<Button name="ТБК_ПечатьПоследнегоЧека" id="645">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ТБК_ПечатьПоследнегоЧека</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Печать последнего чека</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ТБК_ПечатьПоследнегоЧекаРасширеннаяПодсказка" id="646"/>
+						</Button>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -3557,6 +3568,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКОчиститьПоляпрограммыЛояльностиПосле</Action>
+		</Command>
+		<Command name="ТБК_ПечатьПоследнегоЧека" id="1000015">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТБК печать последнего чека</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТБК печать последнего чека</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКТБК_ПечатьПоследнегоЧекаПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
