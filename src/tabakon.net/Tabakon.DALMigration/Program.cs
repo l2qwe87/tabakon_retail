@@ -28,7 +28,8 @@ namespace Tabakon.DBContextMigration
         //{ }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(GetConfiguration().GetConnectionString("TabakonDataContext"));
+            optionsBuilder.UseSqlServer(GetConfiguration().GetConnectionString("TabakonDataContext"),
+                opts => opts.CommandTimeout((int)TimeSpan.FromMinutes(30).TotalSeconds));
             //optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=TEST_tabakon;User ID=sa_web;Password=6;Application Name=Tabakon");
 
         }
