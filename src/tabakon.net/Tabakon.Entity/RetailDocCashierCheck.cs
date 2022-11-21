@@ -23,6 +23,8 @@ namespace Tabakon.Entity
         public decimal SumCash { get; set; }
         public decimal SumTerminal { get; set; }
 
+        public int CashRegisterShiftNumber { get; set; }
+
         public List<PaymentDetail> PaymentDetail { get; set; }
         public List<DiscountDetail> DiscountDetail { get; set; }
         public List<GoodsDetail> GoodsDetail { get; set; }
@@ -49,6 +51,13 @@ namespace Tabakon.Entity
             this.SellerRef = jObject.Value<string>("CashierCheckReportSellerRef");
             this.SellerFriendlyName = jObject.Value<string>("CashierCheckReportSellerFriendlyName");
             this.CashierCheckReportFriendlyName = jObject.Value<string>("CashierCheckReportFriendlyName");
+
+
+            var cashierCheckCashRegisterShiftNumberKey = "CashierCheckCashRegisterShiftNumber";
+            if (jObject[cashierCheckCashRegisterShiftNumberKey] != null)
+            {
+                this.CashRegisterShiftNumber = jObject.Value<int>(cashierCheckCashRegisterShiftNumberKey);
+            }
 
             this.PaymentDetail = jObject["CashierCheckPaymentDetail"]?.ToObject<List<PaymentDetail>>();
             this.DiscountDetail = jObject["CashierCheckDiscountDetail"]?.ToObject<List<DiscountDetail>>();
