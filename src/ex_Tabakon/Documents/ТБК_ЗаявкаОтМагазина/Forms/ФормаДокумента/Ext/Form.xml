@@ -102,13 +102,15 @@
 					<ContextMenu name="СтатусКонтекстноеМеню" id="14"/>
 					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="15"/>
 				</InputField>
-				<InputField name="ПричинаОтказа" id="64">
-					<DataPath>Объект.ПричинаОтказа</DataPath>
-					<ContextMenu name="ПричинаОтказаКонтекстноеМеню" id="65"/>
-					<ExtendedTooltip name="ПричинаОтказаРасширеннаяПодсказка" id="66"/>
-				</InputField>
 			</ChildItems>
 		</UsualGroup>
+		<InputField name="ПричинаОтказа" id="64">
+			<DataPath>Объект.ПричинаОтказа</DataPath>
+			<Width>100</Width>
+			<Height>2</Height>
+			<ContextMenu name="ПричинаОтказаКонтекстноеМеню" id="65"/>
+			<ExtendedTooltip name="ПричинаОтказаРасширеннаяПодсказка" id="66"/>
+		</InputField>
 		<CheckBoxField name="Сформирован" id="59">
 			<DataPath>Объект.Сформирован</DataPath>
 			<CheckBoxType>Auto</CheckBoxType>
