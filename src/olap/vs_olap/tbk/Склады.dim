@@ -1,4 +1,4 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="2a15fb18-49e4-47f4-be6c-b250bd64febd" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="72f9935d-114a-4c54-8232-0ad371fb5586" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Склады</ID>
   <Name>Склады</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2877" scrolltop="-4062" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="9763" y="18547" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2877" scrolltop="-4062" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10980" y="16272" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
             </font>
@@ -104,84 +104,92 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="8b9c94d6-2045-42bc-b8cd-e44611ab7eba">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="6ce76f01-5dcf-4853-b854-15e863a7d3e5">
     <DataSourceViewID>OLAP</DataSourceViewID>
   </Source>
   <Type>Organization</Type>
   <UnknownMember>Visible</UnknownMember>
-  <ErrorConfiguration dwd:design-time-name="cdff504d-b79b-49e1-aedd-54ec5d1baa2f" />
+  <ErrorConfiguration dwd:design-time-name="eab6ec54-6991-45b6-925b-1d28cc540882" />
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="c4cf493c-309a-4765-8393-3beeadb9352e">
+    <Attribute dwd:design-time-name="80252979-9bce-42c4-bd94-d3e88a98f9cb">
       <ID>Ссылка</ID>
       <Name>Ссылка</Name>
       <Usage>Key</Usage>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="ebd303f3-0d27-4baa-89aa-4e8bef2c682b">
+        <KeyColumn dwd:design-time-name="5c8bb972-dd85-4b95-a8b8-0e782c834af4">
           <DataType>WChar</DataType>
           <DataSize>255</DataSize>
           <NullProcessing>UnknownMember</NullProcessing>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="2160b1ca-a816-4949-8690-20579818a891">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3151ac33-3e4c-418f-9d54-1a0003fee7bc">
             <TableID>dbo_Склады</TableID>
             <ColumnID>Ссылка</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
-      <NameColumn dwd:design-time-name="1a868f83-261b-440a-9133-fa0242715cc9">
+      <NameColumn dwd:design-time-name="f26253af-e812-41de-beb0-d95f73f7adfd">
         <DataType>WChar</DataType>
         <DataSize>255</DataSize>
-        <Source xsi:type="ColumnBinding" dwd:design-time-name="eade9bcb-0ada-4858-8627-7296677e2112">
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="a22449e3-0267-4c07-aff2-a6cf59e9c014">
           <TableID>dbo_Склады</TableID>
           <ColumnID>Наименование</ColumnID>
         </Source>
       </NameColumn>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="31b2b3e3-58e7-42b1-b0f7-a269a15ed8ee">
+        <AttributeRelationship dwd:design-time-name="c9526ef0-7b4e-4848-a02d-120aba055c1a">
           <AttributeID>Наименование</AttributeID>
           <Name>Наименование</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="bdd30ceb-ef63-421c-9e2a-37195bad5fc7">
+        <AttributeRelationship dwd:design-time-name="8d602965-1c6a-4bc1-a0a6-c62e0ac78abf">
           <AttributeID>Почтовый Ящик</AttributeID>
           <Name>Почтовый Ящик</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="fb9aa762-9264-4aca-8369-6e1be217042b">
+        <AttributeRelationship dwd:design-time-name="5839df22-e666-4d39-a203-3bae4ef83071">
           <AttributeID>Адрес</AttributeID>
           <Name>Адрес</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="047f5196-18a7-47d0-a043-1749f8f3cc27">
+        <AttributeRelationship dwd:design-time-name="d5f0f58d-edc1-4e15-9b48-1c56a5dd2aff">
           <AttributeID>Город</AttributeID>
           <Name>Город</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="19e1e31b-9807-473f-a5d9-2cb97a3c5ddf">
+        <AttributeRelationship dwd:design-time-name="5f8168f3-c20a-42e9-a293-0e1afe2a6589">
           <AttributeID>Код</AttributeID>
           <Name>Код</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="d1d98566-98b8-4b9e-928f-eb07817ef54d">
+        <AttributeRelationship dwd:design-time-name="465caa85-e3da-4810-a033-4abe44524daa">
           <AttributeID>Вид Склада</AttributeID>
           <Name>Вид Склада</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9dd85660-94b2-48ea-8edc-69a260099236">
+          <AttributeID>Администратор</AttributeID>
+          <Name>Администратор</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c5899a7d-e382-452c-b68b-7fca7887558f">
+          <AttributeID>Организация</AttributeID>
+          <Name>Организация</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="1ab9e0a3-1283-4304-bdf8-dea32a088254">
+    <Attribute dwd:design-time-name="e0ad99e0-80fb-4462-853d-182d40f2445a">
       <ID>Наименование</ID>
       <Name>Наименование</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="8d957c13-a7da-4278-9a37-7c674668f4b2">
+        <KeyColumn dwd:design-time-name="e809395d-b719-4fd1-a800-c14b2b15c79d">
           <DataType>WChar</DataType>
           <DataSize>255</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="df0dab09-f9ac-4b18-8f71-f1baeca10360">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="685922f5-ed84-43c4-b280-defda4f0425c">
             <TableID>dbo_Склады</TableID>
             <ColumnID>Наименование</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
-      <NameColumn dwd:design-time-name="54c7c06f-6753-4596-8fc6-43f8a82d2bf9">
+      <NameColumn dwd:design-time-name="6af72da6-04a4-4608-b3aa-c89ac3729281">
         <DataType>WChar</DataType>
         <DataSize>255</DataSize>
-        <Source xsi:type="ColumnBinding" dwd:design-time-name="2d7333d7-caf2-47e1-a84f-ffe8e123c15c">
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="bc897697-a2ac-43da-abd8-1ce599403414">
           <TableID>dbo_Склады</TableID>
           <ColumnID>Наименование</ColumnID>
         </Source>
@@ -190,14 +198,14 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="2f95aae6-2079-477c-bbbd-17e4bdcc4e71">
+    <Attribute dwd:design-time-name="c187fc1a-14a4-46c4-ac87-aef3ddeac19f">
       <ID>Почтовый Ящик</ID>
       <Name>Почтовый Ящик</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="76880d30-4f28-49a2-9e1b-2c4ceab4d674">
+        <KeyColumn dwd:design-time-name="707d70f1-8e6c-4279-b708-f1af0c731a3e">
           <DataType>WChar</DataType>
           <DataSize>255</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="2ee5d5df-7487-4a58-92fa-48551cd5e56d">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="264a44e7-4a92-4dcd-9a1a-1af8227b7ed2">
             <TableID>dbo_Склады</TableID>
             <ColumnID>ПочтовыйЯщик</ColumnID>
           </Source>
@@ -206,14 +214,14 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="2056acbc-3abf-49b1-b67a-b7e63bbf1852">
+    <Attribute dwd:design-time-name="3fe63f6f-dbb0-412a-b315-ea71c388613c">
       <ID>Адрес</ID>
       <Name>Адрес</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="887f79b0-7172-4ca9-a43c-88ecb9c18845">
+        <KeyColumn dwd:design-time-name="e72bce01-8d8a-452d-8345-dadf7cf68c9a">
           <DataType>WChar</DataType>
           <DataSize>255</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="4801e8e5-1767-4fdf-a13c-85f53095b7c8">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="014d4664-d761-4540-991f-25305cd33efe">
             <TableID>dbo_Склады</TableID>
             <ColumnID>Адрес</ColumnID>
           </Source>
@@ -222,14 +230,14 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="73042cf4-3aad-4336-ba66-38ef3402da88">
+    <Attribute dwd:design-time-name="8c587ca8-3ab1-4813-9f28-851c854d3a6f">
       <ID>Город</ID>
       <Name>Город</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="6be70584-d505-49aa-a876-4ffd1b386178">
+        <KeyColumn dwd:design-time-name="bb6feeb0-8b24-4294-8335-0386177cb62e">
           <DataType>WChar</DataType>
           <DataSize>255</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="ff77cfe1-7978-477a-8a75-d196c941c56b">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4de7a4e9-4cb6-406a-9177-5cc50fb2a40c">
             <TableID>dbo_Склады</TableID>
             <ColumnID>Город</ColumnID>
           </Source>
@@ -238,14 +246,14 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="89e8c4e8-7c00-482c-b883-6e329ecd4919">
+    <Attribute dwd:design-time-name="08a7927a-6256-47c9-a131-b3a1013e6747">
       <ID>Код</ID>
       <Name>Код</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="a0a50238-53da-4967-b2bf-e2ad92545843">
+        <KeyColumn dwd:design-time-name="a473206a-0149-49bc-b72a-0aeb6b7e40b4">
           <DataType>WChar</DataType>
           <DataSize>255</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="d55697e9-d456-48af-b484-04a8d0530a3c">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="176dcb1b-2816-497c-9be6-9c367081805a">
             <TableID>dbo_Склады</TableID>
             <ColumnID>Код</ColumnID>
           </Source>
@@ -254,14 +262,14 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="04322aa3-3fbd-4715-be47-0f2a983c42be">
+    <Attribute dwd:design-time-name="1fe5032a-236d-4f1d-8595-43206ff6e38e">
       <ID>Вид Склада</ID>
       <Name>Вид Склада</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="c2c897bc-e584-4f14-919b-6839e8be2797">
+        <KeyColumn dwd:design-time-name="aa8be11d-3723-4d80-99a6-a51bac0ea1ca">
           <DataType>WChar</DataType>
           <DataSize>255</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="67ee625c-c2a3-4c20-b0f3-eb36ed1fb86d">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1417c8bf-19e6-475e-b245-cf2d74908c66">
             <TableID>dbo_Склады</TableID>
             <ColumnID>ВидСклада</ColumnID>
           </Source>
@@ -270,28 +278,60 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
+    <Attribute dwd:design-time-name="dfe98697-4007-4aa9-8109-587949ab4727">
+      <ID>Администратор</ID>
+      <Name>Администратор</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cfb59985-f20b-4199-a6de-fbf63928cba8">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="97da1f59-5f57-4581-baa0-d0f5b57e1068">
+            <TableID>dbo_Склады</TableID>
+            <ColumnID>Ответственный</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="233a88f0-be1f-4c09-ba04-ffd7dbbf9316">
+      <ID>Организация</ID>
+      <Name>Организация</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="97feafaf-0784-4512-b54e-a26d5bb88eac">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6821647f-9c0c-4a1c-b431-784aaeb02a34">
+            <TableID>dbo_Склады</TableID>
+            <ColumnID>ЮрЛицо</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
   </Attributes>
   <Hierarchies>
-    <Hierarchy dwd:design-time-name="671b8585-d07d-4272-a09b-9d2fb37d32a4">
+    <Hierarchy dwd:design-time-name="96eac5fe-2f28-49bc-b821-b9f26aa2a604">
       <ID>Hierarchy</ID>
       <Name>Склад</Name>
       <Levels>
-        <Level dwd:design-time-name="e1feb55a-3522-4cb0-87fd-d8db21666f4e">
+        <Level dwd:design-time-name="a2769cd7-7205-46bf-8e15-42a17b9424a2">
           <ID>Город</ID>
           <Name>Город</Name>
           <SourceAttributeID>Город</SourceAttributeID>
         </Level>
-        <Level dwd:design-time-name="8bd1eb63-b5e3-4c64-9869-832f6485b4bd">
+        <Level dwd:design-time-name="c0e52e78-60b4-4cc1-b088-4a653833504d">
           <ID>Вид Склада</ID>
           <Name>Вид Склада</Name>
           <SourceAttributeID>Вид Склада</SourceAttributeID>
         </Level>
-        <Level dwd:design-time-name="54e2f5a8-f0f4-4f89-8376-f387fbf4134d">
+        <Level dwd:design-time-name="6cfc34c6-3578-4435-8ebc-a1f2b831d77b">
           <ID>Почтовый Ящик</ID>
           <Name>Почтовый Ящик</Name>
           <SourceAttributeID>Почтовый Ящик</SourceAttributeID>
         </Level>
-        <Level dwd:design-time-name="6629159d-e833-49d1-b6d9-b43d3be8fa9c">
+        <Level dwd:design-time-name="d472f3cc-61c3-4bfc-84fb-8b0189a27ea7">
           <ID>Ссылка</ID>
           <Name>Ссылка</Name>
           <SourceAttributeID>Ссылка</SourceAttributeID>
