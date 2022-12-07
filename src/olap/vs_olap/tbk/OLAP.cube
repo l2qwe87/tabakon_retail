@@ -2284,6 +2284,28 @@
             </Source>
           </Source>
         </Measure>
+        <Measure dwd:design-time-name="5a7aa9c6-a1e9-4051-aa01-687f1e704da6">
+          <ID>Прибыль УПР</ID>
+          <Name>Прибыль УПР</Name>
+          <Source dwd:design-time-name="c016e6a0-80ad-483c-b1a2-69563db2aa7f">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b6228405-a48c-4410-89e2-3d89c1e4943e">
+              <TableID>dbo_Себестоимость_АнализПродаж_УПР</TableID>
+              <ColumnID>ПрибыльУПР</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="5b6c3046-56dc-4138-8d93-6b9f659c6ee2">
+          <ID>Себестоимость Итого</ID>
+          <Name>Себестоимость Итого</Name>
+          <Source dwd:design-time-name="019bc238-e3e7-4b9f-8432-1189aa18bc64">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="2d02e0d7-5135-48d4-b81c-2853703697ca">
+              <TableID>dbo_Себестоимость_АнализПродаж_УПР</TableID>
+              <ColumnID>СебестоимостьИтого</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
       </Measures>
       <StorageMode>Molap</StorageMode>
       <ErrorConfiguration dwd:design-time-name="311f139a-4427-4198-b59a-438b28fa98f8">
