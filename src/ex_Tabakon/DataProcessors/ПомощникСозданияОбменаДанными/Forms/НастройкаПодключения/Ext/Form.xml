@@ -1,0 +1,3487 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Pages name="ПанельОсновная" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель основная</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ПанельОсновнаяРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<Page name="СтраницаСпособНастройкиПодключения" id="732">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница способ настройки подключения</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаСпособНастройкиПодключенияРасширеннаяПодсказка" id="733"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСпособНастройкиПодключения" id="738">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Варианты настройки подключения</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаСпособНастройкиПодключенияРасширеннаяПодсказка" id="739"/>
+							<ChildItems>
+								<RadioButtonField name="СпособНастройкиПодключения" id="740">
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>Tumbler</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Выбрать приложение из списка</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ПриложениеИзСписка</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Настроить подключение вручную</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">НастроитьВручную</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="СпособНастройкиПодключенияКонтекстноеМеню" id="741"/>
+									<ExtendedTooltip name="СпособНастройкиПодключенияРасширеннаяПодсказка" id="742"/>
+								</RadioButtonField>
+								<Pages name="ПанельСпособыНастройкиПодключения" id="734">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Панель способы настройки подключения</v8:content>
+										</v8:item>
+									</Title>
+									<PagesRepresentation>None</PagesRepresentation>
+									<ExtendedTooltip name="ПанельСпособыНастройкиПодключенияРасширеннаяПодсказка" id="735"/>
+									<ChildItems>
+										<Page name="СтраницаМоиПриложения" id="728">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница мои приложения</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="СтраницаМоиПриложенияРасширеннаяПодсказка" id="729"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаМоиПриложения" id="647">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Мои приложения</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<ControlRepresentation>Picture</ControlRepresentation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаМоиПриложенияРасширеннаяПодсказка" id="648"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаКоманднаяПанельСписокПриложений" id="611">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Командная панель список приложений</v8:content>
+																</v8:item>
+															</Title>
+															<Group>AlwaysHorizontal</Group>
+															<VerticalAlign>Center</VerticalAlign>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаКоманднаяПанельСписокПриложенийРасширеннаяПодсказка" id="612"/>
+															<ChildItems>
+																<CommandBar name="ГруппаКоманднаяПанельСписокПриложенийСлева" id="613">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Командная панель список приложений слева</v8:content>
+																		</v8:item>
+																	</Title>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<ExtendedTooltip name="ГруппаКоманднаяПанельСписокПриложенийСлеваРасширеннаяПодсказка" id="614"/>
+																	<ChildItems>
+																		<Button name="ПриложенияВСервисеОбновитьСписокДоступныхПриложений" id="133">
+																			<Type>CommandBarButton</Type>
+																			<CommandName>0</CommandName>
+																			<ExtendedTooltip name="ПриложенияВСервисеОбновитьСписокДоступныхПриложенийРасширеннаяПодсказка" id="134"/>
+																		</Button>
+																	</ChildItems>
+																</CommandBar>
+																<Pages name="ПанельПриложенияВСервисе" id="85">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Панель приложения в сервисе</v8:content>
+																		</v8:item>
+																	</Title>
+																	<PagesRepresentation>None</PagesRepresentation>
+																	<ExtendedTooltip name="ПанельПриложенияВСервисеРасширеннаяПодсказка" id="86"/>
+																	<ChildItems>
+																		<Page name="СтраницаПриложенияВСервисеОжидание" id="87">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Страница приложения в сервисе ожидание</v8:content>
+																				</v8:item>
+																			</Title>
+																			<Group>AlwaysHorizontal</Group>
+																			<ExtendedTooltip name="СтраницаПриложенияВСервисеОжиданиеРасширеннаяПодсказка" id="88"/>
+																			<ChildItems>
+																				<PictureDecoration name="ДекорацияПриложенияОжиданиеКартинка" id="91">
+																					<Title formatted="false">
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Декорация приложения ожидание картинка</v8:content>
+																						</v8:item>
+																					</Title>
+																					<Picture>
+																						<xr:Ref>CommonPicture.ДлительнаяОперация16</xr:Ref>
+																						<xr:LoadTransparent>true</xr:LoadTransparent>
+																					</Picture>
+																					<FileDragMode>AsFile</FileDragMode>
+																					<ContextMenu name="ДекорацияПриложенияОжиданиеКартинкаКонтекстноеМеню" id="92"/>
+																					<ExtendedTooltip name="ДекорацияПриложенияОжиданиеКартинкаРасширеннаяПодсказка" id="93"/>
+																				</PictureDecoration>
+																				<LabelDecoration name="ДекорацияПриложенияОжиданиеНадпись" id="96">
+																					<AutoMaxWidth>false</AutoMaxWidth>
+																					<Title formatted="false">
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Выполняется получение списка доступных программ...</v8:content>
+																						</v8:item>
+																					</Title>
+																					<ContextMenu name="ДекорацияПриложенияОжиданиеНадписьКонтекстноеМеню" id="97"/>
+																					<ExtendedTooltip name="ДекорацияПриложенияОжиданиеНадписьРасширеннаяПодсказка" id="98"/>
+																				</LabelDecoration>
+																			</ChildItems>
+																		</Page>
+																		<Page name="СтраницаПриложенияВСервисеОшибка" id="125">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Страница приложения в сервисе ошибка</v8:content>
+																				</v8:item>
+																			</Title>
+																			<Group>AlwaysHorizontal</Group>
+																			<ExtendedTooltip name="СтраницаПриложенияВСервисеОшибкаРасширеннаяПодсказка" id="126"/>
+																			<ChildItems>
+																				<PictureDecoration name="ДекорацияПриложенияОшибкаКартинка" id="127">
+																					<Title formatted="false">
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Декорация приложения ошибка картинка</v8:content>
+																						</v8:item>
+																					</Title>
+																					<Picture>
+																						<xr:Ref>CommonPicture.Предупреждение</xr:Ref>
+																						<xr:LoadTransparent>true</xr:LoadTransparent>
+																					</Picture>
+																					<FileDragMode>AsFile</FileDragMode>
+																					<ContextMenu name="ДекорацияПриложенияОшибкаКартинкаКонтекстноеМеню" id="128"/>
+																					<ExtendedTooltip name="ДекорацияПриложенияОшибкаКартинкаРасширеннаяПодсказка" id="129"/>
+																				</PictureDecoration>
+																				<LabelDecoration name="ДекорацияПриложенияОшибкаНадпись" id="130">
+																					<Title formatted="false">
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Не удалось получить список доступных программ.</v8:content>
+																						</v8:item>
+																					</Title>
+																					<ContextMenu name="ДекорацияПриложенияОшибкаНадписьКонтекстноеМеню" id="131"/>
+																					<ExtendedTooltip name="ДекорацияПриложенияОшибкаНадписьРасширеннаяПодсказка" id="132"/>
+																				</LabelDecoration>
+																			</ChildItems>
+																		</Page>
+																	</ChildItems>
+																</Pages>
+															</ChildItems>
+														</UsualGroup>
+														<Table name="ПриложенияВСервисе" id="66">
+															<Representation>List</Representation>
+															<CommandBarLocation>None</CommandBarLocation>
+															<ReadOnly>true</ReadOnly>
+															<SelectionMode>SingleRow</SelectionMode>
+															<AutoInsertNewRow>true</AutoInsertNewRow>
+															<EnableStartDrag>true</EnableStartDrag>
+															<EnableDrag>true</EnableDrag>
+															<FileDragMode>AsFile</FileDragMode>
+															<RowsPicture>
+																<xr:Ref>CommonPicture.РежимИспользованияПриложенияВСервисеЛокально</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</RowsPicture>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Приложения в сервисе</v8:content>
+																</v8:item>
+															</Title>
+															<RowFilter xsi:nil="true"/>
+															<ContextMenu name="ПриложенияВСервисеКонтекстноеМеню" id="67"/>
+															<AutoCommandBar name="ПриложенияВСервисеКоманднаяПанель" id="68"/>
+															<ExtendedTooltip name="ПриложенияВСервисеРасширеннаяПодсказка" id="69"/>
+															<SearchStringAddition name="ПриложенияВСервисеСтрокаПоиска" id="70">
+																<AdditionSource>
+																	<Item>ПриложенияВСервисе</Item>
+																	<Type>SearchStringRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="ПриложенияВСервисеСтрокаПоискаКонтекстноеМеню" id="71"/>
+																<ExtendedTooltip name="ПриложенияВСервисеСтрокаПоискаРасширеннаяПодсказка" id="72"/>
+															</SearchStringAddition>
+															<ViewStatusAddition name="ПриложенияВСервисеСостояниеПросмотра" id="73">
+																<AdditionSource>
+																	<Item>ПриложенияВСервисе</Item>
+																	<Type>ViewStatusRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="ПриложенияВСервисеСостояниеПросмотраКонтекстноеМеню" id="74"/>
+																<ExtendedTooltip name="ПриложенияВСервисеСостояниеПросмотраРасширеннаяПодсказка" id="75"/>
+															</ViewStatusAddition>
+															<SearchControlAddition name="ПриложенияВСервисеУправлениеПоиском" id="76">
+																<AdditionSource>
+																	<Item>ПриложенияВСервисе</Item>
+																	<Type>SearchControl</Type>
+																</AdditionSource>
+																<ContextMenu name="ПриложенияВСервисеУправлениеПоискомКонтекстноеМеню" id="77"/>
+																<ExtendedTooltip name="ПриложенияВСервисеУправлениеПоискомРасширеннаяПодсказка" id="78"/>
+															</SearchControlAddition>
+															<ChildItems>
+																<InputField name="ПриложенияВСервисеНаименованиеПриложения" id="79">
+																	<EditMode>EnterOnInput</EditMode>
+																	<ContextMenu name="ПриложенияВСервисеНаименованиеПриложенияКонтекстноеМеню" id="80"/>
+																	<ExtendedTooltip name="ПриложенияВСервисеНаименованиеПриложенияРасширеннаяПодсказка" id="81"/>
+																</InputField>
+																<InputField name="ПриложенияВСервисеПрефикс" id="82">
+																	<Visible>false</Visible>
+																	<EditMode>EnterOnInput</EditMode>
+																	<ContextMenu name="ПриложенияВСервисеПрефиксКонтекстноеМеню" id="83"/>
+																	<ExtendedTooltip name="ПриложенияВСервисеПрефиксРасширеннаяПодсказка" id="84"/>
+																</InputField>
+																<InputField name="ПриложенияВСервисеОбластьДанных" id="584">
+																	<EditMode>EnterOnInput</EditMode>
+																	<ContextMenu name="ПриложенияВСервисеОбластьДанныхКонтекстноеМеню" id="585"/>
+																	<ExtendedTooltip name="ПриложенияВСервисеОбластьДанныхРасширеннаяПодсказка" id="586"/>
+																</InputField>
+															</ChildItems>
+														</Table>
+														<PictureDecoration name="Декорация10" id="725">
+															<Height>1</Height>
+															<FileDragMode>AsFile</FileDragMode>
+															<ContextMenu name="Декорация10КонтекстноеМеню" id="726"/>
+															<ExtendedTooltip name="Декорация10РасширеннаяПодсказка" id="727"/>
+														</PictureDecoration>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаВидыПодключения" id="32">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница виды подключения</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="СтраницаВидыПодключенияРасширеннаяПодсказка" id="33"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаВидыПодключения" id="1">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Виды подключения</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<ControlRepresentation>Picture</ControlRepresentation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаВидыПодключенияРасширеннаяПодсказка" id="2"/>
+													<ChildItems>
+														<RadioButtonField name="ВидПодключенияВнешнееСоединение" id="106">
+															<TitleLocation>None</TitleLocation>
+															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+															<RadioButtonType>Auto</RadioButtonType>
+															<ChoiceList>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Подключение к другой программе на этом компьютере или по локальной сети</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:string">ВнешнееСоединение</Value>
+																	</xr:Value>
+																</xr:Item>
+															</ChoiceList>
+															<ContextMenu name="ВидПодключенияВнешнееСоединениеКонтекстноеМеню" id="107"/>
+															<ExtendedTooltip name="ВидПодключенияВнешнееСоединениеРасширеннаяПодсказка" id="108">
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<HorizontalStretch>true</HorizontalStretch>
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Данный вариант подключения рекомендуется в том случае, если другая программа находится на том же компьютере,
+что и эта программа, или обе программы расположены в одной локальной сети (в одном офисе).</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</RadioButtonField>
+														<RadioButtonField name="ВидПодключенияИнтернет" id="103">
+															<TitleLocation>None</TitleLocation>
+															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+															<RadioButtonType>Auto</RadioButtonType>
+															<ChoiceList>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Подключение к другой программе через Интернет</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:string">Интернет</Value>
+																	</xr:Value>
+																</xr:Item>
+															</ChoiceList>
+															<ContextMenu name="ВидПодключенияИнтернетКонтекстноеМеню" id="104"/>
+															<ExtendedTooltip name="ВидПодключенияИнтернетРасширеннаяПодсказка" id="105">
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Этот вариант подключения рекомендуется выбрать, если программа находится в другой сети (офисе)
+и при этом доступна для подключения через Интернет.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</RadioButtonField>
+														<RadioButtonField name="ВидПодключенияПассивныйРежим" id="112">
+															<TitleLocation>None</TitleLocation>
+															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+															<RadioButtonType>Auto</RadioButtonType>
+															<ChoiceList>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Подключение выполняется из другой программы через Интернет (пассивный режим)</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:string">ПассивныйРежим</Value>
+																	</xr:Value>
+																</xr:Item>
+															</ChoiceList>
+															<ContextMenu name="ВидПодключенияПассивныйРежимКонтекстноеМеню" id="113"/>
+															<ExtendedTooltip name="ВидПодключенияПассивныйРежимРасширеннаяПодсказка" id="114">
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>При таком варианте подключения эта программа отправляет и принимает данные через Интернет
+только по запросу от программы-корреспондента.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</RadioButtonField>
+														<UsualGroup name="ГруппаФайлНастройкиПассивныйРежим" id="723">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Файл настройки пассивный режим</v8:content>
+																</v8:item>
+															</Title>
+															<Group>AlwaysHorizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаФайлНастройкиПассивныйРежимРасширеннаяПодсказка" id="724"/>
+															<ChildItems>
+																<PictureDecoration name="Декорация2" id="752">
+																	<Width>1</Width>
+																	<Height>1</Height>
+																	<FileDragMode>AsFile</FileDragMode>
+																	<ContextMenu name="Декорация2КонтекстноеМеню" id="753"/>
+																	<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="754"/>
+																</PictureDecoration>
+																<UsualGroup name="Группа1" id="750">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа1</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Group>Vertical</Group>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="751"/>
+																	<ChildItems>
+																		<InputField name="ИмяФайлаНастроекXDTOКорреспондента" id="709">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Файл с настройками EnterpriseData</v8:content>
+																				</v8:item>
+																			</Title>
+																			<AutoMaxWidth>false</AutoMaxWidth>
+																			<ChoiceButton>true</ChoiceButton>
+																			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+																			<ContextMenu name="ИмяФайлаНастроекXDTOКорреспондентаКонтекстноеМеню" id="710"/>
+																			<ExtendedTooltip name="ИмяФайлаНастроекXDTOКорреспондентаРасширеннаяПодсказка" id="711"/>
+																		</InputField>
+																		<LabelDecoration name="ОписаниеМастерИзФайла1" id="683">
+																			<AutoMaxWidth>false</AutoMaxWidth>
+																			<TextColor>style:ПоясняющийТекст</TextColor>
+																			<Title formatted="false">
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Для продолжения настройки требуется конфигурационный файл с настройками синхронизации данных
+через EnterpriseData из программы-корреспондента.</v8:content>
+																				</v8:item>
+																			</Title>
+																			<VerticalAlign>Top</VerticalAlign>
+																			<ContextMenu name="ОписаниеМастерИзФайла1КонтекстноеМеню" id="684"/>
+																			<ExtendedTooltip name="ОписаниеМастерИзФайла1РасширеннаяПодсказка" id="685"/>
+																		</LabelDecoration>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</UsualGroup>
+														<RadioButtonField name="ВидПодключенияОбычныеКаналыСвязи" id="109">
+															<TitleLocation>None</TitleLocation>
+															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+															<RadioButtonType>Auto</RadioButtonType>
+															<ChoiceList>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Синхронизация данных через файл, без подключения к другой программе</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:string">ОбычныеКаналыСвязи</Value>
+																	</xr:Value>
+																</xr:Item>
+															</ChoiceList>
+															<ContextMenu name="ВидПодключенияОбычныеКаналыСвязиКонтекстноеМеню" id="110"/>
+															<ExtendedTooltip name="ВидПодключенияОбычныеКаналыСвязиРасширеннаяПодсказка" id="111">
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>В случае если к другой программе нет возможности прямого подключения по локальной сети или через Интернет (веб-сервисы),
+рекомендуется использовать другие каналы связи: сетевой каталог, FTP-ресурс или электронную почту. При этом программы,
+между которыми настроена синхронизация данных, могут работать полностью автономно друг от друга и в разное время.
+Такой вариант подходит не только для синхронизации данных с программами, расположенными в других сетях (офисах),
+но и для программ в одной сети.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</RadioButtonField>
+														<UsualGroup name="ГруппаФайлНастройкиОбычныеКаналыСвязи" id="743">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Файл настройки обычные каналы связи</v8:content>
+																</v8:item>
+															</Title>
+															<Group>AlwaysHorizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаФайлНастройкиОбычныеКаналыСвязиРасширеннаяПодсказка" id="744"/>
+															<ChildItems>
+																<PictureDecoration name="Декорация1" id="747">
+																	<Width>1</Width>
+																	<Height>1</Height>
+																	<FileDragMode>AsFile</FileDragMode>
+																	<ContextMenu name="Декорация1КонтекстноеМеню" id="748"/>
+																	<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="749"/>
+																</PictureDecoration>
+																<UsualGroup name="Группа2" id="745">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа2</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Group>Vertical</Group>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="746"/>
+																	<ChildItems>
+																		<UsualGroup name="Группа3" id="669">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Файл настройки обычные каналы связи</v8:content>
+																				</v8:item>
+																			</Title>
+																			<Group>AlwaysHorizontal</Group>
+																			<Representation>None</Representation>
+																			<ShowTitle>false</ShowTitle>
+																			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="670"/>
+																			<ChildItems>
+																				<CheckBoxField name="ЗагрузитьПараметрыПодключенияИзФайла" id="666">
+																					<TitleLocation>Right</TitleLocation>
+																					<CheckBoxType>Auto</CheckBoxType>
+																					<ContextMenu name="ЗагрузитьПараметрыПодключенияИзФайлаКонтекстноеМеню" id="667"/>
+																					<ExtendedTooltip name="ЗагрузитьПараметрыПодключенияИзФайлаРасширеннаяПодсказка" id="668"/>
+																				</CheckBoxField>
+																				<InputField name="ИмяФайлаНастроекПодключенияДляЗагрузки" id="617">
+																					<TitleLocation>None</TitleLocation>
+																					<ToolTipRepresentation>Button</ToolTipRepresentation>
+																					<AutoMaxWidth>false</AutoMaxWidth>
+																					<ChoiceButton>true</ChoiceButton>
+																					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+																					<ContextMenu name="ИмяФайлаНастроекПодключенияДляЗагрузкиКонтекстноеМеню" id="618"/>
+																					<ExtendedTooltip name="ИмяФайлаНастроекПодключенияДляЗагрузкиРасширеннаяПодсказка" id="619">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Если файл параметров подключения утерян, то для формирования нового файла необходимо:
+ - перейти в первую программу 
+ - перейти в форму синхронизации данных 
+ - выбрать требуемую синхронизацию данных и открыть ее параметры 
+ - в командной панели формы следует выбрать пункт меню: "Все действия" –&gt; "Получить настройки синхронизации данных для другой программы..."</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
+																				</InputField>
+																			</ChildItems>
+																		</UsualGroup>
+																		<LabelDecoration name="ОписаниеМастерИзФайла" id="663">
+																			<AutoMaxWidth>false</AutoMaxWidth>
+																			<TextColor>style:ПоясняющийТекст</TextColor>
+																			<Title formatted="false">
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Можно загрузить параметры подключения из файла, созданного в программе-корреспонденте
+при настройке синхронизации данных.</v8:content>
+																				</v8:item>
+																			</Title>
+																			<VerticalAlign>Top</VerticalAlign>
+																			<ContextMenu name="ОписаниеМастерИзФайлаКонтекстноеМеню" id="664"/>
+																			<ExtendedTooltip name="ОписаниеМастерИзФайлаРасширеннаяПодсказка" id="665"/>
+																		</LabelDecoration>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</Page>
+									</ChildItems>
+								</Pages>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПараметрыПодключенияИнтернет" id="145">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница параметры подключения интернет</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаПараметрыПодключенияИнтернетРасширеннаяПодсказка" id="146"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПараметрыПодключенияИнтернет" id="410">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Параметры подключения через Интернет</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<ExtendedTooltip name="ГруппаПараметрыПодключенияИнтернетРасширеннаяПодсказка" id="411"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация14" id="449">
+									<ContextMenu name="Декорация14КонтекстноеМеню" id="450"/>
+									<ExtendedTooltip name="Декорация14РасширеннаяПодсказка" id="451"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаПараметрыИнтернет" id="447">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Параметры интернет</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПараметрыИнтернетРасширеннаяПодсказка" id="448"/>
+									<ChildItems>
+										<InputField name="ИнтернетВебАдрес" id="184">
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ContextMenu name="ИнтернетВебАдресКонтекстноеМеню" id="185"/>
+											<ExtendedTooltip name="ИнтернетВебАдресРасширеннаяПодсказка" id="186">
+												<AutoMaxWidth>false</AutoMaxWidth>
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Ссылка для входа в программу (как в веб-браузере).
+Например, https://site.domain/database/123
+</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+										</InputField>
+										<InputField name="ИнтернетИмяПользователя" id="187">
+											<Width>20</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ИнтернетИмяПользователяКонтекстноеМеню" id="188"/>
+											<ExtendedTooltip name="ИнтернетИмяПользователяРасширеннаяПодсказка" id="189"/>
+										</InputField>
+										<UsualGroup name="ГруппаИнтернетПароль" id="196">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Интернет пароль</v8:content>
+												</v8:item>
+											</Title>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаИнтернетПарольРасширеннаяПодсказка" id="197"/>
+											<ChildItems>
+												<InputField name="ИнтернетПароль" id="190">
+													<Width>20</Width>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<HorizontalStretch>false</HorizontalStretch>
+													<PasswordMode>true</PasswordMode>
+													<ContextMenu name="ИнтернетПарольКонтекстноеМеню" id="191"/>
+													<ExtendedTooltip name="ИнтернетПарольРасширеннаяПодсказка" id="192"/>
+												</InputField>
+												<CheckBoxField name="ИнтернетЗапомнитьПароль" id="193">
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИнтернетЗапомнитьПарольКонтекстноеМеню" id="194"/>
+													<ExtendedTooltip name="ИнтернетЗапомнитьПарольРасширеннаяПодсказка" id="195"/>
+												</CheckBoxField>
+											</ChildItems>
+										</UsualGroup>
+										<Button name="ПараметрыДоступаВИнтернет1" id="353">
+											<Type>Hyperlink</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ПараметрыДоступаВИнтернет1РасширеннаяПодсказка" id="354"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПараметрыПодключенияВнешнееСоединение" id="143">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница параметры подключения внешнее соединение</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаПараметрыПодключенияВнешнееСоединениеРасширеннаяПодсказка" id="144"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПараметрыПодключенияВнешнееСоединение" id="147">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Параметры прямого подключения</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<ExtendedTooltip name="ГруппаПараметрыПодключенияВнешнееСоединениеРасширеннаяПодсказка" id="148"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация15" id="454">
+									<ContextMenu name="Декорация15КонтекстноеМеню" id="455"/>
+									<ExtendedTooltip name="Декорация15РасширеннаяПодсказка" id="456"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаПараметрыВнешнееСоединение" id="452">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Параметры внешнее соединение</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПараметрыВнешнееСоединениеРасширеннаяПодсказка" id="453"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаПараметрыРасположенияВнешнееСоединение" id="149">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Расположение программы</v8:content>
+												</v8:item>
+											</Title>
+											<Group>AlwaysHorizontal</Group>
+											<ControlRepresentation>Picture</ControlRepresentation>
+											<Representation>None</Representation>
+											<ExtendedTooltip name="ГруппаПараметрыРасположенияВнешнееСоединениеРасширеннаяПодсказка" id="150"/>
+											<ChildItems>
+												<LabelDecoration name="Декорация16" id="459">
+													<ContextMenu name="Декорация16КонтекстноеМеню" id="460"/>
+													<ExtendedTooltip name="Декорация16РасширеннаяПодсказка" id="461"/>
+												</LabelDecoration>
+												<UsualGroup name="ГруппаПараметрыРасположение" id="457">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Параметры расположение</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаПараметрыРасположениеРасширеннаяПодсказка" id="458"/>
+													<ChildItems>
+														<RadioButtonField name="ВнешнееСоединениеВариантРаботыИнформационнойБазыФайловый" id="157">
+															<TitleLocation>None</TitleLocation>
+															<RadioButtonType>Auto</RadioButtonType>
+															<ChoiceList>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>На данном компьютере или на компьютере в локальной сети</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:string">Файловый</Value>
+																	</xr:Value>
+																</xr:Item>
+															</ChoiceList>
+															<ContextMenu name="ВнешнееСоединениеВариантРаботыИнформационнойБазыФайловыйКонтекстноеМеню" id="158"/>
+															<ExtendedTooltip name="ВнешнееСоединениеВариантРаботыИнформационнойБазыФайловыйРасширеннаяПодсказка" id="159"/>
+														</RadioButtonField>
+														<InputField name="ВнешнееСоединениеКаталогИнформационнойБазы" id="163">
+															<ChoiceButton>true</ChoiceButton>
+															<AutoMarkIncomplete>true</AutoMarkIncomplete>
+															<ContextMenu name="ВнешнееСоединениеКаталогИнформационнойБазыКонтекстноеМеню" id="164"/>
+															<ExtendedTooltip name="ВнешнееСоединениеКаталогИнформационнойБазыРасширеннаяПодсказка" id="165"/>
+														</InputField>
+														<RadioButtonField name="ВнешнееСоединениеВариантРаботыИнформационнойБазыКлиентСерверный" id="160">
+															<TitleLocation>None</TitleLocation>
+															<RadioButtonType>Auto</RadioButtonType>
+															<ChoiceList>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>На сервере 1С:Предприятия</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:string">КлиентСерверный</Value>
+																	</xr:Value>
+																</xr:Item>
+															</ChoiceList>
+															<ContextMenu name="ВнешнееСоединениеВариантРаботыИнформационнойБазыКлиентСерверныйКонтекстноеМеню" id="161"/>
+															<ExtendedTooltip name="ВнешнееСоединениеВариантРаботыИнформационнойБазыКлиентСерверныйРасширеннаяПодсказка" id="162"/>
+														</RadioButtonField>
+														<InputField name="ВнешнееСоединениеКластерСерверов" id="166">
+															<AutoMarkIncomplete>true</AutoMarkIncomplete>
+															<ContextMenu name="ВнешнееСоединениеКластерСерверовКонтекстноеМеню" id="167"/>
+															<ExtendedTooltip name="ВнешнееСоединениеКластерСерверовРасширеннаяПодсказка" id="168"/>
+														</InputField>
+														<InputField name="ВнешнееСоединениеИмяИнформационнойБазы" id="169">
+															<AutoMarkIncomplete>true</AutoMarkIncomplete>
+															<ContextMenu name="ВнешнееСоединениеИмяИнформационнойБазыКонтекстноеМеню" id="170"/>
+															<ExtendedTooltip name="ВнешнееСоединениеИмяИнформационнойБазыРасширеннаяПодсказка" id="171"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПараметрыАутентификацииВнешнееСоединение" id="151">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Параметры входа в программу</v8:content>
+												</v8:item>
+											</Title>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ThroughAlign>DontUse</ThroughAlign>
+											<ExtendedTooltip name="ГруппаПараметрыАутентификацииВнешнееСоединениеРасширеннаяПодсказка" id="152"/>
+											<ChildItems>
+												<LabelDecoration name="Декорация17" id="464">
+													<ContextMenu name="Декорация17КонтекстноеМеню" id="465"/>
+													<ExtendedTooltip name="Декорация17РасширеннаяПодсказка" id="466"/>
+												</LabelDecoration>
+												<UsualGroup name="ГруппаПараметрыАутентификация" id="462">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Параметры аутентификация</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаПараметрыАутентификацияРасширеннаяПодсказка" id="463"/>
+													<ChildItems>
+														<RadioButtonField name="ВнешнееСоединениеВидАутентификацииОперационнаяСистема" id="175">
+															<TitleLocation>None</TitleLocation>
+															<RadioButtonType>Auto</RadioButtonType>
+															<ChoiceList>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Использовать учетную запись операционной системы</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:string">ОперационнаяСистема</Value>
+																	</xr:Value>
+																</xr:Item>
+															</ChoiceList>
+															<ContextMenu name="ВнешнееСоединениеВидАутентификацииОперационнаяСистемаКонтекстноеМеню" id="176"/>
+															<ExtendedTooltip name="ВнешнееСоединениеВидАутентификацииОперационнаяСистемаРасширеннаяПодсказка" id="177"/>
+														</RadioButtonField>
+														<RadioButtonField name="ВнешнееСоединениеВидАутентификации1СПредприятие" id="172">
+															<TitleLocation>None</TitleLocation>
+															<RadioButtonType>Auto</RadioButtonType>
+															<ChoiceList>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Использовать указанные имя пользователя и пароль</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:string">1СПредприятие</Value>
+																	</xr:Value>
+																</xr:Item>
+															</ChoiceList>
+															<ContextMenu name="ВнешнееСоединениеВидАутентификации1СПредприятиеКонтекстноеМеню" id="173"/>
+															<ExtendedTooltip name="ВнешнееСоединениеВидАутентификации1СПредприятиеРасширеннаяПодсказка" id="174"/>
+														</RadioButtonField>
+														<InputField name="ВнешнееСоединениеИмяПользователя" id="178">
+															<Width>20</Width>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<HorizontalStretch>false</HorizontalStretch>
+															<ContextMenu name="ВнешнееСоединениеИмяПользователяКонтекстноеМеню" id="179"/>
+															<ExtendedTooltip name="ВнешнееСоединениеИмяПользователяРасширеннаяПодсказка" id="180"/>
+														</InputField>
+														<InputField name="ВнешнееСоединениеПароль" id="181">
+															<Width>20</Width>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<HorizontalStretch>false</HorizontalStretch>
+															<PasswordMode>true</PasswordMode>
+															<ContextMenu name="ВнешнееСоединениеПарольКонтекстноеМеню" id="182"/>
+															<ExtendedTooltip name="ВнешнееСоединениеПарольРасширеннаяПодсказка" id="183"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПараметрыПодключенияОбычныеКаналыСвязи" id="198">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница параметры подключения обычные каналы связи</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаПараметрыПодключенияОбычныеКаналыСвязиРасширеннаяПодсказка" id="199"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСинхронизацияЧерезКаталог" id="237">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Синхронизация данных через локальный или сетевой каталог</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<ExtendedTooltip name="ГруппаСинхронизацияЧерезКаталогРасширеннаяПодсказка" id="238"/>
+							<ChildItems>
+								<CheckBoxField name="ОбычныеКаналыСвязиFILEИспользование" id="268">
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОбычныеКаналыСвязиFILEИспользованиеКонтекстноеМеню" id="269"/>
+									<ExtendedTooltip name="ОбычныеКаналыСвязиFILEИспользованиеРасширеннаяПодсказка" id="270"/>
+								</CheckBoxField>
+								<UsualGroup name="ГруппаОбычныеКаналыСвязиFILEИспользование" id="686">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обычные каналы связи FILE использование</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОбычныеКаналыСвязиFILEИспользованиеРасширеннаяПодсказка" id="687"/>
+									<ChildItems>
+										<InputField name="ОбычныеКаналыСвязиFILEКаталог" id="211">
+											<ChoiceButton>true</ChoiceButton>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ContextMenu name="ОбычныеКаналыСвязиFILEКаталогКонтекстноеМеню" id="212"/>
+											<ExtendedTooltip name="ОбычныеКаналыСвязиFILEКаталогРасширеннаяПодсказка" id="213"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСинхронизацияЧерезFTP" id="239">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Синхронизация данных через каталог на FTP-сервере</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<ExtendedTooltip name="ГруппаСинхронизацияЧерезFTPРасширеннаяПодсказка" id="240"/>
+							<ChildItems>
+								<CheckBoxField name="ОбычныеКаналыСвязиFTPИспользование" id="271">
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОбычныеКаналыСвязиFTPИспользованиеКонтекстноеМеню" id="272"/>
+									<ExtendedTooltip name="ОбычныеКаналыСвязиFTPИспользованиеРасширеннаяПодсказка" id="273"/>
+								</CheckBoxField>
+								<UsualGroup name="ГруппаОбычныеКаналыСвязиFTPИспользование" id="688">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обычные каналы связи FTP использование</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОбычныеКаналыСвязиFTPИспользованиеРасширеннаяПодсказка" id="689"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаСинхронизацияЧерезFTPКаталог" id="252">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Синхронизация через FTP каталог</v8:content>
+												</v8:item>
+											</Title>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаСинхронизацияЧерезFTPКаталогРасширеннаяПодсказка" id="253"/>
+											<ChildItems>
+												<InputField name="ОбычныеКаналыСвязиFTPКаталог" id="246">
+													<AutoMarkIncomplete>true</AutoMarkIncomplete>
+													<ContextMenu name="ОбычныеКаналыСвязиFTPКаталогКонтекстноеМеню" id="247"/>
+													<ExtendedTooltip name="ОбычныеКаналыСвязиFTPКаталогРасширеннаяПодсказка" id="248"/>
+												</InputField>
+												<InputField name="ОбычныеКаналыСвязиFTPПорт" id="254">
+													<ContextMenu name="ОбычныеКаналыСвязиFTPПортКонтекстноеМеню" id="255"/>
+													<ExtendedTooltip name="ОбычныеКаналыСвязиFTPПортРасширеннаяПодсказка" id="256"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="СинхронизацияЧерезFTPАутентификация" id="285">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Синхронизация через FTP аутентификация</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="СинхронизацияЧерезFTPАутентификацияРасширеннаяПодсказка" id="286"/>
+											<ChildItems>
+												<InputField name="ОбычныеКаналыСвязиFTPПользователь" id="257">
+													<Width>20</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="ОбычныеКаналыСвязиFTPПользовательКонтекстноеМеню" id="258"/>
+													<ExtendedTooltip name="ОбычныеКаналыСвязиFTPПользовательРасширеннаяПодсказка" id="259"/>
+												</InputField>
+												<InputField name="ОбычныеКаналыСвязиFTPПароль" id="260">
+													<Width>20</Width>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<HorizontalStretch>false</HorizontalStretch>
+													<PasswordMode>true</PasswordMode>
+													<ContextMenu name="ОбычныеКаналыСвязиFTPПарольКонтекстноеМеню" id="261"/>
+													<ExtendedTooltip name="ОбычныеКаналыСвязиFTPПарольРасширеннаяПодсказка" id="262"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаОграничениеРазмераФайлаFTP" id="342">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ограничение размера файла FTP</v8:content>
+												</v8:item>
+											</Title>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаОграничениеРазмераФайлаFTPРасширеннаяПодсказка" id="343"/>
+											<ChildItems>
+												<CheckBoxField name="ОбычныеКаналыСвязиFTPИспользоватьОграничениеРазмераФайла" id="344">
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ОбычныеКаналыСвязиFTPИспользоватьОграничениеРазмераФайлаКонтекстноеМеню" id="345"/>
+													<ExtendedTooltip name="ОбычныеКаналыСвязиFTPИспользоватьОграничениеРазмераФайлаРасширеннаяПодсказка" id="346"/>
+												</CheckBoxField>
+												<InputField name="ОбычныеКаналыСвязиFTPМаксимальныйДопустимыйРазмерФайла" id="347">
+													<TitleLocation>None</TitleLocation>
+													<Width>9</Width>
+													<AutoMarkIncomplete>true</AutoMarkIncomplete>
+													<ContextMenu name="ОбычныеКаналыСвязиFTPМаксимальныйДопустимыйРазмерФайлаКонтекстноеМеню" id="348"/>
+													<ExtendedTooltip name="ОбычныеКаналыСвязиFTPМаксимальныйДопустимыйРазмерФайлаРасширеннаяПодсказка" id="349"/>
+												</InputField>
+												<LabelDecoration name="Декорация5" id="350">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>КБ</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Декорация5КонтекстноеМеню" id="351"/>
+													<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="352"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<CheckBoxField name="ОбычныеКаналыСвязиFTPПассивныйРежим" id="334">
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ОбычныеКаналыСвязиFTPПассивныйРежимКонтекстноеМеню" id="335"/>
+											<ExtendedTooltip name="ОбычныеКаналыСвязиFTPПассивныйРежимРасширеннаяПодсказка" id="336"/>
+										</CheckBoxField>
+										<Button name="ПараметрыДоступаВИнтернет" id="337">
+											<Type>Hyperlink</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ПараметрыДоступаВИнтернетРасширеннаяПодсказка" id="338"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСинхронизацияЧерезEMAIL" id="241">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Синхронизация данных через электронную почту</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<ExtendedTooltip name="ГруппаСинхронизацияЧерезEMAILРасширеннаяПодсказка" id="242"/>
+							<ChildItems>
+								<CheckBoxField name="ОбычныеКаналыСвязиEMAILИспользование" id="279">
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОбычныеКаналыСвязиEMAILИспользованиеКонтекстноеМеню" id="280"/>
+									<ExtendedTooltip name="ОбычныеКаналыСвязиEMAILИспользованиеРасширеннаяПодсказка" id="281"/>
+								</CheckBoxField>
+								<UsualGroup name="ГруппаОбычныеКаналыСвязиEMAILИспользование" id="693">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обычные каналы связи EMAIL использование</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОбычныеКаналыСвязиEMAILИспользованиеРасширеннаяПодсказка" id="694"/>
+									<ChildItems>
+										<InputField name="ОбычныеКаналыСвязиEMAILУчетнаяЗапись" id="282">
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ContextMenu name="ОбычныеКаналыСвязиEMAILУчетнаяЗаписьКонтекстноеМеню" id="283"/>
+											<ExtendedTooltip name="ОбычныеКаналыСвязиEMAILУчетнаяЗаписьРасширеннаяПодсказка" id="284"/>
+										</InputField>
+										<UsualGroup name="ГруппаОграничениеРазмераВложенияEMAIL" id="304">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ограничение размера вложения EMAIL</v8:content>
+												</v8:item>
+											</Title>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаОграничениеРазмераВложенияEMAILРасширеннаяПодсказка" id="305"/>
+											<ChildItems>
+												<CheckBoxField name="ОбычныеКаналыСвязиEMAILИспользоватьОграничениеРазмераВложения" id="306">
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ОбычныеКаналыСвязиEMAILИспользоватьОграничениеРазмераВложенияКонтекстноеМеню" id="307"/>
+													<ExtendedTooltip name="ОбычныеКаналыСвязиEMAILИспользоватьОграничениеРазмераВложенияРасширеннаяПодсказка" id="308"/>
+												</CheckBoxField>
+												<InputField name="ОбычныеКаналыСвязиEMAILМаксимальныйДопустимыйРазмерВложения" id="309">
+													<TitleLocation>None</TitleLocation>
+													<AutoMarkIncomplete>true</AutoMarkIncomplete>
+													<ContextMenu name="ОбычныеКаналыСвязиEMAILМаксимальныйДопустимыйРазмерВложенияКонтекстноеМеню" id="310"/>
+													<ExtendedTooltip name="ОбычныеКаналыСвязиEMAILМаксимальныйДопустимыйРазмерВложенияРасширеннаяПодсказка" id="311"/>
+												</InputField>
+												<LabelDecoration name="Декорация4" id="339">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>КБ</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Декорация4КонтекстноеМеню" id="340"/>
+													<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="341"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаДополнительныеПараметрыПередачиДанных" id="629">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дополнительные настройки</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<ExtendedTooltip name="ГруппаДополнительныеПараметрыПередачиДанныхРасширеннаяПодсказка" id="630"/>
+							<ChildItems>
+								<CheckBoxField name="ОбычныеКаналыСвязиТранслитерироватьИменаФайлов" id="243">
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОбычныеКаналыСвязиТранслитерироватьИменаФайловКонтекстноеМеню" id="244"/>
+									<ExtendedTooltip name="ОбычныеКаналыСвязиТранслитерироватьИменаФайловРасширеннаяПодсказка" id="245">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Рекомендуется применять в случае, если при обмене возникают ошибки, связанные с  различными кодировками файлов.
+Настройку не следует использовать, в случае, если такая же настройка не поддерживается на стороне корреспондента.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</CheckBoxField>
+								<CheckBoxField name="ОбычныеКаналыСвязиАрхивироватьФайлы" id="214">
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОбычныеКаналыСвязиАрхивироватьФайлыКонтекстноеМеню" id="215"/>
+									<ExtendedTooltip name="ОбычныеКаналыСвязиАрхивироватьФайлыРасширеннаяПодсказка" id="216"/>
+								</CheckBoxField>
+								<UsualGroup name="ГруппаОбычныеКаналыСвязиПарольАрхива" id="266">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обычные каналы связи пароль архива</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОбычныеКаналыСвязиПарольАрхиваРасширеннаяПодсказка" id="267"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация13" id="690">
+											<ContextMenu name="Декорация13КонтекстноеМеню" id="691"/>
+											<ExtendedTooltip name="Декорация13РасширеннаяПодсказка" id="692"/>
+										</LabelDecoration>
+										<CheckBoxField name="ОбычныеКаналыСвязиИспользоватьПарольАрхива" id="263">
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ОбычныеКаналыСвязиИспользоватьПарольАрхиваКонтекстноеМеню" id="264"/>
+											<ExtendedTooltip name="ОбычныеКаналыСвязиИспользоватьПарольАрхиваРасширеннаяПодсказка" id="265"/>
+										</CheckBoxField>
+										<InputField name="ОбычныеКаналыСвязиПарольАрхива" id="217">
+											<TitleLocation>None</TitleLocation>
+											<Width>20</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<PasswordMode>true</PasswordMode>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ContextMenu name="ОбычныеКаналыСвязиПарольАрхиваКонтекстноеМеню" id="218"/>
+											<ExtendedTooltip name="ОбычныеКаналыСвязиПарольАрхиваРасширеннаяПодсказка" id="219"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПроверкаПодключения" id="355">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница проверка подключения</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаПроверкаПодключенияРасширеннаяПодсказка" id="356"/>
+					<ChildItems>
+						<Pages name="ПанельПроверкаПодключения" id="587">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель проверка подключения</v8:content>
+								</v8:item>
+							</Title>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="ПанельПроверкаПодключенияРасширеннаяПодсказка" id="588"/>
+							<ChildItems>
+								<Page name="СтраницаПроверкаПодключенияOnline" id="589">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница проверка подключения online</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СтраницаПроверкаПодключенияOnlineРасширеннаяПодсказка" id="590"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаПроверкаПодключенияOnline" id="359">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Проверка параметров подключения</v8:content>
+												</v8:item>
+											</Title>
+											<Group>AlwaysHorizontal</Group>
+											<ExtendedTooltip name="ГруппаПроверкаПодключенияOnlineРасширеннаяПодсказка" id="360"/>
+											<ChildItems>
+												<PictureDecoration name="ДекорацияПроверкаПодключенияOnlineОжиданиеКартинка" id="373">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Декорация проверка подключения online ожидание картинка</v8:content>
+														</v8:item>
+													</Title>
+													<Picture>
+														<xr:Ref>CommonPicture.ДлительнаяОперация48</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="ДекорацияПроверкаПодключенияOnlineОжиданиеКартинкаКонтекстноеМеню" id="374"/>
+													<ExtendedTooltip name="ДекорацияПроверкаПодключенияOnlineОжиданиеКартинкаРасширеннаяПодсказка" id="375"/>
+												</PictureDecoration>
+												<LabelDecoration name="ДекорацияПроверкаПодключенияOnlineОжиданиеНадпись" id="376">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Выполняется подключение к программе-корреспонденту.
+Пожалуйста, подождите...</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ДекорацияПроверкаПодключенияOnlineОжиданиеНадписьКонтекстноеМеню" id="377"/>
+													<ExtendedTooltip name="ДекорацияПроверкаПодключенияOnlineОжиданиеНадписьРасширеннаяПодсказка" id="378"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаПроверкаПодключенияOffline" id="591">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница проверка подключения offline</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СтраницаПроверкаПодключенияOfflineРасширеннаяПодсказка" id="592"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаПроверкаПодключенияOffline" id="593">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Проверка параметров передачи данных</v8:content>
+												</v8:item>
+											</Title>
+											<Group>AlwaysHorizontal</Group>
+											<ExtendedTooltip name="ГруппаПроверкаПодключенияOfflineРасширеннаяПодсказка" id="594"/>
+											<ChildItems>
+												<PictureDecoration name="ДекорацияПроверкаПодключенияOfflineОжиданиеКартинка" id="623">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Декорация проверка подключения offline ожидание картинка</v8:content>
+														</v8:item>
+													</Title>
+													<Picture>
+														<xr:Ref>CommonPicture.ДлительнаяОперация48</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="ДекорацияПроверкаПодключенияOfflineОжиданиеКартинкаКонтекстноеМеню" id="624"/>
+													<ExtendedTooltip name="ДекорацияПроверкаПодключенияOfflineОжиданиеКартинкаРасширеннаяПодсказка" id="625"/>
+												</PictureDecoration>
+												<LabelDecoration name="ДекорацияПроверкаПодключенияOfflineОжиданиеНадпись" id="626">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Выполняется проверка параметров передачи данных.
+Пожалуйста, подождите...</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ДекорацияПроверкаПодключенияOfflineОжиданиеНадписьКонтекстноеМеню" id="627"/>
+													<ExtendedTooltip name="ДекорацияПроверкаПодключенияOfflineОжиданиеНадписьРасширеннаяПодсказка" id="628"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОбщиеНастройкиСинхронизации" id="474">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница общие настройки синхронизации</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаОбщиеНастройкиСинхронизацииРасширеннаяПодсказка" id="475"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОбщиеНастройкиСинхронизации" id="476">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Параметры синхронизации данных</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<ExtendedTooltip name="ГруппаОбщиеНастройкиСинхронизацииРасширеннаяПодсказка" id="477"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаНастройкиПрограммыПредставление" id="514">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Представление этой программы</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<ControlRepresentation>Picture</ControlRepresentation>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="ГруппаНастройкиПрограммыПредставлениеРасширеннаяПодсказка" id="515"/>
+									<ChildItems>
+										<InputField name="Наименование" id="482">
+											<TitleLocation>Top</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ContextMenu name="НаименованиеКонтекстноеМеню" id="483"/>
+											<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="484"/>
+										</InputField>
+										<InputField name="Префикс" id="485">
+											<TitleLocation>Top</TitleLocation>
+											<Width>5</Width>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ContextMenu name="ПрефиксКонтекстноеМеню" id="486"/>
+											<ExtendedTooltip name="ПрефиксРасширеннаяПодсказка" id="487"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаНастройкиПрограммыКорреспондентаПредставление" id="516">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Представление программы-корреспондента</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<ControlRepresentation>Picture</ControlRepresentation>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="ГруппаНастройкиПрограммыКорреспондентаПредставлениеРасширеннаяПодсказка" id="517"/>
+									<ChildItems>
+										<InputField name="НаименованиеКорреспондента" id="488">
+											<TitleLocation>Top</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ContextMenu name="НаименованиеКорреспондентаКонтекстноеМеню" id="489"/>
+											<ExtendedTooltip name="НаименованиеКорреспондентаРасширеннаяПодсказка" id="490"/>
+										</InputField>
+										<InputField name="ПрефиксКорреспондента" id="491">
+											<TitleLocation>Top</TitleLocation>
+											<Width>5</Width>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ContextMenu name="ПрефиксКорреспондентаКонтекстноеМеню" id="492"/>
+											<ExtendedTooltip name="ПрефиксКорреспондентаРасширеннаяПодсказка" id="493"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаФайлНастроекПодключенияДляКорреспондента" id="631">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Прочее</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<ControlRepresentation>Picture</ControlRepresentation>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="ГруппаФайлНастроекПодключенияДляКорреспондентаРасширеннаяПодсказка" id="632"/>
+									<ChildItems>
+										<InputField name="ОбычныеКаналыСвязиВидТранспортаПоУмолчанию" id="636">
+											<TitleLocation>Top</TitleLocation>
+											<ListChoiceMode>true</ListChoiceMode>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ContextMenu name="ОбычныеКаналыСвязиВидТранспортаПоУмолчаниюКонтекстноеМеню" id="637"/>
+											<ExtendedTooltip name="ОбычныеКаналыСвязиВидТранспортаПоУмолчаниюРасширеннаяПодсказка" id="638"/>
+										</InputField>
+										<InputField name="ИмяФайлаНастроекПодключенияДляВыгрузки" id="633">
+											<TitleLocation>Top</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ChoiceButton>true</ChoiceButton>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ContextMenu name="ИмяФайлаНастроекПодключенияДляВыгрузкиКонтекстноеМеню" id="634"/>
+											<ExtendedTooltip name="ИмяФайлаНастроекПодключенияДляВыгрузкиРасширеннаяПодсказка" id="635"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаСохранениеНастроекПодключения" id="400">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница сохранение настроек подключения</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаСохранениеНастроекПодключенияРасширеннаяПодсказка" id="401"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСохранениеНастроекПодключения" id="402">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сохранение настроек</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<ExtendedTooltip name="ГруппаСохранениеНастроекПодключенияРасширеннаяПодсказка" id="403"/>
+							<ChildItems>
+								<PictureDecoration name="Декорация8" id="404">
+									<Picture>
+										<xr:Ref>CommonPicture.ДлительнаяОперация48</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="Декорация8КонтекстноеМеню" id="405"/>
+									<ExtendedTooltip name="Декорация8РасширеннаяПодсказка" id="406"/>
+								</PictureDecoration>
+								<LabelDecoration name="Декорация9" id="407">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выполняется сохранение настроек подключения.
+Пожалуйста, подождите...</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация9КонтекстноеМеню" id="408"/>
+									<ExtendedTooltip name="Декорация9РасширеннаяПодсказка" id="409"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОкончание" id="357">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница окончание</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаОкончаниеРасширеннаяПодсказка" id="358"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЗавершениеНастройкиПодключения" id="361">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка подключения завершена</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаЗавершениеНастройкиПодключенияРасширеннаяПодсказка" id="362"/>
+							<ChildItems>
+								<UsualGroup name="Группа27" id="577">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Параметры синхронизации данных в этой программе</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<VerticalAlign>Center</VerticalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа27РасширеннаяПодсказка" id="578"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация6" id="397">
+											<Picture>
+												<xr:Ref>CommonPicture.Успешно32</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация6КонтекстноеМеню" id="398"/>
+											<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="399"/>
+										</PictureDecoration>
+										<LabelDecoration name="Декорация7" id="366">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройки подключения в этой программе успешно сохранены.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация7КонтекстноеМеню" id="367"/>
+											<ExtendedTooltip name="Декорация7РасширеннаяПодсказка" id="368"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<Pages name="ПанельНавигации" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель навигации</v8:content>
+				</v8:item>
+			</Title>
+			<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ПанельНавигацииРасширеннаяПодсказка" id="31"/>
+			<ChildItems>
+				<Page name="СтраницаНавигацияНачало" id="34">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница навигация начало</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="СтраницаНавигацияНачалоРасширеннаяПодсказка" id="35"/>
+					<ChildItems>
+						<CommandBar name="КоманднаяПанельНавигацияНачалоСлева" id="40">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель навигация начало слева</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КоманднаяПанельНавигацияНачалоСлеваРасширеннаяПодсказка" id="41"/>
+						</CommandBar>
+						<CommandBar name="КоманднаяПанельНавигацияНачалоСправа" id="42">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель навигация начало справа</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="КоманднаяПанельНавигацияНачалоСправаРасширеннаяПодсказка" id="43"/>
+							<ChildItems>
+								<Button name="КомандаНавигацияНачалоДалее" id="44">
+									<Type>CommandBarButton</Type>
+									<DefaultButton>true</DefaultButton>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="КомандаНавигацияНачалоДалееРасширеннаяПодсказка" id="45"/>
+								</Button>
+								<Button name="КомандаНавигацияНачалоОтмена" id="46">
+									<Type>CommandBarButton</Type>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="КомандаНавигацияНачалоОтменаРасширеннаяПодсказка" id="47"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаНавигацияПродолжение" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница навигация продолжение</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="СтраницаНавигацияПродолжениеРасширеннаяПодсказка" id="37"/>
+					<ChildItems>
+						<CommandBar name="КоманднаяПанельНавигацияПродолжениеСлева" id="48">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель навигация продолжение слева</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КоманднаяПанельНавигацияПродолжениеСлеваРасширеннаяПодсказка" id="49"/>
+							<ChildItems>
+								<Button name="КомандаНавигацияПродолжениеНазад" id="52">
+									<Type>CommandBarButton</Type>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="КомандаНавигацияПродолжениеНазадРасширеннаяПодсказка" id="53"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+						<CommandBar name="КоманднаяПанельНавигацияПродолжениеСправа" id="50">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель навигация продолжение справа</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="КоманднаяПанельНавигацияПродолжениеСправаРасширеннаяПодсказка" id="51"/>
+							<ChildItems>
+								<Button name="КомандаНавигацияПродолжениеДалее" id="54">
+									<Type>CommandBarButton</Type>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="КомандаНавигацияПродолжениеДалееРасширеннаяПодсказка" id="55"/>
+								</Button>
+								<Button name="КомандаНавигацияПродолжениеОтмена" id="56">
+									<Type>CommandBarButton</Type>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="КомандаНавигацияПродолжениеОтменаРасширеннаяПодсказка" id="57"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаНавигацияОкончание" id="38">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница навигация окончание</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="СтраницаНавигацияОкончаниеРасширеннаяПодсказка" id="39"/>
+					<ChildItems>
+						<CommandBar name="КоманднаяПанельНавигацияОкончаниеСлева" id="58">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель навигация окончание слева</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КоманднаяПанельНавигацияОкончаниеСлеваРасширеннаяПодсказка" id="59"/>
+							<ChildItems>
+								<Button name="КомандаНавигацияОкончаниеНазад" id="62">
+									<Type>CommandBarButton</Type>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="КомандаНавигацияОкончаниеНазадРасширеннаяПодсказка" id="63"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+						<CommandBar name="КоманднаяПанельНавигацияОкончаниеСправа" id="60">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель навигация окончание справа</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="КоманднаяПанельНавигацияОкончаниеСправаРасширеннаяПодсказка" id="61"/>
+							<ChildItems>
+								<Button name="КомандаНавигацияОкончаниеГотово" id="64">
+									<Type>CommandBarButton</Type>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="КомандаНавигацияОкончаниеГотовоРасширеннаяПодсказка" id="65"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes/>
+	<BaseForm version="2.9">
+		<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+		<AutoTitle>false</AutoTitle>
+		<CommandBarLocation>None</CommandBarLocation>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+		<ChildItems>
+			<Pages name="ПанельОсновная" id="28">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Панель основная</v8:content>
+					</v8:item>
+				</Title>
+				<PagesRepresentation>None</PagesRepresentation>
+				<ExtendedTooltip name="ПанельОсновнаяРасширеннаяПодсказка" id="29"/>
+				<ChildItems>
+					<Page name="СтраницаСпособНастройкиПодключения" id="732">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Страница способ настройки подключения</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СтраницаСпособНастройкиПодключенияРасширеннаяПодсказка" id="733"/>
+						<ChildItems>
+							<UsualGroup name="ГруппаСпособНастройкиПодключения" id="738">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Варианты настройки подключения</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Vertical</Group>
+								<ExtendedTooltip name="ГруппаСпособНастройкиПодключенияРасширеннаяПодсказка" id="739"/>
+								<ChildItems>
+									<RadioButtonField name="СпособНастройкиПодключения" id="740">
+										<TitleLocation>None</TitleLocation>
+										<RadioButtonType>Tumbler</RadioButtonType>
+										<ChoiceList>
+											<xr:Item>
+												<xr:Presentation/>
+												<xr:CheckState>0</xr:CheckState>
+												<xr:Value xsi:type="FormChoiceListDesTimeValue">
+													<Presentation>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Выбрать приложение из списка</v8:content>
+														</v8:item>
+													</Presentation>
+													<Value xsi:type="xs:string">ПриложениеИзСписка</Value>
+												</xr:Value>
+											</xr:Item>
+											<xr:Item>
+												<xr:Presentation/>
+												<xr:CheckState>0</xr:CheckState>
+												<xr:Value xsi:type="FormChoiceListDesTimeValue">
+													<Presentation>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настроить подключение вручную</v8:content>
+														</v8:item>
+													</Presentation>
+													<Value xsi:type="xs:string">НастроитьВручную</Value>
+												</xr:Value>
+											</xr:Item>
+										</ChoiceList>
+										<ContextMenu name="СпособНастройкиПодключенияКонтекстноеМеню" id="741"/>
+										<ExtendedTooltip name="СпособНастройкиПодключенияРасширеннаяПодсказка" id="742"/>
+									</RadioButtonField>
+									<Pages name="ПанельСпособыНастройкиПодключения" id="734">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Панель способы настройки подключения</v8:content>
+											</v8:item>
+										</Title>
+										<PagesRepresentation>None</PagesRepresentation>
+										<ExtendedTooltip name="ПанельСпособыНастройкиПодключенияРасширеннаяПодсказка" id="735"/>
+										<ChildItems>
+											<Page name="СтраницаМоиПриложения" id="728">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Страница мои приложения</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="СтраницаМоиПриложенияРасширеннаяПодсказка" id="729"/>
+												<ChildItems>
+													<UsualGroup name="ГруппаМоиПриложения" id="647">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Мои приложения</v8:content>
+															</v8:item>
+														</Title>
+														<Group>Vertical</Group>
+														<ControlRepresentation>Picture</ControlRepresentation>
+														<ShowTitle>false</ShowTitle>
+														<ExtendedTooltip name="ГруппаМоиПриложенияРасширеннаяПодсказка" id="648"/>
+														<ChildItems>
+															<UsualGroup name="ГруппаКоманднаяПанельСписокПриложений" id="611">
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Командная панель список приложений</v8:content>
+																	</v8:item>
+																</Title>
+																<Group>AlwaysHorizontal</Group>
+																<VerticalAlign>Center</VerticalAlign>
+																<Representation>None</Representation>
+																<ShowTitle>false</ShowTitle>
+																<ExtendedTooltip name="ГруппаКоманднаяПанельСписокПриложенийРасширеннаяПодсказка" id="612"/>
+																<ChildItems>
+																	<CommandBar name="ГруппаКоманднаяПанельСписокПриложенийСлева" id="613">
+																		<Title>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Командная панель список приложений слева</v8:content>
+																			</v8:item>
+																		</Title>
+																		<HorizontalStretch>false</HorizontalStretch>
+																		<ExtendedTooltip name="ГруппаКоманднаяПанельСписокПриложенийСлеваРасширеннаяПодсказка" id="614"/>
+																		<ChildItems>
+																			<Button name="ПриложенияВСервисеОбновитьСписокДоступныхПриложений" id="133">
+																				<Type>CommandBarButton</Type>
+																				<CommandName>0</CommandName>
+																				<ExtendedTooltip name="ПриложенияВСервисеОбновитьСписокДоступныхПриложенийРасширеннаяПодсказка" id="134"/>
+																			</Button>
+																		</ChildItems>
+																	</CommandBar>
+																	<Pages name="ПанельПриложенияВСервисе" id="85">
+																		<Title>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Панель приложения в сервисе</v8:content>
+																			</v8:item>
+																		</Title>
+																		<PagesRepresentation>None</PagesRepresentation>
+																		<ExtendedTooltip name="ПанельПриложенияВСервисеРасширеннаяПодсказка" id="86"/>
+																		<ChildItems>
+																			<Page name="СтраницаПриложенияВСервисеОжидание" id="87">
+																				<Title>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Страница приложения в сервисе ожидание</v8:content>
+																					</v8:item>
+																				</Title>
+																				<Group>AlwaysHorizontal</Group>
+																				<ExtendedTooltip name="СтраницаПриложенияВСервисеОжиданиеРасширеннаяПодсказка" id="88"/>
+																				<ChildItems>
+																					<PictureDecoration name="ДекорацияПриложенияОжиданиеКартинка" id="91">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Декорация приложения ожидание картинка</v8:content>
+																							</v8:item>
+																						</Title>
+																						<Picture>
+																							<xr:Ref>CommonPicture.ДлительнаяОперация16</xr:Ref>
+																							<xr:LoadTransparent>true</xr:LoadTransparent>
+																						</Picture>
+																						<FileDragMode>AsFile</FileDragMode>
+																						<ContextMenu name="ДекорацияПриложенияОжиданиеКартинкаКонтекстноеМеню" id="92"/>
+																						<ExtendedTooltip name="ДекорацияПриложенияОжиданиеКартинкаРасширеннаяПодсказка" id="93"/>
+																					</PictureDecoration>
+																					<LabelDecoration name="ДекорацияПриложенияОжиданиеНадпись" id="96">
+																						<AutoMaxWidth>false</AutoMaxWidth>
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Выполняется получение списка доступных программ...</v8:content>
+																							</v8:item>
+																						</Title>
+																						<ContextMenu name="ДекорацияПриложенияОжиданиеНадписьКонтекстноеМеню" id="97"/>
+																						<ExtendedTooltip name="ДекорацияПриложенияОжиданиеНадписьРасширеннаяПодсказка" id="98"/>
+																					</LabelDecoration>
+																				</ChildItems>
+																			</Page>
+																			<Page name="СтраницаПриложенияВСервисеОшибка" id="125">
+																				<Title>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Страница приложения в сервисе ошибка</v8:content>
+																					</v8:item>
+																				</Title>
+																				<Group>AlwaysHorizontal</Group>
+																				<ExtendedTooltip name="СтраницаПриложенияВСервисеОшибкаРасширеннаяПодсказка" id="126"/>
+																				<ChildItems>
+																					<PictureDecoration name="ДекорацияПриложенияОшибкаКартинка" id="127">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Декорация приложения ошибка картинка</v8:content>
+																							</v8:item>
+																						</Title>
+																						<Picture>
+																							<xr:Ref>CommonPicture.Предупреждение</xr:Ref>
+																							<xr:LoadTransparent>true</xr:LoadTransparent>
+																						</Picture>
+																						<FileDragMode>AsFile</FileDragMode>
+																						<ContextMenu name="ДекорацияПриложенияОшибкаКартинкаКонтекстноеМеню" id="128"/>
+																						<ExtendedTooltip name="ДекорацияПриложенияОшибкаКартинкаРасширеннаяПодсказка" id="129"/>
+																					</PictureDecoration>
+																					<LabelDecoration name="ДекорацияПриложенияОшибкаНадпись" id="130">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Не удалось получить список доступных программ.</v8:content>
+																							</v8:item>
+																						</Title>
+																						<ContextMenu name="ДекорацияПриложенияОшибкаНадписьКонтекстноеМеню" id="131"/>
+																						<ExtendedTooltip name="ДекорацияПриложенияОшибкаНадписьРасширеннаяПодсказка" id="132"/>
+																					</LabelDecoration>
+																				</ChildItems>
+																			</Page>
+																		</ChildItems>
+																	</Pages>
+																</ChildItems>
+															</UsualGroup>
+															<Table name="ПриложенияВСервисе" id="66">
+																<Representation>List</Representation>
+																<CommandBarLocation>None</CommandBarLocation>
+																<ReadOnly>true</ReadOnly>
+																<SelectionMode>SingleRow</SelectionMode>
+																<AutoInsertNewRow>true</AutoInsertNewRow>
+																<EnableStartDrag>true</EnableStartDrag>
+																<EnableDrag>true</EnableDrag>
+																<FileDragMode>AsFile</FileDragMode>
+																<RowsPicture>
+																	<xr:Ref>CommonPicture.РежимИспользованияПриложенияВСервисеЛокально</xr:Ref>
+																	<xr:LoadTransparent>true</xr:LoadTransparent>
+																</RowsPicture>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Приложения в сервисе</v8:content>
+																	</v8:item>
+																</Title>
+																<RowFilter xsi:nil="true"/>
+																<ContextMenu name="ПриложенияВСервисеКонтекстноеМеню" id="67"/>
+																<AutoCommandBar name="ПриложенияВСервисеКоманднаяПанель" id="68"/>
+																<ExtendedTooltip name="ПриложенияВСервисеРасширеннаяПодсказка" id="69"/>
+																<SearchStringAddition name="ПриложенияВСервисеСтрокаПоиска" id="70">
+																	<AdditionSource>
+																		<Item>ПриложенияВСервисе</Item>
+																		<Type>SearchStringRepresentation</Type>
+																	</AdditionSource>
+																	<ContextMenu name="ПриложенияВСервисеСтрокаПоискаКонтекстноеМеню" id="71"/>
+																	<ExtendedTooltip name="ПриложенияВСервисеСтрокаПоискаРасширеннаяПодсказка" id="72"/>
+																</SearchStringAddition>
+																<ViewStatusAddition name="ПриложенияВСервисеСостояниеПросмотра" id="73">
+																	<AdditionSource>
+																		<Item>ПриложенияВСервисе</Item>
+																		<Type>ViewStatusRepresentation</Type>
+																	</AdditionSource>
+																	<ContextMenu name="ПриложенияВСервисеСостояниеПросмотраКонтекстноеМеню" id="74"/>
+																	<ExtendedTooltip name="ПриложенияВСервисеСостояниеПросмотраРасширеннаяПодсказка" id="75"/>
+																</ViewStatusAddition>
+																<SearchControlAddition name="ПриложенияВСервисеУправлениеПоиском" id="76">
+																	<AdditionSource>
+																		<Item>ПриложенияВСервисе</Item>
+																		<Type>SearchControl</Type>
+																	</AdditionSource>
+																	<ContextMenu name="ПриложенияВСервисеУправлениеПоискомКонтекстноеМеню" id="77"/>
+																	<ExtendedTooltip name="ПриложенияВСервисеУправлениеПоискомРасширеннаяПодсказка" id="78"/>
+																</SearchControlAddition>
+																<ChildItems>
+																	<InputField name="ПриложенияВСервисеНаименованиеПриложения" id="79">
+																		<EditMode>EnterOnInput</EditMode>
+																		<ContextMenu name="ПриложенияВСервисеНаименованиеПриложенияКонтекстноеМеню" id="80"/>
+																		<ExtendedTooltip name="ПриложенияВСервисеНаименованиеПриложенияРасширеннаяПодсказка" id="81"/>
+																	</InputField>
+																	<InputField name="ПриложенияВСервисеПрефикс" id="82">
+																		<Visible>false</Visible>
+																		<EditMode>EnterOnInput</EditMode>
+																		<ContextMenu name="ПриложенияВСервисеПрефиксКонтекстноеМеню" id="83"/>
+																		<ExtendedTooltip name="ПриложенияВСервисеПрефиксРасширеннаяПодсказка" id="84"/>
+																	</InputField>
+																	<InputField name="ПриложенияВСервисеОбластьДанных" id="584">
+																		<EditMode>EnterOnInput</EditMode>
+																		<ContextMenu name="ПриложенияВСервисеОбластьДанныхКонтекстноеМеню" id="585"/>
+																		<ExtendedTooltip name="ПриложенияВСервисеОбластьДанныхРасширеннаяПодсказка" id="586"/>
+																	</InputField>
+																</ChildItems>
+															</Table>
+															<PictureDecoration name="Декорация10" id="725">
+																<Height>1</Height>
+																<FileDragMode>AsFile</FileDragMode>
+																<ContextMenu name="Декорация10КонтекстноеМеню" id="726"/>
+																<ExtendedTooltip name="Декорация10РасширеннаяПодсказка" id="727"/>
+															</PictureDecoration>
+														</ChildItems>
+													</UsualGroup>
+												</ChildItems>
+											</Page>
+											<Page name="СтраницаВидыПодключения" id="32">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Страница виды подключения</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="СтраницаВидыПодключенияРасширеннаяПодсказка" id="33"/>
+												<ChildItems>
+													<UsualGroup name="ГруппаВидыПодключения" id="1">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Виды подключения</v8:content>
+															</v8:item>
+														</Title>
+														<Group>Vertical</Group>
+														<ControlRepresentation>Picture</ControlRepresentation>
+														<ShowTitle>false</ShowTitle>
+														<ExtendedTooltip name="ГруппаВидыПодключенияРасширеннаяПодсказка" id="2"/>
+														<ChildItems>
+															<RadioButtonField name="ВидПодключенияВнешнееСоединение" id="106">
+																<TitleLocation>None</TitleLocation>
+																<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																<RadioButtonType>Auto</RadioButtonType>
+																<ChoiceList>
+																	<xr:Item>
+																		<xr:Presentation/>
+																		<xr:CheckState>0</xr:CheckState>
+																		<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																			<Presentation>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Подключение к другой программе на этом компьютере или по локальной сети</v8:content>
+																				</v8:item>
+																			</Presentation>
+																			<Value xsi:type="xs:string">ВнешнееСоединение</Value>
+																		</xr:Value>
+																	</xr:Item>
+																</ChoiceList>
+																<ContextMenu name="ВидПодключенияВнешнееСоединениеКонтекстноеМеню" id="107"/>
+																<ExtendedTooltip name="ВидПодключенияВнешнееСоединениеРасширеннаяПодсказка" id="108">
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<HorizontalStretch>true</HorizontalStretch>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Данный вариант подключения рекомендуется в том случае, если другая программа находится на том же компьютере,
+что и эта программа, или обе программы расположены в одной локальной сети (в одном офисе).</v8:content>
+																		</v8:item>
+																	</Title>
+																</ExtendedTooltip>
+															</RadioButtonField>
+															<RadioButtonField name="ВидПодключенияИнтернет" id="103">
+																<TitleLocation>None</TitleLocation>
+																<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																<RadioButtonType>Auto</RadioButtonType>
+																<ChoiceList>
+																	<xr:Item>
+																		<xr:Presentation/>
+																		<xr:CheckState>0</xr:CheckState>
+																		<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																			<Presentation>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Подключение к другой программе через Интернет</v8:content>
+																				</v8:item>
+																			</Presentation>
+																			<Value xsi:type="xs:string">Интернет</Value>
+																		</xr:Value>
+																	</xr:Item>
+																</ChoiceList>
+																<ContextMenu name="ВидПодключенияИнтернетКонтекстноеМеню" id="104"/>
+																<ExtendedTooltip name="ВидПодключенияИнтернетРасширеннаяПодсказка" id="105">
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Этот вариант подключения рекомендуется выбрать, если программа находится в другой сети (офисе)
+и при этом доступна для подключения через Интернет.</v8:content>
+																		</v8:item>
+																	</Title>
+																</ExtendedTooltip>
+															</RadioButtonField>
+															<RadioButtonField name="ВидПодключенияПассивныйРежим" id="112">
+																<TitleLocation>None</TitleLocation>
+																<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																<RadioButtonType>Auto</RadioButtonType>
+																<ChoiceList>
+																	<xr:Item>
+																		<xr:Presentation/>
+																		<xr:CheckState>0</xr:CheckState>
+																		<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																			<Presentation>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Подключение выполняется из другой программы через Интернет (пассивный режим)</v8:content>
+																				</v8:item>
+																			</Presentation>
+																			<Value xsi:type="xs:string">ПассивныйРежим</Value>
+																		</xr:Value>
+																	</xr:Item>
+																</ChoiceList>
+																<ContextMenu name="ВидПодключенияПассивныйРежимКонтекстноеМеню" id="113"/>
+																<ExtendedTooltip name="ВидПодключенияПассивныйРежимРасширеннаяПодсказка" id="114">
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>При таком варианте подключения эта программа отправляет и принимает данные через Интернет
+только по запросу от программы-корреспондента.</v8:content>
+																		</v8:item>
+																	</Title>
+																</ExtendedTooltip>
+															</RadioButtonField>
+															<UsualGroup name="ГруппаФайлНастройкиПассивныйРежим" id="723">
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Файл настройки пассивный режим</v8:content>
+																	</v8:item>
+																</Title>
+																<Group>AlwaysHorizontal</Group>
+																<Representation>None</Representation>
+																<ShowTitle>false</ShowTitle>
+																<ExtendedTooltip name="ГруппаФайлНастройкиПассивныйРежимРасширеннаяПодсказка" id="724"/>
+																<ChildItems>
+																	<PictureDecoration name="Декорация2" id="752">
+																		<Width>1</Width>
+																		<Height>1</Height>
+																		<FileDragMode>AsFile</FileDragMode>
+																		<ContextMenu name="Декорация2КонтекстноеМеню" id="753"/>
+																		<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="754"/>
+																	</PictureDecoration>
+																	<UsualGroup name="Группа1" id="750">
+																		<Title>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Группа1</v8:content>
+																			</v8:item>
+																		</Title>
+																		<Group>Vertical</Group>
+																		<Representation>None</Representation>
+																		<ShowTitle>false</ShowTitle>
+																		<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="751"/>
+																		<ChildItems>
+																			<InputField name="ИмяФайлаНастроекXDTOКорреспондента" id="709">
+																				<Title>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Файл с настройками EnterpriseData</v8:content>
+																					</v8:item>
+																				</Title>
+																				<AutoMaxWidth>false</AutoMaxWidth>
+																				<ChoiceButton>true</ChoiceButton>
+																				<AutoMarkIncomplete>true</AutoMarkIncomplete>
+																				<ContextMenu name="ИмяФайлаНастроекXDTOКорреспондентаКонтекстноеМеню" id="710"/>
+																				<ExtendedTooltip name="ИмяФайлаНастроекXDTOКорреспондентаРасширеннаяПодсказка" id="711"/>
+																			</InputField>
+																			<LabelDecoration name="ОписаниеМастерИзФайла1" id="683">
+																				<AutoMaxWidth>false</AutoMaxWidth>
+																				<TextColor>style:ПоясняющийТекст</TextColor>
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Для продолжения настройки требуется конфигурационный файл с настройками синхронизации данных
+через EnterpriseData из программы-корреспондента.</v8:content>
+																					</v8:item>
+																				</Title>
+																				<VerticalAlign>Top</VerticalAlign>
+																				<ContextMenu name="ОписаниеМастерИзФайла1КонтекстноеМеню" id="684"/>
+																				<ExtendedTooltip name="ОписаниеМастерИзФайла1РасширеннаяПодсказка" id="685"/>
+																			</LabelDecoration>
+																		</ChildItems>
+																	</UsualGroup>
+																</ChildItems>
+															</UsualGroup>
+															<RadioButtonField name="ВидПодключенияОбычныеКаналыСвязи" id="109">
+																<TitleLocation>None</TitleLocation>
+																<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																<RadioButtonType>Auto</RadioButtonType>
+																<ChoiceList>
+																	<xr:Item>
+																		<xr:Presentation/>
+																		<xr:CheckState>0</xr:CheckState>
+																		<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																			<Presentation>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Синхронизация данных через файл, без подключения к другой программе</v8:content>
+																				</v8:item>
+																			</Presentation>
+																			<Value xsi:type="xs:string">ОбычныеКаналыСвязи</Value>
+																		</xr:Value>
+																	</xr:Item>
+																</ChoiceList>
+																<ContextMenu name="ВидПодключенияОбычныеКаналыСвязиКонтекстноеМеню" id="110"/>
+																<ExtendedTooltip name="ВидПодключенияОбычныеКаналыСвязиРасширеннаяПодсказка" id="111">
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>В случае если к другой программе нет возможности прямого подключения по локальной сети или через Интернет (веб-сервисы),
+рекомендуется использовать другие каналы связи: сетевой каталог, FTP-ресурс или электронную почту. При этом программы,
+между которыми настроена синхронизация данных, могут работать полностью автономно друг от друга и в разное время.
+Такой вариант подходит не только для синхронизации данных с программами, расположенными в других сетях (офисах),
+но и для программ в одной сети.</v8:content>
+																		</v8:item>
+																	</Title>
+																</ExtendedTooltip>
+															</RadioButtonField>
+															<UsualGroup name="ГруппаФайлНастройкиОбычныеКаналыСвязи" id="743">
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Файл настройки обычные каналы связи</v8:content>
+																	</v8:item>
+																</Title>
+																<Group>AlwaysHorizontal</Group>
+																<Representation>None</Representation>
+																<ShowTitle>false</ShowTitle>
+																<ExtendedTooltip name="ГруппаФайлНастройкиОбычныеКаналыСвязиРасширеннаяПодсказка" id="744"/>
+																<ChildItems>
+																	<PictureDecoration name="Декорация1" id="747">
+																		<Width>1</Width>
+																		<Height>1</Height>
+																		<FileDragMode>AsFile</FileDragMode>
+																		<ContextMenu name="Декорация1КонтекстноеМеню" id="748"/>
+																		<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="749"/>
+																	</PictureDecoration>
+																	<UsualGroup name="Группа2" id="745">
+																		<Title>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Группа2</v8:content>
+																			</v8:item>
+																		</Title>
+																		<Group>Vertical</Group>
+																		<Representation>None</Representation>
+																		<ShowTitle>false</ShowTitle>
+																		<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="746"/>
+																		<ChildItems>
+																			<UsualGroup name="Группа3" id="669">
+																				<Title>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Файл настройки обычные каналы связи</v8:content>
+																					</v8:item>
+																				</Title>
+																				<Group>AlwaysHorizontal</Group>
+																				<Representation>None</Representation>
+																				<ShowTitle>false</ShowTitle>
+																				<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="670"/>
+																				<ChildItems>
+																					<CheckBoxField name="ЗагрузитьПараметрыПодключенияИзФайла" id="666">
+																						<TitleLocation>Right</TitleLocation>
+																						<CheckBoxType>Auto</CheckBoxType>
+																						<ContextMenu name="ЗагрузитьПараметрыПодключенияИзФайлаКонтекстноеМеню" id="667"/>
+																						<ExtendedTooltip name="ЗагрузитьПараметрыПодключенияИзФайлаРасширеннаяПодсказка" id="668"/>
+																					</CheckBoxField>
+																					<InputField name="ИмяФайлаНастроекПодключенияДляЗагрузки" id="617">
+																						<TitleLocation>None</TitleLocation>
+																						<ToolTipRepresentation>Button</ToolTipRepresentation>
+																						<AutoMaxWidth>false</AutoMaxWidth>
+																						<ChoiceButton>true</ChoiceButton>
+																						<AutoMarkIncomplete>true</AutoMarkIncomplete>
+																						<ContextMenu name="ИмяФайлаНастроекПодключенияДляЗагрузкиКонтекстноеМеню" id="618"/>
+																						<ExtendedTooltip name="ИмяФайлаНастроекПодключенияДляЗагрузкиРасширеннаяПодсказка" id="619">
+																							<Title formatted="false">
+																								<v8:item>
+																									<v8:lang>ru</v8:lang>
+																									<v8:content>Если файл параметров подключения утерян, то для формирования нового файла необходимо:
+ - перейти в первую программу 
+ - перейти в форму синхронизации данных 
+ - выбрать требуемую синхронизацию данных и открыть ее параметры 
+ - в командной панели формы следует выбрать пункт меню: "Все действия" –&gt; "Получить настройки синхронизации данных для другой программы..."</v8:content>
+																								</v8:item>
+																							</Title>
+																						</ExtendedTooltip>
+																					</InputField>
+																				</ChildItems>
+																			</UsualGroup>
+																			<LabelDecoration name="ОписаниеМастерИзФайла" id="663">
+																				<AutoMaxWidth>false</AutoMaxWidth>
+																				<TextColor>style:ПоясняющийТекст</TextColor>
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Можно загрузить параметры подключения из файла, созданного в программе-корреспонденте
+при настройке синхронизации данных.</v8:content>
+																					</v8:item>
+																				</Title>
+																				<VerticalAlign>Top</VerticalAlign>
+																				<ContextMenu name="ОписаниеМастерИзФайлаКонтекстноеМеню" id="664"/>
+																				<ExtendedTooltip name="ОписаниеМастерИзФайлаРасширеннаяПодсказка" id="665"/>
+																			</LabelDecoration>
+																		</ChildItems>
+																	</UsualGroup>
+																</ChildItems>
+															</UsualGroup>
+														</ChildItems>
+													</UsualGroup>
+												</ChildItems>
+											</Page>
+										</ChildItems>
+									</Pages>
+								</ChildItems>
+							</UsualGroup>
+						</ChildItems>
+					</Page>
+					<Page name="СтраницаПараметрыПодключенияИнтернет" id="145">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Страница параметры подключения интернет</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СтраницаПараметрыПодключенияИнтернетРасширеннаяПодсказка" id="146"/>
+						<ChildItems>
+							<UsualGroup name="ГруппаПараметрыПодключенияИнтернет" id="410">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Параметры подключения через Интернет</v8:content>
+									</v8:item>
+								</Title>
+								<Group>AlwaysHorizontal</Group>
+								<ExtendedTooltip name="ГруппаПараметрыПодключенияИнтернетРасширеннаяПодсказка" id="411"/>
+								<ChildItems>
+									<LabelDecoration name="Декорация14" id="449">
+										<ContextMenu name="Декорация14КонтекстноеМеню" id="450"/>
+										<ExtendedTooltip name="Декорация14РасширеннаяПодсказка" id="451"/>
+									</LabelDecoration>
+									<UsualGroup name="ГруппаПараметрыИнтернет" id="447">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Параметры интернет</v8:content>
+											</v8:item>
+										</Title>
+										<Group>Vertical</Group>
+										<Representation>None</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаПараметрыИнтернетРасширеннаяПодсказка" id="448"/>
+										<ChildItems>
+											<InputField name="ИнтернетВебАдрес" id="184">
+												<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+												<AutoMarkIncomplete>true</AutoMarkIncomplete>
+												<ContextMenu name="ИнтернетВебАдресКонтекстноеМеню" id="185"/>
+												<ExtendedTooltip name="ИнтернетВебАдресРасширеннаяПодсказка" id="186">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Ссылка для входа в программу (как в веб-браузере).
+Например, https://site.domain/database/123
+</v8:content>
+														</v8:item>
+													</Title>
+												</ExtendedTooltip>
+											</InputField>
+											<InputField name="ИнтернетИмяПользователя" id="187">
+												<Width>20</Width>
+												<AutoMaxWidth>false</AutoMaxWidth>
+												<HorizontalStretch>false</HorizontalStretch>
+												<ContextMenu name="ИнтернетИмяПользователяКонтекстноеМеню" id="188"/>
+												<ExtendedTooltip name="ИнтернетИмяПользователяРасширеннаяПодсказка" id="189"/>
+											</InputField>
+											<UsualGroup name="ГруппаИнтернетПароль" id="196">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Интернет пароль</v8:content>
+													</v8:item>
+												</Title>
+												<Group>AlwaysHorizontal</Group>
+												<Representation>None</Representation>
+												<ShowTitle>false</ShowTitle>
+												<ExtendedTooltip name="ГруппаИнтернетПарольРасширеннаяПодсказка" id="197"/>
+												<ChildItems>
+													<InputField name="ИнтернетПароль" id="190">
+														<Width>20</Width>
+														<AutoMaxWidth>false</AutoMaxWidth>
+														<HorizontalStretch>false</HorizontalStretch>
+														<PasswordMode>true</PasswordMode>
+														<ContextMenu name="ИнтернетПарольКонтекстноеМеню" id="191"/>
+														<ExtendedTooltip name="ИнтернетПарольРасширеннаяПодсказка" id="192"/>
+													</InputField>
+													<CheckBoxField name="ИнтернетЗапомнитьПароль" id="193">
+														<TitleLocation>Right</TitleLocation>
+														<CheckBoxType>Auto</CheckBoxType>
+														<ContextMenu name="ИнтернетЗапомнитьПарольКонтекстноеМеню" id="194"/>
+														<ExtendedTooltip name="ИнтернетЗапомнитьПарольРасширеннаяПодсказка" id="195"/>
+													</CheckBoxField>
+												</ChildItems>
+											</UsualGroup>
+											<Button name="ПараметрыДоступаВИнтернет1" id="353">
+												<Type>Hyperlink</Type>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="ПараметрыДоступаВИнтернет1РасширеннаяПодсказка" id="354"/>
+											</Button>
+										</ChildItems>
+									</UsualGroup>
+								</ChildItems>
+							</UsualGroup>
+						</ChildItems>
+					</Page>
+					<Page name="СтраницаПараметрыПодключенияВнешнееСоединение" id="143">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Страница параметры подключения внешнее соединение</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СтраницаПараметрыПодключенияВнешнееСоединениеРасширеннаяПодсказка" id="144"/>
+						<ChildItems>
+							<UsualGroup name="ГруппаПараметрыПодключенияВнешнееСоединение" id="147">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Параметры прямого подключения</v8:content>
+									</v8:item>
+								</Title>
+								<Group>AlwaysHorizontal</Group>
+								<ExtendedTooltip name="ГруппаПараметрыПодключенияВнешнееСоединениеРасширеннаяПодсказка" id="148"/>
+								<ChildItems>
+									<LabelDecoration name="Декорация15" id="454">
+										<ContextMenu name="Декорация15КонтекстноеМеню" id="455"/>
+										<ExtendedTooltip name="Декорация15РасширеннаяПодсказка" id="456"/>
+									</LabelDecoration>
+									<UsualGroup name="ГруппаПараметрыВнешнееСоединение" id="452">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Параметры внешнее соединение</v8:content>
+											</v8:item>
+										</Title>
+										<Group>Vertical</Group>
+										<Representation>None</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаПараметрыВнешнееСоединениеРасширеннаяПодсказка" id="453"/>
+										<ChildItems>
+											<UsualGroup name="ГруппаПараметрыРасположенияВнешнееСоединение" id="149">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Расположение программы</v8:content>
+													</v8:item>
+												</Title>
+												<Group>AlwaysHorizontal</Group>
+												<ControlRepresentation>Picture</ControlRepresentation>
+												<Representation>None</Representation>
+												<ExtendedTooltip name="ГруппаПараметрыРасположенияВнешнееСоединениеРасширеннаяПодсказка" id="150"/>
+												<ChildItems>
+													<LabelDecoration name="Декорация16" id="459">
+														<ContextMenu name="Декорация16КонтекстноеМеню" id="460"/>
+														<ExtendedTooltip name="Декорация16РасширеннаяПодсказка" id="461"/>
+													</LabelDecoration>
+													<UsualGroup name="ГруппаПараметрыРасположение" id="457">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Параметры расположение</v8:content>
+															</v8:item>
+														</Title>
+														<Group>Vertical</Group>
+														<Representation>None</Representation>
+														<ShowTitle>false</ShowTitle>
+														<ExtendedTooltip name="ГруппаПараметрыРасположениеРасширеннаяПодсказка" id="458"/>
+														<ChildItems>
+															<RadioButtonField name="ВнешнееСоединениеВариантРаботыИнформационнойБазыФайловый" id="157">
+																<TitleLocation>None</TitleLocation>
+																<RadioButtonType>Auto</RadioButtonType>
+																<ChoiceList>
+																	<xr:Item>
+																		<xr:Presentation/>
+																		<xr:CheckState>0</xr:CheckState>
+																		<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																			<Presentation>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>На данном компьютере или на компьютере в локальной сети</v8:content>
+																				</v8:item>
+																			</Presentation>
+																			<Value xsi:type="xs:string">Файловый</Value>
+																		</xr:Value>
+																	</xr:Item>
+																</ChoiceList>
+																<ContextMenu name="ВнешнееСоединениеВариантРаботыИнформационнойБазыФайловыйКонтекстноеМеню" id="158"/>
+																<ExtendedTooltip name="ВнешнееСоединениеВариантРаботыИнформационнойБазыФайловыйРасширеннаяПодсказка" id="159"/>
+															</RadioButtonField>
+															<InputField name="ВнешнееСоединениеКаталогИнформационнойБазы" id="163">
+																<ChoiceButton>true</ChoiceButton>
+																<AutoMarkIncomplete>true</AutoMarkIncomplete>
+																<ContextMenu name="ВнешнееСоединениеКаталогИнформационнойБазыКонтекстноеМеню" id="164"/>
+																<ExtendedTooltip name="ВнешнееСоединениеКаталогИнформационнойБазыРасширеннаяПодсказка" id="165"/>
+															</InputField>
+															<RadioButtonField name="ВнешнееСоединениеВариантРаботыИнформационнойБазыКлиентСерверный" id="160">
+																<TitleLocation>None</TitleLocation>
+																<RadioButtonType>Auto</RadioButtonType>
+																<ChoiceList>
+																	<xr:Item>
+																		<xr:Presentation/>
+																		<xr:CheckState>0</xr:CheckState>
+																		<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																			<Presentation>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>На сервере 1С:Предприятия</v8:content>
+																				</v8:item>
+																			</Presentation>
+																			<Value xsi:type="xs:string">КлиентСерверный</Value>
+																		</xr:Value>
+																	</xr:Item>
+																</ChoiceList>
+																<ContextMenu name="ВнешнееСоединениеВариантРаботыИнформационнойБазыКлиентСерверныйКонтекстноеМеню" id="161"/>
+																<ExtendedTooltip name="ВнешнееСоединениеВариантРаботыИнформационнойБазыКлиентСерверныйРасширеннаяПодсказка" id="162"/>
+															</RadioButtonField>
+															<InputField name="ВнешнееСоединениеКластерСерверов" id="166">
+																<AutoMarkIncomplete>true</AutoMarkIncomplete>
+																<ContextMenu name="ВнешнееСоединениеКластерСерверовКонтекстноеМеню" id="167"/>
+																<ExtendedTooltip name="ВнешнееСоединениеКластерСерверовРасширеннаяПодсказка" id="168"/>
+															</InputField>
+															<InputField name="ВнешнееСоединениеИмяИнформационнойБазы" id="169">
+																<AutoMarkIncomplete>true</AutoMarkIncomplete>
+																<ContextMenu name="ВнешнееСоединениеИмяИнформационнойБазыКонтекстноеМеню" id="170"/>
+																<ExtendedTooltip name="ВнешнееСоединениеИмяИнформационнойБазыРасширеннаяПодсказка" id="171"/>
+															</InputField>
+														</ChildItems>
+													</UsualGroup>
+												</ChildItems>
+											</UsualGroup>
+											<UsualGroup name="ГруппаПараметрыАутентификацииВнешнееСоединение" id="151">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Параметры входа в программу</v8:content>
+													</v8:item>
+												</Title>
+												<Group>AlwaysHorizontal</Group>
+												<Representation>None</Representation>
+												<ThroughAlign>DontUse</ThroughAlign>
+												<ExtendedTooltip name="ГруппаПараметрыАутентификацииВнешнееСоединениеРасширеннаяПодсказка" id="152"/>
+												<ChildItems>
+													<LabelDecoration name="Декорация17" id="464">
+														<ContextMenu name="Декорация17КонтекстноеМеню" id="465"/>
+														<ExtendedTooltip name="Декорация17РасширеннаяПодсказка" id="466"/>
+													</LabelDecoration>
+													<UsualGroup name="ГруппаПараметрыАутентификация" id="462">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Параметры аутентификация</v8:content>
+															</v8:item>
+														</Title>
+														<Group>Vertical</Group>
+														<Representation>None</Representation>
+														<ShowTitle>false</ShowTitle>
+														<ExtendedTooltip name="ГруппаПараметрыАутентификацияРасширеннаяПодсказка" id="463"/>
+														<ChildItems>
+															<RadioButtonField name="ВнешнееСоединениеВидАутентификацииОперационнаяСистема" id="175">
+																<TitleLocation>None</TitleLocation>
+																<RadioButtonType>Auto</RadioButtonType>
+																<ChoiceList>
+																	<xr:Item>
+																		<xr:Presentation/>
+																		<xr:CheckState>0</xr:CheckState>
+																		<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																			<Presentation>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Использовать учетную запись операционной системы</v8:content>
+																				</v8:item>
+																			</Presentation>
+																			<Value xsi:type="xs:string">ОперационнаяСистема</Value>
+																		</xr:Value>
+																	</xr:Item>
+																</ChoiceList>
+																<ContextMenu name="ВнешнееСоединениеВидАутентификацииОперационнаяСистемаКонтекстноеМеню" id="176"/>
+																<ExtendedTooltip name="ВнешнееСоединениеВидАутентификацииОперационнаяСистемаРасширеннаяПодсказка" id="177"/>
+															</RadioButtonField>
+															<RadioButtonField name="ВнешнееСоединениеВидАутентификации1СПредприятие" id="172">
+																<TitleLocation>None</TitleLocation>
+																<RadioButtonType>Auto</RadioButtonType>
+																<ChoiceList>
+																	<xr:Item>
+																		<xr:Presentation/>
+																		<xr:CheckState>0</xr:CheckState>
+																		<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																			<Presentation>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Использовать указанные имя пользователя и пароль</v8:content>
+																				</v8:item>
+																			</Presentation>
+																			<Value xsi:type="xs:string">1СПредприятие</Value>
+																		</xr:Value>
+																	</xr:Item>
+																</ChoiceList>
+																<ContextMenu name="ВнешнееСоединениеВидАутентификации1СПредприятиеКонтекстноеМеню" id="173"/>
+																<ExtendedTooltip name="ВнешнееСоединениеВидАутентификации1СПредприятиеРасширеннаяПодсказка" id="174"/>
+															</RadioButtonField>
+															<InputField name="ВнешнееСоединениеИмяПользователя" id="178">
+																<Width>20</Width>
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<HorizontalStretch>false</HorizontalStretch>
+																<ContextMenu name="ВнешнееСоединениеИмяПользователяКонтекстноеМеню" id="179"/>
+																<ExtendedTooltip name="ВнешнееСоединениеИмяПользователяРасширеннаяПодсказка" id="180"/>
+															</InputField>
+															<InputField name="ВнешнееСоединениеПароль" id="181">
+																<Width>20</Width>
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<HorizontalStretch>false</HorizontalStretch>
+																<PasswordMode>true</PasswordMode>
+																<ContextMenu name="ВнешнееСоединениеПарольКонтекстноеМеню" id="182"/>
+																<ExtendedTooltip name="ВнешнееСоединениеПарольРасширеннаяПодсказка" id="183"/>
+															</InputField>
+														</ChildItems>
+													</UsualGroup>
+												</ChildItems>
+											</UsualGroup>
+										</ChildItems>
+									</UsualGroup>
+								</ChildItems>
+							</UsualGroup>
+						</ChildItems>
+					</Page>
+					<Page name="СтраницаПараметрыПодключенияОбычныеКаналыСвязи" id="198">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Страница параметры подключения обычные каналы связи</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СтраницаПараметрыПодключенияОбычныеКаналыСвязиРасширеннаяПодсказка" id="199"/>
+						<ChildItems>
+							<UsualGroup name="ГруппаСинхронизацияЧерезКаталог" id="237">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Синхронизация данных через локальный или сетевой каталог</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Vertical</Group>
+								<Behavior>Collapsible</Behavior>
+								<ControlRepresentation>Picture</ControlRepresentation>
+								<ExtendedTooltip name="ГруппаСинхронизацияЧерезКаталогРасширеннаяПодсказка" id="238"/>
+								<ChildItems>
+									<CheckBoxField name="ОбычныеКаналыСвязиFILEИспользование" id="268">
+										<TitleLocation>Right</TitleLocation>
+										<CheckBoxType>Auto</CheckBoxType>
+										<ContextMenu name="ОбычныеКаналыСвязиFILEИспользованиеКонтекстноеМеню" id="269"/>
+										<ExtendedTooltip name="ОбычныеКаналыСвязиFILEИспользованиеРасширеннаяПодсказка" id="270"/>
+									</CheckBoxField>
+									<UsualGroup name="ГруппаОбычныеКаналыСвязиFILEИспользование" id="686">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Обычные каналы связи FILE использование</v8:content>
+											</v8:item>
+										</Title>
+										<Group>AlwaysHorizontal</Group>
+										<Representation>None</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаОбычныеКаналыСвязиFILEИспользованиеРасширеннаяПодсказка" id="687"/>
+										<ChildItems>
+											<InputField name="ОбычныеКаналыСвязиFILEКаталог" id="211">
+												<ChoiceButton>true</ChoiceButton>
+												<AutoMarkIncomplete>true</AutoMarkIncomplete>
+												<ContextMenu name="ОбычныеКаналыСвязиFILEКаталогКонтекстноеМеню" id="212"/>
+												<ExtendedTooltip name="ОбычныеКаналыСвязиFILEКаталогРасширеннаяПодсказка" id="213"/>
+											</InputField>
+										</ChildItems>
+									</UsualGroup>
+								</ChildItems>
+							</UsualGroup>
+							<UsualGroup name="ГруппаСинхронизацияЧерезFTP" id="239">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Синхронизация данных через каталог на FTP-сервере</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Vertical</Group>
+								<Behavior>Collapsible</Behavior>
+								<Collapsed>true</Collapsed>
+								<ControlRepresentation>Picture</ControlRepresentation>
+								<ExtendedTooltip name="ГруппаСинхронизацияЧерезFTPРасширеннаяПодсказка" id="240"/>
+								<ChildItems>
+									<CheckBoxField name="ОбычныеКаналыСвязиFTPИспользование" id="271">
+										<TitleLocation>Right</TitleLocation>
+										<CheckBoxType>Auto</CheckBoxType>
+										<ContextMenu name="ОбычныеКаналыСвязиFTPИспользованиеКонтекстноеМеню" id="272"/>
+										<ExtendedTooltip name="ОбычныеКаналыСвязиFTPИспользованиеРасширеннаяПодсказка" id="273"/>
+									</CheckBoxField>
+									<UsualGroup name="ГруппаОбычныеКаналыСвязиFTPИспользование" id="688">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Обычные каналы связи FTP использование</v8:content>
+											</v8:item>
+										</Title>
+										<Group>Vertical</Group>
+										<Representation>None</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаОбычныеКаналыСвязиFTPИспользованиеРасширеннаяПодсказка" id="689"/>
+										<ChildItems>
+											<UsualGroup name="ГруппаСинхронизацияЧерезFTPКаталог" id="252">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Синхронизация через FTP каталог</v8:content>
+													</v8:item>
+												</Title>
+												<Group>AlwaysHorizontal</Group>
+												<Representation>None</Representation>
+												<ShowTitle>false</ShowTitle>
+												<ExtendedTooltip name="ГруппаСинхронизацияЧерезFTPКаталогРасширеннаяПодсказка" id="253"/>
+												<ChildItems>
+													<InputField name="ОбычныеКаналыСвязиFTPКаталог" id="246">
+														<AutoMarkIncomplete>true</AutoMarkIncomplete>
+														<ContextMenu name="ОбычныеКаналыСвязиFTPКаталогКонтекстноеМеню" id="247"/>
+														<ExtendedTooltip name="ОбычныеКаналыСвязиFTPКаталогРасширеннаяПодсказка" id="248"/>
+													</InputField>
+													<InputField name="ОбычныеКаналыСвязиFTPПорт" id="254">
+														<ContextMenu name="ОбычныеКаналыСвязиFTPПортКонтекстноеМеню" id="255"/>
+														<ExtendedTooltip name="ОбычныеКаналыСвязиFTPПортРасширеннаяПодсказка" id="256"/>
+													</InputField>
+												</ChildItems>
+											</UsualGroup>
+											<UsualGroup name="СинхронизацияЧерезFTPАутентификация" id="285">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Синхронизация через FTP аутентификация</v8:content>
+													</v8:item>
+												</Title>
+												<Group>Vertical</Group>
+												<Representation>None</Representation>
+												<ShowTitle>false</ShowTitle>
+												<ExtendedTooltip name="СинхронизацияЧерезFTPАутентификацияРасширеннаяПодсказка" id="286"/>
+												<ChildItems>
+													<InputField name="ОбычныеКаналыСвязиFTPПользователь" id="257">
+														<Width>20</Width>
+														<HorizontalStretch>false</HorizontalStretch>
+														<ContextMenu name="ОбычныеКаналыСвязиFTPПользовательКонтекстноеМеню" id="258"/>
+														<ExtendedTooltip name="ОбычныеКаналыСвязиFTPПользовательРасширеннаяПодсказка" id="259"/>
+													</InputField>
+													<InputField name="ОбычныеКаналыСвязиFTPПароль" id="260">
+														<Width>20</Width>
+														<AutoMaxWidth>false</AutoMaxWidth>
+														<HorizontalStretch>false</HorizontalStretch>
+														<PasswordMode>true</PasswordMode>
+														<ContextMenu name="ОбычныеКаналыСвязиFTPПарольКонтекстноеМеню" id="261"/>
+														<ExtendedTooltip name="ОбычныеКаналыСвязиFTPПарольРасширеннаяПодсказка" id="262"/>
+													</InputField>
+												</ChildItems>
+											</UsualGroup>
+											<UsualGroup name="ГруппаОграничениеРазмераФайлаFTP" id="342">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Ограничение размера файла FTP</v8:content>
+													</v8:item>
+												</Title>
+												<Group>AlwaysHorizontal</Group>
+												<Representation>None</Representation>
+												<ShowTitle>false</ShowTitle>
+												<ExtendedTooltip name="ГруппаОграничениеРазмераФайлаFTPРасширеннаяПодсказка" id="343"/>
+												<ChildItems>
+													<CheckBoxField name="ОбычныеКаналыСвязиFTPИспользоватьОграничениеРазмераФайла" id="344">
+														<TitleLocation>Right</TitleLocation>
+														<CheckBoxType>Auto</CheckBoxType>
+														<ContextMenu name="ОбычныеКаналыСвязиFTPИспользоватьОграничениеРазмераФайлаКонтекстноеМеню" id="345"/>
+														<ExtendedTooltip name="ОбычныеКаналыСвязиFTPИспользоватьОграничениеРазмераФайлаРасширеннаяПодсказка" id="346"/>
+													</CheckBoxField>
+													<InputField name="ОбычныеКаналыСвязиFTPМаксимальныйДопустимыйРазмерФайла" id="347">
+														<TitleLocation>None</TitleLocation>
+														<Width>9</Width>
+														<AutoMarkIncomplete>true</AutoMarkIncomplete>
+														<ContextMenu name="ОбычныеКаналыСвязиFTPМаксимальныйДопустимыйРазмерФайлаКонтекстноеМеню" id="348"/>
+														<ExtendedTooltip name="ОбычныеКаналыСвязиFTPМаксимальныйДопустимыйРазмерФайлаРасширеннаяПодсказка" id="349"/>
+													</InputField>
+													<LabelDecoration name="Декорация5" id="350">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>КБ</v8:content>
+															</v8:item>
+														</Title>
+														<ContextMenu name="Декорация5КонтекстноеМеню" id="351"/>
+														<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="352"/>
+													</LabelDecoration>
+												</ChildItems>
+											</UsualGroup>
+											<CheckBoxField name="ОбычныеКаналыСвязиFTPПассивныйРежим" id="334">
+												<TitleLocation>Right</TitleLocation>
+												<CheckBoxType>Auto</CheckBoxType>
+												<ContextMenu name="ОбычныеКаналыСвязиFTPПассивныйРежимКонтекстноеМеню" id="335"/>
+												<ExtendedTooltip name="ОбычныеКаналыСвязиFTPПассивныйРежимРасширеннаяПодсказка" id="336"/>
+											</CheckBoxField>
+											<Button name="ПараметрыДоступаВИнтернет" id="337">
+												<Type>Hyperlink</Type>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="ПараметрыДоступаВИнтернетРасширеннаяПодсказка" id="338"/>
+											</Button>
+										</ChildItems>
+									</UsualGroup>
+								</ChildItems>
+							</UsualGroup>
+							<UsualGroup name="ГруппаСинхронизацияЧерезEMAIL" id="241">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Синхронизация данных через электронную почту</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Vertical</Group>
+								<Behavior>Collapsible</Behavior>
+								<Collapsed>true</Collapsed>
+								<ControlRepresentation>Picture</ControlRepresentation>
+								<ExtendedTooltip name="ГруппаСинхронизацияЧерезEMAILРасширеннаяПодсказка" id="242"/>
+								<ChildItems>
+									<CheckBoxField name="ОбычныеКаналыСвязиEMAILИспользование" id="279">
+										<TitleLocation>Right</TitleLocation>
+										<CheckBoxType>Auto</CheckBoxType>
+										<ContextMenu name="ОбычныеКаналыСвязиEMAILИспользованиеКонтекстноеМеню" id="280"/>
+										<ExtendedTooltip name="ОбычныеКаналыСвязиEMAILИспользованиеРасширеннаяПодсказка" id="281"/>
+									</CheckBoxField>
+									<UsualGroup name="ГруппаОбычныеКаналыСвязиEMAILИспользование" id="693">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Обычные каналы связи EMAIL использование</v8:content>
+											</v8:item>
+										</Title>
+										<Group>Vertical</Group>
+										<Representation>None</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаОбычныеКаналыСвязиEMAILИспользованиеРасширеннаяПодсказка" id="694"/>
+										<ChildItems>
+											<InputField name="ОбычныеКаналыСвязиEMAILУчетнаяЗапись" id="282">
+												<AutoMarkIncomplete>true</AutoMarkIncomplete>
+												<ContextMenu name="ОбычныеКаналыСвязиEMAILУчетнаяЗаписьКонтекстноеМеню" id="283"/>
+												<ExtendedTooltip name="ОбычныеКаналыСвязиEMAILУчетнаяЗаписьРасширеннаяПодсказка" id="284"/>
+											</InputField>
+											<UsualGroup name="ГруппаОграничениеРазмераВложенияEMAIL" id="304">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Ограничение размера вложения EMAIL</v8:content>
+													</v8:item>
+												</Title>
+												<Group>AlwaysHorizontal</Group>
+												<Representation>None</Representation>
+												<ShowTitle>false</ShowTitle>
+												<ExtendedTooltip name="ГруппаОграничениеРазмераВложенияEMAILРасширеннаяПодсказка" id="305"/>
+												<ChildItems>
+													<CheckBoxField name="ОбычныеКаналыСвязиEMAILИспользоватьОграничениеРазмераВложения" id="306">
+														<TitleLocation>Right</TitleLocation>
+														<CheckBoxType>Auto</CheckBoxType>
+														<ContextMenu name="ОбычныеКаналыСвязиEMAILИспользоватьОграничениеРазмераВложенияКонтекстноеМеню" id="307"/>
+														<ExtendedTooltip name="ОбычныеКаналыСвязиEMAILИспользоватьОграничениеРазмераВложенияРасширеннаяПодсказка" id="308"/>
+													</CheckBoxField>
+													<InputField name="ОбычныеКаналыСвязиEMAILМаксимальныйДопустимыйРазмерВложения" id="309">
+														<TitleLocation>None</TitleLocation>
+														<AutoMarkIncomplete>true</AutoMarkIncomplete>
+														<ContextMenu name="ОбычныеКаналыСвязиEMAILМаксимальныйДопустимыйРазмерВложенияКонтекстноеМеню" id="310"/>
+														<ExtendedTooltip name="ОбычныеКаналыСвязиEMAILМаксимальныйДопустимыйРазмерВложенияРасширеннаяПодсказка" id="311"/>
+													</InputField>
+													<LabelDecoration name="Декорация4" id="339">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>КБ</v8:content>
+															</v8:item>
+														</Title>
+														<ContextMenu name="Декорация4КонтекстноеМеню" id="340"/>
+														<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="341"/>
+													</LabelDecoration>
+												</ChildItems>
+											</UsualGroup>
+										</ChildItems>
+									</UsualGroup>
+								</ChildItems>
+							</UsualGroup>
+							<UsualGroup name="ГруппаДополнительныеПараметрыПередачиДанных" id="629">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Дополнительные настройки</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Vertical</Group>
+								<Behavior>Collapsible</Behavior>
+								<ControlRepresentation>Picture</ControlRepresentation>
+								<ExtendedTooltip name="ГруппаДополнительныеПараметрыПередачиДанныхРасширеннаяПодсказка" id="630"/>
+								<ChildItems>
+									<CheckBoxField name="ОбычныеКаналыСвязиТранслитерироватьИменаФайлов" id="243">
+										<TitleLocation>Right</TitleLocation>
+										<ToolTipRepresentation>Button</ToolTipRepresentation>
+										<CheckBoxType>Auto</CheckBoxType>
+										<ContextMenu name="ОбычныеКаналыСвязиТранслитерироватьИменаФайловКонтекстноеМеню" id="244"/>
+										<ExtendedTooltip name="ОбычныеКаналыСвязиТранслитерироватьИменаФайловРасширеннаяПодсказка" id="245">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Рекомендуется применять в случае, если при обмене возникают ошибки, связанные с  различными кодировками файлов.
+Настройку не следует использовать, в случае, если такая же настройка не поддерживается на стороне корреспондента.</v8:content>
+												</v8:item>
+											</Title>
+										</ExtendedTooltip>
+									</CheckBoxField>
+									<CheckBoxField name="ОбычныеКаналыСвязиАрхивироватьФайлы" id="214">
+										<TitleLocation>Right</TitleLocation>
+										<CheckBoxType>Auto</CheckBoxType>
+										<ContextMenu name="ОбычныеКаналыСвязиАрхивироватьФайлыКонтекстноеМеню" id="215"/>
+										<ExtendedTooltip name="ОбычныеКаналыСвязиАрхивироватьФайлыРасширеннаяПодсказка" id="216"/>
+									</CheckBoxField>
+									<UsualGroup name="ГруппаОбычныеКаналыСвязиПарольАрхива" id="266">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Обычные каналы связи пароль архива</v8:content>
+											</v8:item>
+										</Title>
+										<Group>AlwaysHorizontal</Group>
+										<Representation>None</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаОбычныеКаналыСвязиПарольАрхиваРасширеннаяПодсказка" id="267"/>
+										<ChildItems>
+											<LabelDecoration name="Декорация13" id="690">
+												<ContextMenu name="Декорация13КонтекстноеМеню" id="691"/>
+												<ExtendedTooltip name="Декорация13РасширеннаяПодсказка" id="692"/>
+											</LabelDecoration>
+											<CheckBoxField name="ОбычныеКаналыСвязиИспользоватьПарольАрхива" id="263">
+												<TitleLocation>Right</TitleLocation>
+												<CheckBoxType>Auto</CheckBoxType>
+												<ContextMenu name="ОбычныеКаналыСвязиИспользоватьПарольАрхиваКонтекстноеМеню" id="264"/>
+												<ExtendedTooltip name="ОбычныеКаналыСвязиИспользоватьПарольАрхиваРасширеннаяПодсказка" id="265"/>
+											</CheckBoxField>
+											<InputField name="ОбычныеКаналыСвязиПарольАрхива" id="217">
+												<TitleLocation>None</TitleLocation>
+												<Width>20</Width>
+												<AutoMaxWidth>false</AutoMaxWidth>
+												<HorizontalStretch>false</HorizontalStretch>
+												<PasswordMode>true</PasswordMode>
+												<AutoMarkIncomplete>true</AutoMarkIncomplete>
+												<ContextMenu name="ОбычныеКаналыСвязиПарольАрхиваКонтекстноеМеню" id="218"/>
+												<ExtendedTooltip name="ОбычныеКаналыСвязиПарольАрхиваРасширеннаяПодсказка" id="219"/>
+											</InputField>
+										</ChildItems>
+									</UsualGroup>
+								</ChildItems>
+							</UsualGroup>
+						</ChildItems>
+					</Page>
+					<Page name="СтраницаПроверкаПодключения" id="355">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Страница проверка подключения</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СтраницаПроверкаПодключенияРасширеннаяПодсказка" id="356"/>
+						<ChildItems>
+							<Pages name="ПанельПроверкаПодключения" id="587">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Панель проверка подключения</v8:content>
+									</v8:item>
+								</Title>
+								<PagesRepresentation>None</PagesRepresentation>
+								<ExtendedTooltip name="ПанельПроверкаПодключенияРасширеннаяПодсказка" id="588"/>
+								<ChildItems>
+									<Page name="СтраницаПроверкаПодключенияOnline" id="589">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Страница проверка подключения online</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="СтраницаПроверкаПодключенияOnlineРасширеннаяПодсказка" id="590"/>
+										<ChildItems>
+											<UsualGroup name="ГруппаПроверкаПодключенияOnline" id="359">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Проверка параметров подключения</v8:content>
+													</v8:item>
+												</Title>
+												<Group>AlwaysHorizontal</Group>
+												<ExtendedTooltip name="ГруппаПроверкаПодключенияOnlineРасширеннаяПодсказка" id="360"/>
+												<ChildItems>
+													<PictureDecoration name="ДекорацияПроверкаПодключенияOnlineОжиданиеКартинка" id="373">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Декорация проверка подключения online ожидание картинка</v8:content>
+															</v8:item>
+														</Title>
+														<Picture>
+															<xr:Ref>CommonPicture.ДлительнаяОперация48</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<FileDragMode>AsFile</FileDragMode>
+														<ContextMenu name="ДекорацияПроверкаПодключенияOnlineОжиданиеКартинкаКонтекстноеМеню" id="374"/>
+														<ExtendedTooltip name="ДекорацияПроверкаПодключенияOnlineОжиданиеКартинкаРасширеннаяПодсказка" id="375"/>
+													</PictureDecoration>
+													<LabelDecoration name="ДекорацияПроверкаПодключенияOnlineОжиданиеНадпись" id="376">
+														<AutoMaxWidth>false</AutoMaxWidth>
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Выполняется подключение к программе-корреспонденту.
+Пожалуйста, подождите...</v8:content>
+															</v8:item>
+														</Title>
+														<ContextMenu name="ДекорацияПроверкаПодключенияOnlineОжиданиеНадписьКонтекстноеМеню" id="377"/>
+														<ExtendedTooltip name="ДекорацияПроверкаПодключенияOnlineОжиданиеНадписьРасширеннаяПодсказка" id="378"/>
+													</LabelDecoration>
+												</ChildItems>
+											</UsualGroup>
+										</ChildItems>
+									</Page>
+									<Page name="СтраницаПроверкаПодключенияOffline" id="591">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Страница проверка подключения offline</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="СтраницаПроверкаПодключенияOfflineРасширеннаяПодсказка" id="592"/>
+										<ChildItems>
+											<UsualGroup name="ГруппаПроверкаПодключенияOffline" id="593">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Проверка параметров передачи данных</v8:content>
+													</v8:item>
+												</Title>
+												<Group>AlwaysHorizontal</Group>
+												<ExtendedTooltip name="ГруппаПроверкаПодключенияOfflineРасширеннаяПодсказка" id="594"/>
+												<ChildItems>
+													<PictureDecoration name="ДекорацияПроверкаПодключенияOfflineОжиданиеКартинка" id="623">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Декорация проверка подключения offline ожидание картинка</v8:content>
+															</v8:item>
+														</Title>
+														<Picture>
+															<xr:Ref>CommonPicture.ДлительнаяОперация48</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<FileDragMode>AsFile</FileDragMode>
+														<ContextMenu name="ДекорацияПроверкаПодключенияOfflineОжиданиеКартинкаКонтекстноеМеню" id="624"/>
+														<ExtendedTooltip name="ДекорацияПроверкаПодключенияOfflineОжиданиеКартинкаРасширеннаяПодсказка" id="625"/>
+													</PictureDecoration>
+													<LabelDecoration name="ДекорацияПроверкаПодключенияOfflineОжиданиеНадпись" id="626">
+														<AutoMaxWidth>false</AutoMaxWidth>
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Выполняется проверка параметров передачи данных.
+Пожалуйста, подождите...</v8:content>
+															</v8:item>
+														</Title>
+														<ContextMenu name="ДекорацияПроверкаПодключенияOfflineОжиданиеНадписьКонтекстноеМеню" id="627"/>
+														<ExtendedTooltip name="ДекорацияПроверкаПодключенияOfflineОжиданиеНадписьРасширеннаяПодсказка" id="628"/>
+													</LabelDecoration>
+												</ChildItems>
+											</UsualGroup>
+										</ChildItems>
+									</Page>
+								</ChildItems>
+							</Pages>
+						</ChildItems>
+					</Page>
+					<Page name="СтраницаОбщиеНастройкиСинхронизации" id="474">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Страница общие настройки синхронизации</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СтраницаОбщиеНастройкиСинхронизацииРасширеннаяПодсказка" id="475"/>
+						<ChildItems>
+							<UsualGroup name="ГруппаОбщиеНастройкиСинхронизации" id="476">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Параметры синхронизации данных</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Vertical</Group>
+								<ControlRepresentation>Picture</ControlRepresentation>
+								<ExtendedTooltip name="ГруппаОбщиеНастройкиСинхронизацииРасширеннаяПодсказка" id="477"/>
+								<ChildItems>
+									<UsualGroup name="ГруппаНастройкиПрограммыПредставление" id="514">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Представление этой программы</v8:content>
+											</v8:item>
+										</Title>
+										<Group>AlwaysHorizontal</Group>
+										<ControlRepresentation>Picture</ControlRepresentation>
+										<Representation>None</Representation>
+										<ExtendedTooltip name="ГруппаНастройкиПрограммыПредставлениеРасширеннаяПодсказка" id="515"/>
+										<ChildItems>
+											<InputField name="Наименование" id="482">
+												<TitleLocation>Top</TitleLocation>
+												<AutoMaxWidth>false</AutoMaxWidth>
+												<AutoMarkIncomplete>true</AutoMarkIncomplete>
+												<ContextMenu name="НаименованиеКонтекстноеМеню" id="483"/>
+												<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="484"/>
+											</InputField>
+											<InputField name="Префикс" id="485">
+												<TitleLocation>Top</TitleLocation>
+												<Width>5</Width>
+												<AutoMarkIncomplete>true</AutoMarkIncomplete>
+												<ContextMenu name="ПрефиксКонтекстноеМеню" id="486"/>
+												<ExtendedTooltip name="ПрефиксРасширеннаяПодсказка" id="487"/>
+											</InputField>
+										</ChildItems>
+									</UsualGroup>
+									<UsualGroup name="ГруппаНастройкиПрограммыКорреспондентаПредставление" id="516">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Представление программы-корреспондента</v8:content>
+											</v8:item>
+										</Title>
+										<Group>AlwaysHorizontal</Group>
+										<ControlRepresentation>Picture</ControlRepresentation>
+										<Representation>None</Representation>
+										<ExtendedTooltip name="ГруппаНастройкиПрограммыКорреспондентаПредставлениеРасширеннаяПодсказка" id="517"/>
+										<ChildItems>
+											<InputField name="НаименованиеКорреспондента" id="488">
+												<TitleLocation>Top</TitleLocation>
+												<AutoMaxWidth>false</AutoMaxWidth>
+												<AutoMarkIncomplete>true</AutoMarkIncomplete>
+												<ContextMenu name="НаименованиеКорреспондентаКонтекстноеМеню" id="489"/>
+												<ExtendedTooltip name="НаименованиеКорреспондентаРасширеннаяПодсказка" id="490"/>
+											</InputField>
+											<InputField name="ПрефиксКорреспондента" id="491">
+												<TitleLocation>Top</TitleLocation>
+												<Width>5</Width>
+												<AutoMarkIncomplete>true</AutoMarkIncomplete>
+												<ContextMenu name="ПрефиксКорреспондентаКонтекстноеМеню" id="492"/>
+												<ExtendedTooltip name="ПрефиксКорреспондентаРасширеннаяПодсказка" id="493"/>
+											</InputField>
+										</ChildItems>
+									</UsualGroup>
+									<UsualGroup name="ГруппаФайлНастроекПодключенияДляКорреспондента" id="631">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Прочее</v8:content>
+											</v8:item>
+										</Title>
+										<Group>Vertical</Group>
+										<ControlRepresentation>Picture</ControlRepresentation>
+										<Representation>None</Representation>
+										<ExtendedTooltip name="ГруппаФайлНастроекПодключенияДляКорреспондентаРасширеннаяПодсказка" id="632"/>
+										<ChildItems>
+											<InputField name="ОбычныеКаналыСвязиВидТранспортаПоУмолчанию" id="636">
+												<TitleLocation>Top</TitleLocation>
+												<ListChoiceMode>true</ListChoiceMode>
+												<AutoMarkIncomplete>true</AutoMarkIncomplete>
+												<ContextMenu name="ОбычныеКаналыСвязиВидТранспортаПоУмолчаниюКонтекстноеМеню" id="637"/>
+												<ExtendedTooltip name="ОбычныеКаналыСвязиВидТранспортаПоУмолчаниюРасширеннаяПодсказка" id="638"/>
+											</InputField>
+											<InputField name="ИмяФайлаНастроекПодключенияДляВыгрузки" id="633">
+												<TitleLocation>Top</TitleLocation>
+												<AutoMaxWidth>false</AutoMaxWidth>
+												<ChoiceButton>true</ChoiceButton>
+												<AutoMarkIncomplete>true</AutoMarkIncomplete>
+												<ContextMenu name="ИмяФайлаНастроекПодключенияДляВыгрузкиКонтекстноеМеню" id="634"/>
+												<ExtendedTooltip name="ИмяФайлаНастроекПодключенияДляВыгрузкиРасширеннаяПодсказка" id="635"/>
+											</InputField>
+										</ChildItems>
+									</UsualGroup>
+								</ChildItems>
+							</UsualGroup>
+						</ChildItems>
+					</Page>
+					<Page name="СтраницаСохранениеНастроекПодключения" id="400">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Страница сохранение настроек подключения</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СтраницаСохранениеНастроекПодключенияРасширеннаяПодсказка" id="401"/>
+						<ChildItems>
+							<UsualGroup name="ГруппаСохранениеНастроекПодключения" id="402">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Сохранение настроек</v8:content>
+									</v8:item>
+								</Title>
+								<Group>AlwaysHorizontal</Group>
+								<ExtendedTooltip name="ГруппаСохранениеНастроекПодключенияРасширеннаяПодсказка" id="403"/>
+								<ChildItems>
+									<PictureDecoration name="Декорация8" id="404">
+										<Picture>
+											<xr:Ref>CommonPicture.ДлительнаяОперация48</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<FileDragMode>AsFile</FileDragMode>
+										<ContextMenu name="Декорация8КонтекстноеМеню" id="405"/>
+										<ExtendedTooltip name="Декорация8РасширеннаяПодсказка" id="406"/>
+									</PictureDecoration>
+									<LabelDecoration name="Декорация9" id="407">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Выполняется сохранение настроек подключения.
+Пожалуйста, подождите...</v8:content>
+											</v8:item>
+										</Title>
+										<ContextMenu name="Декорация9КонтекстноеМеню" id="408"/>
+										<ExtendedTooltip name="Декорация9РасширеннаяПодсказка" id="409"/>
+									</LabelDecoration>
+								</ChildItems>
+							</UsualGroup>
+						</ChildItems>
+					</Page>
+					<Page name="СтраницаОкончание" id="357">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Страница окончание</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СтраницаОкончаниеРасширеннаяПодсказка" id="358"/>
+						<ChildItems>
+							<UsualGroup name="ГруппаЗавершениеНастройкиПодключения" id="361">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Настройка подключения завершена</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Vertical</Group>
+								<ExtendedTooltip name="ГруппаЗавершениеНастройкиПодключенияРасширеннаяПодсказка" id="362"/>
+								<ChildItems>
+									<UsualGroup name="Группа27" id="577">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Параметры синхронизации данных в этой программе</v8:content>
+											</v8:item>
+										</Title>
+										<Group>AlwaysHorizontal</Group>
+										<VerticalAlign>Center</VerticalAlign>
+										<Representation>None</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="Группа27РасширеннаяПодсказка" id="578"/>
+										<ChildItems>
+											<PictureDecoration name="Декорация6" id="397">
+												<Picture>
+													<xr:Ref>CommonPicture.Успешно32</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="Декорация6КонтекстноеМеню" id="398"/>
+												<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="399"/>
+											</PictureDecoration>
+											<LabelDecoration name="Декорация7" id="366">
+												<AutoMaxWidth>false</AutoMaxWidth>
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Настройки подключения в этой программе успешно сохранены.</v8:content>
+													</v8:item>
+												</Title>
+												<ContextMenu name="Декорация7КонтекстноеМеню" id="367"/>
+												<ExtendedTooltip name="Декорация7РасширеннаяПодсказка" id="368"/>
+											</LabelDecoration>
+										</ChildItems>
+									</UsualGroup>
+								</ChildItems>
+							</UsualGroup>
+						</ChildItems>
+					</Page>
+				</ChildItems>
+			</Pages>
+			<Pages name="ПанельНавигации" id="30">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Панель навигации</v8:content>
+					</v8:item>
+				</Title>
+				<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+				<PagesRepresentation>None</PagesRepresentation>
+				<ExtendedTooltip name="ПанельНавигацииРасширеннаяПодсказка" id="31"/>
+				<ChildItems>
+					<Page name="СтраницаНавигацияНачало" id="34">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Страница навигация начало</v8:content>
+							</v8:item>
+						</Title>
+						<Group>AlwaysHorizontal</Group>
+						<ExtendedTooltip name="СтраницаНавигацияНачалоРасширеннаяПодсказка" id="35"/>
+						<ChildItems>
+							<CommandBar name="КоманднаяПанельНавигацияНачалоСлева" id="40">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Командная панель навигация начало слева</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="КоманднаяПанельНавигацияНачалоСлеваРасширеннаяПодсказка" id="41"/>
+							</CommandBar>
+							<CommandBar name="КоманднаяПанельНавигацияНачалоСправа" id="42">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Командная панель навигация начало справа</v8:content>
+									</v8:item>
+								</Title>
+								<HorizontalLocation>Right</HorizontalLocation>
+								<ExtendedTooltip name="КоманднаяПанельНавигацияНачалоСправаРасширеннаяПодсказка" id="43"/>
+								<ChildItems>
+									<Button name="КомандаНавигацияНачалоДалее" id="44">
+										<Type>CommandBarButton</Type>
+										<DefaultButton>true</DefaultButton>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="КомандаНавигацияНачалоДалееРасширеннаяПодсказка" id="45"/>
+									</Button>
+									<Button name="КомандаНавигацияНачалоОтмена" id="46">
+										<Type>CommandBarButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="КомандаНавигацияНачалоОтменаРасширеннаяПодсказка" id="47"/>
+									</Button>
+								</ChildItems>
+							</CommandBar>
+						</ChildItems>
+					</Page>
+					<Page name="СтраницаНавигацияПродолжение" id="36">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Страница навигация продолжение</v8:content>
+							</v8:item>
+						</Title>
+						<Group>AlwaysHorizontal</Group>
+						<ExtendedTooltip name="СтраницаНавигацияПродолжениеРасширеннаяПодсказка" id="37"/>
+						<ChildItems>
+							<CommandBar name="КоманднаяПанельНавигацияПродолжениеСлева" id="48">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Командная панель навигация продолжение слева</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="КоманднаяПанельНавигацияПродолжениеСлеваРасширеннаяПодсказка" id="49"/>
+								<ChildItems>
+									<Button name="КомандаНавигацияПродолжениеНазад" id="52">
+										<Type>CommandBarButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="КомандаНавигацияПродолжениеНазадРасширеннаяПодсказка" id="53"/>
+									</Button>
+								</ChildItems>
+							</CommandBar>
+							<CommandBar name="КоманднаяПанельНавигацияПродолжениеСправа" id="50">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Командная панель навигация продолжение справа</v8:content>
+									</v8:item>
+								</Title>
+								<HorizontalLocation>Right</HorizontalLocation>
+								<ExtendedTooltip name="КоманднаяПанельНавигацияПродолжениеСправаРасширеннаяПодсказка" id="51"/>
+								<ChildItems>
+									<Button name="КомандаНавигацияПродолжениеДалее" id="54">
+										<Type>CommandBarButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="КомандаНавигацияПродолжениеДалееРасширеннаяПодсказка" id="55"/>
+									</Button>
+									<Button name="КомандаНавигацияПродолжениеОтмена" id="56">
+										<Type>CommandBarButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="КомандаНавигацияПродолжениеОтменаРасширеннаяПодсказка" id="57"/>
+									</Button>
+								</ChildItems>
+							</CommandBar>
+						</ChildItems>
+					</Page>
+					<Page name="СтраницаНавигацияОкончание" id="38">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Страница навигация окончание</v8:content>
+							</v8:item>
+						</Title>
+						<Group>AlwaysHorizontal</Group>
+						<ExtendedTooltip name="СтраницаНавигацияОкончаниеРасширеннаяПодсказка" id="39"/>
+						<ChildItems>
+							<CommandBar name="КоманднаяПанельНавигацияОкончаниеСлева" id="58">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Командная панель навигация окончание слева</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="КоманднаяПанельНавигацияОкончаниеСлеваРасширеннаяПодсказка" id="59"/>
+								<ChildItems>
+									<Button name="КомандаНавигацияОкончаниеНазад" id="62">
+										<Type>CommandBarButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="КомандаНавигацияОкончаниеНазадРасширеннаяПодсказка" id="63"/>
+									</Button>
+								</ChildItems>
+							</CommandBar>
+							<CommandBar name="КоманднаяПанельНавигацияОкончаниеСправа" id="60">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Командная панель навигация окончание справа</v8:content>
+									</v8:item>
+								</Title>
+								<HorizontalLocation>Right</HorizontalLocation>
+								<ExtendedTooltip name="КоманднаяПанельНавигацияОкончаниеСправаРасширеннаяПодсказка" id="61"/>
+								<ChildItems>
+									<Button name="КомандаНавигацияОкончаниеГотово" id="64">
+										<Type>CommandBarButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="КомандаНавигацияОкончаниеГотовоРасширеннаяПодсказка" id="65"/>
+									</Button>
+								</ChildItems>
+							</CommandBar>
+						</ChildItems>
+					</Page>
+				</ChildItems>
+			</Pages>
+		</ChildItems>
+		<Attributes/>
+	</BaseForm>
+</Form>
