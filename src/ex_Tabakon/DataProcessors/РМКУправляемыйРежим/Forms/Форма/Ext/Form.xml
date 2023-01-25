@@ -1341,6 +1341,16 @@
 											</Title>
 											<ExtendedTooltip name="УзнатьКоличествоБалловПоТелефонуРасширеннаяПодсказка" id="626"/>
 										</Button>
+										<Button name="ЗарегистрироватьКлиентаВПрограммеЛояльности" id="647">
+											<Type>UsualButton</Type>
+											<Representation>Picture</Representation>
+											<CommandName>Form.Command.ЗарегистрироватьКлиентаВПрограммеЛояльности</CommandName>
+											<Picture>
+												<xr:Ref>StdPicture.ActiveUsers</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="ЗарегистрироватьКлиентаВПрограммеЛояльностиРасширеннаяПодсказка" id="648"/>
+										</Button>
 									</ChildItems>
 								</UsualGroup>
 							</ChildItems>
@@ -3237,6 +3247,15 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="СтруктураВозвратаЗарегистрироватьКлиента" id="1000019">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структура возврата зарегистрировать клиента</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -3583,6 +3602,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКТБК_ПечатьПоследнегоЧекаПосле</Action>
+		</Command>
+		<Command name="ЗарегистрироватьКлиентаВПрограммеЛояльности" id="1000016">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрировать клиента в программе лояльности</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрировать клиента в программе лояльности</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКЗарегистрироватьКлиентаВПрограммеЛояльностиПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
