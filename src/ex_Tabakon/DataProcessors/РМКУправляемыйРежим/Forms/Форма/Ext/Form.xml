@@ -2835,7 +2835,7 @@
 									<v8:content>Группа покупки сотрудников</v8:content>
 								</v8:item>
 							</ToolTip>
-							<Group>Vertical</Group>
+							<Group>AlwaysHorizontal</Group>
 							<ExtendedTooltip name="ГруппаПокупкиСотрудниковРасширеннаяПодсказка" id="587"/>
 							<ChildItems>
 								<CheckBoxField name="ПокупкаСотрудника" id="581">
@@ -2854,6 +2854,16 @@
 										</v8:item>
 									</Title>
 									<ExtendedTooltip name="ПолучитьЦеныПокупкаСотрудникаРасширеннаяПодсказка" id="585"/>
+								</Button>
+								<Button name="ВвестиНомерБукета" id="653">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ВвестиНомерБукета</CommandName>
+									<ExtendedTooltip name="ВвестиНомерБукетаРасширеннаяПодсказка" id="654"/>
+								</Button>
+								<Button name="ВвестиНомерСоставногоБукета" id="655">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ВвестиНомерСоставногоБукета</CommandName>
+									<ExtendedTooltip name="ВвестиНомерСоставногоБукетаРасширеннаяПодсказка" id="656"/>
 								</Button>
 							</ChildItems>
 						</UsualGroup>
@@ -3725,6 +3735,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКНачислитьБаллыПосле</Action>
+		</Command>
+		<Command name="ВвестиНомерБукета" id="1000015">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввести номер букета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввести номер составного букета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКВвестиНомерБукетаПосле</Action>
+		</Command>
+		<Command name="ВвестиНомерСоставногоБукета" id="1000016">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввести номер составного букета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввести номер составного букета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКВвестиНомерСоставногоБукетаПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
