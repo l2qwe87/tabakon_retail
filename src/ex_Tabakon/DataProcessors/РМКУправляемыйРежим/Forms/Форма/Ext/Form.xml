@@ -653,6 +653,7 @@
 											<ExtendedTooltip name="КартинкаЧО02ПоискРасширеннаяПодсказка" id="429"/>
 										</PictureField>
 										<PictureField name="КартинкаЧО03РедактированиеСтроки" id="430">
+											<Visible>false</Visible>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -703,6 +704,7 @@
 											<ExtendedTooltip name="КартинкаЧО04ВозвратРасширеннаяПодсказка" id="435"/>
 										</PictureField>
 										<PictureField name="КартинкаЧО09ОперацияДС" id="502">
+											<Visible>false</Visible>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -728,6 +730,7 @@
 											<ExtendedTooltip name="КартинкаЧО09ОперацияДСРасширеннаяПодсказка" id="504"/>
 										</PictureField>
 										<PictureField name="КартинкаЧО08ОплатаБонусами" id="436">
+											<Visible>false</Visible>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -809,6 +812,7 @@
 											</Events>
 										</PictureField>
 										<PictureField name="КартинкаЧО10БезналичныеПлатежи" id="535">
+											<Visible>false</Visible>
 											<TitleLocation>None</TitleLocation>
 											<Shortcut>Shift+F7</Shortcut>
 											<Width>20</Width>
@@ -1197,6 +1201,7 @@
 									<ExtendedTooltip name="ТелефонКлиентаРасширеннаяПодсказка" id="618"/>
 									<Events>
 										<Event name="AutoComplete" callType="After">ТБКТелефонКлиентаАвтоПодборПосле</Event>
+										<Event name="TextEditEnd" callType="After">ТБКТелефонКлиентаОкончаниеВводаТекстаПосле</Event>
 									</Events>
 								</InputField>
 								<InputField name="ИмяКлиента" id="610">
@@ -1757,6 +1762,7 @@
 							<ExtendedTooltip name="ГруппаБыстрыхТоваровРядШаблонExtendedTooltip" id="264"/>
 							<ChildItems>
 								<PictureField name="КартинкаБыстрыеТоварыШаблон" id="98">
+									<Visible>false</Visible>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -1780,6 +1786,7 @@
 									<ExtendedTooltip name="КартинкаБыстрыеТоварыШаблонExtendedTooltip" id="266"/>
 								</PictureField>
 								<PictureField name="КартинкаПустаяБыстрыеТоварыШаблон" id="100">
+									<Visible>false</Visible>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -1828,6 +1835,7 @@
 							<ExtendedTooltip name="ГруппаПрочихОперацийРяд1ExtendedTooltip" id="349"/>
 							<ChildItems>
 								<PictureField name="КартинкаПО01БыстрыеТовары" id="350">
+									<Visible>false</Visible>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -1852,6 +1860,7 @@
 									<ExtendedTooltip name="КартинкаПО01БыстрыеТоварыРасширеннаяПодсказка" id="352"/>
 								</PictureField>
 								<PictureField name="КартинкаПО02ВвестиВнесениеДенег" id="353">
+									<Visible>false</Visible>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -1876,6 +1885,7 @@
 									<ExtendedTooltip name="КартинкаПО02ВвестиВнесениеДенегРасширеннаяПодсказка" id="355"/>
 								</PictureField>
 								<PictureField name="КартинкаПО03ЗаменитьПрава" id="356">
+									<Visible>false</Visible>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -1900,6 +1910,7 @@
 									<ExtendedTooltip name="КартинкаПО03ЗаменитьПраваРасширеннаяПодсказка" id="358"/>
 								</PictureField>
 								<PictureField name="КартинкаПО04ОтложитьЧек" id="359">
+									<Visible>false</Visible>
 									<Enabled>false</Enabled>
 									<Title>
 										<v8:item>
@@ -1973,6 +1984,7 @@
 									<ExtendedTooltip name="КартинкаПО06ВвестиШтрихкодРасширеннаяПодсказка" id="367"/>
 								</PictureField>
 								<PictureField name="КартинкаПО07ОткрытьДенежныйЯщик" id="368">
+									<Visible>false</Visible>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -2021,6 +2033,7 @@
 									<ExtendedTooltip name="КартинкаПО08РасчетСкидокРасширеннаяПодсказка" id="373"/>
 								</PictureField>
 								<PictureField name="КартинкаПО28ПросмотрНакоплений" id="374">
+									<Visible>false</Visible>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -2045,6 +2058,7 @@
 									<ExtendedTooltip name="КартинкаПО28ПросмотрНакопленийРасширеннаяПодсказка" id="376"/>
 								</PictureField>
 								<PictureField name="КартинкаПО09Печать" id="377">
+									<Visible>false</Visible>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -2069,6 +2083,7 @@
 									<ExtendedTooltip name="КартинкаПО09ПечатьРасширеннаяПодсказка" id="379"/>
 								</PictureField>
 								<PictureField name="КартинкаПО10НапечататьПоследнийСлипЧек" id="380">
+									<Visible>false</Visible>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -2092,567 +2107,581 @@
 									<ContextMenu name="КартинкаПО10НапечататьПоследнийСлипЧекКонтекстноеМеню" id="381"/>
 									<ExtendedTooltip name="КартинкаПО10НапечататьПоследнийСлипЧекРасширеннаяПодсказка" id="382"/>
 								</PictureField>
-								<PictureField name="КартинкаПО11Выход" id="383">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Выход (F12)</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>None</TitleLocation>
-									<Shortcut>F12</Shortcut>
-									<Width>10</Width>
-									<Height>3</Height>
-									<VerticalStretch>false</VerticalStretch>
-									<PictureSize>AutoSize</PictureSize>
-									<Hyperlink>true</Hyperlink>
-									<NonselectedPictureText>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Выход (F12)</v8:content>
-										</v8:item>
-									</NonselectedPictureText>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="КартинкаПО11ВыходКонтекстноеМеню" id="384"/>
-									<ExtendedTooltip name="КартинкаПО11ВыходРасширеннаяПодсказка" id="385"/>
-								</PictureField>
-							</ChildItems>
-						</UsualGroup>
-						<UsualGroup name="ГруппаПрочихОперацийРяд2" id="386">
-							<ToolTipRepresentation>None</ToolTipRepresentation>
-							<Group>Horizontal</Group>
-							<Representation>None</Representation>
-							<ChildItemsWidth>Equal</ChildItemsWidth>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаПрочихОперацийРяд2ExtendedTooltip" id="387"/>
-							<ChildItems>
-								<PictureField name="КартинкаПО12ПолучитьВес" id="388">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Получить вес (Ctrl+F2)</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>None</TitleLocation>
-									<Shortcut>Ctrl+F2</Shortcut>
-									<Width>10</Width>
-									<Height>3</Height>
-									<VerticalStretch>false</VerticalStretch>
-									<PictureSize>AutoSize</PictureSize>
-									<Hyperlink>true</Hyperlink>
-									<NonselectedPictureText>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Получить вес (Ctrl+F2)</v8:content>
-										</v8:item>
-									</NonselectedPictureText>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="КартинкаПО12ПолучитьВесКонтекстноеМеню" id="389"/>
-									<ExtendedTooltip name="КартинкаПО12ПолучитьВесРасширеннаяПодсказка" id="390"/>
-								</PictureField>
-								<PictureField name="КартинкаПО13ВвестиВыемкаДенег" id="391">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Выемка денег (Ctrl+F3)</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>None</TitleLocation>
-									<Shortcut>Ctrl+F3</Shortcut>
-									<Width>10</Width>
-									<Height>3</Height>
-									<VerticalStretch>false</VerticalStretch>
-									<PictureSize>AutoSize</PictureSize>
-									<Hyperlink>true</Hyperlink>
-									<NonselectedPictureText>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Выемка денег (Ctrl+F3)</v8:content>
-										</v8:item>
-									</NonselectedPictureText>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="КартинкаПО13ВвестиВыемкаДенегКонтекстноеМеню" id="392"/>
-									<ExtendedTooltip name="КартинкаПО13ВвестиВыемкаДенегРасширеннаяПодсказка" id="393"/>
-								</PictureField>
-								<PictureField name="КартинкаПО14Продавец" id="394">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Выбор продавца (Ctrl+F4)</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>None</TitleLocation>
-									<Shortcut>Ctrl+F4</Shortcut>
-									<Width>10</Width>
-									<Height>3</Height>
-									<VerticalStretch>false</VerticalStretch>
-									<PictureSize>AutoSize</PictureSize>
-									<Hyperlink>true</Hyperlink>
-									<NonselectedPictureText>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Выбор продавца (Ctrl+F4)</v8:content>
-										</v8:item>
-									</NonselectedPictureText>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="КартинкаПО14ПродавецКонтекстноеМеню" id="395"/>
-									<ExtendedTooltip name="КартинкаПО14ПродавецРасширеннаяПодсказка" id="396"/>
-									<Events>
-										<Event name="Click" callType="Before">ТБККартинкаПО14ПродавецНажатиеПеред</Event>
-									</Events>
-								</PictureField>
-								<PictureField name="КартинкаПО15ПродолжитьЧек" id="397">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Продолж. чек (Ctrl+F5)</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>None</TitleLocation>
-									<Shortcut>Ctrl+F5</Shortcut>
-									<Width>10</Width>
-									<Height>3</Height>
-									<VerticalStretch>false</VerticalStretch>
-									<PictureSize>AutoSize</PictureSize>
-									<Hyperlink>true</Hyperlink>
-									<NonselectedPictureText>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Продолж. чек (Ctrl+F5)</v8:content>
-										</v8:item>
-									</NonselectedPictureText>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="КартинкаПО15ПродолжитьЧекКонтекстноеМеню" id="398"/>
-									<ExtendedTooltip name="КартинкаПО15ПродолжитьЧекРасширеннаяПодсказка" id="399"/>
-								</PictureField>
-								<PictureField name="КартинкаПО16ВвестиВозвратТовараОтРозничногоПокупателя" id="400">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Возврат от покупателя (Ctrl+R)</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>None</TitleLocation>
-									<Shortcut>Ctrl+F6</Shortcut>
-									<Width>10</Width>
-									<Height>3</Height>
-									<VerticalStretch>false</VerticalStretch>
-									<PictureSize>AutoSize</PictureSize>
-									<Hyperlink>true</Hyperlink>
-									<NonselectedPictureText>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Возврат от покупателя (Ctrl+R)</v8:content>
-										</v8:item>
-									</NonselectedPictureText>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="КартинкаПО16ВвестиВозвратТовараОтРозничногоПокупателяКонтекстноеМеню" id="401"/>
-									<ExtendedTooltip name="КартинкаПО16ВвестиВозвратТовараОтРозничногоПокупателяРасширеннаяПодсказка" id="402"/>
-								</PictureField>
-								<PictureField name="КартинкаПО17ВвестиИнформационнуюКарту" id="403">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Дисконт. карта (Ctrl+F7)</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>None</TitleLocation>
-									<Shortcut>Ctrl+F7</Shortcut>
-									<Width>10</Width>
-									<Height>3</Height>
-									<VerticalStretch>false</VerticalStretch>
-									<PictureSize>AutoSize</PictureSize>
-									<Hyperlink>true</Hyperlink>
-									<NonselectedPictureText>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Дисконт. карта (Ctrl+F7)</v8:content>
-										</v8:item>
-									</NonselectedPictureText>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="КартинкаПО17ВвестиИнформационнуюКартуКонтекстноеМеню" id="404"/>
-									<ExtendedTooltip name="КартинкаПО17ВвестиИнформационнуюКартуРасширеннаяПодсказка" id="405"/>
-								</PictureField>
-								<PictureField name="КартинкаПО18ОткрытьПодарочныеСертификаты" id="406">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Подарочн. сертификаты (Ctrl+F8)</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>None</TitleLocation>
-									<Shortcut>Ctrl+F8</Shortcut>
-									<Width>10</Width>
-									<Height>3</Height>
-									<VerticalStretch>false</VerticalStretch>
-									<PictureSize>AutoSize</PictureSize>
-									<Hyperlink>true</Hyperlink>
-									<NonselectedPictureText>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Подарочн. сертификаты (Ctrl+F8)</v8:content>
-										</v8:item>
-									</NonselectedPictureText>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="КартинкаПО18ОткрытьПодарочныеСертификатыКонтекстноеМеню" id="407"/>
-									<ExtendedTooltip name="КартинкаПО18ОткрытьПодарочныеСертификатыРасширеннаяПодсказка" id="408"/>
-								</PictureField>
-								<PictureField name="КартинкаПО19УправляемыеСкидки" id="409">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Управл. скидки (Ctrl+F9)</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>None</TitleLocation>
-									<Shortcut>Ctrl+F9</Shortcut>
-									<Width>10</Width>
-									<Height>3</Height>
-									<VerticalStretch>false</VerticalStretch>
-									<PictureSize>AutoSize</PictureSize>
-									<Hyperlink>true</Hyperlink>
-									<NonselectedPictureText>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Управл. скидки (Ctrl+F9)</v8:content>
-										</v8:item>
-									</NonselectedPictureText>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="КартинкаПО19УправляемыеСкидкиКонтекстноеМеню" id="410"/>
-									<ExtendedTooltip name="КартинкаПО19УправляемыеСкидкиРасширеннаяПодсказка" id="411"/>
-								</PictureField>
-								<PictureField name="КартинкаПО29ОтменитьОплатуБонусами" id="412">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Отменить оплату бонусами (Shift+ F5)</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>None</TitleLocation>
-									<Shortcut>Shift+F5</Shortcut>
-									<Width>10</Width>
-									<Height>3</Height>
-									<VerticalStretch>false</VerticalStretch>
-									<PictureSize>AutoSize</PictureSize>
-									<Hyperlink>true</Hyperlink>
-									<NonselectedPictureText>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Отменить оплату бонусами (Shift+ F5)</v8:content>
-										</v8:item>
-									</NonselectedPictureText>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="КартинкаПО29ОтменитьОплатуБонусамиКонтекстноеМеню" id="413"/>
-									<ExtendedTooltip name="КартинкаПО29ОтменитьОплатуБонусамиРасширеннаяПодсказка" id="414"/>
-								</PictureField>
-								<PictureField name="КартинкаПО20ЗаменаКарты" id="415">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Замена карты (Ctrl+F11)</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>None</TitleLocation>
-									<Shortcut>Ctrl+F11</Shortcut>
-									<Width>10</Width>
-									<Height>3</Height>
-									<VerticalStretch>false</VerticalStretch>
-									<PictureSize>AutoSize</PictureSize>
-									<Hyperlink>true</Hyperlink>
-									<NonselectedPictureText>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Замена карты (Ctrl+F11)</v8:content>
-										</v8:item>
-									</NonselectedPictureText>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="КартинкаПО20ЗаменаКартыКонтекстноеМеню" id="416"/>
-									<ExtendedTooltip name="КартинкаПО20ЗаменаКартыРасширеннаяПодсказка" id="417"/>
-								</PictureField>
-								<PictureField name="КартинкаПО21ПробитьЧек" id="418">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Пробить непробитый (Ctrl+F12)</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>None</TitleLocation>
-									<Shortcut>Ctrl+F12</Shortcut>
-									<Width>10</Width>
-									<Height>3</Height>
-									<VerticalStretch>false</VerticalStretch>
-									<PictureSize>AutoSize</PictureSize>
-									<Hyperlink>true</Hyperlink>
-									<NonselectedPictureText>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Пробить непробитый (Ctrl+F12)</v8:content>
-										</v8:item>
-									</NonselectedPictureText>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="КартинкаПО21ПробитьЧекКонтекстноеМеню" id="419"/>
-									<ExtendedTooltip name="КартинкаПО21ПробитьЧекРасширеннаяПодсказка" id="420"/>
-								</PictureField>
-								<PictureField name="КартинкаПО22РучныеСкидки" id="421">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Ручные скидки</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>None</TitleLocation>
-									<Width>10</Width>
-									<Height>3</Height>
-									<VerticalStretch>false</VerticalStretch>
-									<PictureSize>AutoSize</PictureSize>
-									<Hyperlink>true</Hyperlink>
-									<NonselectedPictureText>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Ручные скидки</v8:content>
-										</v8:item>
-									</NonselectedPictureText>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="КартинкаПО22РучныеСкидкиКонтекстноеМеню" id="422"/>
-									<ExtendedTooltip name="КартинкаПО22РучныеСкидкиРасширеннаяПодсказка" id="423"/>
-								</PictureField>
-							</ChildItems>
-						</UsualGroup>
-						<UsualGroup name="ГруппаКнопкиНевключенныеПоУмолчанию" id="448">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа кнопки невключенные по умолчанию</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTipRepresentation>None</ToolTipRepresentation>
-							<Group>Horizontal</Group>
-							<Representation>None</Representation>
-							<ChildItemsWidth>Equal</ChildItemsWidth>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаКнопкиНевключенныеПоУмолчаниюРасширеннаяПодсказка" id="449"/>
-							<ChildItems>
-								<PictureField name="КартинкаПО23ВвестиСерии" id="450">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Ввести серии</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>None</TitleLocation>
-									<Width>10</Width>
-									<Height>3</Height>
-									<VerticalStretch>false</VerticalStretch>
-									<PictureSize>AutoSize</PictureSize>
-									<Hyperlink>true</Hyperlink>
-									<NonselectedPictureText>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Ввести серии</v8:content>
-										</v8:item>
-									</NonselectedPictureText>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="КартинкаПО23ВвестиСерииКонтекстноеМеню" id="451"/>
-									<ExtendedTooltip name="КартинкаПО23ВвестиСерииРасширеннаяПодсказка" id="452"/>
-								</PictureField>
-								<PictureField name="КартинкаПО24ПолучитьИзТСД" id="453">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Получить из ТСД</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>None</TitleLocation>
-									<Width>10</Width>
-									<Height>3</Height>
-									<VerticalStretch>false</VerticalStretch>
-									<PictureSize>AutoSize</PictureSize>
-									<Hyperlink>true</Hyperlink>
-									<NonselectedPictureText>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Получить из ТСД</v8:content>
-										</v8:item>
-									</NonselectedPictureText>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="КартинкаПО24ПолучитьИзТСДКонтекстноеМеню" id="454"/>
-									<ExtendedTooltip name="КартинкаПО24ПолучитьИзТСДРасширеннаяПодсказка" id="455"/>
-								</PictureField>
-								<PictureField name="КартинкаПО25ПечатьПробитогоЧека" id="456">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Печать пробитого чека</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>None</TitleLocation>
-									<Shortcut>Ctrl+F4</Shortcut>
-									<Width>10</Width>
-									<Height>3</Height>
-									<VerticalStretch>false</VerticalStretch>
-									<PictureSize>AutoSize</PictureSize>
-									<Hyperlink>true</Hyperlink>
-									<NonselectedPictureText>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Печать пробитого чека</v8:content>
-										</v8:item>
-									</NonselectedPictureText>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="КартинкаПО25ПечатьПробитогоЧекаКонтекстноеМеню" id="457"/>
-									<ExtendedTooltip name="КартинкаПО25ПечатьПробитогоЧекаРасширеннаяПодсказка" id="458"/>
-								</PictureField>
-								<PictureField name="КартинкаПО26ОтчетБезГашения" id="459">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Отчет без гашения</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>None</TitleLocation>
-									<Shortcut>Ctrl+F5</Shortcut>
-									<Width>10</Width>
-									<Height>3</Height>
-									<VerticalStretch>false</VerticalStretch>
-									<PictureSize>AutoSize</PictureSize>
-									<Hyperlink>true</Hyperlink>
-									<NonselectedPictureText>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Отчет без гашения</v8:content>
-										</v8:item>
-									</NonselectedPictureText>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="КартинкаПО26ОтчетБезГашенияКонтекстноеМеню" id="460"/>
-									<ExtendedTooltip name="КартинкаПО26ОтчетБезГашенияРасширеннаяПодсказка" id="461"/>
-								</PictureField>
-								<PictureField name="КартинкаПО27ПродажаПоЗаказу" id="462">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Продажа по заказу</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>None</TitleLocation>
-									<Shortcut>Ctrl+F6</Shortcut>
-									<Width>10</Width>
-									<Height>3</Height>
-									<VerticalStretch>false</VerticalStretch>
-									<PictureSize>AutoSize</PictureSize>
-									<Hyperlink>true</Hyperlink>
-									<NonselectedPictureText>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Продажа по заказу</v8:content>
-										</v8:item>
-									</NonselectedPictureText>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="КартинкаПО27ПродажаПоЗаказуКонтекстноеМеню" id="463"/>
-									<ExtendedTooltip name="КартинкаПО27ПродажаПоЗаказуРасширеннаяПодсказка" id="464"/>
-								</PictureField>
-								<PictureField name="КартинкаПО30ВозвратПоследнегоЧека" id="497">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Возврат последнего чека (Ctrl + Shift + R)</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>None</TitleLocation>
-									<Shortcut>Ctrl+Shift+F6</Shortcut>
-									<Width>10</Width>
-									<Height>3</Height>
-									<VerticalStretch>false</VerticalStretch>
-									<PictureSize>AutoSize</PictureSize>
-									<Hyperlink>true</Hyperlink>
-									<NonselectedPictureText>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Возврат последнего чека (Ctrl + Shift + R)</v8:content>
-										</v8:item>
-									</NonselectedPictureText>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="КартинкаПО30ВозвратПоследнегоЧекаКонтекстноеМеню" id="498"/>
-									<ExtendedTooltip name="КартинкаПО30ВозвратПоследнегоЧекаРасширеннаяПодсказка" id="499"/>
-								</PictureField>
-								<PictureField name="КартинкаПО31ПолучитьДокументРасчета" id="507">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Документ расчета</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>None</TitleLocation>
-									<Width>10</Width>
-									<Height>3</Height>
-									<VerticalStretch>false</VerticalStretch>
-									<PictureSize>AutoSize</PictureSize>
-									<Hyperlink>true</Hyperlink>
-									<NonselectedPictureText>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Документ расчета</v8:content>
-										</v8:item>
-									</NonselectedPictureText>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="КартинкаПО31ПолучитьДокументРасчетаКонтекстноеМеню" id="508"/>
-									<ExtendedTooltip name="КартинкаПО31ПолучитьДокументРасчетаРасширеннаяПодсказка" id="509"/>
-								</PictureField>
-								<PictureField name="КартинкаПО32АкцизныеМарки" id="521">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Марки</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>None</TitleLocation>
-									<Width>10</Width>
-									<Height>3</Height>
-									<VerticalStretch>false</VerticalStretch>
-									<PictureSize>AutoSize</PictureSize>
-									<Hyperlink>true</Hyperlink>
-									<NonselectedPictureText>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Марки</v8:content>
-										</v8:item>
-									</NonselectedPictureText>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="КартинкаПО32АкцизныеМаркиКонтекстноеМеню" id="522"/>
-									<ExtendedTooltip name="КартинкаПО32АкцизныеМаркиРасширеннаяПодсказка" id="523"/>
-								</PictureField>
-								<PictureField name="КартинкаПО33ПоискПоНаименованию" id="532">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Найти по наименованию</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>None</TitleLocation>
-									<Width>10</Width>
-									<Height>3</Height>
-									<VerticalStretch>false</VerticalStretch>
-									<PictureSize>AutoSize</PictureSize>
-									<Hyperlink>true</Hyperlink>
-									<NonselectedPictureText>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Найти по наименованию</v8:content>
-										</v8:item>
-									</NonselectedPictureText>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="КартинкаПО33ПоискПоНаименованиюКонтекстноеМеню" id="533"/>
-									<ExtendedTooltip name="КартинкаПО33ПоискПоНаименованиюРасширеннаяПодсказка" id="534"/>
-								</PictureField>
+								<UsualGroup name="ГруппаПрочихОперацийРяд2" id="386">
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ChildItemsWidth>Equal</ChildItemsWidth>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПрочихОперацийРяд2ExtendedTooltip" id="387"/>
+									<ChildItems>
+										<PictureField name="КартинкаПО12ПолучитьВес" id="388">
+											<Visible>false</Visible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Получить вес (Ctrl+F2)</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<Shortcut>Ctrl+F2</Shortcut>
+											<Width>10</Width>
+											<Height>3</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<PictureSize>AutoSize</PictureSize>
+											<Hyperlink>true</Hyperlink>
+											<NonselectedPictureText>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Получить вес (Ctrl+F2)</v8:content>
+												</v8:item>
+											</NonselectedPictureText>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаПО12ПолучитьВесКонтекстноеМеню" id="389"/>
+											<ExtendedTooltip name="КартинкаПО12ПолучитьВесРасширеннаяПодсказка" id="390"/>
+										</PictureField>
+										<PictureField name="КартинкаПО13ВвестиВыемкаДенег" id="391">
+											<Visible>false</Visible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Выемка денег (Ctrl+F3)</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<Shortcut>Ctrl+F3</Shortcut>
+											<Width>10</Width>
+											<Height>3</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<PictureSize>AutoSize</PictureSize>
+											<Hyperlink>true</Hyperlink>
+											<NonselectedPictureText>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Выемка денег (Ctrl+F3)</v8:content>
+												</v8:item>
+											</NonselectedPictureText>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаПО13ВвестиВыемкаДенегКонтекстноеМеню" id="392"/>
+											<ExtendedTooltip name="КартинкаПО13ВвестиВыемкаДенегРасширеннаяПодсказка" id="393"/>
+										</PictureField>
+										<PictureField name="КартинкаПО22РучныеСкидки" id="421">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ручные скидки</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<Width>10</Width>
+											<Height>3</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<PictureSize>AutoSize</PictureSize>
+											<Hyperlink>true</Hyperlink>
+											<NonselectedPictureText>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ручные скидки</v8:content>
+												</v8:item>
+											</NonselectedPictureText>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаПО22РучныеСкидкиКонтекстноеМеню" id="422"/>
+											<ExtendedTooltip name="КартинкаПО22РучныеСкидкиРасширеннаяПодсказка" id="423"/>
+										</PictureField>
+										<PictureField name="КартинкаПО14Продавец" id="394">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Выбор продавца (Ctrl+F4)</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<Shortcut>Ctrl+F4</Shortcut>
+											<Width>10</Width>
+											<Height>3</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<PictureSize>AutoSize</PictureSize>
+											<Hyperlink>true</Hyperlink>
+											<NonselectedPictureText>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Выбор продавца (Ctrl+F4)</v8:content>
+												</v8:item>
+											</NonselectedPictureText>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаПО14ПродавецКонтекстноеМеню" id="395"/>
+											<ExtendedTooltip name="КартинкаПО14ПродавецРасширеннаяПодсказка" id="396"/>
+											<Events>
+												<Event name="Click" callType="Before">ТБККартинкаПО14ПродавецНажатиеПеред</Event>
+											</Events>
+										</PictureField>
+										<PictureField name="КартинкаПО15ПродолжитьЧек" id="397">
+											<Visible>false</Visible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Продолж. чек (Ctrl+F5)</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<Shortcut>Ctrl+F5</Shortcut>
+											<Width>10</Width>
+											<Height>3</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<PictureSize>AutoSize</PictureSize>
+											<Hyperlink>true</Hyperlink>
+											<NonselectedPictureText>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Продолж. чек (Ctrl+F5)</v8:content>
+												</v8:item>
+											</NonselectedPictureText>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаПО15ПродолжитьЧекКонтекстноеМеню" id="398"/>
+											<ExtendedTooltip name="КартинкаПО15ПродолжитьЧекРасширеннаяПодсказка" id="399"/>
+										</PictureField>
+										<PictureField name="КартинкаПО16ВвестиВозвратТовараОтРозничногоПокупателя" id="400">
+											<Visible>false</Visible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Возврат от покупателя (Ctrl+R)</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<Shortcut>Ctrl+F6</Shortcut>
+											<Width>10</Width>
+											<Height>3</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<PictureSize>AutoSize</PictureSize>
+											<Hyperlink>true</Hyperlink>
+											<NonselectedPictureText>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Возврат от покупателя (Ctrl+R)</v8:content>
+												</v8:item>
+											</NonselectedPictureText>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаПО16ВвестиВозвратТовараОтРозничногоПокупателяКонтекстноеМеню" id="401"/>
+											<ExtendedTooltip name="КартинкаПО16ВвестиВозвратТовараОтРозничногоПокупателяРасширеннаяПодсказка" id="402"/>
+										</PictureField>
+										<PictureField name="КартинкаПО17ВвестиИнформационнуюКарту" id="403">
+											<Visible>false</Visible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дисконт. карта (Ctrl+F7)</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<Shortcut>Ctrl+F7</Shortcut>
+											<Width>10</Width>
+											<Height>3</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<PictureSize>AutoSize</PictureSize>
+											<Hyperlink>true</Hyperlink>
+											<NonselectedPictureText>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дисконт. карта (Ctrl+F7)</v8:content>
+												</v8:item>
+											</NonselectedPictureText>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаПО17ВвестиИнформационнуюКартуКонтекстноеМеню" id="404"/>
+											<ExtendedTooltip name="КартинкаПО17ВвестиИнформационнуюКартуРасширеннаяПодсказка" id="405"/>
+										</PictureField>
+										<PictureField name="КартинкаПО18ОткрытьПодарочныеСертификаты" id="406">
+											<Visible>false</Visible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подарочн. сертификаты (Ctrl+F8)</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<Shortcut>Ctrl+F8</Shortcut>
+											<Width>10</Width>
+											<Height>3</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<PictureSize>AutoSize</PictureSize>
+											<Hyperlink>true</Hyperlink>
+											<NonselectedPictureText>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подарочн. сертификаты (Ctrl+F8)</v8:content>
+												</v8:item>
+											</NonselectedPictureText>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаПО18ОткрытьПодарочныеСертификатыКонтекстноеМеню" id="407"/>
+											<ExtendedTooltip name="КартинкаПО18ОткрытьПодарочныеСертификатыРасширеннаяПодсказка" id="408"/>
+										</PictureField>
+										<PictureField name="КартинкаПО19УправляемыеСкидки" id="409">
+											<Visible>false</Visible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Управл. скидки (Ctrl+F9)</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<Shortcut>Ctrl+F9</Shortcut>
+											<Width>10</Width>
+											<Height>3</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<PictureSize>AutoSize</PictureSize>
+											<Hyperlink>true</Hyperlink>
+											<NonselectedPictureText>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Управл. скидки (Ctrl+F9)</v8:content>
+												</v8:item>
+											</NonselectedPictureText>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаПО19УправляемыеСкидкиКонтекстноеМеню" id="410"/>
+											<ExtendedTooltip name="КартинкаПО19УправляемыеСкидкиРасширеннаяПодсказка" id="411"/>
+										</PictureField>
+										<PictureField name="КартинкаПО29ОтменитьОплатуБонусами" id="412">
+											<Visible>false</Visible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отменить оплату бонусами (Shift+ F5)</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<Shortcut>Shift+F5</Shortcut>
+											<Width>10</Width>
+											<Height>3</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<PictureSize>AutoSize</PictureSize>
+											<Hyperlink>true</Hyperlink>
+											<NonselectedPictureText>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отменить оплату бонусами (Shift+ F5)</v8:content>
+												</v8:item>
+											</NonselectedPictureText>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаПО29ОтменитьОплатуБонусамиКонтекстноеМеню" id="413"/>
+											<ExtendedTooltip name="КартинкаПО29ОтменитьОплатуБонусамиРасширеннаяПодсказка" id="414"/>
+										</PictureField>
+										<PictureField name="КартинкаПО20ЗаменаКарты" id="415">
+											<Visible>false</Visible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Замена карты (Ctrl+F11)</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<Shortcut>Ctrl+F11</Shortcut>
+											<Width>10</Width>
+											<Height>3</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<PictureSize>AutoSize</PictureSize>
+											<Hyperlink>true</Hyperlink>
+											<NonselectedPictureText>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Замена карты (Ctrl+F11)</v8:content>
+												</v8:item>
+											</NonselectedPictureText>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаПО20ЗаменаКартыКонтекстноеМеню" id="416"/>
+											<ExtendedTooltip name="КартинкаПО20ЗаменаКартыРасширеннаяПодсказка" id="417"/>
+										</PictureField>
+										<PictureField name="КартинкаПО21ПробитьЧек" id="418">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Пробить непробитый (Ctrl+F12)</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<Shortcut>Ctrl+F12</Shortcut>
+											<Width>10</Width>
+											<Height>3</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<PictureSize>AutoSize</PictureSize>
+											<Hyperlink>true</Hyperlink>
+											<NonselectedPictureText>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Пробить непробитый (Ctrl+F12)</v8:content>
+												</v8:item>
+											</NonselectedPictureText>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаПО21ПробитьЧекКонтекстноеМеню" id="419"/>
+											<ExtendedTooltip name="КартинкаПО21ПробитьЧекРасширеннаяПодсказка" id="420"/>
+										</PictureField>
+										<UsualGroup name="ГруппаКнопкиНевключенныеПоУмолчанию" id="448">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа кнопки невключенные по умолчанию</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ChildItemsWidth>Equal</ChildItemsWidth>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаКнопкиНевключенныеПоУмолчаниюРасширеннаяПодсказка" id="449"/>
+											<ChildItems>
+												<PictureField name="КартинкаПО23ВвестиСерии" id="450">
+													<Visible>false</Visible>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Ввести серии</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<Width>10</Width>
+													<Height>3</Height>
+													<VerticalStretch>false</VerticalStretch>
+													<PictureSize>AutoSize</PictureSize>
+													<Hyperlink>true</Hyperlink>
+													<NonselectedPictureText>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Ввести серии</v8:content>
+														</v8:item>
+													</NonselectedPictureText>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаПО23ВвестиСерииКонтекстноеМеню" id="451"/>
+													<ExtendedTooltip name="КартинкаПО23ВвестиСерииРасширеннаяПодсказка" id="452"/>
+												</PictureField>
+												<PictureField name="КартинкаПО24ПолучитьИзТСД" id="453">
+													<Visible>false</Visible>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Получить из ТСД</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<Width>10</Width>
+													<Height>3</Height>
+													<VerticalStretch>false</VerticalStretch>
+													<PictureSize>AutoSize</PictureSize>
+													<Hyperlink>true</Hyperlink>
+													<NonselectedPictureText>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Получить из ТСД</v8:content>
+														</v8:item>
+													</NonselectedPictureText>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаПО24ПолучитьИзТСДКонтекстноеМеню" id="454"/>
+													<ExtendedTooltip name="КартинкаПО24ПолучитьИзТСДРасширеннаяПодсказка" id="455"/>
+												</PictureField>
+												<PictureField name="КартинкаПО25ПечатьПробитогоЧека" id="456">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Печать пробитого чека</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<Shortcut>Ctrl+F4</Shortcut>
+													<Width>10</Width>
+													<Height>3</Height>
+													<VerticalStretch>false</VerticalStretch>
+													<PictureSize>AutoSize</PictureSize>
+													<Hyperlink>true</Hyperlink>
+													<NonselectedPictureText>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Печать пробитого чека</v8:content>
+														</v8:item>
+													</NonselectedPictureText>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаПО25ПечатьПробитогоЧекаКонтекстноеМеню" id="457"/>
+													<ExtendedTooltip name="КартинкаПО25ПечатьПробитогоЧекаРасширеннаяПодсказка" id="458"/>
+												</PictureField>
+												<PictureField name="КартинкаПО26ОтчетБезГашения" id="459">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отчет без гашения</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<Shortcut>Ctrl+F5</Shortcut>
+													<Width>10</Width>
+													<Height>3</Height>
+													<VerticalStretch>false</VerticalStretch>
+													<PictureSize>AutoSize</PictureSize>
+													<Hyperlink>true</Hyperlink>
+													<NonselectedPictureText>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отчет без гашения</v8:content>
+														</v8:item>
+													</NonselectedPictureText>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаПО26ОтчетБезГашенияКонтекстноеМеню" id="460"/>
+													<ExtendedTooltip name="КартинкаПО26ОтчетБезГашенияРасширеннаяПодсказка" id="461"/>
+												</PictureField>
+												<PictureField name="КартинкаПО27ПродажаПоЗаказу" id="462">
+													<Visible>false</Visible>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Продажа по заказу</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<Shortcut>Ctrl+F6</Shortcut>
+													<Width>10</Width>
+													<Height>3</Height>
+													<VerticalStretch>false</VerticalStretch>
+													<PictureSize>AutoSize</PictureSize>
+													<Hyperlink>true</Hyperlink>
+													<NonselectedPictureText>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Продажа по заказу</v8:content>
+														</v8:item>
+													</NonselectedPictureText>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаПО27ПродажаПоЗаказуКонтекстноеМеню" id="463"/>
+													<ExtendedTooltip name="КартинкаПО27ПродажаПоЗаказуРасширеннаяПодсказка" id="464"/>
+												</PictureField>
+												<PictureField name="КартинкаПО30ВозвратПоследнегоЧека" id="497">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Возврат последнего чека (Ctrl + Shift + R)</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<Shortcut>Ctrl+Shift+F6</Shortcut>
+													<Width>10</Width>
+													<Height>3</Height>
+													<VerticalStretch>false</VerticalStretch>
+													<PictureSize>AutoSize</PictureSize>
+													<Hyperlink>true</Hyperlink>
+													<NonselectedPictureText>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Возврат последнего чека (Ctrl + Shift + R)</v8:content>
+														</v8:item>
+													</NonselectedPictureText>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаПО30ВозвратПоследнегоЧекаКонтекстноеМеню" id="498"/>
+													<ExtendedTooltip name="КартинкаПО30ВозвратПоследнегоЧекаРасширеннаяПодсказка" id="499"/>
+												</PictureField>
+												<PictureField name="КартинкаПО31ПолучитьДокументРасчета" id="507">
+													<Visible>false</Visible>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Документ расчета</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<Width>10</Width>
+													<Height>3</Height>
+													<VerticalStretch>false</VerticalStretch>
+													<PictureSize>AutoSize</PictureSize>
+													<Hyperlink>true</Hyperlink>
+													<NonselectedPictureText>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Документ расчета</v8:content>
+														</v8:item>
+													</NonselectedPictureText>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаПО31ПолучитьДокументРасчетаКонтекстноеМеню" id="508"/>
+													<ExtendedTooltip name="КартинкаПО31ПолучитьДокументРасчетаРасширеннаяПодсказка" id="509"/>
+												</PictureField>
+												<PictureField name="КартинкаПО32АкцизныеМарки" id="521">
+													<Visible>false</Visible>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Марки</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<Width>10</Width>
+													<Height>3</Height>
+													<VerticalStretch>false</VerticalStretch>
+													<PictureSize>AutoSize</PictureSize>
+													<Hyperlink>true</Hyperlink>
+													<NonselectedPictureText>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Марки</v8:content>
+														</v8:item>
+													</NonselectedPictureText>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаПО32АкцизныеМаркиКонтекстноеМеню" id="522"/>
+													<ExtendedTooltip name="КартинкаПО32АкцизныеМаркиРасширеннаяПодсказка" id="523"/>
+												</PictureField>
+												<PictureField name="КартинкаПО33ПоискПоНаименованию" id="532">
+													<Visible>false</Visible>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Найти по наименованию</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<Width>10</Width>
+													<Height>3</Height>
+													<VerticalStretch>false</VerticalStretch>
+													<PictureSize>AutoSize</PictureSize>
+													<Hyperlink>true</Hyperlink>
+													<NonselectedPictureText>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Найти по наименованию</v8:content>
+														</v8:item>
+													</NonselectedPictureText>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаПО33ПоискПоНаименованиюКонтекстноеМеню" id="533"/>
+													<ExtendedTooltip name="КартинкаПО33ПоискПоНаименованиюРасширеннаяПодсказка" id="534"/>
+												</PictureField>
+												<PictureField name="КартинкаПО11Выход" id="383">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Выход (F12)</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<Shortcut>F12</Shortcut>
+													<Width>10</Width>
+													<Height>3</Height>
+													<VerticalStretch>false</VerticalStretch>
+													<PictureSize>AutoSize</PictureSize>
+													<Hyperlink>true</Hyperlink>
+													<NonselectedPictureText>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Выход (F12)</v8:content>
+														</v8:item>
+													</NonselectedPictureText>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаПО11ВыходКонтекстноеМеню" id="384"/>
+													<ExtendedTooltip name="КартинкаПО11ВыходРасширеннаяПодсказка" id="385"/>
+												</PictureField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ГруппаТБК" id="558">
-					<Visible>false</Visible>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа ТБК</v8:content>
+							<v8:content>Табакон</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
@@ -2662,8 +2691,6 @@
 						</v8:item>
 					</ToolTip>
 					<Group>AlwaysHorizontal</Group>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаТБКРасширеннаяПодсказка" id="559"/>
 					<ChildItems>
 						<Button name="КнопкаОтключитьЭквайринг" id="560">
@@ -2693,12 +2720,73 @@
 							</Title>
 							<ExtendedTooltip name="ОткрытьПочтуРасширеннаяПодсказка" id="580"/>
 						</Button>
-						<CheckBoxField name="ИспользоватьПробитиеБлока" id="573">
-							<DataPath>ИспользоватьПробитиеБлока</DataPath>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="ИспользоватьПробитиеБлокаКонтекстноеМеню" id="574"/>
-							<ExtendedTooltip name="ИспользоватьПробитиеБлокаРасширеннаяПодсказка" id="575"/>
-						</CheckBoxField>
+						<Button name="ПоказатьПанельЛояльность" id="623">
+							<Type>UsualButton</Type>
+							<Width>15</Width>
+							<Height>4</Height>
+							<CommandName>0</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Показать/Скрыть
+панель лояльность</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ПоказатьПанельЛояльностьРасширеннаяПодсказка" id="624"/>
+						</Button>
+						<Button name="ПрименениеЦенНоменклатуры" id="653">
+							<Type>UsualButton</Type>
+							<Width>11</Width>
+							<Height>4</Height>
+							<CommandName>Document.ПрименениеЦенНоменклатуры.StandardCommand.OpenList</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Переоценки</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ПрименениеЦенНоменклатурыРасширеннаяПодсказка" id="654"/>
+						</Button>
+						<Button name="ТБК_ПечатьПоследнегоЧека" id="645">
+							<Type>UsualButton</Type>
+							<Width>14</Width>
+							<Height>4</Height>
+							<CommandName>Form.Command.ТБК_ПечатьПоследнегоЧека</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Печать 
+последнего чека</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ТБК_ПечатьПоследнегоЧекаРасширеннаяПодсказка" id="646"/>
+						</Button>
+						<Button name="Инструкции" id="649">
+							<Type>UsualButton</Type>
+							<Width>12</Width>
+							<Height>4</Height>
+							<CommandName>Form.Command.ОткрытьИнструкции</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Инструкции</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ИнструкцииРасширеннаяПодсказка" id="650"/>
+						</Button>
+						<Button name="Новости" id="651">
+							<Type>UsualButton</Type>
+							<Width>12</Width>
+							<Height>4</Height>
+							<CommandName>Form.Command.ОткрытьНовости</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Новости</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="НовостиРасширеннаяПодсказка" id="652"/>
+						</Button>
 						<UsualGroup name="ГруппаПокупкиСотрудников" id="586">
 							<ToolTip>
 								<v8:item>
@@ -2707,6 +2795,8 @@
 								</v8:item>
 							</ToolTip>
 							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаПокупкиСотрудниковРасширеннаяПодсказка" id="587"/>
 							<ChildItems>
 								<CheckBoxField name="ПокупкаСотрудника" id="581">
@@ -2728,46 +2818,6 @@
 								</Button>
 							</ChildItems>
 						</UsualGroup>
-						<PictureField name="КартинкаПО01БыстрыеТовары1" id="639">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Быстрые товары (Alt+F2)</v8:content>
-								</v8:item>
-							</Title>
-							<TitleLocation>None</TitleLocation>
-							<Shortcut>Alt+F2</Shortcut>
-							<Width>10</Width>
-							<Height>3</Height>
-							<VerticalStretch>false</VerticalStretch>
-							<PictureSize>AutoSize</PictureSize>
-							<Hyperlink>true</Hyperlink>
-							<NonselectedPictureText>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Быстрые товары (Alt+F2)</v8:content>
-								</v8:item>
-							</NonselectedPictureText>
-							<FileDragMode>AsFile</FileDragMode>
-							<ContextMenu name="КартинкаПО01БыстрыеТовары1КонтекстноеМеню" id="640"/>
-							<ExtendedTooltip name="КартинкаПО01БыстрыеТовары1РасширеннаяПодсказка" id="641"/>
-						</PictureField>
-						<Button name="ПоказатьПанельЛояльность" id="623">
-							<Type>UsualButton</Type>
-							<CommandName>Form.Command.ПоказатьСкрытьПанельЛояльность</CommandName>
-							<ExtendedTooltip name="ПоказатьПанельЛояльностьРасширеннаяПодсказка" id="624"/>
-						</Button>
-						<Button name="ТБК_ПечатьПоследнегоЧека" id="645">
-							<Type>UsualButton</Type>
-							<CommandName>Form.Command.ТБК_ПечатьПоследнегоЧека</CommandName>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Печать последнего чека</v8:content>
-								</v8:item>
-							</Title>
-							<ExtendedTooltip name="ТБК_ПечатьПоследнегоЧекаРасширеннаяПодсказка" id="646"/>
-						</Button>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -3094,17 +3144,6 @@
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
-			</Type>
-		</Attribute>
-		<Attribute name="ИспользоватьПробитиеБлока" id="1000008">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Использовать пробитие блока</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 		<Attribute name="ДоступнаПроверкаОрганизаций" id="1000009">
@@ -3544,21 +3583,6 @@
 			</ToolTip>
 			<Action callType="After">ТБКНайтиПоТелефонуПосле</Action>
 		</Command>
-		<Command name="ПоказатьСкрытьПанельЛояльность" id="1000012">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Показать/Скрыть панель лояльность</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Показать скрыть панель лояльность</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action callType="After">ТБКПоказатьПанельЛояльностьПосле</Action>
-		</Command>
 		<Command name="УзнатьКоличествоБалловПоТелефону" id="1000014">
 			<Title>
 				<v8:item>
@@ -3599,7 +3623,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>ТБК печать последнего чека</v8:content>
+					<v8:content>Печать последнего чека</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКТБК_ПечатьПоследнегоЧекаПосле</Action>
@@ -3618,6 +3642,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКЗарегистрироватьКлиентаВПрограммеЛояльностиПосле</Action>
+		</Command>
+		<Command name="ОткрытьИнструкции" id="1000017">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть инструкции</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть инструкции</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКОткрытьИнструкцииПосле</Action>
+		</Command>
+		<Command name="ОткрытьНовости" id="1000018">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть новости</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть новости</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКОткрытьНовостиПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">

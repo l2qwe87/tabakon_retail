@@ -7,6 +7,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen" callType="After">ТБКПриОткрытииПосле</Event>
+		<Event name="OnCreateAtServer" callType="After">ТБКПриСозданииНаСервереПосле</Event>
 	</Events>
 	<ChildItems>
 		<Pages name="СтраницыФормы" id="10">
@@ -206,14 +207,6 @@
 											<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 											<ExtendedTooltip name="ДокументПеремещениеТоваровОткрытьСписокРасширеннаяПодсказка" id="149"/>
 										</Button>
-										<Button name="ДокументПрименениеЦенНоменклатурыОткрытьСписок" id="150">
-											<Type>UsualButton</Type>
-											<Height>2</Height>
-											<HorizontalStretch>true</HorizontalStretch>
-											<CommandName>Document.ПрименениеЦенНоменклатуры.StandardCommand.OpenList</CommandName>
-											<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-											<ExtendedTooltip name="ДокументПрименениеЦенНоменклатурыОткрытьСписокРасширеннаяПодсказка" id="151"/>
-										</Button>
 										<Button name="ДокументТБК_ВедомостьОПродажахЗаДеньОткрытьСписок" id="152">
 											<Type>UsualButton</Type>
 											<Height>2</Height>
@@ -264,13 +257,14 @@
 											</Title>
 											<ExtendedTooltip name="ЗаказыРасширеннаяПодсказка" id="162"/>
 										</Button>
-										<Button name="ВыгрузитьПродажиЗаПериод" id="154">
+										<Button name="ОткрытьПочту" id="154">
 											<Type>UsualButton</Type>
+											<Visible>false</Visible>
 											<Height>2</Height>
 											<HorizontalStretch>true</HorizontalStretch>
 											<CommandName>Form.Command.ОткрытьПочту</CommandName>
 											<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-											<ExtendedTooltip name="ВыгрузитьПродажиЗаПериодРасширеннаяПодсказка" id="155"/>
+											<ExtendedTooltip name="ОткрытьПочтуРасширеннаяПодсказка" id="155"/>
 										</Button>
 										<Button name="ОТкрытьЗаявки" id="167">
 											<Type>UsualButton</Type>
@@ -299,6 +293,34 @@
 												</v8:item>
 											</Title>
 											<ExtendedTooltip name="ОТкрытьЗаявкиНаЦенникиРасширеннаяПодсказка" id="170"/>
+										</Button>
+										<Button name="ОткрытьИнструкции" id="171">
+											<Type>UsualButton</Type>
+											<Height>2</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<CommandName>Form.Command.ОткрытьИнструкции</CommandName>
+											<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Инструкции</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ОткрытьИнструкцииРасширеннаяПодсказка" id="172"/>
+										</Button>
+										<Button name="ПоказатьНовости" id="173">
+											<Type>UsualButton</Type>
+											<Height>2</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<CommandName>Form.Command.ПоказатьНовости</CommandName>
+											<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Новости компании</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ПоказатьНовостиРасширеннаяПодсказка" id="174"/>
 										</Button>
 									</ChildItems>
 								</UsualGroup>
@@ -378,6 +400,7 @@
 											<ExtendedTooltip name="ДекорацияОтчетБезГашенияРасширеннаяПодсказка" id="83"/>
 										</PictureDecoration>
 										<PictureDecoration name="ДекорацияСводныйОтчет" id="87">
+											<Visible>false</Visible>
 											<Width>24</Width>
 											<Height>2</Height>
 											<Title formatted="false">
@@ -444,6 +467,7 @@
 											<ExtendedTooltip name="ДекорацияНастройкаРМКРасширеннаяПодсказка" id="92"/>
 										</PictureDecoration>
 										<PictureDecoration name="ДекорацияОбменДанными" id="93">
+											<Visible>false</Visible>
 											<Width>24</Width>
 											<Height>2</Height>
 											<Title formatted="false">
@@ -853,6 +877,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКПоказатьЗаявкиНаЦенникиПосле</Action>
+		</Command>
+		<Command name="ОткрытьИнструкции" id="1000008">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть инструкции</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть инструкции</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКОткрытьИнструкцииПосле</Action>
+		</Command>
+		<Command name="ПоказатьНовости" id="1000009">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать новости</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать новости</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКПоказатьНовостиПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
