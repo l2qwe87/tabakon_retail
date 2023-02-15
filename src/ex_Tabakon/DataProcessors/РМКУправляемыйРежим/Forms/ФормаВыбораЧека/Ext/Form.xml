@@ -238,15 +238,29 @@
 									<Width>8</Width>
 									<Height>3</Height>
 									<CommandName>Form.Command.Инструкция</CommandName>
-									<Font bold="true" kind="AutoFont"/>
+									<Font height="7" bold="true" kind="AutoFont"/>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Инстр-
-укция</v8:content>
+											<v8:content>Инструкция
+Возвраты</v8:content>
 										</v8:item>
 									</Title>
 									<ExtendedTooltip name="ИнструкцияРасширеннаяПодсказка" id="126"/>
+								</Button>
+								<Button name="ИнструкцияПробитьНепробитый" id="127">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ИнструкцияПробитьНепробитый</CommandName>
+									<Font height="7" bold="true" kind="AutoFont"/>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Инструкция
+Пробить
+непробитый</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ИнструкцияПробитьНепробитыйРасширеннаяПодсказка" id="128"/>
 								</Button>
 								<Button name="КомандаОтменитьПоиск" id="115">
 									<Type>UsualButton</Type>
@@ -303,7 +317,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Инструкция</v8:content>
+					<v8:content>Инструкция Возвраты</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -313,6 +327,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКИнструкцияПосле</Action>
+		</Command>
+		<Command name="ИнструкцияПробитьНепробитый" id="1000001">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструкция П.Н.</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструкция</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКИнструкцияПробитьНепробитыйПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
