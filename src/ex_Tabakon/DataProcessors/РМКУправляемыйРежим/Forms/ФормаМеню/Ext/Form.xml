@@ -199,6 +199,20 @@
 												</UsualGroup>
 											</ChildItems>
 										</UsualGroup>
+										<Button name="ОткрытьПланы" id="175">
+											<Type>UsualButton</Type>
+											<Height>2</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<CommandName>Form.Command.ОткрытьПланы</CommandName>
+											<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Выполнение планов</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ОткрытьПланыРасширеннаяПодсказка" id="176"/>
+										</Button>
 										<Button name="ДокументПеремещениеТоваровОткрытьСписок" id="148">
 											<Type>UsualButton</Type>
 											<Height>2</Height>
@@ -907,6 +921,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКПоказатьНовостиПосле</Action>
+		</Command>
+		<Command name="ОткрытьПланы" id="1000010">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть планы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть планы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКОткрытьПланыПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
