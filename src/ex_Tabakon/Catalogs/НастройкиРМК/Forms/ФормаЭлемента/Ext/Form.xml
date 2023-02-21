@@ -572,25 +572,68 @@
 									<ContextMenu name="ШаблонРаботыДисплеяПокупателяКонтекстноеМеню" id="109"/>
 									<ExtendedTooltip name="ШаблонРаботыДисплеяПокупателяExtendedTooltip" id="144"/>
 								</InputField>
+								<UsualGroup name="ГруппаТабакон" id="485">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Табакон</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа табакон</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<ExtendedTooltip name="ГруппаТабаконРасширеннаяПодсказка" id="486"/>
+									<ChildItems>
+										<UsualGroup name="Группа1" id="487">
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="488"/>
+											<ChildItems>
+												<CheckBoxField name="флДоступнаНефискальнаяПечать" id="476">
+													<DataPath>ДоступнаНефискальнаяПечать</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="флДоступнаНефискальнаяПечатьКонтекстноеМеню" id="477"/>
+													<ExtendedTooltip name="флДоступнаНефискальнаяПечатьРасширеннаяПодсказка" id="478"/>
+												</CheckBoxField>
+												<InputField name="ЧасНачала" id="479">
+													<DataPath>ЧасНачалаНефискальнаяПечать</DataPath>
+													<ContextMenu name="ЧасНачалаКонтекстноеМеню" id="480"/>
+													<ExtendedTooltip name="ЧасНачалаРасширеннаяПодсказка" id="481"/>
+												</InputField>
+												<CheckBoxField name="ДоступнаПроверкаОрганизаций" id="482">
+													<DataPath>ДоступнаПроверкаОрганизаций</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДоступнаПроверкаОрганизацийКонтекстноеМеню" id="483"/>
+													<ExtendedTooltip name="ДоступнаПроверкаОрганизацийРасширеннаяПодсказка" id="484"/>
+												</CheckBoxField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="Группа2" id="489">
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="490"/>
+											<ChildItems>
+												<CheckBoxField name="ИспользоватьВторойМонитор" id="491">
+													<DataPath>ИспользоватьВторойМонитор</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИспользоватьВторойМониторКонтекстноеМеню" id="492"/>
+													<ExtendedTooltip name="ИспользоватьВторойМониторРасширеннаяПодсказка" id="493"/>
+												</CheckBoxField>
+												<InputField name="СдвигПоРазрешениюЭкрана" id="494">
+													<DataPath>СдвигПоРазрешениюЭкрана</DataPath>
+													<ContextMenu name="СдвигПоРазрешениюЭкранаКонтекстноеМеню" id="495"/>
+													<ExtendedTooltip name="СдвигПоРазрешениюЭкранаРасширеннаяПодсказка" id="496"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
-						<CheckBoxField name="флДоступнаНефискальнаяПечать" id="476">
-							<DataPath>ДоступнаНефискальнаяПечать</DataPath>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="флДоступнаНефискальнаяПечатьКонтекстноеМеню" id="477"/>
-							<ExtendedTooltip name="флДоступнаНефискальнаяПечатьРасширеннаяПодсказка" id="478"/>
-						</CheckBoxField>
-						<InputField name="ЧасНачала" id="479">
-							<DataPath>ЧасНачалаНефискальнаяПечать</DataPath>
-							<ContextMenu name="ЧасНачалаКонтекстноеМеню" id="480"/>
-							<ExtendedTooltip name="ЧасНачалаРасширеннаяПодсказка" id="481"/>
-						</InputField>
-						<CheckBoxField name="ДоступнаПроверкаОрганизаций" id="482">
-							<DataPath>ДоступнаПроверкаОрганизаций</DataPath>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="ДоступнаПроверкаОрганизацийКонтекстноеМеню" id="483"/>
-							<ExtendedTooltip name="ДоступнаПроверкаОрганизацийРасширеннаяПодсказка" id="484"/>
-						</CheckBoxField>
 					</ChildItems>
 				</Page>
 				<Page name="ГруппаКнопкиНижнейПанели" id="62">
@@ -1402,6 +1445,33 @@
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьВторойМонитор" id="1000003">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать второй монитор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СдвигПоРазрешениюЭкрана" id="1000004">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сдвиг по разрешению экрана</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
