@@ -2787,6 +2787,20 @@
 							</Title>
 							<ExtendedTooltip name="НовостиРасширеннаяПодсказка" id="652"/>
 						</Button>
+						<Button name="ОткрытьВыполнениеПланов" id="655">
+							<Type>UsualButton</Type>
+							<Width>12</Width>
+							<Height>4</Height>
+							<CommandName>Form.Command.ОткрытьВыполнениеПланов</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выполнение 
+планов</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ОткрытьВыполнениеПлановРасширеннаяПодсказка" id="656"/>
+						</Button>
 						<UsualGroup name="ГруппаПокупкиСотрудников" id="586">
 							<ToolTip>
 								<v8:item>
@@ -3699,6 +3713,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКОткрытьНовостиПосле</Action>
+		</Command>
+		<Command name="ОткрытьВыполнениеПланов" id="1000012">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть выполнение планов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть выполнение планов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКОткрытьВыполнениеПлановПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
