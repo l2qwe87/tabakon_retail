@@ -45,6 +45,10 @@
       <Name>OLAP.ds</Name>
       <FullPath>OLAP.ds</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>REAL Tabakon.ds</Name>
+      <FullPath>REAL Tabakon.ds</FullPath>
+    </ProjectItem>
   </DataSources>
   <DataSourceViews>
     <ProjectItem>
@@ -62,11 +66,21 @@
             <Name>OLAP</Name>
             <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=DBSERV4;Integrated Security=SSPI;Initial Catalog=OLAP</Value>
           </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>REAL Tabakon</Id>
+            <Name>REAL Tabakon</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=DBSERV3;Integrated Security=SSPI;Initial Catalog=REAL_tabakon</Value>
+          </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>
           <ConfigurationSetting>
             <Id>OLAP</Id>
             <Name>OLAP</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>REAL Tabakon</Id>
+            <Name>REAL Tabakon</Name>
             <Value xsi:type="xsd:int">0</Value>
           </ConfigurationSetting>
         </ConnectionSecurityMappings>

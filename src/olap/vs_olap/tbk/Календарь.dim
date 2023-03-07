@@ -1,4 +1,4 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="8989bc3f-98bd-44f6-8378-5081397c1a51" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="765ec387-25ca-4d32-8703-3874e53e6a9a" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Календарь</ID>
   <Name>Календарь</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2322" scrolltop="2512" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10980" y="16272" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2322" scrolltop="-5345" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10980" y="19050" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
             </font>
@@ -51,7 +51,7 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>2512</Value>
+      <Value>-5345</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -73,28 +73,41 @@
             <Shape Id="Date" Expanded="false">
               <Attributes>
                 <Attribute Id="Date" />
+                <Attribute Id="Weekend" />
+                <Attribute Id="Days In Year" />
+                <Attribute Id="Days In Month" />
+                <Attribute Id="Week Day Str" />
                 <Attribute Id="Month Name Short" />
                 <Attribute Id="Month" />
+                <Attribute Id="Week" />
+                <Attribute Id="Month Week" />
+                <Attribute Id="Season" />
               </Attributes>
               <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Date 1" Expanded="false">
+              <Attributes>
+                <Attribute Id="Date 1" />
+              </Attributes>
+              <Position x="148" y="20" />
             </Shape>
             <Shape Id="Year Quarter" Expanded="false">
               <Attributes>
                 <Attribute Id="Year Quarter" />
               </Attributes>
-              <Position x="148" y="20" />
+              <Position x="148" y="68" />
             </Shape>
             <Shape Id="Year Month 1" Expanded="false">
               <Attributes>
                 <Attribute Id="Year Month 1" />
               </Attributes>
-              <Position x="148" y="68" />
+              <Position x="148" y="116" />
             </Shape>
             <Shape Id="Year Month" Expanded="false">
               <Attributes>
                 <Attribute Id="Year Month" />
               </Attributes>
-              <Position x="148" y="116" />
+              <Position x="148" y="164" />
             </Shape>
           </Shapes>
         </DiagramLayout>
@@ -103,83 +116,83 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="34c48489-07f6-4e13-aa6c-8f929d718913">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="550eb6f7-2cdc-4b62-8bb2-2f0280ef2292">
     <DataSourceViewID>OLAP</DataSourceViewID>
   </Source>
   <Type>Time</Type>
   <UnknownMember>Visible</UnknownMember>
-  <ErrorConfiguration dwd:design-time-name="d3b807b3-418d-4c2c-964c-f50bd38bade1">
+  <ErrorConfiguration dwd:design-time-name="cf5971be-591c-4cd5-9b70-e1e856431df5">
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="cab68922-79ff-47c7-a2be-a1065996273a">
+    <Attribute dwd:design-time-name="2720a10e-0ea4-49b6-80c0-6d5b4eb322cb">
       <ID>Date</ID>
       <Name>ДатаВремя</Name>
       <Type>Seconds</Type>
       <Usage>Key</Usage>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="54918b65-5adb-48d6-b562-2dd2080ba2f7">
+        <KeyColumn dwd:design-time-name="b421ecb8-6b97-4a6c-b10c-56cad02afc7f">
           <DataType>Date</DataType>
           <NullProcessing>UnknownMember</NullProcessing>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="cfc37fbd-3f7e-4fcf-ae7f-5f63a13456e0">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6af27b56-c419-49da-b0a7-78e28e95df90">
             <TableID>Календарь</TableID>
             <ColumnID>date_</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="ee01f5df-e515-46a0-8d77-2a0f4f82f2e6">
+        <AttributeRelationship dwd:design-time-name="f3e9f25e-8809-431a-ab2a-4a4c82e64d4e">
           <AttributeID>Year Month</AttributeID>
           <Name>Год</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="7596a35c-abf0-4845-abee-8edcaae6f223">
+        <AttributeRelationship dwd:design-time-name="c295eae9-14ce-4b62-aff8-3a98e6b5d065">
           <AttributeID>Month Name Short</AttributeID>
           <Name>Месяц</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="48adb89b-d6f1-4049-9620-6089636cce77">
+        <AttributeRelationship dwd:design-time-name="e75687a9-84cb-45c7-b604-7e7f13f6f3d6">
           <AttributeID>Year Month 1</AttributeID>
           <Name>Год Месяц</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="13cddfd3-7a79-4b16-affd-c8892edadf55">
+        <AttributeRelationship dwd:design-time-name="3e9ede16-55b6-4beb-becd-f2e1724dda0c">
           <AttributeID>Year Quarter</AttributeID>
           <Name>Квартал</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="7e2f518f-b5c5-45df-8c4f-a383566aaaf1">
+        <AttributeRelationship dwd:design-time-name="83742f41-b7e4-44be-bc59-c171e5b6cd3f">
           <AttributeID>Month</AttributeID>
           <Name>Месяц№</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="03d4fdfe-11f9-46cc-8c16-352d34e7ab1f">
+        <AttributeRelationship dwd:design-time-name="94dd24d9-ccab-4e51-a79e-d0f115b2998b">
           <AttributeID>Date 1</AttributeID>
           <Name>Дата</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="91284532-77b7-4636-8998-591fec990163">
+        <AttributeRelationship dwd:design-time-name="7751ad7e-8434-4b88-aef4-d30c9e9d5587">
           <AttributeID>Weekend</AttributeID>
           <Name>Выходной (сб вс)</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="f8724f77-b470-458d-964d-1f3ca51a4eb8">
+        <AttributeRelationship dwd:design-time-name="7abf807a-f0a5-4870-a23f-0b210793f6cd">
           <AttributeID>Week Day Str</AttributeID>
           <Name>День недели</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="8f5c0481-28df-4407-ac2f-234915a6d9af">
+        <AttributeRelationship dwd:design-time-name="040f49ab-107a-4234-9eac-c1509b5311c7">
           <AttributeID>Season</AttributeID>
           <Name>Сезон</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="b8936140-b243-4ba9-a485-420d085a23d7">
+        <AttributeRelationship dwd:design-time-name="a90a96c1-acf9-417c-9a4b-d0f5f0f582a7">
           <AttributeID>Week</AttributeID>
           <Name>Неделя в году</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="b27aee22-9533-4cc2-8a80-e8846948d1a4">
+        <AttributeRelationship dwd:design-time-name="5518bcd7-f55a-4a4c-af18-af4585384d25">
           <AttributeID>Month Week</AttributeID>
           <Name>Неделя в месяце</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="d9c3efc0-c8ec-4c5a-a52d-4613f23025df">
+        <AttributeRelationship dwd:design-time-name="4c2bdfd5-78be-4181-b3f3-336927c5bedb">
           <AttributeID>Days In Month</AttributeID>
           <Name>День в месяце</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="e77aecf2-b000-49da-a27e-93bac6f42b8d">
+        <AttributeRelationship dwd:design-time-name="25e85e20-9026-48ab-a583-5ba1740d8192">
           <AttributeID>Days In Year</AttributeID>
           <Name>День в году</Name>
         </AttributeRelationship>
@@ -188,13 +201,13 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="fa08944e-9db8-4624-b182-a6261d3842f8">
+    <Attribute dwd:design-time-name="c934afb6-58aa-4a15-b0d8-471169bbe665">
       <ID>Year Month</ID>
       <Name>Год</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="b15c9478-8526-4bfd-8afc-a6aa2567ed04">
+        <KeyColumn dwd:design-time-name="eeabf221-57b9-4874-b69c-114a985f4326">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="83291284-15c2-413f-9205-fd68a628d1dc">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a8b3f229-1962-46dd-8160-8014e6113eb9">
             <TableID>Календарь</TableID>
             <ColumnID>year_</ColumnID>
           </Source>
@@ -203,22 +216,22 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="766493d8-33e3-4b31-8926-fc805d2e2402">
+    <Attribute dwd:design-time-name="d76da04a-b3db-4f00-944e-c74f962af5fc">
       <ID>Month Name Short</ID>
       <Name>Месяц</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="9e50638d-af31-4d94-ae21-c66f5001350a">
+        <KeyColumn dwd:design-time-name="5fa4e86e-40f3-48e8-9eac-7863b2140411">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="4e46cca5-66f0-48d7-96a5-fcabf3555d52">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9df7bca5-fe5c-4866-8bd7-f6ac9864b018">
             <TableID>Календарь</TableID>
             <ColumnID>month_</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
-      <NameColumn dwd:design-time-name="fd4d392d-90bb-4825-b4ef-84a2890bd774">
+      <NameColumn dwd:design-time-name="c2790840-a932-459e-a26e-d2e0cc98b7e7">
         <DataType>WChar</DataType>
         <DataSize>3</DataSize>
-        <Source xsi:type="ColumnBinding" dwd:design-time-name="eb983de7-fa21-459e-bdd9-1b0adf37b461">
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="9fad9c99-4759-4cac-b92e-b3b92dffb7f7">
           <TableID>Календарь</TableID>
           <ColumnID>month_name_short</ColumnID>
         </Source>
@@ -226,29 +239,29 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="04cf1502-54b8-4b0b-bf8f-7ca9e5209997">
+    <Attribute dwd:design-time-name="965fbf5f-2911-462e-aca4-4d6ce2c93b4f">
       <ID>Year Month 1</ID>
       <Name>Год Месяц</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="fe6547a6-a9a3-4124-922e-5221ebe0cc2e">
+        <KeyColumn dwd:design-time-name="2200ffe0-c26d-4cb9-9949-d51e5648bd25">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="6325ffde-4945-4e75-a7c6-1e7674e8c5be">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="49aa579c-8b69-4723-966b-edd6566b0c62">
             <TableID>Календарь</TableID>
             <ColumnID>year_</ColumnID>
           </Source>
         </KeyColumn>
-        <KeyColumn dwd:design-time-name="8d4bcd10-42f0-4bee-bc1d-9da3e631e37a">
+        <KeyColumn dwd:design-time-name="795fc53e-7b0e-41e2-af3e-f4ce7b001295">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="f09aa87e-13f0-48ff-8880-2fe92b808969">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d62a8180-a80c-4c74-951a-ef870b43b431">
             <TableID>Календарь</TableID>
             <ColumnID>month_</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
-      <NameColumn dwd:design-time-name="49407a89-f95e-45cb-a987-e2b1adae2b08">
+      <NameColumn dwd:design-time-name="f9564667-5606-46c6-99a1-7b89cb3eda6a">
         <DataType>WChar</DataType>
         <DataSize>8</DataSize>
-        <Source xsi:type="ColumnBinding" dwd:design-time-name="2a1ff6b8-b896-4acb-8350-c6e200ffe36a">
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="59f813cc-0d3e-4966-ae33-d802522cae89">
           <TableID>Календарь</TableID>
           <ColumnID>year_month</ColumnID>
         </Source>
@@ -256,14 +269,14 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="24699c4b-a65f-4ed9-8989-ff9ef598dd65">
+    <Attribute dwd:design-time-name="ed16f1e2-da3f-42d6-ac77-d84feffc17b4">
       <ID>Year Quarter</ID>
       <Name>Квартал</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="de6b7326-dc15-42d2-a2c9-f1942e361470">
+        <KeyColumn dwd:design-time-name="801ba428-a363-4f85-a171-f62ac0c8aa41">
           <DataType>WChar</DataType>
           <DataSize>10</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="4b2f271f-f0a5-4ec0-ba6f-8d9b2e03658f">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4299d4d1-26e7-4b8d-bd1c-ccb89a406125">
             <TableID>Календарь</TableID>
             <ColumnID>year_quarter</ColumnID>
           </Source>
@@ -272,13 +285,13 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="22f5900e-6a6c-425e-a6de-2e52b8d882bd">
+    <Attribute dwd:design-time-name="78e7e8e9-db78-45da-b078-4704cdd453f8">
       <ID>Month</ID>
       <Name>Месяц№</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="8c46a056-95e8-4ec6-ae0c-75ac130e514a">
+        <KeyColumn dwd:design-time-name="14766897-7a1d-4c15-81b6-3d777b438865">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="c980b6e1-47d8-4d71-9700-0704e65bec51">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3ec4de64-9ee2-4de8-a044-4308e9bb3bb1">
             <TableID>Календарь</TableID>
             <ColumnID>month_</ColumnID>
           </Source>
@@ -287,13 +300,14 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="9bc03d2c-55f9-4d9a-b1a1-6d5cc8d97b70">
+    <Attribute dwd:design-time-name="01a7947e-9350-46ff-a05a-a86b7f3ef56d">
       <ID>Date 1</ID>
       <Name>Дата</Name>
+      <Type>Days</Type>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="731fa465-aeec-4d2c-ad70-21c962c22e65">
+        <KeyColumn dwd:design-time-name="a3aadc4c-731b-4a96-8d92-4c6bef63af3b">
           <DataType>Date</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="89d437f6-9469-46b1-9c2e-30ae0951c1f7">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="69732c46-9eed-4774-923b-6c3aa32fb8cd">
             <TableID>Календарь</TableID>
             <ColumnID>date</ColumnID>
           </Source>
@@ -302,13 +316,13 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="0bd409bf-70de-4673-877d-4d522ef74936">
+    <Attribute dwd:design-time-name="eb4f0ac6-4e46-412e-9cf3-c1852d2f9a56">
       <ID>Weekend</ID>
       <Name>Выходной (сб вс)</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="46b67f5f-9a8f-41d1-857b-c038703afbd8">
+        <KeyColumn dwd:design-time-name="0cfe0545-0213-438c-9d1c-37c6c992a0d5">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="f7d83b49-ad8f-4411-90cc-9dc7cadf8f8e">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="af5a345c-0205-46be-81d8-897ef8755305">
             <TableID>Календарь</TableID>
             <ColumnID>weekend</ColumnID>
           </Source>
@@ -317,14 +331,14 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="f8fc3039-dcb2-4be0-87b8-7021a0b6c720">
+    <Attribute dwd:design-time-name="3f9ffe81-9344-46be-a54f-1b2ddc6caaaf">
       <ID>Week Day Str</ID>
       <Name>День недели</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="f978735d-addd-46ff-ada9-0cc51a88fe17">
+        <KeyColumn dwd:design-time-name="0285e7b8-4aee-475b-9f21-281080aa9885">
           <DataType>WChar</DataType>
           <DataSize>30</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="72755b51-cce9-40aa-8491-d9dc07a9ab96">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7edb464e-433e-4944-a8a9-74f07adfa9fd">
             <TableID>Календарь</TableID>
             <ColumnID>week_day_str</ColumnID>
           </Source>
@@ -333,14 +347,14 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="4f4d3f7a-1dac-4886-8928-c0113b0f2360">
+    <Attribute dwd:design-time-name="803cc7cd-67c0-42f0-8374-5c30390faee0">
       <ID>Season</ID>
       <Name>Сезон</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="2f0d2953-31f1-4683-b759-b76aedaba884">
+        <KeyColumn dwd:design-time-name="ad345759-3ac2-4a0b-afc3-3cecd5de40a6">
           <DataType>WChar</DataType>
           <DataSize>5</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="b729712f-9d3c-4db5-a6bd-6dd07ac52e3d">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0a620e18-82f7-492c-89c2-3416f85de345">
             <TableID>Календарь</TableID>
             <ColumnID>season</ColumnID>
           </Source>
@@ -349,13 +363,13 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="cca88842-a0b9-4b84-a5b9-62212da1031d">
+    <Attribute dwd:design-time-name="60796372-6681-4903-a7f5-4dc87a292379">
       <ID>Week</ID>
       <Name>Неделя в году</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="5601d9b0-0ce4-4ef0-bdd1-ee92fd7b5e60">
+        <KeyColumn dwd:design-time-name="12fc6afb-ba00-48c0-937c-60b9b8ec1deb">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="acc7229a-1a1e-4429-81a8-b073e130b974">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e0339d18-6b48-464d-aa19-fb3b92c0c916">
             <TableID>Календарь</TableID>
             <ColumnID>week_</ColumnID>
           </Source>
@@ -364,13 +378,13 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="6955e4b3-bf2d-48b9-aff8-e907c7e822d1">
+    <Attribute dwd:design-time-name="e90bc768-61e5-4b1b-a389-d149076f22c3">
       <ID>Month Week</ID>
       <Name>Неделя в месяце</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="e29cb6d5-6c2d-4a72-8b3f-a0551ae74158">
+        <KeyColumn dwd:design-time-name="8beea13f-b2ca-4d59-8428-ac0428325276">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="0b0167fb-eb2b-40df-9ac8-4a9f7430fc8c">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f62ffb4e-b0eb-4e2c-bb03-e0334ca77b56">
             <TableID>Календарь</TableID>
             <ColumnID>month_week</ColumnID>
           </Source>
@@ -379,13 +393,13 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="e59cf101-4355-4510-8e28-7f90756d96a9">
+    <Attribute dwd:design-time-name="c98ee0a6-2dd4-4071-b7b7-d03f7648ba2c">
       <ID>Days In Month</ID>
       <Name>День в месяце</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="dc936890-cd6a-4ef1-b29a-a7a0c63838b2">
+        <KeyColumn dwd:design-time-name="63ea99e0-5761-4f66-a74f-4a2d84d86d8e">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="1d9b9e59-984a-4273-8ee9-446467ccbad1">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a3778f67-e6ea-4cf6-a558-64fd48c36b76">
             <TableID>Календарь</TableID>
             <ColumnID>days_in_month</ColumnID>
           </Source>
@@ -394,13 +408,13 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="42028c5e-225b-4a18-bb27-972051f3ac5d">
+    <Attribute dwd:design-time-name="a5d164b7-0216-4c13-b9d5-38192da9a5c0">
       <ID>Days In Year</ID>
       <Name>День в году</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="c82a0b4b-8d48-4237-a3ce-55bf41291221">
+        <KeyColumn dwd:design-time-name="a0c71e26-b9a0-4d0c-a2d0-1daa34a5a3cf">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="938c1cb8-ffeb-421a-b0ff-bfcde4b639ca">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b0852266-6073-4dc1-b934-d5c5bba7aaa0">
             <TableID>Календарь</TableID>
             <ColumnID>days_in_year</ColumnID>
           </Source>
@@ -411,31 +425,31 @@
     </Attribute>
   </Attributes>
   <Hierarchies>
-    <Hierarchy dwd:design-time-name="4991e6a9-2dc5-4c15-b718-f2d55232cb49">
+    <Hierarchy dwd:design-time-name="60954d76-853a-4e30-9f51-0eee85f3123a">
       <ID>Hierarchy</ID>
       <Name>Период</Name>
       <Levels>
-        <Level dwd:design-time-name="1c9ca03f-c809-4756-a03b-352e2185638b">
+        <Level dwd:design-time-name="68ce6fd3-d73d-47d4-9ee3-5e379c8d7d3c">
           <ID>Год</ID>
           <Name>Год</Name>
           <SourceAttributeID>Year Month</SourceAttributeID>
         </Level>
-        <Level dwd:design-time-name="e984c075-59fe-4cd5-a4e5-3a5669d2e49b">
+        <Level dwd:design-time-name="b53e2481-263f-4d65-962d-8d97c39b5f1a">
           <ID>Квартал</ID>
           <Name>Квартал</Name>
           <SourceAttributeID>Year Quarter</SourceAttributeID>
         </Level>
-        <Level dwd:design-time-name="6c8922d4-2484-443c-8877-364da4d3e180">
+        <Level dwd:design-time-name="490842d3-769b-4bb2-b7e9-30e1a70d8ba3">
           <ID>Год Месяц</ID>
           <Name>Год Месяц</Name>
           <SourceAttributeID>Year Month 1</SourceAttributeID>
         </Level>
-        <Level dwd:design-time-name="064cf5f1-2153-4d75-9cd1-b51cc90f951a">
+        <Level dwd:design-time-name="146ba0e5-9c6c-4bfc-ac1f-2e2094659bba">
           <ID>Дата</ID>
           <Name>Дата</Name>
           <SourceAttributeID>Date 1</SourceAttributeID>
         </Level>
-        <Level dwd:design-time-name="caeab6cb-eb38-48ee-948e-57f7c3de0eb2">
+        <Level dwd:design-time-name="0b0957c2-1923-4c01-85ab-38134a836701">
           <ID>ДатаВремя</ID>
           <Name>ДатаВремя</Name>
           <SourceAttributeID>Date</SourceAttributeID>
