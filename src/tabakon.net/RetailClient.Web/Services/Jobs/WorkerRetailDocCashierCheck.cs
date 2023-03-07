@@ -34,6 +34,22 @@ namespace RetailClient.Web.Services.Jobs
         protected override int RequCountDay => 5;
     }
 
+    public class WorkerRetailDocCashierCheck_30Day : WorkerRetailDocCashierCheck
+    {
+        public WorkerRetailDocCashierCheck_30Day(IServiceProvider serviceProvider) : base(serviceProvider)
+        {
+        }
+        protected override int RequCountDay => 30;
+    }
+
+    public class WorkerRetailDocCashierCheck_90Day : WorkerRetailDocCashierCheck
+    {
+        public WorkerRetailDocCashierCheck_90Day(IServiceProvider serviceProvider) : base(serviceProvider)
+        {
+        }
+        protected override int RequCountDay => 90;
+    }
+
     public abstract class WorkerRetailDocCashierCheck : WorkerT
     {
         protected abstract int RequCountDay { get; }
@@ -46,7 +62,7 @@ namespace RetailClient.Web.Services.Jobs
             {
                 var arr = new List<string>();
                 //var dateBegin = DateTime.Now.Date.AddDays(-50);
-                var dateBegin = DateTime.Parse("2021-01-03");
+                var dateBegin = DateTime.Parse("2022-10-01");
 #if RELEASE
                 dateBegin = DateTime.Now.Date.AddDays(-RequCountDay);
 #endif

@@ -57,6 +57,8 @@ namespace RetailClient.Worker
                 //_jobService.AddTask<WorkerRetailDocCashierCheck_1Day>(TimeSpan.FromMinutes(20));
                 _jobService.AddTask<WorkerRetailDocCashierCheck_2Day>(TimeSpan.FromHours(4));
                 _jobService.AddTask<WorkerRetailDocCashierCheck_5Day>(TimeSpan.FromDays(2));
+                _jobService.AddTask<WorkerRetailDocCashierCheck_30Day>(TimeSpan.FromDays(10));
+                _jobService.AddTask<WorkerRetailDocCashierCheck_90Day>(TimeSpan.FromDays(30));
             }
             while (!stoppingToken.IsCancellationRequested)
             {

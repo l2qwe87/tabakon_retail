@@ -90,6 +90,8 @@ namespace RetailClient.Worker
                     services.AddScoped<WorkerRetailDocCashierCheck_1Day, WorkerRetailDocCashierCheck_1Day>();
                     services.AddScoped<WorkerRetailDocCashierCheck_2Day, WorkerRetailDocCashierCheck_2Day>();
                     services.AddScoped<WorkerRetailDocCashierCheck_5Day, WorkerRetailDocCashierCheck_5Day>();
+                    services.AddScoped<WorkerRetailDocCashierCheck_30Day, WorkerRetailDocCashierCheck_30Day>();
+                    services.AddScoped<WorkerRetailDocCashierCheck_90Day, WorkerRetailDocCashierCheck_90Day>();
 
                     services.AddScoped<IRetailEndpointsRepo, RetailEndpointsRepo>();
 
