@@ -491,6 +491,17 @@
 					<CommandName>Form.Command.ЗаявкиМагазина</CommandName>
 					<ExtendedTooltip name="ЗаявкиМагазинаРасширеннаяПодсказка" id="589"/>
 				</Button>
+				<Button name="ЧатСофисом" id="657">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЧатСОфисом</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Чат с офисом</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ЧатСофисомРасширеннаяПодсказка" id="658"/>
+				</Button>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="Debug" id="551">
@@ -3728,6 +3739,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКОткрытьВыполнениеПлановПосле</Action>
+		</Command>
+		<Command name="ЧатСОфисом" id="1000019">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Чат с офисом</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Чат с офисом</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКЧатСОфисомПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
