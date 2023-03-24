@@ -10,6 +10,35 @@
 		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
+		<UsualGroup name="Группа3" id="60">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="61"/>
+			<ChildItems>
+				<InputField name="ДатаНачОтбор" id="62">
+					<DataPath>ДатаНачОтбор</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начало</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаНачОтборКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="ДатаНачОтборРасширеннаяПодсказка" id="64"/>
+					<Events>
+						<Event name="OnChange">ДатаНачОтборПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДатаКонОтбор" id="65">
+					<DataPath>ДатаКонОтбор</DataPath>
+					<ContextMenu name="ДатаКонОтборКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="ДатаКонОтборРасширеннаяПодсказка" id="67"/>
+					<Events>
+						<Event name="OnChange">ДатаКонОтборПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="Группа2" id="52">
 			<Group>AlwaysHorizontal</Group>
 			<Representation>None</Representation>
@@ -37,6 +66,22 @@
 					</Title>
 					<ExtendedTooltip name="ОткрытьДокументРасширеннаяПодсказка" id="48"/>
 				</Button>
+				<InputField name="ТемаОтбор" id="54">
+					<DataPath>ТемаОтбор</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тема</v8:content>
+						</v8:item>
+					</Title>
+					<DropListButton>true</DropListButton>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="ТемаОтборКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="ТемаОтборРасширеннаяПодсказка" id="56"/>
+					<Events>
+						<Event name="OnChange">ТемаОтборПриИзменении</Event>
+					</Events>
+				</InputField>
 			</ChildItems>
 		</UsualGroup>
 		<Table name="ТабличнаяЧасть1" id="14">
@@ -75,9 +120,6 @@
 				<ContextMenu name="ТабличнаяЧасть1УправлениеПоискомКонтекстноеМеню" id="25"/>
 				<ExtendedTooltip name="ТабличнаяЧасть1УправлениеПоискомРасширеннаяПодсказка" id="26"/>
 			</SearchControlAddition>
-			<Events>
-				<Event name="BeforeRowChange">ТабличнаяЧасть1ПередНачаломИзменения</Event>
-			</Events>
 			<ChildItems>
 				<LabelField name="ТабличнаяЧасть1НомерСтроки" id="27">
 					<DataPath>Объект.Чат.LineNumber</DataPath>
@@ -89,6 +131,13 @@
 				<ColumnGroup name="ТабличнаяЧасть1Группа1" id="45">
 					<ExtendedTooltip name="ТабличнаяЧасть1Группа1РасширеннаяПодсказка" id="46"/>
 					<ChildItems>
+						<InputField name="ТабличнаяЧасть1Тема" id="57">
+							<DataPath>Объект.Чат.Тема</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ContextMenu name="ТабличнаяЧасть1ТемаКонтекстноеМеню" id="58"/>
+							<ExtendedTooltip name="ТабличнаяЧасть1ТемаРасширеннаяПодсказка" id="59"/>
+						</InputField>
 						<InputField name="ТабличнаяЧасть1Отправитель" id="33">
 							<DataPath>Объект.Чат.Отправитель</DataPath>
 							<EditMode>EnterOnInput</EditMode>
@@ -137,6 +186,120 @@
 				</CheckBoxField>
 			</ChildItems>
 		</Table>
+		<UsualGroup name="БыстрыеОтветы" id="73">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Быстрые ответы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Быстрые ответы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>PopUp</Behavior>
+			<ExtendedTooltip name="БыстрыеОтветыРасширеннаяПодсказка" id="74"/>
+			<ChildItems>
+				<LabelDecoration name="Собрано" id="75">
+					<Font ref="style:NormalTextFont" bold="false" italic="true" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Собрано</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<BackColor>style:ToolTipBackColor</BackColor>
+					<ContextMenu name="СобраноКонтекстноеМеню" id="76"/>
+					<ExtendedTooltip name="СобраноРасширеннаяПодсказка" id="77"/>
+					<Events>
+						<Event name="Click">БыстрйОтветНажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<LabelDecoration name="НетВНаличии" id="78">
+					<Font ref="style:NormalTextFont" bold="false" italic="true" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Нет в наличии</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<BackColor>style:ToolTipBackColor</BackColor>
+					<ContextMenu name="НетВНаличииКонтекстноеМеню" id="79"/>
+					<ExtendedTooltip name="НетВНаличииРасширеннаяПодсказка" id="80"/>
+					<Events>
+						<Event name="Click">БыстрйОтветНажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<LabelDecoration name="Брак" id="81">
+					<Font ref="style:NormalTextFont" bold="false" italic="true" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Брак</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<BackColor>style:ToolTipBackColor</BackColor>
+					<ContextMenu name="БракКонтекстноеМеню" id="82"/>
+					<ExtendedTooltip name="БракРасширеннаяПодсказка" id="83"/>
+					<Events>
+						<Event name="Click">БыстрйОтветНажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<LabelDecoration name="Продано" id="84">
+					<Font ref="style:NormalTextFont" bold="false" italic="true" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Продано</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<BackColor>style:ToolTipBackColor</BackColor>
+					<ContextMenu name="ПроданоКонтекстноеМеню" id="85"/>
+					<ExtendedTooltip name="ПроданоРасширеннаяПодсказка" id="86"/>
+					<Events>
+						<Event name="Click">БыстрйОтветНажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<LabelDecoration name="Отказался" id="87">
+					<Font ref="style:NormalTextFont" bold="false" italic="true" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отказался</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<BackColor>style:ToolTipBackColor</BackColor>
+					<ContextMenu name="ОтказалсяКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="ОтказалсяРасширеннаяПодсказка" id="89"/>
+					<Events>
+						<Event name="Click">БыстрйОтветНажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<LabelDecoration name="КлиентнеПришел" id="90">
+					<Font ref="style:NormalTextFont" bold="false" italic="true" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Клиент не пришел</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<BackColor>style:ToolTipBackColor</BackColor>
+					<ContextMenu name="КлиентнеПришелКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="КлиентнеПришелРасширеннаяПодсказка" id="92"/>
+					<Events>
+						<Event name="Click">БыстрйОтветНажатие</Event>
+					</Events>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="Группа1" id="12">
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -215,6 +378,64 @@
 				<v8:Type>xs:string</v8:Type>
 				<v8:StringQualifiers>
 					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТемаОтбор" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тема отбор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаНачОтбор" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата нач отбор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаКонОтбор" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конец</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="БыстрыйОтвет" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Быстрый ответ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>99</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
