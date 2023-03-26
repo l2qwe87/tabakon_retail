@@ -4,6 +4,15 @@
 	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаИнструкция" id="138">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Инструкция</CommandName>
+				<BackColor>web:Yellow</BackColor>
+				<Font bold="true" kind="AutoFont"/>
+				<ExtendedTooltip name="ФормаИнструкцияРасширеннаяПодсказка" id="139"/>
+			</Button>
+		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnClose" callType="After">ТБКПриЗакрытииПосле</Event>
@@ -432,6 +441,24 @@
 			</Settings>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="Инструкция" id="1000000">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструкция</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструкция</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="Before">Инструкция</Action>
+			<Action callType="After">ТБКИнструкцияПосле</Action>
+		</Command>
+	</Commands>
 	<BaseForm version="2.9">
 		<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 		<VerticalScroll>useIfNecessary</VerticalScroll>

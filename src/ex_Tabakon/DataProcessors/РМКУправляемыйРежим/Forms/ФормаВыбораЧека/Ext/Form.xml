@@ -211,6 +211,7 @@
 								</Button>
 								<Button name="ПоискПоМагнитномуКоду" id="111">
 									<Type>UsualButton</Type>
+									<Visible>false</Visible>
 									<TitleHeight>2</TitleHeight>
 									<Width>8</Width>
 									<Height>3</Height>
@@ -219,6 +220,7 @@
 								</Button>
 								<Button name="Кнопка1" id="123">
 									<Type>UsualButton</Type>
+									<Visible>false</Visible>
 									<TitleHeight>2</TitleHeight>
 									<Width>8</Width>
 									<Height>3</Height>
@@ -230,6 +232,21 @@
 										</v8:item>
 									</Title>
 									<ExtendedTooltip name="Кнопка1РасширеннаяПодсказка" id="124"/>
+								</Button>
+								<Button name="Инструкция" id="125">
+									<Type>UsualButton</Type>
+									<Width>8</Width>
+									<Height>3</Height>
+									<CommandName>Form.Command.Инструкция</CommandName>
+									<Font bold="true" kind="AutoFont"/>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Инстр-
+укция</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ИнструкцияРасширеннаяПодсказка" id="126"/>
 								</Button>
 								<Button name="КомандаОтменитьПоиск" id="115">
 									<Type>UsualButton</Type>
@@ -281,6 +298,23 @@
 			</dcsset:item>
 		</ConditionalAppearance>
 	</Attributes>
+	<Commands>
+		<Command name="Инструкция" id="1000000">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструкция</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструкция</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКИнструкцияПосле</Action>
+		</Command>
+	</Commands>
 	<BaseForm version="2.9">
 		<VerticalScroll>useIfNecessary</VerticalScroll>
 		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
