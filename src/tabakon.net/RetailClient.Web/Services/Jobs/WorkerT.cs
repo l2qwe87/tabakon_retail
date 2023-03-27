@@ -42,16 +42,6 @@ namespace RetailClient.Web.Services.Jobs
                 endpoints = endpoints.Where(e => predicat(e));
             }
 
-            //Parallel.ForEach(endpoints, (endpoint =>
-            //{
-            //    JobAsync<T>(alwaysSaveResult, endpoint, func).Wait();
-            //}));
-            //var tasks = endpoints.Select(async endpoint =>
-            //{
-            //    return await JobAsync<T>(alwaysSaveResult, endpoint, func);
-            //});
-            //await Task.WhenAll(tasks);
-
             var taskCount = 6;
             var max = endpoints.Count();
             var part = (max / taskCount)+1;
@@ -70,19 +60,7 @@ namespace RetailClient.Web.Services.Jobs
                 }              
                 
             });
-
-            //var tasks = endpoints.Select(async endpoint =>
-            //{
-            //    return await JobAsync<T>(alwaysSaveResult, endpoint, func);
-            //});
             await Task.WhenAll(tasks);
-
-            //using (var scope = serviceProvider.CreateScope())
-            //{
-            //    var ctx = scope.ServiceProvider.GetRequiredService<TabakonDBContext>();
-            //    var result = await ctx.Set<T>().Select(r => r).AsNoTracking().ToListAsync();
-            //    return result;
-            //}
         }
 
 
@@ -103,7 +81,11 @@ namespace RetailClient.Web.Services.Jobs
                         .PopulateData(wsResult);
 
                     if (entity is AbstractDocEntity) {
-                        entity = dbset.FirstOrDefault(e => (e as AbstractDocEntity).DocRef == (entity as AbstractDocEntity).DocRef);
+                        entity = dbset.FirstOrDefault(e => 
+                        (e as AbstractDocEntity).DocRef == (entity as AbstractDocEntity).DocRef && 
+                        (e as AbstractDocEntity).RetailEndpointIdentity == (entity as AbstractDocEntity).RetailEndpointIdentity
+                        
+                        );
                     }
                     else{
                         entity = dbset.FirstOrDefault(entity.IsEquals<T>().Compile());

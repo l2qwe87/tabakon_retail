@@ -54,16 +54,17 @@ namespace RetailClient.Worker
             //CashierCheck
             if (_jobConfig.CashierCheck)
             {
-                //_jobService.AddTask<WorkerRetailDocCashierCheck_1Day>(TimeSpan.FromMinutes(20));
-                _jobService.AddTask<WorkerRetailDocCashierCheck_2Day>(TimeSpan.FromHours(4));
-                _jobService.AddTask<WorkerRetailDocCashierCheck_5Day>(TimeSpan.FromDays(2));
-                _jobService.AddTask<WorkerRetailDocCashierCheck_30Day>(TimeSpan.FromDays(10));
-                _jobService.AddTask<WorkerRetailDocCashierCheck_90Day>(TimeSpan.FromDays(30));
+                ////_jobService.AddTask<WorkerRetailDocCashierCheck_1Day>(TimeSpan.FromMinutes(20));
+                //_jobService.AddTask<WorkerRetailDocCashierCheck_2Day>(TimeSpan.FromHours(4));
+                //_jobService.AddTask<WorkerRetailDocCashierCheck_5Day>(TimeSpan.FromDays(2));
+                //_jobService.AddTask<WorkerRetailDocCashierCheck_30Day>(TimeSpan.FromDays(10));
+                //_jobService.AddTask<WorkerRetailDocCashierCheck_90Day>(TimeSpan.FromDays(30));
+                _jobService.AddTask<_WorkerRetailDocCashierCheck>(TimeSpan.FromDays(1));
             }
             while (!stoppingToken.IsCancellationRequested)
             {
                 _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
-                await Task.Delay(1000, stoppingToken);
+                await Task.Delay(100000, stoppingToken);
             }
         }
     }
