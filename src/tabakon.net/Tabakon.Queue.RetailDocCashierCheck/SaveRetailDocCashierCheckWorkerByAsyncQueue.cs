@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,32 +19,48 @@ namespace Tabakon.Queue.RetailDocCashierCheck {
         }
 
         protected override async Task Do(SaveRetailDocCashierCheck item) {
-            try {
-                var hasChanges = false;
-                var entity = new Tabakon.Entity.RetailDocCashierCheck();
-                entity.PopulateData(item.RetailEndpoint);
-                entity.PopulateData(item.JSON);
-                //entity.Pop
-                var ctx = _serviceProvider.GetService<TabakonDBContext>();
-                var dbset = ctx.RetailDocCashierCheck;
-                var existentEntity = dbset.Where(e => 
-                    e.RetailEndpointIdentity == item.RetailEndpoint.RetailEndpointIdentity &&
-                    e.DocRef == entity.DocRef
-                    ).Select(e => e.JsonData);
+           
+            using (var scope = _serviceProvider.CreateScope())
+            {
+                var serviceProvider = scope.ServiceProvider;
+                var logger = serviceProvider.GetService<ILogger<SaveRetailDocCashierCheckWorkerByAsyncQueue>>();
 
-                if(existentEntity == null) {
-                    await dbset.AddAsync(entity);
+                try
+                {
+                    var hasChanges = false;
+                    var ctx = serviceProvider.GetService<TabakonDBContext>();
+                    var jArray = JArray.Parse(item.JSON);
+                    var docsJson = jArray.Select(e => e.ToString()).ToList();
+                    foreach (var docJson in docsJson)
+                    {
+                        var entity = new Tabakon.Entity.RetailDocCashierCheck();
+                        entity.PopulateData(item.RetailEndpoint);
+                        entity.PopulateData(docJson);
+
+                        var dbset = ctx.RetailDocCashierCheck;
+                        var existentEntity = dbset.Where(e =>
+                            e.RetailEndpointIdentity == item.RetailEndpoint.RetailEndpointIdentity &&
+                            e.DocRef == entity.DocRef
+                            ).Select(e => e.JsonData)
+                            .FirstOrDefault();
+
+                        if (existentEntity == null)
+                        {
+                            await dbset.AddAsync(entity);
+                        }
+                    }
+
+                    if (hasChanges)
+                    {
+                        await ctx.SaveChangesAsync();
+                    }
                 }
-
-                if (hasChanges) { 
-                    await ctx.SaveChangesAsync();
+                catch (Exception e)
+                {
+                    
+                    logger.LogError(e, $"{item.RetailEndpoint.RetailEndpointHost} \n{e.Message}");
                 }
             }
-            catch (Exception e) {
-                var logger = _serviceProvider.GetService<ILogger<SaveRetailDocCashierCheckWorkerByAsyncQueue>>();
-                logger.LogError(e, $"{item.RetailEndpoint.RetailEndpointHost} \n{e.Message}");
-            }
-            throw new NotImplementedException();
         }
     }
 }

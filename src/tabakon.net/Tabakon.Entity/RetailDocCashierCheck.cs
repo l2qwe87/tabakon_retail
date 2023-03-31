@@ -33,7 +33,6 @@ namespace Tabakon.Entity
         {
             DocType = DocType.CashierCheck;
         }
-
         public override AbstractCacheEntity PopulateData(string json) {
             base.PopulateData(json);
 
