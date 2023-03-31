@@ -1,0 +1,1438 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="37825b7d-89e4-45de-9d58-0983bb55b75c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>calendar</ID>
+  <Name>Даты</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Description></Description>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4293" scrolltop="-1640" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="0" y="0" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="Calendar" left="-3367" top="-4790" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="4048" height="24579" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000d00f000003600000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="Calendar" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-4293</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-1640</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-3367</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-4790</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="211">
+            <Shape Id="Id Date" Expanded="true">
+              <Attributes>
+                <Attribute Id="Id Date" />
+                <Attribute Id="Date Full Str" />
+                <Attribute Id="Year Day" />
+                <Attribute Id="Day" />
+                <Attribute Id="Month Week" />
+                <Attribute Id="Month Last Day" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Id Month" Expanded="false">
+              <Attributes>
+                <Attribute Id="Id Month" />
+              </Attributes>
+              <Position x="288" y="20" />
+            </Shape>
+            <Shape Id="Year" Expanded="false">
+              <Attributes>
+                <Attribute Id="Year" />
+              </Attributes>
+              <Position x="1095" y="20" />
+            </Shape>
+            <Shape Id="Week Day" Expanded="true">
+              <Attributes>
+                <Attribute Id="Week Day" />
+                <Attribute Id="Week Day Short" />
+              </Attributes>
+              <Position x="288" y="68" />
+            </Shape>
+            <Shape Id="Year Month" Expanded="false">
+              <Attributes>
+                <Attribute Id="Year Month" />
+              </Attributes>
+              <Position x="288" y="140" />
+            </Shape>
+            <Shape Id="Year Quarter" Expanded="false">
+              <Attributes>
+                <Attribute Id="Year Quarter" />
+              </Attributes>
+              <Position x="557" y="140" />
+            </Shape>
+            <Shape Id="Year Semester" Expanded="false">
+              <Attributes>
+                <Attribute Id="Year Semester" />
+              </Attributes>
+              <Position x="826" y="140" />
+            </Shape>
+            <Shape Id="Weekend" Expanded="false">
+              <Attributes>
+                <Attribute Id="Weekend" />
+              </Attributes>
+              <Position x="288" y="188" />
+            </Shape>
+            <Shape Id="Week" Expanded="false">
+              <Attributes>
+                <Attribute Id="Week" />
+              </Attributes>
+              <Position x="288" y="236" />
+            </Shape>
+            <Shape Id="Month" Expanded="true">
+              <Attributes>
+                <Attribute Id="Month" />
+                <Attribute Id="Month Name Short" />
+              </Attributes>
+              <Position x="288" y="284" />
+            </Shape>
+            <Shape Id="Quarter" Expanded="false">
+              <Attributes>
+                <Attribute Id="Quarter" />
+              </Attributes>
+              <Position x="557" y="284" />
+            </Shape>
+            <Shape Id="Semester" Expanded="false">
+              <Attributes>
+                <Attribute Id="Semester" />
+              </Attributes>
+              <Position x="826" y="284" />
+            </Shape>
+            <Shape Id="Id Season" Expanded="false">
+              <Attributes>
+                <Attribute Id="Id Season" />
+              </Attributes>
+              <Position x="557" y="332" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="e5325beb-fb7f-4c1b-a6c4-a66b642f72fa">
+    <DataSourceViewID>MAC</DataSourceViewID>
+  </Source>
+  <Type>Time</Type>
+  <ErrorConfiguration dwd:design-time-name="aa127fff-7fe6-4ed4-9b7a-3f592b5b0aed">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyConvertedToUnknown>ReportAndStop</NullKeyConvertedToUnknown>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+    <ddl200:CalculationError>ReportAndStop</ddl200:CalculationError>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Translations>
+    <Translation dwd:design-time-name="e745046a-cf28-4e5b-94ca-8f6dd08fc6f1">
+      <Language>1033</Language>
+      <Caption>Dates</Caption>
+    </Translation>
+  </Translations>
+  <Attributes>
+    <Attribute dwd:design-time-name="23e5d74e-d8d2-47b6-86b4-f435e2f85a59">
+      <ID>Id Date</ID>
+      <Name>Дата</Name>
+      <Type>Date</Type>
+      <Usage>Key</Usage>
+      <EstimatedCount>2557</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d2a50e78-dca9-4b6e-9c48-f22370513769">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="929b1518-be1d-442e-9a49-2095f8cec7d5">
+            <TableID>Calendar</TableID>
+            <ColumnID>id_date</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="0b68c68f-fc0e-4cf8-b017-cefc4cabed75">
+        <DataType>WChar</DataType>
+        <DataSize>10</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="dd6d2296-6edc-4969-844e-eaf2cce9fd2d">
+          <TableID>Calendar</TableID>
+          <ColumnID>date_str</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="faedaa81-a61f-4aa9-8881-a4040e93818a">
+          <Language>1033</Language>
+          <Caption>Date</Caption>
+          <DisplayFolder>Attributes</DisplayFolder>
+        </Translation>
+      </Translations>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="2c910caa-65a9-415f-a024-396fe0322f13">
+          <AttributeID>Year Day</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>День года</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b2d8f73d-82b6-40b2-875d-e3dd7980e0ea">
+          <AttributeID>Day</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>День месяца</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8727ebd5-bfbc-4244-a8a1-1cef4667aea0">
+          <AttributeID>Month</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Месяц</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f9866604-3196-4c5a-963f-aeebd41eb282">
+          <AttributeID>Week</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Неделя года</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="54e863df-2230-46f0-bffc-d9e19682fce1">
+          <AttributeID>Month Week</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Неделя месяца</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8703ee06-ae8a-4adf-a47f-8baf93e76626">
+          <AttributeID>Month Last Day</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Последний день месяца</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b5a9b780-dee5-473f-b9bf-bab307d34142">
+          <AttributeID>Weekend</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Выходной день</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="27e6e0c6-9bb5-4159-8f0d-195efb913ebe">
+          <AttributeID>Year Month</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Год месяц</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b0808b99-dbb6-42fb-b3cb-d1eda1e51e67">
+          <AttributeID>Week Day</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>День недели</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1678c6b5-fa28-480d-ac25-e1d7c2d7dbaf">
+          <AttributeID>Id Month</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Месяц год</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1ee7ea2e-d107-4ee0-8adb-9b82fa153eb4">
+          <AttributeID>Date Full Str</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Дата строкой</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn dwd:design-time-name="6533a2ae-b701-414a-9850-0d5f89c04665">
+        <DataType>Date</DataType>
+        <Format>dd.MM.yyyy</Format>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="a38caaba-dbd6-4bfa-bf9c-2abc69916ab8">
+          <TableID>Calendar</TableID>
+          <ColumnID>date_</ColumnID>
+        </Source>
+      </ValueColumn>
+      <MemberNamesUnique>true</MemberNamesUnique>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <AttributeHierarchyDisplayFolder>Атрибуты</AttributeHierarchyDisplayFolder>
+      <GroupingBehavior>DiscourageGrouping</GroupingBehavior>
+      <InstanceSelection>FilteredList</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="bdab219d-3455-4755-a480-d36bedd87956">
+      <ID>Year</ID>
+      <Name>Год</Name>
+      <Type>Years</Type>
+      <EstimatedCount>7</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4eb0075d-f5be-4158-9244-27d6d17d02cc">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="405abd72-04f5-4f77-a581-0ade26706de9">
+            <TableID>Calendar</TableID>
+            <ColumnID>year_</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="02bdd157-2cd2-474c-ae52-dae95b71ce17">
+          <Language>1033</Language>
+          <Caption>Year</Caption>
+          <DisplayFolder>Attributes</DisplayFolder>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <AttributeHierarchyDisplayFolder>Атрибуты</AttributeHierarchyDisplayFolder>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="51384f56-83da-4755-9d92-360729860c5b">
+      <ID>Year Quarter</ID>
+      <Name>Год квартал</Name>
+      <Type>Quarters</Type>
+      <EstimatedCount>28</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="04d88e9d-2cbd-48be-9d11-7bb9b2b8aa5e">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2fa6d605-1e0d-4bea-be47-123e155eb655">
+            <TableID>Calendar</TableID>
+            <ColumnID>year_</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="248f4b82-efd9-4db9-9732-cefc6d994f24">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="54c5ae96-408c-426e-bd95-bb8080d7eb03">
+            <TableID>Calendar</TableID>
+            <ColumnID>quarter_</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="0f875ffc-de28-4d6a-9e91-7c5378ed6d36">
+        <DataType>WChar</DataType>
+        <DataSize>10</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="6ebfcf67-a36d-4fd7-85ae-2408eb60ae0d">
+          <TableID>Calendar</TableID>
+          <ColumnID>year_quarter</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="983610cc-958b-446c-a5ea-6852c6881cd5">
+          <Language>1033</Language>
+          <Caption>Year Quarter</Caption>
+          <DisplayFolder>Attributes</DisplayFolder>
+          <CaptionColumn dwd:design-time-name="79e6e3a3-c01c-48ab-a09f-8993eda55344">
+            <DataType>WChar</DataType>
+            <DataSize>14</DataSize>
+            <Collation>Latin1_General_CI_AS</Collation>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="0efcbd02-d3cb-46a7-a718-a7622d07eb6e">
+              <TableID>Calendar</TableID>
+              <ColumnID>year_quarter_en</ColumnID>
+            </Source>
+          </CaptionColumn>
+        </Translation>
+      </Translations>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="f73e0ceb-772b-4669-8b7c-eb4e63c4c4c3">
+          <AttributeID>Year Semester</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Год полугодие</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <AttributeHierarchyDisplayFolder>Атрибуты</AttributeHierarchyDisplayFolder>
+      <InstanceSelection>List</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a2016718-089d-4acf-a942-4a409ba743e1">
+      <ID>Year Month</ID>
+      <Name>Год месяц</Name>
+      <Type>Months</Type>
+      <EstimatedCount>84</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bc7ca2f8-66c9-469f-804d-99af346a31f4">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5934b5b2-a19f-47bb-aab6-9bbfde5ff935">
+            <TableID>Calendar</TableID>
+            <ColumnID>id_month</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="9f49e3d2-6dd8-44cd-93a6-0e4344f7dbd0">
+        <DataType>WChar</DataType>
+        <DataSize>7</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="0956926d-29d1-4f68-9a5b-60bce7958899">
+          <TableID>Calendar</TableID>
+          <ColumnID>year_month</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="465f450c-402b-46c1-b4b3-3d4d2ec23935">
+          <Language>1033</Language>
+          <Caption>Year Month</Caption>
+          <DisplayFolder>Attributes</DisplayFolder>
+        </Translation>
+      </Translations>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="b85ac49b-1338-4dc1-b2d3-10ed313b6ac6">
+          <AttributeID>Year Quarter</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Год квартал</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <AttributeHierarchyDisplayFolder>Атрибуты</AttributeHierarchyDisplayFolder>
+      <InstanceSelection>List</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4148af47-66ec-49fe-82e1-9338cb8c496a">
+      <ID>Year Semester</ID>
+      <Name>Год полугодие</Name>
+      <Type>HalfYears</Type>
+      <EstimatedCount>14</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="89633cb7-1df4-4dfd-abf7-123901901ae8">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f259888e-dfaf-44b5-b7e2-c6f9389b6ae3">
+            <TableID>Calendar</TableID>
+            <ColumnID>year_</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="a8669b39-7af1-4627-b7ac-421953ef0a07">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4b10b87f-c5d0-45cb-b115-7b54ced16baa">
+            <TableID>Calendar</TableID>
+            <ColumnID>semester</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="2be41b20-8411-4ebc-a3b7-6ce2786b958a">
+        <DataType>WChar</DataType>
+        <DataSize>11</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="b46a72c6-06e4-4ea9-9066-e74e39ce4f78">
+          <TableID>Calendar</TableID>
+          <ColumnID>year_semester</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="2cc3cc49-ec99-45e0-b7db-1475b0834a9a">
+          <Language>1033</Language>
+          <Caption>Year Semester</Caption>
+          <DisplayFolder>Attributes</DisplayFolder>
+        </Translation>
+      </Translations>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="80fafdbc-e2d5-48ed-8f95-4d3025422fce">
+          <AttributeID>Year</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Год</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <AttributeHierarchyDisplayFolder>Атрибуты</AttributeHierarchyDisplayFolder>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6b42fa25-f4e8-4baa-b7ae-01111cc3ad09">
+      <ID>Year Day</ID>
+      <Name>День года</Name>
+      <Type>DayOfYear</Type>
+      <EstimatedCount>366</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5deebd43-2b85-46a2-a667-ebf63d24d507">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ccf6735b-264e-43e0-9df2-662017f0a0e6">
+            <TableID>Calendar</TableID>
+            <ColumnID>year_day</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="cf654662-7046-4efb-8793-7a57e6381f27">
+          <Language>1033</Language>
+          <Caption>Day of Year</Caption>
+          <DisplayFolder>Attributes</DisplayFolder>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyDisplayFolder>Атрибуты</AttributeHierarchyDisplayFolder>
+      <InstanceSelection>List</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1db24ace-ed1b-44b3-ad48-df9ecd462e2b">
+      <ID>Day</ID>
+      <Name>День месяца</Name>
+      <Type>DayOfMonth</Type>
+      <EstimatedCount>31</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2d2d2373-8f84-4ed5-8139-330d5f0fdc83">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4375d0ab-61fc-43cf-84f4-840d234761f7">
+            <TableID>Calendar</TableID>
+            <ColumnID>day_</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="c51b77cb-443c-4977-af88-77258c9a83da">
+          <Language>1033</Language>
+          <Caption>Day of Month</Caption>
+          <DisplayFolder>Attributes</DisplayFolder>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyDisplayFolder>Атрибуты</AttributeHierarchyDisplayFolder>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6793c37a-f57c-43db-9622-5aacc015f891">
+      <ID>Week Day</ID>
+      <Name>День недели</Name>
+      <Type>DayOfWeek</Type>
+      <EstimatedCount>7</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5efeecde-b81a-49fe-9228-131461848fe3">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b280b10c-7225-479b-b808-8dc742494598">
+            <TableID>Calendar</TableID>
+            <ColumnID>week_day</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="30fc5137-66f3-437c-b709-fe9cd3f235d9">
+        <DataType>WChar</DataType>
+        <DataSize>11</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="a7ee42a5-6220-4302-aab1-3afacd360f13">
+          <TableID>Calendar</TableID>
+          <ColumnID>week_day_str</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="3123e50c-3213-4dd9-ab4b-59015b1cb27a">
+          <Language>1033</Language>
+          <Caption>Day of Week</Caption>
+          <DisplayFolder>Attributes</DisplayFolder>
+          <CaptionColumn dwd:design-time-name="2bb457a4-b602-42a3-9335-4fc94645beab">
+            <DataType>WChar</DataType>
+            <DataSize>9</DataSize>
+            <Collation>Latin1_General_CI_AS</Collation>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6cce9c02-cba8-4f4a-b596-6b1c9cd2c738">
+              <TableID>Calendar</TableID>
+              <ColumnID>week_day_str_en</ColumnID>
+            </Source>
+          </CaptionColumn>
+        </Translation>
+      </Translations>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="6cd89762-9cea-4bff-9054-b08089f2e034">
+          <AttributeID>Week Day Short</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Cardinality>One</Cardinality>
+          <Name>День недели кратко</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <AttributeHierarchyDisplayFolder>Атрибуты</AttributeHierarchyDisplayFolder>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8c14d31c-5802-40c4-ad3b-af81f522a560">
+      <ID>Week Day Short</ID>
+      <Name>День недели кратко</Name>
+      <EstimatedCount>7</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="525190e8-26ea-4e93-8e7c-1017d70170c8">
+          <DataType>WChar</DataType>
+          <DataSize>2</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0a9006ed-347c-4337-90cb-26917728c7eb">
+            <TableID>Calendar</TableID>
+            <ColumnID>week_day_short</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="99716c99-5f4e-40a4-8613-fc270799053e">
+          <Language>1033</Language>
+          <Caption>Day of Week Short</Caption>
+          <DisplayFolder>Attributes</DisplayFolder>
+          <CaptionColumn dwd:design-time-name="bd800d13-d3f1-4090-ad07-9e687848cf1e">
+            <DataType>WChar</DataType>
+            <DataSize>2</DataSize>
+            <Collation>Latin1_General_CI_AS</Collation>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="8e929dcb-3883-4e78-b7c1-529447d8f97e">
+              <TableID>Calendar</TableID>
+              <ColumnID>week_day_short_en</ColumnID>
+            </Source>
+          </CaptionColumn>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+      <AttributeHierarchyOptimizedState>NotOptimized</AttributeHierarchyOptimizedState>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <AttributeHierarchyDisplayFolder>Атрибуты</AttributeHierarchyDisplayFolder>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="bc4a19d1-66fd-4f22-b8ac-f825395c553a">
+      <ID>Quarter</ID>
+      <Name>Квартал</Name>
+      <Type>QuarterOfYear</Type>
+      <EstimatedCount>4</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ce7478e3-3302-4701-861f-2f7f6e76775a">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4b78f87b-a0e0-4584-8bcc-1f7d0fcaa229">
+            <TableID>Calendar</TableID>
+            <ColumnID>quarter_</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="5d45bfd7-1a0e-4783-ae34-d77adf69ebe6">
+          <Language>1033</Language>
+          <Caption>Quarter</Caption>
+          <DisplayFolder>Attributes</DisplayFolder>
+        </Translation>
+      </Translations>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="125de1db-f22c-4015-80f1-9c66c937adf6">
+          <AttributeID>Semester</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Полугодие</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <AttributeHierarchyDisplayFolder>Атрибуты</AttributeHierarchyDisplayFolder>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f894e201-dcc6-4e96-8e32-150eefed2006">
+      <ID>Month Name Short</ID>
+      <Name>Краткое наименование месяца</Name>
+      <EstimatedCount>12</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="31359b6d-5b4b-491e-a86a-ee7de9bb3407">
+          <DataType>WChar</DataType>
+          <DataSize>3</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2b551b51-5338-4b6c-81c3-5bab7909a7cb">
+            <TableID>Calendar</TableID>
+            <ColumnID>month_name_short</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="15920ca9-e13a-40c2-a1d8-8b40fc529acc">
+          <Language>1033</Language>
+          <Caption>Month Short</Caption>
+          <DisplayFolder>Attributes</DisplayFolder>
+          <CaptionColumn dwd:design-time-name="46019eed-5fc3-4ff3-bc44-59ff38465da9">
+            <DataType>WChar</DataType>
+            <DataSize>3</DataSize>
+            <Collation>Latin1_General_CI_AS</Collation>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="d3ac8486-c468-4f69-8a39-4dfb67008624">
+              <TableID>Calendar</TableID>
+              <ColumnID>month_name_short_en</ColumnID>
+            </Source>
+          </CaptionColumn>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+      <AttributeHierarchyOptimizedState>NotOptimized</AttributeHierarchyOptimizedState>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <AttributeHierarchyDisplayFolder>Атрибуты</AttributeHierarchyDisplayFolder>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="98965d78-0c28-4042-9e8b-ce7c7d43725b">
+      <ID>Month</ID>
+      <Name>Месяц</Name>
+      <Type>MonthOfYear</Type>
+      <EstimatedCount>12</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8254f982-62c3-4145-897b-7224ca99d434">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0f12ebdf-fac1-43b4-b2fb-995e677859c2">
+            <TableID>Calendar</TableID>
+            <ColumnID>month_</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="e48df7b8-8f47-4bf4-a4fc-c4c3d18a2f2d">
+        <DataType>WChar</DataType>
+        <DataSize>8</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="46947270-0abb-4c12-bab2-a740f41cebca">
+          <TableID>Calendar</TableID>
+          <ColumnID>month_name</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="d1b41ad0-57fc-4488-b63d-7435fc4e2018">
+          <Language>1033</Language>
+          <Caption>Month</Caption>
+          <DisplayFolder>Attributes</DisplayFolder>
+          <CaptionColumn dwd:design-time-name="9e0749f1-f368-4f23-a949-b1a754d07add">
+            <DataType>WChar</DataType>
+            <DataSize>9</DataSize>
+            <Collation>Latin1_General_CI_AS</Collation>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="afdc8964-f233-4764-a9c7-24de58e703da">
+              <TableID>Calendar</TableID>
+              <ColumnID>month_name_en</ColumnID>
+            </Source>
+          </CaptionColumn>
+        </Translation>
+      </Translations>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="f148ad27-6f6f-49f2-b39f-94e248739586">
+          <AttributeID>Month Name Short</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Cardinality>One</Cardinality>
+          <Name>Краткое наименование месяца</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9065561c-ca0c-4394-881f-2bb2650cc53a">
+          <AttributeID>Id Season</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Время года</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="127227af-da61-4c83-8e3a-0770eaca4cf3">
+          <AttributeID>Quarter</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Квартал</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <AttributeHierarchyDisplayFolder>Атрибуты</AttributeHierarchyDisplayFolder>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="13b006e5-5b0f-48b7-93d6-30a513e47490">
+      <ID>Week</ID>
+      <Name>Неделя года</Name>
+      <Type>WeekOfYear</Type>
+      <EstimatedCount>372</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="61cdca62-9f74-48ae-bb58-0840df0b4aba">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="eaefad6d-7219-4272-a234-a6284a3d18b8">
+            <TableID>Calendar</TableID>
+            <ColumnID>year_</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="ec6ab0f6-591b-4bde-b733-e511e5934434">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2aac8d0b-15d1-4f5f-beda-1b1bd0114d99">
+            <TableID>Calendar</TableID>
+            <ColumnID>week_</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="1fe7f2a3-2661-4e22-839c-b0e564818ab6">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="83a39527-991c-46d0-a1d9-60c22548aa14">
+          <TableID>Calendar</TableID>
+          <ColumnID>week_</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="101c7b10-eb91-4b4d-8872-bbb8bf140479">
+          <Language>1033</Language>
+          <Caption>Week of Year</Caption>
+          <DisplayFolder>Attributes</DisplayFolder>
+        </Translation>
+      </Translations>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="c0b6d0ee-a2b0-46f5-86cb-9101dfe195cd">
+          <AttributeID>Year</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Год</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <AttributeHierarchyDisplayFolder>Атрибуты</AttributeHierarchyDisplayFolder>
+      <InstanceSelection>List</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b09769f5-c3c7-4140-8619-eb37622b81c2">
+      <ID>Month Week</ID>
+      <Name>Неделя месяца</Name>
+      <Type>Weeks</Type>
+      <EstimatedCount>5</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="91172ef4-1286-4f37-bfa5-406156553464">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f2f49ae6-6c7a-4945-8e56-97fcef89afec">
+            <TableID>Calendar</TableID>
+            <ColumnID>month_week</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="6546dd79-3196-4a4f-8443-ebba79882132">
+          <Language>1033</Language>
+          <Caption>Week of Month</Caption>
+          <DisplayFolder>Attributes</DisplayFolder>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyDisplayFolder>Атрибуты</AttributeHierarchyDisplayFolder>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="fc4d204d-dc3e-4fd1-a5f6-2de7b3e59972">
+      <ID>Semester</ID>
+      <Name>Полугодие</Name>
+      <Type>HalfYearOfYear</Type>
+      <EstimatedCount>2</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6fea91a6-66c2-44a6-a2aa-32c2bab08100">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="24bb8630-62b4-411a-ab59-d96f80cde9d8">
+            <TableID>Calendar</TableID>
+            <ColumnID>semester</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="dfb92fdc-c42a-464a-a2cb-7031a9f8815b">
+          <Language>1033</Language>
+          <Caption>Semester</Caption>
+          <DisplayFolder>Attributes</DisplayFolder>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <AttributeHierarchyDisplayFolder>Атрибуты</AttributeHierarchyDisplayFolder>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c8b9198c-5e49-41c0-82bd-4045c816bf27">
+      <ID>Month Last Day</ID>
+      <Name>Последний день месяца</Name>
+      <EstimatedCount>2</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="48dcd553-86e3-4fcd-a271-d4c270711a46">
+          <DataType>WChar</DataType>
+          <DataSize>3</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="96a5bf70-95f8-4000-8529-67a374a17427">
+            <TableID>Calendar</TableID>
+            <ColumnID>month_last_day</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="0ae737c1-04af-4f6c-a1a2-72d1528a257f">
+          <Language>1033</Language>
+          <Caption>Month last day</Caption>
+          <DisplayFolder>Attributes</DisplayFolder>
+        </Translation>
+      </Translations>
+      <AttributeHierarchyDisplayFolder>Атрибуты</AttributeHierarchyDisplayFolder>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7b783fe3-a7e2-460f-b174-795276100453">
+      <ID>Weekend</ID>
+      <Name>Выходной день</Name>
+      <EstimatedCount>2</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f83ba0af-6a7a-4689-9265-74d45c93e36c">
+          <DataType>WChar</DataType>
+          <DataSize>3</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cc67d130-5952-4802-9b10-c6b4ed84807b">
+            <TableID>Calendar</TableID>
+            <ColumnID>weekend</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="f43a4d12-8d22-4220-b707-152c91aeab96">
+          <Language>1033</Language>
+          <Caption>Weekend</Caption>
+          <DisplayFolder>Attributes</DisplayFolder>
+        </Translation>
+      </Translations>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <AttributeHierarchyDisplayFolder>Атрибуты</AttributeHierarchyDisplayFolder>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c62f6f96-d2eb-48a3-8b00-0f4c48f7a424">
+      <ID>Id Season</ID>
+      <Name>Время года</Name>
+      <EstimatedCount>4</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="85063866-61be-4d4b-9dd7-4d1d352cf891">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="09f70e8c-8776-4cd4-a401-acd23a1e10f0">
+            <TableID>Calendar</TableID>
+            <ColumnID>id_season</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="c10a370d-6376-4c3e-b517-0e3d7ab31209">
+        <DataType>WChar</DataType>
+        <DataSize>5</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="522cec16-9a0e-4561-8cc8-085609d41a46">
+          <TableID>Calendar</TableID>
+          <ColumnID>season</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="43bc8657-6171-4dc2-899e-ba80d41a89e9">
+          <Language>1033</Language>
+          <Caption>Season</Caption>
+          <DisplayFolder>Attributes</DisplayFolder>
+          <CaptionColumn dwd:design-time-name="53e05ca0-1cab-4f7a-93f0-dfe2b23c9109">
+            <DataType>WChar</DataType>
+            <DataSize>6</DataSize>
+            <Collation>Latin1_General_CI_AS</Collation>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f0370555-11f9-4e8b-befc-8c27589da711">
+              <TableID>Calendar</TableID>
+              <ColumnID>season_en</ColumnID>
+            </Source>
+          </CaptionColumn>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <AttributeHierarchyDisplayFolder>Атрибуты</AttributeHierarchyDisplayFolder>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="14ddad63-ad19-4457-866d-c9abf7ccbeb1">
+      <ID>Id Month</ID>
+      <Name>Месяц год</Name>
+      <Type>Months</Type>
+      <EstimatedCount>84</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="233123f3-d8a2-4434-81a1-497518c4c603">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5c18cf03-00b9-41fc-9f2f-8308bb0ff47c">
+            <TableID>Calendar</TableID>
+            <ColumnID>id_month</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="2421daef-c68b-4269-ad2a-c83c7efdd588">
+        <DataType>WChar</DataType>
+        <DataSize>8</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="331ac7fa-101d-4fbc-b835-3602ab64aff2">
+          <TableID>Calendar</TableID>
+          <ColumnID>month_year</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="b228c3f9-639e-4c42-b9e5-63cda5afe9fc">
+          <Language>1033</Language>
+          <Caption>Month Year</Caption>
+          <DisplayFolder>Attributes</DisplayFolder>
+          <CaptionColumn dwd:design-time-name="09308847-6cfa-4788-8cb9-1f13ff0e0843">
+            <DataType>WChar</DataType>
+            <DataSize>8</DataSize>
+            <Collation>Latin1_General_CI_AS</Collation>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a8884686-ccff-42da-a09c-f01d132d327e">
+              <TableID>Calendar</TableID>
+              <ColumnID>month_year_en</ColumnID>
+            </Source>
+          </CaptionColumn>
+        </Translation>
+      </Translations>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="efed8215-8bc4-4280-b735-6c44186147b7">
+          <AttributeID>Year</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Год</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <AttributeHierarchyDisplayFolder>Атрибуты</AttributeHierarchyDisplayFolder>
+      <InstanceSelection>List</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1e1f1317-5ccf-4f4c-b6bc-5e86514a9991">
+      <ID>Date Full Str</ID>
+      <Name>Дата строкой</Name>
+      <EstimatedCount>2557</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c8b558fd-bf83-4865-b5c9-f84c4fb1777a">
+          <DataType>WChar</DataType>
+          <DataSize>18</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="adc19818-f54e-4bc6-9b18-5b01781f9c9c">
+            <TableID>Calendar</TableID>
+            <ColumnID>date_full_str</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="6dc94cc3-ee3e-4f0a-b207-f25b848e0a42">
+          <Language>1033</Language>
+          <Caption>Date Full Str</Caption>
+          <CaptionColumn dwd:design-time-name="3f4bb1d4-33cc-4d81-acb2-5b1f35c34c0f">
+            <DataType>WChar</DataType>
+            <DataSize>17</DataSize>
+            <Collation>Latin1_General_CI_AS</Collation>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ec5cc10a-2018-4f42-9ad9-b1270646a149">
+              <TableID>Calendar</TableID>
+              <ColumnID>date_full_str_en</ColumnID>
+            </Source>
+          </CaptionColumn>
+        </Translation>
+      </Translations>
+      <MemberNamesUnique>true</MemberNamesUnique>
+      <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+      <AttributeHierarchyOptimizedState>NotOptimized</AttributeHierarchyOptimizedState>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>FilteredList</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+  </Attributes>
+  <AttributeAllMemberName>Все</AttributeAllMemberName>
+  <AttributeAllMemberTranslations>
+    <AttributeAllMemberTranslation dwd:design-time-name="a2992601-250c-40ca-8097-2d3359da89fb">
+      <Language>1033</Language>
+      <Caption>All</Caption>
+    </AttributeAllMemberTranslation>
+  </AttributeAllMemberTranslations>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="77451a08-8be1-43f0-a64a-9a9c35ed7bca">
+      <ID>Иерархия</ID>
+      <Name>Год-квартал-месяц-дата</Name>
+      <Description></Description>
+      <DisplayFolder>Иерархии</DisplayFolder>
+      <Translations>
+        <Translation dwd:design-time-name="2afc9fed-8569-49d3-aa61-022519e043ce">
+          <Language>1033</Language>
+          <Caption>Year-Quarter-Month-Date</Caption>
+          <DisplayFolder>Hieararchy</DisplayFolder>
+        </Translation>
+      </Translations>
+      <AllMemberName>Все</AllMemberName>
+      <AllMemberTranslations>
+        <AllMemberTranslation dwd:design-time-name="026fe638-f8c9-4642-acb8-f164c88b7daf">
+          <Language>1033</Language>
+          <Caption>All</Caption>
+        </AllMemberTranslation>
+      </AllMemberTranslations>
+      <MemberNamesUnique>true</MemberNamesUnique>
+      <ddl2:MemberKeysUnique valuens="ddl2_2">Unique</ddl2:MemberKeysUnique>
+      <AllowDuplicateNames>false</AllowDuplicateNames>
+      <Levels>
+        <Level dwd:design-time-name="a6718e80-eb4a-41c0-8292-5c7ffc092011">
+          <ID>Год</ID>
+          <Name>Год</Name>
+          <SourceAttributeID>Year</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="9d2880b2-95af-4115-a112-876704290606">
+              <Language>1033</Language>
+              <Caption>Year</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="f474b0cb-e39d-4fb7-941b-f4624fcc3693">
+          <ID>Год полугодие</ID>
+          <Name>Год полугодие</Name>
+          <SourceAttributeID>Year Semester</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="8e7bc7cf-876f-4235-ae87-487142edef39">
+              <Language>1033</Language>
+              <Caption>Year Semester</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="df84262b-7dad-4fe0-a574-7de17119d730">
+          <ID>Год квартал</ID>
+          <Name>Год квартал</Name>
+          <SourceAttributeID>Year Quarter</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="b165b8dd-83aa-448c-be28-cf891065a215">
+              <Language>1033</Language>
+              <Caption>Year Quarter</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="36fa6ee9-7e55-4ce8-9c40-9babbdd316ee">
+          <ID>Год месяц</ID>
+          <Name>Год месяц</Name>
+          <SourceAttributeID>Year Month</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="d0715996-0c14-4d99-8c29-0a72b1f2a1bb">
+              <Language>1033</Language>
+              <Caption>Year Month</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="f8a558f5-3d22-4ffd-b826-851ad8064b8c">
+          <ID>Дата</ID>
+          <Name>Дата</Name>
+          <SourceAttributeID>Id Date</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="9eb699ee-8894-4aec-a6bf-a2be1f68f998">
+              <Language>1033</Language>
+              <Caption>Date</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="ed577dbc-11d0-4e78-8ebc-3c7f33e0559b">
+      <ID>Иерархия 1</ID>
+      <Name>Год-неделя-дата</Name>
+      <DisplayFolder>Иерархии</DisplayFolder>
+      <Translations>
+        <Translation dwd:design-time-name="07e7049f-7772-42c5-968e-11abb3d16ca5">
+          <Language>1033</Language>
+          <Caption>Year-week-date</Caption>
+          <DisplayFolder>Hieararchy</DisplayFolder>
+        </Translation>
+      </Translations>
+      <AllMemberName>Все</AllMemberName>
+      <AllMemberTranslations>
+        <AllMemberTranslation dwd:design-time-name="33e90c33-e87f-4cf4-8b34-5f01edf09b3b">
+          <Language>1033</Language>
+          <Caption>All</Caption>
+        </AllMemberTranslation>
+      </AllMemberTranslations>
+      <ddl2:MemberKeysUnique valuens="ddl2_2">Unique</ddl2:MemberKeysUnique>
+      <Levels>
+        <Level dwd:design-time-name="83f60b9b-04a2-41b3-b39b-865366f10553">
+          <ID>Год</ID>
+          <Name>Год</Name>
+          <SourceAttributeID>Year</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="48eda4f0-5d0c-4866-8a9b-391f526afba7">
+              <Language>1033</Language>
+              <Caption>Year</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="6158abe7-608a-44b0-9234-7f31bd056135">
+          <ID>Неделя года</ID>
+          <Name>Неделя года</Name>
+          <SourceAttributeID>Week</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="ee6e4edb-075a-4110-be0c-129d6ece86e3">
+              <Language>1033</Language>
+              <Caption>Week of Year</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="2643ca44-9f39-485b-9c99-8be14a41768f">
+          <ID>Дата</ID>
+          <Name>Дата</Name>
+          <SourceAttributeID>Id Date</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="d193429d-075d-45e5-bae7-7cdb5315038a">
+              <Language>1033</Language>
+              <Caption>Date</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="8ef39be7-a9b8-46d2-ad00-fab75721f538">
+      <ID>Иерархия 2</ID>
+      <Name>День недели-дата</Name>
+      <DisplayFolder>Иерархии</DisplayFolder>
+      <Translations>
+        <Translation dwd:design-time-name="b57bb529-2e92-4264-9215-b69b0bd5b1bf">
+          <Language>1033</Language>
+          <Caption>Day of Week-Date</Caption>
+          <DisplayFolder>Hieararchy</DisplayFolder>
+        </Translation>
+      </Translations>
+      <AllMemberName>Все</AllMemberName>
+      <AllMemberTranslations>
+        <AllMemberTranslation dwd:design-time-name="992482da-5592-46ac-bae1-5e00240fa93c">
+          <Language>1033</Language>
+          <Caption>All</Caption>
+        </AllMemberTranslation>
+      </AllMemberTranslations>
+      <MemberNamesUnique>true</MemberNamesUnique>
+      <ddl2:MemberKeysUnique valuens="ddl2_2">Unique</ddl2:MemberKeysUnique>
+      <AllowDuplicateNames>false</AllowDuplicateNames>
+      <Levels>
+        <Level dwd:design-time-name="afe16376-be81-4f66-b893-cd7a917c11b1">
+          <ID>День недели</ID>
+          <Name>День недели</Name>
+          <SourceAttributeID>Week Day</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="12f29afc-7b7d-49f1-8292-9ec70c521f48">
+              <Language>1033</Language>
+              <Caption>Day of Week</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="8d594763-3931-4cb2-a540-5d5deeba2284">
+          <ID>Дата</ID>
+          <Name>Дата</Name>
+          <SourceAttributeID>Id Date</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="df55d931-6f38-4cba-b578-1cbbecd1ba50">
+              <Language>1033</Language>
+              <Caption>Date</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="7990c7d7-ea4e-4db5-b764-0e3fc2c12fef">
+      <ID>Иерархия 3</ID>
+      <Name>Тип дня-дата</Name>
+      <DisplayFolder>Иерархии</DisplayFolder>
+      <Translations>
+        <Translation dwd:design-time-name="402e6440-25bb-4251-830b-66221574cfc2">
+          <Language>1033</Language>
+          <Caption>Date Type-Date</Caption>
+          <DisplayFolder>Hieararchy</DisplayFolder>
+        </Translation>
+      </Translations>
+      <AllMemberName>Все</AllMemberName>
+      <AllMemberTranslations>
+        <AllMemberTranslation dwd:design-time-name="41eb6a2e-0cc7-4af5-baa3-6912fc313539">
+          <Language>1033</Language>
+          <Caption>All</Caption>
+        </AllMemberTranslation>
+      </AllMemberTranslations>
+      <MemberNamesUnique>true</MemberNamesUnique>
+      <ddl2:MemberKeysUnique valuens="ddl2_2">Unique</ddl2:MemberKeysUnique>
+      <AllowDuplicateNames>false</AllowDuplicateNames>
+      <Levels>
+        <Level dwd:design-time-name="b6a19758-fad1-40d9-9074-5f94d6b5de8c">
+          <ID>Выходной день</ID>
+          <Name>Выходной день</Name>
+          <SourceAttributeID>Weekend</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="ba50205c-4dc7-4014-9128-a6d9f8d9b127">
+              <Language>1033</Language>
+              <Caption>Weekend</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="36a4b40e-02cc-4e26-b533-33d446e987bd">
+          <ID>Дата</ID>
+          <Name>Дата</Name>
+          <SourceAttributeID>Id Date</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="c6c9d376-b43c-46e6-9d3a-864f46c70995">
+              <Language>1033</Language>
+              <Caption>Date</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="ca73fd6e-0e4d-434c-b6ee-758ec068212a">
+      <ID>Иерархия 4</ID>
+      <Name>Год-месяц-дата</Name>
+      <DisplayFolder>Иерархии</DisplayFolder>
+      <Translations>
+        <Translation dwd:design-time-name="e9b1f35e-ccfd-4529-affe-81f5851eb86c">
+          <Language>1033</Language>
+          <Caption>Year Month-Date</Caption>
+          <DisplayFolder>Hieararchy</DisplayFolder>
+        </Translation>
+      </Translations>
+      <AllMemberName>Все</AllMemberName>
+      <AllMemberTranslations>
+        <AllMemberTranslation dwd:design-time-name="a344d0f6-7ac0-48bd-8829-3cbbabc13827">
+          <Language>1033</Language>
+          <Caption>All</Caption>
+        </AllMemberTranslation>
+      </AllMemberTranslations>
+      <MemberNamesUnique>true</MemberNamesUnique>
+      <ddl2:MemberKeysUnique valuens="ddl2_2">Unique</ddl2:MemberKeysUnique>
+      <AllowDuplicateNames>false</AllowDuplicateNames>
+      <Levels>
+        <Level dwd:design-time-name="9a7b170d-45b5-4a9c-8723-e98d37f36f56">
+          <ID>Год</ID>
+          <Name>Год</Name>
+          <SourceAttributeID>Year</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="1c8852ba-be6b-4229-9c8c-d489d8be1d03">
+              <Language>1033</Language>
+              <Caption>Year</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="be1f6958-505c-42d7-80d8-749bbe4bac95">
+          <ID>Месяц год</ID>
+          <Name>Месяц год</Name>
+          <SourceAttributeID>Id Month</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="8423fe4a-5d29-4035-adf3-b23fac73278b">
+              <Language>1033</Language>
+              <Caption>Month Year</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="07dd8554-4bf5-4eb6-a376-8a8a3da14a42">
+          <ID>Дата</ID>
+          <Name>Дата</Name>
+          <SourceAttributeID>Id Date</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="5d4eb8f2-af0c-4512-aea5-6e0e8187a134">
+              <Language>1033</Language>
+              <Caption>Date</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="ba640f3c-0638-4db9-87a1-e062f6650b93">
+      <ID>Иерархия 5</ID>
+      <Name>№ квартала-месяцы</Name>
+      <DisplayFolder>Иерархии</DisplayFolder>
+      <Translations>
+        <Translation dwd:design-time-name="c15e067c-8d55-432c-844e-15b6a1e4bdb4">
+          <Language>1033</Language>
+          <Caption>N Quarter-months</Caption>
+          <DisplayFolder>Hieararchy</DisplayFolder>
+        </Translation>
+      </Translations>
+      <AllMemberName>Все</AllMemberName>
+      <AllMemberTranslations>
+        <AllMemberTranslation dwd:design-time-name="e91e2b12-b5e8-4de2-9f84-62e875585c4e">
+          <Language>1033</Language>
+          <Caption>All</Caption>
+        </AllMemberTranslation>
+      </AllMemberTranslations>
+      <Levels>
+        <Level dwd:design-time-name="12eb01d4-3cfd-4da8-9641-3d5134fcaf3b">
+          <ID>Полугодие</ID>
+          <Name>Полугодие</Name>
+          <SourceAttributeID>Semester</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="462b763e-f0ad-4dc9-a491-e79726f6fde9">
+              <Language>1033</Language>
+              <Caption>Semester</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="a8630418-e1da-4c7b-acf1-98fda0000ad3">
+          <ID>Квартал</ID>
+          <Name>Квартал</Name>
+          <SourceAttributeID>Quarter</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="c02a102b-44f5-458d-8895-d0a1edd0420c">
+              <Language>1033</Language>
+              <Caption>Quarter</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="6d501083-55ac-4e04-ac3c-2f45de7b6ce6">
+          <ID>Месяц</ID>
+          <Name>Месяц</Name>
+          <SourceAttributeID>Month</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="9c9d1e8c-a026-466e-a03b-2096dd09066a">
+              <Language>1033</Language>
+              <Caption>Month</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="e20c4f42-728e-4c65-ba3c-646a3c7deba4">
+          <ID>Дата</ID>
+          <Name>Дата</Name>
+          <SourceAttributeID>Id Date</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="c0b414f6-f02a-4b36-9e0d-1aaaa8cb9da9">
+              <Language>1033</Language>
+              <Caption>Date</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="b0643819-f254-4d54-81e7-a807d119820a">
+      <ID>Иерархия 6</ID>
+      <Name>Время года-дата</Name>
+      <DisplayFolder>Иерархии</DisplayFolder>
+      <Translations>
+        <Translation dwd:design-time-name="92f9901a-72ca-4ff6-8085-c61134d81baf">
+          <Language>1033</Language>
+          <Caption>Season-Date</Caption>
+          <DisplayFolder>Hieararchy</DisplayFolder>
+        </Translation>
+      </Translations>
+      <AllMemberName>Все</AllMemberName>
+      <AllMemberTranslations>
+        <AllMemberTranslation dwd:design-time-name="7119007c-9337-4728-80f7-5f6fb11db44f">
+          <Language>1033</Language>
+          <Caption>All</Caption>
+        </AllMemberTranslation>
+      </AllMemberTranslations>
+      <MemberNamesUnique>true</MemberNamesUnique>
+      <ddl2:MemberKeysUnique valuens="ddl2_2">Unique</ddl2:MemberKeysUnique>
+      <AllowDuplicateNames>false</AllowDuplicateNames>
+      <Levels>
+        <Level dwd:design-time-name="47c20335-76ed-407b-8e1a-f1019ddfabb5">
+          <ID>Время года</ID>
+          <Name>Время года</Name>
+          <SourceAttributeID>Id Season</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="af78aa0b-3119-4fa6-9d40-c606c26a4433">
+              <Language>1033</Language>
+              <Caption>Season</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="1b17cac3-440d-420a-880e-e294f83e4842">
+          <ID>Месяц</ID>
+          <Name>Месяц</Name>
+          <SourceAttributeID>Month</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="1af73f40-7399-4005-aec3-784f564a56f3">
+              <Language>1033</Language>
+              <Caption>Month</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="e95aadaf-269e-4434-8d5f-6d6c7b987e53">
+          <ID>Дата</ID>
+          <Name>Дата</Name>
+          <SourceAttributeID>Id Date</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="7abb64e0-b9fb-400e-9c39-85f164f2508d">
+              <Language>1033</Language>
+              <Caption>Date</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+</Dimension>

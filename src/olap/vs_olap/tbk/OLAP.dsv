@@ -1786,7 +1786,13 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="СсылкаПредставление" msdata:ReadOnly="true" msprop:design-time-name="3607e824-62b6-426e-9105-f73853e2512f" msprop:DbColumnName="СсылкаПредставление" msprop:FriendlyName="СсылкаПредставление" type="xs:string" minOccurs="0" />
+                  <xs:element name="СсылкаПредставление" msdata:ReadOnly="true" msprop:design-time-name="3607e824-62b6-426e-9105-f73853e2512f" msprop:DbColumnName="СсылкаПредставление" msprop:FriendlyName="СсылкаПредставление" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
@@ -2071,6 +2077,15 @@
                   </xs:element>
                   <xs:element name="ПрибыльУПР" msprop:design-time-name="04b4202d-c594-462a-8f82-ea8eec4a2b11" msprop:DbColumnName="ПрибыльУПР" type="xs:decimal" minOccurs="0" />
                   <xs:element name="СебестоимостьИтого" msprop:design-time-name="7847e761-c163-495b-85ce-54977795e9b7" msprop:DbColumnName="СебестоимостьИтого" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="РегистраторПредставление" msprop:DbColumnName="РегистраторПредставление" msprop:design-time-name="35875cad-2600-493a-80d9-4f7bbafa8d02" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Продажии" msprop:DbColumnName="Продажии" msprop:design-time-name="7e264a8d-3148-4b17-b118-093cc76cec58" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="ПродажиБезНДС" msprop:DbColumnName="ПродажиБезНДС" msprop:design-time-name="218fa781-bb50-47ae-9457-deccdbc25d56" type="xs:decimal" minOccurs="0" />
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
