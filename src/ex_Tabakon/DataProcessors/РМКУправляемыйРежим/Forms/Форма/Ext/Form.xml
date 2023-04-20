@@ -1369,6 +1369,16 @@
 										</Button>
 									</ChildItems>
 								</UsualGroup>
+								<CheckBoxField name="ОфлайнРежим" id="661">
+									<DataPath>ОфлайнРежим</DataPath>
+									<Visible>false</Visible>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОфлайнРежимКонтекстноеМеню" id="662"/>
+									<ExtendedTooltip name="ОфлайнРежимРасширеннаяПодсказка" id="663"/>
+									<Events>
+										<Event name="OnChange" callType="After">ТБКОфлайнРежимПриИзмененииПосле</Event>
+									</Events>
+								</CheckBoxField>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
@@ -3359,6 +3369,17 @@
 					<v8:FractionDigits>0</v8:FractionDigits>
 					<v8:AllowedSign>Any</v8:AllowedSign>
 				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОфлайнРежим" id="1000021">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Офлайн(только начисление)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
