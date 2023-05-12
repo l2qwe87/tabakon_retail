@@ -73,13 +73,14 @@ namespace RetailClientTests
             services.AddScoped<WorkerRetailDocSelesReport, WorkerRetailDocSelesReport>();
             services.AddScoped<WorkerRetailDocSelesReport_NEW, WorkerRetailDocSelesReport_NEW>();
 
-            //services.AddScoped<WorkerRetailDocCashierCheck_1Day, WorkerRetailDocCashierCheck_1Day>();
-            //services.AddScoped<WorkerRetailDocCashierCheck_2Day, WorkerRetailDocCashierCheck_2Day>();
-            //services.AddScoped<WorkerRetailDocCashierCheck_5Day, WorkerRetailDocCashierCheck_5Day>();
-            //services.AddScoped<WorkerRetailDocCashierCheck_30Day, WorkerRetailDocCashierCheck_30Day>();
-            //services.AddScoped<WorkerRetailDocCashierCheck_90Day, WorkerRetailDocCashierCheck_90Day>();
+            services.AddScoped<WorkerRetailDocCashierCheck_1Day, WorkerRetailDocCashierCheck_1Day>();
+            services.AddScoped<WorkerRetailDocCashierCheck_2Day, WorkerRetailDocCashierCheck_2Day>();
+            services.AddScoped<WorkerRetailDocCashierCheck_5Day, WorkerRetailDocCashierCheck_5Day>();
+            services.AddScoped<WorkerRetailDocCashierCheck_30Day, WorkerRetailDocCashierCheck_30Day>();
+            services.AddScoped<WorkerRetailDocCashierCheck_90Day, WorkerRetailDocCashierCheck_90Day>();
 
-            services.AddScoped<_WorkerRetailDocCashierCheck, _WorkerRetailDocCashierCheck>();
+            services.AddScoped<WorkerRetailDocCashierCheck, WorkerRetailDocCashierCheck>();
+            
 
             services.AddSingleton<SyncRetailDocCashierCheckWorkerByAsyncQueue, SyncRetailDocCashierCheckWorkerByAsyncQueue>();
             services.AddSingleton<SaveRetailDocCashierCheckWorkerByAsyncQueue, SaveRetailDocCashierCheckWorkerByAsyncQueue>();
@@ -123,6 +124,10 @@ namespace RetailClientTests
                 spa.Options.SourcePath = "dist/tabakon-web-admin";
             });
 
+
+
+            var saveRetailDocCashierCheckWorkerByAsyncQueue = serviceScope.ServiceProvider.GetService(typeof(SaveRetailDocCashierCheckWorkerByAsyncQueue)) as SaveRetailDocCashierCheckWorkerByAsyncQueue;
+            saveRetailDocCashierCheckWorkerByAsyncQueue.Start();
         }
 
     }

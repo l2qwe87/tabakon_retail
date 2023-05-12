@@ -80,6 +80,9 @@ namespace RetailClientTests.Controllers
             {
                 var worker = serviceProvider.GetService(jobType) as ITask;
                 await worker.RunAsync(serviceProvider, e => e.RetailEndpointIdentity == retailEndpointIdentity);
+                if (worker is WorkerRetailDocCashierCheck) {
+                    await (worker as WorkerRetailDocCashierCheck).WaitAll(serviceProvider);
+                }
             }
 
             var data = retailEndpointsRepo.GetRetailEndpointsVersion();

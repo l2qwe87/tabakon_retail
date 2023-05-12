@@ -15,5 +15,7 @@ namespace Tabakon.Queue.Contracts {
             _queue.Enqueue(item);
             return Task.CompletedTask;
         }
+
+        public int Count() => _queue.Count;
     }
 }

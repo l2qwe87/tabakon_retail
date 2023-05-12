@@ -45,5 +45,14 @@ namespace Tabakon.Queue.Contracts {
 
             GC.SuppressFinalize(this);
         }
+
+        public async Task WaitAll()
+        {
+            await Task.Delay(5000);
+            while (_asyncQueue.Count() > 0)
+            {
+                await Task.Delay(25);
+            }
+        }
     }
 }

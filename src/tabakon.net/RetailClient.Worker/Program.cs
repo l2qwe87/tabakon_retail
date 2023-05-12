@@ -95,7 +95,7 @@ namespace RetailClient.Worker
                     //services.AddScoped<WorkerRetailDocCashierCheck_30Day, WorkerRetailDocCashierCheck_30Day>();
                     //services.AddScoped<WorkerRetailDocCashierCheck_90Day, WorkerRetailDocCashierCheck_90Day>();
 
-                    services.AddScoped<_WorkerRetailDocCashierCheck, _WorkerRetailDocCashierCheck>();
+                    services.AddScoped<WorkerRetailDocCashierCheck, WorkerRetailDocCashierCheck>();
 
                     services.AddSingleton<SyncRetailDocCashierCheckWorkerByAsyncQueue, SyncRetailDocCashierCheckWorkerByAsyncQueue>();
                     services.AddSingleton<SaveRetailDocCashierCheckWorkerByAsyncQueue, SaveRetailDocCashierCheckWorkerByAsyncQueue>();
