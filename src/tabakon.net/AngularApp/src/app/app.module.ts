@@ -1,13 +1,9 @@
 import { CovalentLayoutModule } from '@covalent/core/layout';
-import { CovalentStepsModule  } from '@covalent/core/steps';
 /* any other core modules */
 // (optional) Additional Covalent Modules imports
-import { CovalentHttpModule } from '@covalent/http';
-import { CovalentHighlightModule } from '@covalent/highlight';
 import { CovalentMarkdownModule } from '@covalent/markdown';
 import { CovalentDynamicFormsModule } from '@covalent/dynamic-forms';
 import { CovalentBaseEchartsModule } from '@covalent/echarts/base';
-import { CovalentDataTableModule } from '@covalent/core/data-table';
 import { CovalentSearchModule } from '@covalent/core/search';
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -56,14 +52,10 @@ import { CashierCheckInfoPageComponent } from './stats/cashier-check-info-page/c
     AppRoutingModule,
 
     CovalentLayoutModule,
-    CovalentStepsModule,
     // (optional) Additional Covalent Modules imports
-    CovalentHttpModule.forRoot(),
-    CovalentHighlightModule,
     CovalentMarkdownModule,
     CovalentDynamicFormsModule,
     CovalentBaseEchartsModule,
-    CovalentDataTableModule,
     CovalentSearchModule,
     CovalentLoadingModule,
     CovalentDialogsModule,
