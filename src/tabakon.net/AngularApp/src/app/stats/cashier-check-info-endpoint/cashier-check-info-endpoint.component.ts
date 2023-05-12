@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ICashierCheckInfo } from 'src/app/models/CashierCheck';
 import { CashierCheckService } from 'src/app/services/cashier-check.service';
-import { map, catchError } from 'rxjs/operators';
+import { map, catchError, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-cashier-check-info-endpoint',
@@ -22,8 +22,10 @@ export class CashierCheckInfoEndpointComponent implements OnInit {
   public data$: Observable<ICashierCheckInfo[]>;
 
   ngOnInit(): void {
-    this.data$ = this.cashierCheckService.getInfoByRetailEndpointIdentity(this.retailEndpointIdentity).pipe(
-      map(r => r.sort((a ,b) => (a.date > b.date ? 1 : -1)))
+    const days = 7;
+    const dateFrom = new Date((new Date()).getTime() - (days * 1000 * 60 * 60 * 24));
+    this.data$ = this.cashierCheckService.getInfoByRetailEndpointIdentity(this.retailEndpointIdentity, dateFrom.toJSON()).pipe(
+      map(r => r.sort((a ,b) => (a.date > b.date ? -1 : 1))),
     )
   }
 

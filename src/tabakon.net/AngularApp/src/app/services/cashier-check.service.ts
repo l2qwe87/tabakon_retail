@@ -27,7 +27,7 @@ export class CashierCheckService extends mixinHttp(class {},{ baseUrl: ""}){
     path: '/api/CashierCheck/Total?date=:date',
   })
   getInfoTotal(
-    @TdParam("date") date : Date, 
+    @TdParam("date") date : string, 
     @TdResponse() response?: Observable<HttpResponse<ICashierCheckInfo[]>>
   ): Observable<ICashierCheckInfo> {
      return response.pipe(
@@ -40,7 +40,7 @@ export class CashierCheckService extends mixinHttp(class {},{ baseUrl: ""}){
     path: '/api/CashierCheck/Info?date=:date',
   })
   getInfo(
-    @TdParam("date") date : Date, 
+    @TdParam("date") date : string, 
     @TdResponse() response?: Observable<HttpResponse<ICashierCheckInfo[]>>
   ): Observable<ICashierCheckInfo[]> {
      return response.pipe(
@@ -49,10 +49,11 @@ export class CashierCheckService extends mixinHttp(class {},{ baseUrl: ""}){
   }
 
   @TdGET({
-    path: '/api/CashierCheck/:retailEndpointIdentity/Info',
+    path: '/api/CashierCheck/:retailEndpointIdentity/Info?dateFrom=:dateFrom',
   })
   getInfoByRetailEndpointIdentity(
     @TdParam('retailEndpointIdentity') retailEndpointIdentity : string, 
+    @TdParam("dateFrom") dateFrom : string,
     @TdResponse() response?: Observable<HttpResponse<ICashierCheckInfo>>
   ): Observable<ICashierCheckInfo[]> {
      return response.pipe(

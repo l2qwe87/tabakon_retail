@@ -24,7 +24,7 @@ export class CashierCheckInfoTotalComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.data$ = this.cashierCheckService.getInfoTotal(this.date);
+    this.data$ = this.cashierCheckService.getInfoTotal((this.date instanceof Date ? this.date.toJSON() : this.date));
   }
 
 }

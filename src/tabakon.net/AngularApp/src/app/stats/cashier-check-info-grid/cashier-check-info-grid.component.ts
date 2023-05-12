@@ -35,7 +35,7 @@ export class CashierCheckInfoGridComponent implements OnInit {
 
   ngOnInit(): void {
     this.data$ = this.update$.pipe(
-      switchMap( _ =>  this.cashierCheckService.getInfo(this.date)),
+      switchMap( _ =>  this.cashierCheckService.getInfo((this.date instanceof Date ? this.date.toJSON() : this.date))),
       withLatestFrom(this.endpointsService.getEndpoints()),
       map(([info, endpoints])=>{
         let data = info.map(element => {
