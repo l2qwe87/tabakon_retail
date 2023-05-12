@@ -1,6 +1,6 @@
 pipeline {
-    agent node {
-        label 'jen-slave'
+    agent {
+        docker { image '192.168.0.37:5000/jen-slave' }
     }
 
     stages {
