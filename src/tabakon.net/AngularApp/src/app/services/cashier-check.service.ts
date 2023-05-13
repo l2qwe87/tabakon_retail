@@ -1,63 +1,28 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { map, catchError } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
-import {
-  mixinHttp,
-  TdGET,
-  TdPOST,
-  TdBody,
-  TdParam,
-  TdResponse,
-  TdQueryParams,
-} from '@covalent/http';
-import { HttpClient, HttpResponse } from '@angular/common/http';
+import { HttpClient, } from '@angular/common/http';
 import { ICashierCheckInfo } from '../models/CashierCheck'
 
 @Injectable({
   providedIn: 'root'
 })
-export class CashierCheckService extends mixinHttp(class {},{ baseUrl: ""}){
+export class CashierCheckService {
 
-  constructor() { 
-    super();
+  constructor(
+    private http : HttpClient
+  ) {
   }
 
-  @TdGET({
-    path: '/api/CashierCheck/Total?date=:date',
-  })
-  getInfoTotal(
-    @TdParam("date") date : string, 
-    @TdResponse() response?: Observable<HttpResponse<ICashierCheckInfo[]>>
-  ): Observable<ICashierCheckInfo> {
-     return response.pipe(
-       map(r => r as unknown as ICashierCheckInfo[]),
-       map(r => r.length == 1 ? r[0] : null)
-     );
+  getInfoTotal(date : string):Observable<ICashierCheckInfo> {
+    return this.http.get<ICashierCheckInfo>(`/api/CashierCheck/Total?date=${date}`);
   }
 
-  @TdGET({
-    path: '/api/CashierCheck/Info?date=:date',
-  })
-  getInfo(
-    @TdParam("date") date : string, 
-    @TdResponse() response?: Observable<HttpResponse<ICashierCheckInfo[]>>
-  ): Observable<ICashierCheckInfo[]> {
-     return response.pipe(
-       map(r => r as unknown as ICashierCheckInfo[]),
-     );
+  getInfo(date : string):Observable<ICashierCheckInfo[]> {
+    return this.http.get<ICashierCheckInfo[]>(`/api/CashierCheck/Info?date=${date}`);
   }
-
-  @TdGET({
-    path: '/api/CashierCheck/:retailEndpointIdentity/Info?dateFrom=:dateFrom',
-  })
-  getInfoByRetailEndpointIdentity(
-    @TdParam('retailEndpointIdentity') retailEndpointIdentity : string, 
-    @TdParam("dateFrom") dateFrom : string,
-    @TdResponse() response?: Observable<HttpResponse<ICashierCheckInfo>>
-  ): Observable<ICashierCheckInfo[]> {
-     return response.pipe(
-       map(r => r as unknown as ICashierCheckInfo[])
-     );
+  
+  getInfoByRetailEndpointIdentity(retailEndpointIdentity : string,dateFrom : string):Observable<ICashierCheckInfo[]>{
+    return this.http.get<ICashierCheckInfo[]>(`/api/CashierCheck/${retailEndpointIdentity}/Info?dateFrom=${dateFrom}`);
   }
 }
