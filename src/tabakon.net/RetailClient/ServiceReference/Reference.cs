@@ -389,7 +389,9 @@ namespace WS_TBK
             return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndOpen));
         }
         
+#pragma warning disable CS0108 // Member hides inherited member; missing new keyword
         public virtual System.Threading.Tasks.Task CloseAsync()
+#pragma warning restore CS0108 // Member hides inherited member; missing new keyword
         {
             return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginClose(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndClose));
         }
