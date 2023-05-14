@@ -1,11 +1,8 @@
 <div class="container">
-    <td-search-input #tdsearch
-        appearance="outline"
-        [showUnderline]="true"
-        placeholder="Марка (QR)"
-        (search)="getMarkInfo($event)"
-        searchIcon="search"
-    ></td-search-input>
+    <mat-form-field appearance="standard" class="w-100">
+        <input matInput [formControl]="mark" placeholder="Марка (QR)">
+    </mat-form-field>
+      
 </div>
 
    <div>

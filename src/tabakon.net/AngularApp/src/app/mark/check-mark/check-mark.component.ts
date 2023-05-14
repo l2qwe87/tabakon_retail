@@ -1,21 +1,32 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MarkService } from '../mark.service';
+import { FormControl } from '@angular/forms';
+import { debounceTime, filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-check-mark',
   templateUrl: './check-mark.component.html',
   styleUrls: ['./check-mark.component.scss']
 })
-export class CheckMarkComponent implements OnInit {
+export class CheckMarkComponent implements OnInit, AfterViewInit {
+
+  mark = new FormControl('');
 
   constructor(
     private markService :  MarkService
   ) 
-  { 
+  {}
 
+  
+  ngOnInit(): void {}
+
+  ngAfterViewInit(): void {
+    this.mark.valueChanges.pipe(
+      filter(mark => !!mark),
+      debounceTime(200),
+    ).subscribe( mark => this.getMarkInfo(mark)) 
   }
-
-  @ViewChild('tdsearch') tdsearch;
+  
 
   public markInfo : any[] = [];
   public searchInput : string = "";
@@ -32,17 +43,8 @@ export class CheckMarkComponent implements OnInit {
         this.markInfo = markInfo;
       }
 
-      this.tdsearch.clearSearch();
     });
   }
 
-
-
-  public markChange(){
-    console.log("markChange");
-  }
-
-  ngOnInit(): void {
-  }
 
 }

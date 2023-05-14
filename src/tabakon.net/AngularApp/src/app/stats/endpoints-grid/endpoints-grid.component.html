@@ -1,63 +1,75 @@
-<td-layout-card-over  cardTitle="Список торговых точек" cardWidth="90">
-  <div *tdLoading="'endpointGrid'; color:'primary'"> 
-    <mat-divider></mat-divider>
-    <td-search-box
-        #searchBox
-        [alwaysVisible]="true"
-        backIcon="arrow_back"
-        class="push-right-sm"
-        [placeholder]="(filterTerm ? filterTerm : 'Введите строку для поиска')"
-        (searchDebounce)="filter($event)"
-        flex
-      ></td-search-box>
-
+<mat-card>
+  <mat-card-title>
+    Список торговых точек
+  </mat-card-title>
+  <mat-card-content>
+    <div>
+    <!-- <div *tdLoading="'endpointGrid'; color:'primary'">  --> 
       <mat-divider></mat-divider>
+      <!-- <td-search-box
+          #searchBox
+          [alwaysVisible]="true"
+          backIcon="arrow_back"
+          class="push-right-sm"
+          [placeholder]="(filterTerm ? filterTerm : 'Введите строку для поиска')"
+          (searchDebounce)="filter($event)"
+          flex
+        ></td-search-box> -->
 
-      <table mat-table [dataSource]="dataSource">
+        <mat-form-field appearance="standard" class="w-100">
+          <input matInput [(ngModel)]="filterValue" class="w-100" (keyup)="applyFilter()" placeholder="Введите строку для поиска">
+        </mat-form-field>
+
+        <mat-divider></mat-divider>
+
+        <table *ngIf="!($isLoading | async)" mat-table [dataSource]="dataSource" matSort>
+          
+          <!-- npp Column -->
+          <ng-container matColumnDef="npp">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let element; let i = index">{{i + 1}}</td>
+          </ng-container>
+
+          <!-- retailEndpointName Column -->
+          <ng-container matColumnDef="retailEndpointName">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Наименвоание склада в 1С</th>
+            <td mat-cell *matCellDef="let element">
+              <a [routerLink]="['/endpoints/', element.retailEndpointIdentity]" mat-button color="primary"><mat-icon>drag_indicator</mat-icon> {{ element.retailEndpointName }}</a>
+            </td>
+          </ng-container>
+
+          <!-- retailEndpointUrl Column -->
+          <ng-container matColumnDef="retailEndpointUrl">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>WEB клиент</th>
+            <td mat-cell *matCellDef="let element"> 
+              <a href="{{ element.retailEndpointUrl }}" mat-button color="primary" target="_blank"><mat-icon>aspect_ratio</mat-icon> {{ element.retailEndpointUrl }}</a>
+            </td>
+          </ng-container>
+
+          <!-- retailExtConfiguration Column -->
+          <ng-container matColumnDef="retailExtConfiguration">
+            <th mat-header-cell *matHeaderCellDef>Тип</th>
+            <td mat-cell *matCellDef="let element"> 
+              <div *ngIf="element.extData.retailExtConfiguration && element.extData.retailExtConfiguration.jsonData">
+                <app-endpoint-ext-configuration (click)="filterByExtType(element.extData.retailExtConfiguration)"
+                  [retailExtConfiguration]="element.extData.retailExtConfiguration"
+                >
+                </app-endpoint-ext-configuration>
+              </div>
+            </td>
+          </ng-container>
+
+          <!-- retailEndpointVersion Column -->
+          <ng-container matColumnDef="retailEndpointVersion">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Версия расширения</th>
+            <td mat-cell *matCellDef="let element"> 
+              <app-endpoint-version [retailVersion]="element.extData.retailVersion"></app-endpoint-version>
+            </td>
+          </ng-container>
         
-        <!-- npp Column -->
-        <ng-container matColumnDef="npp">
-          <th mat-header-cell *matHeaderCellDef> № п/п</th>
-          <td mat-cell *matCellDef="let element; let i = index">{{i + 1}}</td>
-        </ng-container>
-
-        <!-- retailEndpointName Column -->
-        <ng-container matColumnDef="retailEndpointName">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header>Наименвоание склада в 1С</th>
-          <td mat-cell *matCellDef="let element">
-            <a [routerLink]="['/endpoints/', element.retailEndpointIdentity]" mat-button color="primary"><mat-icon>drag_indicator</mat-icon> {{ element.retailEndpointName }}</a>
-          </td>
-        </ng-container>
-
-        <!-- retailEndpointUrl Column -->
-        <ng-container matColumnDef="retailEndpointUrl">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header>WEB клиент</th>
-          <td mat-cell *matCellDef="let element"> 
-            <a href="{{ element.retailEndpointUrl }}" mat-button color="primary" target="_blank"><mat-icon>aspect_ratio</mat-icon> {{ element.retailEndpointUrl }}</a>
-          </td>
-        </ng-container>
-
-        <!-- retailExtConfiguration Column -->
-        <ng-container matColumnDef="retailExtConfiguration">
-          <th mat-header-cell *matHeaderCellDef>Тип расширения</th>
-          <td mat-cell *matCellDef="let element"> 
-            <div *ngIf="element.extData.retailExtConfiguration && element.extData.retailExtConfiguration.jsonData">
-              <app-endpoint-ext-configuration 
-                [retailExtConfiguration]="element.extData.retailExtConfiguration"
-              >
-              </app-endpoint-ext-configuration>
-            </div>
-          </td>
-        </ng-container>
-
-        <!-- retailEndpointVersion Column -->
-        <ng-container matColumnDef="retailEndpointVersion">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header>Версия расширения</th>
-          <td mat-cell *matCellDef="let element"> 
-            <app-endpoint-version [retailVersion]="retailEndpoint.extData.retailVersion"></app-endpoint-version>
-          </td>
-        </ng-container>
-       
-      </table>
-  </div>
-</td-layout-card-over>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-progress-bar *ngIf="$isLoading | async" class="w-100" mode="indeterminate"></mat-progress-bar>
+    </div>
+  </mat-card-content>
