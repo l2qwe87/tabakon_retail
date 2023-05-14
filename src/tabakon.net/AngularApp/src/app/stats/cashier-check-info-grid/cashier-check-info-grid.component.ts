@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ITdDataTableSortChangeEvent, TdDataTableSortingOrder } from '@covalent/core/data-table';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { MatTableDataSource } from '@angular/material/table';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { map, switchMap, withLatestFrom } from 'rxjs/operators';
 import { ICashierCheckInfo } from 'src/app/models/CashierCheck';
 import { CashierCheckService } from 'src/app/services/cashier-check.service';
@@ -21,12 +21,14 @@ export class CashierCheckInfoGridComponent implements OnInit {
   @Input()
   public date: Date;
 
-  sortBy: string = 'retailEndpointName';
-  sortOrder: TdDataTableSortingOrder = TdDataTableSortingOrder.Ascending;
+  //sortBy: string = 'retailEndpointName';
+  //sortOrder: TdDataTableSortingOrder = TdDataTableSortingOrder.Ascending;
 
   data$: Observable<ICashierCheckInfoExt[]>;
 
-  update$: Subject<any>= new BehaviorSubject<any>(true);
+  update$: BehaviorSubject<any>= new BehaviorSubject<any>(true);
+
+  dataSource = new MatTableDataSource<ICashierCheckInfoExt>();
 
   constructor(
     private cashierCheckService: CashierCheckService,
@@ -35,7 +37,7 @@ export class CashierCheckInfoGridComponent implements OnInit {
 
   ngOnInit(): void {
     this.data$ = this.update$.pipe(
-      switchMap( _ =>  this.cashierCheckService.getInfo(this.date)),
+      switchMap( _ =>  this.cashierCheckService.getInfo((this.date instanceof Date ? this.date.toJSON() : this.date))),
       withLatestFrom(this.endpointsService.getEndpoints()),
       map(([info, endpoints])=>{
         let data = info.map(element => {
@@ -48,37 +50,41 @@ export class CashierCheckInfoGridComponent implements OnInit {
           return {...element, retailEndpointName };
         });
         
-        data.sort((a:ICashierCheckInfoExt, b:ICashierCheckInfoExt) => {
-          let direction: number = 0;
-          if (this.sortOrder === TdDataTableSortingOrder.Descending) {
-            direction = 1;
-          } else if (this.sortOrder === TdDataTableSortingOrder.Ascending) {
-            direction = -1;
-          }
+        // data.sort((a:ICashierCheckInfoExt, b:ICashierCheckInfoExt) => {
+        //   let direction: number = 0;
+        //   if (this.sortOrder === TdDataTableSortingOrder.Descending) {
+        //     direction = 1;
+        //   } else if (this.sortOrder === TdDataTableSortingOrder.Ascending) {
+        //     direction = -1;
+        //   }
 
-          let leftValue = a[this.sortBy];
-          let rightValue = b[this.sortBy];
-          if (leftValue < rightValue) {
-            return direction;
-          } else if (leftValue > rightValue) {
-            return -direction;
-          } else {
-            return direction;
-          }
-        });
+        //   let leftValue = a[this.sortBy];
+        //   let rightValue = b[this.sortBy];
+        //   if (leftValue < rightValue) {
+        //     return direction;
+        //   } else if (leftValue > rightValue) {
+        //     return -direction;
+        //   } else {
+        //     return direction;
+        //   }
+        // });
         return data;
       })
     );
+
+    this.data$.subscribe( data => {
+      this.dataSource.data = data;
+    })
   }
 
-  sort(sortEvent: ITdDataTableSortChangeEvent): void {
-    this.sortOrder =
-      this.sortOrder === TdDataTableSortingOrder.Ascending
-        ? TdDataTableSortingOrder.Descending
-        : TdDataTableSortingOrder.Ascending;
-    this.sortBy = sortEvent.name;
+  // sort(sortEvent: ITdDataTableSortChangeEvent): void {
+  //   this.sortOrder =
+  //     this.sortOrder === TdDataTableSortingOrder.Ascending
+  //       ? TdDataTableSortingOrder.Descending
+  //       : TdDataTableSortingOrder.Ascending;
+  //   this.sortBy = sortEvent.name;
 
-    this.update$.next();
-  }
+  //   this.update$.next();
+  // }
 }
 

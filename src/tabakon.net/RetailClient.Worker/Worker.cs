@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using RetailClient.Web.Contracts;
 using RetailClient.Web.Services.Jobs;
+using Tabakon.Queue.RetailDocCashierCheck;
 
 namespace RetailClient.Worker
 {
@@ -19,12 +20,16 @@ namespace RetailClient.Worker
         public Worker(
             IJobService jobService,
             JobConfig jobConfig,
-            ILogger<Worker> logger
+            ILogger<Worker> logger,
+            IServiceProvider serviceProvider
             )
         {
             _logger = logger;
             _jobConfig = jobConfig;
             _jobService = jobService;
+
+            var saveRetailDocCashierCheckWorkerByAsyncQueue = serviceProvider.GetService(typeof(SaveRetailDocCashierCheckWorkerByAsyncQueue)) as SaveRetailDocCashierCheckWorkerByAsyncQueue;
+            saveRetailDocCashierCheckWorkerByAsyncQueue.Start();
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -55,11 +60,12 @@ namespace RetailClient.Worker
             if (_jobConfig.CashierCheck)
             {
                 ////_jobService.AddTask<WorkerRetailDocCashierCheck_1Day>(TimeSpan.FromMinutes(20));
-                //_jobService.AddTask<WorkerRetailDocCashierCheck_2Day>(TimeSpan.FromHours(4));
-                //_jobService.AddTask<WorkerRetailDocCashierCheck_5Day>(TimeSpan.FromDays(2));
-                //_jobService.AddTask<WorkerRetailDocCashierCheck_30Day>(TimeSpan.FromDays(10));
-                //_jobService.AddTask<WorkerRetailDocCashierCheck_90Day>(TimeSpan.FromDays(30));
-                _jobService.AddTask<_WorkerRetailDocCashierCheck>(TimeSpan.FromDays(1));
+                _jobService.AddTask<WorkerRetailDocCashierCheck_1Day>(TimeSpan.FromHours(4));
+                _jobService.AddTask<WorkerRetailDocCashierCheck_2Day>(TimeSpan.FromDays(1));
+                _jobService.AddTask<WorkerRetailDocCashierCheck_5Day>(TimeSpan.FromDays(2));
+                _jobService.AddTask<WorkerRetailDocCashierCheck_30Day>(TimeSpan.FromDays(10));
+                _jobService.AddTask<WorkerRetailDocCashierCheck_90Day>(TimeSpan.FromDays(30));
+                
             }
             while (!stoppingToken.IsCancellationRequested)
             {

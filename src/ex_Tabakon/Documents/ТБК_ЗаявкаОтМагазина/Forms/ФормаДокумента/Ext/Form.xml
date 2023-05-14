@@ -31,6 +31,17 @@
 					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
 					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
 				</InputField>
+				<InputField name="ДатаСборки" id="90">
+					<DataPath>Объект.ДатаСборки</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Требуемая дата сборки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="ДатаСборкиКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="ДатаСборкиРасширеннаяПодсказка" id="92"/>
+				</InputField>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="Группа2" id="49">
@@ -102,18 +113,31 @@
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="Группа4" id="62">
-			<Enabled>false</Enabled>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="63"/>
 			<ChildItems>
 				<InputField name="Статус" id="13">
 					<DataPath>Объект.Статус</DataPath>
+					<Enabled>false</Enabled>
 					<EditMode>EnterOnInput</EditMode>
 					<Width>9</Width>
 					<ContextMenu name="СтатусКонтекстноеМеню" id="14"/>
 					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="15"/>
 				</InputField>
+				<InputField name="ДатаСборкиФакт" id="87">
+					<DataPath>Объект.ДатаСборкиФакт</DataPath>
+					<Enabled>false</Enabled>
+					<ContextMenu name="ДатаСборкиФактКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="ДатаСборкиФактРасширеннаяПодсказка" id="89"/>
+				</InputField>
+				<Button name="Собрано" id="85">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Собрано</CommandName>
+					<BackColor>web:Yellow</BackColor>
+					<Font bold="true" kind="AutoFont"/>
+					<ExtendedTooltip name="СобраноРасширеннаяПодсказка" id="86"/>
+				</Button>
 			</ChildItems>
 		</UsualGroup>
 		<InputField name="ПричинаОтказа" id="64">
@@ -293,4 +317,21 @@
 			</dcsset:item>
 		</ConditionalAppearance>
 	</Attributes>
+	<Commands>
+		<Command name="Собрано" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Собрано</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Собрано</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Собрано</Action>
+		</Command>
+	</Commands>
 </Form>

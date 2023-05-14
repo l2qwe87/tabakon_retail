@@ -47,7 +47,7 @@
 			</UsePurposes>
 			<ScriptVariant>Russian</ScriptVariant>
 			<Vendor/>
-			<Version>1.5.2.7</Version>
+			<Version>1.5.4.7</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
@@ -133,6 +133,7 @@
 			<CommonPicture>РежимИспользованияПриложенияВСервисеЛокально</CommonPicture>
 			<CommonPicture>ДлительнаяОперация16</CommonPicture>
 			<CommonPicture>Успешно32</CommonPicture>
+			<CommonPicture>ВосклицательныйЗнакКрасный</CommonPicture>
 			<SessionParameter>ТБК_WS_Клиент</SessionParameter>
 			<Role>ТБК_Кассир</Role>
 			<Role>ДобавлениеИзменениеЧековККМ</Role>
@@ -168,6 +169,7 @@
 			<CommonModule>ОбработкаТабличнойЧастиТоварыСервер</CommonModule>
 			<CommonModule>ТБК_Шифрование</CommonModule>
 			<CommonModule>ТБК_ПрограммаЛояльности</CommonModule>
+			<CommonModule>ОбщегоНазначенияРТВызовСервера</CommonModule>
 			<ExchangePlan>ОбменРозницаУправлениеТорговлей103</ExchangePlan>
 			<WebService>ws_tbk</WebService>
 			<DefinedType>Номенклатура</DefinedType>
@@ -223,6 +225,17 @@
 			<Catalog>ДоговорыКонтрагентов</Catalog>
 			<Catalog>БонусныеПрограммыЛояльности</Catalog>
 			<Catalog>ТБКСообщенияУТРозница</Catalog>
+			<Catalog>БанковскиеСчетаОрганизаций</Catalog>
+			<Catalog>ПричиныОтменыЗаказовПокупателей</Catalog>
+			<Catalog>Марки</Catalog>
+			<Catalog>СтраныМира</Catalog>
+			<Catalog>КлассификаторТНВЭД</Catalog>
+			<Catalog>ТоварныеКатегории</Catalog>
+			<Catalog>ЦеновыеГруппы</Catalog>
+			<Catalog>ТоварныеГруппы</Catalog>
+			<Catalog>ВидыАлкогольнойПродукции</Catalog>
+			<Catalog>ВидыМехаГИСМ</Catalog>
+			<Catalog>НоменклатураПрисоединенныеФайлы</Catalog>
 			<Document>ТБК_ВедомостьОПродажахЗаДень</Document>
 			<Document>ОтчетОРозничныхПродажах</Document>
 			<Document>ЧекККМ</Document>
@@ -275,6 +288,12 @@
 			<Enum>ТБК_ВидыПричинЗаявокНаПоступление</Enum>
 			<Enum>ТБКТипыПродавцов</Enum>
 			<Enum>ТБК_ТипыЦенников</Enum>
+			<Enum>ТипыСерийныхНомеровСертификатов</Enum>
+			<Enum>СпособыВыпускаВОборотГИСМ</Enum>
+			<Enum>СрокДействияПодарочныхСертификатов</Enum>
+			<Enum>РазмерыКиЗГИСМ</Enum>
+			<Enum>Периодичность</Enum>
+			<Enum>ВидыКиЗГИСМ</Enum>
 			<Report>ОтчетПоЧекам</Report>
 			<DataProcessor>РМКУправляемыйРежим</DataProcessor>
 			<DataProcessor>ТБК_Оле</DataProcessor>
@@ -317,6 +336,7 @@
 			<InformationRegister>БуферОперацийСтатистики</InformationRegister>
 			<InformationRegister>ТБКПланыМагазинаПоМесяцам</InformationRegister>
 			<InformationRegister>ТБКФокуснаяМотивация</InformationRegister>
+			<InformationRegister>ТБКРегистрацияКлиентов</InformationRegister>
 			<AccumulationRegister>ТоварыНаСкладах</AccumulationRegister>
 			<AccumulationRegister>ДенежныеСредстваККМ</AccumulationRegister>
 			<AccumulationRegister>Продажи</AccumulationRegister>

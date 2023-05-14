@@ -4,6 +4,7 @@ using RetailClient.Web.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Runtime;
 using System.Threading.Tasks;
 using Tabakon.DAL;
@@ -20,26 +21,24 @@ namespace RetailClient.Web.Services.Jobs
             this.serviceProvider = serviceProvider;
         }
 
-        public abstract Task RunAsync(IServiceProvider serviceProvider, Func<RetailEndpoint, bool> predicat = null);
+        public abstract Task RunAsync(IServiceProvider serviceProvider, Expression<Func<RetailEndpoint, bool>> predicat = null);
 
-        protected async Task DoWorkAsync<T>(bool alwaysSaveResult, Func<RetailEndpoint, Task<IEnumerable<string>>> func, Func<RetailEndpoint, bool> predicat) where T : AbstractCacheEntity
+        protected async Task DoWorkAsync<T>(bool alwaysSaveResult, Func<RetailEndpoint, Task<IEnumerable<string>>> func, Expression<Func<RetailEndpoint, bool>> predicat) where T : AbstractCacheEntity
         {
             IEnumerable<RetailEndpoint> endpoints = null;
             using (var scope = serviceProvider.CreateScope())
             {
                 var retailEndpointsRepo = scope.ServiceProvider.GetRequiredService<IRetailEndpointsRepo>();
-                endpoints = await retailEndpointsRepo
-                    .GetRetailEndpoints()
-                    .AsNoTracking()
-                    .ToListAsync();
-#if DEBUG
-                //endpoints = endpoints.Concat(endpoints).Concat(endpoints).Concat(endpoints)
-                //    .Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints)
-                //    .Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints).Concat(endpoints);
-#endif
-            }
-            if (predicat != null) {
-                endpoints = endpoints.Where(e => predicat(e));
+                var endpointsQuery = retailEndpointsRepo
+                          .GetRetailEndpoints();
+
+                if (predicat != null)
+                {
+                    endpointsQuery = endpointsQuery.Where(predicat);
+                }
+
+                endpoints = await endpointsQuery.AsNoTracking().ToListAsync();
+
             }
 
             var taskCount = 6;

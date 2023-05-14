@@ -14,8 +14,6 @@ namespace Tabakon.Queue.RetailDocCashierCheck {
             IServiceProvider serviceProvider
             ) {
             _serviceProvider = serviceProvider;
-
-            this.Start();
         }
 
         protected override async Task Do(SaveRetailDocCashierCheck item) {
