@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
 import { BehaviorSubject } from 'rxjs';
 import { RetailEndpoint, RetailExtConfiguration } from 'src/app/models/RetailEndpoint';
 import { EndpointsService } from 'src/app/services/endpoints.service';

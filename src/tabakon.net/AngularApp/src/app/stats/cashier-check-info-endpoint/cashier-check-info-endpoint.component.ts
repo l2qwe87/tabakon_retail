@@ -3,7 +3,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
 import { ICashierCheckInfo } from 'src/app/models/CashierCheck';
 import { CashierCheckService } from 'src/app/services/cashier-check.service';
 import { map } from 'rxjs/operators';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
 import { MatSort } from '@angular/material/sort';
 
 @Component({

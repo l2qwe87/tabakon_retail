@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map, switchMap, withLatestFrom } from 'rxjs/operators';
 import { ICashierCheckInfo } from 'src/app/models/CashierCheck';
