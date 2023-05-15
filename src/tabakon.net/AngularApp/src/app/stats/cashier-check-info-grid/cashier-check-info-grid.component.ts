@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
+import { MatTableDataSource } from '@angular/material/table';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map, switchMap, withLatestFrom } from 'rxjs/operators';
 import { ICashierCheckInfo } from 'src/app/models/CashierCheck';
@@ -29,6 +29,7 @@ export class CashierCheckInfoGridComponent implements OnInit {
   update$: BehaviorSubject<any>= new BehaviorSubject<any>(true);
 
   dataSource = new MatTableDataSource<ICashierCheckInfoExt>();
+  displayedColumns: string[] = ['date', 'retailEndpointName', 'sumSale', 'sumReturn', 'sumTerminal', 'sumCash'];
 
   constructor(
     private cashierCheckService: CashierCheckService,

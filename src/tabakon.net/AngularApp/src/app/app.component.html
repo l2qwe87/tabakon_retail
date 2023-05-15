@@ -1,23 +1,21 @@
 
-<mat-toolbar>
-  <mat-toolbar-row>
-    <a mat-flat-button [routerLink]="['/endpoints/grid']">
-      <mat-icon>view_list</mat-icon>
-      Список торговых точек
-    </a>
-    
-    <a mat-flat-button [routerLink]="['/cash']">
-      <mat-icon>view_list</mat-icon>
-      Кэш
-    </a>
+<mat-toolbar color="primary">
+  <a mat-raised-button color="primary" [routerLink]="['/endpoints/grid']">
+    <mat-icon>view_list</mat-icon>
+    Список торговых точек
+  </a>
+  
+  <a mat-raised-button color="primary"  [routerLink]="['/cash']">
+    <mat-icon>view_list</mat-icon>
+    Кэш
+  </a>
 
-    <a mat-flat-button [routerLink]="['/mark/check']">
-      <mat-icon>view_list</mat-icon>
-      Проверка принадлежности марки(QR)
-    </a>
-  </mat-toolbar-row>
+  <a mat-raised-button color="primary"  [routerLink]="['/mark/check']">
+    <mat-icon>view_list</mat-icon>
+    Проверка принадлежности марки(QR)
+  </a>
 </mat-toolbar>
-<div>
+<div class="main">
     <router-outlet></router-outlet>
 </div>
   

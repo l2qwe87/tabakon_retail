@@ -4,8 +4,6 @@ import { Subscription, BehaviorSubject } from 'rxjs';
 import { first, switchMap, tap } from 'rxjs/operators';
 import { RetailEndpoint } from 'src/app/models/RetailEndpoint';
 import { EndpointsService } from 'src/app/services/endpoints.service';
-// import { TdLoadingService } from '@covalent/core/loading';
-// import { TdDialogService } from '@covalent/core/dialogs';
 
 @Component({
   selector: 'app-endpoint-detail',

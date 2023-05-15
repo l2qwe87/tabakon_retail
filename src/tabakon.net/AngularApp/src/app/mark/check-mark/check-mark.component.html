@@ -1,11 +1,10 @@
-<div class="container">
-    <mat-form-field appearance="standard" class="w-100">
+
+    <mat-form-field class="w-100">
         <input matInput [formControl]="mark" placeholder="Марка (QR)">
     </mat-form-field>
       
-</div>
 
-   <div>
+   <div class="w-100">
        <mat-card *ngFor="let info of markInfo">
            <app-mark-info [info]="info"></app-mark-info>
        </mat-card>

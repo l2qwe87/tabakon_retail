@@ -4,20 +4,9 @@
   </mat-card-title>
   <mat-card-content>
     <div>
-    <!-- <div *tdLoading="'endpointGrid'; color:'primary'">  --> 
       <mat-divider></mat-divider>
-      <!-- <td-search-box
-          #searchBox
-          [alwaysVisible]="true"
-          backIcon="arrow_back"
-          class="push-right-sm"
-          [placeholder]="(filterTerm ? filterTerm : 'Введите строку для поиска')"
-          (searchDebounce)="filter($event)"
-          flex
-        ></td-search-box> -->
-
-        <mat-form-field appearance="standard" class="w-100">
-          <input matInput [(ngModel)]="filterValue" class="w-100" (keyup)="applyFilter()" placeholder="Введите строку для поиска">
+        <mat-form-field class="w-100">
+          <input matInput [formControl]="filterControl" class="w-100" placeholder="Введите строку для поиска">
         </mat-form-field>
 
         <mat-divider></mat-divider>
