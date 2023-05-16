@@ -85,22 +85,46 @@
 			</ChildItems>
 		</UsualGroup>
 		<Table name="ТабличнаяЧасть1" id="14">
+			<Representation>List</Representation>
+			<ReadOnly>true</ReadOnly>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
 			<Height>15</Height>
-			<AutoInsertNewRow>true</AutoInsertNewRow>
-			<EnableStartDrag>true</EnableStartDrag>
-			<EnableDrag>true</EnableDrag>
+			<AutoAddIncomplete>false</AutoAddIncomplete>
+			<SearchOnInput>Use</SearchOnInput>
+			<Output>Enable</Output>
 			<DataPath>Объект.Чат</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>CommandBar</SearchStringLocation>
+			<ViewStatusLocation>Top</ViewStatusLocation>
+			<SearchControlLocation>CommandBar</SearchControlLocation>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="ТабличнаяЧасть1КонтекстноеМеню" id="15"/>
-			<AutoCommandBar name="ТабличнаяЧасть1КоманднаяПанель" id="16">
-				<Autofill>false</Autofill>
-			</AutoCommandBar>
+			<AutoCommandBar name="ТабличнаяЧасть1КоманднаяПанель" id="16"/>
 			<ExtendedTooltip name="ТабличнаяЧасть1РасширеннаяПодсказка" id="17"/>
 			<SearchStringAddition name="ТабличнаяЧасть1СтрокаПоиска" id="18">
 				<AdditionSource>
 					<Item>ТабличнаяЧасть1</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Поиск</v8:content>
+					</v8:item>
+				</Title>
 				<ContextMenu name="ТабличнаяЧасть1СтрокаПоискаКонтекстноеМеню" id="19"/>
 				<ExtendedTooltip name="ТабличнаяЧасть1СтрокаПоискаРасширеннаяПодсказка" id="20"/>
 			</SearchStringAddition>
@@ -120,6 +144,9 @@
 				<ContextMenu name="ТабличнаяЧасть1УправлениеПоискомКонтекстноеМеню" id="25"/>
 				<ExtendedTooltip name="ТабличнаяЧасть1УправлениеПоискомРасширеннаяПодсказка" id="26"/>
 			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ТабличнаяЧасть1Выбор</Event>
+			</Events>
 			<ChildItems>
 				<LabelField name="ТабличнаяЧасть1НомерСтроки" id="27">
 					<DataPath>Объект.Чат.LineNumber</DataPath>
