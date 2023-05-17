@@ -9,7 +9,7 @@ using RetailClient.Web.Contracts;
 using Tabakon.DAL;
 using Tabakon.Entity;
 
-namespace RetailClientTests.Controllers
+namespace RetailClient.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

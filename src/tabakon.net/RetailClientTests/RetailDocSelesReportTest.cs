@@ -7,7 +7,7 @@ using Tabakon.Entity;
 using Xunit;
 using static RetailClient.RetailWSClient;
 
-namespace RetailClientTests
+namespace RetailClient
 {
     public class RetailDocSelesReportTest
     {

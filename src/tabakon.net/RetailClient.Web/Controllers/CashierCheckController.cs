@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RetailClient.Web.Contracts;
 
-namespace RetailClientTests.Controllers
+namespace RetailClient.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

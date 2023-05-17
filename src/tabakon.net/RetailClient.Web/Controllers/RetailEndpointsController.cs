@@ -12,7 +12,7 @@ using RetailClient.Web.Services.Jobs;
 using Tabakon.DAL;
 using Tabakon.Entity;
 
-namespace RetailClientTests.Controllers
+namespace RetailClient.Controllers
 {
 
     public class RetailEndpointExtData

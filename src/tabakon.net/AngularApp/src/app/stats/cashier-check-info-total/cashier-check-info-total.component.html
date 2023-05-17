@@ -6,28 +6,20 @@
     <mat-card-content>
         <mat-list *ngIf="data">
             <mat-list-item> 
-                <mat-form-field>
-                    <mat-label>Продажа</mat-label>
-                    <input matInput [value]="data.sumSale">
-                </mat-form-field>
+                <span matListItemTitle>Продажа</span>
+                <span matListItemLine class="text-end">{{data.sumSale | currency:'RUB':'symbol-narrow'}}</span>
             </mat-list-item>
             <mat-list-item> 
-                <mat-form-field>
-                    <mat-label>Вовзрат</mat-label>
-                    <input matInput [value]="data.sumReturn">
-                </mat-form-field>
+                <span matListItemTitle>Вовзрат</span>
+                <span matListItemLine class="text-end">{{data.sumReturn | currency:'RUB':'symbol-narrow'}}</span>
             </mat-list-item>
             <mat-list-item> 
-                <mat-form-field>
-                    <mat-label>Наличные</mat-label>
-                    <input matInput [value]="data.sumCash">
-                </mat-form-field>
+                <span matListItemTitle>Наличные</span>
+                <span matListItemLine class="text-end">{{data.sumCash | currency:'RUB':'symbol-narrow'}}</span>
             </mat-list-item>
             <mat-list-item> 
-                <mat-form-field>
-                    <mat-label>Терминал</mat-label>
-                    <input matInput [value]="data.sumTerminal">
-                </mat-form-field>
+                <span matListItemTitle>Терминал</span>
+                <span matListItemLine class="text-end">{{data.sumTerminal | currency:'RUB':'symbol-narrow'}}</span>
             </mat-list-item>
         </mat-list>
     </mat-card-content>

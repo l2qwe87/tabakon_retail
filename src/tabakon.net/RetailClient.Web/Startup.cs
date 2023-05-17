@@ -17,11 +17,11 @@ using RetailClient.Web.Services.Jobs;
 using RetailClient.Web.Services;
 using System.Net.Http;
 using System.Security.Policy;
-using RetailClientTests.Controllers;
+using RetailClient.Controllers;
 using System.Net.Http.Headers;
 using Tabakon.Queue.RetailDocCashierCheck;
 
-namespace RetailClientTests
+namespace RetailClient
 {
 
    

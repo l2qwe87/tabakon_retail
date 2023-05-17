@@ -12,7 +12,7 @@ using Tabakon.Entity;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration.EnvironmentVariables;
 
-namespace RetailClientTests.Controllers
+namespace RetailClient.Controllers
 {
     [ApiController]
     [Route("[controller]")]
