@@ -1,21 +1,35 @@
 pipeline {
     agent {
-        docker { image '192.168.0.37:5000/jen-slave' }
+        label 'jen-slave'
     }
 
     stages {
-        stage('Build') {
+        stage('git') {
             steps {
-                echo 'Building..'
+                git branch: '#tmp', url: 'https://github.com/l2qwe87/tabakon_retail.git'
             }
         }
-        stage('Test') {
+
+        stage('angular build') {
             steps {
-                echo 'Testing..'
+                sh 'cd src/tabakon.net/AngularApp && npm run build-prod'
             }
         }
+
+        stage('dotnet build') {
+            steps {
+                sh 'dotnet build src/tabakon.net/tabakon.net -c Release'
+            }
+        }
+        stage('dotnet publish') {
+            steps {
+                sh 'dotnet publish src/tabakon.net/RetailClient.Web/RetailClient.Web.csproj -c Release --no-build --output ./pub/'
+            }
+        }
+    
         stage('Deploy') {
             steps {
+                sh 'cd pub && ls'
                 echo 'Deploying....'
             }
         }
