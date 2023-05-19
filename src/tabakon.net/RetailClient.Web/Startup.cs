@@ -54,7 +54,12 @@ namespace RetailClient
         {
             services.AddControllers();
 
-            services.AddDbContextPool<TabakonDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("TabakonDataContext")), 20);
+            services.AddDbContextPool<TabakonDBContext>(options => {
+                Console.WriteLine("============= TabakonDataContext =============");
+                Console.WriteLine(Configuration.GetConnectionString("TabakonDataContext"));
+                Console.WriteLine("=============");
+                options.UseSqlServer(Configuration.GetConnectionString("TabakonDataContext"));
+                }, 20);
 
             services.AddHttpClient<IsmpCrptApiClient>("IsmpCrptApiClient",
                 client =>
