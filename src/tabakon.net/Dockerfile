@@ -14,6 +14,8 @@ RUN sed -i 's/SECLEVEL=2/SECLEVEL=1/g' /etc/ssl/openssl.cnf & \
 
 RUN update-ca-certificates
 
+ENV TZ="Europe/Moscow"
+
 WORKDIR /app
 COPY pub/ ./
 ENTRYPOINT ["dotnet", "RetailClient.Web.dll"]
