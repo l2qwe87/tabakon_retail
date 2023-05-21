@@ -14,18 +14,15 @@ using RetailClient.Web.Contracts;
 using Tabakon.DAL;
 using Tabakon.Entity;
 
-namespace RetailClient.Controllers
-{
+namespace RetailClient.Web.Controllers {
     [ApiController]
     [Route("api/[controller]")]
-    public class IsmpCrptController : ControllerBase
-    {
+    public class IsmpCrptController : ControllerBase {
         private readonly IsmpCrptApiClient _ismpCrptApiClient;
 
         public IsmpCrptController(
             IsmpCrptApiClient ismpCrptApiClient
-            )
-        {
+            ) {
             _ismpCrptApiClient = ismpCrptApiClient;
         }
 
@@ -40,23 +37,20 @@ namespace RetailClient.Controllers
     }
 
 
-    public class IsmpCrptApiClient
-    {
+    public class IsmpCrptApiClient {
         private readonly HttpClient _httpClient;
         public IsmpCrptApiClient(
             HttpClient httpClient
-            ) 
-        {
+            ) {
             _httpClient = httpClient;
         }
-        public async Task<string> Info(IEnumerable<string> ciss) 
-        {
+        public async Task<string> Info(IEnumerable<string> ciss) {
             var url = "/api/IsmpCrpt/Info";
             var request = new HttpRequestMessage(HttpMethod.Post, url);
-                request.Content = new StringContent(
-                    JsonConvert.SerializeObject(ciss),
-                    Encoding.UTF8,
-                    "application/json");
+            request.Content = new StringContent(
+                JsonConvert.SerializeObject(ciss),
+                Encoding.UTF8,
+                "application/json");
 
             var r = await _httpClient.SendAsync(request).ConfigureAwait(false);
             return await r.Content.ReadAsStringAsync();

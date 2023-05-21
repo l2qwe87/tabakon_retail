@@ -9,23 +9,19 @@ using RetailClient.Web.Contracts;
 using Tabakon.DAL;
 using Tabakon.Entity;
 
-namespace RetailClient.Controllers
-{
+namespace RetailClient.Web.Controllers {
     [ApiController]
     [Route("api/[controller]")]
-    public class RetailEndpointVersionController : ControllerBase
-    {
+    public class RetailEndpointVersionController : ControllerBase {
         private readonly IRetailEndpointsRepo retailEndpointsRepo;
-        
-        public RetailEndpointVersionController(IRetailEndpointsRepo retailEndpointsRepo)
-        {
+
+        public RetailEndpointVersionController(IRetailEndpointsRepo retailEndpointsRepo) {
             this.retailEndpointsRepo = retailEndpointsRepo;
         }
         [HttpGet]
-        public async Task<IEnumerable<RetailVersion>> Get()
-        {
+        public async Task<IEnumerable<RetailVersion>> Get() {
             var versions = retailEndpointsRepo.GetRetailEndpointsVersion();
-            
+
             return await versions.AsNoTracking().ToListAsync();
         }
     }

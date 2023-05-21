@@ -6,17 +6,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using RetailClient;
 using RetailClient.Web.Contracts;
 using RetailClient.Web.Services.Jobs;
 using Tabakon.DAL;
 using Tabakon.Entity;
 
-namespace RetailClient.Controllers
-{
+namespace RetailClient.Web.Controllers {
 
-    public class RetailEndpointExtData
-    {
+    public class RetailEndpointExtData {
         public RetailVersion RetailVersion { get; set; }
         public RetailExtConfiguration RetailExtConfiguration { get; set; }
     }
@@ -32,13 +29,12 @@ namespace RetailClient.Controllers
         public string RetailEndpointHost => endpoint.RetailEndpointHost;
         public string RetailEndpointUrl => endpoint.RetailEndpointUrl;
         public bool MarkAsDeleted => endpoint.MarkAsDeleted;
-        public RetailEndpointExtData ExtData { get;set;}
-}
+        public RetailEndpointExtData ExtData { get; set; }
+    }
 
     [ApiController]
     [Route("api/[controller]")]
-    public class RetailEndpointsController : ControllerBase
-    {
+    public class RetailEndpointsController : ControllerBase {
         private readonly IRetailEndpointsRepo retailEndpointsRepo;
         private readonly IServiceProvider serviceProvider;
 
@@ -46,14 +42,12 @@ namespace RetailClient.Controllers
         public RetailEndpointsController(
             IRetailEndpointsRepo retailEndpointsRepo,
             IServiceProvider serviceProvider
-            )
-        {
+            ) {
             this.retailEndpointsRepo = retailEndpointsRepo;
             this.serviceProvider = serviceProvider;
         }
         [HttpGet]
-        public async Task<IEnumerable<RetailEndpointDto>> Get()
-        {
+        public async Task<IEnumerable<RetailEndpointDto>> Get() {
             var endpoints = await retailEndpointsRepo.GetRetailEndpoints().AsNoTracking().ToListAsync();
             var versions = await retailEndpointsRepo.GetRetailEndpointsVersion().AsNoTracking().ToListAsync();
             var extConfigurations = await retailEndpointsRepo.GetRetailExtConfiguration().AsNoTracking().ToListAsync();
@@ -68,16 +62,14 @@ namespace RetailClient.Controllers
         }
 
         [HttpGet("UpdateData/{retailEndpointIdentity}")]
-        public async Task<RetailVersion> UpdateData(string retailEndpointIdentity)
-        {
+        public async Task<RetailVersion> UpdateData(string retailEndpointIdentity) {
 
             var jobs = new[] {
-                typeof(WorkerRetailVersion), 
+                typeof(WorkerRetailVersion),
                 typeof(WorkerRetailDocCashierCheck_2Day),
                 typeof(WorkerRetailExtConfiguration)
             };
-            foreach (var jobType in jobs)
-            {
+            foreach (var jobType in jobs) {
                 var worker = serviceProvider.GetService(jobType) as ITask;
                 await worker.RunAsync(serviceProvider, e => e.RetailEndpointIdentity == retailEndpointIdentity);
                 if (worker is WorkerRetailDocCashierCheck) {
@@ -93,8 +85,7 @@ namespace RetailClient.Controllers
         }
 
         [HttpGet("RetailVersion/{retailEndpointIdentity}")]
-        public async Task<RetailVersion> GetRetailVersion(string retailEndpointIdentity)
-        {
+        public async Task<RetailVersion> GetRetailVersion(string retailEndpointIdentity) {
             var workerRetailVersion = serviceProvider.GetService<WorkerRetailExtConfiguration>();
             await workerRetailVersion.RunAsync(serviceProvider, e => e.RetailEndpointIdentity == retailEndpointIdentity);
 
@@ -106,8 +97,7 @@ namespace RetailClient.Controllers
         }
 
         [HttpGet("RetailExtConfiguration/{retailEndpointIdentity}")]
-        public async Task<RetailExtConfiguration> GetRetailExtConfiguration(string retailEndpointIdentity)
-        {
+        public async Task<RetailExtConfiguration> GetRetailExtConfiguration(string retailEndpointIdentity) {
             var workerRetailVersion = serviceProvider.GetService<WorkerRetailExtConfiguration>();
             await workerRetailVersion.RunAsync(serviceProvider, e => e.RetailEndpointIdentity == retailEndpointIdentity);
 
@@ -119,8 +109,7 @@ namespace RetailClient.Controllers
         }
 
         [HttpGet("RetailExtConfiguration/{retailEndpointIdentity}/{extConfiguration}")]
-        public async Task<RetailExtConfiguration> SetRetailExtConfiguration(string retailEndpointIdentity, string extConfiguration)
-        {
+        public async Task<RetailExtConfiguration> SetRetailExtConfiguration(string retailEndpointIdentity, string extConfiguration) {
             var retailEndpointsRepo = serviceProvider.GetRequiredService<IRetailEndpointsRepo>();
             var endpoint = await retailEndpointsRepo.GetRetailEndpoints()
                 .AsNoTracking()
@@ -139,8 +128,7 @@ namespace RetailClient.Controllers
         }
 
         [HttpGet("Run_apply_cfe/{retailEndpointIdentity}")]
-        public async Task Run_apply_cfe(string retailEndpointIdentity)
-        {
+        public async Task Run_apply_cfe(string retailEndpointIdentity) {
             var retailEndpointsRepo = serviceProvider.GetRequiredService<IRetailEndpointsRepo>();
             var endpoint = await retailEndpointsRepo.GetRetailEndpoints().FirstOrDefaultAsync(e => e.RetailEndpointIdentity == retailEndpointIdentity);
 
@@ -149,8 +137,7 @@ namespace RetailClient.Controllers
         }
 
         [HttpGet("Run_exRetailOle/{retailEndpointIdentity}")]
-        public async Task Run_exRetailOle(string retailEndpointIdentity)
-        {
+        public async Task Run_exRetailOle(string retailEndpointIdentity) {
             var retailEndpointsRepo = serviceProvider.GetRequiredService<IRetailEndpointsRepo>();
             var endpoint = await retailEndpointsRepo.GetRetailEndpoints()
                 .AsNoTracking()

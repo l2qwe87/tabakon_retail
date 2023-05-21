@@ -4,10 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Tabakon.DBContextMigration;
 
-namespace Tabakon.DALMigration.Migrations
-{
+namespace Tabakon.DALMigration.Migrations {
     [DbContext(typeof(MigratioTabakonDBContext))]
     partial class MigratioTabakonDBContextModelSnapshot : ModelSnapshot
     {
