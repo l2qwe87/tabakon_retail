@@ -4,6 +4,10 @@
     <ProjectReference Include="..\Tabakon.DAL\Tabakon.DAL.csproj" />
   </ItemGroup>
 
+	<PropertyGroup>
+		<ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+	</PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="7.0.0" />

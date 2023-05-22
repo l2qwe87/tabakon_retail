@@ -5,7 +5,11 @@
 		<ProjectReference Include="..\RetailClient\RetailClient.csproj" />
 		<ProjectReference Include="..\Tabakon.Queue.RetailDocCashierCheck\Tabakon.Queue.RetailDocCashierCheck.csproj" />
 	</ItemGroup>
-
+	
+	<PropertyGroup>
+		<ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+	</PropertyGroup>
+	
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="7.0.5" />
 		<PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="7.0.0" />

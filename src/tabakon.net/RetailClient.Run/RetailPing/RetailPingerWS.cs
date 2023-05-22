@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using System;
 using System.Threading.Tasks;
 using Tabakon.Queue.Contracts;
+using Tabakon.Queue.RetailDocCashierCheck;
 
 namespace RetailClient.Run.RetailPing {
     public class RetailPingerWS : AbstractWorkerByAsyncQueue<RetailPingRequestToSync> {
@@ -29,7 +32,11 @@ namespace RetailClient.Run.RetailPing {
                 }); ;
             }
             catch (Exception e) {
-                
+                using (var scope = _serviceProvider.CreateScope()) {
+                    var serviceProvider = scope.ServiceProvider;
+                    var logger = _serviceProvider.GetService<ILogger<SaveRetailDocCashierCheckWorkerByAsyncQueue>>();
+                    logger.LogError(e, $"{item.RetailEndpoint.RetailEndpointHost} \n{e.Message}");
+                }
             }
         }
     }

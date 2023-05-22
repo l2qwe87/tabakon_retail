@@ -33,6 +33,7 @@ namespace RetailClient.Run {
                     IConfiguration configuration = hostContext.Configuration;
 
                     services.AddDbContext<TabakonDBContext>(options => options.UseSqlServer(configuration.GetConnectionString("TabakonDataContext")));
+                    services.AddScoped<IRetailEndpointsRepo, RetailEndpointsRepo>();
 
                     services.AddScoped<HttpClientHandler>(serviceProvider => {
                         var httpClientHandler = new HttpClientHandler();
