@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Tabakon.Queue.Contracts {
     public abstract class AbstractWorkerByAsyncQueue<T> : IWorkerByAsyncQueue<T> where T : class {
 
         protected abstract Task Do(T item);
+        protected virtual int WorkerCount { get; } = 1;
 
         private readonly IAsyncQueue<T> _asyncQueue = new AsyncQueue<T>();
 
@@ -13,28 +17,34 @@ namespace Tabakon.Queue.Contracts {
         }
 
         private bool stopping = false;
-        private Task _worker;
+        private ConcurrentQueue<Task> _workers = new ConcurrentQueue<Task>();
         public void Start() {
 
-            _worker = Task.Run(async () => {
-                while (!stopping) {
-                    var item = await _asyncQueue.Dequeue();
-                    if (item != null) {
-                        await Do(item);
-                        await Task.Delay(100);
+
+            for (int i = 0; i < WorkerCount; i++) {
+                var worker = Task.Run(async () => {
+                    while (!stopping) {
+                        var item = await _asyncQueue.Dequeue();
+                        if (item != null) {
+                            await Do(item);
+                            await Task.Delay(100);
+                        }
+                        else {
+                            await Task.Delay(1000);
+                        }
                     }
-                    else { 
-                        await Task.Delay(1000);
-                    }
-                }
-            });
+                });
+                _workers.Enqueue(worker);
+            }
         }
 
         public async ValueTask DisposeAsync() {
 
             stopping = true;
-            await _worker;
-
+            foreach(var worker in _workers) {
+                await worker;
+            }
+            
             T item = null;
             do {
                 item = await _asyncQueue.Dequeue();
@@ -48,11 +58,28 @@ namespace Tabakon.Queue.Contracts {
 
         public async Task WaitAll()
         {
-            await Task.Delay(5000);
-            while (_asyncQueue.Count() > 0)
-            {
-                await Task.Delay(25);
+            await InternalWaitAll(false);
+
+        }
+
+        public async Task InternalWaitAll(bool doublecheck) {
+            await Task.Delay(1000);
+            if (doublecheck) {
+                if (_asyncQueue.Count() > 0) {
+                    await InternalWaitAll(false);
+                }
             }
+            
+            else {
+                while (_asyncQueue.Count() > 0) {
+                    await Task.Delay(25);
+                }
+            }
+
+            if (!doublecheck) {
+                await InternalWaitAll(true);
+            }
+
         }
     }
 }

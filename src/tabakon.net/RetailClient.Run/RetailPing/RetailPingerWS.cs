@@ -21,6 +21,8 @@ namespace RetailClient.Run.RetailPing {
             this.Start();
         }
 
+        protected override int WorkerCount => 16;
+
         protected override async Task Do(RetailPingRequestToSync item) {
             var ws = new RetailWSClient(item.RetailEndpoint.RetailEndpointHost, item.RetailEndpoint.RetailEndpointUrl);
             string pingResult = "";
