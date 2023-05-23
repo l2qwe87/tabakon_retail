@@ -22,7 +22,6 @@ namespace Tabakon.Queue.Contracts {
         private ConcurrentQueue<Task> _workers = new ConcurrentQueue<Task>();
         public void Start() {
 
-
             for (int i = 0; i < WorkerCount; i++) {
                 var worker = Task.Run(async () => {
                     while (!stopping) {

@@ -9,11 +9,11 @@ using Tabakon.Entity;
 
 namespace RetailClient.Run.RetailPing {
 
-    public class RetailPinger {
+    public class RetailPingRunner {
         private readonly IServiceProvider _serviceProvider;
         private readonly IRetailEndpointsRepo _retailEndpointsRepo;
 
-        public RetailPinger(
+        public RetailPingRunner(
             IServiceProvider serviceProvider,
             IRetailEndpointsRepo retailEndpointsRepo
             ) {
@@ -39,6 +39,11 @@ namespace RetailClient.Run.RetailPing {
                     RetailEndpoint = endpoint
                 });
             }
+
+            await Task.Delay(3000);
+
+            await _serviceProvider.GetRequiredService<RetailPingerWS>().WaitAll();
+            await _serviceProvider.GetRequiredService<RetailPingerDB>().WaitAll();
         }
     }
 }

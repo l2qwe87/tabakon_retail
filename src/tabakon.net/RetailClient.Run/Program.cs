@@ -5,12 +5,15 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using RetailClient.Run.Generic;
 using RetailClient.Run.RetailPing;
+using RetailClient.Run.RetailVersion;
 using RetailClient.Web.Contracts;
 using RetailClient.Web.Services;
 using RetailClient.Web.Services.Jobs;
@@ -51,7 +54,8 @@ namespace RetailClient.Run {
                     });
 
 
-                    services.AddRetailPinger();
+                    services.AddRetailPingRunner();
+                    services.AddRetailVersionRunner();
 
                     services.AddHostedService<Runner>();
                 });
@@ -65,14 +69,15 @@ namespace RetailClient.Run {
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken) {
+
+
+            Type runnerType = null;
             
-            var worker = _serviceProvider.GetRequiredService<RetailPinger>();
+            runnerType = typeof(RetailPingRunner);
+            runnerType = typeof(RetailVersionRunner);
+
+            var worker = _serviceProvider.GetRequiredService(runnerType) as IRunner;
             await worker.Run();
-
-            await Task.Delay(3000);
-
-            await _serviceProvider.GetRequiredService<RetailPingerWS>().WaitAll();
-            await _serviceProvider.GetRequiredService<RetailPingerDB>().WaitAll();
 
             var logger = _serviceProvider.GetService<ILogger<Runner>>();
             logger.LogInformation("Complited");
