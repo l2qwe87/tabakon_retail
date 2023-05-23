@@ -4,8 +4,8 @@ namespace RetailClient.Run.RetailPing {
     public static class RetailPingRunnerSericeCollectionExtension {
         public static IServiceCollection AddRetailPingRunner(this IServiceCollection services) {
             services.AddScoped<RetailPingRunner>();
-            services.AddSingleton<RetailPingerWS>();
-            services.AddSingleton<RetailPingerDB>();
+            services.AddSingleton<RetailPingRunnerWS>();
+            services.AddSingleton<RetailPingRunnerDB>();
 
             return services;
         }

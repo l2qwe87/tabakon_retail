@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using RetailClient.Run.Generic;
+using RetailClient.Run.RetailDocCashierCheck;
 using RetailClient.Run.RetailPing;
 using RetailClient.Run.RetailVersion;
 using RetailClient.Web.Contracts;
@@ -56,6 +57,7 @@ namespace RetailClient.Run {
 
                     services.AddRetailPingRunner();
                     services.AddRetailVersionRunner();
+                    services.AddRetailDocCashierCheckRunner();
 
                     services.AddHostedService<Runner>();
                 });
@@ -72,9 +74,15 @@ namespace RetailClient.Run {
 
 
             Type runnerType = null;
-            
-            runnerType = typeof(RetailPingRunner);
-            runnerType = typeof(RetailVersionRunner);
+            var jobName = _serviceProvider.GetRequiredService<IConfiguration>().GetValue<string>("Runner:Job");
+           
+            switch (jobName) {
+                case "Ping": runnerType = typeof(RetailPingRunner); break;
+                case "Version": runnerType = typeof(RetailVersionRunner); break;
+                case "DocCashierCheck": runnerType = typeof(RetailDocCashierCheckRunner); break;
+
+                default: throw new ArgumentException(nameof(runnerType));
+            }
 
             var worker = _serviceProvider.GetRequiredService(runnerType) as IRunner;
             await worker.Run();

@@ -1,49 +1,21 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
+﻿using RetailClient.Run.Generic;
 using RetailClient.Web.Contracts;
+using System.Collections.Generic;
 using System;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Threading.Tasks;
 using Tabakon.Entity;
 
 namespace RetailClient.Run.RetailPing {
-
-    public class RetailPingRunner {
-        private readonly IServiceProvider _serviceProvider;
-        private readonly IRetailEndpointsRepo _retailEndpointsRepo;
-
+    public class RetailPingRunner : GenericRunner<RequestToSync, RequestResult, Tabakon.Entity.RetailPing> {
         public RetailPingRunner(
             IServiceProvider serviceProvider,
-            IRetailEndpointsRepo retailEndpointsRepo
-            ) {
-            _serviceProvider = serviceProvider;
-            _retailEndpointsRepo = retailEndpointsRepo;
+            IRetailEndpointsRepo retailEndpointsRepo,
+            RetailPingRunnerWS genericWS,
+            RetailPingRunnerDB genericDB)
+            : base(serviceProvider, retailEndpointsRepo, genericWS, genericDB) {
         }
 
-        public async Task Run(Expression<Func<RetailEndpoint, bool>> predicat = null) {
-            var endpointsQuery = _retailEndpointsRepo
-                .GetRetailEndpoints();
-
-            if (predicat != null) {
-                endpointsQuery = endpointsQuery.Where(predicat);
-            }
-
-            var endpoints = await endpointsQuery.AsNoTracking().ToListAsync();
-
-            var worker = _serviceProvider.GetService<RetailPingerWS>();
-
-
-            foreach (var endpoint in endpoints) {
-                await worker.Add(new RetailPingRequestToSync() {
-                    RetailEndpoint = endpoint
-                });
-            }
-
-            await Task.Delay(3000);
-
-            await _serviceProvider.GetRequiredService<RetailPingerWS>().WaitAll();
-            await _serviceProvider.GetRequiredService<RetailPingerDB>().WaitAll();
+        protected override IEnumerable<RequestToSync> BuildRequests(RetailEndpoint item) {
+            return new[] { new RequestToSync { RetailEndpoint = item } };
         }
     }
 }

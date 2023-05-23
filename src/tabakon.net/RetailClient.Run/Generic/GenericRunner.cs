@@ -13,7 +13,7 @@ namespace RetailClient.Run.Generic {
         where TResult : RequestResult
         where TEntity : AbstractCacheEntity {
 
-        private readonly IServiceProvider _serviceProvider;
+        protected readonly IServiceProvider _serviceProvider;
         private readonly IRetailEndpointsRepo _retailEndpointsRepo;
         private readonly GenericWS<TRequest, TResult, TEntity> _genericWS;
         private readonly GenericDB<TResult, TEntity> _genericDB;
@@ -48,10 +48,13 @@ namespace RetailClient.Run.Generic {
                 }
             }
 
-            await Task.Delay(3000);
 
-            await _genericWS.WaitAll();
-            await _genericDB.WaitAll();
+            for (var i = 0; i < 3; i++) {
+                await Task.Delay(3000);
+
+                await _genericWS.WaitAll();
+                await _genericDB.WaitAll();
+            }
         }
     }
 }

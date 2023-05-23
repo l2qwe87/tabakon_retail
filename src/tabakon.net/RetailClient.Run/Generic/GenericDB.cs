@@ -31,7 +31,7 @@ namespace RetailClient.Run.Generic {
                 }
             });
         }
-
+        protected virtual bool AlwaysUpdate => false;
         protected override async Task Do(TRequest item) {
             using (var scope = _serviceProvider.CreateScope()) {
                 var serviceProvider = scope.ServiceProvider;
@@ -45,23 +45,31 @@ namespace RetailClient.Run.Generic {
                     var hasChanges = false;
                     var ctx = serviceProvider.GetService<TabakonDBContext>();
 
+                    var entity = Activator.CreateInstance<TEntity>();
+                    entity.PopulateData(item.RetailEndpoint);
+                    entity.PopulateData(item.JSON);
+
                     var dbset = ctx.Set<TEntity>();
-                    var existentEntity = dbset.Where(e =>
+                    var existentEntityQuery = dbset.Where(e =>
                         e.RetailEndpointIdentity == item.RetailEndpoint.RetailEndpointIdentity
-                        ).Select(e => e)
+                    );
+
+                    if (entity is AbstractDocEntity) {
+                        existentEntityQuery = existentEntityQuery.Where(e => 
+                            (e as AbstractDocEntity).DocRef == (entity as AbstractDocEntity).DocRef
+                        );
+                    }
+
+                    var existentEntity = existentEntityQuery.Select(e => e)
                         .FirstOrDefault();
 
                     if (existentEntity == null) {
                         hasChanges = true;
 
-                        var entity = Activator.CreateInstance<TEntity>();
-                        entity.PopulateData(item.RetailEndpoint);
-                        entity.PopulateData(item.JSON);
-
                         await dbset.AddAsync(entity);
                     }
                     else {
-                        if (existentEntity.JsonData != item.JSON) {
+                        if (!AlwaysUpdate || existentEntity.JsonData != item.JSON) {
                             hasChanges = true;
                             existentEntity.PopulateData(item.JSON);
                         };
