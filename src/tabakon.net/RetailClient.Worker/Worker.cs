@@ -29,7 +29,6 @@ namespace RetailClient.Worker
             _jobService = jobService;
 
             var saveRetailDocCashierCheckWorkerByAsyncQueue = serviceProvider.GetService(typeof(SaveRetailDocCashierCheckWorkerByAsyncQueue)) as SaveRetailDocCashierCheckWorkerByAsyncQueue;
-            saveRetailDocCashierCheckWorkerByAsyncQueue.Start();
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)

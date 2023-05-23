@@ -122,7 +122,6 @@ namespace RetailClient.Web {
 
 
             var saveRetailDocCashierCheckWorkerByAsyncQueue = serviceScope.ServiceProvider.GetService(typeof(SaveRetailDocCashierCheckWorkerByAsyncQueue)) as SaveRetailDocCashierCheckWorkerByAsyncQueue;
-            saveRetailDocCashierCheckWorkerByAsyncQueue.Start();
         }
 
     }

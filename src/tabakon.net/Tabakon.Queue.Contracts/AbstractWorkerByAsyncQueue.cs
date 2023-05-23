@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 namespace Tabakon.Queue.Contracts {
     public abstract class AbstractWorkerByAsyncQueue<T> : IWorkerByAsyncQueue<T> where T : class {
 
+
+        protected abstract void LoggingStatus();
         protected abstract Task Do(T item);
         protected virtual int WorkerCount { get; } = 1;
 
@@ -55,6 +57,10 @@ namespace Tabakon.Queue.Contracts {
 
             GC.SuppressFinalize(this);
         }
+
+        public string GetStatus() {
+            return $" workers:{_workers.Count} / in queue:{_asyncQueue.Count()}";
+        } 
 
         public async Task WaitAll()
         {

@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using RetailClient.Run.RetailPing;
 using RetailClient.Web.Contracts;
 using RetailClient.Web.Services;
@@ -72,6 +73,11 @@ namespace RetailClient.Run {
 
             await _serviceProvider.GetRequiredService<RetailPingerWS>().WaitAll();
             await _serviceProvider.GetRequiredService<RetailPingerDB>().WaitAll();
+
+            var logger = _serviceProvider.GetService<ILogger<Runner>>();
+            logger.LogInformation("Complited");
+
+            _serviceProvider.GetRequiredService<IHostApplicationLifetime>().StopApplication();
         }
     }
 }

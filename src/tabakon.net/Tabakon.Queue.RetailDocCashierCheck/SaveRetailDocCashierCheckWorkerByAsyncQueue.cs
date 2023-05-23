@@ -14,6 +14,15 @@ namespace Tabakon.Queue.RetailDocCashierCheck {
             IServiceProvider serviceProvider
             ) {
             _serviceProvider = serviceProvider;
+            
+            this.Start();
+            
+            Task.Run(async () => {
+                while (true) {
+                    await Task.Delay(TimeSpan.FromSeconds(5));
+                    LoggingStatus();
+                }
+            });
         }
 
         protected override async Task Do(SaveRetailDocCashierCheck item) {
@@ -58,6 +67,13 @@ namespace Tabakon.Queue.RetailDocCashierCheck {
                     
                     logger.LogError(e, $"{item.RetailEndpoint.RetailEndpointHost} \n{e.Message}");
                 }
+            }
+        }
+        protected override void LoggingStatus() {
+            using (var scope = _serviceProvider.CreateScope()) {
+                var serviceProvider = scope.ServiceProvider;
+                var logger = _serviceProvider.GetService<ILogger<SaveRetailDocCashierCheckWorkerByAsyncQueue>>();
+                logger.LogInformation(this.GetStatus());
             }
         }
     }

@@ -19,6 +19,12 @@ namespace RetailClient.Run.RetailPing {
             _retailPingerDB = retailPingerDB;
 
             this.Start();
+            Task.Run(async () => { 
+                while (true) {
+                    await Task.Delay(TimeSpan.FromSeconds(5));
+                    LoggingStatus();
+                } 
+            });
         }
 
         protected override int WorkerCount => 16;
@@ -39,6 +45,14 @@ namespace RetailClient.Run.RetailPing {
                     var logger = _serviceProvider.GetService<ILogger<SaveRetailDocCashierCheckWorkerByAsyncQueue>>();
                     logger.LogError(e, $"{item.RetailEndpoint.RetailEndpointHost} \n{e.Message}");
                 }
+            }
+        }
+
+        protected override void LoggingStatus() {
+            using (var scope = _serviceProvider.CreateScope()) {
+                var serviceProvider = scope.ServiceProvider;
+                var logger = _serviceProvider.GetService<ILogger<SaveRetailDocCashierCheckWorkerByAsyncQueue>>();
+                logger.LogInformation(this.GetStatus());
             }
         }
     }
