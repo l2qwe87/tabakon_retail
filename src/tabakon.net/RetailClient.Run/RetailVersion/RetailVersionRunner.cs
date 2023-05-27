@@ -1,5 +1,4 @@
 ﻿using RetailClient.Run.Generic;
-using RetailClient.Run.RetailPing;
 using RetailClient.Web.Contracts;
 using System;
 using System.Collections.Generic;

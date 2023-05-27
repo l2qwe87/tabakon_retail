@@ -31,6 +31,9 @@ namespace RetailClient.Run.Generic {
                 }
             });
         }
+
+        protected override int WorkerCount => 16;
+
         protected virtual bool AlwaysUpdate => false;
         protected override async Task Do(TRequest item) {
             using (var scope = _serviceProvider.CreateScope()) {

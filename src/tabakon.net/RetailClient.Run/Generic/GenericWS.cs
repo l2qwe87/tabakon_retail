@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Linq;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Tabakon.Entity;
 using Tabakon.Queue.Contracts;
@@ -41,7 +43,16 @@ namespace RetailClient.Run.Generic {
         protected override async Task Do(TRequest item) {
             try {
                 var json = (await InvokeWS(item))?.ToString();
-                await _genericDB.Add(BuildRequestReuslt(item, json)); ;
+                if (json != null && json.StartsWith("[")){
+                    var jArray = JArray.Parse(json);
+                    var jsonItems = jArray.Select(e => e.ToString()).ToList();
+                    foreach (var jsonItem in jsonItems) {
+                        await _genericDB.Add(BuildRequestReuslt(item, jsonItem)); ;
+                    }
+                }
+                else {
+                    await _genericDB.Add(BuildRequestReuslt(item, json)); ;
+                }
             }
             catch (Exception e) {
                 _logger.LogError(e, $"{item.RetailEndpoint.RetailEndpointHost} \n{e.Message}");
