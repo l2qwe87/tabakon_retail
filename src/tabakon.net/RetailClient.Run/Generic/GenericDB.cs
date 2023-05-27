@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Linq;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Tabakon.DAL;
@@ -45,37 +47,47 @@ namespace RetailClient.Run.Generic {
                         return;
                     }
 
+                    IEnumerable<string> jsons = Enumerable.Empty<string>();
+                    if (item.JSON != null && item.JSON.StartsWith("[")) {
+                        var jArray = JArray.Parse(item.JSON);
+                        jsons = jArray.Select(e => e.ToString()).ToList();
+                    }
+                    else {
+                        jsons = new[] { item.JSON };
+                    }
+                    
                     var hasChanges = false;
                     var ctx = serviceProvider.GetService<TabakonDBContext>();
 
-                    var entity = Activator.CreateInstance<TEntity>();
-                    entity.PopulateData(item.RetailEndpoint);
-                    entity.PopulateData(item.JSON);
+                    foreach(var json in jsons) {
+                        var entity = Activator.CreateInstance<TEntity>();
+                        entity.PopulateData(item.RetailEndpoint);
+                        entity.PopulateData(json);
 
-                    var dbset = ctx.Set<TEntity>();
-                    var existentEntityQuery = dbset.Where(e =>
-                        e.RetailEndpointIdentity == item.RetailEndpoint.RetailEndpointIdentity
-                    );
-
-                    if (entity is AbstractDocEntity) {
-                        existentEntityQuery = existentEntityQuery.Where(e => 
-                            (e as AbstractDocEntity).DocRef == (entity as AbstractDocEntity).DocRef
+                        var dbset = ctx.Set<TEntity>();
+                        var existentEntityQuery = dbset.Where(e =>
+                            e.RetailEndpointIdentity == item.RetailEndpoint.RetailEndpointIdentity
                         );
-                    }
 
-                    var existentEntity = existentEntityQuery.Select(e => e)
-                        .FirstOrDefault();
+                        if (entity is AbstractDocEntity) {
+                            existentEntityQuery = existentEntityQuery.Where(e =>
+                                (e as AbstractDocEntity).DocRef == (entity as AbstractDocEntity).DocRef
+                            );
+                        }
 
-                    if (existentEntity == null) {
-                        hasChanges = true;
+                        var existentEntity = existentEntityQuery.Select(e => e).FirstOrDefault();
 
-                        await dbset.AddAsync(entity);
-                    }
-                    else {
-                        if (!AlwaysUpdate || existentEntity.JsonData != item.JSON) {
+                        if (existentEntity == null) {
                             hasChanges = true;
-                            existentEntity.PopulateData(item.JSON);
-                        };
+                            await dbset.AddAsync(entity);
+                        }
+                        else {
+                            if (!AlwaysUpdate || existentEntity.JsonData != json) {
+                                hasChanges = true;
+                                existentEntity.PopulateData(json);
+                            };
+                        }
+
                     }
 
                     if (hasChanges) {
