@@ -2,8 +2,8 @@
 <a *ngIf="retailVersion" 
     [color]="isExpired ? 'warn' : 'primary'"
     mat-button
-    class="text-wrap line-height-1-3"
-    [ngClass]="{'mat-flat-button' : isExpired }"
+    class="text-wrap"
+    [ngClass]="{'mat-mdc-unelevated-button' : isExpired }"
 >
     <span>
         {{retailVersion.jsonData}} 
