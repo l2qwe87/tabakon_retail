@@ -11,10 +11,13 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using RetailClient.Run.ExtConfiguration;
 using RetailClient.Run.Generic;
 using RetailClient.Run.RetailDocCashierCheck;
+using RetailClient.Run.RetailDocSelesReport;
 using RetailClient.Run.RetailPing;
 using RetailClient.Run.RetailVersion;
+using RetailClient.Run.StoreBalance;
 using RetailClient.Web.Contracts;
 using RetailClient.Web.Services;
 using RetailClient.Web.Services.Jobs;
@@ -54,10 +57,12 @@ namespace RetailClient.Run {
                         return httpClient;
                     });
 
-
                     services.AddRetailPingRunner();
                     services.AddRetailVersionRunner();
                     services.AddRetailDocCashierCheckRunner();
+                    services.AddStoreBalanceRunner();
+                    services.AddRetailDocSelesReportRunner();
+                    services.AddExtConfigurationRunner();
 
                     services.AddHostedService<Runner>();
                 });
@@ -80,7 +85,10 @@ namespace RetailClient.Run {
                 case "Ping": runnerType = typeof(RetailPingRunner); break;
                 case "Version": runnerType = typeof(RetailVersionRunner); break;
                 case "DocCashierCheck": runnerType = typeof(RetailDocCashierCheckRunner); break;
-
+                case "StoreBalance": runnerType = typeof(StoreBalanceRunner); break;
+                case "RetailDocSelesReport": runnerType = typeof(RetailDocSelesReportRunner); break;
+                case "ExtConfiguration": runnerType = typeof(ExtConfigurationRunner); break;
+                //
                 default: throw new ArgumentException(nameof(runnerType));
             }
 
