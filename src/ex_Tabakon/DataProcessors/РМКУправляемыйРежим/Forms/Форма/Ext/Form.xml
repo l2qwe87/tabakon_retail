@@ -1748,6 +1748,20 @@
 									<ContextMenu name="ТоварыОстатокКонтекстноеМеню" id="69"/>
 									<ExtendedTooltip name="ТоварыОстатокExtendedTooltip" id="261"/>
 								</InputField>
+								<InputField name="ТоварыПродано" id="664">
+									<DataPath>Объект.Товары.Продано</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Продано</v8:content>
+										</v8:item>
+									</Title>
+									<TitleFont ref="style:TextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<EditMode>EnterOnInput</EditMode>
+									<Font ref="sys:DefaultGUIFont" height="12" bold="false" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<ContextMenu name="ТоварыПроданоКонтекстноеМеню" id="665"/>
+									<ExtendedTooltip name="ТоварыПроданоРасширеннаяПодсказка" id="666"/>
+								</InputField>
 								<InputField name="ТоварыКодУценки" id="576">
 									<DataPath>Объект.Товары.КодУценки</DataPath>
 									<Visible>false</Visible>
@@ -3391,6 +3405,18 @@
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДокументСписанияПослеИнвента" id="1000022">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ списания после инвента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.РеализацияТоваров</v8:Type>
+				<v8:Type>cfg:DocumentRef.СписаниеТоваров</v8:Type>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
