@@ -80,7 +80,9 @@ namespace RetailClient.Run {
 
             Type runnerType = null;
             var jobName = _serviceProvider.GetRequiredService<IConfiguration>().GetValue<string>("Runner:Job");
-           
+
+            var storeId = _serviceProvider.GetRequiredService<IConfiguration>().GetValue<string>("Runner:StoreId");
+
             switch (jobName) {
                 case "Ping": runnerType = typeof(RetailPingRunner); break;
                 case "Version": runnerType = typeof(RetailVersionRunner); break;
@@ -93,7 +95,14 @@ namespace RetailClient.Run {
             }
 
             var worker = _serviceProvider.GetRequiredService(runnerType) as IRunner;
-            await worker.Run();
+
+            if (string.IsNullOrEmpty(storeId))
+            {
+                await worker.Run();
+            }
+            else {
+                await worker.Run(c=> c.RetailEndpointIdentity == storeId);
+            }
 
             var logger = _serviceProvider.GetService<ILogger<Runner>>();
             logger.LogInformation("Complited");
