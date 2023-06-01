@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { map, switchMap, withLatestFrom } from 'rxjs/operators';
+import { map, switchMap, tap, withLatestFrom } from 'rxjs/operators';
 import { ICashierCheckInfo } from 'src/app/models/CashierCheck';
 import { CashierCheckService } from 'src/app/services/cashier-check.service';
 import { EndpointsService } from 'src/app/services/endpoints.service';
@@ -27,6 +27,7 @@ export class CashierCheckInfoGridComponent implements OnInit {
   data$: Observable<ICashierCheckInfoExt[]>;
 
   update$: BehaviorSubject<any>= new BehaviorSubject<any>(true);
+  $isLoading = new BehaviorSubject(true);
 
   dataSource = new MatTableDataSource<ICashierCheckInfoExt>();
   displayedColumns: string[] = ['date', 'retailEndpointName', 'sumSale', 'sumReturn', 'sumTerminal', 'sumCash'];
@@ -38,6 +39,7 @@ export class CashierCheckInfoGridComponent implements OnInit {
 
   ngOnInit(): void {
     this.data$ = this.update$.pipe(
+      tap(_=>this.$isLoading.next(true)),
       switchMap( _ =>  this.cashierCheckService.getInfo((this.date instanceof Date ? this.date.toJSON() : this.date))),
       withLatestFrom(this.endpointsService.getEndpoints()),
       map(([info, endpoints])=>{
@@ -75,6 +77,7 @@ export class CashierCheckInfoGridComponent implements OnInit {
 
     this.data$.subscribe( data => {
       this.dataSource.data = data;
+      this.$isLoading.next(false);
     })
   }
 

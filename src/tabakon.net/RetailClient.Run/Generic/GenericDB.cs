@@ -82,7 +82,7 @@ namespace RetailClient.Run.Generic {
                             await dbset.AddAsync(entity);
                         }
                         else {
-                            if (!AlwaysUpdate || existentEntity.JsonData != json) {
+                            if (AlwaysUpdate || existentEntity.JsonData != json) {
                                 hasChanges = true;
                                 existentEntity.PopulateData(json);
                             };

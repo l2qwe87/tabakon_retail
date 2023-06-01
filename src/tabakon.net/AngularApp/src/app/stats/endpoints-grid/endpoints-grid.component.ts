@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -9,9 +9,9 @@ import { EndpointsService } from 'src/app/services/endpoints.service';
 @Component({
   selector: 'app-endpoints-grid',
   templateUrl: './endpoints-grid.component.html',
-  styleUrls: ['./endpoints-grid.component.scss']
+  styleUrls: ['./endpoints-grid.component.scss'],
 })
-export class EndpointsGridComponent implements OnInit {
+export class EndpointsGridComponent implements OnInit, AfterViewInit  {
 
   $isLoading = new BehaviorSubject(true);
   filterControl = new FormControl('');
@@ -27,27 +27,21 @@ export class EndpointsGridComponent implements OnInit {
   ngOnInit(): void { }
 
   ngAfterViewInit() {
-    
+    this.dataSource.sort = this.matSort;
+
     this.endpointsService.getEndpoints().subscribe(data => {
       this.dataSource.data = data;
       this.$isLoading.next(false);
     });
     
-    this.dataSource.sort = this.matSort;
-
-    const defaultPredict = this.dataSource.filterPredicate;
     this.dataSource.filterPredicate = (item, filter) => {
-      
       if(item?.extData?.retailExtConfiguration?.jsonData?.toLowerCase()?.indexOf(filter) !== -1){
         return true
       }
-
       if(Object.keys(item).filter(key => item[key]?.toString()?.toLowerCase()?.indexOf(filter) !== -1).length){
         return true;
       }
-
       return false;
-
     }
 
     this.filterControl.valueChanges.subscribe(value => this.applyFilter());

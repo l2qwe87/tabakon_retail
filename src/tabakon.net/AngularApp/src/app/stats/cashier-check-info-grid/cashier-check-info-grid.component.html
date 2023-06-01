@@ -1,6 +1,6 @@
 
-
-  <table mat-table [dataSource]="dataSource" matSort>
+  <mat-progress-bar *ngIf="$isLoading | async" class="w-100" mode="indeterminate"></mat-progress-bar>
+  <table *ngIf="!($isLoading | async)" mat-table [dataSource]="dataSource" matSort>
     
     <!-- date Column -->
     <ng-container matColumnDef="date">

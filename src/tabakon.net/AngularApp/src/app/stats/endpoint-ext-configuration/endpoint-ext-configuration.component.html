@@ -1,8 +1,8 @@
 <a *ngIf="retailExtConfiguration" 
     [color]="isRelease ? 'primary' : isBeta ? 'warn' : isAlpha ? 'accent' : ''"
     mat-button
-    class="text-wrap line-height-1-3"
-    [ngClass]="{'mat-flat-button' : isBeta || isAlpha}"
+    class="text-wrap"
+    [ngClass]="{'mat-mdc-unelevated-button' : isBeta || isAlpha}"
 >
     <span>
         {{retailExtConfiguration.jsonData}}        
