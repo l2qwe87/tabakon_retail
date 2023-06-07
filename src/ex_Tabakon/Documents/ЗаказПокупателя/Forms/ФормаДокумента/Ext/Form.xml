@@ -512,6 +512,9 @@
 											<HorizontalStretch>false</HorizontalStretch>
 											<ContextMenu name="СтатусКонтекстноеМеню" id="218"/>
 											<ExtendedTooltip name="СтатусExtendedTooltip" id="307"/>
+											<Events>
+												<Event name="OnChange" callType="After">ТБКСтатусПриИзмененииПосле</Event>
+											</Events>
 										</InputField>
 										<Button name="Согласовать" id="635">
 											<Type>UsualButton</Type>
