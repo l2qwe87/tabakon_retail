@@ -25,7 +25,7 @@ namespace TbkTest
 
             services.AddSingleton<IsmpClientConfig>((_) => new IsmpClientConfig 
             {
-                BaseUrl = "https://markirovka.crpt.ru",
+                BaseUrlTobacco = "https://markirovka.crpt.ru",
                 //BaseUrl = "https://ismp.crpt.ru",
                 //Thumbprint = "3B5AFA9635BD5EA7B1C3F847A543BBF214BEE297" //SN=Малышев, G=Дмитрий Борисович, 780156595000
                 Thumbprint = "B2CE2E0BB37ABA5EDE06ACF0FD70841B8F113BAE" //SN=Хмелева, G=Татьяна Алексеевна,780216064720
@@ -36,7 +36,7 @@ namespace TbkTest
             services.AddTransient<HttpClient>((sp)=> {
                 var ismpClientConfig = sp.GetRequiredService<IsmpClientConfig>();
                 var httpClient = new HttpClient();
-                httpClient.BaseAddress = new Uri(ismpClientConfig.BaseUrl);
+                httpClient.BaseAddress = new Uri(ismpClientConfig.BaseUrlTobacco);
                 return httpClient;
             });
             services.AddSingleton<IMarkirovkaClient, MarkirovkaClient>();

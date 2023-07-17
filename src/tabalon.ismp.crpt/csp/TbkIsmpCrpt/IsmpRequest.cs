@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Net.WebSockets;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -87,34 +88,41 @@ namespace TbkIsmpCrpt
             var httpMethod = _body == null ? HttpMethod.Get : HttpMethod.Post;
             using (var scope = _serviceProvider.CreateScope())
             {
-                var httpClient = _serviceProvider.GetRequiredService<HttpClient>();
-                using (var request = new HttpRequestMessage(httpMethod, $"{requestUri}"))
-                {
-                    request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                    if (this._token != null)
-                    {
-                        request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", $"{this._token}");
-                    }
+                var httpClient = scope.ServiceProvider.GetRequiredService<HttpClient>();
 
-                    if (!String.IsNullOrWhiteSpace(_body))
-                    {
-                        request.Content = new StringContent(
-                            _body,
-                            Encoding.UTF8,
-                            "application/json");
-                    }
+                var ismpClientConfig = scope.ServiceProvider.GetRequiredService<IsmpClientConfig>();
+                var urls = new[] { ismpClientConfig.BaseUrlTobacco, ismpClientConfig.BaseUrlOther };
+                IsmpResponse result = null;
+                foreach ( var url in urls ) {
+                    httpClient.BaseAddress = new Uri(url);
+                    
+                    using (var request = new HttpRequestMessage(httpMethod, $"{requestUri}")) {
+                        request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                        if (this._token != null) {
+                            request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", $"{this._token}");
+                        }
 
-                    using (var response = await httpClient.SendAsync(request))
-                    {
-                        var jsonText = await response.Content.ReadAsStringAsync();
+                        if (!String.IsNullOrWhiteSpace(_body)) {
+                            request.Content = new StringContent(
+                                _body,
+                                Encoding.UTF8,
+                                "application/json");
+                        }
 
-                        return new IsmpResponse
-                        {
-                            StatusCode = (int)response.StatusCode,
-                            Body = jsonText
-                        };
+                        using (var response = await httpClient.SendAsync(request)) {
+                            var jsonText = await response.Content.ReadAsStringAsync();
+
+                            result = new IsmpResponse {
+                                StatusCode = (int)response.StatusCode,
+                                Body = jsonText
+                            };
+                            if (result.StatusCode != 403) { 
+                                return result;
+                            }
+                        }
                     }
                 }
+                return result;
             }
         }
 

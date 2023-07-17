@@ -18,7 +18,8 @@ namespace TbkIsmpCrpt
 {
     public class IsmpClientConfig
     {
-        public string BaseUrl { get; set; }
+        public string BaseUrlTobacco { get; set; }
+        public string BaseUrlOther { get; set; }
         public string Thumbprint { get; set; }
     }
 
