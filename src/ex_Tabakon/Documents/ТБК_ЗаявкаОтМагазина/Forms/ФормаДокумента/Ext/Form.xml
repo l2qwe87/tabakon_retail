@@ -5,6 +5,7 @@
 	<RepostOnWrite>true</RepostOnWrite>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="ExternalEvent">ВнешнееСобытие</Event>
 		<Event name="BeforeWrite">ПередЗаписью</Event>
@@ -20,20 +21,34 @@
 			<ChildItems>
 				<InputField name="Номер" id="1">
 					<DataPath>Объект.Number</DataPath>
+					<Enabled>false</Enabled>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
 				</InputField>
 				<InputField name="Дата" id="4">
 					<DataPath>Объект.Date</DataPath>
+					<Enabled>false</Enabled>
 					<ReadOnly>true</ReadOnly>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
 					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
 				</InputField>
+				<InputField name="ДатаСборки" id="90">
+					<DataPath>Объект.ДатаСборки</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Требуемая дата сборки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="ДатаСборкиКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="ДатаСборкиРасширеннаяПодсказка" id="92"/>
+				</InputField>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="Группа2" id="49">
+			<Group>AlwaysHorizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="50"/>
@@ -54,6 +69,11 @@
 					<AutoMarkIncomplete>true</AutoMarkIncomplete>
 					<ContextMenu name="ПричинаЗаявкиНаПоступлениеКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="ПричинаЗаявкиНаПоступлениеРасширеннаяПодсказка" id="21"/>
+				</InputField>
+				<InputField name="Проект" id="76">
+					<DataPath>Объект.Проект</DataPath>
+					<ContextMenu name="ПроектКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="ПроектРасширеннаяПодсказка" id="78"/>
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
@@ -87,28 +107,49 @@
 					<ContextMenu name="ЭкспедиторКонтекстноеМеню" id="57"/>
 					<ExtendedTooltip name="ЭкспедиторРасширеннаяПодсказка" id="58"/>
 				</InputField>
+				<InputField name="КогдаЗабрали" id="79">
+					<DataPath>Объект.КогдаЗабрали</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="КогдаЗабралиКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="КогдаЗабралиРасширеннаяПодсказка" id="81"/>
+				</InputField>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="Группа4" id="62">
-			<Enabled>false</Enabled>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="63"/>
 			<ChildItems>
 				<InputField name="Статус" id="13">
 					<DataPath>Объект.Статус</DataPath>
+					<Enabled>false</Enabled>
 					<EditMode>EnterOnInput</EditMode>
 					<Width>9</Width>
 					<ContextMenu name="СтатусКонтекстноеМеню" id="14"/>
 					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="15"/>
 				</InputField>
-				<InputField name="ПричинаОтказа" id="64">
-					<DataPath>Объект.ПричинаОтказа</DataPath>
-					<ContextMenu name="ПричинаОтказаКонтекстноеМеню" id="65"/>
-					<ExtendedTooltip name="ПричинаОтказаРасширеннаяПодсказка" id="66"/>
+				<InputField name="ДатаСборкиФакт" id="87">
+					<DataPath>Объект.ДатаСборкиФакт</DataPath>
+					<Enabled>false</Enabled>
+					<ContextMenu name="ДатаСборкиФактКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="ДатаСборкиФактРасширеннаяПодсказка" id="89"/>
 				</InputField>
+				<Button name="Собрано" id="85">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Собрано</CommandName>
+					<BackColor>web:Yellow</BackColor>
+					<Font bold="true" kind="AutoFont"/>
+					<ExtendedTooltip name="СобраноРасширеннаяПодсказка" id="86"/>
+				</Button>
 			</ChildItems>
 		</UsualGroup>
+		<InputField name="ПричинаОтказа" id="64">
+			<DataPath>Объект.ПричинаОтказа</DataPath>
+			<Width>100</Width>
+			<Height>2</Height>
+			<ContextMenu name="ПричинаОтказаКонтекстноеМеню" id="65"/>
+			<ExtendedTooltip name="ПричинаОтказаРасширеннаяПодсказка" id="66"/>
+		</InputField>
 		<CheckBoxField name="Сформирован" id="59">
 			<DataPath>Объект.Сформирован</DataPath>
 			<CheckBoxType>Auto</CheckBoxType>
@@ -152,6 +193,10 @@
 				<ContextMenu name="ТоварыУправлениеПоискомКонтекстноеМеню" id="33"/>
 				<ExtendedTooltip name="ТоварыУправлениеПоискомРасширеннаяПодсказка" id="34"/>
 			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">ТоварыПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">ТоварыПередУдалением</Event>
+			</Events>
 			<ChildItems>
 				<LabelField name="ТоварыНомерСтроки" id="35">
 					<DataPath>Объект.Товары.LineNumber</DataPath>
@@ -180,9 +225,34 @@
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ТоварыКоличествоКонтекстноеМеню" id="45"/>
 					<ExtendedTooltip name="ТоварыКоличествоРасширеннаяПодсказка" id="46"/>
+					<Events>
+						<Event name="OnChange">ТоварыКоличествоПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ТоварыКоличествоФакт" id="67">
+					<DataPath>Объект.Товары.КоличествоФакт</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТоварыКоличествоФактКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="ТоварыКоличествоФактРасширеннаяПодсказка" id="69"/>
+				</InputField>
+				<InputField name="ТоварыСрокГодности" id="82">
+					<DataPath>Объект.Товары.СрокГодности</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТоварыСрокГодностиКонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="ТоварыСрокГодностиРасширеннаяПодсказка" id="84"/>
 				</InputField>
 			</ChildItems>
 		</Table>
+		<LabelField name="ТоварыИтогКоличество" id="73">
+			<DataPath>Объект.Товары.TotalКоличество</DataPath>
+			<ContextMenu name="ТоварыИтогКоличествоКонтекстноеМеню" id="74"/>
+			<ExtendedTooltip name="ТоварыИтогКоличествоРасширеннаяПодсказка" id="75"/>
+		</LabelField>
+		<LabelField name="ТоварыИтогКоличествоФакт" id="70">
+			<DataPath>Объект.Товары.TotalКоличествоФакт</DataPath>
+			<ContextMenu name="ТоварыИтогКоличествоФактКонтекстноеМеню" id="71"/>
+			<ExtendedTooltip name="ТоварыИтогКоличествоФактРасширеннаяПодсказка" id="72"/>
+		</LabelField>
 		<InputField name="Комментарий" id="16">
 			<DataPath>Объект.Комментарий</DataPath>
 			<EditMode>EnterOnInput</EditMode>
@@ -227,5 +297,44 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Товары</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Товары.КоличествоФакт</dcsset:left>
+						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:Field">Объект.Товары.Количество</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:LightSalmon</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
 	</Attributes>
+	<Commands>
+		<Command name="Собрано" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Собрано</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Собрано</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Собрано</Action>
+		</Command>
+	</Commands>
 </Form>
