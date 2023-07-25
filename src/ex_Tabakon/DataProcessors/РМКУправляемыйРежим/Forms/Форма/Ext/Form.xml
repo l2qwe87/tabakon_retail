@@ -1133,6 +1133,22 @@
 									<ContextMenu name="СуммаКОплатеКонтекстноеМеню" id="21"/>
 									<ExtendedTooltip name="СуммаКОплатеExtendedTooltip" id="248"/>
 								</InputField>
+								<InputField name="ПочтаКлиента" id="647">
+									<DataPath>ПочтаКлиента</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Почта</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<ContextMenu name="ПочтаКлиентаКонтекстноеМеню" id="648"/>
+									<ExtendedTooltip name="ПочтаКлиентаРасширеннаяПодсказка" id="649"/>
+									<Events>
+										<Event name="OnChange" callType="After">ТБКПочтаКлиентаПриИзмененииПосле</Event>
+										<Event name="TextEditEnd" callType="After">ТБКПочтаКлиентаОкончаниеВводаТекстаПосле</Event>
+									</Events>
+								</InputField>
 								<CheckBoxField name="НеПечататьЧек" id="633">
 									<DataPath>НеПечататьЧек</DataPath>
 									<TitleFont ref="style:TextFont" height="10" kind="StyleItem"/>
