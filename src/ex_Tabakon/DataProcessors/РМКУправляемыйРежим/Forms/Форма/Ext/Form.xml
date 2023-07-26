@@ -2881,6 +2881,7 @@
 								</CheckBoxField>
 								<Button name="ПолучитьЦеныПокупкаСотрудника" id="584">
 									<Type>UsualButton</Type>
+									<Width>12</Width>
 									<CommandName>Form.Command.ПолучитьЦеныПокупкаСотрудника</CommandName>
 									<Title>
 										<v8:item>
@@ -2892,6 +2893,20 @@
 								</Button>
 							</ChildItems>
 						</UsualGroup>
+						<Button name="ОстаткиМагазина" id="667">
+							<Type>UsualButton</Type>
+							<Width>12</Width>
+							<Height>4</Height>
+							<CommandName>Form.Command.ОстаткиМагазина</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Остатки
+магазина</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ОстаткиМагазинаРасширеннаяПодсказка" id="668"/>
+						</Button>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -3826,6 +3841,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКЧатСОфисомПосле</Action>
+		</Command>
+		<Command name="ОстаткиМагазина" id="1000020">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остатки магазина</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остатки магазина</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКОстаткиМагазинаПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
