@@ -8,10 +8,15 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="648">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="649"/>
+			</Button>
 			<Button name="ФормаПровестиИЗакрыть" id="28">
 				<Type>CommandBarButton</Type>
 				<DefaultButton>true</DefaultButton>
-				<CommandName>0</CommandName>
+				<CommandName>Form.StandardCommand.Write</CommandName>
 				<ExtendedTooltip name="ФормаПровестиИЗакрытьРасширеннаяПодсказка" id="29"/>
 			</Button>
 			<Button name="ФормаЗаписать" id="30">
@@ -22,6 +27,7 @@
 			</Button>
 			<Button name="ФормаПровести" id="34">
 				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
 				<Representation>Picture</Representation>
 				<CommandName>0</CommandName>
 				<ExtendedTooltip name="ФормаПровестиРасширеннаяПодсказка" id="35"/>
@@ -196,10 +202,14 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
+		<Event name="AfterWrite" callType="Before">ТБКПослеЗаписиПеред</Event>
 		<Event name="AfterWrite" callType="After">ТБКПослеЗаписиПосле</Event>
 		<Event name="OnOpen" callType="Before">ТБКПриОткрытииПеред</Event>
 		<Event name="OnOpen" callType="After">ТБКПриОткрытииПосле</Event>
+		<Event name="BeforeWrite" callType="Before">ТБКПередЗаписьюПеред</Event>
+		<Event name="BeforeWrite" callType="After">ТБКПередЗаписьюПосле</Event>
 		<Event name="9cc34712-da5f-4faa-a653-343d2085fbe8" callType="After">ТБКПередЗаписьюПосле</Event>
+		<Event name="OnCreateAtServer" callType="After">ТБКПриСозданииНаСервереПосле</Event>
 		<Event name="bf0ac0e1-bcbb-4dfe-8fc4-0b1923b461a6" callType="Override">ТБКПередЗаписьюНаСервереВместо</Event>
 	</Events>
 	<ChildItems>
@@ -310,12 +320,31 @@
 											<ExtendedTooltip name="ГруппаТелефонРасширеннаяПодсказка" id="605"/>
 											<ChildItems>
 												<InputField name="Телефон" id="599">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Телефон
+
+Имя</v8:content>
+														</v8:item>
+													</Title>
 													<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
 													<AutoMaxWidth>false</AutoMaxWidth>
 													<MaxWidth>20</MaxWidth>
 													<ChoiceButton>true</ChoiceButton>
+													<Mask>+7 (999) 999-99-99</Mask>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Введиете номер телефона и имя </v8:content>
+														</v8:item>
+													</InputHint>
 													<ContextMenu name="ТелефонКонтекстноеМеню" id="600"/>
 													<ExtendedTooltip name="ТелефонРасширеннаяПодсказка" id="601"/>
+													<Events>
+														<Event name="EditTextChange" callType="After">ТБКТелефонИзменениеТекстаРедактированияПосле</Event>
+														<Event name="AutoComplete" callType="After">ТБКТелефонАвтоПодборПосле</Event>
+													</Events>
 												</InputField>
 												<Button name="КомандаТелефон" id="606">
 													<Type>UsualButton</Type>
@@ -327,12 +356,14 @@
 										</UsualGroup>
 										<InputField name="ДисконтнаяКарта" id="15">
 											<DataPath>Объект.ДисконтнаяКарта</DataPath>
+											<Visible>false</Visible>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ДисконтнаяКартаКонтекстноеМеню" id="16"/>
 											<ExtendedTooltip name="ДисконтнаяКартаExtendedTooltip" id="303"/>
 										</InputField>
 										<InputField name="ЖелаемаяДатаПродажи" id="219">
 											<DataPath>Объект.ЖелаемаяДатаПродажи</DataPath>
+											<Visible>false</Visible>
 											<TitleLocation>Left</TitleLocation>
 											<TitleHeight>2</TitleHeight>
 											<Width>9</Width>
@@ -343,6 +374,7 @@
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="ГруппаДоставка" id="556">
+									<Visible>false</Visible>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -570,11 +602,19 @@
 										<InputField name="Организация" id="39">
 											<DataPath>Объект.Организация</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Склад</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Объект.Склад</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
 											<ContextMenu name="ОрганизацияКонтекстноеМеню" id="40"/>
 											<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="311"/>
 										</InputField>
 										<InputField name="БанковскийСчетОрганизации" id="579">
 											<DataPath>Объект.БанковскийСчетОрганизации</DataPath>
+											<Visible>false</Visible>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -2575,6 +2615,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКОтвязатьЧекПосле</Action>
+		</Command>
+		<Command name="ЗаписатьИЗакрыть" id="1000004">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКЗаписатьИЗакрытьПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
