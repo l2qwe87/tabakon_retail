@@ -2911,6 +2911,17 @@
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
+		<Button name="F2" id="669">
+			<Type>Hyperlink</Type>
+			<CommandName>Form.Command.F2</CommandName>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content> </v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="F2РасширеннаяПодсказка" id="670"/>
+		</Button>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="ТекущаяКассаККМ" id="1000000">
@@ -3856,6 +3867,22 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКОстаткиМагазинаПосле</Action>
+		</Command>
+		<Command name="F2" id="1000021">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>F2</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>F2</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F2</Shortcut>
+			<Action callType="After">ТБКF2После</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
