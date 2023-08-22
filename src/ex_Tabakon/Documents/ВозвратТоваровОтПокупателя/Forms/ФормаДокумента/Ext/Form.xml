@@ -231,6 +231,40 @@
 		<Event name="OnClose" callType="After">ТБКПриЗакрытииПосле</Event>
 	</Events>
 	<ChildItems>
+		<UsualGroup name="Debug" id="552">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Debug</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Debug</v8:content>
+				</v8:item>
+			</ToolTip>
+			<BackColor>#FFCC99</BackColor>
+			<ExtendedTooltip name="DebugРасширеннаяПодсказка" id="553"/>
+			<ChildItems>
+				<InputField name="Debug_Марка" id="554">
+					<DataPath>Debug_Марка</DataPath>
+					<ContextMenu name="Debug_МаркаКонтекстноеМеню" id="555"/>
+					<ExtendedTooltip name="Debug_МаркаРасширеннаяПодсказка" id="556"/>
+				</InputField>
+				<Button name="Debug_ОбработатьМарку" id="557">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Debug_ОбработатьМарку</CommandName>
+					<ExtendedTooltip name="Debug_ОбработатьМаркуРасширеннаяПодсказка" id="558"/>
+				</Button>
+				<Button name="Debug_ВнешнееСобытие" id="559">
+					<Type>UsualButton</Type>
+					<CommandName>1000005:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+					<ExtendedTooltip name="Debug_ВнешнееСобытиеРасширеннаяПодсказка" id="560"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="ГруппаОснование" id="252">
 			<Title>
 				<v8:item>
@@ -1523,6 +1557,21 @@
 			</Title>
 			<Type/>
 		</Attribute>
+		<Attribute name="Debug_Марка" id="1000001">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Debug марка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -1884,6 +1933,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКОтвязатьЧекПосле</Action>
+		</Command>
+		<Command name="Debug_ОбработатьМарку" id="1000004">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Debug обработать марку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Debug обработать марку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКDebug_ОбработатьМаркуПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
