@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [DBSERV4\analitik]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

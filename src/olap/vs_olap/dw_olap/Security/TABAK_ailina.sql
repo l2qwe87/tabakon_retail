@@ -1,0 +1,2 @@
+﻿CREATE USER [TABAK\ailina] FOR LOGIN [TABAK\ailina];
+
