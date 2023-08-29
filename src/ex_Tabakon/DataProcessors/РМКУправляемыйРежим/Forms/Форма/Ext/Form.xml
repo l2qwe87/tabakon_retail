@@ -476,6 +476,45 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="567"/>
 			<ChildItems>
+				<UsualGroup name="Группа3" id="674">
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="675"/>
+					<ChildItems>
+						<InputField name="НомерЗаказаПокупателя" id="671">
+							<DataPath>НомерЗаказаПокупателя</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер заказа</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:TextFont" height="11" kind="StyleItem"/>
+							<Width>9</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>1</Height>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<Mask>99999</Mask>
+							<ContextMenu name="НомерЗаказаПокупателяКонтекстноеМеню" id="672"/>
+							<ExtendedTooltip name="НомерЗаказаПокупателяРасширеннаяПодсказка" id="673"/>
+							<Events>
+								<Event name="AutoComplete" callType="After">ТБКНомерЗаказаПокупателяАвтоПодборПосле</Event>
+							</Events>
+						</InputField>
+						<Button name="ОчиститьНомерЗаказа" id="676">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<CommandName>Form.Command.ОчиститьНомерЗаказа</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.Stop</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ОчиститьНомерЗаказаРасширеннаяПодсказка" id="677"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
 				<Button name="ЗаказыПокупателей" id="562">
 					<Type>UsualButton</Type>
 					<CommandName>Form.Command.ЗаказыПокупателей</CommandName>
@@ -2911,16 +2950,16 @@
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
-		<Button name="F2" id="669">
+		<Button name="NumПлюс" id="669">
 			<Type>Hyperlink</Type>
-			<CommandName>Form.Command.F2</CommandName>
+			<CommandName>Form.Command.NumПлюс</CommandName>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content> </v8:content>
 				</v8:item>
 			</Title>
-			<ExtendedTooltip name="F2РасширеннаяПодсказка" id="670"/>
+			<ExtendedTooltip name="NumПлюсРасширеннаяПодсказка" id="670"/>
 		</Button>
 	</ChildItems>
 	<Attributes>
@@ -3446,6 +3485,21 @@
 				<v8:Type>cfg:DocumentRef.СписаниеТоваров</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="НомерЗаказаПокупателя" id="1000023">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер заказа покупателя</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>6</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -3868,21 +3922,36 @@
 			</ToolTip>
 			<Action callType="After">ТБКОстаткиМагазинаПосле</Action>
 		</Command>
-		<Command name="F2" id="1000021">
+		<Command name="NumПлюс" id="1000021">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>F2</v8:content>
+					<v8:content>Num плюс</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>F2</v8:content>
+					<v8:content>Num плюс</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Shortcut>F2</Shortcut>
-			<Action callType="After">ТБКF2После</Action>
+			<Shortcut>Num +</Shortcut>
+			<Action callType="After">ТБКNumПлюсПосле</Action>
+		</Command>
+		<Command name="ОчиститьНомерЗаказа" id="1000022">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить номер заказа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить номер заказа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКОчиститьНомерЗаказаПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
