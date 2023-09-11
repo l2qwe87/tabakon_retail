@@ -96,7 +96,7 @@
 										</Button>
 										<Button name="КомандаЧО04ВозвратАкселераторы" id="132">
 											<Type>CommandBarButton</Type>
-											<CommandName>0</CommandName>
+											<CommandName>Form.Command.КомандаЧО04Возврат</CommandName>
 											<ExtendedTooltip name="КомандаЧО04ВозвратАкселераторыExtendedTooltip" id="170"/>
 										</Button>
 										<Button name="КомандаЧО09ОперацияДСАкселераторы" id="505">
@@ -732,7 +732,8 @@
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Возврат (F5)</v8:content>
+													<v8:content>Возврат (F5) за
+текущий день</v8:content>
 												</v8:item>
 											</Title>
 											<TitleLocation>None</TitleLocation>
@@ -745,7 +746,8 @@
 											<NonselectedPictureText>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Возврат (F5)</v8:content>
+													<v8:content>Возврат за
+текущий день (F5) </v8:content>
 												</v8:item>
 											</NonselectedPictureText>
 											<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
@@ -3953,6 +3955,17 @@
 			</ToolTip>
 			<Action callType="After">ТБКОчиститьНомерЗаказаПосле</Action>
 		</Command>
+		<Command name="КомандаЧО04Возврат" id="1000024">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возврат (F5) за
+текущий день</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>F5</Shortcut>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
 	</Commands>
 	<BaseForm version="2.9">
 		<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
@@ -4048,7 +4061,7 @@
 											</Button>
 											<Button name="КомандаЧО04ВозвратАкселераторы" id="132">
 												<Type>CommandBarButton</Type>
-												<CommandName>0</CommandName>
+												<CommandName>Form.Command.КомандаЧО04Возврат</CommandName>
 												<ExtendedTooltip name="КомандаЧО04ВозвратАкселераторыExtendedTooltip" id="170"/>
 											</Button>
 											<Button name="КомандаЧО09ОперацияДСАкселераторы" id="505">
@@ -6471,5 +6484,18 @@
 				</dcsset:item>
 			</ConditionalAppearance>
 		</Attributes>
+		<Commands>
+			<Command name="КомандаЧО04Возврат" id="1000023">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Возврат (F5)</v8:content>
+					</v8:item>
+				</Title>
+				<Shortcut>F5</Shortcut>
+				<Action callType="Before">КомандаЧО04Возврат</Action>
+				<CurrentRowUse>DontUse</CurrentRowUse>
+			</Command>
+		</Commands>
 	</BaseForm>
 </Form>
