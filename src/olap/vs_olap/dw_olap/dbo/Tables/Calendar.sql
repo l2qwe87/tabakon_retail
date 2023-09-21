@@ -1,0 +1,52 @@
+﻿CREATE TABLE [dbo].[Calendar] (
+    [date_]               DATETIME      NULL,
+    [year_week]           VARCHAR (8)   NULL,
+    [year_month]          VARCHAR (8)   NULL,
+    [year_quarter]        VARCHAR (10)  NULL,
+    [year_quarter_en]     VARCHAR (14)  NULL,
+    [year_semester]       VARCHAR (11)  NULL,
+    [year_]               INT           NULL,
+    [century]             VARCHAR (4)   NULL,
+    [semester]            INT           NOT NULL,
+    [quarter_]            INT           NULL,
+    [month_]              INT           NULL,
+    [month_name]          NVARCHAR (30) NULL,
+    [month_name_en]       VARCHAR (9)   NULL,
+    [month_name_ua]       VARCHAR (8)   NULL,
+    [month_name_by]       VARCHAR (10)  NULL,
+    [month_name_short]    VARCHAR (3)   NULL,
+    [month_name_short_en] VARCHAR (3)   NULL,
+    [season]              VARCHAR (5)   NULL,
+    [season_en]           VARCHAR (6)   NULL,
+    [season_ua]           VARCHAR (5)   NULL,
+    [season_by]           VARCHAR (6)   NULL,
+    [day_]                INT           NULL,
+    [year_day]            INT           NULL,
+    [date_str]            VARCHAR (10)  NULL,
+    [week_day]            INT           NULL,
+    [week_day_str]        NVARCHAR (30) NULL,
+    [week_day_str_en]     VARCHAR (9)   NULL,
+    [week_day_str_ua]     VARCHAR (9)   NULL,
+    [week_day_str_by]     VARCHAR (10)  NULL,
+    [week_day_short]      VARCHAR (2)   NULL,
+    [week_day_short_en]   VARCHAR (2)   NULL,
+    [week_]               INT           NULL,
+    [month_week]          INT           NULL,
+    [month_decade]        INT           NULL,
+    [month_last_day]      VARCHAR (2)   NOT NULL,
+    [year_last_day]       VARCHAR (2)   NOT NULL,
+    [days_in_month]       INT           NULL,
+    [days_in_year]        INT           NULL,
+    [weekend]             INT           NOT NULL,
+    [zodiac_sign]         VARCHAR (12)  NULL,
+    [zodiac_sign_lat]     VARCHAR (15)  NULL,
+    [chinese_horoscope]   VARCHAR (12)  NULL,
+    [date_full_str]       VARCHAR (19)  NULL,
+    [date_full_str_en]    VARCHAR (18)  NULL
+);
+
+
+GO
+CREATE NONCLUSTERED INDEX [Calendar_date]
+    ON [dbo].[Calendar]([date_] ASC);
+

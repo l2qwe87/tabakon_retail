@@ -1,49 +1,50 @@
-import { Component, OnInit } from '@angular/core';
-import { ITdDataTableSortChangeEvent, TdDataTableSortingOrder } from '@covalent/core/data-table';
-import { combineLatest } from 'rxjs';
-
-import { combineAll, switchMap } from 'rxjs/operators';
-import { RetailEndpoint, RetailEndpointExtData, RetailExtConfiguration } from 'src/app/models/RetailEndpoint';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
+import { BehaviorSubject } from 'rxjs';
+import { RetailEndpoint, RetailExtConfiguration } from 'src/app/models/RetailEndpoint';
 import { EndpointsService } from 'src/app/services/endpoints.service';
 
 @Component({
   selector: 'app-endpoints-grid',
   templateUrl: './endpoints-grid.component.html',
-  styleUrls: ['./endpoints-grid.component.scss']
+  styleUrls: ['./endpoints-grid.component.scss'],
 })
-export class EndpointsGridComponent implements OnInit {
+export class EndpointsGridComponent implements OnInit, AfterViewInit  {
 
-  private _internalData : RetailEndpoint[] = [];
-  public atomicData : RetailEndpoint[] = [];
+  $isLoading = new BehaviorSubject(true);
+  filterControl = new FormControl('');
+  dataSource = new MatTableDataSource<RetailEndpoint>();
+  displayedColumns: string[] = ['npp', 'retailEndpointName', 'retailEndpointUrl', 'retailExtConfiguration', 'retailEndpointVersion'];
 
-  sortBy: string = 'retailEndpointName';
-  sortOrder: TdDataTableSortingOrder = TdDataTableSortingOrder.Ascending;
+  @ViewChild(MatSort) matSort: MatSort;
 
   constructor(
     private endpointsService : EndpointsService
   ) { }
+  
+  ngOnInit(): void { }
 
+  ngAfterViewInit() {
+    this.dataSource.sort = this.matSort;
 
-  ngOnInit(): void {
-    //combineLatest(this.endpointsService.getEndpoints(), this.endpointsService.getEndpointsVersion())
-    this.endpointsService.getEndpoints()
-      .subscribe(v =>{
-        this._internalData = v;
-        //this._internalData = v[0];
-        // let endpointsVersions = v[1];
-        // this._internalData.forEach(e =>{
-        //   e.extData = {};
+    this.endpointsService.getEndpoints().subscribe(data => {
+      this.dataSource.data = data;
+      this.$isLoading.next(false);
+    });
+    
+    this.dataSource.filterPredicate = (item, filter) => {
+      if(item?.extData?.retailExtConfiguration?.jsonData?.toLowerCase()?.indexOf(filter) !== -1){
+        return true
+      }
+      if(Object.keys(item).filter(key => item[key]?.toString()?.toLowerCase()?.indexOf(filter) !== -1).length){
+        return true;
+      }
+      return false;
+    }
 
-        //   let filterResult = endpointsVersions.filter(endpointsVersion => endpointsVersion.retailEndpointIdentity == e.retailEndpointIdentity)
-        //   if(filterResult.length > 0){
-        //     e.extData.retailVersion = filterResult[0];
-        //   }else{
-        //     e.extData.retailVersion = null;
-        //   }
-        // })
-
-        this.filterData();
-      });
+    this.filterControl.valueChanges.subscribe(value => this.applyFilter());
   }
 
   getColorForExtConfiguration(retailExtConfiguration : RetailExtConfiguration){
@@ -56,79 +57,17 @@ export class EndpointsGridComponent implements OnInit {
 
   }
 
-  sort(sortEvent: ITdDataTableSortChangeEvent): void {
-    this.sortOrder =
-      this.sortOrder === TdDataTableSortingOrder.Ascending
-        ? TdDataTableSortingOrder.Descending
-        : TdDataTableSortingOrder.Ascending;
-    this.sortBy = sortEvent.name;
-    this.filterData();
+  applyFilter() {
+    this.$isLoading.next(true);
+    const filterValue = this.filterControl.value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+    setTimeout(()=>this.$isLoading.next(false), 200);
+    
   }
 
-  static FILTER_TERM : string = '';
-  private _filterTerm : string = '';
-  set filterTerm(value : string) { 
-    //EndpointsGridComponent.FILTER_TERM = value; 
-    this._filterTerm = value;
-  } 
-  get filterTerm() : string { 
-    //return EndpointsGridComponent.FILTER_TERM
-    return this._filterTerm;
-  } 
-
-
-  filter(filterTerm: string): void {
-    this.filterTerm = filterTerm;
-    this.filterData();
+  filterByExtType(retailExtConfiguration : RetailExtConfiguration){
+    this.filterControl.setValue(retailExtConfiguration.jsonData);
+    //this.applyFilter();
   }
-
-
-  private filterData(): void {
-    this.atomicData = Array.from(this._internalData); // Change the array reference to trigger OnPush
-
-    if(this.filterTerm){
-
-      let searchData = this.filterTerm.toLowerCase();
-
-      this.atomicData = this.atomicData.filter(e => {
-        let elJson = JSON.stringify(e).toLowerCase()
-        let searchResult = elJson.search(searchData)
-        return searchResult != -1;
-      })
-    }
-
-    this.atomicData.sort((a: RetailEndpoint, b: RetailEndpoint) => {
-      let direction: number = 0;
-      if (this.sortOrder === TdDataTableSortingOrder.Descending) {
-        direction = 1;
-      } else if (this.sortOrder === TdDataTableSortingOrder.Ascending) {
-        direction = -1;
-      }
-
-      let leftValue = a[this.sortBy];
-      let rightValue = b[this.sortBy];
-
-      if(this.sortBy == "retailEndpointVersion"){
-        
-        if(a.extData.retailVersion)
-          leftValue = a.extData.retailVersion.jsonData;
-
-        if(b.extData.retailVersion)
-          rightValue = b.extData.retailVersion.jsonData;
-
-      }
-
-      if (leftValue < rightValue) {
-        return direction;
-      } else if (leftValue > rightValue) {
-        return -direction;
-      } else {
-        return direction;
-      }
-    });
-
-    this.atomicData.forEach((e : any) => e.retailEndpointVersion )  
-  }
- 
-
 }
+

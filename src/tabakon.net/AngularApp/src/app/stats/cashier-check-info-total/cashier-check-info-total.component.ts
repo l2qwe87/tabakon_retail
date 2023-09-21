@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { CashierCheckService } from 'src/app/services/cashier-check.service';
 
 interface ICashierCheckInfoTotal{
@@ -17,14 +17,16 @@ export class CashierCheckInfoTotalComponent implements OnInit {
   @Input()
   public date: Date;
 
-  data$: Observable<ICashierCheckInfoTotal>;
+  data: ICashierCheckInfoTotal;
 
   constructor(
     private cashierCheckService: CashierCheckService
   ) { }
 
   ngOnInit(): void {
-    this.data$ = this.cashierCheckService.getInfoTotal(this.date);
+    this.cashierCheckService.getInfoTotal((this.date instanceof Date ? this.date.toJSON() : this.date)).pipe(
+      map(data => data)
+    ).subscribe( data => this.data = data);
   }
 
 }

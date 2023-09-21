@@ -67,7 +67,7 @@ namespace TbkIsmpCrptApi.Controllers
 
         public QRParser(string qr)
         {
-            if (qr.StartsWith("01"))
+            if (qr.StartsWith("01") && qr.IndexOf("21", 2) > 0)
             {
                 var serialNumberStart = qr.IndexOf("21", 2);
                 var priceStart = qr.IndexOf("8005", serialNumberStart);

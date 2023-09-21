@@ -33,7 +33,6 @@ namespace Tabakon.Entity
         {
             DocType = DocType.CashierCheck;
         }
-
         public override AbstractCacheEntity PopulateData(string json) {
             base.PopulateData(json);
 
@@ -67,6 +66,21 @@ namespace Tabakon.Entity
             this.SumCash = this.PaymentDetail?.Where(p => p.IsCash).Sum(p => p.Sum) ?? 0;
             if (this.SumCash > -this.SumTerminal + this.Sum) {
                 this.SumCash = -this.SumTerminal + this.Sum;
+            }
+
+            if (this.GoodsDetail.Count > 0) {
+                var sumCash = this.SumCash;
+                var sumTerminal = this.SumTerminal;
+
+                var total = this.GoodsDetail.Sum(d => d.Sum);
+
+                foreach (var row in this.GoodsDetail) {
+                    var weight = row.Sum / total;
+                    row.SumCash = weight * this.SumCash;
+                    row.SumTerminal = weight * this.SumTerminal;
+                    sumCash -= row.SumCash;
+                    sumTerminal -= row.SumTerminal;
+                }
             }
 
             try
@@ -107,5 +121,7 @@ namespace Tabakon.Entity
         public decimal Count { get; set; }
         public decimal Price { get; set; }
         public decimal Sum { get; set; }
+        public decimal SumCash { get; set; }
+        public decimal SumTerminal { get; set; }
     }
 }

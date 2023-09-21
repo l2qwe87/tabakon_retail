@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [TABAK\Пользователи домена]
+    FROM WINDOWS WITH DEFAULT_DATABASE = [OLAP], DEFAULT_LANGUAGE = [us_english];
+

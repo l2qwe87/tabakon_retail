@@ -54,7 +54,7 @@ namespace RetailClient
             using (OperationContextScope ocs = new OperationContextScope(ws.InnerChannel))
             {
                 var requestProp = new HttpRequestMessageProperty();
-                requestProp.Headers["Authorization"] = "Basic 0JDQtNC80LjQvToxNTk3NTM=";
+                requestProp.Headers["Authorization"] = "Basic c3lzX3dzOjQ3NTM0NzUzNDc=";
                 OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestProp;
                 //var version = await ws.GetVersionAsync();
 
@@ -158,7 +158,7 @@ namespace RetailClient
             using (OperationContextScope ocs = new OperationContextScope(ws.InnerChannel))
             {
                 var requestProp = new HttpRequestMessageProperty();
-                requestProp.Headers["Authorization"] = "Basic 0JDQtNC80LjQvToxNTk3NTM=";
+                requestProp.Headers["Authorization"] = "Basic c3lzX3dzOjQ3NTM0NzUzNDc=";
                 OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestProp;
                 var response = ws.PostAsync(method, @paramStr).Result;
                 return response.Body.@return;
@@ -171,7 +171,7 @@ namespace RetailClient
             using (OperationContextScope ocs = new OperationContextScope(ws.InnerChannel))
             {
                 var requestProp = new HttpRequestMessageProperty();
-                requestProp.Headers["Authorization"] = "Basic 0JDQtNC80LjQvToxNTk3NTM=";
+                requestProp.Headers["Authorization"] = "Basic c3lzX3dzOjQ3NTM0NzUzNDc=";
                 OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestProp;
                 var task = ws.GetAsync(method, @paramStr);
                 Task.WaitAll(task);

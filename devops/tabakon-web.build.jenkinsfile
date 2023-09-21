@@ -1,0 +1,42 @@
+pipeline {
+    agent {
+        label 'jen-slave'
+    }
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '5'))
+        timestamps()
+    }
+    stages {
+        stage('git') {
+            steps {
+                git branch: '#tmp', url: 'https://github.com/l2qwe87/tabakon_retail.git'
+            }
+        }
+
+        stage('dotnet build') {
+            steps {
+                sh 'dotnet build src/tabakon.net/tabakon.net.sln -c Release'
+                sh 'dotnet publish src/tabakon.net/RetailClient.Web/RetailClient.Web.csproj -c Release --no-build --output ./pub/'
+            }
+        }
+        
+        stage('angular build') {
+            steps {
+                sh 'cd src/tabakon.net/AngularApp && npm i && pwd && npm run build-prod'
+                sh 'pwd && cp -r src/tabakon.net/RetailClient.Web/dist ./pub/dist'
+            }
+        }
+    
+        stage('Deploy') {
+            steps {
+                sh 'cp src/tabakon.net/RetailClient.Web/Dockerfile ./'
+                sh 'cd pub && ls'
+                script {
+                    newImage = docker.build("192.168.0.37:5000/tabakon-web","-f Dockerfile ./")
+                    newImage.push()
+                }
+                echo 'Deploying....'
+            }
+        }
+    }
+}

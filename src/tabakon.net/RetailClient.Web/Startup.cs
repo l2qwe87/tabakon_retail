@@ -17,24 +17,21 @@ using RetailClient.Web.Services.Jobs;
 using RetailClient.Web.Services;
 using System.Net.Http;
 using System.Security.Policy;
-using RetailClientTests.Controllers;
 using System.Net.Http.Headers;
+using Tabakon.Queue.RetailDocCashierCheck;
+using RetailClient.Web.Controllers;
 
-namespace RetailClientTests
-{
+namespace RetailClient.Web {
 
-   
 
-    public class IsmpHttpClient : HttpClient
-    {
+
+    public class IsmpHttpClient : HttpClient {
         public IsmpHttpClient(HttpMessageHandler handler) : base(handler) { }
     }
 
-    public class Startup
-    {
+    public class Startup {
         private static IServiceScope serviceScope;
-        public Startup(IConfiguration configuration)
-        {
+        public Startup(IConfiguration configuration) {
             Configuration = configuration;
 
             var host = Configuration.GetSection("IsmpCrpt").GetValue<string>("Host");
@@ -49,15 +46,18 @@ namespace RetailClientTests
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
-        {
+        public void ConfigureServices(IServiceCollection services) {
             services.AddControllers();
 
-            services.AddDbContextPool<TabakonDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("TabakonDataContext")), 20);
+            services.AddDbContextPool<TabakonDBContext>(options => {
+                Console.WriteLine("============= TabakonDataContext =============");
+                Console.WriteLine(Configuration.GetConnectionString("TabakonDataContext"));
+                Console.WriteLine("=============");
+                options.UseSqlServer(Configuration.GetConnectionString("TabakonDataContext"));
+            }, 20);
 
             services.AddHttpClient<IsmpCrptApiClient>("IsmpCrptApiClient",
-                client =>
-                {
+                client => {
                     client.BaseAddress = new Uri(Configuration.GetValue<string>("IsmpCrpt:Host"));
                     client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 });
@@ -71,21 +71,29 @@ namespace RetailClientTests
             services.AddScoped<WorkerRetailGetStoreBalance, WorkerRetailGetStoreBalance>();
             services.AddScoped<WorkerRetailDocSelesReport, WorkerRetailDocSelesReport>();
             services.AddScoped<WorkerRetailDocSelesReport_NEW, WorkerRetailDocSelesReport_NEW>();
+
             services.AddScoped<WorkerRetailDocCashierCheck_1Day, WorkerRetailDocCashierCheck_1Day>();
             services.AddScoped<WorkerRetailDocCashierCheck_2Day, WorkerRetailDocCashierCheck_2Day>();
             services.AddScoped<WorkerRetailDocCashierCheck_5Day, WorkerRetailDocCashierCheck_5Day>();
+            services.AddScoped<WorkerRetailDocCashierCheck_30Day, WorkerRetailDocCashierCheck_30Day>();
+            services.AddScoped<WorkerRetailDocCashierCheck_90Day, WorkerRetailDocCashierCheck_90Day>();
 
-            services.AddScoped<IRetailEndpointsRepo, RetailEndpointsRepo>(); 
+            services.AddScoped<WorkerRetailDocCashierCheck, WorkerRetailDocCashierCheck>();
 
-            services.AddSpaStaticFiles(configuration =>
-            {
+
+            services.AddSingleton<SyncRetailDocCashierCheckWorkerByAsyncQueue, SyncRetailDocCashierCheckWorkerByAsyncQueue>();
+            services.AddSingleton<SaveRetailDocCashierCheckWorkerByAsyncQueue, SaveRetailDocCashierCheckWorkerByAsyncQueue>();
+
+
+            services.AddScoped<IRetailEndpointsRepo, RetailEndpointsRepo>();
+
+            services.AddSpaStaticFiles(configuration => {
                 configuration.RootPath = "dist/tabakon-web-admin";
             });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
             serviceScope = app.ApplicationServices.CreateScope();
             //if (env.IsDevelopment())
             {
@@ -98,21 +106,22 @@ namespace RetailClientTests
 
             app.UseAuthorization();
 
-            
+
 
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
-            app.UseEndpoints(endpoints =>
-            {
+            app.UseEndpoints(endpoints => {
                 endpoints.MapControllers();
             });
 
 
-            app.UseSpa(spa =>
-            {
+            app.UseSpa(spa => {
                 spa.Options.SourcePath = "dist/tabakon-web-admin";
             });
 
+
+
+            var saveRetailDocCashierCheckWorkerByAsyncQueue = serviceScope.ServiceProvider.GetService(typeof(SaveRetailDocCashierCheckWorkerByAsyncQueue)) as SaveRetailDocCashierCheckWorkerByAsyncQueue;
         }
 
     }

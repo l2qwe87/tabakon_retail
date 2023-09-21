@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Tabakon.Entity;
 
@@ -10,7 +11,7 @@ namespace RetailClient.Web.Services.Jobs
     {
         public WorkerPing(IServiceProvider serviceProvider) : base(serviceProvider) { }
 
-        public override async Task RunAsync(IServiceProvider serviceProvider, Func<RetailEndpoint, bool> predicat = null)
+        public override async Task RunAsync(IServiceProvider serviceProvider, Expression<Func<RetailEndpoint, bool>> predicat = null)
         {
             var alwaysSaveResult = true;
             await DoWorkAsync<RetailPing>(alwaysSaveResult, async (endpoint) =>

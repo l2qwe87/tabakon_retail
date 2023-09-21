@@ -12,6 +12,7 @@ using RetailClient.Web.Contracts;
 using RetailClient.Web.Services;
 using RetailClient.Web.Services.Jobs;
 using Tabakon.DAL;
+using Tabakon.Queue.RetailDocCashierCheck;
 
 namespace RetailClient.Worker
 {
@@ -87,9 +88,17 @@ namespace RetailClient.Worker
                     services.AddScoped<WorkerRetailGetStoreBalance, WorkerRetailGetStoreBalance>();
                     services.AddScoped<WorkerRetailDocSelesReport, WorkerRetailDocSelesReport>();
                     services.AddScoped<WorkerRetailDocSelesReport_NEW, WorkerRetailDocSelesReport_NEW>();
-                    services.AddScoped<WorkerRetailDocCashierCheck_1Day, WorkerRetailDocCashierCheck_1Day>();
-                    services.AddScoped<WorkerRetailDocCashierCheck_2Day, WorkerRetailDocCashierCheck_2Day>();
-                    services.AddScoped<WorkerRetailDocCashierCheck_5Day, WorkerRetailDocCashierCheck_5Day>();
+                   
+                    //services.AddScoped<WorkerRetailDocCashierCheck_1Day, WorkerRetailDocCashierCheck_1Day>();
+                    //services.AddScoped<WorkerRetailDocCashierCheck_2Day, WorkerRetailDocCashierCheck_2Day>();
+                    //services.AddScoped<WorkerRetailDocCashierCheck_5Day, WorkerRetailDocCashierCheck_5Day>();
+                    //services.AddScoped<WorkerRetailDocCashierCheck_30Day, WorkerRetailDocCashierCheck_30Day>();
+                    //services.AddScoped<WorkerRetailDocCashierCheck_90Day, WorkerRetailDocCashierCheck_90Day>();
+
+                    services.AddScoped<WorkerRetailDocCashierCheck, WorkerRetailDocCashierCheck>();
+
+                    services.AddSingleton<SyncRetailDocCashierCheckWorkerByAsyncQueue, SyncRetailDocCashierCheckWorkerByAsyncQueue>();
+                    services.AddSingleton<SaveRetailDocCashierCheckWorkerByAsyncQueue, SaveRetailDocCashierCheckWorkerByAsyncQueue>();
 
                     services.AddScoped<IRetailEndpointsRepo, RetailEndpointsRepo>();
 

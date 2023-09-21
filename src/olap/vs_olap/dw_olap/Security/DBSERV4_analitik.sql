@@ -1,0 +1,2 @@
+﻿CREATE USER [DBSERV4\analitik] FOR LOGIN [DBSERV4\analitik];
+

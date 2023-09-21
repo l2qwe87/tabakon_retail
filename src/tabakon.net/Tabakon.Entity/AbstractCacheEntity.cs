@@ -36,6 +36,7 @@ namespace Tabakon.Entity
         public virtual AbstractCacheEntity PopulateData(string json)
         {
             JsonData = json;
+            LastCheck = DateTime.Now;
             return this;
         }
 

@@ -4,10 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Tabakon.DBContextMigration;
 
-namespace Tabakon.DALMigration.Migrations
-{
+namespace Tabakon.DALMigration.Migrations {
     [DbContext(typeof(MigratioTabakonDBContext))]
     partial class MigratioTabakonDBContextModelSnapshot : ModelSnapshot
     {
@@ -75,6 +73,12 @@ namespace Tabakon.DALMigration.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("decimal(18,2)")
                         .HasDefaultValue(0m);
+
+                    b.Property<decimal>("SumCash")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("SumTerminal")
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("GoodsDetailId");
 

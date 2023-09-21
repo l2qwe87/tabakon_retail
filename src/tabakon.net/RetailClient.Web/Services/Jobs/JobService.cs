@@ -42,7 +42,7 @@ namespace RetailClient.Web.Services.Jobs
                         }
                         if (isRunning)
                         {
-                            await Task.Delay(interval);
+                            await RealTimeDelay(interval);
                         }
                     }
                     catch (Exception ex)
@@ -70,6 +70,20 @@ namespace RetailClient.Web.Services.Jobs
                     }
                 }
             });
+        }
+
+
+
+        private static Task RealTimeDelay(TimeSpan delay) =>
+            RealTimeDelay(delay, TimeSpan.FromSeconds(3));
+
+        private static async Task RealTimeDelay(TimeSpan delay, TimeSpan precision) {
+            DateTime start = DateTime.Now;
+            DateTime end = start + delay;
+
+            while (DateTime.Now < end || DateTime.Now.Hour < 9 || DateTime.Now.Hour > 23) {
+                await Task.Delay(precision);
+            }
         }
 
         #region IDisposable Support

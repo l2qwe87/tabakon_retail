@@ -6,6 +6,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Tabakon.DAL;
 using Tabakon.Entity;
@@ -14,7 +15,7 @@ namespace RetailClient.Web.Contracts
 {
     public interface ITask : IDisposable
     {
-        Task RunAsync(IServiceProvider serviceProvider, Func<RetailEndpoint, bool> predicat);
+        Task RunAsync(IServiceProvider serviceProvider, Expression<Func<RetailEndpoint, bool>> predicat);
     }
 
     public interface IJobService

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Tabakon.Entity;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using System.Linq.Expressions;
 
 namespace RetailClient.Web.Services.Jobs
 {
@@ -12,7 +13,7 @@ namespace RetailClient.Web.Services.Jobs
     {
         public WorkerRetailVersion(IServiceProvider serviceProvider) : base(serviceProvider) { }
 
-        public override async Task RunAsync(IServiceProvider serviceProvider, Func<RetailEndpoint, bool> predicat = null)
+        public override async Task RunAsync(IServiceProvider serviceProvider, Expression<Func<RetailEndpoint, bool>> predicat = null)
         {
             var alwaysSaveResult = false;
             await DoWorkAsync<RetailVersion>(alwaysSaveResult, async (endpoint) =>
