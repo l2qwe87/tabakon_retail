@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Справочник_Склады_Основной] (
+﻿CREATE TABLE [dbo].[Справочник_Магазины_Основной] (
     [Ссылка]        UNIQUEIDENTIFIER NOT NULL,
     [Код]           VARCHAR (255)    NULL,
     [Наименование]  VARCHAR (255)    NULL,
@@ -14,5 +14,5 @@
 
 GO
 CREATE UNIQUE CLUSTERED INDEX [PK_Main]
-    ON [dbo].[Справочник_Склады_Основной]([Ссылка] ASC);
+    ON [dbo].[Справочник_Магазины_Основной]([Ссылка] ASC);
 

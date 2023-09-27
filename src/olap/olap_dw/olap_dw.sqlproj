@@ -65,6 +65,7 @@
     <Folder Include="Storage\" />
     <Folder Include="Security\" />
     <Folder Include="data" />
+    <Folder Include="query" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Документ_РеализацияТоваровУслуг_Основной.sql" />
@@ -80,7 +81,6 @@
     <Build Include="dbo\Tables\Документ_ВозвратТоваровОтПокупателя_Основной.sql" />
     <Build Include="dbo\Tables\Документ_ВозвратТоваровПоставщику_Основной.sql" />
     <Build Include="dbo\Tables\Документ_ВозвратТоваровОтПокупателя_Товары.sql" />
-    <Build Include="dbo\Tables\Справочник_Склады_Основной.sql" />
     <Build Include="dbo\Tables\Документ_ВозвратТоваровПоставщику_Товары.sql" />
     <Build Include="dbo\Tables\Документ_ПоступлениеТоваровУслуг_Основной.sql" />
     <Build Include="dbo\Tables\Документ_ПоступлениеТоваровУслуг_Товары.sql" />
@@ -103,8 +103,22 @@
     <Build Include="dbo\Views\vw_Документ_ВозвратТоваровОтПокупателя_Товары.sql" />
     <Build Include="dbo\Views\vw_Документ_ВозвратТоваровОтПокупателя_Основной.sql" />
     <Build Include="dbo\Views\vw_Calendar.sql" />
+    <None Include="query\build_views_short.sql" />
+    <Build Include="dbo\Tables\Справочник_Магазины_Основной.sql" />
+    <Build Include="dbo\Tables\Регистр_ТоварыНаСкладахОбороты_Основной.sql" />
+    <Build Include="dbo\Tables\Регистр_СебестоимостьАнализПродажУПР_Основной.sql" />
+    <Build Include="dbo\Tables\Регистр_НоменклатураЦеныПоследние_Основной.sql" />
+    <Build Include="dbo\Tables\Регистр_НоменклатураОстаткиПоследние_Основной.sql" />
+    <Build Include="dbo\Tables\Регистр_ИсторияПокупокРозница_Основной.sql" />
+    <Build Include="dbo\Views\vw_Справочник_Магазины_Основной.sql" />
+    <Build Include="dbo\Views\vw_Регистр_ТоварыНаСкладахОбороты_Основной.sql" />
+    <Build Include="dbo\Views\vw_Регистр_СебестоимостьАнализПродажУПР_Основной.sql" />
+    <Build Include="dbo\Views\vw_Регистр_НоменклатураЦеныПоследние_Основной.sql" />
+    <Build Include="dbo\Views\vw_Регистр_НоменклатураОстаткиПоследние_Основной.sql" />
+    <Build Include="dbo\Views\vw_Регистр_ИсторияПокупокРозница_Основной.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="data\Calendar.txt" />
+    <None Include="query\build_views.sql" />
   </ItemGroup>
 </Project>
