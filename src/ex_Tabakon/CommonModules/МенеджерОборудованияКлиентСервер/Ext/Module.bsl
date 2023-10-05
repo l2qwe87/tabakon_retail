@@ -114,7 +114,7 @@
 	    	fptr.uploadPictureCliche();
 			
 			Fptr.setParam(Fptr.LIBFPTR_PARAM_SETTING_ID, 184);
-			Fptr.setParam(Fptr.LIBFPTR_PARAM_SETTING_VALUE, "");
+			Fptr.setParam(Fptr.LIBFPTR_PARAM_SETTING_VALUE, "¶0,center¶");
 			
 			Fptr.writeDeviceSetting();   	
 			Fptr.commitSettings();
