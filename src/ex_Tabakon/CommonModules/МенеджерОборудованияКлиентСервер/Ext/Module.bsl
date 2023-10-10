@@ -109,7 +109,7 @@
 
 		
 		Если не Fptr.getParamString(Fptr.LIBFPTR_PARAM_UNIT_VERSION) = "3.0.1245" тогда
-		    fptr.setParam(fptr.LIBFPTR_PARAM_FILENAME, "C:\Users\admin\Desktop\Новая папка\logo.bmp");
+		    fptr.setParam(fptr.LIBFPTR_PARAM_FILENAME, "C:\app\overapp\logo.bmp");
 	    	fptr.setParam(fptr.LIBFPTR_PARAM_SCALE_PERCENT, 70.0);
 	    	fptr.uploadPictureCliche();
 			
