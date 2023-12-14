@@ -1143,6 +1143,7 @@
 									<v8:content>Группа samosale</v8:content>
 								</v8:item>
 							</ToolTip>
+							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ExtendedTooltip name="ГруппаSamosaleРасширеннаяПодсказка" id="591"/>
 							<ChildItems>
@@ -1160,55 +1161,57 @@
 										</v8:item>
 									</ToolTip>
 									<VerticalStretch>true</VerticalStretch>
-									<Group>AlwaysHorizontal</Group>
+									<Group>Vertical</Group>
 									<Behavior>Collapsible</Behavior>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа1_РасширеннаяПодсказка" id="593"/>
 									<ChildItems>
-										<InputField name="Samosale_НомерТелефона" id="594">
-											<DataPath>Samosale_НомерТелефона</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Телефон клиента</v8:content>
-												</v8:item>
-											</Title>
-											<TitleLocation>Top</TitleLocation>
-											<Width>20</Width>
-											<EditFormat>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>ЧЦ=10; ЧГ=; ЧФ=Ч</v8:content>
-												</v8:item>
-											</EditFormat>
-											<BorderColor>#808080</BorderColor>
-											<Font ref="sys:DefaultGUIFont" height="20" kind="WindowsFont" scale="85"/>
-											<ContextMenu name="Samosale_НомерТелефонаКонтекстноеМеню" id="595"/>
-											<ExtendedTooltip name="Samosale_НомерТелефонаРасширеннаяПодсказка" id="596"/>
-											<Events>
-												<Event name="OnChange" callType="After">Расш_SamosaleSamosale_НомерТелефонаПриИзмененииПосле</Event>
-											</Events>
-										</InputField>
-										<Button name="НайтиКлиента" id="597">
-											<Type>UsualButton</Type>
-											<Width>20</Width>
-											<Height>2</Height>
-											<MaxHeight>10</MaxHeight>
-											<HorizontalStretch>true</HorizontalStretch>
-											<CommandName>Form.Command.НайтиКлиента</CommandName>
-											<TextColor>web:White</TextColor>
-											<BackColor>#10A354</BackColor>
-											<BorderColor>#808080</BorderColor>
-											<Font ref="style:TextFont" height="14" kind="StyleItem" scale="99"/>
-											<Shape>Usual</Shape>
-											<ExtendedTooltip name="НайтиКлиентаРасширеннаяПодсказка" id="598"/>
-										</Button>
-										<Button name="НачислитьБаллы" id="648">
-											<Type>UsualButton</Type>
-											<Visible>false</Visible>
-											<CommandName>Form.Command.НачислитьБаллы</CommandName>
-											<ExtendedTooltip name="НачислитьБаллыРасширеннаяПодсказка" id="649"/>
-										</Button>
+										<UsualGroup name="Группа2" id="653">
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="654"/>
+											<ChildItems>
+												<InputField name="Samosale_НомерТелефона" id="594">
+													<DataPath>Samosale_НомерТелефона</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Телефон клиента</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Top</TitleLocation>
+													<Width>20</Width>
+													<EditFormat>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЧЦ=10; ЧГ=; ЧФ=Ч</v8:content>
+														</v8:item>
+													</EditFormat>
+													<BorderColor>#808080</BorderColor>
+													<Font ref="sys:DefaultGUIFont" height="20" kind="WindowsFont" scale="85"/>
+													<ContextMenu name="Samosale_НомерТелефонаКонтекстноеМеню" id="595"/>
+													<ExtendedTooltip name="Samosale_НомерТелефонаРасширеннаяПодсказка" id="596"/>
+													<Events>
+														<Event name="OnChange" callType="After">Расш_SamosaleSamosale_НомерТелефонаПриИзмененииПосле</Event>
+													</Events>
+												</InputField>
+												<Button name="НайтиКлиента" id="597">
+													<Type>UsualButton</Type>
+													<Width>20</Width>
+													<Height>2</Height>
+													<MaxHeight>10</MaxHeight>
+													<HorizontalStretch>true</HorizontalStretch>
+													<CommandName>Form.Command.НайтиКлиента</CommandName>
+													<TextColor>web:White</TextColor>
+													<BackColor>#10A354</BackColor>
+													<BorderColor>#808080</BorderColor>
+													<Font ref="style:TextFont" height="14" kind="StyleItem" scale="99"/>
+													<Shape>Usual</Shape>
+													<ExtendedTooltip name="НайтиКлиентаРасширеннаяПодсказка" id="598"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="Группа2_" id="599">
@@ -1224,43 +1227,100 @@
 											<v8:content>Группа2</v8:content>
 										</v8:item>
 									</ToolTip>
-									<Group>AlwaysHorizontal</Group>
+									<Group>Vertical</Group>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа2_РасширеннаяПодсказка" id="600"/>
 									<ChildItems>
-										<InputField name="Samosale_ФИО" id="601">
-											<DataPath>Samosale_ФИО</DataPath>
-											<Visible>false</Visible>
-											<Enabled>false</Enabled>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>ФИО</v8:content>
-												</v8:item>
-											</Title>
-											<TitleLocation>Top</TitleLocation>
-											<Width>20</Width>
-											<Font ref="style:TextFont" height="10" kind="StyleItem"/>
-											<ContextMenu name="Samosale_ФИОКонтекстноеМеню" id="602"/>
-											<ExtendedTooltip name="Samosale_ФИОРасширеннаяПодсказка" id="603"/>
-										</InputField>
-										<InputField name="КоличествоБаллов" id="604">
-											<DataPath>Samosale_КоличествоБаллов</DataPath>
-											<Visible>false</Visible>
-											<Enabled>false</Enabled>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Всего бонусов</v8:content>
-												</v8:item>
-											</Title>
-											<TitleLocation>Top</TitleLocation>
-											<Width>20</Width>
-											<AutoMaxWidth>false</AutoMaxWidth>
-											<Font ref="style:TextFont" height="10" kind="StyleItem"/>
-											<ContextMenu name="КоличествоБалловКонтекстноеМеню" id="605"/>
-											<ExtendedTooltip name="КоличествоБалловРасширеннаяПодсказка" id="606"/>
-										</InputField>
+										<UsualGroup name="Группа7" id="662">
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="663"/>
+											<ChildItems>
+												<InputField name="Samosale_ФИО" id="601">
+													<DataPath>Samosale_ФИО</DataPath>
+													<Enabled>false</Enabled>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ФИО</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Top</TitleLocation>
+													<Width>20</Width>
+													<Font ref="style:TextFont" height="10" kind="StyleItem"/>
+													<ContextMenu name="Samosale_ФИОКонтекстноеМеню" id="602"/>
+													<ExtendedTooltip name="Samosale_ФИОРасширеннаяПодсказка" id="603"/>
+												</InputField>
+												<InputField name="КоличествоБаллов" id="604">
+													<DataPath>Samosale_КоличествоБаллов</DataPath>
+													<Enabled>false</Enabled>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Всего бонусов</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Top</TitleLocation>
+													<Width>20</Width>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Font ref="style:TextFont" height="10" kind="StyleItem"/>
+													<ContextMenu name="КоличествоБалловКонтекстноеМеню" id="605"/>
+													<ExtendedTooltip name="КоличествоБалловРасширеннаяПодсказка" id="606"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="Группа6" id="658">
+											<Width>42</Width>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="659"/>
+											<ChildItems>
+												<InputField name="Samosale_Бонус" id="664">
+													<DataPath>Samosale_Бонус</DataPath>
+													<DropListButton>true</DropListButton>
+													<ChoiceButton>true</ChoiceButton>
+													<ClearButton>true</ClearButton>
+													<OpenButton>false</OpenButton>
+													<CreateButton>false</CreateButton>
+													<ChoiceForm>Catalog.ТБКSamosale_ДопБалы.Form.ФормаВыбора</ChoiceForm>
+													<ChoiceParameters>
+														<app:item name="Отбор.ПометкаУдаления">
+															<app:value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="xs:boolean">false</Value>
+															</app:value>
+														</app:item>
+													</ChoiceParameters>
+													<ContextMenu name="Samosale_БонусКонтекстноеМеню" id="665"/>
+													<ExtendedTooltip name="Samosale_БонусРасширеннаяПодсказка" id="666"/>
+												</InputField>
+												<InputField name="Samosale_НачислитьБалы" id="655">
+													<DataPath>Samosale_НачислитьБалы</DataPath>
+													<Visible>false</Visible>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Начислить балы</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Top</TitleLocation>
+													<Width>20</Width>
+													<Height>1</Height>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<ContextMenu name="Samosale_НачислитьБалыКонтекстноеМеню" id="656"/>
+													<ExtendedTooltip name="Samosale_НачислитьБалыРасширеннаяПодсказка" id="657"/>
+												</InputField>
+												<Button name="НачислитьБаллы" id="648">
+													<Type>UsualButton</Type>
+													<Width>14</Width>
+													<Height>2</Height>
+													<CommandName>Form.Command.НачислитьБаллы</CommandName>
+													<ExtendedTooltip name="НачислитьБаллыРасширеннаяПодсказка" id="649"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="Группа3" id="607">
@@ -1270,7 +1330,6 @@
 									<ChildItems>
 										<InputField name="Samosale_Кэшбек" id="609">
 											<DataPath>Samosale_Кэшбек</DataPath>
-											<Visible>false</Visible>
 											<Enabled>false</Enabled>
 											<Title>
 												<v8:item>
@@ -1286,7 +1345,6 @@
 										</InputField>
 										<InputField name="Samosale_СледующийУровень" id="612">
 											<DataPath>Samosale_СледующийУровень</DataPath>
-											<Visible>false</Visible>
 											<Enabled>false</Enabled>
 											<Title>
 												<v8:item>
@@ -1309,7 +1367,7 @@
 									<ChildItems>
 										<InputField name="Samosale_Промокод" id="617">
 											<DataPath>Samosale_Промокод</DataPath>
-											<Visible>false</Visible>
+											<Enabled>false</Enabled>
 											<TitleLocation>Top</TitleLocation>
 											<Width>20</Width>
 											<Font ref="style:TextFont" height="10" kind="StyleItem"/>
@@ -1321,7 +1379,6 @@
 										</InputField>
 										<InputField name="Samosale_КоличествоПоПромокоду" id="620">
 											<DataPath>Samosale_КоличествоПоПромокоду</DataPath>
-											<Visible>false</Visible>
 											<Enabled>false</Enabled>
 											<Title>
 												<v8:item>
@@ -1345,6 +1402,7 @@
 										<InputField name="Samosale_Списать" id="625">
 											<DataPath>Samosale_Списать</DataPath>
 											<Visible>false</Visible>
+											<Enabled>false</Enabled>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -1402,7 +1460,6 @@
 												</Button>
 												<CheckBoxField name="АкцияУтилизация" id="650">
 													<DataPath>АкцияУтилизация</DataPath>
-													<Visible>false</Visible>
 													<CheckBoxType>Auto</CheckBoxType>
 													<ContextMenu name="АкцияУтилизацияКонтекстноеМеню" id="651"/>
 													<ExtendedTooltip name="АкцияУтилизацияРасширеннаяПодсказка" id="652"/>
@@ -1455,7 +1512,6 @@
 									<ChildItems>
 										<Button name="СоздатьКлиента" id="641">
 											<Type>UsualButton</Type>
-											<Visible>false</Visible>
 											<Height>2</Height>
 											<HorizontalStretch>true</HorizontalStretch>
 											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
@@ -1464,6 +1520,19 @@
 											<BackColor>#EF7F1A</BackColor>
 											<Font ref="style:TextFont" height="14" kind="StyleItem"/>
 											<ExtendedTooltip name="СоздатьКлиентаРасширеннаяПодсказка" id="642"/>
+										</Button>
+										<Button name="ЗарегистрироватьКлиентаВПрограммеЛояльностиОфлаин" id="660">
+											<Type>UsualButton</Type>
+											<Visible>false</Visible>
+											<Representation>Picture</Representation>
+											<Width>6</Width>
+											<Height>3</Height>
+											<CommandName>Form.Command.ЗарегистрироватьКлиентаВПрограммеЛояльностиОфлаин</CommandName>
+											<Picture>
+												<xr:Ref>StdPicture.ActiveUsers</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="ЗарегистрироватьКлиентаВПрограммеЛояльностиОфлаинРасширеннаяПодсказка" id="661"/>
 										</Button>
 									</ChildItems>
 								</UsualGroup>
@@ -3394,6 +3463,48 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="Samosale_НачислитьБалы" id="1000023">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Samosale начислить балы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Samosale_Бонус" id="1000024">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Бонус</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ТБКSamosale_ДопБалы</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="SamosaleТокен" id="1000025">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Samosale токен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -3725,6 +3836,22 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКНачислитьБаллыПосле</Action>
+		</Command>
+		<Command name="ЗарегистрироватьКлиентаВПрограммеЛояльностиОфлаин" id="1000015">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрировать клиента в программе лояльности офлаин</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрировать клиента в программе лояльности офлаин</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Num -</Shortcut>
+			<Action callType="After">ТБКЗарегистрироватьКлиентаВПрограммеЛояльностиОфлаинПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
