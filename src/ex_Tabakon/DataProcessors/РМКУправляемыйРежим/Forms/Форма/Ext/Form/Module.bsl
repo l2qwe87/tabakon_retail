@@ -3584,10 +3584,10 @@
 		ssl = Новый ЗащищенноеСоединениеOpenSSL();
 		Соединение = Новый HTTPСоединение("app.samosale.ru",443,,,,,ssl);
 	 	//Соединение = Новый HTTPСоединение("app.samosale.ru/api/cash-box/search?value="+ЭтаФорма.Samosale_НомерТелефона+"&type=phone",443,,,,,Новый ЗащищенноеСоединениеOpenSSL());
-		ЗаголовокЗапросаHTTP = Новый Соответствие(); 
-		SamosaleТокен	=	"_u2byml67gDNlFqGS6jf-BdadAd4ft4bC5tJt52K7qlu7hLbzr_Bev58frKQB-HE";
-		ЗаголовокЗапросаHTTP.Вставить("Authorization", "Bearer "+SamosaleТокен);
-		Запрос = Новый HTTPЗапрос("api/cash-box/search?value="+ЭтаФорма.Samosale_НомерТелефона+"&type=phone",ЗаголовокЗапросаHTTP);
+		ЗаголовокЗапросаHTTP = Новый Соответствие();
+		
+		ЗаголовокЗапросаHTTP.Вставить("Authorization", "Bearer "+Объект.Магазин.Расш_SamosaleApiКлюч);
+		Запрос = Новый HTTPЗапрос("api/cash-box/search?value="+ "+7" + Формат(ЭтаФорма.Samosale_НомерТелефона, "ЧГ=0") +"&type=phone",ЗаголовокЗапросаHTTP);
 		Результат = Соединение.Получить(Запрос);
 		Если Результат.КодСостояния = 200 Тогда
 			КоличествоБонусов = 0;
