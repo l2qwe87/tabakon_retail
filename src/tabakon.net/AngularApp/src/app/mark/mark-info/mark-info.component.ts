@@ -30,6 +30,19 @@ export class MarkInfoComponent implements OnInit {
 
   };
 
+  public isRedColor(){
+    let requestedCis: string | null = this.info?.cisInfo?.requestedCis;
+    if(requestedCis != null){
+      let hasDoubleChars = requestedCis.length == 30 && requestedCis.indexOf("AAAA") && requestedCis[27] == requestedCis[28];
+
+      if(hasDoubleChars){
+        return true;
+      }
+    }else{
+      return true;
+    }
+    return false;
+  }
 
   private _statusEnum = {
     "EMITTED" : "Эмитирован. Выпущен",
