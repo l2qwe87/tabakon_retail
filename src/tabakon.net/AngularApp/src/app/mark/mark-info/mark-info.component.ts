@@ -30,18 +30,20 @@ export class MarkInfoComponent implements OnInit {
 
   };
 
-  public isRedColor(){
+
+  public getCisClassByStatuse():string {
+    let _class = null;
     let requestedCis: string | null = this.info?.cisInfo?.requestedCis;
     if(requestedCis != null){
       let hasDoubleChars = requestedCis.length == 30 && requestedCis.indexOf("AAAA") && requestedCis[27] == requestedCis[28];
 
       if(hasDoubleChars){
-        return true;
+        _class = "RED_COLOR";
       }
     }else{
-      return true;
+      _class = "RED_COLOR";
     }
-    return false;
+    return _class ?? this.info?.cisInfo?.status ?? "NOT_FOUND";
   }
 
   private _statusEnum = {

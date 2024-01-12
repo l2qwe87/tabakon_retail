@@ -10,7 +10,7 @@
             </div>
         </div>
     </div>
-    <div class="container border rounded {{(isRedColor() ? 'RED_COLOR' : info?.cisInfo?.status)}}">
+    <div class="container border rounded {{getCisClassByStatuse()}}">
         <pre>
             <code class="javascript">
                 {{ info | json }}
