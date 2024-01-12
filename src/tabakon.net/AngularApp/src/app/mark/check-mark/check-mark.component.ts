@@ -43,6 +43,8 @@ export class CheckMarkComponent implements OnInit, AfterViewInit {
         this.markInfo = markInfo;
       }
 
+      this.mark.patchValue("",{emitViewToModelChange: false});
+
     });
   }
 
