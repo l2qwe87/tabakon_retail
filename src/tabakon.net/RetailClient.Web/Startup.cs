@@ -48,6 +48,7 @@ namespace RetailClient.Web {
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
             services.AddControllers();
+            services.AddCors();
 
             services.AddDbContextPool<TabakonDBContext>(options => {
                 Console.WriteLine("============= TabakonDataContext =============");
@@ -103,10 +104,10 @@ namespace RetailClient.Web {
             //app.UseHttpsRedirection();
 
             app.UseRouting();
+            
+            app.UseCors();
 
             app.UseAuthorization();
-
-
 
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
