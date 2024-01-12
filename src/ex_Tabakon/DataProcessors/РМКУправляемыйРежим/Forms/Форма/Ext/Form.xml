@@ -577,14 +577,27 @@
 				</Button>
 			</ChildItems>
 		</UsualGroup>
-		<LabelField name="НадписьЗаголовок" id="474">
-			<TitleLocation>None</TitleLocation>
-			<AutoMaxWidth>false</AutoMaxWidth>
-			<TextColor>#008000</TextColor>
-			<Font ref="sys:DefaultGUIFont" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
-			<ContextMenu name="НадписьЗаголовокКонтекстноеМеню" id="475"/>
-			<ExtendedTooltip name="НадписьЗаголовокРасширеннаяПодсказка" id="476"/>
-		</LabelField>
+		<UsualGroup name="Группа4" id="681">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="682"/>
+			<ChildItems>
+				<LabelField name="НадписьЗаголовок" id="474">
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<TextColor>#008000</TextColor>
+					<Font ref="sys:DefaultGUIFont" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ContextMenu name="НадписьЗаголовокКонтекстноеМеню" id="475"/>
+					<ExtendedTooltip name="НадписьЗаголовокРасширеннаяПодсказка" id="476"/>
+				</LabelField>
+				<LabelDecoration name="НадписьПродажаПоСертификату" id="683">
+					<TextColor>style:ЦветНепроведенногоДокумента</TextColor>
+					<Font ref="style:TextFont" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ContextMenu name="НадписьПродажаПоСертификатуКонтекстноеМеню" id="684"/>
+					<ExtendedTooltip name="НадписьПродажаПоСертификатуРасширеннаяПодсказка" id="685"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="ГруппаЗаголовкиКнопки" id="102">
 			<Title>
 				<v8:item>
@@ -3522,6 +3535,131 @@
 				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="Подарок" id="1000025">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подарок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбработанныеАкцииПоПодаркам" id="1000026">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обработанные акции по подаркам</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="УидАкции" id="1000000">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уид акции</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Подарок" id="1000001">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подарок</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="1000002">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПогашенныеКодыСертификатов" id="1000027">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Погашенные коды сертификатов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="КодСертификата" id="1000000">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код сертификата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="1000001">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="НадписьПродажаПоСертификату" id="1000028">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Надпись продажа по сертификату</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -3867,6 +4005,7 @@
 					<v8:content>Зарегистрировать клиента в программе лояльности</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Shortcut>Num -</Shortcut>
 			<Action callType="After">ТБКЗарегистрироватьКлиентаВПрограммеЛояльностиПосле</Action>
 		</Command>
 		<Command name="ОткрытьИнструкции" id="1000017">
