@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 
-import { HttpClient, } from '@angular/common/http';
+import { InternalHttpClient } from './internal-http-client.service';
 import { ICashierCheckInfo } from '../models/CashierCheck'
 
 @Injectable({
@@ -10,7 +10,7 @@ import { ICashierCheckInfo } from '../models/CashierCheck'
 export class CashierCheckService {
 
   constructor(
-    private http : HttpClient
+    private http : InternalHttpClient
   ) {
   }
 

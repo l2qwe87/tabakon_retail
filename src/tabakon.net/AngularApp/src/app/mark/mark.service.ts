@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { InternalHttpClient } from '../services/internal-http-client.service';
 
 
 //const IsmpCrptHost = "http://192.168.0.23:5000/"
@@ -17,7 +17,7 @@ export class MarkService {
   }
 
   constructor(
-    private http : HttpClient
+    private http : InternalHttpClient
   ) { 
 
   }

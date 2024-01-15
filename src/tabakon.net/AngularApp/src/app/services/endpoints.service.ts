@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
 import { RetailEndpoint, RetailVersion, RetailExtConfiguration } from '../models/RetailEndpoint'
+import { InternalHttpClient } from './internal-http-client.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,7 @@ import { RetailEndpoint, RetailVersion, RetailExtConfiguration } from '../models
 export class EndpointsService{
 
   constructor(
-    private http : HttpClient
+    private http : InternalHttpClient
   ) { 
 
   }
