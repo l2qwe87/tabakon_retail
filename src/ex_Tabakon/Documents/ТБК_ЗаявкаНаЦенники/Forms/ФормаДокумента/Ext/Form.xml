@@ -127,6 +127,9 @@
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ТоварыНоменклатураКонтекстноеМеню" id="39"/>
 					<ExtendedTooltip name="ТоварыНоменклатураРасширеннаяПодсказка" id="40"/>
+					<Events>
+						<Event name="OnChange">ТоварыНоменклатураПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="ТоварыХарактеристика" id="41">
 					<DataPath>Объект.Товары.Характеристика</DataPath>
