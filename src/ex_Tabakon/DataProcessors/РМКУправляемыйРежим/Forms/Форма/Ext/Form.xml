@@ -530,6 +530,11 @@
 					<CommandName>Form.Command.ЗаявкиМагазина</CommandName>
 					<ExtendedTooltip name="ЗаявкиМагазинаРасширеннаяПодсказка" id="589"/>
 				</Button>
+				<Button name="ЗаявкиИМ" id="686">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЗаявкиИМ</CommandName>
+					<ExtendedTooltip name="ЗаявкиИМРасширеннаяПодсказка" id="687"/>
+				</Button>
 				<Button name="ЧатСофисом" id="657">
 					<Type>UsualButton</Type>
 					<CommandName>Form.Command.ЧатСОфисом</CommandName>
@@ -4124,6 +4129,21 @@
 			</Title>
 			<Shortcut>F5</Shortcut>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаявкиИМ" id="1000023">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявки ИМ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявки ИМ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКЗаявкиИМПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
