@@ -53,9 +53,12 @@ namespace TbkTest
                 var markirovkaClient = serviceProvider.GetRequiredService<IMarkirovkaClient>();
 
 
-                
-
                 var qrs = new[] {
+                    "01230000117845HWmUcE1AAAA6oTx",
+                    "01230000117685?YAjalwAAAAbOwQ"
+                };
+
+                var __qrs = new[] {
                     "04605648031889;BDxaEIAAAAwo1m",
                     "04605648031889;BDxaEIAAAAwo1m",
                     "04610030141428RW=MW\"yACPA1AuI",
