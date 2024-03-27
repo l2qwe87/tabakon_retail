@@ -48,6 +48,12 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="567"/>
 			<ChildItems>
+				<Button name="Остатки" id="667">
+					<Type>UsualButton</Type>
+					<Width>9</Width>
+					<CommandName>Form.Command.Остатки</CommandName>
+					<ExtendedTooltip name="ОстаткиРасширеннаяПодсказка" id="668"/>
+				</Button>
 				<Button name="ЗаказыПокупателей" id="562">
 					<Type>UsualButton</Type>
 					<CommandName>Form.Command.ЗаказыПокупателей</CommandName>
@@ -3851,6 +3857,21 @@
 			</ToolTip>
 			<Shortcut>Num -</Shortcut>
 			<Action callType="After">ТБКЗарегистрироватьКлиентаВПрограммеЛояльностиОфлаинПосле</Action>
+		</Command>
+		<Command name="Остатки" id="1000016">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остатки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остатки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКОстаткиПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
