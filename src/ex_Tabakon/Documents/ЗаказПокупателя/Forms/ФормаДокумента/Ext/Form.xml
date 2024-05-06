@@ -1013,6 +1013,7 @@
 									<EditMode>EnterOnInput</EditMode>
 									<Width>1</Width>
 									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
 									<ContextMenu name="ТоварыНомерСтрокиКонтекстноеМеню" id="47"/>
 									<ExtendedTooltip name="ТоварыНомерСтрокиExtendedTooltip" id="341"/>
 								</LabelField>
@@ -1020,8 +1021,6 @@
 									<DataPath>Объект.Товары.КодСтроки</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
-									<Width>5</Width>
-									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="ТоварыКодСтрокиКонтекстноеМеню" id="209"/>
 									<ExtendedTooltip name="ТоварыКодСтрокиExtendedTooltip" id="342"/>
 								</InputField>
@@ -1056,28 +1055,29 @@
 								<LabelField name="ТоварыНоменклатураКод" id="198">
 									<DataPath>Объект.Товары.Номенклатура.Code</DataPath>
 									<EditMode>EnterOnInput</EditMode>
-									<Width>8</Width>
-									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="ТоварыНоменклатураКодКонтекстноеМеню" id="199"/>
 									<ExtendedTooltip name="ТоварыНоменклатураКодExtendedTooltip" id="345"/>
 								</LabelField>
 								<LabelField name="ТоварыНоменклатураАртикул" id="200">
 									<DataPath>Объект.Товары.Номенклатура.Артикул</DataPath>
 									<EditMode>EnterOnInput</EditMode>
-									<Width>7</Width>
-									<HorizontalStretch>false</HorizontalStretch>
+									<Width>15</Width>
+									<HorizontalStretch>true</HorizontalStretch>
 									<ContextMenu name="ТоварыНоменклатураАртикулКонтекстноеМеню" id="201"/>
 									<ExtendedTooltip name="ТоварыНоменклатураАртикулExtendedTooltip" id="346"/>
 								</LabelField>
 								<InputField name="ТоварыНоменклатура" id="48">
 									<DataPath>Объект.Товары.Номенклатура</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<Width>50</Width>
+									<HorizontalStretch>true</HorizontalStretch>
 									<ContextMenu name="ТоварыНоменклатураКонтекстноеМеню" id="49"/>
 									<ExtendedTooltip name="ТоварыНоменклатураExtendedTooltip" id="347"/>
 								</InputField>
 								<InputField name="ТоварыХарактеристика" id="50">
 									<DataPath>Объект.Товары.Характеристика</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<HorizontalStretch>true</HorizontalStretch>
 									<ContextMenu name="ТоварыХарактеристикаКонтекстноеМеню" id="51"/>
 									<ExtendedTooltip name="ТоварыХарактеристикаExtendedTooltip" id="348"/>
 								</InputField>
@@ -1091,6 +1091,7 @@
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>10</Width>
+									<HorizontalStretch>true</HorizontalStretch>
 									<ContextMenu name="ТоварыКоличествоУпаковокКонтекстноеМеню" id="121"/>
 									<ExtendedTooltip name="ТоварыКоличествоУпаковокExtendedTooltip" id="349"/>
 								</InputField>
@@ -1109,6 +1110,7 @@
 											<EditMode>EnterOnInput</EditMode>
 											<ShowInHeader>false</ShowInHeader>
 											<Width>5</Width>
+											<HorizontalStretch>true</HorizontalStretch>
 											<ContextMenu name="ТоварыУпаковкаКонтекстноеМеню" id="124"/>
 											<ExtendedTooltip name="ТоварыУпаковкаExtendedTooltip" id="351"/>
 										</InputField>
@@ -1131,6 +1133,7 @@
 									<DataPath>Объект.Товары.Цена</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>9</Width>
+									<HorizontalStretch>true</HorizontalStretch>
 									<ContextMenu name="ТоварыЦенаКонтекстноеМеню" id="59"/>
 									<ExtendedTooltip name="ТоварыЦенаExtendedTooltip" id="353"/>
 								</InputField>
@@ -1145,7 +1148,7 @@
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>6</Width>
-									<HorizontalStretch>false</HorizontalStretch>
+									<HorizontalStretch>true</HorizontalStretch>
 									<ContextMenu name="ТоварыПроцентАвтоматическойСкидкиКонтекстноеМеню" id="157"/>
 									<ExtendedTooltip name="ТоварыПроцентАвтоматическойСкидкиExtendedTooltip" id="354"/>
 								</InputField>
@@ -1160,6 +1163,7 @@
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>9</Width>
+									<HorizontalStretch>true</HorizontalStretch>
 									<ContextMenu name="ТоварыСуммаАвтоматическойСкидкиКонтекстноеМеню" id="159"/>
 									<ExtendedTooltip name="ТоварыСуммаАвтоматическойСкидкиExtendedTooltip" id="355"/>
 								</InputField>
@@ -1173,7 +1177,7 @@
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>6</Width>
-									<HorizontalStretch>false</HorizontalStretch>
+									<HorizontalStretch>true</HorizontalStretch>
 									<ContextMenu name="ТоварыПроцентРучнойСкидкиКонтекстноеМеню" id="161"/>
 									<ExtendedTooltip name="ТоварыПроцентРучнойСкидкиExtendedTooltip" id="356"/>
 								</InputField>
@@ -1186,7 +1190,8 @@
 										</v8:item>
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
-									<Width>9</Width>
+									<Width>10</Width>
+									<HorizontalStretch>true</HorizontalStretch>
 									<ContextMenu name="ТоварыСуммаРучнойСкидкиКонтекстноеМеню" id="163"/>
 									<ExtendedTooltip name="ТоварыСуммаРучнойСкидкиExtendedTooltip" id="357"/>
 								</InputField>
@@ -1194,6 +1199,7 @@
 									<DataPath>Объект.Товары.Сумма</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>9</Width>
+									<HorizontalStretch>true</HorizontalStretch>
 									<ContextMenu name="ТоварыСуммаКонтекстноеМеню" id="61"/>
 									<ExtendedTooltip name="ТоварыСуммаExtendedTooltip" id="358"/>
 								</InputField>
@@ -1201,7 +1207,7 @@
 									<DataPath>Объект.Товары.СтавкаНДС</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>7</Width>
-									<HorizontalStretch>false</HorizontalStretch>
+									<HorizontalStretch>true</HorizontalStretch>
 									<ListChoiceMode>true</ListChoiceMode>
 									<ContextMenu name="ТоварыСтавкаНДСКонтекстноеМеню" id="63"/>
 									<ExtendedTooltip name="ТоварыСтавкаНДСExtendedTooltip" id="359"/>
@@ -1217,6 +1223,7 @@
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>9</Width>
+									<HorizontalStretch>true</HorizontalStretch>
 									<ContextMenu name="ТоварыСуммаНДСКонтекстноеМеню" id="65"/>
 									<ExtendedTooltip name="ТоварыСуммаНДСExtendedTooltip" id="360"/>
 								</InputField>
@@ -1231,12 +1238,14 @@
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>9</Width>
+									<HorizontalStretch>true</HorizontalStretch>
 									<ContextMenu name="ТоварыСуммаВсегоКонтекстноеМеню" id="128"/>
 									<ExtendedTooltip name="ТоварыСуммаВсегоExtendedTooltip" id="361"/>
 								</InputField>
 								<InputField name="ТоварыПродавец" id="76">
 									<DataPath>Объект.Товары.Продавец</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<Width>30</Width>
 									<HorizontalStretch>true</HorizontalStretch>
 									<ContextMenu name="ТоварыПродавецКонтекстноеМеню" id="77"/>
 									<ExtendedTooltip name="ТоварыПродавецExtendedTooltip" id="362"/>
@@ -1276,6 +1285,7 @@
 												</v8:item>
 											</Title>
 											<EditMode>EnterOnInput</EditMode>
+											<Width>30</Width>
 											<HorizontalStretch>true</HorizontalStretch>
 											<OpenButton>false</OpenButton>
 											<ContextMenu name="ТоварыПричинаОтменыКонтекстноеМеню" id="280"/>
@@ -1402,7 +1412,6 @@
 									<DataPath>Объект.СкидкиНаценки.Номенклатура.Code</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>7</Width>
-									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СкидкиНоменклатураКодКонтекстноеМеню" id="203"/>
 									<ExtendedTooltip name="СкидкиНоменклатураКодExtendedTooltip" id="371"/>
 								</LabelField>
@@ -1410,7 +1419,6 @@
 									<DataPath>Объект.СкидкиНаценки.Номенклатура.Артикул</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>8</Width>
-									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СкидкиНоменклатураАртикулКонтекстноеМеню" id="205"/>
 									<ExtendedTooltip name="СкидкиНоменклатураАртикулExtendedTooltip" id="372"/>
 								</LabelField>

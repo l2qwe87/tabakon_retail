@@ -255,6 +255,19 @@
 						<Event name="OnChange">ТоварыКоличествоФактПриИзменении</Event>
 					</Events>
 				</InputField>
+				<InputField name="ТоварыПричинаБрака" id="103">
+					<DataPath>Объект.Товары.ПричинаБрака</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>20</Width>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>true</ChoiceButton>
+					<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+					<ContextMenu name="ТоварыПричинаБракаКонтекстноеМеню" id="104"/>
+					<ExtendedTooltip name="ТоварыПричинаБракаРасширеннаяПодсказка" id="105"/>
+					<Events>
+						<Event name="StartChoice">ТоварыПричинаБракаНачалоВыбора</Event>
+					</Events>
+				</InputField>
 				<InputField name="ТоварыСрокГодности" id="82">
 					<DataPath>Объект.Товары.СрокГодности</DataPath>
 					<EditMode>EnterOnInput</EditMode>

@@ -458,18 +458,29 @@
 				</CommandBar>
 			</ChildItems>
 		</UsualGroup>
-		<InputField name="ТекущаяКассаККМ" id="540">
-			<DataPath>ТекущаяКассаККМ</DataPath>
-			<OpenButton>false</OpenButton>
-			<CreateButton>false</CreateButton>
-			<ListChoiceMode>true</ListChoiceMode>
-			<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
-			<ContextMenu name="ТекущаяКассаККМКонтекстноеМеню" id="541"/>
-			<ExtendedTooltip name="ТекущаяКассаККМРасширеннаяПодсказка" id="542"/>
-			<Events>
-				<Event name="OnChange" callType="After">ТБКТекущаяКассаККМПриИзмененииПосле</Event>
-			</Events>
-		</InputField>
+		<UsualGroup name="Группа5" id="691">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="692"/>
+			<ChildItems>
+				<InputField name="ТекущаяКассаККМ" id="540">
+					<DataPath>ТекущаяКассаККМ</DataPath>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+					<ContextMenu name="ТекущаяКассаККМКонтекстноеМеню" id="541"/>
+					<ExtendedTooltip name="ТекущаяКассаККМРасширеннаяПодсказка" id="542"/>
+					<Events>
+						<Event name="OnChange" callType="After">ТБКТекущаяКассаККМПриИзмененииПосле</Event>
+					</Events>
+				</InputField>
+				<LabelDecoration name="ТекПродавец" id="688">
+					<ContextMenu name="ТекПродавецКонтекстноеМеню" id="689"/>
+					<ExtendedTooltip name="ТекПродавецРасширеннаяПодсказка" id="690"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="Группа1" id="566">
 			<Group>AlwaysHorizontal</Group>
 			<Representation>None</Representation>
@@ -1578,7 +1589,6 @@
 								</LabelField>
 								<PictureField name="ТоварыПроверкаМаркиСтатус" id="568">
 									<DataPath>Объект.Товары.ПроверкаМаркиСтатус</DataPath>
-									<Visible>false</Visible>
 									<TitleLocation>None</TitleLocation>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>2</Width>
