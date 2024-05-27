@@ -333,6 +333,170 @@
 						</UsualGroup>
 					</ChildItems>
 				</Page>
+				<Page name="Новая" id="66">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основная часть</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Новая</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="НоваяРасширеннаяПодсказка" id="67"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОклад" id="74">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Оклад</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа оклад</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаОкладРасширеннаяПодсказка" id="75"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияНадписьОклад" id="68">
+									<Width>55</Width>
+									<TextColor>web:RoyalBlue</TextColor>
+									<Font height="14" kind="AutoFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация надпись оклад</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияНадписьОкладКонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="ДекорацияНадписьОкладРасширеннаяПодсказка" id="70"/>
+								</LabelDecoration>
+								<InputField name="СуммаОклада" id="71">
+									<DataPath>СуммаОклада</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> </v8:content>
+										</v8:item>
+									</Title>
+									<TitleTextColor>web:RoyalBlue</TitleTextColor>
+									<Font height="10" kind="AutoFont"/>
+									<ContextMenu name="СуммаОкладаКонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="СуммаОкладаРасширеннаяПодсказка" id="73"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПланыМагазина" id="76">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выполнение общего плана</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа планы магазина</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаПланыМагазинаРасширеннаяПодсказка" id="77"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияНадписьОбщийПлан" id="81">
+									<Width>55</Width>
+									<TextColor>web:RoyalBlue</TextColor>
+									<Font height="14" kind="AutoFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация надпись план</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияНадписьОбщийПланКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="ДекорацияНадписьОбщийПланРасширеннаяПодсказка" id="83"/>
+								</LabelDecoration>
+								<InputField name="ПремияЗаПлан" id="84">
+									<DataPath>ПремияЗаОбщий</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> </v8:content>
+										</v8:item>
+									</Title>
+									<Font height="10" kind="AutoFont"/>
+									<ContextMenu name="ПремияЗаПланКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="ПремияЗаПланРасширеннаяПодсказка" id="86"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПремияЗаПроцент" id="87">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проценты и премии за выполнение плана</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа планы магазина</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаПремияЗаПроцентРасширеннаяПодсказка" id="88"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияНадписьПремияЗаПроцент" id="89">
+									<Width>55</Width>
+									<TextColor>web:RoyalBlue</TextColor>
+									<Font height="14" kind="AutoFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация надпись премия процент</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияНадписьПремияЗаПроцентКонтекстноеМеню" id="90"/>
+									<ExtendedTooltip name="ДекорацияНадписьПремияЗаПроцентРасширеннаяПодсказка" id="91"/>
+								</LabelDecoration>
+								<InputField name="ПремиязаПроцент" id="92">
+									<DataPath>ПремиязаПроцент</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> </v8:content>
+										</v8:item>
+									</Title>
+									<Font height="10" kind="AutoFont"/>
+									<ContextMenu name="ПремиязаПроцентКонтекстноеМеню" id="93"/>
+									<ExtendedTooltip name="ПремиязаПроцентРасширеннаяПодсказка" id="94"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ДекорацияИтог" id="95">
+							<Width>70</Width>
+							<TextColor>web:Crimson</TextColor>
+							<Font height="14" kind="AutoFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Декорация итог</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<ContextMenu name="ДекорацияИтогКонтекстноеМеню" id="96"/>
+							<ExtendedTooltip name="ДекорацияИтогРасширеннаяПодсказка" id="97"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
 				<Page name="Фокусная" id="17">
 					<Title>
 						<v8:item>
@@ -654,6 +818,70 @@
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СуммаОклада" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма оклада</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПремияЗаОбщий" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Премия за общий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПремиязаПроцент" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Премияза процент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИтогоПремииФокус" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итого премии фокус</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
 	</Attributes>

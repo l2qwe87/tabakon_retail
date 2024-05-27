@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<Visible>false</Visible>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Период" id="7">
+			<DataPath>Объект.Период</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПериодКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Оклад" id="4">
+			<DataPath>Объект.Оклад</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОкладКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ОкладРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<Pages name="Страницы" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="11"/>
+			<ChildItems>
+				<Page name="ГруппаПроценты" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проценты</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаПроцентыРасширеннаяПодсказка" id="13"/>
+					<ChildItems>
+						<Table name="Проценты" id="14">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Проценты</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПроцентыКонтекстноеМеню" id="15"/>
+							<AutoCommandBar name="ПроцентыКоманднаяПанель" id="16"/>
+							<ExtendedTooltip name="ПроцентыРасширеннаяПодсказка" id="17"/>
+							<SearchStringAddition name="ПроцентыСтрокаПоиска" id="18">
+								<AdditionSource>
+									<Item>Проценты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроцентыСтрокаПоискаКонтекстноеМеню" id="19"/>
+								<ExtendedTooltip name="ПроцентыСтрокаПоискаРасширеннаяПодсказка" id="20"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПроцентыСостояниеПросмотра" id="21">
+								<AdditionSource>
+									<Item>Проценты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроцентыСостояниеПросмотраКонтекстноеМеню" id="22"/>
+								<ExtendedTooltip name="ПроцентыСостояниеПросмотраРасширеннаяПодсказка" id="23"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПроцентыУправлениеПоиском" id="24">
+								<AdditionSource>
+									<Item>Проценты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроцентыУправлениеПоискомКонтекстноеМеню" id="25"/>
+								<ExtendedTooltip name="ПроцентыУправлениеПоискомРасширеннаяПодсказка" id="26"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПроцентыНомерСтроки" id="27">
+									<DataPath>Объект.Проценты.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПроцентыНомерСтрокиКонтекстноеМеню" id="28"/>
+									<ExtendedTooltip name="ПроцентыНомерСтрокиРасширеннаяПодсказка" id="29"/>
+								</LabelField>
+								<InputField name="ПроцентыПроцентС" id="30">
+									<DataPath>Объект.Проценты.ПроцентС</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПроцентыПроцентСКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="ПроцентыПроцентСРасширеннаяПодсказка" id="32"/>
+								</InputField>
+								<InputField name="ПроцентыПроцентДо" id="33">
+									<DataPath>Объект.Проценты.ПроцентДо</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПроцентыПроцентДоКонтекстноеМеню" id="34"/>
+									<ExtendedTooltip name="ПроцентыПроцентДоРасширеннаяПодсказка" id="35"/>
+								</InputField>
+								<InputField name="ПроцентыПроцентПремии" id="36">
+									<DataPath>Объект.Проценты.ПроцентПремии</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПроцентыПроцентПремииКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="ПроцентыПроцентПремииРасширеннаяПодсказка" id="38"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаГруппыИсключений" id="39">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группы исключений</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаГруппыИсключенийРасширеннаяПодсказка" id="40"/>
+					<ChildItems>
+						<Table name="ГруппыИсключений" id="41">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ГруппыИсключений</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ГруппыИсключенийКонтекстноеМеню" id="42"/>
+							<AutoCommandBar name="ГруппыИсключенийКоманднаяПанель" id="43"/>
+							<ExtendedTooltip name="ГруппыИсключенийРасширеннаяПодсказка" id="44"/>
+							<SearchStringAddition name="ГруппыИсключенийСтрокаПоиска" id="45">
+								<AdditionSource>
+									<Item>ГруппыИсключений</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ГруппыИсключенийСтрокаПоискаКонтекстноеМеню" id="46"/>
+								<ExtendedTooltip name="ГруппыИсключенийСтрокаПоискаРасширеннаяПодсказка" id="47"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ГруппыИсключенийСостояниеПросмотра" id="48">
+								<AdditionSource>
+									<Item>ГруппыИсключений</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ГруппыИсключенийСостояниеПросмотраКонтекстноеМеню" id="49"/>
+								<ExtendedTooltip name="ГруппыИсключенийСостояниеПросмотраРасширеннаяПодсказка" id="50"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ГруппыИсключенийУправлениеПоиском" id="51">
+								<AdditionSource>
+									<Item>ГруппыИсключений</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ГруппыИсключенийУправлениеПоискомКонтекстноеМеню" id="52"/>
+								<ExtendedTooltip name="ГруппыИсключенийУправлениеПоискомРасширеннаяПодсказка" id="53"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ГруппыИсключенийНомерСтроки" id="54">
+									<DataPath>Объект.ГруппыИсключений.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ГруппыИсключенийНомерСтрокиКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="ГруппыИсключенийНомерСтрокиРасширеннаяПодсказка" id="56"/>
+								</LabelField>
+								<InputField name="ГруппыИсключенийНоменклатура" id="57">
+									<DataPath>Объект.ГруппыИсключений.Номенклатура</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ГруппыИсключенийНоменклатураКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="ГруппыИсключенийНоменклатураРасширеннаяПодсказка" id="59"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ТБКОкладыПремииИПроцентыНоваяМотивация</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>
