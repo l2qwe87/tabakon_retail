@@ -28,7 +28,7 @@ namespace TbkTest
                 BaseUrlTobacco = "https://markirovka.crpt.ru",
                 //BaseUrl = "https://ismp.crpt.ru",
                 //Thumbprint = "3B5AFA9635BD5EA7B1C3F847A543BBF214BEE297" //SN=Малышев, G=Дмитрий Борисович, 780156595000
-                Thumbprint = "B2CE2E0BB37ABA5EDE06ACF0FD70841B8F113BAE" //SN=Хмелева, G=Татьяна Алексеевна,780216064720
+                Thumbprint = "F1E9FDCEF40C505E3A27F42D406D95B1F740DCBA" //SN=Хмелева, G=Татьяна Алексеевна,780216064720
 
             });
             services.AddSingleton<IIsmpClient, IsmpClient>();
@@ -54,8 +54,7 @@ namespace TbkTest
 
 
                 var qrs = new[] {
-                    "01230000117845HWmUcE1AAAA6oTx",
-                    "01230000117685?YAjalwAAAAbOwQ"
+                    "0104600682007456215irGGZq93ki8p"
                 };
 
                 var __qrs = new[] {
