@@ -12,6 +12,6 @@ namespace TbkIsmpContracts
     }
     public interface IMarkirovkaAuth
     {
-        Task<TokenInfo> GetToken();
+        TokenInfo GetToken();
     }
 }

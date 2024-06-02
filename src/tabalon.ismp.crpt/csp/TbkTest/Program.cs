@@ -40,8 +40,9 @@ namespace TbkTest
                 return httpClient;
             });
             services.AddSingleton<IMarkirovkaClient, MarkirovkaClient>();
+            services.AddSingleton<IMarkirovkaAuth, MarkirovkaAuth>();
 
-            
+
 
             var rootServiceProvider = services.BuildServiceProvider();
 

@@ -21,6 +21,7 @@ namespace TbkIsmpCrpt
         public string BaseUrlTobacco { get; set; }
         public string BaseUrlOther { get; set; }
         public string Thumbprint { get; set; }
+        public int HttpTimeoutInSeconds { get; set; }
     }
 
 

@@ -30,7 +30,7 @@ namespace TbkIsmpCrptApi.Controllers
         }
 
         [HttpGet("Token")]
-        public Task<TokenInfo> GetToken()
+        public TokenInfo GetToken()
             => _markirovkaAuth.GetToken();
 
         [HttpGet("Info")]

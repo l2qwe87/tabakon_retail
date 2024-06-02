@@ -42,6 +42,9 @@ namespace TbkIsmpCrptApi
                 var ismpClientConfig = sp.GetRequiredService<IsmpClientConfig>();
                 var httpClient = new HttpClient();
                 httpClient.BaseAddress = new Uri(ismpClientConfig.BaseUrlTobacco);
+                if (ismpClientConfig.HttpTimeoutInSeconds != 0) {
+                    httpClient.Timeout = TimeSpan.FromSeconds(ismpClientConfig.HttpTimeoutInSeconds);
+                }
                 return httpClient;
             });
             services.AddSingleton<IMarkirovkaAuth, MarkirovkaAuth>();

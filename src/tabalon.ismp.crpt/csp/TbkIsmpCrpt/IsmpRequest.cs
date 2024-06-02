@@ -1,11 +1,11 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Net.WebSockets;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -95,30 +95,50 @@ namespace TbkIsmpCrpt
                 IsmpResponse result = null;
                 foreach ( var url in urls ) {
                     httpClient.BaseAddress = new Uri(url);
-                    
-                    using (var request = new HttpRequestMessage(httpMethod, $"{requestUri}")) {
-                        request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                        if (this._token != null) {
-                            request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", $"{this._token}");
-                        }
+                    var tryCount = 10;
+                    while (tryCount > 0)
+                    {
+                        tryCount--;
+                        try
+                        {
+                            using (var request = new HttpRequestMessage(httpMethod, $"{requestUri}"))
+                            {
+                                request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                                if (this._token != null)
+                                {
+                                    request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", $"{this._token}");
+                                }
 
-                        if (!String.IsNullOrWhiteSpace(_body)) {
-                            request.Content = new StringContent(
-                                _body,
-                                Encoding.UTF8,
-                                "application/json");
-                        }
+                                if (!String.IsNullOrWhiteSpace(_body))
+                                {
+                                    request.Content = new StringContent(
+                                        _body,
+                                        Encoding.UTF8,
+                                        "application/json");
+                                }
 
-                        using (var response = await httpClient.SendAsync(request)) {
-                            var jsonText = await response.Content.ReadAsStringAsync();
+                                using (var response = await httpClient.SendAsync(request))
+                                {
+                                    var jsonText = await response.Content.ReadAsStringAsync();
 
-                            result = new IsmpResponse {
-                                StatusCode = (int)response.StatusCode,
-                                Body = jsonText
-                            };
-                            if (result.StatusCode != 403) { 
-                                return result;
+                                    result = new IsmpResponse
+                                    {
+                                        StatusCode = (int)response.StatusCode,
+                                        Body = jsonText
+                                    };
+                                    if (result.StatusCode != 403)
+                                    {
+                                        return result;
+                                    }
+                                }
+
                             }
+                        } catch (Exception e)
+                        {
+                            if (tryCount <= 0)
+                                throw;
+                            var logger = _serviceProvider.GetRequiredService<ILogger<IsmpRequest>>();
+                            logger.LogError($"Timeout on {url}, retry #{10 - tryCount}");
                         }
                     }
                 }
