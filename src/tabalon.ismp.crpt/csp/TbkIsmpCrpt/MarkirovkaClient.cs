@@ -13,11 +13,14 @@ namespace TbkIsmpCrpt
     {
         private Timer _timer;
         private readonly IIsmpClient _ismpClient;
+        private readonly IMarkirovkaAuth _markirovkaAuth;
         public MarkirovkaClient(
-            IIsmpClient ismpClient
+            IIsmpClient ismpClient,
+            IMarkirovkaAuth markirovkaAuth
             )
         {
             _ismpClient = ismpClient;
+            _markirovkaAuth = markirovkaAuth;
         }
 
         private string _token;
@@ -27,14 +30,10 @@ namespace TbkIsmpCrpt
                 lock (this)
                     if (_token == null)
                     {
-                        var token = _ismpClient.Auth().Result;
-                        _token = token;
-                        //Console.WriteLine(_token);
+                        var tokenInfo = _markirovkaAuth.GetToken().Result;
+                        _token = tokenInfo.Token;
 
-                        var hand = new JwtSecurityTokenHandler();
-                        var tokenS = hand.ReadJwtToken(_token);
-
-                        var span = TimeSpan.FromSeconds((tokenS.ValidTo - DateTime.Now).TotalSeconds / 2);
+                        var span = TimeSpan.FromSeconds((tokenInfo.ExpiredOn - DateTime.Now).TotalSeconds / 2);
                         SchedscheduleTokenCleanupule(span);
                     }
         }

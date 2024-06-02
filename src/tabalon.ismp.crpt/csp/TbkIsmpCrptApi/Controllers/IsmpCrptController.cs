@@ -16,15 +16,22 @@ namespace TbkIsmpCrptApi.Controllers
 
         private readonly ILogger<IsmpCrptController> _logger;
         private readonly IMarkirovkaClient _markirovkaClient;
+        private readonly IMarkirovkaAuth _markirovkaAuth;
 
         public IsmpCrptController(
             IMarkirovkaClient markirovkaClient,
+            IMarkirovkaAuth markirovkaAuth,
             ILogger<IsmpCrptController> logger
             )
         {
             _markirovkaClient = markirovkaClient;
+            _markirovkaAuth = markirovkaAuth;
             _logger = logger;
         }
+
+        [HttpGet("Token")]
+        public Task<TokenInfo> GetToken()
+            => _markirovkaAuth.GetToken();
 
         [HttpGet("Info")]
         public async Task<string> InfoGet([FromQuery] IEnumerable<string> ciss)

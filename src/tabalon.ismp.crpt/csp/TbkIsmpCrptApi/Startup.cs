@@ -44,6 +44,7 @@ namespace TbkIsmpCrptApi
                 httpClient.BaseAddress = new Uri(ismpClientConfig.BaseUrlTobacco);
                 return httpClient;
             });
+            services.AddSingleton<IMarkirovkaAuth, MarkirovkaAuth>();
             services.AddSingleton<IMarkirovkaClient, MarkirovkaClient>();
         }
 
