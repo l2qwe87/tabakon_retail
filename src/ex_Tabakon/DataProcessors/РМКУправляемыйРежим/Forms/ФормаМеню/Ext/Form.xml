@@ -294,6 +294,20 @@
 											</Title>
 											<ExtendedTooltip name="ОТкрытьЗаявкиРасширеннаяПодсказка" id="168"/>
 										</Button>
+										<Button name="ОТкрытьЗаявкиНаЦенники" id="169">
+											<Type>UsualButton</Type>
+											<Height>2</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<CommandName>Form.Command.ПоказатьЗаявкиНаЦенники</CommandName>
+											<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Заявки на ценники и бланки</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ОТкрытьЗаявкиНаЦенникиРасширеннаяПодсказка" id="170"/>
+										</Button>
 									</ChildItems>
 								</UsualGroup>
 								<LabelDecoration name="ДекорацияДляЦентрирования" id="106">
@@ -832,6 +846,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКПоказатьЗаявкиПосле</Action>
+		</Command>
+		<Command name="ПоказатьЗаявкиНаЦенники" id="1000007">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать заявки на ценники</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать заявки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКПоказатьЗаявкиНаЦенникиПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">
