@@ -1,0 +1,642 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Width>1000</Width>
+	<Group>Horizontal</Group>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="ГруппаЧек" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа чек</v8:content>
+				</v8:item>
+			</Title>
+			<Width>100</Width>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЧекExtendedTooltip" id="25"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСкидкаЧек" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа Скидка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа чек</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>40</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСкидкаЧекExtendedTooltip" id="26"/>
+					<ChildItems>
+						<Button name="КомандаСкидкаПроцентВЧеке" id="9">
+							<Type>UsualButton</Type>
+							<TitleHeight>2</TitleHeight>
+							<Width>22</Width>
+							<Height>4</Height>
+							<CommandName>0</CommandName>
+							<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ExtendedTooltip name="КомандаСкидкаПроцентВЧекеExtendedTooltip" id="27"/>
+						</Button>
+						<Button name="КомандаСкидкаСуммаВЧеке" id="10">
+							<Type>UsualButton</Type>
+							<TitleHeight>2</TitleHeight>
+							<Width>22</Width>
+							<Height>4</Height>
+							<CommandName>0</CommandName>
+							<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ExtendedTooltip name="КомандаСкидкаСуммаВЧекеExtendedTooltip" id="28"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНаценкаЧек" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа Наценка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа чек</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>40</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНаценкаЧекExtendedTooltip" id="29"/>
+					<ChildItems>
+						<Button name="КомандаНаценкаПроцентВЧеке" id="11">
+							<Type>UsualButton</Type>
+							<TitleHeight>2</TitleHeight>
+							<Width>22</Width>
+							<Height>4</Height>
+							<CommandName>0</CommandName>
+							<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ExtendedTooltip name="КомандаНаценкаПроцентВЧекеExtendedTooltip" id="30"/>
+						</Button>
+						<Button name="КомандаНаценкаСуммаВЧеке" id="12">
+							<Type>UsualButton</Type>
+							<TitleHeight>2</TitleHeight>
+							<Width>22</Width>
+							<Height>4</Height>
+							<CommandName>0</CommandName>
+							<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ExtendedTooltip name="КомандаНаценкаСуммаВЧекеExtendedTooltip" id="31"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<LabelDecoration name="Декорация2" id="21">
+					<ContextMenu name="Декорация2КонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="Декорация2ExtendedTooltip" id="32"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаОтменаЧек" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа отмена</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа чек</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>40</Width>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОтменаЧекExtendedTooltip" id="33"/>
+					<ChildItems>
+						<Button name="КомандаОтменаСкидокВЧеке" id="13">
+							<Type>UsualButton</Type>
+							<TitleHeight>2</TitleHeight>
+							<Width>46</Width>
+							<Height>4</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<CommandName>0</CommandName>
+							<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ExtendedTooltip name="КомандаОтменаСкидокВЧекеExtendedTooltip" id="34"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="Декорация1" id="19">
+			<Width>2</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<VerticalStretch>false</VerticalStretch>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<ContextMenu name="Декорация1КонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="Декорация1ExtendedTooltip" id="35"/>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаСтрока" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа чек</v8:content>
+				</v8:item>
+			</Title>
+			<Width>100</Width>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСтрокаExtendedTooltip" id="36"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСкидкаСтрока" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа Скидка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа чек</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСкидкаСтрокаExtendedTooltip" id="37"/>
+					<ChildItems>
+						<Button name="КомандаСкидкаПроцентВСтроке" id="14">
+							<Type>UsualButton</Type>
+							<TitleHeight>2</TitleHeight>
+							<Width>22</Width>
+							<Height>4</Height>
+							<CommandName>0</CommandName>
+							<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ExtendedTooltip name="КомандаСкидкаПроцентВСтрокеExtendedTooltip" id="38"/>
+						</Button>
+						<Button name="КомандаСкидкаСуммаВСтроке" id="15">
+							<Type>UsualButton</Type>
+							<TitleHeight>2</TitleHeight>
+							<Width>22</Width>
+							<Height>4</Height>
+							<CommandName>0</CommandName>
+							<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ExtendedTooltip name="КомандаСкидкаСуммаВСтрокеExtendedTooltip" id="39"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНаценкаСтрока" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа Наценка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа чек</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНаценкаСтрокаExtendedTooltip" id="40"/>
+					<ChildItems>
+						<Button name="КомандаНаценкаПроцентВСтроке" id="16">
+							<Type>UsualButton</Type>
+							<TitleHeight>2</TitleHeight>
+							<Width>22</Width>
+							<Height>4</Height>
+							<CommandName>0</CommandName>
+							<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ExtendedTooltip name="КомандаНаценкаПроцентВСтрокеExtendedTooltip" id="41"/>
+						</Button>
+						<Button name="КомандаНаценкаСуммаВСтроке" id="17">
+							<Type>UsualButton</Type>
+							<TitleHeight>2</TitleHeight>
+							<Width>22</Width>
+							<Height>4</Height>
+							<CommandName>0</CommandName>
+							<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ExtendedTooltip name="КомандаНаценкаСуммаВСтрокеExtendedTooltip" id="42"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<LabelDecoration name="Декорация3" id="23">
+					<ContextMenu name="Декорация3КонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="Декорация3ExtendedTooltip" id="43"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаОтменаСтрока" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа отмена</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа чек</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>53</Width>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОтменаСтрокаExtendedTooltip" id="44"/>
+					<ChildItems>
+						<Button name="КомандаОтменаСкидокВСтроке" id="18">
+							<Type>UsualButton</Type>
+							<TitleHeight>2</TitleHeight>
+							<Width>46</Width>
+							<MaxWidth>53</MaxWidth>
+							<Height>4</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<CommandName>0</CommandName>
+							<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ExtendedTooltip name="КомандаОтменаСкидокВСтрокеExtendedTooltip" id="45"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="Декорация4" id="52">
+			<Width>2</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<VerticalStretch>false</VerticalStretch>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<ContextMenu name="Декорация4КонтекстноеМеню" id="53"/>
+			<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="54"/>
+		</LabelDecoration>
+		<UsualGroup name="НовыеСкидки" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новые скидки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новые скидки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>100</Width>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="НовыеСкидкиРасширеннаяПодсказка" id="47"/>
+			<ChildItems>
+				<UsualGroup name="IQOS" id="48">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>IQOS</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>IQOS</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>22</Width>
+					<Height>4</Height>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="IQOSРасширеннаяПодсказка" id="49"/>
+					<ChildItems>
+						<Button name="АксессуарыIQOS" id="50">
+							<Type>UsualButton</Type>
+							<Width>20</Width>
+							<Height>4</Height>
+							<CommandName>Form.Command.АксессуарыIQOSСпидка30</CommandName>
+							<Font ref="sys:DefaultGUIFont" faceName="MS Shell Dlg" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ExtendedTooltip name="АксессуарыIQOSРасширеннаяПодсказка" id="51"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+	<Commands>
+		<Command name="АксессуарыIQOSСпидка30" id="1000000">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аксессуары IQOS 30%</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аксессуары IQOSСпидка30</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБККоманднаяПанельСкидкиНажатие</Action>
+		</Command>
+	</Commands>
+	<BaseForm version="2.9">
+		<Width>82</Width>
+		<Group>Horizontal</Group>
+		<VerticalScroll>useIfNecessary</VerticalScroll>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+			<Autofill>false</Autofill>
+		</AutoCommandBar>
+		<ChildItems>
+			<UsualGroup name="ГруппаЧек" id="1">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа чек</v8:content>
+					</v8:item>
+				</Title>
+				<Width>40</Width>
+				<Group>Vertical</Group>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаЧекExtendedTooltip" id="25"/>
+				<ChildItems>
+					<UsualGroup name="ГруппаСкидкаЧек" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа Скидка</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа чек</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Width>40</Width>
+						<HorizontalStretch>false</HorizontalStretch>
+						<Group>Horizontal</Group>
+						<Representation>None</Representation>
+						<ChildItemsWidth>Equal</ChildItemsWidth>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ГруппаСкидкаЧекExtendedTooltip" id="26"/>
+						<ChildItems>
+							<Button name="КомандаСкидкаПроцентВЧеке" id="9">
+								<Type>UsualButton</Type>
+								<TitleHeight>2</TitleHeight>
+								<Width>22</Width>
+								<Height>4</Height>
+								<CommandName>0</CommandName>
+								<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								<ExtendedTooltip name="КомандаСкидкаПроцентВЧекеExtendedTooltip" id="27"/>
+							</Button>
+							<Button name="КомандаСкидкаСуммаВЧеке" id="10">
+								<Type>UsualButton</Type>
+								<TitleHeight>2</TitleHeight>
+								<Width>22</Width>
+								<Height>4</Height>
+								<CommandName>0</CommandName>
+								<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								<ExtendedTooltip name="КомандаСкидкаСуммаВЧекеExtendedTooltip" id="28"/>
+							</Button>
+						</ChildItems>
+					</UsualGroup>
+					<UsualGroup name="ГруппаНаценкаЧек" id="4">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа Наценка</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа чек</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Width>40</Width>
+						<HorizontalStretch>false</HorizontalStretch>
+						<Group>Horizontal</Group>
+						<Representation>None</Representation>
+						<ChildItemsWidth>Equal</ChildItemsWidth>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ГруппаНаценкаЧекExtendedTooltip" id="29"/>
+						<ChildItems>
+							<Button name="КомандаНаценкаПроцентВЧеке" id="11">
+								<Type>UsualButton</Type>
+								<TitleHeight>2</TitleHeight>
+								<Width>22</Width>
+								<Height>4</Height>
+								<CommandName>0</CommandName>
+								<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								<ExtendedTooltip name="КомандаНаценкаПроцентВЧекеExtendedTooltip" id="30"/>
+							</Button>
+							<Button name="КомандаНаценкаСуммаВЧеке" id="12">
+								<Type>UsualButton</Type>
+								<TitleHeight>2</TitleHeight>
+								<Width>22</Width>
+								<Height>4</Height>
+								<CommandName>0</CommandName>
+								<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								<ExtendedTooltip name="КомандаНаценкаСуммаВЧекеExtendedTooltip" id="31"/>
+							</Button>
+						</ChildItems>
+					</UsualGroup>
+					<LabelDecoration name="Декорация2" id="21">
+						<ContextMenu name="Декорация2КонтекстноеМеню" id="22"/>
+						<ExtendedTooltip name="Декорация2ExtendedTooltip" id="32"/>
+					</LabelDecoration>
+					<UsualGroup name="ГруппаОтменаЧек" id="5">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа отмена</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа чек</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Width>40</Width>
+						<HorizontalStretch>true</HorizontalStretch>
+						<Group>Horizontal</Group>
+						<Representation>None</Representation>
+						<ChildItemsWidth>Equal</ChildItemsWidth>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ГруппаОтменаЧекExtendedTooltip" id="33"/>
+						<ChildItems>
+							<Button name="КомандаОтменаСкидокВЧеке" id="13">
+								<Type>UsualButton</Type>
+								<TitleHeight>2</TitleHeight>
+								<Width>46</Width>
+								<Height>4</Height>
+								<HorizontalStretch>true</HorizontalStretch>
+								<CommandName>0</CommandName>
+								<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								<ExtendedTooltip name="КомандаОтменаСкидокВЧекеExtendedTooltip" id="34"/>
+							</Button>
+						</ChildItems>
+					</UsualGroup>
+				</ChildItems>
+			</UsualGroup>
+			<LabelDecoration name="Декорация1" id="19">
+				<Width>2</Width>
+				<HorizontalStretch>false</HorizontalStretch>
+				<VerticalStretch>false</VerticalStretch>
+				<HorizontalAlign>Center</HorizontalAlign>
+				<ContextMenu name="Декорация1КонтекстноеМеню" id="20"/>
+				<ExtendedTooltip name="Декорация1ExtendedTooltip" id="35"/>
+			</LabelDecoration>
+			<UsualGroup name="ГруппаСтрока" id="2">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа чек</v8:content>
+					</v8:item>
+				</Title>
+				<Width>40</Width>
+				<Group>Vertical</Group>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаСтрокаExtendedTooltip" id="36"/>
+				<ChildItems>
+					<UsualGroup name="ГруппаСкидкаСтрока" id="6">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа Скидка</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа чек</v8:content>
+							</v8:item>
+						</ToolTip>
+						<HorizontalStretch>false</HorizontalStretch>
+						<Group>Horizontal</Group>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ГруппаСкидкаСтрокаExtendedTooltip" id="37"/>
+						<ChildItems>
+							<Button name="КомандаСкидкаПроцентВСтроке" id="14">
+								<Type>UsualButton</Type>
+								<TitleHeight>2</TitleHeight>
+								<Width>22</Width>
+								<Height>4</Height>
+								<CommandName>0</CommandName>
+								<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								<ExtendedTooltip name="КомандаСкидкаПроцентВСтрокеExtendedTooltip" id="38"/>
+							</Button>
+							<Button name="КомандаСкидкаСуммаВСтроке" id="15">
+								<Type>UsualButton</Type>
+								<TitleHeight>2</TitleHeight>
+								<Width>22</Width>
+								<Height>4</Height>
+								<CommandName>0</CommandName>
+								<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								<ExtendedTooltip name="КомандаСкидкаСуммаВСтрокеExtendedTooltip" id="39"/>
+							</Button>
+						</ChildItems>
+					</UsualGroup>
+					<UsualGroup name="ГруппаНаценкаСтрока" id="7">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа Наценка</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа чек</v8:content>
+							</v8:item>
+						</ToolTip>
+						<HorizontalStretch>false</HorizontalStretch>
+						<Group>Horizontal</Group>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ГруппаНаценкаСтрокаExtendedTooltip" id="40"/>
+						<ChildItems>
+							<Button name="КомандаНаценкаПроцентВСтроке" id="16">
+								<Type>UsualButton</Type>
+								<TitleHeight>2</TitleHeight>
+								<Width>22</Width>
+								<Height>4</Height>
+								<CommandName>0</CommandName>
+								<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								<ExtendedTooltip name="КомандаНаценкаПроцентВСтрокеExtendedTooltip" id="41"/>
+							</Button>
+							<Button name="КомандаНаценкаСуммаВСтроке" id="17">
+								<Type>UsualButton</Type>
+								<TitleHeight>2</TitleHeight>
+								<Width>22</Width>
+								<Height>4</Height>
+								<CommandName>0</CommandName>
+								<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								<ExtendedTooltip name="КомандаНаценкаСуммаВСтрокеExtendedTooltip" id="42"/>
+							</Button>
+						</ChildItems>
+					</UsualGroup>
+					<LabelDecoration name="Декорация3" id="23">
+						<ContextMenu name="Декорация3КонтекстноеМеню" id="24"/>
+						<ExtendedTooltip name="Декорация3ExtendedTooltip" id="43"/>
+					</LabelDecoration>
+					<UsualGroup name="ГруппаОтменаСтрока" id="8">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа отмена</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа чек</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Width>53</Width>
+						<HorizontalStretch>true</HorizontalStretch>
+						<Group>Horizontal</Group>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ГруппаОтменаСтрокаExtendedTooltip" id="44"/>
+						<ChildItems>
+							<Button name="КомандаОтменаСкидокВСтроке" id="18">
+								<Type>UsualButton</Type>
+								<TitleHeight>2</TitleHeight>
+								<Width>46</Width>
+								<MaxWidth>53</MaxWidth>
+								<Height>4</Height>
+								<HorizontalStretch>true</HorizontalStretch>
+								<CommandName>0</CommandName>
+								<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								<ExtendedTooltip name="КомандаОтменаСкидокВСтрокеExtendedTooltip" id="45"/>
+							</Button>
+						</ChildItems>
+					</UsualGroup>
+				</ChildItems>
+			</UsualGroup>
+		</ChildItems>
+		<Attributes/>
+	</BaseForm>
+</Form>
