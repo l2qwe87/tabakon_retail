@@ -205,12 +205,10 @@
 		<Event name="OnOpen" callType="Before">ТБКПриОткрытииПеред</Event>
 		<Event name="OnOpen" callType="After">ТБКПриОткрытииПосле</Event>
 		<Event name="BeforeWrite" callType="Before">ТБКПередЗаписьюПеред</Event>
-		<Event name="BeforeWriteAtServer" callType="After">ТБКПередЗаписьюНаСервереПосле</Event>
-		<Event name="BeforeWrite" callType="Before">ТБКПередЗаписьюПеред</Event>
 		<Event name="BeforeWrite" callType="After">ТБКПередЗаписьюПосле</Event>
-		<Event name="OnCreateAtServer" callType="After">ТБКПриСозданииНаСервереПосле</Event>
 		<Event name="BeforeWriteAtServer" callType="Override">ТБКПередЗаписьюНаСервереВместо</Event>
 		<Event name="BeforeWriteAtServer" callType="After">ТБКПередЗаписьюНаСервереПосле</Event>
+		<Event name="OnCreateAtServer" callType="After">ТБКПриСозданииНаСервереПосле</Event>
 	</Events>
 	<ChildItems>
 		<Pages name="ГруппаСтраницы" id="41">
