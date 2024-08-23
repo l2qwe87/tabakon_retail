@@ -1,0 +1,1563 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Проверка непробитых чеков</v8:content>
+		</v8:item>
+	</Title>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаОтчетБезГашения" id="1">
+				<Type>CommandBarButton</Type>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="ФормаОтчетБезГашенияExtendedTooltip" id="103"/>
+			</Button>
+			<Button name="ФормаЗакрытьСмену" id="82">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьСменуExtendedTooltip" id="104"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="83">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>0</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Отмена закрытия смены</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаЗакрытьExtendedTooltip" id="105"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<Pages name="ГруппаТаблицы" id="101">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа таблицы</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаТаблицыExtendedTooltip" id="106"/>
+			<ChildItems>
+				<Page name="СтраницаТаблицы" id="102">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница таблицы</v8:content>
+						</v8:item>
+					</Title>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="СтраницаТаблицыExtendedTooltip" id="107"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаДанныеФР" id="2">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа данные ФР</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДанныеФРExtendedTooltip" id="108"/>
+							<ChildItems>
+								<InputField name="ДанныеФРПродажа" id="3">
+									<ContextMenu name="ДанныеФРПродажаКонтекстноеМеню" id="4"/>
+									<ExtendedTooltip name="ДанныеФРПродажаExtendedTooltip" id="109"/>
+								</InputField>
+								<InputField name="ДанныеФРВозврат" id="5">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>возврат</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДанныеФРВозвратКонтекстноеМеню" id="6"/>
+									<ExtendedTooltip name="ДанныеФРВозвратExtendedTooltip" id="110"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="ОсновнаяТаблица" id="7">
+							<Representation>List</Representation>
+							<Footer>true</Footer>
+							<HorizontalLines>false</HorizontalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ОсновнаяТаблицаКонтекстноеМеню" id="8"/>
+							<AutoCommandBar name="ОсновнаяТаблицаКоманднаяПанель" id="9">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ОсновнаяТаблицаОбновитьДанные" id="20">
+										<Type>CommandBarButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="ОсновнаяТаблицаОбновитьДанныеExtendedTooltip" id="111"/>
+									</Button>
+									<Button name="ОсновнаяТаблицаДействиеУстановитьФлажки" id="21">
+										<Type>CommandBarButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="ОсновнаяТаблицаДействиеУстановитьФлажкиExtendedTooltip" id="112"/>
+									</Button>
+									<Button name="ОсновнаяТаблицаДействиеСнятьФлажки" id="22">
+										<Type>CommandBarButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="ОсновнаяТаблицаДействиеСнятьФлажкиExtendedTooltip" id="113"/>
+									</Button>
+									<Button name="ОсновнаяТаблицаДействиеИнвертироватьФлажки" id="23">
+										<Type>CommandBarButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="ОсновнаяТаблицаДействиеИнвертироватьФлажкиExtendedTooltip" id="114"/>
+									</Button>
+									<Button name="ОсновнаяТаблицаПробить" id="24">
+										<Type>CommandBarButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="ОсновнаяТаблицаПробитьExtendedTooltip" id="115"/>
+									</Button>
+									<Button name="ОсновнаяТаблицаАннулировать" id="25">
+										<Type>CommandBarButton</Type>
+										<CommandName>0</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отменить/Аннулировать</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ОсновнаяТаблицаАннулироватьExtendedTooltip" id="116"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ОсновнаяТаблицаExtendedTooltip" id="117"/>
+							<SearchStringAddition name="ОсновнаяТаблицаСтрокаПоиска" id="162">
+								<AdditionSource>
+									<Item>ОсновнаяТаблица</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОсновнаяТаблицаСтрокаПоискаКонтекстноеМеню" id="163"/>
+								<ExtendedTooltip name="ОсновнаяТаблицаСтрокаПоискаРасширеннаяПодсказка" id="164"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОсновнаяТаблицаСостояниеПросмотра" id="165">
+								<AdditionSource>
+									<Item>ОсновнаяТаблица</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОсновнаяТаблицаСостояниеПросмотраКонтекстноеМеню" id="166"/>
+								<ExtendedTooltip name="ОсновнаяТаблицаСостояниеПросмотраРасширеннаяПодсказка" id="167"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОсновнаяТаблицаУправлениеПоиском" id="168">
+								<AdditionSource>
+									<Item>ОсновнаяТаблица</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОсновнаяТаблицаУправлениеПоискомКонтекстноеМеню" id="169"/>
+								<ExtendedTooltip name="ОсновнаяТаблицаУправлениеПоискомРасширеннаяПодсказка" id="170"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<CheckBoxField name="ОсновнаяТаблицаПометка" id="10">
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОсновнаяТаблицаПометкаКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="ОсновнаяТаблицаПометкаExtendedTooltip" id="118"/>
+								</CheckBoxField>
+								<InputField name="ОсновнаяТаблицаЧекККМ" id="12">
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterText>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Итог:</v8:content>
+										</v8:item>
+									</FooterText>
+									<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+									<ContextMenu name="ОсновнаяТаблицаЧекККМКонтекстноеМеню" id="13"/>
+									<ExtendedTooltip name="ОсновнаяТаблицаЧекККМExtendedTooltip" id="119"/>
+								</InputField>
+								<InputField name="ОсновнаяТаблицаСумма" id="14">
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>9</Width>
+									<ContextMenu name="ОсновнаяТаблицаСуммаКонтекстноеМеню" id="15"/>
+									<ExtendedTooltip name="ОсновнаяТаблицаСуммаExtendedTooltip" id="120"/>
+								</InputField>
+								<InputField name="ОсновнаяТаблицаВозврат" id="16">
+									<ReadOnly>true</ReadOnly>
+									<TitleTextColor>style:NegativeTextColor</TitleTextColor>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterTextColor>style:NegativeTextColor</FooterTextColor>
+									<Width>9</Width>
+									<TextColor>style:NegativeTextColor</TextColor>
+									<ContextMenu name="ОсновнаяТаблицаВозвратКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="ОсновнаяТаблицаВозвратExtendedTooltip" id="121"/>
+								</InputField>
+								<InputField name="ОсновнаяТаблицаОплатаКартой" id="18">
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>9</Width>
+									<MarkNegatives>true</MarkNegatives>
+									<ContextMenu name="ОсновнаяТаблицаОплатаКартойКонтекстноеМеню" id="19"/>
+									<ExtendedTooltip name="ОсновнаяТаблицаОплатаКартойExtendedTooltip" id="122"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<LabelDecoration name="ДекорацияОшибкиОтправкиНСПК" id="171">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть ошибки отправки подтверждений НСПК</v8:content>
+				</v8:item>
+			</Title>
+			<Hyperlink>true</Hyperlink>
+			<ContextMenu name="ДекорацияОшибкиОтправкиНСПККонтекстноеМеню" id="172"/>
+			<ExtendedTooltip name="ДекорацияОшибкиОтправкиНСПКРасширеннаяПодсказка" id="173"/>
+		</LabelDecoration>
+		<Pages name="ГруппаИнформации" id="85">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа информации</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаИнформацииExtendedTooltip" id="123"/>
+			<ChildItems>
+				<Page name="ГруппаИнформацияПодробно" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа информация подробно</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ГруппаИнформацияПодробноExtendedTooltip" id="124"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНаименованияПодробно" id="27">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа наименования подробно</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНаименованияПодробноExtendedTooltip" id="125"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияПусто1" id="30">
+									<Width>18</Width>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>[todo Декорация для отступа]</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ДекорацияПусто1КонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="ДекорацияПусто1ExtendedTooltip" id="126"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияДанныеСистемы" id="32">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Данные системы</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияДанныеСистемыКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ДекорацияДанныеСистемыExtendedTooltip" id="127"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияДанныеФР" id="34">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Данные ФР</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияДанныеФРКонтекстноеМеню" id="35"/>
+									<ExtendedTooltip name="ДекорацияДанныеФРExtendedTooltip" id="128"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияПусто2" id="36">
+									<Width>18</Width>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>[todo Декорация для отступа]</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ДекорацияПусто2КонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="ДекорацияПусто2ExtendedTooltip" id="129"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияРасхождения" id="38">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Расхождения</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияРасхожденияКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="ДекорацияРасхожденияExtendedTooltip" id="130"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияПодобрано" id="40">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подобрано</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияПодобраноКонтекстноеМеню" id="41"/>
+									<ExtendedTooltip name="ДекорацияПодобраноExtendedTooltip" id="131"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияПусто3" id="42">
+									<Width>18</Width>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>[todo Декорация для отступа]</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ДекорацияПусто3КонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="ДекорацияПусто3ExtendedTooltip" id="132"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияОстаток" id="44">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Остаток</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияОстатокКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="ДекорацияОстатокExtendedTooltip" id="133"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПродажиПодробно" id="28">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа продажи подробно</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПродажиПодробноExtendedTooltip" id="134"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияПродажи" id="46">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Продажи</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="ДекорацияПродажиКонтекстноеМеню" id="47"/>
+									<ExtendedTooltip name="ДекорацияПродажиExtendedTooltip" id="135"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияДанныеСистемыПродано" id="54">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>10 000 руб.</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<ContextMenu name="ДекорацияДанныеСистемыПроданоКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="ДекорацияДанныеСистемыПроданоExtendedTooltip" id="136"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияДанныеФРПродано" id="56">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>8 500 руб.</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<ContextMenu name="ДекорацияДанныеФРПроданоКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="ДекорацияДанныеФРПроданоExtendedTooltip" id="137"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияПусто4" id="50">
+									<Width>18</Width>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>[todo Декорация для отступа]</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ДекорацияПусто4КонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="ДекорацияПусто4ExtendedTooltip" id="138"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияРасхожденияПродано" id="58">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>1 500 руб.</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<ContextMenu name="ДекорацияРасхожденияПроданоКонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="ДекорацияРасхожденияПроданоExtendedTooltip" id="139"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияПодобраноПродано" id="60">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>1 250 руб.</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<ContextMenu name="ДекорацияПодобраноПроданоКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="ДекорацияПодобраноПроданоExtendedTooltip" id="140"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияПусто5" id="62">
+									<Width>18</Width>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>[todo Декорация для отступа]</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ДекорацияПусто5КонтекстноеМеню" id="63"/>
+									<ExtendedTooltip name="ДекорацияПусто5ExtendedTooltip" id="141"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияОстатокПродано" id="64">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>250 руб.</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<ContextMenu name="ДекорацияОстатокПроданоКонтекстноеМеню" id="65"/>
+									<ExtendedTooltip name="ДекорацияОстатокПроданоExtendedTooltip" id="142"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСторноПодробно" id="29">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа сторно подробно</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСторноПодробноExtendedTooltip" id="143"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияСторно" id="66">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:NegativeTextColor</TextColor>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сторно</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="ДекорацияСторноКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="ДекорацияСторноExtendedTooltip" id="144"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияДанныеСистемыВозврат" id="68">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:NegativeTextColor</TextColor>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>10 000 руб.</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<ContextMenu name="ДекорацияДанныеСистемыВозвратКонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="ДекорацияДанныеСистемыВозвратExtendedTooltip" id="145"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияДанныеФРВозврат" id="70">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:NegativeTextColor</TextColor>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>8 500 руб.</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<ContextMenu name="ДекорацияДанныеФРВозвратКонтекстноеМеню" id="71"/>
+									<ExtendedTooltip name="ДекорацияДанныеФРВозвратExtendedTooltip" id="146"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияПусто6" id="72">
+									<Width>18</Width>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>[todo Декорация для отступа]</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ДекорацияПусто6КонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="ДекорацияПусто6ExtendedTooltip" id="147"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияРасхожденияВозврат" id="74">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>1 500 руб.</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<ContextMenu name="ДекорацияРасхожденияВозвратКонтекстноеМеню" id="75"/>
+									<ExtendedTooltip name="ДекорацияРасхожденияВозвратExtendedTooltip" id="148"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияПодобраноВозврат" id="76">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>1 250 руб.</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<ContextMenu name="ДекорацияПодобраноВозвратКонтекстноеМеню" id="77"/>
+									<ExtendedTooltip name="ДекорацияПодобраноВозвратExtendedTooltip" id="149"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияПусто7" id="78">
+									<Width>18</Width>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>[todo Декорация для отступа]</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ДекорацияПусто7КонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="ДекорацияПусто7ExtendedTooltip" id="150"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияОстатокВозврат" id="80">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>250 руб.</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<ContextMenu name="ДекорацияОстатокВозвратКонтекстноеМеню" id="81"/>
+									<ExtendedTooltip name="ДекорацияОстатокВозвратExtendedTooltip" id="151"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаИнформацияКратко" id="84">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа информация кратко</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ГруппаИнформацияКраткоExtendedTooltip" id="152"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНаименованияКратко" id="86">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа наименования подробно</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНаименованияКраткоExtendedTooltip" id="153"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияПусто8" id="87">
+									<Width>18</Width>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>[todo Декорация для отступа]</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ДекорацияПусто8КонтекстноеМеню" id="88"/>
+									<ExtendedTooltip name="ДекорацияПусто8ExtendedTooltip" id="154"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияДанныеСистемыКратко" id="89">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Данные системы</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияДанныеСистемыКраткоКонтекстноеМеню" id="90"/>
+									<ExtendedTooltip name="ДекорацияДанныеСистемыКраткоExtendedTooltip" id="155"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПродажиКратко" id="91">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа продажи кратко</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПродажиКраткоExtendedTooltip" id="156"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияПродажиКратко" id="92">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Продажи</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="ДекорацияПродажиКраткоКонтекстноеМеню" id="93"/>
+									<ExtendedTooltip name="ДекорацияПродажиКраткоExtendedTooltip" id="157"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияДанныеСистемыПроданоКратко" id="94">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>10 000 руб.</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<ContextMenu name="ДекорацияДанныеСистемыПроданоКраткоКонтекстноеМеню" id="95"/>
+									<ExtendedTooltip name="ДекорацияДанныеСистемыПроданоКраткоExtendedTooltip" id="158"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСторноКратко" id="96">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа сторно кратко</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСторноКраткоExtendedTooltip" id="159"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияСторноКратко" id="97">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:NegativeTextColor</TextColor>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сторно</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="ДекорацияСторноКраткоКонтекстноеМеню" id="98"/>
+									<ExtendedTooltip name="ДекорацияСторноКраткоExtendedTooltip" id="160"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияДанныеСистемыВозвратКратко" id="99">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:NegativeTextColor</TextColor>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>10 000 руб.</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<ContextMenu name="ДекорацияДанныеСистемыВозвратКраткоКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="ДекорацияДанныеСистемыВозвратКраткоExtendedTooltip" id="161"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОсновнаяТаблица</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ОсновнаяТаблица.Возврат</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОсновнаяТаблица</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ОсновнаяТаблица.ВозможностьИзменения</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ТекстЗапрещеннойЯчейкиЦвет</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<BaseForm version="2.17">
+		<Title>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Проверка непробитых чеков</v8:content>
+			</v8:item>
+		</Title>
+		<VerticalScroll>useIfNecessary</VerticalScroll>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+			<ChildItems>
+				<Button name="ФормаОтчетБезГашения" id="1">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ФормаОтчетБезГашенияExtendedTooltip" id="103"/>
+				</Button>
+				<Button name="ФормаЗакрытьСмену" id="82">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ФормаЗакрытьСменуExtendedTooltip" id="104"/>
+				</Button>
+				<Button name="ФормаЗакрыть" id="83">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>0</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отмена закрытия смены</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ФормаЗакрытьExtendedTooltip" id="105"/>
+				</Button>
+			</ChildItems>
+		</AutoCommandBar>
+		<ChildItems>
+			<Pages name="ГруппаТаблицы" id="101">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа таблицы</v8:content>
+					</v8:item>
+				</Title>
+				<PagesRepresentation>None</PagesRepresentation>
+				<ExtendedTooltip name="ГруппаТаблицыExtendedTooltip" id="106"/>
+				<ChildItems>
+					<Page name="СтраницаТаблицы" id="102">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Страница таблицы</v8:content>
+							</v8:item>
+						</Title>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="СтраницаТаблицыExtendedTooltip" id="107"/>
+						<ChildItems>
+							<UsualGroup name="ГруппаДанныеФР" id="2">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа данные ФР</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Horizontal</Group>
+								<Behavior>Usual</Behavior>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаДанныеФРExtendedTooltip" id="108"/>
+								<ChildItems>
+									<InputField name="ДанныеФРПродажа" id="3">
+										<ContextMenu name="ДанныеФРПродажаКонтекстноеМеню" id="4"/>
+										<ExtendedTooltip name="ДанныеФРПродажаExtendedTooltip" id="109"/>
+									</InputField>
+									<InputField name="ДанныеФРВозврат" id="5">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>возврат</v8:content>
+											</v8:item>
+										</Title>
+										<ContextMenu name="ДанныеФРВозвратКонтекстноеМеню" id="6"/>
+										<ExtendedTooltip name="ДанныеФРВозвратExtendedTooltip" id="110"/>
+									</InputField>
+								</ChildItems>
+							</UsualGroup>
+							<Table name="ОсновнаяТаблица" id="7">
+								<Representation>List</Representation>
+								<Footer>true</Footer>
+								<HorizontalLines>false</HorizontalLines>
+								<AutoInsertNewRow>true</AutoInsertNewRow>
+								<EnableStartDrag>true</EnableStartDrag>
+								<EnableDrag>true</EnableDrag>
+								<FileDragMode>AsFile</FileDragMode>
+								<SearchStringLocation>None</SearchStringLocation>
+								<ViewStatusLocation>None</ViewStatusLocation>
+								<SearchControlLocation>None</SearchControlLocation>
+								<RowFilter xsi:nil="true"/>
+								<ContextMenu name="ОсновнаяТаблицаКонтекстноеМеню" id="8"/>
+								<AutoCommandBar name="ОсновнаяТаблицаКоманднаяПанель" id="9">
+									<Autofill>false</Autofill>
+									<ChildItems>
+										<Button name="ОсновнаяТаблицаОбновитьДанные" id="20">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ОсновнаяТаблицаОбновитьДанныеExtendedTooltip" id="111"/>
+										</Button>
+										<Button name="ОсновнаяТаблицаДействиеУстановитьФлажки" id="21">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ОсновнаяТаблицаДействиеУстановитьФлажкиExtendedTooltip" id="112"/>
+										</Button>
+										<Button name="ОсновнаяТаблицаДействиеСнятьФлажки" id="22">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ОсновнаяТаблицаДействиеСнятьФлажкиExtendedTooltip" id="113"/>
+										</Button>
+										<Button name="ОсновнаяТаблицаДействиеИнвертироватьФлажки" id="23">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ОсновнаяТаблицаДействиеИнвертироватьФлажкиExtendedTooltip" id="114"/>
+										</Button>
+										<Button name="ОсновнаяТаблицаПробить" id="24">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ОсновнаяТаблицаПробитьExtendedTooltip" id="115"/>
+										</Button>
+										<Button name="ОсновнаяТаблицаАннулировать" id="25">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отменить/Аннулировать</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ОсновнаяТаблицаАннулироватьExtendedTooltip" id="116"/>
+										</Button>
+									</ChildItems>
+								</AutoCommandBar>
+								<ExtendedTooltip name="ОсновнаяТаблицаExtendedTooltip" id="117"/>
+								<SearchStringAddition name="ОсновнаяТаблицаСтрокаПоиска" id="162">
+									<AdditionSource>
+										<Item>ОсновнаяТаблица</Item>
+										<Type>SearchStringRepresentation</Type>
+									</AdditionSource>
+									<ContextMenu name="ОсновнаяТаблицаСтрокаПоискаКонтекстноеМеню" id="163"/>
+									<ExtendedTooltip name="ОсновнаяТаблицаСтрокаПоискаРасширеннаяПодсказка" id="164"/>
+								</SearchStringAddition>
+								<ViewStatusAddition name="ОсновнаяТаблицаСостояниеПросмотра" id="165">
+									<AdditionSource>
+										<Item>ОсновнаяТаблица</Item>
+										<Type>ViewStatusRepresentation</Type>
+									</AdditionSource>
+									<ContextMenu name="ОсновнаяТаблицаСостояниеПросмотраКонтекстноеМеню" id="166"/>
+									<ExtendedTooltip name="ОсновнаяТаблицаСостояниеПросмотраРасширеннаяПодсказка" id="167"/>
+								</ViewStatusAddition>
+								<SearchControlAddition name="ОсновнаяТаблицаУправлениеПоиском" id="168">
+									<AdditionSource>
+										<Item>ОсновнаяТаблица</Item>
+										<Type>SearchControl</Type>
+									</AdditionSource>
+									<ContextMenu name="ОсновнаяТаблицаУправлениеПоискомКонтекстноеМеню" id="169"/>
+									<ExtendedTooltip name="ОсновнаяТаблицаУправлениеПоискомРасширеннаяПодсказка" id="170"/>
+								</SearchControlAddition>
+								<ChildItems>
+									<CheckBoxField name="ОсновнаяТаблицаПометка" id="10">
+										<TitleLocation>None</TitleLocation>
+										<EditMode>EnterOnInput</EditMode>
+										<CheckBoxType>Auto</CheckBoxType>
+										<ContextMenu name="ОсновнаяТаблицаПометкаКонтекстноеМеню" id="11"/>
+										<ExtendedTooltip name="ОсновнаяТаблицаПометкаExtendedTooltip" id="118"/>
+									</CheckBoxField>
+									<InputField name="ОсновнаяТаблицаЧекККМ" id="12">
+										<ReadOnly>true</ReadOnly>
+										<EditMode>EnterOnInput</EditMode>
+										<FooterText>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Итог:</v8:content>
+											</v8:item>
+										</FooterText>
+										<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+										<ContextMenu name="ОсновнаяТаблицаЧекККМКонтекстноеМеню" id="13"/>
+										<ExtendedTooltip name="ОсновнаяТаблицаЧекККМExtendedTooltip" id="119"/>
+									</InputField>
+									<InputField name="ОсновнаяТаблицаСумма" id="14">
+										<ReadOnly>true</ReadOnly>
+										<EditMode>EnterOnInput</EditMode>
+										<Width>9</Width>
+										<ContextMenu name="ОсновнаяТаблицаСуммаКонтекстноеМеню" id="15"/>
+										<ExtendedTooltip name="ОсновнаяТаблицаСуммаExtendedTooltip" id="120"/>
+									</InputField>
+									<InputField name="ОсновнаяТаблицаВозврат" id="16">
+										<ReadOnly>true</ReadOnly>
+										<TitleTextColor>style:NegativeTextColor</TitleTextColor>
+										<EditMode>EnterOnInput</EditMode>
+										<FooterTextColor>style:NegativeTextColor</FooterTextColor>
+										<Width>9</Width>
+										<TextColor>style:NegativeTextColor</TextColor>
+										<ContextMenu name="ОсновнаяТаблицаВозвратКонтекстноеМеню" id="17"/>
+										<ExtendedTooltip name="ОсновнаяТаблицаВозвратExtendedTooltip" id="121"/>
+									</InputField>
+									<InputField name="ОсновнаяТаблицаОплатаКартой" id="18">
+										<ReadOnly>true</ReadOnly>
+										<EditMode>EnterOnInput</EditMode>
+										<Width>9</Width>
+										<MarkNegatives>true</MarkNegatives>
+										<ContextMenu name="ОсновнаяТаблицаОплатаКартойКонтекстноеМеню" id="19"/>
+										<ExtendedTooltip name="ОсновнаяТаблицаОплатаКартойExtendedTooltip" id="122"/>
+									</InputField>
+								</ChildItems>
+							</Table>
+						</ChildItems>
+					</Page>
+				</ChildItems>
+			</Pages>
+			<LabelDecoration name="ДекорацияОшибкиОтправкиНСПК" id="171">
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Есть ошибки отправки подтверждений НСПК</v8:content>
+					</v8:item>
+				</Title>
+				<Hyperlink>true</Hyperlink>
+				<ContextMenu name="ДекорацияОшибкиОтправкиНСПККонтекстноеМеню" id="172"/>
+				<ExtendedTooltip name="ДекорацияОшибкиОтправкиНСПКРасширеннаяПодсказка" id="173"/>
+			</LabelDecoration>
+			<Pages name="ГруппаИнформации" id="85">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа информации</v8:content>
+					</v8:item>
+				</Title>
+				<PagesRepresentation>None</PagesRepresentation>
+				<ExtendedTooltip name="ГруппаИнформацииExtendedTooltip" id="123"/>
+				<ChildItems>
+					<Page name="ГруппаИнформацияПодробно" id="26">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа информация подробно</v8:content>
+							</v8:item>
+						</Title>
+						<Group>Horizontal</Group>
+						<ExtendedTooltip name="ГруппаИнформацияПодробноExtendedTooltip" id="124"/>
+						<ChildItems>
+							<UsualGroup name="ГруппаНаименованияПодробно" id="27">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа наименования подробно</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Vertical</Group>
+								<Behavior>Usual</Behavior>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаНаименованияПодробноExtendedTooltip" id="125"/>
+								<ChildItems>
+									<LabelDecoration name="ДекорацияПусто1" id="30">
+										<Width>18</Width>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>[todo Декорация для отступа]</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ContextMenu name="ДекорацияПусто1КонтекстноеМеню" id="31"/>
+										<ExtendedTooltip name="ДекорацияПусто1ExtendedTooltip" id="126"/>
+									</LabelDecoration>
+									<LabelDecoration name="ДекорацияДанныеСистемы" id="32">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Данные системы</v8:content>
+											</v8:item>
+										</Title>
+										<ContextMenu name="ДекорацияДанныеСистемыКонтекстноеМеню" id="33"/>
+										<ExtendedTooltip name="ДекорацияДанныеСистемыExtendedTooltip" id="127"/>
+									</LabelDecoration>
+									<LabelDecoration name="ДекорацияДанныеФР" id="34">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Данные ФР</v8:content>
+											</v8:item>
+										</Title>
+										<ContextMenu name="ДекорацияДанныеФРКонтекстноеМеню" id="35"/>
+										<ExtendedTooltip name="ДекорацияДанныеФРExtendedTooltip" id="128"/>
+									</LabelDecoration>
+									<LabelDecoration name="ДекорацияПусто2" id="36">
+										<Width>18</Width>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>[todo Декорация для отступа]</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ContextMenu name="ДекорацияПусто2КонтекстноеМеню" id="37"/>
+										<ExtendedTooltip name="ДекорацияПусто2ExtendedTooltip" id="129"/>
+									</LabelDecoration>
+									<LabelDecoration name="ДекорацияРасхождения" id="38">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Расхождения</v8:content>
+											</v8:item>
+										</Title>
+										<ContextMenu name="ДекорацияРасхожденияКонтекстноеМеню" id="39"/>
+										<ExtendedTooltip name="ДекорацияРасхожденияExtendedTooltip" id="130"/>
+									</LabelDecoration>
+									<LabelDecoration name="ДекорацияПодобрано" id="40">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Подобрано</v8:content>
+											</v8:item>
+										</Title>
+										<ContextMenu name="ДекорацияПодобраноКонтекстноеМеню" id="41"/>
+										<ExtendedTooltip name="ДекорацияПодобраноExtendedTooltip" id="131"/>
+									</LabelDecoration>
+									<LabelDecoration name="ДекорацияПусто3" id="42">
+										<Width>18</Width>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>[todo Декорация для отступа]</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ContextMenu name="ДекорацияПусто3КонтекстноеМеню" id="43"/>
+										<ExtendedTooltip name="ДекорацияПусто3ExtendedTooltip" id="132"/>
+									</LabelDecoration>
+									<LabelDecoration name="ДекорацияОстаток" id="44">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Остаток</v8:content>
+											</v8:item>
+										</Title>
+										<ContextMenu name="ДекорацияОстатокКонтекстноеМеню" id="45"/>
+										<ExtendedTooltip name="ДекорацияОстатокExtendedTooltip" id="133"/>
+									</LabelDecoration>
+								</ChildItems>
+							</UsualGroup>
+							<UsualGroup name="ГруппаПродажиПодробно" id="28">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа продажи подробно</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Vertical</Group>
+								<Behavior>Usual</Behavior>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаПродажиПодробноExtendedTooltip" id="134"/>
+								<ChildItems>
+									<LabelDecoration name="ДекорацияПродажи" id="46">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Продажи</v8:content>
+											</v8:item>
+										</Title>
+										<HorizontalAlign>Center</HorizontalAlign>
+										<ContextMenu name="ДекорацияПродажиКонтекстноеМеню" id="47"/>
+										<ExtendedTooltip name="ДекорацияПродажиExtendedTooltip" id="135"/>
+									</LabelDecoration>
+									<LabelDecoration name="ДекорацияДанныеСистемыПродано" id="54">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>10 000 руб.</v8:content>
+											</v8:item>
+										</Title>
+										<HorizontalAlign>Right</HorizontalAlign>
+										<ContextMenu name="ДекорацияДанныеСистемыПроданоКонтекстноеМеню" id="55"/>
+										<ExtendedTooltip name="ДекорацияДанныеСистемыПроданоExtendedTooltip" id="136"/>
+									</LabelDecoration>
+									<LabelDecoration name="ДекорацияДанныеФРПродано" id="56">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>8 500 руб.</v8:content>
+											</v8:item>
+										</Title>
+										<HorizontalAlign>Right</HorizontalAlign>
+										<ContextMenu name="ДекорацияДанныеФРПроданоКонтекстноеМеню" id="57"/>
+										<ExtendedTooltip name="ДекорацияДанныеФРПроданоExtendedTooltip" id="137"/>
+									</LabelDecoration>
+									<LabelDecoration name="ДекорацияПусто4" id="50">
+										<Width>18</Width>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>[todo Декорация для отступа]</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ContextMenu name="ДекорацияПусто4КонтекстноеМеню" id="51"/>
+										<ExtendedTooltip name="ДекорацияПусто4ExtendedTooltip" id="138"/>
+									</LabelDecoration>
+									<LabelDecoration name="ДекорацияРасхожденияПродано" id="58">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>1 500 руб.</v8:content>
+											</v8:item>
+										</Title>
+										<HorizontalAlign>Right</HorizontalAlign>
+										<ContextMenu name="ДекорацияРасхожденияПроданоКонтекстноеМеню" id="59"/>
+										<ExtendedTooltip name="ДекорацияРасхожденияПроданоExtendedTooltip" id="139"/>
+									</LabelDecoration>
+									<LabelDecoration name="ДекорацияПодобраноПродано" id="60">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>1 250 руб.</v8:content>
+											</v8:item>
+										</Title>
+										<HorizontalAlign>Right</HorizontalAlign>
+										<ContextMenu name="ДекорацияПодобраноПроданоКонтекстноеМеню" id="61"/>
+										<ExtendedTooltip name="ДекорацияПодобраноПроданоExtendedTooltip" id="140"/>
+									</LabelDecoration>
+									<LabelDecoration name="ДекорацияПусто5" id="62">
+										<Width>18</Width>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>[todo Декорация для отступа]</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ContextMenu name="ДекорацияПусто5КонтекстноеМеню" id="63"/>
+										<ExtendedTooltip name="ДекорацияПусто5ExtendedTooltip" id="141"/>
+									</LabelDecoration>
+									<LabelDecoration name="ДекорацияОстатокПродано" id="64">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>250 руб.</v8:content>
+											</v8:item>
+										</Title>
+										<HorizontalAlign>Right</HorizontalAlign>
+										<ContextMenu name="ДекорацияОстатокПроданоКонтекстноеМеню" id="65"/>
+										<ExtendedTooltip name="ДекорацияОстатокПроданоExtendedTooltip" id="142"/>
+									</LabelDecoration>
+								</ChildItems>
+							</UsualGroup>
+							<UsualGroup name="ГруппаСторноПодробно" id="29">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа сторно подробно</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Vertical</Group>
+								<Behavior>Usual</Behavior>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаСторноПодробноExtendedTooltip" id="143"/>
+								<ChildItems>
+									<LabelDecoration name="ДекорацияСторно" id="66">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<TextColor>style:NegativeTextColor</TextColor>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Сторно</v8:content>
+											</v8:item>
+										</Title>
+										<HorizontalAlign>Center</HorizontalAlign>
+										<ContextMenu name="ДекорацияСторноКонтекстноеМеню" id="67"/>
+										<ExtendedTooltip name="ДекорацияСторноExtendedTooltip" id="144"/>
+									</LabelDecoration>
+									<LabelDecoration name="ДекорацияДанныеСистемыВозврат" id="68">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<TextColor>style:NegativeTextColor</TextColor>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>10 000 руб.</v8:content>
+											</v8:item>
+										</Title>
+										<HorizontalAlign>Right</HorizontalAlign>
+										<ContextMenu name="ДекорацияДанныеСистемыВозвратКонтекстноеМеню" id="69"/>
+										<ExtendedTooltip name="ДекорацияДанныеСистемыВозвратExtendedTooltip" id="145"/>
+									</LabelDecoration>
+									<LabelDecoration name="ДекорацияДанныеФРВозврат" id="70">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<TextColor>style:NegativeTextColor</TextColor>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>8 500 руб.</v8:content>
+											</v8:item>
+										</Title>
+										<HorizontalAlign>Right</HorizontalAlign>
+										<ContextMenu name="ДекорацияДанныеФРВозвратКонтекстноеМеню" id="71"/>
+										<ExtendedTooltip name="ДекорацияДанныеФРВозвратExtendedTooltip" id="146"/>
+									</LabelDecoration>
+									<LabelDecoration name="ДекорацияПусто6" id="72">
+										<Width>18</Width>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>[todo Декорация для отступа]</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ContextMenu name="ДекорацияПусто6КонтекстноеМеню" id="73"/>
+										<ExtendedTooltip name="ДекорацияПусто6ExtendedTooltip" id="147"/>
+									</LabelDecoration>
+									<LabelDecoration name="ДекорацияРасхожденияВозврат" id="74">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>1 500 руб.</v8:content>
+											</v8:item>
+										</Title>
+										<HorizontalAlign>Right</HorizontalAlign>
+										<ContextMenu name="ДекорацияРасхожденияВозвратКонтекстноеМеню" id="75"/>
+										<ExtendedTooltip name="ДекорацияРасхожденияВозвратExtendedTooltip" id="148"/>
+									</LabelDecoration>
+									<LabelDecoration name="ДекорацияПодобраноВозврат" id="76">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>1 250 руб.</v8:content>
+											</v8:item>
+										</Title>
+										<HorizontalAlign>Right</HorizontalAlign>
+										<ContextMenu name="ДекорацияПодобраноВозвратКонтекстноеМеню" id="77"/>
+										<ExtendedTooltip name="ДекорацияПодобраноВозвратExtendedTooltip" id="149"/>
+									</LabelDecoration>
+									<LabelDecoration name="ДекорацияПусто7" id="78">
+										<Width>18</Width>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>[todo Декорация для отступа]</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ContextMenu name="ДекорацияПусто7КонтекстноеМеню" id="79"/>
+										<ExtendedTooltip name="ДекорацияПусто7ExtendedTooltip" id="150"/>
+									</LabelDecoration>
+									<LabelDecoration name="ДекорацияОстатокВозврат" id="80">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>250 руб.</v8:content>
+											</v8:item>
+										</Title>
+										<HorizontalAlign>Right</HorizontalAlign>
+										<ContextMenu name="ДекорацияОстатокВозвратКонтекстноеМеню" id="81"/>
+										<ExtendedTooltip name="ДекорацияОстатокВозвратExtendedTooltip" id="151"/>
+									</LabelDecoration>
+								</ChildItems>
+							</UsualGroup>
+						</ChildItems>
+					</Page>
+					<Page name="ГруппаИнформацияКратко" id="84">
+						<Visible>false</Visible>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа информация кратко</v8:content>
+							</v8:item>
+						</Title>
+						<Group>Horizontal</Group>
+						<ExtendedTooltip name="ГруппаИнформацияКраткоExtendedTooltip" id="152"/>
+						<ChildItems>
+							<UsualGroup name="ГруппаНаименованияКратко" id="86">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа наименования подробно</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Vertical</Group>
+								<Behavior>Usual</Behavior>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаНаименованияКраткоExtendedTooltip" id="153"/>
+								<ChildItems>
+									<LabelDecoration name="ДекорацияПусто8" id="87">
+										<Width>18</Width>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>[todo Декорация для отступа]</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ContextMenu name="ДекорацияПусто8КонтекстноеМеню" id="88"/>
+										<ExtendedTooltip name="ДекорацияПусто8ExtendedTooltip" id="154"/>
+									</LabelDecoration>
+									<LabelDecoration name="ДекорацияДанныеСистемыКратко" id="89">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Данные системы</v8:content>
+											</v8:item>
+										</Title>
+										<ContextMenu name="ДекорацияДанныеСистемыКраткоКонтекстноеМеню" id="90"/>
+										<ExtendedTooltip name="ДекорацияДанныеСистемыКраткоExtendedTooltip" id="155"/>
+									</LabelDecoration>
+								</ChildItems>
+							</UsualGroup>
+							<UsualGroup name="ГруппаПродажиКратко" id="91">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа продажи кратко</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Vertical</Group>
+								<Behavior>Usual</Behavior>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаПродажиКраткоExtendedTooltip" id="156"/>
+								<ChildItems>
+									<LabelDecoration name="ДекорацияПродажиКратко" id="92">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Продажи</v8:content>
+											</v8:item>
+										</Title>
+										<HorizontalAlign>Center</HorizontalAlign>
+										<ContextMenu name="ДекорацияПродажиКраткоКонтекстноеМеню" id="93"/>
+										<ExtendedTooltip name="ДекорацияПродажиКраткоExtendedTooltip" id="157"/>
+									</LabelDecoration>
+									<LabelDecoration name="ДекорацияДанныеСистемыПроданоКратко" id="94">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>10 000 руб.</v8:content>
+											</v8:item>
+										</Title>
+										<HorizontalAlign>Right</HorizontalAlign>
+										<ContextMenu name="ДекорацияДанныеСистемыПроданоКраткоКонтекстноеМеню" id="95"/>
+										<ExtendedTooltip name="ДекорацияДанныеСистемыПроданоКраткоExtendedTooltip" id="158"/>
+									</LabelDecoration>
+								</ChildItems>
+							</UsualGroup>
+							<UsualGroup name="ГруппаСторноКратко" id="96">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа сторно кратко</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Vertical</Group>
+								<Behavior>Usual</Behavior>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаСторноКраткоExtendedTooltip" id="159"/>
+								<ChildItems>
+									<LabelDecoration name="ДекорацияСторноКратко" id="97">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<TextColor>style:NegativeTextColor</TextColor>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Сторно</v8:content>
+											</v8:item>
+										</Title>
+										<HorizontalAlign>Center</HorizontalAlign>
+										<ContextMenu name="ДекорацияСторноКраткоКонтекстноеМеню" id="98"/>
+										<ExtendedTooltip name="ДекорацияСторноКраткоExtendedTooltip" id="160"/>
+									</LabelDecoration>
+									<LabelDecoration name="ДекорацияДанныеСистемыВозвратКратко" id="99">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<TextColor>style:NegativeTextColor</TextColor>
+										<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>10 000 руб.</v8:content>
+											</v8:item>
+										</Title>
+										<HorizontalAlign>Right</HorizontalAlign>
+										<ContextMenu name="ДекорацияДанныеСистемыВозвратКраткоКонтекстноеМеню" id="100"/>
+										<ExtendedTooltip name="ДекорацияДанныеСистемыВозвратКраткоExtendedTooltip" id="161"/>
+									</LabelDecoration>
+								</ChildItems>
+							</UsualGroup>
+						</ChildItems>
+					</Page>
+				</ChildItems>
+			</Pages>
+		</ChildItems>
+		<Attributes>
+			<ConditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ОсновнаяТаблица</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ОсновнаяТаблица.Возврат</dcsset:left>
+							<dcsset:comparisonType>Greater</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ОсновнаяТаблица</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ОсновнаяТаблица.ВозможностьИзменения</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:ТекстЗапрещеннойЯчейкиЦвет</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</ConditionalAppearance>
+		</Attributes>
+	</BaseForm>
+</Form>

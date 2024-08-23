@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
 	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
@@ -143,7 +143,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen" callType="After">ТБКПриОткрытииПосле</Event>
-		<Event name="9cc34712-da5f-4faa-a653-343d2085fbe8" callType="After">ТБКПередЗаписьюПосле</Event>
+		<Event name="BeforeWrite" callType="After">ТБКПередЗаписьюПосле</Event>
 	</Events>
 	<ChildItems>
 		<Pages name="ГруппаКонтактнаяИнформацияДополнительныеРеквизиты" id="26">
@@ -153,6 +153,7 @@
 					<v8:content>Группа контактная информация дополнительные реквизиты</v8:content>
 				</v8:item>
 			</Title>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
 			<ExtendedTooltip name="ГруппаКонтактнаяИнформацияДополнительныеРеквизитыExtendedTooltip" id="57"/>
 			<ChildItems>
 				<Page name="СтраницаУчетнаяИнформация" id="98">
@@ -178,6 +179,7 @@
 								</v8:item>
 							</Title>
 							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаФИОРасширеннаяПодсказка" id="106"/>
@@ -270,6 +272,7 @@
 						</InputField>
 						<UsualGroup name="ГруппаСотрудникМагазин" id="20">
 							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаСотрудникМагазинExtendedTooltip" id="50"/>
@@ -428,7 +431,7 @@
 			</dcsset:item>
 		</ConditionalAppearance>
 	</Attributes>
-	<BaseForm version="2.9">
+	<BaseForm version="2.17">
 		<VerticalScroll>useIfNecessary</VerticalScroll>
 		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 			<Autofill>false</Autofill>
@@ -578,6 +581,7 @@
 						<v8:content>Группа контактная информация дополнительные реквизиты</v8:content>
 					</v8:item>
 				</Title>
+				<PagesRepresentation>TabsOnTop</PagesRepresentation>
 				<ExtendedTooltip name="ГруппаКонтактнаяИнформацияДополнительныеРеквизитыExtendedTooltip" id="57"/>
 				<ChildItems>
 					<Page name="СтраницаУчетнаяИнформация" id="98">
@@ -603,6 +607,7 @@
 									</v8:item>
 								</Title>
 								<Group>Horizontal</Group>
+								<Behavior>Usual</Behavior>
 								<Representation>None</Representation>
 								<ShowTitle>false</ShowTitle>
 								<ExtendedTooltip name="ГруппаФИОРасширеннаяПодсказка" id="106"/>
@@ -695,6 +700,7 @@
 							</InputField>
 							<UsualGroup name="ГруппаСотрудникМагазин" id="20">
 								<Group>Horizontal</Group>
+								<Behavior>Usual</Behavior>
 								<Representation>None</Representation>
 								<ShowTitle>false</ShowTitle>
 								<ExtendedTooltip name="ГруппаСотрудникМагазинExtendedTooltip" id="50"/>

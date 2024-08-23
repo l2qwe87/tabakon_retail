@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
@@ -230,6 +230,7 @@
 					<v8:content>Страницы</v8:content>
 				</v8:item>
 			</Title>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
 			<ExtendedTooltip name="СтраницыExtendedTooltip" id="339"/>
 			<ChildItems>
 				<Page name="СтраницаГлавное" id="659">
@@ -255,6 +256,7 @@
 								</v8:item>
 							</ToolTip>
 							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ChildItemsWidth>Equal</ChildItemsWidth>
 							<ShowTitle>false</ShowTitle>
@@ -268,6 +270,7 @@
 										</v8:item>
 									</Title>
 									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<United>false</United>
 									<ShowTitle>false</ShowTitle>
@@ -288,6 +291,7 @@
 											</Title>
 											<HorizontalStretch>true</HorizontalStretch>
 											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ДатаНомерExtendedTooltip" id="324"/>
@@ -347,6 +351,7 @@
 												</v8:item>
 											</Title>
 											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаДисконтнаяКартаРасширеннаяПодсказка" id="550"/>
@@ -428,6 +433,7 @@
 												</v8:item>
 											</Title>
 											<Group>Vertical</Group>
+											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<United>false</United>
 											<ShowTitle>false</ShowTitle>
@@ -451,6 +457,7 @@
 										</v8:item>
 									</Title>
 									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<United>false</United>
 									<ShowTitle>false</ShowTitle>
@@ -535,6 +542,7 @@
 													<v8:content>Группа НДС</v8:content>
 												</v8:item>
 											</Title>
+											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаНДСРасширеннаяПодсказка" id="799"/>
@@ -567,6 +575,7 @@
 							</Title>
 							<Width>60</Width>
 							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаРазделительРасширеннаяПодсказка" id="723"/>
@@ -1311,6 +1320,7 @@
 								</v8:item>
 							</Title>
 							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаОплатаШапкаРасширеннаяПодсказка" id="767"/>
@@ -1330,6 +1340,7 @@
 										</v8:item>
 									</Title>
 									<Group>Horizontal</Group>
+									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаКнопкиИТекстEmailSmsРасширеннаяПодсказка" id="729"/>
@@ -1342,6 +1353,7 @@
 												</v8:item>
 											</Title>
 											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаКнопкиEmailSmsРасширеннаяПодсказка" id="731"/>
@@ -1372,6 +1384,7 @@
 											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
 											<Group>Horizontal</Group>
 											<HorizontalAlign>Right</HorizontalAlign>
+											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаДанныеSMSИEmailРасширеннаяПодсказка" id="735"/>
@@ -2143,6 +2156,7 @@
 		</Pages>
 		<UsualGroup name="ГруппаПодвал" id="629">
 			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаПодвалExtendedTooltip" id="630"/>
@@ -2155,6 +2169,7 @@
 						</v8:item>
 					</Title>
 					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаИтогоExtendedTooltip" id="632"/>
 					<ChildItems>
@@ -2209,6 +2224,7 @@
 								</v8:item>
 							</Title>
 							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаПодвалДополнительнаяРасширеннаяПодсказка" id="640"/>
@@ -2247,6 +2263,7 @@
 								</v8:item>
 							</Title>
 							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<BackColor>style:ИтогиФонГруппы</BackColor>
@@ -3459,7 +3476,7 @@
 			<Action callType="After">ТБКВозвратОтПокупателяПосле</Action>
 		</Command>
 	</Commands>
-	<BaseForm version="2.9">
+	<BaseForm version="2.17">
 		<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 		<AutoTime>CurrentOrLast</AutoTime>
 		<UsePostingMode>Auto</UsePostingMode>
@@ -3668,6 +3685,7 @@
 						<v8:content>Страницы</v8:content>
 					</v8:item>
 				</Title>
+				<PagesRepresentation>TabsOnTop</PagesRepresentation>
 				<ExtendedTooltip name="СтраницыExtendedTooltip" id="339"/>
 				<ChildItems>
 					<Page name="СтраницаГлавное" id="659">
@@ -3693,6 +3711,7 @@
 									</v8:item>
 								</ToolTip>
 								<Group>Horizontal</Group>
+								<Behavior>Usual</Behavior>
 								<Representation>None</Representation>
 								<ChildItemsWidth>Equal</ChildItemsWidth>
 								<ShowTitle>false</ShowTitle>
@@ -3706,6 +3725,7 @@
 											</v8:item>
 										</Title>
 										<Group>Vertical</Group>
+										<Behavior>Usual</Behavior>
 										<Representation>None</Representation>
 										<United>false</United>
 										<ShowTitle>false</ShowTitle>
@@ -3726,6 +3746,7 @@
 												</Title>
 												<HorizontalStretch>true</HorizontalStretch>
 												<Group>Horizontal</Group>
+												<Behavior>Usual</Behavior>
 												<Representation>None</Representation>
 												<ShowTitle>false</ShowTitle>
 												<ExtendedTooltip name="ДатаНомерExtendedTooltip" id="324"/>
@@ -3785,6 +3806,7 @@
 													</v8:item>
 												</Title>
 												<Group>Horizontal</Group>
+												<Behavior>Usual</Behavior>
 												<Representation>None</Representation>
 												<ShowTitle>false</ShowTitle>
 												<ExtendedTooltip name="ГруппаДисконтнаяКартаРасширеннаяПодсказка" id="550"/>
@@ -3866,6 +3888,7 @@
 													</v8:item>
 												</Title>
 												<Group>Vertical</Group>
+												<Behavior>Usual</Behavior>
 												<Representation>None</Representation>
 												<United>false</United>
 												<ShowTitle>false</ShowTitle>
@@ -3889,6 +3912,7 @@
 											</v8:item>
 										</Title>
 										<Group>Vertical</Group>
+										<Behavior>Usual</Behavior>
 										<Representation>None</Representation>
 										<United>false</United>
 										<ShowTitle>false</ShowTitle>
@@ -3973,6 +3997,7 @@
 														<v8:content>Группа НДС</v8:content>
 													</v8:item>
 												</Title>
+												<Behavior>Usual</Behavior>
 												<Representation>None</Representation>
 												<ShowTitle>false</ShowTitle>
 												<ExtendedTooltip name="ГруппаНДСРасширеннаяПодсказка" id="799"/>
@@ -4005,6 +4030,7 @@
 								</Title>
 								<Width>60</Width>
 								<Group>Horizontal</Group>
+								<Behavior>Usual</Behavior>
 								<Representation>None</Representation>
 								<ShowTitle>false</ShowTitle>
 								<ExtendedTooltip name="ГруппаРазделительРасширеннаяПодсказка" id="723"/>
@@ -4743,6 +4769,7 @@
 									</v8:item>
 								</Title>
 								<Group>Horizontal</Group>
+								<Behavior>Usual</Behavior>
 								<Representation>None</Representation>
 								<ShowTitle>false</ShowTitle>
 								<ExtendedTooltip name="ГруппаОплатаШапкаРасширеннаяПодсказка" id="767"/>
@@ -4762,6 +4789,7 @@
 											</v8:item>
 										</Title>
 										<Group>Horizontal</Group>
+										<Behavior>Usual</Behavior>
 										<Representation>None</Representation>
 										<ShowTitle>false</ShowTitle>
 										<ExtendedTooltip name="ГруппаКнопкиИТекстEmailSmsРасширеннаяПодсказка" id="729"/>
@@ -4774,6 +4802,7 @@
 													</v8:item>
 												</Title>
 												<Group>Horizontal</Group>
+												<Behavior>Usual</Behavior>
 												<Representation>None</Representation>
 												<ShowTitle>false</ShowTitle>
 												<ExtendedTooltip name="ГруппаКнопкиEmailSmsРасширеннаяПодсказка" id="731"/>
@@ -4804,6 +4833,7 @@
 												<GroupHorizontalAlign>Right</GroupHorizontalAlign>
 												<Group>Horizontal</Group>
 												<HorizontalAlign>Right</HorizontalAlign>
+												<Behavior>Usual</Behavior>
 												<Representation>None</Representation>
 												<ShowTitle>false</ShowTitle>
 												<ExtendedTooltip name="ГруппаДанныеSMSИEmailРасширеннаяПодсказка" id="735"/>
@@ -5575,6 +5605,7 @@
 			</Pages>
 			<UsualGroup name="ГруппаПодвал" id="629">
 				<Group>Vertical</Group>
+				<Behavior>Usual</Behavior>
 				<Representation>None</Representation>
 				<ShowTitle>false</ShowTitle>
 				<ExtendedTooltip name="ГруппаПодвалExtendedTooltip" id="630"/>
@@ -5587,6 +5618,7 @@
 							</v8:item>
 						</Title>
 						<Group>Horizontal</Group>
+						<Behavior>Usual</Behavior>
 						<ShowTitle>false</ShowTitle>
 						<ExtendedTooltip name="ГруппаИтогоExtendedTooltip" id="632"/>
 						<ChildItems>
@@ -5641,6 +5673,7 @@
 									</v8:item>
 								</Title>
 								<Group>Horizontal</Group>
+								<Behavior>Usual</Behavior>
 								<Representation>None</Representation>
 								<ShowTitle>false</ShowTitle>
 								<ExtendedTooltip name="ГруппаПодвалДополнительнаяРасширеннаяПодсказка" id="640"/>
@@ -5679,6 +5712,7 @@
 									</v8:item>
 								</Title>
 								<Group>Horizontal</Group>
+								<Behavior>Usual</Behavior>
 								<Representation>None</Representation>
 								<ShowTitle>false</ShowTitle>
 								<BackColor>style:ИтогиФонГруппы</BackColor>

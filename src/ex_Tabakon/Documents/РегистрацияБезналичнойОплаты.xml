@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<Document uuid="481f5d74-ae76-4108-967f-abb735163a1d">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentObject.РегистрацияБезналичнойОплаты" category="Object">
+				<xr:TypeId>ddf711cb-6c60-457d-b0be-c6ad28ee7ed2</xr:TypeId>
+				<xr:ValueId>3a288291-c7db-43f9-b710-1906c8ae1443</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentRef.РегистрацияБезналичнойОплаты" category="Ref">
+				<xr:TypeId>ed0b5b34-53e0-48e5-b8c1-2d368a1092cd</xr:TypeId>
+				<xr:ValueId>005d47ac-143b-409b-9e1c-2ec96652564c</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentSelection.РегистрацияБезналичнойОплаты" category="Selection">
+				<xr:TypeId>98111a07-bacb-4bf3-9dfa-f3da8f9e2a95</xr:TypeId>
+				<xr:ValueId>94c711b9-de04-4485-99e8-2cce0f5f88b4</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentList.РегистрацияБезналичнойОплаты" category="List">
+				<xr:TypeId>9e30f735-b677-42f1-8451-afcc0e75ddde</xr:TypeId>
+				<xr:ValueId>a22f65a8-68dc-43e2-b41c-8d332ec2d864</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentManager.РегистрацияБезналичнойОплаты" category="Manager">
+				<xr:TypeId>726e5aeb-7e5c-4eac-ae0f-1c335d8c45fa</xr:TypeId>
+				<xr:ValueId>989b6f06-5b10-4bf9-8c01-49b5c0b0de19</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<Name>РегистрацияБезналичнойОплаты</Name>
+			<Comment/>
+			<ExtendedConfigurationObject>6e3c42b6-8331-4dfe-8b1f-2d7429f65e3a</ExtendedConfigurationObject>
+			<RegisterRecords/>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="c9175cf9-7258-44fc-a974-879b557255c9">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>СуммаДокумента</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>de685833-756c-4638-8be8-147fcd700f62</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="d90f49de-dcc6-42aa-b481-6af3d912a427">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Контрагент</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>d7ec3c06-0f88-465a-a378-40be7d7f07c3</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="6626a8f5-1595-41e5-9f8f-9afed38f0625">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>КассаККМ</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>00d46e5a-a39e-499f-bcd3-8653a67e4e96</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КассыККМ</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="87837697-21fd-4a24-81f0-d0229830177d">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ХозяйственнаяОперация</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>23eeb032-5b73-4d34-a7b9-f174c8ab8e39</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ХозяйственныеОперации</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="f2752988-28ee-4407-8c2d-9e75986bf91d">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ПробитЧек</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>b0112824-9120-42fd-9001-a9fac0d09b9a</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+		</ChildObjects>
+	</Document>
+</MetaDataObject>

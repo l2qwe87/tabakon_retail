@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
 	<Document uuid="7004d482-9550-497b-a945-16145ef3ba5b">
 		<InternalInfo>
 			<xr:GeneratedType name="DocumentObject.ОплатаОтПокупателяПлатежнойКартой" category="Object">
@@ -24,9 +24,9 @@
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
 			<Name>ОплатаОтПокупателяПлатежнойКартой</Name>
 			<Comment/>
-			<ObjectBelonging>Adopted</ObjectBelonging>
 			<ExtendedConfigurationObject>49f82e58-4a06-4f7d-8490-b7487fe21c91</ExtendedConfigurationObject>
 			<RegisterRecords/>
 		</Properties>
@@ -34,9 +34,9 @@
 			<Attribute uuid="1d3d4fc8-02b4-4243-a0d7-b8bb7d152141">
 				<InternalInfo/>
 				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
 					<Name>ДокументОснование</Name>
 					<Comment/>
-					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>da979483-856c-4c9e-a5fc-0a41b439bf28</ExtendedConfigurationObject>
 					<Type>
 						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
@@ -46,9 +46,9 @@
 			<Attribute uuid="f4fc05df-b5d7-482e-ae7c-602b3da62c3c">
 				<InternalInfo/>
 				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
 					<Name>КассаККМ</Name>
 					<Comment/>
-					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>668e1103-2d10-4e18-a1df-3fac4891dfec</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>cfg:CatalogRef.КассыККМ</v8:Type>
@@ -58,9 +58,9 @@
 			<Attribute uuid="a359bc22-d8dc-48ad-8022-c37450ed0fe9">
 				<InternalInfo/>
 				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
 					<Name>НомерЧекаККМ</Name>
 					<Comment/>
-					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>668b5724-e721-470b-ad03-c2edde0e7821</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>xs:decimal</v8:Type>
@@ -69,6 +69,119 @@
 							<v8:FractionDigits>0</v8:FractionDigits>
 							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="f7310a0b-8fcc-4740-a0a2-0eb3924e771d">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ОплатаВыполнена</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>4969f283-47f7-4709-aebe-428224df8699</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="970db55d-a37a-4db1-9090-8e9cb3300449">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ХозяйственнаяОперация</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>a544fcbc-2a08-4f77-ac9c-78ead3146230</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ХозяйственныеОперации</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="5bf21101-6e5e-44fa-aac7-108f594a0e96">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>СуммаДокумента</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>4619d2b8-d2fa-4f37-b50b-0cc769a7de86</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="d2ee16b0-5b29-4f5a-b9c6-4c7e944c5327">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ПробиватьЧекиПоКассеККМ</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>b23486a0-7c22-44dd-9124-80cb14f90437</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="e5f6185c-1900-4e09-a1a5-33e62889648b">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ПробитЧек</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>cd13b1da-19ed-45ba-8f58-be2cf8fe547a</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="f46f29a8-eb01-4760-ac35-383e3d774435">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>СменаЗакрыта</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>7b18f8dc-fd21-46e1-8904-13862ce0b9b9</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="378210d8-3268-4800-bb02-d7b28315507b">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ВидОплаты</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>fe37da47-f26f-4251-95f5-7d8fbc721950</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВидыОплатЧекаККМ</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="98d80d17-c632-480a-8e7f-3902a8652e86">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Контрагент</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>0172880f-51e1-4c7d-89dc-ec5e5a3fd1ca</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="a7c75132-3675-4102-bd16-4f50c7db7c0b">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ОтчетОРозничныхПродажах</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>bd0c86f5-a2ff-4375-888e-8901bda90d58</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ОтчетОРозничныхПродажах</v8:Type>
 					</Type>
 				</Properties>
 			</Attribute>

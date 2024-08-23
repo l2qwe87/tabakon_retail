@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>true</RepostOnWrite>
@@ -34,6 +34,7 @@
 				</v8:item>
 			</ToolTip>
 			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="87"/>
 			<ChildItems>
@@ -51,6 +52,7 @@
 						</v8:item>
 					</ToolTip>
 					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ШапкаОсновноеРасширеннаяПодсказка" id="91"/>
 					<ChildItems>
@@ -82,6 +84,7 @@
 						</v8:item>
 					</ToolTip>
 					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
 					<Representation>StrongSeparation</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ШапкаДанныеПоМагазинуРасширеннаяПодсказка" id="93"/>
@@ -122,6 +125,7 @@
 				</v8:item>
 			</ToolTip>
 			<HorizontalStretch>true</HorizontalStretch>
+			<Behavior>Usual</Behavior>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа_ДанныеРасширеннаяПодсказка" id="89"/>
 			<ChildItems>
@@ -140,6 +144,7 @@
 					</ToolTip>
 					<HorizontalStretch>true</HorizontalStretch>
 					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
 					<Representation>StrongSeparation</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Группа_ВыручкаРасширеннаяПодсказка" id="75"/>
@@ -158,6 +163,7 @@
 								</v8:item>
 							</ToolTip>
 							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
 							<ExtendedTooltip name="Группа_ВедомостьРасширеннаяПодсказка" id="77"/>
 							<ChildItems>
 								<InputField name="ВыручкаЗаСменуПоКассе" id="16">
@@ -204,6 +210,7 @@
 								</v8:item>
 							</ToolTip>
 							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
 							<ExtendedTooltip name="Группа_ВыручкаКомментарийРасширеннаяПодсказка" id="79"/>
 							<ChildItems>
 								<InputField name="Комментарий_ВыручкаЗаСменуПоКассе" id="80">
@@ -233,6 +240,7 @@
 									<v8:content>Группа выручка ПКО</v8:content>
 								</v8:item>
 							</ToolTip>
+							<Behavior>Usual</Behavior>
 							<ExtendedTooltip name="Группа_ВыручкаПКОРасширеннаяПодсказка" id="177"/>
 							<ChildItems>
 								<InputField name="ВедомостьПродажНеУчтено_ПКО" id="173">
@@ -260,6 +268,7 @@
 						</v8:item>
 					</ToolTip>
 					<HorizontalStretch>true</HorizontalStretch>
+					<Behavior>Usual</Behavior>
 					<Representation>StrongSeparation</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Группа_ПродажиРасширеннаяПодсказка" id="97"/>
@@ -285,6 +294,7 @@
 								</v8:item>
 							</ToolTip>
 							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа_аличныеРасширеннаяПодсказка" id="159"/>
@@ -387,6 +397,7 @@
 								</v8:item>
 							</ToolTip>
 							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
 							<ExtendedTooltip name="Группа_ВозвратыРасширеннаяПодсказка" id="167"/>
 							<ChildItems>
 								<InputField name="ВозвратОтПокупателяНал" id="28">
@@ -521,6 +532,7 @@
 					</ToolTip>
 					<HorizontalStretch>true</HorizontalStretch>
 					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
 					<Representation>StrongSeparation</Representation>
 					<ExtendedTooltip name="Группа_ПродавцыРасширеннаяПодсказка" id="224"/>
 					<ChildItems>
@@ -635,6 +647,7 @@
 				</v8:item>
 			</ToolTip>
 			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа_РасходыОтделаРасширеннаяПодсказка" id="169"/>
 			<ChildItems>
@@ -676,6 +689,7 @@
 				</v8:item>
 			</ToolTip>
 			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа_ЗП_ПродацаРасширеннаяПодсказка" id="186"/>
 			<ChildItems>
@@ -723,6 +737,7 @@
 					<v8:content>Группа оплата поставщику</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Behavior>Usual</Behavior>
 			<ExtendedTooltip name="ГруппаОплатаПоставщикуРасширеннаяПодсказка" id="73"/>
 			<ChildItems>
 				<Table name="ОплатаПоставщику" id="43">
