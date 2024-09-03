@@ -11,5 +11,7 @@ namespace TbkIsmpCrpt
         Task<string> Auth();
 
         Task<string> CisesInfo(IEnumerable<string> ciss, string token);
+
+        Task<string> ProductInfo(string cis, string token);
     }
 }

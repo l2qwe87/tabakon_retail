@@ -32,7 +32,7 @@ namespace TbkIsmpCrpt
     {
         IIsmRequest Build();
         IIsmRequestBuilder SetRequestUrl(string requestUrl);
-        IIsmRequestBuilder AddQueryParam<T>(string key, string value);
+        IIsmRequestBuilder AddQueryParam(string key, string value);
         IIsmRequestBuilder AddAuth(string token);
         IIsmRequestBuilder AddBody<T>(T body);
     }

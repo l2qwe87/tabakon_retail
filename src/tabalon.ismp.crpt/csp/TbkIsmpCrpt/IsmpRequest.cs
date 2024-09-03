@@ -49,7 +49,7 @@ namespace TbkIsmpCrpt
             return this;
         }
 
-        public IIsmRequestBuilder AddQueryParam<T>(string key, string value)
+        public IIsmRequestBuilder AddQueryParam(string key, string value)
         {
 
             if (_queryParms == null)

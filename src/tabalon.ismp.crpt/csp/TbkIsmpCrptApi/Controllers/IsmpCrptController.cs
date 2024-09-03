@@ -41,6 +41,9 @@ namespace TbkIsmpCrptApi.Controllers
         public async Task<string> InfoPost([FromBody] IEnumerable<string> ciss)
             => await InfoInternal(ciss);
 
+        [HttpGet("ProductInfo")]
+        public async Task<string> ProductInfo([FromQuery] string cis)
+            => await ProductInfoInternal(cis);
 
         private async Task<string> InfoInternal(IEnumerable<string> ciss)
         {
@@ -50,6 +53,13 @@ namespace TbkIsmpCrptApi.Controllers
                 .Select(qr => qr.CIS)
                 .ToList();
             var resp = await _markirovkaClient.CisesInfo(codes);
+            return resp;
+        }
+
+        private async Task<string> ProductInfoInternal(string cis)
+        {
+            var qr = new QRParser(cis);
+            var resp = await _markirovkaClient.ProductInfo(qr.CIS);
             return resp;
         }
     }
