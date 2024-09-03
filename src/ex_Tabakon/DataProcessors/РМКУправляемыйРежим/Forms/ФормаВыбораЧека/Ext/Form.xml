@@ -196,7 +196,7 @@
 									<Type>UsualButton</Type>
 									<Representation>Picture</Representation>
 									<DefaultButton>true</DefaultButton>
-									<Width>8</Width>
+									<Width>10</Width>
 									<Height>3</Height>
 									<CommandName>0</CommandName>
 									<ExtendedTooltip name="КомандаВыбратьExtendedTooltip" id="44"/>
@@ -204,7 +204,7 @@
 								<Button name="ПоискПоШтрихкоду" id="113">
 									<Type>UsualButton</Type>
 									<TitleHeight>2</TitleHeight>
-									<Width>8</Width>
+									<Width>10</Width>
 									<Height>3</Height>
 									<CommandName>0</CommandName>
 									<ExtendedTooltip name="ПоискПоШтрихкодуРасширеннаяПодсказка" id="114"/>
@@ -235,23 +235,38 @@
 								</Button>
 								<Button name="Инструкция" id="125">
 									<Type>UsualButton</Type>
-									<Width>8</Width>
+									<Width>10</Width>
 									<Height>3</Height>
 									<CommandName>Form.Command.Инструкция</CommandName>
-									<Font bold="true" kind="AutoFont"/>
+									<Font height="9" bold="true" kind="AutoFont"/>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Инстр-
-укция</v8:content>
+											<v8:content>Возврат чека
+инструкция</v8:content>
 										</v8:item>
 									</Title>
 									<ExtendedTooltip name="ИнструкцияРасширеннаяПодсказка" id="126"/>
 								</Button>
+								<Button name="Инструкция1" id="129">
+									<Type>UsualButton</Type>
+									<Width>10</Width>
+									<Height>3</Height>
+									<CommandName>Form.Command.ИнструкцияПробитьНепробитый</CommandName>
+									<Font height="9" bold="true" kind="AutoFont"/>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Непробитый чек
+инструкция</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="Инструкция1РасширеннаяПодсказка" id="130"/>
+								</Button>
 								<Button name="КомандаОтменитьПоиск" id="115">
 									<Type>UsualButton</Type>
 									<TitleHeight>3</TitleHeight>
-									<Width>8</Width>
+									<Width>10</Width>
 									<Height>3</Height>
 									<CommandName>0</CommandName>
 									<ExtendedTooltip name="КомандаОтменитьПоискРасширеннаяПодсказка" id="116"/>
@@ -259,7 +274,7 @@
 								<Button name="КнопкаЗакрыть" id="21">
 									<Type>UsualButton</Type>
 									<Representation>Picture</Representation>
-									<Width>8</Width>
+									<Width>10</Width>
 									<Height>3</Height>
 									<CommandName>0</CommandName>
 									<ExtendedTooltip name="КнопкаЗакрытьExtendedTooltip" id="45"/>
@@ -313,6 +328,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКИнструкцияПосле</Action>
+		</Command>
+		<Command name="ИнструкцияПробитьНепробитый" id="1000001">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструкция</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструкция</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКИнструкцияПробитьНепробитыйПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.9">

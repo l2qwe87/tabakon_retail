@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<InformationRegister uuid="52a08fb0-f38c-48e9-813a-58a291b0b5d7">
+		<InternalInfo>
+			<xr:GeneratedType name="InformationRegisterRecord.СтатусыИнформированияГИСМ" category="Record">
+				<xr:TypeId>537d2003-9a1a-452c-b362-5a3bc506dc7a</xr:TypeId>
+				<xr:ValueId>2636ad5a-4556-4c3a-bed1-443cf8b64835</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterManager.СтатусыИнформированияГИСМ" category="Manager">
+				<xr:TypeId>329c8d05-b348-452a-99ad-7439213d3809</xr:TypeId>
+				<xr:ValueId>2097c384-ebef-4193-b5f7-311c69acbc20</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterSelection.СтатусыИнформированияГИСМ" category="Selection">
+				<xr:TypeId>0379c60f-4ed6-41b5-8d00-35cbfaedea28</xr:TypeId>
+				<xr:ValueId>b14fd59b-ba4f-494a-b140-bf83d62a6d05</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterList.СтатусыИнформированияГИСМ" category="List">
+				<xr:TypeId>714e225a-1475-4098-a630-c552a6ba30cb</xr:TypeId>
+				<xr:ValueId>c575ef37-d94b-4498-a1c2-1fdb317db0a8</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordSet.СтатусыИнформированияГИСМ" category="RecordSet">
+				<xr:TypeId>bbf8d4d6-d24c-49f1-b0f3-dcb7c5c671be</xr:TypeId>
+				<xr:ValueId>09028e65-fa1a-4222-a017-829a979352c3</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordKey.СтатусыИнформированияГИСМ" category="RecordKey">
+				<xr:TypeId>e658ef61-c380-4d35-961f-614419aabceb</xr:TypeId>
+				<xr:ValueId>1896dcb9-29ce-4ae8-9bc3-93f21b1b0817</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordManager.СтатусыИнформированияГИСМ" category="RecordManager">
+				<xr:TypeId>2f0407df-5663-4378-b518-d999bda46fe0</xr:TypeId>
+				<xr:ValueId>b581568f-9df1-49b0-9aee-c3fc8f832c24</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>СтатусыИнформированияГИСМ</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>752ea2da-cb18-4b3a-aacb-f4fc7b5f59c2</ExtendedConfigurationObject>
+			<InformationRegisterPeriodicity>Nonperiodical</InformationRegisterPeriodicity>
+			<WriteMode>Independent</WriteMode>
+		</Properties>
+		<ChildObjects>
+			<Resource uuid="0e817c7d-dad0-4e81-af82-c88b95928f9a">
+				<InternalInfo/>
+				<Properties>
+					<Name>Статус</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>08f70c59-8d87-4594-9d6d-96bf5d0c22fa</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.СтатусыИнформированияГИСМ</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="ba8cf542-3b42-4315-8127-424148143039">
+				<InternalInfo/>
+				<Properties>
+					<Name>ДальнейшееДействие</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>ab0ec2d1-423b-44cc-aa77-d278d9a7c3c0</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ДальнейшиеДействияПоВзаимодействиюГИСМ</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="fea44045-b048-4242-b307-109f9b7ae3f6">
+				<InternalInfo/>
+				<Properties>
+					<Name>Документ</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>6f83426b-d595-4d58-9d7e-ddbe1703fa34</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ДокументИнформированияГИСМ</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</InformationRegister>
+</MetaDataObject>

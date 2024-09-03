@@ -47,7 +47,7 @@
 			</UsePurposes>
 			<ScriptVariant>Russian</ScriptVariant>
 			<Vendor/>
-			<Version>1.6.3.0</Version>
+			<Version>1.6.8.0</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
@@ -186,6 +186,7 @@
 			<DefinedType>КассаБПО</DefinedType>
 			<DefinedType>КодАкцизнойМарки</DefinedType>
 			<DefinedType>GTIN</DefinedType>
+			<DefinedType>ДокументИнформированияГИСМ</DefinedType>
 			<Constant>ИспользоватьДатыЗапретаИзменения</Constant>
 			<Constant>ИспользоватьЗаказыПокупателей</Constant>
 			<Constant>ИспользоватьОбменССайтом</Constant>
@@ -245,6 +246,10 @@
 			<Catalog>НоменклатураПрисоединенныеФайлы</Catalog>
 			<Catalog>ТБКПричиныБрака</Catalog>
 			<Catalog>ТБКОкладыПремииИПроцентыНоваяМотивация</Catalog>
+			<Catalog>СерийныеНомера</Catalog>
+			<Catalog>НомераГТД</Catalog>
+			<Catalog>СерииНоменклатуры</Catalog>
+			<Catalog>УдалитьДоговорыЭквайринга</Catalog>
 			<Document>ТБК_ВедомостьОПродажахЗаДень</Document>
 			<Document>ОтчетОРозничныхПродажах</Document>
 			<Document>ЧекККМ</Document>
@@ -304,6 +309,8 @@
 			<Enum>Периодичность</Enum>
 			<Enum>ВидыКиЗГИСМ</Enum>
 			<Enum>ВидыУпаковокИС</Enum>
+			<Enum>ДальнейшиеДействияПоВзаимодействиюГИСМ</Enum>
+			<Enum>СтатусыИнформированияГИСМ</Enum>
 			<Report>ОтчетПоЧекам</Report>
 			<Report>ТБКОтчетОстаткиВРознице</Report>
 			<DataProcessor>РМКУправляемыйРежим</DataProcessor>
@@ -360,6 +367,7 @@
 			<InformationRegister>ТБКСписанныеМарки</InformationRegister>
 			<InformationRegister>ТБКУценка_Новая</InformationRegister>
 			<InformationRegister>ПоставщикиНоменклатуры</InformationRegister>
+			<InformationRegister>СтатусыИнформированияГИСМ</InformationRegister>
 			<AccumulationRegister>ТоварыНаСкладах</AccumulationRegister>
 			<AccumulationRegister>ДенежныеСредстваККМ</AccumulationRegister>
 			<AccumulationRegister>Продажи</AccumulationRegister>
