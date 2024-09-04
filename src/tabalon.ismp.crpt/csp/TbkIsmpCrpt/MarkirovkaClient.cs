@@ -38,5 +38,11 @@ namespace TbkIsmpCrpt
             this.Auth();
             return await _ismpClient.CisesInfo(ciss, _token);
         }
+
+        public async Task<string> ProductInfo(string cis)
+        {
+            this.Auth();
+            return await _ismpClient.ProductInfo(cis, _token);
+        }
     }
 }
