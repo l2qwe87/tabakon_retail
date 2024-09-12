@@ -21,6 +21,7 @@ namespace TbkIsmpCrpt
         public string BaseUrlTobacco { get; set; }
         public string BaseUrlOther { get; set; }
         public string Thumbprint { get; set; }
+        public int HttpTimeoutInSeconds { get; set; }
     }
 
 
@@ -84,6 +85,18 @@ namespace TbkIsmpCrpt
                 .AddBody(ciss)
                 .Build()
                 .SendAsync(); 
+
+            return tokenResponse.Body<string>(); ;
+        }
+
+        public async Task<string> ProductInfo(string cis, string token)
+        {
+            var tokenResponse = await IsmpRequest.Create(_serviceProvider)
+               .SetRequestUrl("api/v3/true-api/products/info")
+               .AddAuth(token)
+               .AddQueryParam("cis", cis)
+               .Build()
+               .SendAsync();
 
             return tokenResponse.Body<string>(); ;
         }

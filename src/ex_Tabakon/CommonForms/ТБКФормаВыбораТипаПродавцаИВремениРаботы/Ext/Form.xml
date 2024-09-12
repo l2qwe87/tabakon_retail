@@ -23,12 +23,28 @@
 		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
-		<InputField name="КассоваяСмена" id="32">
-			<DataPath>КассоваяСмена</DataPath>
-			<Enabled>false</Enabled>
-			<ContextMenu name="КассоваяСменаКонтекстноеМеню" id="33"/>
-			<ExtendedTooltip name="КассоваяСменаРасширеннаяПодсказка" id="34"/>
-		</InputField>
+		<UsualGroup name="Группа2" id="96">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="97"/>
+			<ChildItems>
+				<InputField name="КассоваяСмена" id="32">
+					<DataPath>КассоваяСмена</DataPath>
+					<Enabled>false</Enabled>
+					<ContextMenu name="КассоваяСменаКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="КассоваяСменаРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<CheckBoxField name="флНесколькоОсновных" id="101">
+					<DataPath>флНесколькоОсновных</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="флНесколькоОсновныхКонтекстноеМеню" id="102"/>
+					<ExtendedTooltip name="флНесколькоОсновныхРасширеннаяПодсказка" id="103"/>
+					<Events>
+						<Event name="OnChange">флНесколькоОсновныхПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="Группа3" id="51">
 			<Title>
 				<v8:item>
@@ -67,6 +83,83 @@
 				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>
+		<UsualGroup name="Группа6" id="72">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основные продавцы</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="73"/>
+			<ChildItems>
+				<Table name="ОсновныеПродавцы" id="74">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>ОсновныеПродавцы</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ОсновныеПродавцыКонтекстноеМеню" id="75"/>
+					<AutoCommandBar name="ОсновныеПродавцыКоманднаяПанель" id="76"/>
+					<ExtendedTooltip name="ОсновныеПродавцыРасширеннаяПодсказка" id="77"/>
+					<SearchStringAddition name="ОсновныеПродавцыСтрокаПоиска" id="78">
+						<AdditionSource>
+							<Item>ОсновныеПродавцы</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ОсновныеПродавцыСтрокаПоискаКонтекстноеМеню" id="79"/>
+						<ExtendedTooltip name="ОсновныеПродавцыСтрокаПоискаРасширеннаяПодсказка" id="80"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ОсновныеПродавцыСостояниеПросмотра" id="81">
+						<AdditionSource>
+							<Item>ОсновныеПродавцы</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ОсновныеПродавцыСостояниеПросмотраКонтекстноеМеню" id="82"/>
+						<ExtendedTooltip name="ОсновныеПродавцыСостояниеПросмотраРасширеннаяПодсказка" id="83"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ОсновныеПродавцыУправлениеПоиском" id="84">
+						<AdditionSource>
+							<Item>ОсновныеПродавцы</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ОсновныеПродавцыУправлениеПоискомКонтекстноеМеню" id="85"/>
+						<ExtendedTooltip name="ОсновныеПродавцыУправлениеПоискомРасширеннаяПодсказка" id="86"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="ОсновныеПродавцыПродавец" id="87">
+							<DataPath>ОсновныеПродавцы.Продавец</DataPath>
+							<EditMode>Directly</EditMode>
+							<DropListButton>false</DropListButton>
+							<ChoiceButton>true</ChoiceButton>
+							<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+							<ClearButton>true</ClearButton>
+							<SpinButton>false</SpinButton>
+							<ContextMenu name="ОсновныеПродавцыПродавецКонтекстноеМеню" id="88"/>
+							<ExtendedTooltip name="ОсновныеПродавцыПродавецРасширеннаяПодсказка" id="89"/>
+							<Events>
+								<Event name="StartChoice">ОсновныеПродавцыПродавецНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="ОсновныеПродавцыВремяСмены" id="90">
+							<DataPath>ОсновныеПродавцы.ВремяСмены</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ОсновныеПродавцыВремяСменыКонтекстноеМеню" id="91"/>
+							<ExtendedTooltip name="ОсновныеПродавцыВремяСменыРасширеннаяПодсказка" id="92"/>
+						</InputField>
+						<CheckBoxField name="ОсновныеПродавцыфлПродавецнаЗамену" id="93">
+							<DataPath>ОсновныеПродавцы.ПродавецНаЗамену</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОсновныеПродавцыфлПродавецнаЗаменуКонтекстноеМеню" id="94"/>
+							<ExtendedTooltip name="ОсновныеПродавцыфлПродавецнаЗаменуРасширеннаяПодсказка" id="95"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="Группа1" id="49">
 			<Title>
 				<v8:item>
@@ -98,6 +191,12 @@
 					<ContextMenu name="ВремяСмены1КонтекстноеМеню" id="47"/>
 					<ExtendedTooltip name="ВремяСмены1РасширеннаяПодсказка" id="48"/>
 				</InputField>
+				<CheckBoxField name="ВторойПродавецНаЗамену" id="104">
+					<DataPath>ВторойПродавецНаЗамену</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВторойПродавецНаЗаменуКонтекстноеМеню" id="105"/>
+					<ExtendedTooltip name="ВторойПродавецНаЗаменуРасширеннаяПодсказка" id="106"/>
+				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="Группа4" id="53">
@@ -314,6 +413,79 @@
 			</Type>
 		</Attribute>
 		<Attribute name="ПродавецНаЗамену" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продавец на замену</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОсновныеПродавцы" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основные продавцы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Продавец" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Продавец</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВремяСмены" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время смены</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПродавецНаЗамену" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Продавец на замену</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="флНесколькоОсновных" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Несколько основных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВторойПродавецНаЗамену" id="14">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>

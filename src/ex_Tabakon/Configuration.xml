@@ -47,7 +47,7 @@
 			</UsePurposes>
 			<ScriptVariant>Russian</ScriptVariant>
 			<Vendor/>
-			<Version>1.5.8.5</Version>
+			<Version>1.6.9.0</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
@@ -63,6 +63,7 @@
 			<Subsystem>ЗапасыИЗакупки</Subsystem>
 			<Subsystem>НормативноСправочнаяИнформация</Subsystem>
 			<Subsystem>Администрирование</Subsystem>
+			<Subsystem>Склад</Subsystem>
 			<StyleItem>ЦветТекстаОтмененнойСтрокиДокумента</StyleItem>
 			<StyleItem>ЦветПроведенногоДокумента</StyleItem>
 			<StyleItem>ЦветНепроведенногоДокумента</StyleItem>
@@ -175,6 +176,7 @@
 			<CommonModule>ШтрихкодированиеИСКлиент</CommonModule>
 			<CommonModule>РозничныеПродажиКлиент</CommonModule>
 			<CommonModule>ОбщегоНазначенияКлиент</CommonModule>
+			<CommonModule>ОбработкаТабличнойЧастиТоварыКлиент</CommonModule>
 			<ExchangePlan>ОбменРозницаУправлениеТорговлей103</ExchangePlan>
 			<WebService>ws_tbk</WebService>
 			<DefinedType>Номенклатура</DefinedType>
@@ -185,6 +187,8 @@
 			<DefinedType>КассаБПО</DefinedType>
 			<DefinedType>КодАкцизнойМарки</DefinedType>
 			<DefinedType>GTIN</DefinedType>
+			<DefinedType>ДокументИнформированияГИСМ</DefinedType>
+			<CommandGroup>Отчеты</CommandGroup>
 			<Constant>ИспользоватьДатыЗапретаИзменения</Constant>
 			<Constant>ИспользоватьЗаказыПокупателей</Constant>
 			<Constant>ИспользоватьОбменССайтом</Constant>
@@ -242,6 +246,12 @@
 			<Catalog>ВидыАлкогольнойПродукции</Catalog>
 			<Catalog>ВидыМехаГИСМ</Catalog>
 			<Catalog>НоменклатураПрисоединенныеФайлы</Catalog>
+			<Catalog>ТБКПричиныБрака</Catalog>
+			<Catalog>ТБКОкладыПремииИПроцентыНоваяМотивация</Catalog>
+			<Catalog>СерийныеНомера</Catalog>
+			<Catalog>НомераГТД</Catalog>
+			<Catalog>СерииНоменклатуры</Catalog>
+			<Catalog>УдалитьДоговорыЭквайринга</Catalog>
 			<Document>ТБК_ВедомостьОПродажахЗаДень</Document>
 			<Document>ОтчетОРозничныхПродажах</Document>
 			<Document>ЧекККМ</Document>
@@ -301,8 +311,11 @@
 			<Enum>Периодичность</Enum>
 			<Enum>ВидыКиЗГИСМ</Enum>
 			<Enum>ВидыУпаковокИС</Enum>
+			<Enum>ДальнейшиеДействияПоВзаимодействиюГИСМ</Enum>
+			<Enum>СтатусыИнформированияГИСМ</Enum>
 			<Report>ОтчетПоЧекам</Report>
 			<Report>ТБКОтчетОстаткиВРознице</Report>
+			<Report>ВедомостьПоТоварамНаСкладахСвободныеОстатки</Report>
 			<DataProcessor>РМКУправляемыйРежим</DataProcessor>
 			<DataProcessor>ТБК_Оле</DataProcessor>
 			<DataProcessor>ТБК_Миграции</DataProcessor>
@@ -351,6 +364,14 @@
 			<InformationRegister>ТБКПодаркиПоАкциям</InformationRegister>
 			<InformationRegister>ТБКПогашенныеСертификаты</InformationRegister>
 			<InformationRegister>ТБКУниверсальныеМарки</InformationRegister>
+			<InformationRegister>ТБКРучныеСкидкиЗапись</InformationRegister>
+			<InformationRegister>ТБКДолгиеЧеки</InformationRegister>
+			<InformationRegister>ТБКСоставГруппДляПроцентов_Исключения</InformationRegister>
+			<InformationRegister>ТБКСписанныеМарки</InformationRegister>
+			<InformationRegister>ТБКУценка_Новая</InformationRegister>
+			<InformationRegister>ПоставщикиНоменклатуры</InformationRegister>
+			<InformationRegister>СтатусыИнформированияГИСМ</InformationRegister>
+			<InformationRegister>ТБКМаркиДляБК</InformationRegister>
 			<AccumulationRegister>ТоварыНаСкладах</AccumulationRegister>
 			<AccumulationRegister>ДенежныеСредстваККМ</AccumulationRegister>
 			<AccumulationRegister>Продажи</AccumulationRegister>

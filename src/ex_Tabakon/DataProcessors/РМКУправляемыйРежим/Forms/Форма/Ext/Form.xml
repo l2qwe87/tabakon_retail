@@ -458,18 +458,35 @@
 				</CommandBar>
 			</ChildItems>
 		</UsualGroup>
-		<InputField name="ТекущаяКассаККМ" id="540">
-			<DataPath>ТекущаяКассаККМ</DataPath>
-			<OpenButton>false</OpenButton>
-			<CreateButton>false</CreateButton>
-			<ListChoiceMode>true</ListChoiceMode>
-			<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
-			<ContextMenu name="ТекущаяКассаККМКонтекстноеМеню" id="541"/>
-			<ExtendedTooltip name="ТекущаяКассаККМРасширеннаяПодсказка" id="542"/>
-			<Events>
-				<Event name="OnChange" callType="After">ТБКТекущаяКассаККМПриИзмененииПосле</Event>
-			</Events>
-		</InputField>
+		<UsualGroup name="Группа5" id="691">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="692"/>
+			<ChildItems>
+				<InputField name="ТекущаяКассаККМ" id="540">
+					<DataPath>ТекущаяКассаККМ</DataPath>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+					<ContextMenu name="ТекущаяКассаККМКонтекстноеМеню" id="541"/>
+					<ExtendedTooltip name="ТекущаяКассаККМРасширеннаяПодсказка" id="542"/>
+					<Events>
+						<Event name="OnChange" callType="After">ТБКТекущаяКассаККМПриИзмененииПосле</Event>
+					</Events>
+				</InputField>
+				<LabelDecoration name="ТекПродавец" id="688">
+					<ContextMenu name="ТекПродавецКонтекстноеМеню" id="689"/>
+					<ExtendedTooltip name="ТекПродавецРасширеннаяПодсказка" id="690"/>
+				</LabelDecoration>
+				<CheckBoxField name="ИспользоватьВторыеЭлектронки" id="714">
+					<DataPath>ИспользоватьВторыеЭлектронки</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользоватьВторыеЭлектронкиКонтекстноеМеню" id="715"/>
+					<ExtendedTooltip name="ИспользоватьВторыеЭлектронкиРасширеннаяПодсказка" id="716"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="Группа1" id="566">
 			<Group>AlwaysHorizontal</Group>
 			<Representation>None</Representation>
@@ -1039,6 +1056,7 @@
 											<ChildItems>
 												<Table name="ТабличноеПолеЧеков" id="33">
 													<Representation>List</Representation>
+													<Visible>false</Visible>
 													<ReadOnly>true</ReadOnly>
 													<Height>5</Height>
 													<AutoInsertNewRow>true</AutoInsertNewRow>
@@ -1241,6 +1259,7 @@
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="ГруппаБонусы" id="598">
+							<Enabled>false</Enabled>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -1517,6 +1536,7 @@
 							<Events>
 								<Event name="OnEditEnd" callType="After">ТБКТоварыПриОкончанииРедактированияПосле</Event>
 								<Event name="Selection" callType="After">ТБКТоварыВыборПосле</Event>
+								<Event name="BeforeDeleteRow" callType="After">ТБКТоварыПередУдалениемПосле</Event>
 								<Event name="OnActivateRow" callType="After">ТБКТоварыПриАктивизацииСтрокиПосле</Event>
 								<Event name="ChoiceProcessing" callType="After">ТБКТоварыОбработкаВыбораПосле</Event>
 								<Event name="BeforeRowChange" callType="After">ТБКТоварыПередНачаломИзмененияПосле</Event>
@@ -1843,6 +1863,81 @@
 								</InputField>
 							</ChildItems>
 						</Table>
+						<UsualGroup name="ГруппаВторыеЭлектронки" id="712">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вторые электронки</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:TextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа вторые электронки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаВторыеЭлектронкиРасширеннаяПодсказка" id="713"/>
+							<ChildItems>
+								<Table name="ТБКВторыеЭлектронки" id="693">
+									<ReadOnly>true</ReadOnly>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.ТБКВторыеЭлектронки</DataPath>
+									<TitleFont ref="style:TextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ТБКВторыеЭлектронкиКонтекстноеМеню" id="694"/>
+									<AutoCommandBar name="ТБКВторыеЭлектронкиКоманднаяПанель" id="695">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ТБКВторыеЭлектронкиРасширеннаяПодсказка" id="696"/>
+									<SearchStringAddition name="ТБКВторыеЭлектронкиСтрокаПоиска" id="697">
+										<AdditionSource>
+											<Item>ТБКВторыеЭлектронки</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТБКВторыеЭлектронкиСтрокаПоискаКонтекстноеМеню" id="698"/>
+										<ExtendedTooltip name="ТБКВторыеЭлектронкиСтрокаПоискаРасширеннаяПодсказка" id="699"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТБКВторыеЭлектронкиСостояниеПросмотра" id="700">
+										<AdditionSource>
+											<Item>ТБКВторыеЭлектронки</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТБКВторыеЭлектронкиСостояниеПросмотраКонтекстноеМеню" id="701"/>
+										<ExtendedTooltip name="ТБКВторыеЭлектронкиСостояниеПросмотраРасширеннаяПодсказка" id="702"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТБКВторыеЭлектронкиУправлениеПоиском" id="703">
+										<AdditionSource>
+											<Item>ТБКВторыеЭлектронки</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТБКВторыеЭлектронкиУправлениеПоискомКонтекстноеМеню" id="704"/>
+										<ExtendedTooltip name="ТБКВторыеЭлектронкиУправлениеПоискомРасширеннаяПодсказка" id="705"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="ТБКВторыеЭлектронкиНоменклатура" id="706">
+											<DataPath>Объект.ТБКВторыеЭлектронки.Номенклатура</DataPath>
+											<TitleFont ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>36</Width>
+											<Font ref="sys:DefaultGUIFont" height="12" bold="true" kind="WindowsFont"/>
+											<ContextMenu name="ТБКВторыеЭлектронкиНоменклатураКонтекстноеМеню" id="707"/>
+											<ExtendedTooltip name="ТБКВторыеЭлектронкиНоменклатураРасширеннаяПодсказка" id="708"/>
+										</InputField>
+										<InputField name="ТБКВторыеЭлектронкиЦена" id="717">
+											<DataPath>Объект.ТБКВторыеЭлектронки.Цена</DataPath>
+											<TitleFont ref="style:TextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТБКВторыеЭлектронкиЦенаКонтекстноеМеню" id="718"/>
+											<ExtendedTooltip name="ТБКВторыеЭлектронкиЦенаРасширеннаяПодсказка" id="719"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ГруппаБыстрыхТоваров" id="70">
@@ -2938,6 +3033,7 @@
 							<ChildItems>
 								<CheckBoxField name="ПокупкаСотрудника" id="581">
 									<DataPath>ПокупкаСотрудника</DataPath>
+									<Enabled>false</Enabled>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ПокупкаСотрудникаКонтекстноеМеню" id="582"/>
 									<ExtendedTooltip name="ПокупкаСотрудникаРасширеннаяПодсказка" id="583"/>
@@ -3663,6 +3759,149 @@
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НачалоЧека" id="1000029">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало чека</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КодыНовойУценки" id="1000030">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коды новой уценки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="КодНовойУценки" id="1000000">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код новой уценки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Номенклатура" id="1000001">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КлючСвязи" id="1000002">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ связи</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПричинаУценки" id="1000003">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Причина уценки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>4</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаСкидки" id="1000004">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма скидки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПроцентСкидки" id="1000005">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Процент скидки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Цена" id="1000006">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИспользоватьВторыеЭлектронки" id="1000031">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать вторые электронки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>

@@ -9,6 +9,8 @@ namespace TbkIsmpContracts
         Task<string> GetAggregated(string cis);
 
         Task<string> CisesInfo(IEnumerable<string> ciss);
+
+        Task<string> ProductInfo(string ciss);
     }
 
     public static class MarkirovkaExtenion
