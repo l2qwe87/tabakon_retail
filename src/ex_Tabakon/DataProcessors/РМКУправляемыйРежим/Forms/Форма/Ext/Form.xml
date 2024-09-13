@@ -19,29 +19,48 @@
 		<Event name="OnClose" callType="After">ТБКПриЗакрытииПосле</Event>
 	</Events>
 	<ChildItems>
-		<LabelDecoration name="ВерсияР" id="543">
-			<Title formatted="false">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Версия Р</v8:content>
-				</v8:item>
-			</Title>
-			<GroupHorizontalAlign>Left</GroupHorizontalAlign>
-			<ContextMenu name="ВерсияРКонтекстноеМеню" id="544"/>
-			<ExtendedTooltip name="ВерсияРРасширеннаяПодсказка" id="545"/>
-		</LabelDecoration>
-		<InputField name="ТекущаяКассаККМ" id="540">
-			<DataPath>ТекущаяКассаККМ</DataPath>
-			<OpenButton>false</OpenButton>
-			<CreateButton>false</CreateButton>
-			<ListChoiceMode>true</ListChoiceMode>
-			<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
-			<ContextMenu name="ТекущаяКассаККМКонтекстноеМеню" id="541"/>
-			<ExtendedTooltip name="ТекущаяКассаККМРасширеннаяПодсказка" id="542"/>
-			<Events>
-				<Event name="OnChange" callType="After">ТБКТекущаяКассаККМПриИзмененииПосле</Event>
-			</Events>
-		</InputField>
+		<UsualGroup name="Группа8" id="693">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="694"/>
+			<ChildItems>
+				<LabelDecoration name="ВерсияР" id="543">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Версия Р</v8:content>
+						</v8:item>
+					</Title>
+					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+					<ContextMenu name="ВерсияРКонтекстноеМеню" id="544"/>
+					<ExtendedTooltip name="ВерсияРРасширеннаяПодсказка" id="545"/>
+				</LabelDecoration>
+				<InputField name="ТекущаяКассаККМ" id="540">
+					<DataPath>ТекущаяКассаККМ</DataPath>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+					<ContextMenu name="ТекущаяКассаККМКонтекстноеМеню" id="541"/>
+					<ExtendedTooltip name="ТекущаяКассаККМРасширеннаяПодсказка" id="542"/>
+					<Events>
+						<Event name="OnChange" callType="After">ТБКТекущаяКассаККМПриИзмененииПосле</Event>
+					</Events>
+				</InputField>
+				<CheckBoxField name="ИспользоватьВторыеЭлектронки" id="690">
+					<DataPath>ИспользоватьВторыеЭлектронки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать вторые жидкости</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользоватьВторыеЭлектронкиКонтекстноеМеню" id="691"/>
+					<ExtendedTooltip name="ИспользоватьВторыеЭлектронкиРасширеннаяПодсказка" id="692"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="Группа1" id="566">
 			<Group>AlwaysHorizontal</Group>
 			<Representation>None</Representation>
@@ -1933,6 +1952,81 @@
 								</InputField>
 							</ChildItems>
 						</Table>
+						<UsualGroup name="ГруппаВторыеЭлектронки" id="669">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вторые жидкости</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:TextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа вторые электронки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаВторыеЭлектронкиРасширеннаяПодсказка" id="670"/>
+							<ChildItems>
+								<Table name="ТБКВторыеЭлектронки" id="671">
+									<ReadOnly>true</ReadOnly>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.ТБКВторыеЭлектронки</DataPath>
+									<TitleFont ref="style:TextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ТБКВторыеЭлектронкиКонтекстноеМеню" id="672"/>
+									<AutoCommandBar name="ТБКВторыеЭлектронкиКоманднаяПанель" id="673">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ТБКВторыеЭлектронкиРасширеннаяПодсказка" id="674"/>
+									<SearchStringAddition name="ТБКВторыеЭлектронкиСтрокаПоиска" id="675">
+										<AdditionSource>
+											<Item>ТБКВторыеЭлектронки</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТБКВторыеЭлектронкиСтрокаПоискаКонтекстноеМеню" id="676"/>
+										<ExtendedTooltip name="ТБКВторыеЭлектронкиСтрокаПоискаРасширеннаяПодсказка" id="677"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТБКВторыеЭлектронкиСостояниеПросмотра" id="678">
+										<AdditionSource>
+											<Item>ТБКВторыеЭлектронки</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТБКВторыеЭлектронкиСостояниеПросмотраКонтекстноеМеню" id="679"/>
+										<ExtendedTooltip name="ТБКВторыеЭлектронкиСостояниеПросмотраРасширеннаяПодсказка" id="680"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТБКВторыеЭлектронкиУправлениеПоиском" id="681">
+										<AdditionSource>
+											<Item>ТБКВторыеЭлектронки</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТБКВторыеЭлектронкиУправлениеПоискомКонтекстноеМеню" id="682"/>
+										<ExtendedTooltip name="ТБКВторыеЭлектронкиУправлениеПоискомРасширеннаяПодсказка" id="683"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="ТБКВторыеЭлектронкиНоменклатура" id="684">
+											<DataPath>Объект.ТБКВторыеЭлектронки.Номенклатура</DataPath>
+											<TitleFont ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>36</Width>
+											<Font ref="sys:DefaultGUIFont" height="12" bold="true" kind="WindowsFont"/>
+											<ContextMenu name="ТБКВторыеЭлектронкиНоменклатураКонтекстноеМеню" id="685"/>
+											<ExtendedTooltip name="ТБКВторыеЭлектронкиНоменклатураРасширеннаяПодсказка" id="686"/>
+										</InputField>
+										<InputField name="ТБКВторыеЭлектронкиЦена" id="687">
+											<DataPath>Объект.ТБКВторыеЭлектронки.Цена</DataPath>
+											<TitleFont ref="style:TextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТБКВторыеЭлектронкиЦенаКонтекстноеМеню" id="688"/>
+											<ExtendedTooltip name="ТБКВторыеЭлектронкиЦенаРасширеннаяПодсказка" id="689"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ГруппаБыстрыхТоваров" id="70">
@@ -3557,6 +3651,17 @@
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьВторыеЭлектронки" id="1000027">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать вторые электронки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
