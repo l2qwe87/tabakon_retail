@@ -3,83 +3,77 @@
   <SchemaVersion>9.0.2.10</SchemaVersion>
   <State>$base64$PFNvdXJjZUNvbnRyb2xJbmZvIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOmRkbDI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yIiB4bWxuczpkZGwyXzI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yLzIiIHhtbG5zOmRkbDEwMF8xMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDA4L2VuZ2luZS8xMDAvMTAwIiB4bWxuczpkZGwyMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAiIHhtbG5zOmRkbDIwMF8yMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAvMjAwIiB4bWxuczpkZGwzMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDExL2VuZ2luZS8zMDAiIHhtbG5zOmRkbDMwMF8zMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDExL2VuZ2luZS8zMDAvMzAwIiB4bWxuczpkZGw0MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEyL2VuZ2luZS80MDAiIHhtbG5zOmRkbDQwMF80MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEyL2VuZ2luZS80MDAvNDAwIiB4bWxuczpkZGw1MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEzL2VuZ2luZS81MDAiIHhtbG5zOmRkbDUwMF81MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEzL2VuZ2luZS81MDAvNTAwIiB4bWxuczpkd2Q9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vRGF0YVdhcmVob3VzZS9EZXNpZ25lci8xLjAiPg0KICA8RW5hYmxlZD5mYWxzZTwvRW5hYmxlZD4NCiAgPFByb2plY3ROYW1lPjwvUHJvamVjdE5hbWU+DQogIDxBdXhQYXRoPjwvQXV4UGF0aD4NCiAgPExvY2FsUGF0aD48L0xvY2FsUGF0aD4NCiAgPFByb3ZpZGVyPjwvUHJvdmlkZXI+DQo8L1NvdXJjZUNvbnRyb2xJbmZvPg==</State>
   <Database>
-    <Name>tbk.database</Name>
-    <FullPath>tbk.database</FullPath>
+    <Name>USTCO_OLAP_PROJECT.database</Name>
+    <FullPath>USTCO_OLAP_PROJECT.database</FullPath>
   </Database>
   <Cubes>
     <ProjectItem>
-      <Name>OLAP.cube</Name>
-      <FullPath>OLAP.cube</FullPath>
+      <Name>olap_tabakon.cube</Name>
+      <FullPath>olap_tabakon.cube</FullPath>
       <Dependencies>
         <ProjectItem>
-          <Name>OLAP.partitions</Name>
-          <FullPath>OLAP.partitions</FullPath>
+          <Name>olap_tabakon.partitions</Name>
+          <FullPath>olap_tabakon.partitions</FullPath>
         </ProjectItem>
       </Dependencies>
     </ProjectItem>
   </Cubes>
   <Dimensions>
     <ProjectItem>
-      <Name>Склады.dim</Name>
-      <FullPath>Склады.dim</FullPath>
+      <Name>Календарь.dim</Name>
+      <FullPath>Календарь.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Номенклатура.dim</Name>
       <FullPath>Номенклатура.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Календарь.dim</Name>
-      <FullPath>Календарь.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Регистратор.dim</Name>
-      <FullPath>Регистратор.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Чеки  Атрибуты.dim</Name>
-      <FullPath>Чеки  Атрибуты.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Поступление Товаров Услуг Аттрибуты.dim</Name>
-      <FullPath>Поступление Товаров Услуг Аттрибуты.dim</FullPath>
+      <Name>Документ Отчет О Розничных Продажах Товары.dim</Name>
+      <FullPath>Документ Отчет О Розничных Продажах Товары.dim</FullPath>
     </ProjectItem>
   </Dimensions>
   <DataSources>
     <ProjectItem>
-      <Name>OLAP.ds</Name>
-      <FullPath>OLAP.ds</FullPath>
+      <Name>olap_dw.ds</Name>
+      <FullPath>olap_dw.ds</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>REAL Tabakon.ds</Name>
-      <FullPath>REAL Tabakon.ds</FullPath>
+      <Name>REAL_Tabakon.ds</Name>
+      <FullPath>REAL_Tabakon.ds</FullPath>
     </ProjectItem>
   </DataSources>
   <DataSourceViews>
     <ProjectItem>
-      <Name>OLAP.dsv</Name>
-      <FullPath>OLAP.dsv</FullPath>
+      <Name>olap_dw.dsv</Name>
+      <FullPath>olap_dw.dsv</FullPath>
     </ProjectItem>
   </DataSourceViews>
+  <Roles>
+    <ProjectItem>
+      <Name>Admin.role</Name>
+      <FullPath>Admin.role</FullPath>
+    </ProjectItem>
+  </Roles>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
       <Options>
         <ConnectionMappings>
           <ConfigurationSetting>
-            <Id>OLAP</Id>
-            <Name>OLAP</Name>
-            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=dbserv4;Integrated Security=SSPI;Initial Catalog=OLAP</Value>
+            <Id>Olap Dw</Id>
+            <Name>Olap Dw</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=olap;Integrated Security=SSPI;Initial Catalog=olap_dw</Value>
           </ConfigurationSetting>
           <ConfigurationSetting>
             <Id>REAL Tabakon</Id>
             <Name>REAL Tabakon</Name>
-            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=dbserv4;Integrated Security=SSPI;Initial Catalog=REAL_tabakon</Value>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=DBSERV4;Integrated Security=SSPI;Initial Catalog=REAL_tabakon</Value>
           </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>
           <ConfigurationSetting>
-            <Id>OLAP</Id>
-            <Name>OLAP</Name>
+            <Id>Olap Dw</Id>
+            <Name>Olap Dw</Name>
             <Value xsi:type="xsd:int">0</Value>
           </ConfigurationSetting>
           <ConfigurationSetting>

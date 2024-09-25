@@ -1,0 +1,375 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="d5df2f50-0f7a-41e5-86f9-5d26e920d629" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>olap_dw</ID>
+  <Name>olap_dw</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="e65e99cc-0442-4ef0-aad3-317cdd80584d">
+      <ID>Календарь</ID>
+      <Name>Календарь</Name>
+      <DimensionID>Календарь</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a139dea1-b387-4ad4-abd9-f2e0ceba087c">
+          <AttributeID>Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c05211e7-b318-4e33-b09f-b67089d8c20f">
+          <AttributeID>Year Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7d64269f-6079-49cf-85b3-eb88fd903740">
+          <AttributeID>Month Name Short</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ed381cbf-1bd3-4f93-90e8-9276c33dd4d5">
+          <AttributeID>Year Month 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6f00e887-a03e-4ad5-963c-229efc236a0f">
+          <AttributeID>Year Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ea046817-a0d9-49d8-997c-c639f0888f0b">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="52158356-409c-473b-aeef-94af73a88ded">
+          <AttributeID>Date 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9baee8c8-74b4-4ea7-9b0b-d77546c38e72">
+          <AttributeID>Week Day Str</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3c23574f-0e4b-4fec-9e68-20aab59dcdd5">
+          <AttributeID>Season</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="acffa9fa-17d7-4527-955c-93801304526d">
+          <AttributeID>Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8a07fc8e-bb13-42cd-be2d-dab76e4a9003">
+          <AttributeID>Month Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fce43832-6861-40f6-b1a4-972fbb5e8944">
+          <AttributeID>Days In Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2d725c9d-a4a6-4f1d-aa90-0c0d44176f6b">
+          <AttributeID>Days In Year</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="9b2b0aea-b922-441a-b168-d8e014252dee">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="c1dfd52a-327c-4980-9730-384643c1bc44">
+      <ID>Номенклатура</ID>
+      <Name>Номенклатура</Name>
+      <DimensionID>Справочник Номенклатура Основной</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="217fdc84-834a-4106-8838-f2e7da8aefd5">
+          <AttributeID>Ссылка</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="d6bf2986-4f3b-46e7-9b69-c3d4ccdd5b37">
+      <ID>Магазины</ID>
+      <Name>Магазины</Name>
+      <DimensionID>Справочник Магазины Основной</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="d7b80a5a-9d80-4719-9007-0f819aadbd45">
+          <AttributeID>Ссылка</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="efb80441-3300-475d-98fa-07ee1a0db935">
+      <ID>ООРП</ID>
+      <Name>ООРП</Name>
+      <DimensionID>Документ Отчет О Розничных Продажах Основной</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="274efafc-d693-4b48-8465-57326c95c548">
+          <AttributeID>Ссылка</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e46aa9fe-8a70-4aef-a4e4-f58fb6e37ac4">
+          <AttributeID>Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2d0ba400-c60f-4b7f-b188-8530a432f03a">
+          <AttributeID>Магазин</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="ac9bdf08-037c-4db9-8e57-504e3d4ae853">
+      <ID>Регистр Себестоимость Анализ Продаж УПР Основной</ID>
+      <Name>Регистр Себестоимость Анализ Продаж УПР Основной</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="2d9d31ae-b701-4aa0-aa02-8a9ebf5f11db">
+          <ID>Прибыль УПР</ID>
+          <Name>Прибыль УПР</Name>
+          <Source dwd:design-time-name="fa89d908-f90c-4b76-ac07-8b1f156befee">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="08ed177c-bb09-4a37-8c1b-dbdfc42bba18">
+              <TableID>dbo_Регистр_СебестоимостьАнализПродажУПР_Основной</TableID>
+              <ColumnID>ПрибыльУПР</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="c80eca15-5700-40cf-86dd-56bee341fbc6">
+          <ID>Продажи Без НДС</ID>
+          <Name>Продажи Без НДС</Name>
+          <Source dwd:design-time-name="6c315f01-d191-425f-ad99-51bca5013f53">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="9dbb5e7e-51c7-4f00-afff-44401ac75b55">
+              <TableID>dbo_Регистр_СебестоимостьАнализПродажУПР_Основной</TableID>
+              <ColumnID>ПродажиБезНДС</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="c159baf0-f236-40b0-b1c6-0887f71f4631">
+          <ID>Продажии</ID>
+          <Name>Продажии</Name>
+          <Source dwd:design-time-name="7890ed9b-8689-4294-8568-5b4fc7703d22">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="0decb7aa-3462-41c1-be8a-1f7ce62fc83b">
+              <TableID>dbo_Регистр_СебестоимостьАнализПродажУПР_Основной</TableID>
+              <ColumnID>Продажии</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="81526f8f-bccb-497e-9c0a-9898cfdcbda8">
+          <ID>Себестоимость Без НДС УПР</ID>
+          <Name>Себестоимость Без НДС УПР</Name>
+          <Source dwd:design-time-name="75478e39-862e-4594-ac77-768120a4d224">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="7fcb238f-a2ca-47d1-9748-0a7f6dd84edd">
+              <TableID>dbo_Регистр_СебестоимостьАнализПродажУПР_Основной</TableID>
+              <ColumnID>СебестоимостьБезНДС_УПР</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="7c8cac43-5120-41eb-bb6e-4c64673ff2ce">
+          <ID>Себестоимость Итого</ID>
+          <Name>Себестоимость Итого</Name>
+          <Source dwd:design-time-name="332c9455-7216-4e9b-8a77-d88492beef1f">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6920726f-df7d-4312-9191-d1f86f9f6503">
+              <TableID>dbo_Регистр_СебестоимостьАнализПродажУПР_Основной</TableID>
+              <ColumnID>СебестоимостьИтого</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b901fb98-d68f-4a5b-a85f-3096df1c6407">
+          <ID>Себестоимость УПР</ID>
+          <Name>Себестоимость УПР</Name>
+          <Source dwd:design-time-name="5400ab96-124b-4d4d-97a1-cc4a370cd567">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="5388c324-0035-4016-a566-b72628e2747c">
+              <TableID>dbo_Регистр_СебестоимостьАнализПродажУПР_Основной</TableID>
+              <ColumnID>СебестоимостьУПР</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="7c448a3a-558f-4dc5-b23f-97f4a15e7b50">
+          <CubeDimensionID>Календарь</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="274b7b36-a689-4c7c-a3d9-a233d8bcf6ce">
+              <AttributeID>Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="80b82147-f7c0-4ff1-ad43-0714a70ebc16">
+                  <DataType>Date</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3078a751-c13f-4277-bf24-828c95e1765f">
+                    <TableID>dbo_Регистр_СебестоимостьАнализПродажУПР_Основной</TableID>
+                    <ColumnID>date_</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="4dbbd1c3-7f1b-4d52-b1e2-1e9c92c02b10">
+          <CubeDimensionID>Номенклатура</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a78a5174-e27e-464e-b620-4c3c74ea791e">
+              <AttributeID>Ссылка</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0e2d2c0c-d157-4fdb-a968-7d21a54fe754">
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c992ee1e-0b25-47a6-aebe-94b7e294779c">
+                    <TableID>dbo_Регистр_СебестоимостьАнализПродажУПР_Основной</TableID>
+                    <ColumnID>Номенклатура</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="895cbf05-2a29-4ff0-aed0-046682071f11">
+          <CubeDimensionID>Магазины</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8fa79cbd-1b6b-436d-9abf-c769175125d6">
+              <AttributeID>Ссылка</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8b6aa382-bc77-4dc3-b84b-b1e4d2ae1d6f">
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="29febf89-ac8b-4648-be21-32e99c3b4c9b">
+                    <TableID>dbo_Регистр_СебестоимостьАнализПродажУПР_Основной</TableID>
+                    <ColumnID>Магазин</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="fed42f85-6bc3-4ef0-8532-b788168184c8">
+      <ID>Документ Отчет О Розничных Продажах Товары</ID>
+      <Name>Документ Отчет О Розничных Продажах Товары</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="8e4df900-c8a2-40f9-8fb6-bddf1341ab69">
+          <ID>Количество</ID>
+          <Name>Количество</Name>
+          <Source dwd:design-time-name="c17c06e0-d014-4a68-b1b9-1e37c5821392">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="1bd1bb6f-c03e-45f7-bd4b-46a8dae38cac">
+              <TableID>dbo_Документ_ОтчетОРозничныхПродажах_Товары</TableID>
+              <ColumnID>Количество</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="00f8f283-e9dc-495f-bb4c-70b4a46b0320">
+          <ID>Сумма</ID>
+          <Name>Сумма</Name>
+          <Source dwd:design-time-name="32ea291b-f779-4e4f-89ba-5d5104ec49be">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="2dc34ceb-e822-468c-9352-9ca953ef354f">
+              <TableID>dbo_Документ_ОтчетОРозничныхПродажах_Товары</TableID>
+              <ColumnID>Сумма</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="db67c936-3d53-4001-8156-c04049ea0960">
+          <CubeDimensionID>ООРП</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="aa84ce74-393e-4cc7-b5df-6a300b0defac">
+              <AttributeID>Ссылка</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ced7fda1-af67-48ee-919c-751ac0716f85">
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8ab757d7-2144-4c34-9c4a-19bcc08722d7">
+                    <TableID>dbo_Документ_ОтчетОРозничныхПродажах_Товары</TableID>
+                    <ColumnID>СсылкаВладелец</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="fea1e7a9-464d-4700-b2be-b40da2b69610">
+          <CubeDimensionID>Номенклатура</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="94a0eb36-9615-4e33-bb63-2219d8f9f90b">
+              <AttributeID>Ссылка</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="fe41161f-fb28-4a35-a5ba-f582560c087f">
+                  <DataType>WChar</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ffc0edbc-4560-4e8c-83c5-1319915795ce">
+                    <TableID>dbo_Документ_ОтчетОРозничныхПродажах_Товары</TableID>
+                    <ColumnID>Номенклатура</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="9627a891-4327-4fd8-9da7-a0422b53619d">
+          <CubeDimensionID>Календарь</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c9704cf5-6ffe-4a03-b276-028b96caabc1">
+              <AttributeID>Date</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>ООРП</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Date</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="7a3486e6-e8cb-462c-9ad3-a4063b8ca560">
+          <CubeDimensionID>Магазины</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="73642330-0265-43f9-a643-1a6b9a03f9c9">
+              <AttributeID>Ссылка</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>ООРП</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Магазин</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="28ade342-50e9-4125-8520-f01b1cb24ebb">
+    <DataSourceViewID>Olap Dw</DataSourceViewID>
+  </Source>
+</Cube>
