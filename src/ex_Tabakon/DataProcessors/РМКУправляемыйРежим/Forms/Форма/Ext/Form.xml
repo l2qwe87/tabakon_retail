@@ -1374,6 +1374,39 @@
 										<Event name="Click" callType="After">ТБКПереключитьНеПечататьЧекНажатиеПосле</Event>
 									</Events>
 								</PictureField>
+								<UsualGroup name="ГруппаКоличествоЧеков" id="756">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа количество чеков</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа количество чеков</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКоличествоЧековРасширеннаяПодсказка" id="757"/>
+									<ChildItems>
+										<LabelDecoration name="КолЧековВсего" id="758">
+											<TextColor>style:AccentColor</TextColor>
+											<Font height="10" kind="AutoFont"/>
+											<ContextMenu name="КолЧековВсегоКонтекстноеМеню" id="759"/>
+											<ExtendedTooltip name="КолЧековВсегоРасширеннаяПодсказка" id="760"/>
+										</LabelDecoration>
+										<LabelDecoration name="КолЧековЛояльность" id="761">
+											<TextColor>style:AccentColor</TextColor>
+											<Font height="10" kind="AutoFont"/>
+											<ContextMenu name="КолЧековЛояльностьКонтекстноеМеню" id="762"/>
+											<ExtendedTooltip name="КолЧековЛояльностьРасширеннаяПодсказка" id="763"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="ГруппаБонусы" id="598">
