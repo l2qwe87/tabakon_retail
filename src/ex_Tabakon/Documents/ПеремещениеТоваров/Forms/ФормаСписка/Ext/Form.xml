@@ -5,6 +5,9 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen" callType="After">ТБКПриОткрытииПосле</Event>
+	</Events>
 	<ChildItems>
 		<UsualGroup name="БыстрыеОтборы" id="21">
 			<Title>
@@ -296,6 +299,11 @@
 					<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 					<ExtendedTooltip name="ФормаСправкаExtendedTooltip" id="81"/>
 				</Button>
+				<Button name="ФормаПроверкаСтрокВДокументах" id="181">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ПроверкаСтрокВДокументах</CommandName>
+					<ExtendedTooltip name="ФормаПроверкаСтрокВДокументахРасширеннаяПодсказка" id="182"/>
+				</Button>
 			</ChildItems>
 		</CommandBar>
 		<Table name="Список" id="1">
@@ -494,6 +502,23 @@
 		</Table>
 	</ChildItems>
 	<Attributes/>
+	<Commands>
+		<Command name="ПроверкаСтрокВДокументах" id="1000000">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка строк в документах</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка строк в документах</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКПроверкаСтрокВДокументахПосле</Action>
+		</Command>
+	</Commands>
 	<BaseForm version="2.9">
 		<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 		<VerticalScroll>useIfNecessary</VerticalScroll>
