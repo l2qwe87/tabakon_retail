@@ -77,6 +77,12 @@
 				</InputField>
 				<CheckBoxField name="флПродавецНаЗамену" id="69">
 					<DataPath>ПродавецНаЗамену</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Замена</v8:content>
+						</v8:item>
+					</Title>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="флПродавецНаЗаменуКонтекстноеМеню" id="70"/>
 					<ExtendedTooltip name="флПродавецНаЗаменуРасширеннаяПодсказка" id="71"/>
@@ -193,6 +199,12 @@
 				</InputField>
 				<CheckBoxField name="ВторойПродавецНаЗамену" id="104">
 					<DataPath>ВторойПродавецНаЗамену</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Замена</v8:content>
+						</v8:item>
+					</Title>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ВторойПродавецНаЗаменуКонтекстноеМеню" id="105"/>
 					<ExtendedTooltip name="ВторойПродавецНаЗаменуРасширеннаяПодсказка" id="106"/>
@@ -472,6 +484,17 @@
 						<v8:Type>xs:boolean</v8:Type>
 					</Type>
 				</Column>
+				<Column name="МобильныйПродавец" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мобильный продавец</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="флНесколькоОсновных" id="13">
@@ -486,6 +509,28 @@
 			</Type>
 		</Attribute>
 		<Attribute name="ВторойПродавецНаЗамену" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продавец на замену</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="МобильныйПродавец" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мобильный продавец</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВторойМобильныйПродавец" id="16">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
