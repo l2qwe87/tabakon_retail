@@ -925,6 +925,198 @@
 						</LabelDecoration>
 					</ChildItems>
 				</Page>
+				<Page name="Замены" id="146">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Замены</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лояльность</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ЗаменыРасширеннаяПодсказка" id="147"/>
+					<ChildItems>
+						<Table name="ТЗЗамены" id="148">
+							<Representation>List</Representation>
+							<ReadOnly>true</ReadOnly>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ТЗЗамены</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТЗЗаменыКонтекстноеМеню" id="149"/>
+							<AutoCommandBar name="ТЗЗаменыКоманднаяПанель" id="150">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТЗЗаменыРасширеннаяПодсказка" id="151"/>
+							<SearchStringAddition name="ТЗЗаменыСтрокаПоиска" id="152">
+								<AdditionSource>
+									<Item>ТЗЗамены</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗЗаменыСтрокаПоискаКонтекстноеМеню" id="153"/>
+								<ExtendedTooltip name="ТЗЗаменыСтрокаПоискаРасширеннаяПодсказка" id="154"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТЗЗаменыСостояниеПросмотра" id="155">
+								<AdditionSource>
+									<Item>ТЗЗамены</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗЗаменыСостояниеПросмотраКонтекстноеМеню" id="156"/>
+								<ExtendedTooltip name="ТЗЗаменыСостояниеПросмотраРасширеннаяПодсказка" id="157"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТЗЗаменыУправлениеПоиском" id="158">
+								<AdditionSource>
+									<Item>ТЗЗамены</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗЗаменыУправлениеПоискомКонтекстноеМеню" id="159"/>
+								<ExtendedTooltip name="ТЗЗаменыУправлениеПоискомРасширеннаяПодсказка" id="160"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ТЗЗаменыДата" id="161">
+									<DataPath>ТЗЗамены.Дата</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗЗаменыДатаКонтекстноеМеню" id="162"/>
+									<ExtendedTooltip name="ТЗЗаменыДатаРасширеннаяПодсказка" id="163"/>
+								</InputField>
+								<InputField name="ТЗЗаменыМагазин" id="164">
+									<DataPath>ТЗЗамены.Магазин</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗЗаменыМагазинКонтекстноеМеню" id="165"/>
+									<ExtendedTooltip name="ТЗЗаменыМагазинРасширеннаяПодсказка" id="166"/>
+								</InputField>
+								<InputField name="ТЗЗаменыВремяСмены" id="167">
+									<DataPath>ТЗЗамены.ВремяСмены</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗЗаменыВремяСменыКонтекстноеМеню" id="168"/>
+									<ExtendedTooltip name="ТЗЗаменыВремяСменыРасширеннаяПодсказка" id="169"/>
+								</InputField>
+								<InputField name="ТЗЗаменыЗП_Оклад" id="170">
+									<DataPath>ТЗЗамены.ЗП_Оклад</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗЗаменыЗП_ОкладКонтекстноеМеню" id="171"/>
+									<ExtendedTooltip name="ТЗЗаменыЗП_ОкладРасширеннаяПодсказка" id="172"/>
+								</InputField>
+								<InputField name="ТЗЗаменыПремияПроцент" id="173">
+									<DataPath>ТЗЗамены.ПремияПроцент</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗЗаменыПремияПроцентКонтекстноеМеню" id="174"/>
+									<ExtendedTooltip name="ТЗЗаменыПремияПроцентРасширеннаяПодсказка" id="175"/>
+								</InputField>
+								<InputField name="ТЗЗаменыПремияЗаПланТО" id="176">
+									<DataPath>ТЗЗамены.ПремияЗаПланТО</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗЗаменыПремияЗаПланТОКонтекстноеМеню" id="177"/>
+									<ExtendedTooltip name="ТЗЗаменыПремияЗаПланТОРасширеннаяПодсказка" id="178"/>
+								</InputField>
+								<InputField name="ТЗЗаменыПремияФокусГруппы" id="179">
+									<DataPath>ТЗЗамены.ПремияФокусГруппы</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗЗаменыПремияФокусГруппыКонтекстноеМеню" id="180"/>
+									<ExtendedTooltip name="ТЗЗаменыПремияФокусГруппыРасширеннаяПодсказка" id="181"/>
+								</InputField>
+								<InputField name="ТЗЗаменыИтог" id="182">
+									<DataPath>ТЗЗамены.Итог</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗЗаменыИтогКонтекстноеМеню" id="183"/>
+									<ExtendedTooltip name="ТЗЗаменыИтогРасширеннаяПодсказка" id="184"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ПремииВычеты" id="185">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Премии / Вычеты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лояльность</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПремииВычетыРасширеннаяПодсказка" id="186"/>
+					<ChildItems>
+						<Table name="ТЗ_Премии_Вычеты" id="187">
+							<Representation>List</Representation>
+							<ReadOnly>true</ReadOnly>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ТЗ_Премии_Вычеты</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТЗ_Премии_ВычетыКонтекстноеМеню" id="188"/>
+							<AutoCommandBar name="ТЗ_Премии_ВычетыКоманднаяПанель" id="189">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТЗ_Премии_ВычетыРасширеннаяПодсказка" id="190"/>
+							<SearchStringAddition name="ТЗ_Премии_ВычетыСтрокаПоиска" id="191">
+								<AdditionSource>
+									<Item>ТЗ_Премии_Вычеты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗ_Премии_ВычетыСтрокаПоискаКонтекстноеМеню" id="192"/>
+								<ExtendedTooltip name="ТЗ_Премии_ВычетыСтрокаПоискаРасширеннаяПодсказка" id="193"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТЗ_Премии_ВычетыСостояниеПросмотра" id="194">
+								<AdditionSource>
+									<Item>ТЗ_Премии_Вычеты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗ_Премии_ВычетыСостояниеПросмотраКонтекстноеМеню" id="195"/>
+								<ExtendedTooltip name="ТЗ_Премии_ВычетыСостояниеПросмотраРасширеннаяПодсказка" id="196"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТЗ_Премии_ВычетыУправлениеПоиском" id="197">
+								<AdditionSource>
+									<Item>ТЗ_Премии_Вычеты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗ_Премии_ВычетыУправлениеПоискомКонтекстноеМеню" id="198"/>
+								<ExtendedTooltip name="ТЗ_Премии_ВычетыУправлениеПоискомРасширеннаяПодсказка" id="199"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ТЗ_Премии_ВычетыДата" id="200">
+									<DataPath>ТЗ_Премии_Вычеты.Дата</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗ_Премии_ВычетыДатаКонтекстноеМеню" id="201"/>
+									<ExtendedTooltip name="ТЗ_Премии_ВычетыДатаРасширеннаяПодсказка" id="202"/>
+								</InputField>
+								<InputField name="ТЗ_Премии_ВычетыМагазин" id="203">
+									<DataPath>ТЗ_Премии_Вычеты.Магазин</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗ_Премии_ВычетыМагазинКонтекстноеМеню" id="204"/>
+									<ExtendedTooltip name="ТЗ_Премии_ВычетыМагазинРасширеннаяПодсказка" id="205"/>
+								</InputField>
+								<InputField name="ТЗ_Премии_ВычетыТип" id="212">
+									<DataPath>ТЗ_Премии_Вычеты.Тип</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗ_Премии_ВычетыТипКонтекстноеМеню" id="213"/>
+									<ExtendedTooltip name="ТЗ_Премии_ВычетыТипРасширеннаяПодсказка" id="214"/>
+								</InputField>
+								<InputField name="ТЗ_Премии_ВычетыКомментарий" id="206">
+									<DataPath>ТЗ_Премии_Вычеты.Комментарий</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗ_Премии_ВычетыКомментарийКонтекстноеМеню" id="207"/>
+									<ExtendedTooltip name="ТЗ_Премии_ВычетыКомментарийРасширеннаяПодсказка" id="208"/>
+								</InputField>
+								<InputField name="ТЗ_Премии_ВычетыСумма" id="209">
+									<DataPath>ТЗ_Премии_Вычеты.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЗ_Премии_ВычетыСуммаКонтекстноеМеню" id="210"/>
+									<ExtendedTooltip name="ТЗ_Премии_ВычетыСуммаРасширеннаяПодсказка" id="211"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
 	</ChildItems>
@@ -1151,6 +1343,227 @@
 					<v8:AllowedSign>Any</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</Type>
+		</Attribute>
+		<Attribute name="ТЗЗамены" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТЗЗамены</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Дата" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Магазин" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Магазин</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВремяСмены" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время смены</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗП_Оклад" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЗП оклад</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПремияПроцент" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Премия процент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПремияЗаПланТО" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Премия за план ТО</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПремияФокусГруппы" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Премия фокус группы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Итог" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Итог</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТЗ_Премии_Вычеты" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Т з премии вычеты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Дата" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Магазин" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Магазин</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Комментарий" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Тип" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
 		</Attribute>
 	</Attributes>
 </Form>
