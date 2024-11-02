@@ -74,6 +74,9 @@
 					<DataPath>ВремяСмены_Основной</DataPath>
 					<ContextMenu name="ВремяСменыКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="ВремяСменыРасширеннаяПодсказка" id="21"/>
+					<Events>
+						<Event name="OnChange">ВремяСменыПриИзменении</Event>
+					</Events>
 				</InputField>
 				<CheckBoxField name="флПродавецНаЗамену" id="69">
 					<DataPath>ПродавецНаЗамену</DataPath>
