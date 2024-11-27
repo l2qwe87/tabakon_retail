@@ -305,7 +305,8 @@
 			<InitialTreeView>ExpandTopLevel</InitialTreeView>
 			<EnableStartDrag>true</EnableStartDrag>
 			<FileDragMode>AsFile</FileDragMode>
-			<RowPictureDataPath>10000000</RowPictureDataPath>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
 			<AutoRefresh>false</AutoRefresh>
 			<AutoRefreshPeriod>60</AutoRefreshPeriod>
 			<Period>
@@ -351,6 +352,7 @@
 			</SearchControlAddition>
 			<ChildItems>
 				<PictureField name="КартинкаОтклонениеПеремещения" id="71">
+					<DataPath>~Список.КартинкаОтклонениеПеремещения</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -380,6 +382,7 @@
 					<ExtendedTooltip name="КартинкаОтклонениеПеремещенияExtendedTooltip" id="84"/>
 				</PictureField>
 				<LabelField name="Дата" id="4">
+					<DataPath>~Список.Дата</DataPath>
 					<DefaultItem>true</DefaultItem>
 					<Width>9</Width>
 					<HorizontalStretch>false</HorizontalStretch>
@@ -387,12 +390,14 @@
 					<ExtendedTooltip name="ДатаExtendedTooltip" id="85"/>
 				</LabelField>
 				<LabelField name="Номер" id="6">
+					<DataPath>~Список.Номер</DataPath>
 					<Width>14</Width>
 					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="НомерКонтекстноеМеню" id="7"/>
 					<ExtendedTooltip name="НомерExtendedTooltip" id="86"/>
 				</LabelField>
 				<LabelField name="МагазинОтправитель" id="35">
+					<DataPath>~Список.МагазинОтправитель</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -404,6 +409,7 @@
 					<ExtendedTooltip name="МагазинОтправительExtendedTooltip" id="88"/>
 				</LabelField>
 				<LabelField name="СкладОтправитель" id="37">
+					<DataPath>~Список.СкладОтправитель</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -415,18 +421,21 @@
 					<ExtendedTooltip name="СкладОтправительExtendedTooltip" id="89"/>
 				</LabelField>
 				<LabelField name="Недорасход" id="58">
+					<DataPath>~Список.Недорасход</DataPath>
 					<Width>10</Width>
 					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="НедорасходКонтекстноеМеню" id="59"/>
 					<ExtendedTooltip name="НедорасходExtendedTooltip" id="91"/>
 				</LabelField>
 				<LabelField name="Перерасход" id="63">
+					<DataPath>~Список.Перерасход</DataPath>
 					<Width>10</Width>
 					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="ПерерасходКонтекстноеМеню" id="64"/>
 					<ExtendedTooltip name="ПерерасходExtendedTooltip" id="92"/>
 				</LabelField>
 				<LabelField name="МагазинПолучатель" id="30">
+					<DataPath>~Список.МагазинПолучатель</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -438,6 +447,7 @@
 					<ExtendedTooltip name="МагазинПолучательExtendedTooltip" id="94"/>
 				</LabelField>
 				<LabelField name="СкладПолучатель" id="32">
+					<DataPath>~Список.СкладПолучатель</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -449,28 +459,33 @@
 					<ExtendedTooltip name="СкладПолучательExtendedTooltip" id="95"/>
 				</LabelField>
 				<LabelField name="Недопоставка" id="56">
+					<DataPath>~Список.Недопоставка</DataPath>
 					<Width>11</Width>
 					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="НедопоставкаКонтекстноеМеню" id="57"/>
 					<ExtendedTooltip name="НедопоставкаExtendedTooltip" id="97"/>
 				</LabelField>
 				<LabelField name="Перепоставка" id="61">
+					<DataPath>~Список.Перепоставка</DataPath>
 					<Width>11</Width>
 					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="ПерепоставкаКонтекстноеМеню" id="62"/>
 					<ExtendedTooltip name="ПерепоставкаExtendedTooltip" id="98"/>
 				</LabelField>
 				<LabelField name="Организация" id="65">
+					<DataPath>~Список.Организация</DataPath>
 					<Width>16</Width>
 					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="66"/>
 					<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="99"/>
 				</LabelField>
 				<LabelField name="Основание" id="39">
+					<DataPath>~Список.Основание</DataPath>
 					<Width>16</Width>
 					<ContextMenu name="ОснованиеКонтекстноеМеню" id="40"/>
 					<ExtendedTooltip name="ОснованиеExtendedTooltip" id="100"/>
 				</LabelField>
 				<LabelField name="СуммаДокумента" id="14">
+					<DataPath>~Список.СуммаДокумента</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -482,11 +497,13 @@
 					<ExtendedTooltip name="СуммаДокументаExtendedTooltip" id="101"/>
 				</LabelField>
 				<LabelField name="Ответственный" id="27">
+					<DataPath>~Список.Ответственный</DataPath>
 					<Width>16</Width>
 					<ContextMenu name="ОтветственныйКонтекстноеМеню" id="28"/>
 					<ExtendedTooltip name="ОтветственныйExtendedTooltip" id="102"/>
 				</LabelField>
 				<LabelField name="Комментарий" id="67">
+					<DataPath>~Список.Комментарий</DataPath>
 					<Width>16</Width>
 					<ContextMenu name="КомментарийКонтекстноеМеню" id="68"/>
 					<ExtendedTooltip name="КомментарийExtendedTooltip" id="103"/>
@@ -494,7 +511,222 @@
 			</ChildItems>
 		</Table>
 	</ChildItems>
-	<Attributes/>
+	<Attributes>
+		<Attribute name="Список" id="1000001">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>~Список.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПеремещениеТоваров.Ссылка КАК Ссылка,
+	ПеремещениеТоваров.ПометкаУдаления КАК ПометкаУдаления,
+	ПеремещениеТоваров.Номер КАК Номер,
+	ПеремещениеТоваров.Дата КАК Дата,
+	ПеремещениеТоваров.СкладОтправитель КАК СкладОтправитель,
+	ПеремещениеТоваров.СкладПолучатель КАК СкладПолучатель,
+	ВЫБОР
+		КОГДА ПеремещениеТоваров.ДокументОснование.Номер ЕСТЬ NULL
+			ТОГДА ПеремещениеТоваров.ПредставлениеДокументаОснования
+		ИНАЧЕ ПеремещениеТоваров.ДокументОснование
+	КОНЕЦ КАК Основание,
+	ПеремещениеТоваров.МагазинОтправитель КАК МагазинОтправитель,
+	ПеремещениеТоваров.МагазинПолучатель КАК МагазинПолучатель,
+	ПеремещениеТоваров.Ответственный КАК Ответственный,
+	ПеремещениеТоваров.СуммаДокумента КАК СуммаДокумента,
+	ПеремещениеТоваров.Организация КАК Организация,
+	ВЫРАЗИТЬ(ПеремещениеТоваров.Комментарий КАК СТРОКА(200)) КАК Комментарий,
+	ЕСТЬNULL(ТоварыКОтгрузке.Недорасход, 0) КАК Недорасход,
+	ЕСТЬNULL(ТоварыКОтгрузке.Перерасход, 0) КАК Перерасход,
+	ЕСТЬNULL(ТоварыКПоступлению.Недопоставка, 0) КАК Недопоставка,
+	ЕСТЬNULL(ТоварыКПоступлению.Перепоставка, 0) КАК Перепоставка,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ТоварыКОтгрузке.Недорасход, 0) = 0
+				И ЕСТЬNULL(ТоварыКОтгрузке.Перерасход, 0) = 0
+				И ЕСТЬNULL(ТоварыКПоступлению.Недопоставка, 0) = 0
+				И ЕСТЬNULL(ТоварыКПоступлению.Перепоставка, 0) = 0
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ ИСТИНА
+	КОНЕЦ КАК ЕстьОтклонениеПеремещения,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ТоварыКОтгрузке.Недорасход, 0) = 0
+				И ЕСТЬNULL(ТоварыКОтгрузке.Перерасход, 0) = 0
+				И ЕСТЬNULL(ТоварыКПоступлению.Недопоставка, 0) = 0
+				И ЕСТЬNULL(ТоварыКПоступлению.Перепоставка, 0) = 0
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК КартинкаОтклонениеПеремещения,
+	ПеремещениеТоваров.КоличествоПакетов КАК КоличествоПакетов,
+	ПеремещениеТоваров.КоличествоПакетовФакт КАК КоличествоПакетовФакт
+ИЗ
+	Документ.ПеремещениеТоваров КАК ПеремещениеТоваров
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ВложенныйЗапрос.ДокументОснование КАК ДокументОснование,
+			СУММА(ВложенныйЗапрос.Недорасход) КАК Недорасход,
+			СУММА(ВложенныйЗапрос.Перерасход) КАК Перерасход
+		ИЗ
+			(ВЫБРАТЬ
+				ТоварыКОтгрузкеОстатки.ДокументОснование КАК ДокументОснование,
+				ТоварыКОтгрузкеОстатки.Номенклатура КАК Номенклатура,
+				ТоварыКОтгрузкеОстатки.Характеристика КАК Характеристика,
+				ВЫБОР
+					КОГДА ТоварыКОтгрузкеОстатки.КоличествоОстаток &gt; 0
+						ТОГДА ТоварыКОтгрузкеОстатки.КоличествоОстаток
+					ИНАЧЕ 0
+				КОНЕЦ КАК Недорасход,
+				ВЫБОР
+					КОГДА ТоварыКОтгрузкеОстатки.КоличествоОстаток &lt; 0
+						ТОГДА -ТоварыКОтгрузкеОстатки.КоличествоОстаток
+					ИНАЧЕ 0
+				КОНЕЦ КАК Перерасход
+			ИЗ
+				РегистрНакопления.ТоварыКОтгрузке.Остатки(, ДокументОснование ССЫЛКА Документ.ПеремещениеТоваров) КАК ТоварыКОтгрузкеОстатки) КАК ВложенныйЗапрос
+		
+		СГРУППИРОВАТЬ ПО
+			ВложенныйЗапрос.ДокументОснование) КАК ТоварыКОтгрузке
+		ПО ПеремещениеТоваров.Ссылка = ТоварыКОтгрузке.ДокументОснование
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ВложенныйЗапрос.ДокументОснование КАК ДокументОснование,
+			СУММА(ВложенныйЗапрос.Недопоставка) КАК Недопоставка,
+			СУММА(ВложенныйЗапрос.Перепоставка) КАК Перепоставка
+		ИЗ
+			(ВЫБРАТЬ
+				ТоварыКПоступлениюОстатки.ДокументОснование КАК ДокументОснование,
+				ТоварыКПоступлениюОстатки.Номенклатура КАК Номенклатура,
+				ТоварыКПоступлениюОстатки.Характеристика КАК Характеристика,
+				ВЫБОР
+					КОГДА ТоварыКПоступлениюОстатки.КоличествоОстаток &gt; 0
+						ТОГДА ТоварыКПоступлениюОстатки.КоличествоОстаток
+					ИНАЧЕ 0
+				КОНЕЦ КАК Недопоставка,
+				ВЫБОР
+					КОГДА ТоварыКПоступлениюОстатки.КоличествоОстаток &lt; 0
+						ТОГДА -ТоварыКПоступлениюОстатки.КоличествоОстаток
+					ИНАЧЕ 0
+				КОНЕЦ КАК Перепоставка
+			ИЗ
+				РегистрНакопления.ТоварыКПоступлению.Остатки(, ДокументОснование ССЫЛКА Документ.ПеремещениеТоваров) КАК ТоварыКПоступлениюОстатки) КАК ВложенныйЗапрос
+		
+		СГРУППИРОВАТЬ ПО
+			ВложенныйЗапрос.ДокументОснование) КАК ТоварыКПоступлению
+		ПО ПеремещениеТоваров.Ссылка = ТоварыКПоступлению.ДокументОснование</QueryText>
+				<MainTable>Document.ПеремещениеТоваров</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Список</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.КоличествоПакетов</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:Field">Список.КоличествоПакетовФакт</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.Комментарий</dcsset:left>
+						<dcsset:comparisonType>Contains</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">Между магазинами</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.Комментарий</dcsset:left>
+						<dcsset:comparisonType>Contains</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">между магазинами</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Yellow</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Список</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.Комментарий</dcsset:left>
+						<dcsset:comparisonType>Contains</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">Между магазинами</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.Комментарий</dcsset:left>
+						<dcsset:comparisonType>Contains</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">между магазинами</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.КоличествоПакетовФакт</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Salmon</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Список</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.КоличествоПакетов</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:Field">Список.КоличествоПакетовФакт</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.Комментарий</dcsset:left>
+						<dcsset:comparisonType>Contains</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">Между магазинами</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.Комментарий</dcsset:left>
+						<dcsset:comparisonType>Contains</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">между магазинами</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Lime</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
 	<BaseForm version="2.9">
 		<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 		<VerticalScroll>useIfNecessary</VerticalScroll>
@@ -625,25 +857,25 @@
 							<Button name="СписокДокументАктОРасхожденияхПриПриемкеТоваровСоздатьНаОсновании" id="133">
 								<Type>CommandBarButton</Type>
 								<CommandName>0</CommandName>
-								<DataPath>1:02023637-7868-4a5f-8576-835a76e0c9ba/100</DataPath>
+								<DataPath>~Items.Список.CurrentData.Ref~Items.Список.CurrentData.Ссылка</DataPath>
 								<ExtendedTooltip name="СписокДокументАктОРасхожденияхПриПриемкеТоваровСоздатьНаОснованииРасширеннаяПодсказка" id="134"/>
 							</Button>
 							<Button name="ФормаДокументОрдерНаПеремещениеТоваровСоздатьНаОсновании" id="129">
 								<Type>CommandBarButton</Type>
 								<CommandName>0</CommandName>
-								<DataPath>1:02023637-7868-4a5f-8576-835a76e0c9ba/100</DataPath>
+								<DataPath>~Items.Список.CurrentData.Ref~Items.Список.CurrentData.Ссылка</DataPath>
 								<ExtendedTooltip name="ФормаДокументОрдерНаПеремещениеТоваровСоздатьНаОснованииРасширеннаяПодсказка" id="130"/>
 							</Button>
 							<Button name="ФормаСпискаВозвратИзРегистра2СоздатьНаОсновании" id="159">
 								<Type>CommandBarButton</Type>
 								<CommandName>0</CommandName>
-								<DataPath>1:02023637-7868-4a5f-8576-835a76e0c9ba/100</DataPath>
+								<DataPath>~Items.Список.CurrentData.Ref~Items.Список.CurrentData.Ссылка</DataPath>
 								<ExtendedTooltip name="ФормаСпискаВозвратИзРегистра2СоздатьНаОснованииРасширеннаяПодсказка" id="160"/>
 							</Button>
 							<Button name="ФормаДокументРасходныйОрдерНаТоварыСоздатьНаОсновании" id="123">
 								<Type>CommandBarButton</Type>
 								<CommandName>0</CommandName>
-								<DataPath>1:02023637-7868-4a5f-8576-835a76e0c9ba/100</DataPath>
+								<DataPath>~Items.Список.CurrentData.Ref~Items.Список.CurrentData.Ссылка</DataPath>
 								<Title>
 									<v8:item>
 										<v8:lang>ru</v8:lang>
@@ -655,7 +887,7 @@
 							<Button name="ФормаДокументПриходныйОрдерНаТоварыСоздатьНаОсновании" id="125">
 								<Type>CommandBarButton</Type>
 								<CommandName>0</CommandName>
-								<DataPath>1:02023637-7868-4a5f-8576-835a76e0c9ba/100</DataPath>
+								<DataPath>~Items.Список.CurrentData.Ref~Items.Список.CurrentData.Ссылка</DataPath>
 								<Title>
 									<v8:item>
 										<v8:lang>ru</v8:lang>
@@ -667,13 +899,13 @@
 							<Button name="ФормаДокументПередачаВРегистр2СоздатьНаОсновании" id="157">
 								<Type>CommandBarButton</Type>
 								<CommandName>0</CommandName>
-								<DataPath>1:02023637-7868-4a5f-8576-835a76e0c9ba/100</DataPath>
+								<DataPath>~Items.Список.CurrentData.Ref~Items.Список.CurrentData.Ссылка</DataPath>
 								<ExtendedTooltip name="ФормаДокументПередачаВРегистр2СоздатьНаОснованииРасширеннаяПодсказка" id="158"/>
 							</Button>
 							<Button name="ФормаДокументаПеремещениеТоваровСоздатьНаОсновании" id="177">
 								<Type>CommandBarButton</Type>
 								<CommandName>0</CommandName>
-								<DataPath>1:02023637-7868-4a5f-8576-835a76e0c9ba/100</DataPath>
+								<DataPath>~Items.Список.CurrentData.Ref~Items.Список.CurrentData.Ссылка</DataPath>
 								<Title>
 									<v8:item>
 										<v8:lang>ru</v8:lang>
@@ -685,7 +917,7 @@
 							<Button name="ФормаДокументПередачаТоваровМеждуОрганизациямиСоздатьНаОсновании" id="127">
 								<Type>CommandBarButton</Type>
 								<CommandName>0</CommandName>
-								<DataPath>1:02023637-7868-4a5f-8576-835a76e0c9ba/100</DataPath>
+								<DataPath>~Items.Список.CurrentData.Ref~Items.Список.CurrentData.Ссылка</DataPath>
 								<ExtendedTooltip name="ФормаДокументПередачаТоваровМеждуОрганизациямиСоздатьНаОснованииРасширеннаяПодсказка" id="128"/>
 							</Button>
 							<Button name="ФормаСоздатьНаОснованииЧекЕГАИС" id="179">
@@ -701,13 +933,13 @@
 							<Button name="ФормаДокументУстановкаЦенНоменклатурыСоздатьНаОсновании" id="119">
 								<Type>CommandBarButton</Type>
 								<CommandName>0</CommandName>
-								<DataPath>1:02023637-7868-4a5f-8576-835a76e0c9ba/100</DataPath>
+								<DataPath>~Items.Список.CurrentData.Ref~Items.Список.CurrentData.Ссылка</DataPath>
 								<ExtendedTooltip name="ФормаДокументУстановкаЦенНоменклатурыСоздатьНаОснованииРасширеннаяПодсказка" id="120"/>
 							</Button>
 							<Button name="ФормаОбщаяКомандаСозданиеСвязанныхОбъектов" id="121">
 								<Type>CommandBarButton</Type>
 								<CommandName>0</CommandName>
-								<DataPath>1:02023637-7868-4a5f-8576-835a76e0c9ba/100</DataPath>
+								<DataPath>~Items.Список.CurrentData.Ref~Items.Список.CurrentData.Ссылка</DataPath>
 								<ExtendedTooltip name="ФормаОбщаяКомандаСозданиеСвязанныхОбъектовРасширеннаяПодсказка" id="122"/>
 							</Button>
 						</ChildItems>
@@ -787,13 +1019,13 @@
 							<Button name="ФормаОбщаяКомандаЗаполнениеОбъекта" id="143">
 								<Type>CommandBarButton</Type>
 								<CommandName>0</CommandName>
-								<DataPath>1:02023637-7868-4a5f-8576-835a76e0c9ba/6</DataPath>
+								<DataPath>~Items.Список.CurrentData.КартинкаОтклонениеПеремещения</DataPath>
 								<ExtendedTooltip name="ФормаОбщаяКомандаЗаполнениеОбъектаРасширеннаяПодсказка" id="144"/>
 							</Button>
 							<Button name="ФормаОбщаяКомандаОтчетыОбъекта" id="145">
 								<Type>CommandBarButton</Type>
 								<CommandName>0</CommandName>
-								<DataPath>1:02023637-7868-4a5f-8576-835a76e0c9ba/6</DataPath>
+								<DataPath>~Items.Список.CurrentData.КартинкаОтклонениеПеремещения</DataPath>
 								<ExtendedTooltip name="ФормаОбщаяКомандаОтчетыОбъектаРасширеннаяПодсказка" id="146"/>
 							</Button>
 						</ChildItems>
@@ -813,7 +1045,8 @@
 				<InitialTreeView>ExpandTopLevel</InitialTreeView>
 				<EnableStartDrag>true</EnableStartDrag>
 				<FileDragMode>AsFile</FileDragMode>
-				<RowPictureDataPath>10000000</RowPictureDataPath>
+				<DataPath>Список</DataPath>
+				<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
 				<AutoRefresh>false</AutoRefresh>
 				<AutoRefreshPeriod>60</AutoRefreshPeriod>
 				<Period>
@@ -859,6 +1092,7 @@
 				</SearchControlAddition>
 				<ChildItems>
 					<PictureField name="КартинкаОтклонениеПеремещения" id="71">
+						<DataPath>~Список.КартинкаОтклонениеПеремещения</DataPath>
 						<Title>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
@@ -888,6 +1122,7 @@
 						<ExtendedTooltip name="КартинкаОтклонениеПеремещенияExtendedTooltip" id="84"/>
 					</PictureField>
 					<LabelField name="Дата" id="4">
+						<DataPath>~Список.Date~Список.Дата</DataPath>
 						<DefaultItem>true</DefaultItem>
 						<Width>9</Width>
 						<HorizontalStretch>false</HorizontalStretch>
@@ -895,12 +1130,14 @@
 						<ExtendedTooltip name="ДатаExtendedTooltip" id="85"/>
 					</LabelField>
 					<LabelField name="Номер" id="6">
+						<DataPath>~Список.Number~Список.Номер</DataPath>
 						<Width>14</Width>
 						<HorizontalStretch>false</HorizontalStretch>
 						<ContextMenu name="НомерКонтекстноеМеню" id="7"/>
 						<ExtendedTooltip name="НомерExtendedTooltip" id="86"/>
 					</LabelField>
 					<LabelField name="МагазинОтправитель" id="35">
+						<DataPath>~Список.МагазинОтправитель</DataPath>
 						<Title>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
@@ -912,6 +1149,7 @@
 						<ExtendedTooltip name="МагазинОтправительExtendedTooltip" id="88"/>
 					</LabelField>
 					<LabelField name="СкладОтправитель" id="37">
+						<DataPath>~Список.СкладОтправитель</DataPath>
 						<Title>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
@@ -923,18 +1161,21 @@
 						<ExtendedTooltip name="СкладОтправительExtendedTooltip" id="89"/>
 					</LabelField>
 					<LabelField name="Недорасход" id="58">
+						<DataPath>~Список.Недорасход</DataPath>
 						<Width>10</Width>
 						<HorizontalStretch>false</HorizontalStretch>
 						<ContextMenu name="НедорасходКонтекстноеМеню" id="59"/>
 						<ExtendedTooltip name="НедорасходExtendedTooltip" id="91"/>
 					</LabelField>
 					<LabelField name="Перерасход" id="63">
+						<DataPath>~Список.Перерасход</DataPath>
 						<Width>10</Width>
 						<HorizontalStretch>false</HorizontalStretch>
 						<ContextMenu name="ПерерасходКонтекстноеМеню" id="64"/>
 						<ExtendedTooltip name="ПерерасходExtendedTooltip" id="92"/>
 					</LabelField>
 					<LabelField name="МагазинПолучатель" id="30">
+						<DataPath>~Список.МагазинПолучатель</DataPath>
 						<Title>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
@@ -946,6 +1187,7 @@
 						<ExtendedTooltip name="МагазинПолучательExtendedTooltip" id="94"/>
 					</LabelField>
 					<LabelField name="СкладПолучатель" id="32">
+						<DataPath>~Список.СкладПолучатель</DataPath>
 						<Title>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
@@ -957,28 +1199,33 @@
 						<ExtendedTooltip name="СкладПолучательExtendedTooltip" id="95"/>
 					</LabelField>
 					<LabelField name="Недопоставка" id="56">
+						<DataPath>~Список.Недопоставка</DataPath>
 						<Width>11</Width>
 						<HorizontalStretch>false</HorizontalStretch>
 						<ContextMenu name="НедопоставкаКонтекстноеМеню" id="57"/>
 						<ExtendedTooltip name="НедопоставкаExtendedTooltip" id="97"/>
 					</LabelField>
 					<LabelField name="Перепоставка" id="61">
+						<DataPath>~Список.Перепоставка</DataPath>
 						<Width>11</Width>
 						<HorizontalStretch>false</HorizontalStretch>
 						<ContextMenu name="ПерепоставкаКонтекстноеМеню" id="62"/>
 						<ExtendedTooltip name="ПерепоставкаExtendedTooltip" id="98"/>
 					</LabelField>
 					<LabelField name="Организация" id="65">
+						<DataPath>~Список.Организация</DataPath>
 						<Width>16</Width>
 						<ContextMenu name="ОрганизацияКонтекстноеМеню" id="66"/>
 						<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="99"/>
 					</LabelField>
 					<LabelField name="Основание" id="39">
+						<DataPath>~Список.Основание</DataPath>
 						<Width>16</Width>
 						<ContextMenu name="ОснованиеКонтекстноеМеню" id="40"/>
 						<ExtendedTooltip name="ОснованиеExtendedTooltip" id="100"/>
 					</LabelField>
 					<LabelField name="СуммаДокумента" id="14">
+						<DataPath>~Список.СуммаДокумента</DataPath>
 						<Title>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
@@ -990,11 +1237,13 @@
 						<ExtendedTooltip name="СуммаДокументаExtendedTooltip" id="101"/>
 					</LabelField>
 					<LabelField name="Ответственный" id="27">
+						<DataPath>~Список.Ответственный</DataPath>
 						<Width>16</Width>
 						<ContextMenu name="ОтветственныйКонтекстноеМеню" id="28"/>
 						<ExtendedTooltip name="ОтветственныйExtendedTooltip" id="102"/>
 					</LabelField>
 					<LabelField name="Комментарий" id="67">
+						<DataPath>~Список.Комментарий</DataPath>
 						<Width>16</Width>
 						<ContextMenu name="КомментарийКонтекстноеМеню" id="68"/>
 						<ExtendedTooltip name="КомментарийExtendedTooltip" id="103"/>
@@ -1002,6 +1251,127 @@
 				</ChildItems>
 			</Table>
 		</ChildItems>
-		<Attributes/>
+		<Attributes>
+			<Attribute name="Список" id="1000001">
+				<Type>
+					<v8:Type>cfg:DynamicList</v8:Type>
+				</Type>
+				<MainAttribute>true</MainAttribute>
+				<UseAlways>
+					<Field>~Список.Ref~Список.Ссылка</Field>
+				</UseAlways>
+				<Settings xsi:type="DynamicList">
+					<ManualQuery>true</ManualQuery>
+					<DynamicDataRead>true</DynamicDataRead>
+					<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПеремещениеТоваров.Ссылка,
+	ПеремещениеТоваров.ПометкаУдаления,
+	ПеремещениеТоваров.Номер,
+	ПеремещениеТоваров.Дата,
+	ПеремещениеТоваров.СкладОтправитель,
+	ПеремещениеТоваров.СкладПолучатель,
+	ВЫБОР
+		КОГДА ПеремещениеТоваров.ДокументОснование.Номер ЕСТЬ NULL 
+			ТОГДА ПеремещениеТоваров.ПредставлениеДокументаОснования
+		ИНАЧЕ ПеремещениеТоваров.ДокументОснование
+	КОНЕЦ КАК Основание,
+	ПеремещениеТоваров.МагазинОтправитель,
+	ПеремещениеТоваров.МагазинПолучатель,
+	ПеремещениеТоваров.Ответственный,
+	ПеремещениеТоваров.СуммаДокумента,
+	ПеремещениеТоваров.Организация,
+	ВЫРАЗИТЬ(ПеремещениеТоваров.Комментарий КАК СТРОКА(200)) КАК Комментарий,
+	ЕСТЬNULL(ТоварыКОтгрузке.Недорасход, 0) КАК Недорасход,
+	ЕСТЬNULL(ТоварыКОтгрузке.Перерасход, 0) КАК Перерасход,
+	ЕСТЬNULL(ТоварыКПоступлению.Недопоставка, 0) КАК Недопоставка,
+	ЕСТЬNULL(ТоварыКПоступлению.Перепоставка, 0) КАК Перепоставка,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ТоварыКОтгрузке.Недорасход, 0) = 0
+				И ЕСТЬNULL(ТоварыКОтгрузке.Перерасход, 0) = 0
+				И ЕСТЬNULL(ТоварыКПоступлению.Недопоставка, 0) = 0
+				И ЕСТЬNULL(ТоварыКПоступлению.Перепоставка, 0) = 0
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ ИСТИНА
+	КОНЕЦ КАК ЕстьОтклонениеПеремещения,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ТоварыКОтгрузке.Недорасход, 0) = 0
+				И ЕСТЬNULL(ТоварыКОтгрузке.Перерасход, 0) = 0
+				И ЕСТЬNULL(ТоварыКПоступлению.Недопоставка, 0) = 0
+				И ЕСТЬNULL(ТоварыКПоступлению.Перепоставка, 0) = 0
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК КартинкаОтклонениеПеремещения
+ИЗ
+	Документ.ПеремещениеТоваров КАК ПеремещениеТоваров
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ВложенныйЗапрос.ДокументОснование КАК ДокументОснование,
+			СУММА(ВложенныйЗапрос.Недорасход) КАК Недорасход,
+			СУММА(ВложенныйЗапрос.Перерасход) КАК Перерасход
+		ИЗ
+			(ВЫБРАТЬ
+				ТоварыКОтгрузкеОстатки.ДокументОснование КАК ДокументОснование,
+				ТоварыКОтгрузкеОстатки.Номенклатура КАК Номенклатура,
+				ТоварыКОтгрузкеОстатки.Характеристика КАК Характеристика,
+				ВЫБОР
+					КОГДА ТоварыКОтгрузкеОстатки.КоличествоОстаток &gt; 0
+						ТОГДА ТоварыКОтгрузкеОстатки.КоличествоОстаток
+					ИНАЧЕ 0
+				КОНЕЦ КАК Недорасход,
+				ВЫБОР
+					КОГДА ТоварыКОтгрузкеОстатки.КоличествоОстаток &lt; 0
+						ТОГДА -ТоварыКОтгрузкеОстатки.КоличествоОстаток
+					ИНАЧЕ 0
+				КОНЕЦ КАК Перерасход
+			ИЗ
+				РегистрНакопления.ТоварыКОтгрузке.Остатки(, ДокументОснование ССЫЛКА Документ.ПеремещениеТоваров) КАК ТоварыКОтгрузкеОстатки) КАК ВложенныйЗапрос
+		
+		СГРУППИРОВАТЬ ПО
+			ВложенныйЗапрос.ДокументОснование) КАК ТоварыКОтгрузке
+		ПО ПеремещениеТоваров.Ссылка = ТоварыКОтгрузке.ДокументОснование
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ВложенныйЗапрос.ДокументОснование КАК ДокументОснование,
+			СУММА(ВложенныйЗапрос.Недопоставка) КАК Недопоставка,
+			СУММА(ВложенныйЗапрос.Перепоставка) КАК Перепоставка
+		ИЗ
+			(ВЫБРАТЬ
+				ТоварыКПоступлениюОстатки.ДокументОснование КАК ДокументОснование,
+				ТоварыКПоступлениюОстатки.Номенклатура КАК Номенклатура,
+				ТоварыКПоступлениюОстатки.Характеристика КАК Характеристика,
+				ВЫБОР
+					КОГДА ТоварыКПоступлениюОстатки.КоличествоОстаток &gt; 0
+						ТОГДА ТоварыКПоступлениюОстатки.КоличествоОстаток
+					ИНАЧЕ 0
+				КОНЕЦ КАК Недопоставка,
+				ВЫБОР
+					КОГДА ТоварыКПоступлениюОстатки.КоличествоОстаток &lt; 0
+						ТОГДА -ТоварыКПоступлениюОстатки.КоличествоОстаток
+					ИНАЧЕ 0
+				КОНЕЦ КАК Перепоставка
+			ИЗ
+				РегистрНакопления.ТоварыКПоступлению.Остатки(, ДокументОснование ССЫЛКА Документ.ПеремещениеТоваров) КАК ТоварыКПоступлениюОстатки) КАК ВложенныйЗапрос
+		
+		СГРУППИРОВАТЬ ПО
+			ВложенныйЗапрос.ДокументОснование) КАК ТоварыКПоступлению
+		ПО ПеремещениеТоваров.Ссылка = ТоварыКПоступлению.ДокументОснование</QueryText>
+					<MainTable>Document.ПеремещениеТоваров</MainTable>
+					<ListSettings>
+						<dcsset:filter>
+							<dcsset:viewMode>Normal</dcsset:viewMode>
+							<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+						</dcsset:filter>
+						<dcsset:order>
+							<dcsset:viewMode>Normal</dcsset:viewMode>
+							<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+						</dcsset:order>
+						<dcsset:conditionalAppearance>
+							<dcsset:viewMode>Normal</dcsset:viewMode>
+							<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+						</dcsset:conditionalAppearance>
+						<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+						<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+					</ListSettings>
+				</Settings>
+			</Attribute>
+		</Attributes>
 	</BaseForm>
 </Form>

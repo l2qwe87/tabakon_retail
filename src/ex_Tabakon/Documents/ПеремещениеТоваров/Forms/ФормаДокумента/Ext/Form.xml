@@ -492,6 +492,29 @@
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
+		<UsualGroup name="Группа1" id="491">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="492"/>
+			<ChildItems>
+				<InputField name="КоличествоПакетов" id="485">
+					<DataPath>Объект.КоличествоПакетов</DataPath>
+					<Visible>false</Visible>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="КоличествоПакетовКонтекстноеМеню" id="486"/>
+					<ExtendedTooltip name="КоличествоПакетовРасширеннаяПодсказка" id="487"/>
+				</InputField>
+				<InputField name="КоличествоПакетовФакт" id="488">
+					<DataPath>Объект.КоличествоПакетовФакт</DataPath>
+					<ContextMenu name="КоличествоПакетовФактКонтекстноеМеню" id="489"/>
+					<ExtendedTooltip name="КоличествоПакетовФактРасширеннаяПодсказка" id="490"/>
+					<Events>
+						<Event name="OnChange" callType="After">ТБККоличествоПакетовФактПриИзмененииПосле</Event>
+						<Event name="EditTextChange" callType="After">ТБККоличествоПакетовФактИзменениеТекстаРедактированияПосле</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<Pages name="ГруппаСтраницы" id="290">
 			<Title>
 				<v8:item>
