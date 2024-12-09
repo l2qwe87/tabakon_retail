@@ -90,6 +90,7 @@
 					<Comment/>
 					<ExtendedConfigurationObject>bd829d5e-74f5-49e5-9d6c-fec63be4d4e1</ExtendedConfigurationObject>
 					<Type>
+						<v8:Type>cfg:DocumentRef.ИзменениеАссортимента</v8:Type>
 						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
 					</Type>
 				</Properties>
@@ -291,7 +292,36 @@
 					</Type>
 				</Properties>
 			</Attribute>
+			<Attribute uuid="12e7571d-33ed-41bc-8a46-34b12406fd39">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>СведенияОВыбытииМаркированныхТоваров</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>40ec09cc-b9bb-4fb5-b307-4b183219a1da</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="1facfbb8-b105-49c8-97a2-734197bf6491">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ФиксироватьНомераГТД</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>c5808147-de14-4c97-8742-7900330fe696</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
 			<Form>ФормаДокумента</Form>
+			<Form>ФормаСписка</Form>
 			<TabularSection uuid="a32e511a-b433-4ec6-8c1d-526e5e34d7e0">
 				<InternalInfo>
 					<xr:GeneratedType name="DocumentTabularSection.ПеремещениеТоваров.Товары" category="TabularSection">
@@ -404,6 +434,52 @@
 								<v8:NumberQualifiers>
 									<v8:Digits>15</v8:Digits>
 									<v8:FractionDigits>3</v8:FractionDigits>
+									<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="82f390dc-f391-4b60-8be3-9927b5a5ab33">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>НомерГТД</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>7f7a0f33-f297-445d-aa76-c88b78fce82c</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.НомераГТД</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="9678a733-70f9-4d7a-9689-64acd1a3429f">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>КоличествоПоРНПТ</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>12865c77-7fdf-4f62-9697-01c7efaa92ba</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>15</v8:Digits>
+									<v8:FractionDigits>11</v8:FractionDigits>
+									<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="b96dfc78-49c6-45c7-9cb3-acb1394f66da">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>СуммаПоРНПТ</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>33bfc7f0-bdcc-4d4a-a02a-07ef069c0405</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>15</v8:Digits>
+									<v8:FractionDigits>2</v8:FractionDigits>
 									<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 								</v8:NumberQualifiers>
 							</Type>
