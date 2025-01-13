@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
@@ -117,7 +117,7 @@
 	<Events>
 		<Event name="OnOpen" callType="After">ТБКПриОткрытииПосле</Event>
 		<Event name="OnCreateAtServer" callType="After">ТБКПриСозданииНаСервереПосле</Event>
-		<Event name="bf0ac0e1-bcbb-4dfe-8fc4-0b1923b461a6" callType="After">ТБКПередЗаписьюНаСервереПосле</Event>
+		<Event name="BeforeWriteAtServer" callType="After">ТБКПередЗаписьюНаСервереПосле</Event>
 		<Event name="OnClose" callType="After">ТБКПриЗакрытииПосле</Event>
 	</Events>
 	<ChildItems>
@@ -129,6 +129,7 @@
 				</v8:item>
 			</Title>
 			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаКодНаименованиеExtendedTooltip" id="122"/>
@@ -153,6 +154,7 @@
 					<v8:content>Страницы</v8:content>
 				</v8:item>
 			</Title>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
 			<ExtendedTooltip name="СтраницыExtendedTooltip" id="125"/>
 			<ChildItems>
 				<Page name="ОбщиеНастройки" id="85">
@@ -172,6 +174,7 @@
 								</v8:item>
 							</Title>
 							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаВверхExtendedTooltip" id="127"/>
@@ -184,6 +187,7 @@
 										</v8:item>
 									</Title>
 									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
 									<ExtendedTooltip name="ГруппаЛевоExtendedTooltip" id="128"/>
 									<ChildItems>
 										<CheckBoxField name="ОбъединятьПозицииСОдинаковымТоваром" id="21">
@@ -316,6 +320,7 @@
 										</v8:item>
 									</Title>
 									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
 									<ExtendedTooltip name="ГруппаПравоExtendedTooltip" id="136"/>
 									<ChildItems>
 										<CheckBoxField name="ЗакрыватьПодборПриВыбореТовара" id="9">
@@ -471,6 +476,7 @@
 									<v8:content>Группа низ</v8:content>
 								</v8:item>
 							</Title>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаНизРасширеннаяПодсказка" id="403"/>
@@ -483,6 +489,7 @@
 										</v8:item>
 									</Title>
 									<Group>Horizontal</Group>
+									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаИнтервалАвтоматическогоСохраненияЧекаККМРасширеннаяПодсказка" id="345"/>
@@ -526,6 +533,7 @@
 										</v8:item>
 									</Title>
 									<Group>Horizontal</Group>
+									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаВремяПредупрежденияРасширеннаяПодсказка" id="227"/>
@@ -616,6 +624,7 @@
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
 							<ExtendedTooltip name="ГруппаФункциональныеКнопкиНижнейПанелиРасширеннаяПодсказка" id="343"/>
 							<ChildItems>
 								<Table name="КнопкиНижнейПанели" id="63">
@@ -804,6 +813,7 @@
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
 							<ExtendedTooltip name="ГруппаБыстрыеТоварыРасширеннаяПодсказка" id="341"/>
 							<ChildItems>
 								<InputField name="ПалитраБыстрыхТоваров" id="337">
@@ -838,6 +848,7 @@
 									<v8:content>Функциональные кнопки верхней панели</v8:content>
 								</v8:item>
 							</Title>
+							<Behavior>Usual</Behavior>
 							<ExtendedTooltip name="ГруппаФункциональныеКнопкиВерхнейПанелиРасширеннаяПодсказка" id="430"/>
 							<ChildItems>
 								<Table name="КнопкиВерхнейПанели" id="431">
@@ -1017,6 +1028,7 @@
 												</v8:item>
 											</Title>
 											<Group>Vertical</Group>
+											<Behavior>Usual</Behavior>
 											<ExtendedTooltip name="ГруппаРеквизитыРасширеннаяПодсказка" id="311"/>
 											<ChildItems>
 												<Table name="ТаблицаВсехРеквизитов" id="266">
@@ -1082,6 +1094,7 @@
 												</v8:item>
 											</Title>
 											<Group>Vertical</Group>
+											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаКнопкиТаблоВСпискеРасширеннаяПодсказка" id="321"/>
@@ -1116,6 +1129,7 @@
 												</v8:item>
 											</ToolTip>
 											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
 											<ExtendedTooltip name="ГруппаВыбранныеРеквизитыРасширеннаяПодсказка" id="313"/>
 											<ChildItems>
 												<Table name="ТаблицаВыбранныхРеквизитов" id="288">
@@ -1177,6 +1191,7 @@
 														</v8:item>
 													</ToolTip>
 													<Group>Vertical</Group>
+													<Behavior>Usual</Behavior>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="ГруппаВыбранныеРеквизитыВертикальноРасширеннаяПодсказка" id="315"/>
@@ -1558,7 +1573,7 @@
 			</dcsset:item>
 		</ConditionalAppearance>
 	</Attributes>
-	<BaseForm version="2.9">
+	<BaseForm version="2.17">
 		<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 		<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 		<VerticalScroll>useIfNecessary</VerticalScroll>
@@ -1682,6 +1697,7 @@
 					</v8:item>
 				</Title>
 				<Group>Horizontal</Group>
+				<Behavior>Usual</Behavior>
 				<Representation>None</Representation>
 				<ShowTitle>false</ShowTitle>
 				<ExtendedTooltip name="ГруппаКодНаименованиеExtendedTooltip" id="122"/>
@@ -1706,6 +1722,7 @@
 						<v8:content>Страницы</v8:content>
 					</v8:item>
 				</Title>
+				<PagesRepresentation>TabsOnTop</PagesRepresentation>
 				<ExtendedTooltip name="СтраницыExtendedTooltip" id="125"/>
 				<ChildItems>
 					<Page name="ОбщиеНастройки" id="85">
@@ -1725,6 +1742,7 @@
 									</v8:item>
 								</Title>
 								<Group>Horizontal</Group>
+								<Behavior>Usual</Behavior>
 								<Representation>None</Representation>
 								<ShowTitle>false</ShowTitle>
 								<ExtendedTooltip name="ГруппаВверхExtendedTooltip" id="127"/>
@@ -1737,6 +1755,7 @@
 											</v8:item>
 										</Title>
 										<Group>Vertical</Group>
+										<Behavior>Usual</Behavior>
 										<ExtendedTooltip name="ГруппаЛевоExtendedTooltip" id="128"/>
 										<ChildItems>
 											<CheckBoxField name="ОбъединятьПозицииСОдинаковымТоваром" id="21">
@@ -1869,6 +1888,7 @@
 											</v8:item>
 										</Title>
 										<Group>Vertical</Group>
+										<Behavior>Usual</Behavior>
 										<ExtendedTooltip name="ГруппаПравоExtendedTooltip" id="136"/>
 										<ChildItems>
 											<CheckBoxField name="ЗакрыватьПодборПриВыбореТовара" id="9">
@@ -2024,6 +2044,7 @@
 										<v8:content>Группа низ</v8:content>
 									</v8:item>
 								</Title>
+								<Behavior>Usual</Behavior>
 								<Representation>None</Representation>
 								<ShowTitle>false</ShowTitle>
 								<ExtendedTooltip name="ГруппаНизРасширеннаяПодсказка" id="403"/>
@@ -2036,6 +2057,7 @@
 											</v8:item>
 										</Title>
 										<Group>Horizontal</Group>
+										<Behavior>Usual</Behavior>
 										<Representation>None</Representation>
 										<ShowTitle>false</ShowTitle>
 										<ExtendedTooltip name="ГруппаИнтервалАвтоматическогоСохраненияЧекаККМРасширеннаяПодсказка" id="345"/>
@@ -2079,6 +2101,7 @@
 											</v8:item>
 										</Title>
 										<Group>Horizontal</Group>
+										<Behavior>Usual</Behavior>
 										<Representation>None</Representation>
 										<ShowTitle>false</ShowTitle>
 										<ExtendedTooltip name="ГруппаВремяПредупрежденияРасширеннаяПодсказка" id="227"/>
@@ -2152,6 +2175,7 @@
 									</v8:item>
 								</Title>
 								<Group>Vertical</Group>
+								<Behavior>Usual</Behavior>
 								<ExtendedTooltip name="ГруппаФункциональныеКнопкиНижнейПанелиРасширеннаяПодсказка" id="343"/>
 								<ChildItems>
 									<Table name="КнопкиНижнейПанели" id="63">
@@ -2340,6 +2364,7 @@
 									</v8:item>
 								</Title>
 								<Group>Vertical</Group>
+								<Behavior>Usual</Behavior>
 								<ExtendedTooltip name="ГруппаБыстрыеТоварыРасширеннаяПодсказка" id="341"/>
 								<ChildItems>
 									<InputField name="ПалитраБыстрыхТоваров" id="337">
@@ -2374,6 +2399,7 @@
 										<v8:content>Функциональные кнопки верхней панели</v8:content>
 									</v8:item>
 								</Title>
+								<Behavior>Usual</Behavior>
 								<ExtendedTooltip name="ГруппаФункциональныеКнопкиВерхнейПанелиРасширеннаяПодсказка" id="430"/>
 								<ChildItems>
 									<Table name="КнопкиВерхнейПанели" id="431">
@@ -2553,6 +2579,7 @@
 													</v8:item>
 												</Title>
 												<Group>Vertical</Group>
+												<Behavior>Usual</Behavior>
 												<ExtendedTooltip name="ГруппаРеквизитыРасширеннаяПодсказка" id="311"/>
 												<ChildItems>
 													<Table name="ТаблицаВсехРеквизитов" id="266">
@@ -2618,6 +2645,7 @@
 													</v8:item>
 												</Title>
 												<Group>Vertical</Group>
+												<Behavior>Usual</Behavior>
 												<Representation>None</Representation>
 												<ShowTitle>false</ShowTitle>
 												<ExtendedTooltip name="ГруппаКнопкиТаблоВСпискеРасширеннаяПодсказка" id="321"/>
@@ -2652,6 +2680,7 @@
 													</v8:item>
 												</ToolTip>
 												<Group>Horizontal</Group>
+												<Behavior>Usual</Behavior>
 												<ExtendedTooltip name="ГруппаВыбранныеРеквизитыРасширеннаяПодсказка" id="313"/>
 												<ChildItems>
 													<Table name="ТаблицаВыбранныхРеквизитов" id="288">
@@ -2713,6 +2742,7 @@
 															</v8:item>
 														</ToolTip>
 														<Group>Vertical</Group>
+														<Behavior>Usual</Behavior>
 														<Representation>None</Representation>
 														<ShowTitle>false</ShowTitle>
 														<ExtendedTooltip name="ГруппаВыбранныеРеквизитыВертикальноРасширеннаяПодсказка" id="315"/>

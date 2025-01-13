@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
@@ -20,6 +20,7 @@
 	</Events>
 	<ChildItems>
 		<UsualGroup name="Группа8" id="693">
+			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="694"/>
@@ -80,6 +81,7 @@
 		</UsualGroup>
 		<UsualGroup name="Группа1" id="566">
 			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="567"/>
@@ -121,6 +123,7 @@
 					<v8:content>Debug</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Behavior>Usual</Behavior>
 			<BackColor>#FFCC99</BackColor>
 			<ExtendedTooltip name="DebugРасширеннаяПодсказка" id="552"/>
 			<ChildItems>
@@ -240,10 +243,25 @@
 									<CommandName>0</CommandName>
 									<ExtendedTooltip name="КомандаЧО06ПлатежнаяКартаАкселераторыExtendedTooltip" id="172"/>
 								</Button>
+								<Button name="КомандаЧО10БезналичныеПлатежи" id="711">
+									<Type>CommandBarButton</Type>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="КомандаЧО10БезналичныеПлатежиРасширеннаяПодсказка" id="720"/>
+								</Button>
+								<Button name="КомандаЧО11ПлатежныеСистемы" id="713">
+									<Type>CommandBarButton</Type>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="КомандаЧО11ПлатежныеСистемыРасширеннаяПодсказка" id="721"/>
+								</Button>
 								<Button name="КомандаЧО07СложнаяОплатаАкселераторы" id="135">
 									<Type>CommandBarButton</Type>
 									<CommandName>0</CommandName>
 									<ExtendedTooltip name="КомандаЧО07СложнаяОплатаАкселераторыExtendedTooltip" id="173"/>
+								</Button>
+								<Button name="КомандаЧО12ЭСНСПК" id="715">
+									<Type>CommandBarButton</Type>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="КомандаЧО12ЭСНСПКРасширеннаяПодсказка" id="722"/>
 								</Button>
 							</ChildItems>
 						</Popup>
@@ -579,6 +597,7 @@
 				</v8:item>
 			</Title>
 			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаЗаголовкиКнопкиРасширеннаяПодсказка" id="162"/>
@@ -591,6 +610,7 @@
 				</v8:item>
 			</Title>
 			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ОбщаяВертикальнаяРасширеннаяПодсказка" id="221"/>
@@ -603,6 +623,7 @@
 						</v8:item>
 					</Title>
 					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаВверхExtendedTooltip" id="222"/>
@@ -615,6 +636,7 @@
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаЧастотныхОперацийТаблоExtendedTooltip" id="223"/>
@@ -633,6 +655,7 @@
 										</v8:item>
 									</ToolTip>
 									<Group>Horizontal</Group>
+									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ChildItemsWidth>Equal</ChildItemsWidth>
 									<ShowTitle>false</ShowTitle>
@@ -844,23 +867,6 @@
 												<Event name="Click" callType="Override">ТБККартинкаЧО06ПлатежнаяКартаНажатиеВместо</Event>
 											</Events>
 										</PictureField>
-										<PictureField name="КартинкаЧО10БезналичныеПлатежи" id="535">
-											<TitleLocation>None</TitleLocation>
-											<Shortcut>Shift+F7</Shortcut>
-											<Width>20</Width>
-											<Height>3</Height>
-											<VerticalStretch>false</VerticalStretch>
-											<Hyperlink>true</Hyperlink>
-											<NonselectedPictureText>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Безнал. платежи (Shift + F7)</v8:content>
-												</v8:item>
-											</NonselectedPictureText>
-											<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
-											<ContextMenu name="КартинкаЧО10БезналичныеПлатежиКонтекстноеМеню" id="536"/>
-											<ExtendedTooltip name="КартинкаЧО10БезналичныеПлатежиРасширеннаяПодсказка" id="537"/>
-										</PictureField>
 										<PictureField name="КартинкаЧО07СложнаяОплата" id="445">
 											<Title>
 												<v8:item>
@@ -885,6 +891,80 @@
 											<FileDragMode>AsFile</FileDragMode>
 											<ContextMenu name="КартинкаЧО07СложнаяОплатаКонтекстноеМеню" id="446"/>
 											<ExtendedTooltip name="КартинкаЧО07СложнаяОплатаРасширеннаяПодсказка" id="447"/>
+										</PictureField>
+										<PictureField name="КартинкаЧО11ПлатежныеСистемы" id="557">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>QR-код (Ctrl + F10)</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<Shortcut>Ctrl+F10</Shortcut>
+											<Width>20</Width>
+											<Height>3</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<PictureSize>AutoSize</PictureSize>
+											<Hyperlink>true</Hyperlink>
+											<NonselectedPictureText>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>QR-код (Ctrl + F10)</v8:content>
+												</v8:item>
+											</NonselectedPictureText>
+											<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаЧО11ПлатежныеСистемыКонтекстноеМеню" id="723"/>
+											<ExtendedTooltip name="КартинкаЧО11ПлатежныеСистемыРасширеннаяПодсказка" id="724"/>
+										</PictureField>
+										<PictureField name="КартинкаЧО10БезналичныеПлатежи" id="535">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Безнал. платежи (Shift + F7)</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<Shortcut>Shift+F7</Shortcut>
+											<Width>20</Width>
+											<Height>3</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<PictureSize>AutoSize</PictureSize>
+											<Hyperlink>true</Hyperlink>
+											<NonselectedPictureText>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Безнал. платежи (Shift + F7)</v8:content>
+												</v8:item>
+											</NonselectedPictureText>
+											<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<ContextMenu name="КартинкаЧО10БезналичныеПлатежиКонтекстноеМеню" id="536"/>
+											<ExtendedTooltip name="КартинкаЧО10БезналичныеПлатежиРасширеннаяПодсказка" id="537"/>
+										</PictureField>
+										<PictureField name="КартинкаЧО12ЭСНСПК" id="708">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЭС (ФЗ-491) (Ctrl+F7)</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<Shortcut>Ctrl+F7</Shortcut>
+											<Width>20</Width>
+											<Height>3</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<PictureSize>AutoSize</PictureSize>
+											<Hyperlink>true</Hyperlink>
+											<NonselectedPictureText>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЭС (ФЗ-491) (Ctrl+F7)</v8:content>
+												</v8:item>
+											</NonselectedPictureText>
+											<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаЧО12ЭСНСПККонтекстноеМеню" id="725"/>
+											<ExtendedTooltip name="КартинкаЧО12ЭСНСПКРасширеннаяПодсказка" id="726"/>
 										</PictureField>
 									</ChildItems>
 								</UsualGroup>
@@ -917,6 +997,7 @@
 														</v8:item>
 													</Title>
 													<Group>Vertical</Group>
+													<Behavior>Usual</Behavior>
 													<Representation>NormalSeparation</Representation>
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="ГруппаРамкаИнформацииExtendedTooltip" id="234"/>
@@ -967,6 +1048,7 @@
 														</v8:item>
 													</Title>
 													<Group>Vertical</Group>
+													<Behavior>Usual</Behavior>
 													<Representation>NormalSeparation</Representation>
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="ГруппаРамкаСдачаExtendedTooltip" id="238"/>
@@ -1104,6 +1186,7 @@
 							<HorizontalStretch>true</HorizontalStretch>
 							<VerticalStretch>false</VerticalStretch>
 							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаСуммExtendedTooltip" id="245"/>
@@ -1169,6 +1252,42 @@
 									<ContextMenu name="СуммаКОплатеКонтекстноеМеню" id="21"/>
 									<ExtendedTooltip name="СуммаКОплатеExtendedTooltip" id="248"/>
 								</InputField>
+								<UsualGroup name="ГруппаЭлектронныйЧек" id="698">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа электронный чек</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа электронный чек</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЭлектронныйЧекРасширеннаяПодсказка" id="727"/>
+									<ChildItems>
+										<LabelField name="ДанныеSMSИлиEmail" id="700">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Тел.</v8:content>
+												</v8:item>
+											</Title>
+											<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<TitleLocation>Top</TitleLocation>
+											<Height>2</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<ContextMenu name="ДанныеSMSИлиEmailКонтекстноеМеню" id="728"/>
+											<ExtendedTooltip name="ДанныеSMSИлиEmailРасширеннаяПодсказка" id="729"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="ГруппаSamosale" id="590">
@@ -1186,6 +1305,7 @@
 								</v8:item>
 							</ToolTip>
 							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ExtendedTooltip name="ГруппаSamosaleРасширеннаяПодсказка" id="591"/>
 							<ChildItems>
@@ -1210,6 +1330,7 @@
 									<ChildItems>
 										<UsualGroup name="Группа2" id="653">
 											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="654"/>
@@ -1270,11 +1391,13 @@
 										</v8:item>
 									</ToolTip>
 									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа2_РасширеннаяПодсказка" id="600"/>
 									<ChildItems>
 										<UsualGroup name="Группа7" id="662">
 											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="663"/>
@@ -1315,6 +1438,7 @@
 										<UsualGroup name="Группа6" id="658">
 											<Width>42</Width>
 											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="659"/>
@@ -1367,6 +1491,7 @@
 								</UsualGroup>
 								<UsualGroup name="Группа3" id="607">
 									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="608"/>
 									<ChildItems>
@@ -1404,6 +1529,7 @@
 								</UsualGroup>
 								<UsualGroup name="Группа4" id="615">
 									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="616"/>
 									<ChildItems>
@@ -1438,6 +1564,7 @@
 								</UsualGroup>
 								<UsualGroup name="Группа5" id="623">
 									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="624"/>
 									<ChildItems>
@@ -1473,6 +1600,7 @@
 													<v8:content>Группа6</v8:content>
 												</v8:item>
 											</ToolTip>
+											<Behavior>Usual</Behavior>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа6_РасширеннаяПодсказка" id="629"/>
 											<ChildItems>
@@ -1522,6 +1650,7 @@
 											<v8:content>Группа ОК</v8:content>
 										</v8:item>
 									</ToolTip>
+									<Behavior>Usual</Behavior>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаОКРасширеннаяПодсказка" id="636"/>
 									<ChildItems>
@@ -1548,6 +1677,7 @@
 											<v8:content>Группа создать клиента</v8:content>
 										</v8:item>
 									</ToolTip>
+									<Behavior>Usual</Behavior>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаСоздатьКлиентаРасширеннаяПодсказка" id="640"/>
 									<ChildItems>
@@ -1606,6 +1736,7 @@
 						</v8:item>
 					</Title>
 					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаТаблоExtendedTooltip" id="249"/>
@@ -1618,6 +1749,9 @@
 							<EnableDrag>true</EnableDrag>
 							<FileDragMode>AsFile</FileDragMode>
 							<DataPath>Объект.Товары</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Copy</ExcludedCommand>
+							</CommandSet>
 							<SearchStringLocation>None</SearchStringLocation>
 							<ViewStatusLocation>None</ViewStatusLocation>
 							<SearchControlLocation>None</SearchControlLocation>
@@ -1887,6 +2021,21 @@
 									<ContextMenu name="ТоварыЦенаКонтекстноеМеню" id="59"/>
 									<ExtendedTooltip name="ТоварыЦенаExtendedTooltip" id="256"/>
 								</InputField>
+								<InputField name="ТоварыЦенаСАгентскимВознаграждением" id="717">
+									<Visible>false</Visible>
+									<ReadOnly>true</ReadOnly>
+									<TitleFont ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Цена с агентским вознаграждением</v8:content>
+										</v8:item>
+									</ToolTip>
+									<EditMode>EnterOnInput</EditMode>
+									<Font ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
+									<ContextMenu name="ТоварыЦенаСАгентскимВознаграждениемКонтекстноеМеню" id="730"/>
+									<ExtendedTooltip name="ТоварыЦенаСАгентскимВознаграждениемРасширеннаяПодсказка" id="731"/>
+								</InputField>
 								<InputField name="ТоварыСумма" id="60">
 									<DataPath>Объект.Товары.Сумма</DataPath>
 									<TitleFont ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
@@ -1935,7 +2084,6 @@
 									<ExtendedTooltip name="ТоварыСуммаВсегоExtendedTooltip" id="260"/>
 								</InputField>
 								<InputField name="ТоварыОстаток" id="68">
-									<DataPath>Объект.Товары.Остаток</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<TitleFont ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 									<EditMode>EnterOnInput</EditMode>
@@ -1988,6 +2136,7 @@
 									<v8:content>Группа вторые электронки</v8:content>
 								</v8:item>
 							</ToolTip>
+							<Behavior>Usual</Behavior>
 							<ExtendedTooltip name="ГруппаВторыеЭлектронкиРасширеннаяПодсказка" id="670"/>
 							<ChildItems>
 								<Table name="ТБКВторыеЭлектронки" id="671">
@@ -2058,6 +2207,7 @@
 						</v8:item>
 					</Title>
 					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ChildItemsWidth>Equal</ChildItemsWidth>
 					<ShowTitle>false</ShowTitle>
@@ -2072,6 +2222,7 @@
 								</v8:item>
 							</Title>
 							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ChildItemsWidth>Equal</ChildItemsWidth>
 							<ShowTitle>false</ShowTitle>
@@ -2136,6 +2287,7 @@
 						</v8:item>
 					</Title>
 					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
 					<ChildItemsWidth>Equal</ChildItemsWidth>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаПрочихОперацийExtendedTooltip" id="268"/>
@@ -2143,6 +2295,7 @@
 						<UsualGroup name="ГруппаПрочихОперацийРяд1" id="348">
 							<ToolTipRepresentation>None</ToolTipRepresentation>
 							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ChildItemsWidth>Equal</ChildItemsWidth>
 							<ShowTitle>false</ShowTitle>
@@ -2454,6 +2607,7 @@
 						<UsualGroup name="ГруппаПрочихОперацийРяд2" id="386">
 							<ToolTipRepresentation>None</ToolTipRepresentation>
 							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ChildItemsWidth>Equal</ChildItemsWidth>
 							<ShowTitle>false</ShowTitle>
@@ -2767,6 +2921,7 @@
 							</Title>
 							<ToolTipRepresentation>None</ToolTipRepresentation>
 							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ChildItemsWidth>Equal</ChildItemsWidth>
 							<ShowTitle>false</ShowTitle>
@@ -2994,6 +3149,52 @@
 									<ContextMenu name="КартинкаПО33ПоискПоНаименованиюКонтекстноеМеню" id="533"/>
 									<ExtendedTooltip name="КартинкаПО33ПоискПоНаименованиюРасширеннаяПодсказка" id="534"/>
 								</PictureField>
+								<PictureField name="КартинкаПО34ВыборКассыККМ" id="703">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выбор кассы ККМ</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<Width>10</Width>
+									<Height>3</Height>
+									<VerticalStretch>false</VerticalStretch>
+									<PictureSize>AutoSize</PictureSize>
+									<Hyperlink>true</Hyperlink>
+									<NonselectedPictureText>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выбор кассы ККМ</v8:content>
+										</v8:item>
+									</NonselectedPictureText>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КартинкаПО34ВыборКассыККМКонтекстноеМеню" id="732"/>
+									<ExtendedTooltip name="КартинкаПО34ВыборКассыККМРасширеннаяПодсказка" id="733"/>
+								</PictureField>
+								<PictureField name="КартинкаПО35ЗаявлениеНаВозврат" id="554">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Заявление на возврат</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<Width>10</Width>
+									<Height>3</Height>
+									<VerticalStretch>false</VerticalStretch>
+									<PictureSize>AutoSize</PictureSize>
+									<Hyperlink>true</Hyperlink>
+									<NonselectedPictureText>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Заявление на возврат</v8:content>
+										</v8:item>
+									</NonselectedPictureText>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КартинкаПО35ЗаявлениеНаВозвратКонтекстноеМеню" id="555"/>
+									<ExtendedTooltip name="КартинкаПО35ЗаявлениеНаВозвратРасширеннаяПодсказка" id="556"/>
+								</PictureField>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
@@ -3011,6 +3212,7 @@
 							<v8:content>Группа ТБК</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаТБКРасширеннаяПодсказка" id="559"/>
@@ -3059,6 +3261,7 @@
 								</v8:item>
 							</ToolTip>
 							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
 							<ExtendedTooltip name="ГруппаПокупкиСотрудниковРасширеннаяПодсказка" id="587"/>
 							<ChildItems>
 								<CheckBoxField name="ПокупкаСотрудника" id="581">
@@ -3217,115 +3420,6 @@
 			<MainAttribute>true</MainAttribute>
 			<Columns>
 				<AdditionalColumns table="Объект.Товары">
-					<Column name="ХарактеристикиИспользуются" id="1">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Характеристики используются</v8:content>
-							</v8:item>
-						</Title>
-						<Type>
-							<v8:Type>xs:boolean</v8:Type>
-						</Type>
-					</Column>
-					<Column name="ИспользоватьСерийныеНомера" id="2">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Использовать номера подарочных сертификатов</v8:content>
-							</v8:item>
-						</Title>
-						<Type>
-							<v8:Type>xs:boolean</v8:Type>
-						</Type>
-					</Column>
-					<Column name="Остаток" id="3">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Остаток</v8:content>
-							</v8:item>
-						</Title>
-						<Type>
-							<v8:Type>xs:decimal</v8:Type>
-							<v8:NumberQualifiers>
-								<v8:Digits>12</v8:Digits>
-								<v8:FractionDigits>3</v8:FractionDigits>
-								<v8:AllowedSign>Any</v8:AllowedSign>
-							</v8:NumberQualifiers>
-						</Type>
-					</Column>
-					<Column name="ЕдиницаИзмерения" id="4">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Единица измерения</v8:content>
-							</v8:item>
-						</Title>
-						<Type>
-							<v8:Type>cfg:CatalogRef.БазовыеЕдиницыИзмерения</v8:Type>
-						</Type>
-					</Column>
-					<Column name="ВидНалога" id="5">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Вид налога</v8:content>
-							</v8:item>
-						</Title>
-						<Type>
-							<v8:Type>cfg:EnumRef.ТипыСистемНалогообложенияККТ</v8:Type>
-						</Type>
-					</Column>
-					<Column name="КоличествоАкцизныхМарок" id="7">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Количество акцизных марок</v8:content>
-							</v8:item>
-						</Title>
-						<Type>
-							<v8:Type>xs:decimal</v8:Type>
-							<v8:NumberQualifiers>
-								<v8:Digits>5</v8:Digits>
-								<v8:FractionDigits>0</v8:FractionDigits>
-								<v8:AllowedSign>Nonnegative</v8:AllowedSign>
-							</v8:NumberQualifiers>
-						</Type>
-					</Column>
-					<Column name="НДСПоСтрочно" id="9">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>НДСПо строчно</v8:content>
-							</v8:item>
-						</Title>
-						<Type>
-							<v8:Type>xs:boolean</v8:Type>
-						</Type>
-					</Column>
-					<Column name="ОсобенностиУчетаНоменклатуры" id="10">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Особенности учета номенклатуры</v8:content>
-							</v8:item>
-						</Title>
-						<Type>
-							<v8:Type>cfg:EnumRef.ОсобенностиУчетаНоменклатуры</v8:Type>
-						</Type>
-					</Column>
-					<Column name="НоменклатураЕГАИС" id="11">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Номенклатура ЕГАИС</v8:content>
-							</v8:item>
-						</Title>
-						<Type>
-							<v8:Type>cfg:CatalogRef.КлассификаторАлкогольнойПродукцииЕГАИС</v8:Type>
-						</Type>
-					</Column>
 					<Column name="ПроверкаМаркиСтатус" id="1000000">
 						<Title>
 							<v8:item>
@@ -4060,7 +4154,7 @@
 			<Action callType="After">ТБКОстаткиПосле</Action>
 		</Command>
 	</Commands>
-	<BaseForm version="2.9">
+	<BaseForm version="2.17">
 		<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 		<AutoTitle>false</AutoTitle>
 		<VerticalScroll>useIfNecessary</VerticalScroll>
@@ -4080,6 +4174,7 @@
 					</v8:item>
 				</Title>
 				<Group>Horizontal</Group>
+				<Behavior>Usual</Behavior>
 				<Representation>None</Representation>
 				<ShowTitle>false</ShowTitle>
 				<ExtendedTooltip name="ГруппаЗаголовкиКнопкиРасширеннаяПодсказка" id="162"/>
@@ -4183,10 +4278,25 @@
 												<CommandName>0</CommandName>
 												<ExtendedTooltip name="КомандаЧО06ПлатежнаяКартаАкселераторыExtendedTooltip" id="172"/>
 											</Button>
+											<Button name="КомандаЧО10БезналичныеПлатежи" id="544">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="КомандаЧО10БезналичныеПлатежиРасширеннаяПодсказка" id="545"/>
+											</Button>
+											<Button name="КомандаЧО11ПлатежныеСистемы" id="560">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="КомандаЧО11ПлатежныеСистемыРасширеннаяПодсказка" id="561"/>
+											</Button>
 											<Button name="КомандаЧО07СложнаяОплатаАкселераторы" id="135">
 												<Type>CommandBarButton</Type>
 												<CommandName>0</CommandName>
 												<ExtendedTooltip name="КомандаЧО07СложнаяОплатаАкселераторыExtendedTooltip" id="173"/>
+											</Button>
+											<Button name="КомандаЧО12ЭСНСПК" id="562">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="КомандаЧО12ЭСНСПКРасширеннаяПодсказка" id="563"/>
 											</Button>
 										</ChildItems>
 									</Popup>
@@ -4524,6 +4634,7 @@
 					</v8:item>
 				</Title>
 				<Group>Vertical</Group>
+				<Behavior>Usual</Behavior>
 				<Representation>None</Representation>
 				<ShowTitle>false</ShowTitle>
 				<ExtendedTooltip name="ОбщаяВертикальнаяРасширеннаяПодсказка" id="221"/>
@@ -4536,6 +4647,7 @@
 							</v8:item>
 						</Title>
 						<Group>Horizontal</Group>
+						<Behavior>Usual</Behavior>
 						<Representation>None</Representation>
 						<ShowTitle>false</ShowTitle>
 						<ExtendedTooltip name="ГруппаВверхExtendedTooltip" id="222"/>
@@ -4548,6 +4660,7 @@
 									</v8:item>
 								</Title>
 								<Group>Vertical</Group>
+								<Behavior>Usual</Behavior>
 								<Representation>None</Representation>
 								<ShowTitle>false</ShowTitle>
 								<ExtendedTooltip name="ГруппаЧастотныхОперацийТаблоExtendedTooltip" id="223"/>
@@ -4566,6 +4679,7 @@
 											</v8:item>
 										</ToolTip>
 										<Group>Horizontal</Group>
+										<Behavior>Usual</Behavior>
 										<Representation>None</Representation>
 										<ChildItemsWidth>Equal</ChildItemsWidth>
 										<ShowTitle>false</ShowTitle>
@@ -4771,23 +4885,6 @@
 												<ContextMenu name="КартинкаЧО06ПлатежнаяКартаКонтекстноеМеню" id="443"/>
 												<ExtendedTooltip name="КартинкаЧО06ПлатежнаяКартаРасширеннаяПодсказка" id="444"/>
 											</PictureField>
-											<PictureField name="КартинкаЧО10БезналичныеПлатежи" id="535">
-												<TitleLocation>None</TitleLocation>
-												<Shortcut>Shift+F7</Shortcut>
-												<Width>20</Width>
-												<Height>3</Height>
-												<VerticalStretch>false</VerticalStretch>
-												<Hyperlink>true</Hyperlink>
-												<NonselectedPictureText>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>Безнал. платежи (Shift + F7)</v8:content>
-													</v8:item>
-												</NonselectedPictureText>
-												<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
-												<ContextMenu name="КартинкаЧО10БезналичныеПлатежиКонтекстноеМеню" id="536"/>
-												<ExtendedTooltip name="КартинкаЧО10БезналичныеПлатежиРасширеннаяПодсказка" id="537"/>
-											</PictureField>
 											<PictureField name="КартинкаЧО07СложнаяОплата" id="445">
 												<Title>
 													<v8:item>
@@ -4812,6 +4909,81 @@
 												<FileDragMode>AsFile</FileDragMode>
 												<ContextMenu name="КартинкаЧО07СложнаяОплатаКонтекстноеМеню" id="446"/>
 												<ExtendedTooltip name="КартинкаЧО07СложнаяОплатаРасширеннаяПодсказка" id="447"/>
+											</PictureField>
+											<PictureField name="КартинкаЧО11ПлатежныеСистемы" id="557">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>QR-код (Ctrl + F10)</v8:content>
+													</v8:item>
+												</Title>
+												<TitleLocation>None</TitleLocation>
+												<Shortcut>Ctrl+F10</Shortcut>
+												<Width>20</Width>
+												<Height>3</Height>
+												<VerticalStretch>false</VerticalStretch>
+												<PictureSize>AutoSize</PictureSize>
+												<Hyperlink>true</Hyperlink>
+												<NonselectedPictureText>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>QR-код (Ctrl + F10)</v8:content>
+													</v8:item>
+												</NonselectedPictureText>
+												<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="КартинкаЧО11ПлатежныеСистемыКонтекстноеМеню" id="558"/>
+												<ExtendedTooltip name="КартинкаЧО11ПлатежныеСистемыРасширеннаяПодсказка" id="559"/>
+											</PictureField>
+											<PictureField name="КартинкаЧО10БезналичныеПлатежи" id="535">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Безнал. платежи (Shift + F7)</v8:content>
+													</v8:item>
+												</Title>
+												<TitleLocation>None</TitleLocation>
+												<Shortcut>Shift+F7</Shortcut>
+												<Width>20</Width>
+												<Height>3</Height>
+												<VerticalStretch>false</VerticalStretch>
+												<PictureSize>AutoSize</PictureSize>
+												<Hyperlink>true</Hyperlink>
+												<NonselectedPictureText>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Безнал. платежи (Shift + F7)</v8:content>
+													</v8:item>
+												</NonselectedPictureText>
+												<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="КартинкаЧО10БезналичныеПлатежиКонтекстноеМеню" id="536"/>
+												<ExtendedTooltip name="КартинкаЧО10БезналичныеПлатежиРасширеннаяПодсказка" id="537"/>
+											</PictureField>
+											<PictureField name="КартинкаЧО12ЭСНСПК" id="564">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>ЭС (ФЗ-491) (Ctrl+F7)</v8:content>
+													</v8:item>
+												</Title>
+												<TitleLocation>None</TitleLocation>
+												<Shortcut>Ctrl+F7</Shortcut>
+												<Width>20</Width>
+												<Height>3</Height>
+												<VerticalStretch>false</VerticalStretch>
+												<PictureSize>AutoSize</PictureSize>
+												<Hyperlink>true</Hyperlink>
+												<NonselectedPictureText>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>ЭС (ФЗ-491) (Ctrl+F7)</v8:content>
+													</v8:item>
+												</NonselectedPictureText>
+												<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="КартинкаЧО12ЭСНСПККонтекстноеМеню" id="565"/>
+												<ExtendedTooltip name="КартинкаЧО12ЭСНСПКРасширеннаяПодсказка" id="566"/>
 											</PictureField>
 										</ChildItems>
 									</UsualGroup>
@@ -4844,6 +5016,7 @@
 															</v8:item>
 														</Title>
 														<Group>Vertical</Group>
+														<Behavior>Usual</Behavior>
 														<Representation>NormalSeparation</Representation>
 														<ShowTitle>false</ShowTitle>
 														<ExtendedTooltip name="ГруппаРамкаИнформацииExtendedTooltip" id="234"/>
@@ -4894,6 +5067,7 @@
 															</v8:item>
 														</Title>
 														<Group>Vertical</Group>
+														<Behavior>Usual</Behavior>
 														<Representation>NormalSeparation</Representation>
 														<ShowTitle>false</ShowTitle>
 														<ExtendedTooltip name="ГруппаРамкаСдачаExtendedTooltip" id="238"/>
@@ -5031,6 +5205,7 @@
 								<HorizontalStretch>true</HorizontalStretch>
 								<VerticalStretch>false</VerticalStretch>
 								<Group>Vertical</Group>
+								<Behavior>Usual</Behavior>
 								<Representation>None</Representation>
 								<ShowTitle>false</ShowTitle>
 								<ExtendedTooltip name="ГруппаСуммExtendedTooltip" id="245"/>
@@ -5096,6 +5271,42 @@
 										<ContextMenu name="СуммаКОплатеКонтекстноеМеню" id="21"/>
 										<ExtendedTooltip name="СуммаКОплатеExtendedTooltip" id="248"/>
 									</InputField>
+									<UsualGroup name="ГруппаЭлектронныйЧек" id="549">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа электронный чек</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа электронный чек</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Behavior>Usual</Behavior>
+										<Representation>None</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаЭлектронныйЧекРасширеннаяПодсказка" id="550"/>
+										<ChildItems>
+											<LabelField name="ДанныеSMSИлиEmail" id="546">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Тел.</v8:content>
+													</v8:item>
+												</Title>
+												<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+												<TitleLocation>Top</TitleLocation>
+												<Height>2</Height>
+												<HorizontalStretch>true</HorizontalStretch>
+												<VerticalStretch>false</VerticalStretch>
+												<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+												<ContextMenu name="ДанныеSMSИлиEmailКонтекстноеМеню" id="547"/>
+												<ExtendedTooltip name="ДанныеSMSИлиEmailРасширеннаяПодсказка" id="548"/>
+											</LabelField>
+										</ChildItems>
+									</UsualGroup>
 								</ChildItems>
 							</UsualGroup>
 						</ChildItems>
@@ -5108,6 +5319,7 @@
 							</v8:item>
 						</Title>
 						<Group>Vertical</Group>
+						<Behavior>Usual</Behavior>
 						<Representation>None</Representation>
 						<ShowTitle>false</ShowTitle>
 						<ExtendedTooltip name="ГруппаТаблоExtendedTooltip" id="249"/>
@@ -5120,6 +5332,9 @@
 								<EnableDrag>true</EnableDrag>
 								<FileDragMode>AsFile</FileDragMode>
 								<DataPath>Объект.Товары</DataPath>
+								<CommandSet>
+									<ExcludedCommand>Copy</ExcludedCommand>
+								</CommandSet>
 								<SearchStringLocation>None</SearchStringLocation>
 								<ViewStatusLocation>None</ViewStatusLocation>
 								<SearchControlLocation>None</SearchControlLocation>
@@ -5359,6 +5574,21 @@
 										<ContextMenu name="ТоварыЦенаКонтекстноеМеню" id="59"/>
 										<ExtendedTooltip name="ТоварыЦенаExtendedTooltip" id="256"/>
 									</InputField>
+									<InputField name="ТоварыЦенаСАгентскимВознаграждением" id="541">
+										<Visible>false</Visible>
+										<ReadOnly>true</ReadOnly>
+										<TitleFont ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Цена с агентским вознаграждением</v8:content>
+											</v8:item>
+										</ToolTip>
+										<EditMode>EnterOnInput</EditMode>
+										<Font ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
+										<ContextMenu name="ТоварыЦенаСАгентскимВознаграждениемКонтекстноеМеню" id="542"/>
+										<ExtendedTooltip name="ТоварыЦенаСАгентскимВознаграждениемРасширеннаяПодсказка" id="543"/>
+									</InputField>
 									<InputField name="ТоварыСумма" id="60">
 										<DataPath>Объект.Товары.Сумма</DataPath>
 										<TitleFont ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
@@ -5407,7 +5637,6 @@
 										<ExtendedTooltip name="ТоварыСуммаВсегоExtendedTooltip" id="260"/>
 									</InputField>
 									<InputField name="ТоварыОстаток" id="68">
-										<DataPath>Объект.Товары.Остаток</DataPath>
 										<ReadOnly>true</ReadOnly>
 										<TitleFont ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 										<EditMode>EnterOnInput</EditMode>
@@ -5448,6 +5677,7 @@
 							</v8:item>
 						</Title>
 						<Group>Vertical</Group>
+						<Behavior>Usual</Behavior>
 						<Representation>None</Representation>
 						<ChildItemsWidth>Equal</ChildItemsWidth>
 						<ShowTitle>false</ShowTitle>
@@ -5461,6 +5691,7 @@
 									</v8:item>
 								</Title>
 								<Group>Horizontal</Group>
+								<Behavior>Usual</Behavior>
 								<Representation>None</Representation>
 								<ChildItemsWidth>Equal</ChildItemsWidth>
 								<ShowTitle>false</ShowTitle>
@@ -5525,6 +5756,7 @@
 							</v8:item>
 						</Title>
 						<Group>Vertical</Group>
+						<Behavior>Usual</Behavior>
 						<ChildItemsWidth>Equal</ChildItemsWidth>
 						<ShowTitle>false</ShowTitle>
 						<ExtendedTooltip name="ГруппаПрочихОперацийExtendedTooltip" id="268"/>
@@ -5532,6 +5764,7 @@
 							<UsualGroup name="ГруппаПрочихОперацийРяд1" id="348">
 								<ToolTipRepresentation>None</ToolTipRepresentation>
 								<Group>Horizontal</Group>
+								<Behavior>Usual</Behavior>
 								<Representation>None</Representation>
 								<ChildItemsWidth>Equal</ChildItemsWidth>
 								<ShowTitle>false</ShowTitle>
@@ -5830,6 +6063,7 @@
 							<UsualGroup name="ГруппаПрочихОперацийРяд2" id="386">
 								<ToolTipRepresentation>None</ToolTipRepresentation>
 								<Group>Horizontal</Group>
+								<Behavior>Usual</Behavior>
 								<Representation>None</Representation>
 								<ChildItemsWidth>Equal</ChildItemsWidth>
 								<ShowTitle>false</ShowTitle>
@@ -6133,6 +6367,7 @@
 								</Title>
 								<ToolTipRepresentation>None</ToolTipRepresentation>
 								<Group>Horizontal</Group>
+								<Behavior>Usual</Behavior>
 								<Representation>None</Representation>
 								<ChildItemsWidth>Equal</ChildItemsWidth>
 								<ShowTitle>false</ShowTitle>
@@ -6349,6 +6584,52 @@
 										<ContextMenu name="КартинкаПО33ПоискПоНаименованиюКонтекстноеМеню" id="533"/>
 										<ExtendedTooltip name="КартинкаПО33ПоискПоНаименованиюРасширеннаяПодсказка" id="534"/>
 									</PictureField>
+									<PictureField name="КартинкаПО34ВыборКассыККМ" id="538">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Выбор кассы ККМ</v8:content>
+											</v8:item>
+										</Title>
+										<TitleLocation>None</TitleLocation>
+										<Width>10</Width>
+										<Height>3</Height>
+										<VerticalStretch>false</VerticalStretch>
+										<PictureSize>AutoSize</PictureSize>
+										<Hyperlink>true</Hyperlink>
+										<NonselectedPictureText>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Выбор кассы ККМ</v8:content>
+											</v8:item>
+										</NonselectedPictureText>
+										<FileDragMode>AsFile</FileDragMode>
+										<ContextMenu name="КартинкаПО34ВыборКассыККМКонтекстноеМеню" id="539"/>
+										<ExtendedTooltip name="КартинкаПО34ВыборКассыККМРасширеннаяПодсказка" id="540"/>
+									</PictureField>
+									<PictureField name="КартинкаПО35ЗаявлениеНаВозврат" id="554">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заявление на возврат</v8:content>
+											</v8:item>
+										</Title>
+										<TitleLocation>None</TitleLocation>
+										<Width>10</Width>
+										<Height>3</Height>
+										<VerticalStretch>false</VerticalStretch>
+										<PictureSize>AutoSize</PictureSize>
+										<Hyperlink>true</Hyperlink>
+										<NonselectedPictureText>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заявление на возврат</v8:content>
+											</v8:item>
+										</NonselectedPictureText>
+										<FileDragMode>AsFile</FileDragMode>
+										<ContextMenu name="КартинкаПО35ЗаявлениеНаВозвратКонтекстноеМеню" id="555"/>
+										<ExtendedTooltip name="КартинкаПО35ЗаявлениеНаВозвратРасширеннаяПодсказка" id="556"/>
+									</PictureField>
 								</ChildItems>
 							</UsualGroup>
 						</ChildItems>
@@ -6362,119 +6643,6 @@
 					<v8:Type>cfg:DataProcessorObject.РМКУправляемыйРежим</v8:Type>
 				</Type>
 				<MainAttribute>true</MainAttribute>
-				<Columns>
-					<AdditionalColumns table="Объект.Товары">
-						<Column name="ХарактеристикиИспользуются" id="1">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Характеристики используются</v8:content>
-								</v8:item>
-							</Title>
-							<Type>
-								<v8:Type>xs:boolean</v8:Type>
-							</Type>
-						</Column>
-						<Column name="ИспользоватьСерийныеНомера" id="2">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Использовать номера подарочных сертификатов</v8:content>
-								</v8:item>
-							</Title>
-							<Type>
-								<v8:Type>xs:boolean</v8:Type>
-							</Type>
-						</Column>
-						<Column name="Остаток" id="3">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Остаток</v8:content>
-								</v8:item>
-							</Title>
-							<Type>
-								<v8:Type>xs:decimal</v8:Type>
-								<v8:NumberQualifiers>
-									<v8:Digits>12</v8:Digits>
-									<v8:FractionDigits>3</v8:FractionDigits>
-									<v8:AllowedSign>Any</v8:AllowedSign>
-								</v8:NumberQualifiers>
-							</Type>
-						</Column>
-						<Column name="ЕдиницаИзмерения" id="4">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Единица измерения</v8:content>
-								</v8:item>
-							</Title>
-							<Type>
-								<v8:Type>cfg:CatalogRef.БазовыеЕдиницыИзмерения</v8:Type>
-							</Type>
-						</Column>
-						<Column name="ВидНалога" id="5">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Вид налога</v8:content>
-								</v8:item>
-							</Title>
-							<Type>
-								<v8:Type>cfg:EnumRef.ТипыСистемНалогообложенияККТ</v8:Type>
-							</Type>
-						</Column>
-						<Column name="КоличествоАкцизныхМарок" id="7">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Количество акцизных марок</v8:content>
-								</v8:item>
-							</Title>
-							<Type>
-								<v8:Type>xs:decimal</v8:Type>
-								<v8:NumberQualifiers>
-									<v8:Digits>5</v8:Digits>
-									<v8:FractionDigits>0</v8:FractionDigits>
-									<v8:AllowedSign>Nonnegative</v8:AllowedSign>
-								</v8:NumberQualifiers>
-							</Type>
-						</Column>
-						<Column name="НДСПоСтрочно" id="9">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>НДСПо строчно</v8:content>
-								</v8:item>
-							</Title>
-							<Type>
-								<v8:Type>xs:boolean</v8:Type>
-							</Type>
-						</Column>
-						<Column name="ОсобенностиУчетаНоменклатуры" id="10">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Особенности учета номенклатуры</v8:content>
-								</v8:item>
-							</Title>
-							<Type>
-								<v8:Type>cfg:EnumRef.ОсобенностиУчетаНоменклатуры</v8:Type>
-							</Type>
-						</Column>
-						<Column name="НоменклатураЕГАИС" id="11">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Номенклатура ЕГАИС</v8:content>
-								</v8:item>
-							</Title>
-							<Type>
-								<v8:Type>cfg:CatalogRef.КлассификаторАлкогольнойПродукцииЕГАИС</v8:Type>
-							</Type>
-						</Column>
-					</AdditionalColumns>
-				</Columns>
 			</Attribute>
 			<ConditionalAppearance>
 				<dcsset:item>

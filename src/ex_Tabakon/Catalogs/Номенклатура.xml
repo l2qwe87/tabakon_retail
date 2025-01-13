@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
 	<Catalog uuid="73eb1b17-4b88-43d4-bb5d-6821e757f8b0">
 		<InternalInfo>
 			<xr:GeneratedType name="CatalogObject.Номенклатура" category="Object">
@@ -24,33 +24,21 @@
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
 			<Name>Номенклатура</Name>
 			<Comment/>
-			<ObjectBelonging>Adopted</ObjectBelonging>
 			<ExtendedConfigurationObject>b7fb602b-73ed-40e9-9b94-88e47819fe72</ExtendedConfigurationObject>
 			<CodeLength>11</CodeLength>
 			<CodeType>String</CodeType>
 			<CodeAllowedLength>Fixed</CodeAllowedLength>
 		</Properties>
 		<ChildObjects>
-			<Attribute uuid="c0da2d21-c9b4-438f-acce-8776a122e74a">
-				<InternalInfo/>
-				<Properties>
-					<Name>ТабачнаяПродукция</Name>
-					<Comment/>
-					<ObjectBelonging>Adopted</ObjectBelonging>
-					<ExtendedConfigurationObject>3d8cc8f4-1714-40c8-a0a0-469f34b1cdcf</ExtendedConfigurationObject>
-					<Type>
-						<v8:Type>xs:boolean</v8:Type>
-					</Type>
-				</Properties>
-			</Attribute>
 			<Attribute uuid="ff401cf9-b4d5-48b4-bfe6-4f23c4efec9b">
 				<InternalInfo/>
 				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
 					<Name>ОсобенностьУчета</Name>
 					<Comment/>
-					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>b1e80c99-8c5e-478e-a958-f9ee9f71042e</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>cfg:EnumRef.ОсобенностиУчетаНоменклатуры</v8:Type>
@@ -60,9 +48,9 @@
 			<Attribute uuid="2abdbc65-ad3c-4694-97f5-e6fc6d7c7ece">
 				<InternalInfo/>
 				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
 					<Name>ВидНоменклатуры</Name>
 					<Comment/>
-					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>ae2367bb-e45f-4d28-af2c-6e1e0a4f15b5</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>cfg:CatalogRef.ВидыНоменклатуры</v8:Type>
@@ -72,9 +60,9 @@
 			<Attribute uuid="95639be2-8390-4ca5-98c9-7e47678b9b96">
 				<InternalInfo/>
 				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
 					<Name>СтавкаНДС</Name>
 					<Comment/>
-					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>e8890aa3-da60-4c66-aec2-dd0f6f1c23b8</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>cfg:EnumRef.СтавкиНДС</v8:Type>
@@ -84,9 +72,9 @@
 			<Attribute uuid="8987dc51-14a7-4fd1-8930-7361dfe26c04">
 				<InternalInfo/>
 				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
 					<Name>ОбъемДАЛ</Name>
 					<Comment/>
-					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>3d60d30c-5b63-462f-8f6c-4db7712b0d9b</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>xs:decimal</v8:Type>
@@ -101,9 +89,9 @@
 			<Attribute uuid="12bb9bed-b2bd-4432-a43a-a090e8d201c6">
 				<InternalInfo/>
 				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
 					<Name>Артикул</Name>
 					<Comment/>
-					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>e6753c62-ddc8-41e5-93cb-913b89b5d59f</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
@@ -117,9 +105,9 @@
 			<Attribute uuid="ebf91ed6-688b-4035-8b8a-283b4b84700d">
 				<InternalInfo/>
 				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
 					<Name>ПроизводительИмпортерАлкогольнойПродукции</Name>
 					<Comment/>
-					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>13b520c3-b878-46c5-bdd5-92f663bedbfd</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
@@ -129,9 +117,9 @@
 			<Attribute uuid="9cb5f106-3ddc-4ebe-835f-b05c0a284bf2">
 				<InternalInfo/>
 				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
 					<Name>Крепость</Name>
 					<Comment/>
-					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>01af5ab1-ff3e-4d65-87d3-30c2626ceb62</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>xs:decimal</v8:Type>
@@ -146,9 +134,9 @@
 			<Attribute uuid="c78dcfb5-1612-42a4-a022-3cd21d37cad0">
 				<InternalInfo/>
 				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
 					<Name>ЕдиницаИзмерения</Name>
 					<Comment/>
-					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>d2660556-9546-4991-88f3-590612375006</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>cfg:CatalogRef.БазовыеЕдиницыИзмерения</v8:Type>
@@ -167,18 +155,18 @@
 					</xr:GeneratedType>
 				</InternalInfo>
 				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
 					<Name>ДополнительныеРеквизиты</Name>
 					<Comment/>
-					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>344b6917-b413-4fae-aadd-d62836822de6</ExtendedConfigurationObject>
 				</Properties>
 				<ChildObjects>
 					<Attribute uuid="14719159-a1bc-409d-8aa5-7c7a8f482eba">
 						<InternalInfo/>
 						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
 							<Name>Свойство</Name>
 							<Comment/>
-							<ObjectBelonging>Adopted</ObjectBelonging>
 							<ExtendedConfigurationObject>3ebfaae7-710d-4b97-aff3-149de91a4f89</ExtendedConfigurationObject>
 							<Type>
 								<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
@@ -188,9 +176,9 @@
 					<Attribute uuid="070b9b08-18fa-44dc-8287-79ef6ff3f774">
 						<InternalInfo/>
 						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
 							<Name>Значение</Name>
 							<Comment/>
-							<ObjectBelonging>Adopted</ObjectBelonging>
 							<ExtendedConfigurationObject>c122409e-0e2f-4354-a036-4e8f6440b616</ExtendedConfigurationObject>
 							<Type>
 								<v8:TypeSet>cfg:Characteristic.ДополнительныеРеквизитыИСведения</v8:TypeSet>
