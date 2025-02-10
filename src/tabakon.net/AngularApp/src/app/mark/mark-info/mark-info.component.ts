@@ -82,9 +82,9 @@ export class MarkInfoComponent implements OnInit {
 
   public GetEmissionTypeClass(v : string):string
   {
-    if(v == "FOREIGN") { return "EM-FOREIGN" }
-    if(v == "LOCAL") { return "EM-LOCAL" }
-    return "";
+    if(v == "FOREIGN") { return "GREEN_COLOR" }
+    if(v == "LOCAL") { return "GREEN_COLOR" }
+    return "ACCENT_COLOR";
   }
 
   public get  info(): any{

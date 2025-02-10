@@ -13,7 +13,7 @@ export class MarkService {
 
   public getMarkInfo(mark : string) : Observable<any[]>{
     //return this.http.post<any[]>(IsmpCrptHost+"api/IsmpCrpt/Info", [mark]);
-    return this.http.post<any[]>("api/IsmpCrpt/Info", [mark]);
+    return this.http.post<any[]>("/api/IsmpCrpt/Info", [mark]);
   }
 
   constructor(
