@@ -47,7 +47,7 @@
 			</UsePurposes>
 			<ScriptVariant>Russian</ScriptVariant>
 			<Vendor/>
-			<Version>1.6.9.0</Version>
+			<Version>1.7.4.6</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
@@ -135,9 +135,13 @@
 			<CommonPicture>ДлительнаяОперация16</CommonPicture>
 			<CommonPicture>Успешно32</CommonPicture>
 			<CommonPicture>ВосклицательныйЗнакКрасный</CommonPicture>
+			<CommonPicture>СинхронизацияДанныхДлительнаяОперация48</CommonPicture>
+			<CommonPicture>Информация32</CommonPicture>
+			<CommonPicture>Предупреждение32</CommonPicture>
 			<SessionParameter>ТБК_WS_Клиент</SessionParameter>
 			<Role>ТБК_Кассир</Role>
 			<Role>ДобавлениеИзменениеЧековККМ</Role>
+			<Role>ПолныеПрава</Role>
 			<CommonModule>ШтрихкодированиеИС</CommonModule>
 			<CommonModule>ШтрихкодированиеИСРТ</CommonModule>
 			<CommonModule>ШтрихкодированиеМОТП</CommonModule>
@@ -275,6 +279,7 @@
 			<Document>ТТНВходящаяЕГАИС</Document>
 			<Document>ТБК_ЗаявкаОтМагазина</Document>
 			<Document>ТБК_ЗаявкаНаЦенники</Document>
+			<Document>ИзменениеАссортимента</Document>
 			<Enum>ВариантыВеденияДополнительныхДанныхПоНоменклатуре</Enum>
 			<Enum>ВидыПродукцииИС</Enum>
 			<Enum>ВидыОперацийЧекККМ</Enum>
@@ -331,6 +336,7 @@
 			<DataProcessor>ПомощникСозданияОбменаДанными</DataProcessor>
 			<DataProcessor>ТБКЧатУТ</DataProcessor>
 			<DataProcessor>ВводКонтактнойИнформации</DataProcessor>
+			<DataProcessor>ВыполнениеОбменаДанными</DataProcessor>
 			<InformationRegister>СостоянияОднократныхСкидокИКупонов</InformationRegister>
 			<InformationRegister>ТБКДанныеВаучера</InformationRegister>
 			<InformationRegister>Штрихкоды</InformationRegister>
@@ -371,11 +377,16 @@
 			<InformationRegister>ТБКУценка_Новая</InformationRegister>
 			<InformationRegister>ПоставщикиНоменклатуры</InformationRegister>
 			<InformationRegister>СтатусыИнформированияГИСМ</InformationRegister>
-			<InformationRegister>ТБКМаркиДляБК</InformationRegister>
+			<InformationRegister>ТБКМаркиДляСписания</InformationRegister>
+			<InformationRegister>ПробиватьПоБК</InformationRegister>
+			<InformationRegister>ТБК_ПроцентыПремийПоДням</InformationRegister>
+			<InformationRegister>ТБКОбезличенныеМарки</InformationRegister>
 			<AccumulationRegister>ТоварыНаСкладах</AccumulationRegister>
 			<AccumulationRegister>ДенежныеСредстваККМ</AccumulationRegister>
 			<AccumulationRegister>Продажи</AccumulationRegister>
 			<AccumulationRegister>ТБКПремииПоЧекам</AccumulationRegister>
+			<AccumulationRegister>ТоварыКОтгрузке</AccumulationRegister>
+			<AccumulationRegister>ТоварыКПоступлению</AccumulationRegister>
 			<ChartOfCharacteristicTypes>РазделыДатЗапретаИзменения</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>ТипыШтрихкодов</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>ПраваПользователей</ChartOfCharacteristicTypes>

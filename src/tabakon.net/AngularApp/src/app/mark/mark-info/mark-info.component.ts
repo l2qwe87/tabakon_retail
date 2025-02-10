@@ -4,6 +4,7 @@ import { Component, Input, OnInit } from '@angular/core';
 interface IProp{
   label : string;
   value : string;
+  class : string;
 }
 
 @Component({
@@ -20,10 +21,11 @@ export class MarkInfoComponent implements OnInit {
     this._info = v;
 
     this.props = [
-      {label: "Владелец", value: v.cisInfo.ownerName},
-      {label: "ИНН", value: v.cisInfo.ownerInn},
-      {label: "Статус", value: this.GetStatus(v.cisInfo.status)},
-      {label: "Товар", value: v.cisInfo.productName},
+      {label: "Владелец", value: v.cisInfo.ownerName, class: ""},
+      {label: "ИНН", value: v.cisInfo.ownerInn, class: ""},
+      {label: "Статус", value: this.GetStatus(v.cisInfo.status), class: ""},
+      {label: "Тип эмиссии", value: this.GetEmissionType(v.cisInfo.emissionType), class: this.GetEmissionTypeClass(v.cisInfo.emissionType)},
+      {label: "Товар", value: v.cisInfo.productName, class: ""},
     ]
 
     console.log(this.props);
@@ -58,9 +60,31 @@ export class MarkInfoComponent implements OnInit {
     "DISAGGREGATED" : "Расформирован",
   };
 
+  private _emissionType = {
+    "LOCAL" : "LOCAL",
+    "FOREIGN" : "FOREIGN",
+    "REMAINS" : "REMAINS",
+    "CROSSBORDER" : "CROSSBORDER",
+    "REMARK" : "REMARK",
+    "COMMISSION" : "COMMISSION",
+    "AGGREGATION": "AGGREGATION",
+  }
+
   public GetStatus(v : string):string
   {
     return this._statusEnum[v] ?? v;
+  }
+
+  public GetEmissionType(v : string):string
+  {
+    return this._emissionType[v] ?? v;
+  }
+
+  public GetEmissionTypeClass(v : string):string
+  {
+    if(v == "FOREIGN") { return "EM-FOREIGN" }
+    if(v == "LOCAL") { return "EM-LOCAL" }
+    return "";
   }
 
   public get  info(): any{
