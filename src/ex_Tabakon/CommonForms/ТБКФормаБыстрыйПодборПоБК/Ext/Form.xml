@@ -4,6 +4,8 @@
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
 	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -22,6 +24,7 @@
 					<Button name="ДобавитьТовар" id="17">
 						<Type>CommandBarButton</Type>
 						<DefaultButton>true</DefaultButton>
+						<GroupHorizontalAlign>Right</GroupHorizontalAlign>
 						<CommandName>Form.Command.ДобавитьТовар</CommandName>
 						<BackColor>style:ImportantColor</BackColor>
 						<ExtendedTooltip name="ДобавитьТоварРасширеннаяПодсказка" id="18"/>

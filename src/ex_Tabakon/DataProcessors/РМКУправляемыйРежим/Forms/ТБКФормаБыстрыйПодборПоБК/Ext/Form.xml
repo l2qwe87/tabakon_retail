@@ -13,9 +13,38 @@
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
 	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
+		<UsualGroup name="Группа1" id="25">
+			<HorizontalStretch>true</HorizontalStretch>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<LabelDecoration name="Комментарий" id="22">
+					<TextColor>style:NegativeTextColor</TextColor>
+					<Font ref="style:NormalTextFont" height="16" kind="StyleItem" scale="100"/>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="24"/>
+				</LabelDecoration>
+				<Button name="ДобавитьТовар" id="17">
+					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<CommandName>Form.Command.ДобавитьТовар</CommandName>
+					<BackColor>style:ImportantColor</BackColor>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбрать БК</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ДобавитьТоварРасширеннаяПодсказка" id="18"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
 		<Table name="Товар" id="1">
 			<Representation>List</Representation>
 			<ReadOnly>true</ReadOnly>
@@ -30,21 +59,6 @@
 			<AutoCommandBar name="ТоварКоманднаяПанель" id="3">
 				<HorizontalAlign>Right</HorizontalAlign>
 				<Autofill>false</Autofill>
-				<ChildItems>
-					<Button name="ДобавитьТовар" id="17">
-						<Type>CommandBarButton</Type>
-						<DefaultButton>true</DefaultButton>
-						<CommandName>Form.Command.ДобавитьТовар</CommandName>
-						<BackColor>style:ImportantColor</BackColor>
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Выбрать БК</v8:content>
-							</v8:item>
-						</Title>
-						<ExtendedTooltip name="ДобавитьТоварРасширеннаяПодсказка" id="18"/>
-					</Button>
-				</ChildItems>
 			</AutoCommandBar>
 			<ExtendedTooltip name="ТоварРасширеннаяПодсказка" id="4"/>
 			<SearchStringAddition name="ТоварСтрокаПоиска" id="5">

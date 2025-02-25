@@ -1,0 +1,544 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<Customizable>false</Customizable>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Период" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применяется с</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Организация" id="4">
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Магазин" id="7">
+			<ContextMenu name="МагазинКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="МагазинРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Склад" id="10">
+			<ChoiceParameterLinks>
+				<xr:Link>
+					<xr:Name>Отбор.Магазин</xr:Name>
+					<xr:DataPath xsi:type="xs:string">1/0:1d1b4d4f-cee2-4cb3-b1a7-9a268f913ad5</xr:DataPath>
+					<xr:ValueChange>Clear</xr:ValueChange>
+				</xr:Link>
+				<xr:Link>
+					<xr:Name>Отбор.Организация</xr:Name>
+					<xr:DataPath xsi:type="xs:string">1/0:9f450411-5d2b-4ae2-916c-001119492be1</xr:DataPath>
+					<xr:ValueChange>Clear</xr:ValueChange>
+				</xr:Link>
+			</ChoiceParameterLinks>
+			<ContextMenu name="СкладКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ТоварнаяГруппа" id="13">
+			<ContextMenu name="ТоварнаяГруппаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ТоварнаяГруппаРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="СистемаНалогообложения" id="16">
+			<ListChoiceMode>true</ListChoiceMode>
+			<AutoChoiceIncomplete>true</AutoChoiceIncomplete>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<ChooseType>false</ChooseType>
+			<TextEdit>false</TextEdit>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Общая система налогообложения</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Общая</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Упрощенная система налогообложения</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">УСН</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Единый налог на вмененный доход</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">ЕНВД</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Единый сельскохозяйственный налог</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">ЕСН</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Патентная система налогообложения</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Патент</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>УСНДоходРасход5</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">УСНДоходРасход5</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>УСНДоходРасход7</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">УСНДоходРасход7</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="СистемаНалогообложенияКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="СистемаНалогообложенияРасширеннаяПодсказка" id="18"/>
+			<Events>
+				<Event name="OnChange" callType="Override">ТБКСистемаНалогообложенияПриИзмененииВместо</Event>
+			</Events>
+		</InputField>
+		<RadioButtonField name="УСНОбъектНалогообложения" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект налогообложения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект налогообложения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<RadioButtonType>RadioButtons</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Доход</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Доход</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Доход минус расход</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Доход минус расход</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="УСНОбъектНалогообложенияКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="УСНОбъектНалогообложенияРасширеннаяПодсказка" id="21"/>
+		</RadioButtonField>
+		<UsualGroup name="ГруппаНДС" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа НДС</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНДСРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияНДС" id="27">
+					<Width>16</Width>
+					<ContextMenu name="ДекорацияНДСКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="ДекорацияНДСРасширеннаяПодсказка" id="29"/>
+				</LabelDecoration>
+				<CheckBoxField name="ОсвобожденОтНДС" id="22">
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОсвобожденОтНДСКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ОсвобожденОтНДСРасширеннаяПодсказка" id="24"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПатент" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа патент</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа патент</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПатентРасширеннаяПодсказка" id="39"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияПатент" id="40">
+					<Width>16</Width>
+					<ContextMenu name="ДекорацияПатентКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ДекорацияПатентРасширеннаяПодсказка" id="42"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаДатыПатента" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Патент</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа даты патента</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="ГруппаДатыПатентаРасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<InputField name="ДатаНачалаПатента" id="32">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата начала</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДатаНачалаПатентаКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="ДатаНачалаПатентаРасширеннаяПодсказка" id="34"/>
+						</InputField>
+						<InputField name="ДатаОкончанияПатента" id="35">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата окончания</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДатаОкончанияПатентаКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="ДатаОкончанияПатентаРасширеннаяПодсказка" id="37"/>
+						</InputField>
+						<InputField name="НомерПатента" id="43">
+							<ContextMenu name="НомерПатентаКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="НомерПатентаРасширеннаяПодсказка" id="45"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+	<BaseForm version="2.17">
+		<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+		<Customizable>false</Customizable>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+		<ChildItems>
+			<InputField name="Период" id="1">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Применяется с</v8:content>
+					</v8:item>
+				</Title>
+				<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+				<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="3"/>
+			</InputField>
+			<InputField name="Организация" id="4">
+				<ContextMenu name="ОрганизацияКонтекстноеМеню" id="5"/>
+				<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="6"/>
+			</InputField>
+			<InputField name="Магазин" id="7">
+				<ContextMenu name="МагазинКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="МагазинРасширеннаяПодсказка" id="9"/>
+			</InputField>
+			<InputField name="Склад" id="10">
+				<ChoiceParameterLinks>
+					<xr:Link>
+						<xr:Name>Отбор.Магазин</xr:Name>
+						<xr:DataPath xsi:type="xs:string">1/0:1d1b4d4f-cee2-4cb3-b1a7-9a268f913ad5</xr:DataPath>
+						<xr:ValueChange>Clear</xr:ValueChange>
+					</xr:Link>
+					<xr:Link>
+						<xr:Name>Отбор.Организация</xr:Name>
+						<xr:DataPath xsi:type="xs:string">1/0:9f450411-5d2b-4ae2-916c-001119492be1</xr:DataPath>
+						<xr:ValueChange>Clear</xr:ValueChange>
+					</xr:Link>
+				</ChoiceParameterLinks>
+				<ContextMenu name="СкладКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="12"/>
+			</InputField>
+			<InputField name="ТоварнаяГруппа" id="13">
+				<ContextMenu name="ТоварнаяГруппаКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="ТоварнаяГруппаРасширеннаяПодсказка" id="15"/>
+			</InputField>
+			<InputField name="СистемаНалогообложения" id="16">
+				<ListChoiceMode>true</ListChoiceMode>
+				<AutoChoiceIncomplete>true</AutoChoiceIncomplete>
+				<AutoMarkIncomplete>true</AutoMarkIncomplete>
+				<ChooseType>false</ChooseType>
+				<TextEdit>false</TextEdit>
+				<ChoiceList>
+					<xr:Item>
+						<xr:Presentation/>
+						<xr:CheckState>0</xr:CheckState>
+						<xr:Value xsi:type="FormChoiceListDesTimeValue">
+							<Presentation>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Общая система налогообложения</v8:content>
+								</v8:item>
+							</Presentation>
+							<Value xsi:type="xs:string">Общая</Value>
+						</xr:Value>
+					</xr:Item>
+					<xr:Item>
+						<xr:Presentation/>
+						<xr:CheckState>0</xr:CheckState>
+						<xr:Value xsi:type="FormChoiceListDesTimeValue">
+							<Presentation>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Упрощенная система налогообложения</v8:content>
+								</v8:item>
+							</Presentation>
+							<Value xsi:type="xs:string">УСН</Value>
+						</xr:Value>
+					</xr:Item>
+					<xr:Item>
+						<xr:Presentation/>
+						<xr:CheckState>0</xr:CheckState>
+						<xr:Value xsi:type="FormChoiceListDesTimeValue">
+							<Presentation>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Единый налог на вмененный доход</v8:content>
+								</v8:item>
+							</Presentation>
+							<Value xsi:type="xs:string">ЕНВД</Value>
+						</xr:Value>
+					</xr:Item>
+					<xr:Item>
+						<xr:Presentation/>
+						<xr:CheckState>0</xr:CheckState>
+						<xr:Value xsi:type="FormChoiceListDesTimeValue">
+							<Presentation>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Единый сельскохозяйственный налог</v8:content>
+								</v8:item>
+							</Presentation>
+							<Value xsi:type="xs:string">ЕСН</Value>
+						</xr:Value>
+					</xr:Item>
+					<xr:Item>
+						<xr:Presentation/>
+						<xr:CheckState>0</xr:CheckState>
+						<xr:Value xsi:type="FormChoiceListDesTimeValue">
+							<Presentation>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Патентная система налогообложения</v8:content>
+								</v8:item>
+							</Presentation>
+							<Value xsi:type="xs:string">Патент</Value>
+						</xr:Value>
+					</xr:Item>
+				</ChoiceList>
+				<ContextMenu name="СистемаНалогообложенияКонтекстноеМеню" id="17"/>
+				<ExtendedTooltip name="СистемаНалогообложенияРасширеннаяПодсказка" id="18"/>
+			</InputField>
+			<RadioButtonField name="УСНОбъектНалогообложения" id="19">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Объект налогообложения</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Объект налогообложения</v8:content>
+					</v8:item>
+				</ToolTip>
+				<RadioButtonType>RadioButtons</RadioButtonType>
+				<ChoiceList>
+					<xr:Item>
+						<xr:Presentation/>
+						<xr:CheckState>0</xr:CheckState>
+						<xr:Value xsi:type="FormChoiceListDesTimeValue">
+							<Presentation>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Доход</v8:content>
+								</v8:item>
+							</Presentation>
+							<Value xsi:type="xs:string">Доход</Value>
+						</xr:Value>
+					</xr:Item>
+					<xr:Item>
+						<xr:Presentation/>
+						<xr:CheckState>0</xr:CheckState>
+						<xr:Value xsi:type="FormChoiceListDesTimeValue">
+							<Presentation>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Доход минус расход</v8:content>
+								</v8:item>
+							</Presentation>
+							<Value xsi:type="xs:string">Доход минус расход</Value>
+						</xr:Value>
+					</xr:Item>
+				</ChoiceList>
+				<ContextMenu name="УСНОбъектНалогообложенияКонтекстноеМеню" id="20"/>
+				<ExtendedTooltip name="УСНОбъектНалогообложенияРасширеннаяПодсказка" id="21"/>
+			</RadioButtonField>
+			<UsualGroup name="ГруппаНДС" id="25">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа НДС</v8:content>
+					</v8:item>
+				</Title>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаНДСРасширеннаяПодсказка" id="26"/>
+				<ChildItems>
+					<LabelDecoration name="ДекорацияНДС" id="27">
+						<Width>16</Width>
+						<ContextMenu name="ДекорацияНДСКонтекстноеМеню" id="28"/>
+						<ExtendedTooltip name="ДекорацияНДСРасширеннаяПодсказка" id="29"/>
+					</LabelDecoration>
+					<CheckBoxField name="ОсвобожденОтНДС" id="22">
+						<TitleLocation>Right</TitleLocation>
+						<CheckBoxType>Auto</CheckBoxType>
+						<ContextMenu name="ОсвобожденОтНДСКонтекстноеМеню" id="23"/>
+						<ExtendedTooltip name="ОсвобожденОтНДСРасширеннаяПодсказка" id="24"/>
+					</CheckBoxField>
+				</ChildItems>
+			</UsualGroup>
+			<UsualGroup name="ГруппаПатент" id="38">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа патент</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа патент</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаПатентРасширеннаяПодсказка" id="39"/>
+				<ChildItems>
+					<LabelDecoration name="ДекорацияПатент" id="40">
+						<Width>16</Width>
+						<ContextMenu name="ДекорацияПатентКонтекстноеМеню" id="41"/>
+						<ExtendedTooltip name="ДекорацияПатентРасширеннаяПодсказка" id="42"/>
+					</LabelDecoration>
+					<UsualGroup name="ГруппаДатыПатента" id="30">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Патент</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа даты патента</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Group>Vertical</Group>
+						<ExtendedTooltip name="ГруппаДатыПатентаРасширеннаяПодсказка" id="31"/>
+						<ChildItems>
+							<InputField name="ДатаНачалаПатента" id="32">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Дата начала</v8:content>
+									</v8:item>
+								</Title>
+								<ContextMenu name="ДатаНачалаПатентаКонтекстноеМеню" id="33"/>
+								<ExtendedTooltip name="ДатаНачалаПатентаРасширеннаяПодсказка" id="34"/>
+							</InputField>
+							<InputField name="ДатаОкончанияПатента" id="35">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Дата окончания</v8:content>
+									</v8:item>
+								</Title>
+								<ContextMenu name="ДатаОкончанияПатентаКонтекстноеМеню" id="36"/>
+								<ExtendedTooltip name="ДатаОкончанияПатентаРасширеннаяПодсказка" id="37"/>
+							</InputField>
+							<InputField name="НомерПатента" id="43">
+								<ContextMenu name="НомерПатентаКонтекстноеМеню" id="44"/>
+								<ExtendedTooltip name="НомерПатентаРасширеннаяПодсказка" id="45"/>
+							</InputField>
+						</ChildItems>
+					</UsualGroup>
+				</ChildItems>
+			</UsualGroup>
+		</ChildItems>
+		<Attributes/>
+	</BaseForm>
+</Form>
