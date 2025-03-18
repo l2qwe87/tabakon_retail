@@ -91,6 +91,7 @@
 					<ContextMenu name="ПроектКонтекстноеМеню" id="77"/>
 					<ExtendedTooltip name="ПроектРасширеннаяПодсказка" id="78"/>
 					<Events>
+						<Event name="OnChange">ПроектПриИзменении</Event>
 						<Event name="StartChoice">ПроектНачалоВыбора</Event>
 					</Events>
 				</InputField>
@@ -290,6 +291,138 @@
 				</InputField>
 			</ChildItems>
 		</Table>
+		<CheckBoxField name="ПроверятьПриСканировании" id="145">
+			<DataPath>ПроверятьПриСканировании</DataPath>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Если флажок установлен, то проверка марок в ЧЗ происходит при каждом сканировании. Так же можно воспользоваться кнопкой Проверить марки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПроверятьПриСканированииКонтекстноеМеню" id="146"/>
+			<ExtendedTooltip name="ПроверятьПриСканированииРасширеннаяПодсказка" id="147"/>
+		</CheckBoxField>
+		<Table name="МаркиНаПроверку" id="109">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.МаркиНаПроверку</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="МаркиНаПроверкуКонтекстноеМеню" id="110"/>
+			<AutoCommandBar name="МаркиНаПроверкуКоманднаяПанель" id="111">
+				<ChildItems>
+					<Button name="МаркиНаПроверкуПроверитьМарки" id="143">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПроверитьМарки</CommandName>
+						<BackColor>style:ВыборСтандартногоПериодаФонКнопки</BackColor>
+						<Font bold="true" kind="AutoFont"/>
+						<ExtendedTooltip name="МаркиНаПроверкуПроверитьМаркиРасширеннаяПодсказка" id="144"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="МаркиНаПроверкуРасширеннаяПодсказка" id="112"/>
+			<SearchStringAddition name="МаркиНаПроверкуСтрокаПоиска" id="113">
+				<AdditionSource>
+					<Item>МаркиНаПроверку</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="МаркиНаПроверкуСтрокаПоискаКонтекстноеМеню" id="114"/>
+				<ExtendedTooltip name="МаркиНаПроверкуСтрокаПоискаРасширеннаяПодсказка" id="115"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="МаркиНаПроверкуСостояниеПросмотра" id="116">
+				<AdditionSource>
+					<Item>МаркиНаПроверку</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="МаркиНаПроверкуСостояниеПросмотраКонтекстноеМеню" id="117"/>
+				<ExtendedTooltip name="МаркиНаПроверкуСостояниеПросмотраРасширеннаяПодсказка" id="118"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="МаркиНаПроверкуУправлениеПоиском" id="119">
+				<AdditionSource>
+					<Item>МаркиНаПроверку</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="МаркиНаПроверкуУправлениеПоискомКонтекстноеМеню" id="120"/>
+				<ExtendedTooltip name="МаркиНаПроверкуУправлениеПоискомРасширеннаяПодсказка" id="121"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="МаркиНаПроверкуНомерСтроки" id="122">
+					<DataPath>Объект.МаркиНаПроверку.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МаркиНаПроверкуНомерСтрокиКонтекстноеМеню" id="123"/>
+					<ExtendedTooltip name="МаркиНаПроверкуНомерСтрокиРасширеннаяПодсказка" id="124"/>
+				</LabelField>
+				<InputField name="МаркиНаПроверкуQR" id="125">
+					<DataPath>Объект.МаркиНаПроверку.QR</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="МаркиНаПроверкуQRКонтекстноеМеню" id="126"/>
+					<ExtendedTooltip name="МаркиНаПроверкуQRРасширеннаяПодсказка" id="127"/>
+				</InputField>
+				<InputField name="МаркиНаПроверкуНоменклатура" id="128">
+					<DataPath>Объект.МаркиНаПроверку.Номенклатура</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="МаркиНаПроверкуНоменклатураКонтекстноеМеню" id="129"/>
+					<ExtendedTooltip name="МаркиНаПроверкуНоменклатураРасширеннаяПодсказка" id="130"/>
+				</InputField>
+				<InputField name="МаркиНаПроверкуХарактеристика" id="131">
+					<DataPath>Объект.МаркиНаПроверку.Характеристика</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="МаркиНаПроверкуХарактеристикаКонтекстноеМеню" id="132"/>
+					<ExtendedTooltip name="МаркиНаПроверкуХарактеристикаРасширеннаяПодсказка" id="133"/>
+				</InputField>
+				<CheckBoxField name="МаркиНаПроверкуПроверена" id="134">
+					<DataPath>Объект.МаркиНаПроверку.Проверена</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="МаркиНаПроверкуПроверенаКонтекстноеМеню" id="135"/>
+					<ExtendedTooltip name="МаркиНаПроверкуПроверенаРасширеннаяПодсказка" id="136"/>
+				</CheckBoxField>
+				<CheckBoxField name="МаркиНаПроверкуНашаОрганизация" id="148">
+					<DataPath>Объект.МаркиНаПроверку.НашаОрганизация</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Повторная проверка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Повторную проверку проводить через несколько дней. </v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="МаркиНаПроверкуНашаОрганизацияКонтекстноеМеню" id="149"/>
+					<ExtendedTooltip name="МаркиНаПроверкуНашаОрганизацияРасширеннаяПодсказка" id="150"/>
+				</CheckBoxField>
+				<CheckBoxField name="МаркиНаПроверкуХорошая" id="137">
+					<DataPath>Объект.МаркиНаПроверку.Хорошая</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="МаркиНаПроверкуХорошаяКонтекстноеМеню" id="138"/>
+					<ExtendedTooltip name="МаркиНаПроверкуХорошаяРасширеннаяПодсказка" id="139"/>
+				</CheckBoxField>
+				<InputField name="МаркиНаПроверкуОшибка" id="140">
+					<DataPath>Объект.МаркиНаПроверку.Ошибка</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="МаркиНаПроверкуОшибкаКонтекстноеМеню" id="141"/>
+					<ExtendedTooltip name="МаркиНаПроверкуОшибкаРасширеннаяПодсказка" id="142"/>
+				</InputField>
+			</ChildItems>
+		</Table>
 		<LabelField name="ТоварыИтогКоличество" id="73">
 			<DataPath>Объект.Товары.TotalКоличество</DataPath>
 			<ContextMenu name="ТоварыИтогКоличествоКонтекстноеМеню" id="74"/>
@@ -384,6 +517,43 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="ИНН_Организации" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ИНН организации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПроверятьПриСканировании" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверять при сканировании</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НашиОрганизацииИНН" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наши организации ИНН</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -402,6 +572,95 @@
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветФона</dcscor:parameter>
 						<dcscor:value xsi:type="v8ui:Color">web:LightSalmon</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>МаркиНаПроверку</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>AndGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.МаркиНаПроверку.Проверена</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.МаркиНаПроверку.Хорошая</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:LightGreen</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>МаркиНаПроверку</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>AndGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.МаркиНаПроверку.Проверена</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.МаркиНаПроверку.НашаОрганизация</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:LemonChiffon</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>МаркиНаПроверку</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>AndGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.МаркиНаПроверку.Проверена</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.МаркиНаПроверку.Хорошая</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.МаркиНаПроверку.НашаОрганизация</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:LightCoral</dcscor:value>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
@@ -437,6 +696,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказатьФото</Action>
+		</Command>
+		<Command name="ПроверитьМарки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить марки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить марки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьМарки</Action>
 		</Command>
 	</Commands>
 </Form>
