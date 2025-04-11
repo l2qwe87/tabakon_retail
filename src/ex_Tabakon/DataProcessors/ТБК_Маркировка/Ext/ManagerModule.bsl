@@ -26,7 +26,7 @@
 	КонецЕсли;
 
 	Для Каждого сведения из сведенияМарок Цикл
-		cisInfo = новый Структура("ownerInn,status");  
+		cisInfo = новый Структура("ownerInn,status"); 
 		ЗаполнитьЗначенияСвойств(cisInfo,сведения.cisInfo);
 		//рез.Вставить(сведения.cisInfo.requestedCis, Новый Структура("ИНН,Статус",cisInfo.ownerInn, cisInfo.status));
 		рез.Вставить(сведения.cisInfo.cis, Новый Структура("ИНН,Статус",cisInfo.ownerInn, cisInfo.status));

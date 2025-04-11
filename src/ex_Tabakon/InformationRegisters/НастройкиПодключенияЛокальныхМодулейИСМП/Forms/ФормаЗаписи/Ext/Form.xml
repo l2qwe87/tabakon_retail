@@ -1,0 +1,1533 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="ОрганизацияРабочееМесто" id="214">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ОрганизацияРабочееМестоРасширеннаяПодсказка" id="215"/>
+			<ChildItems>
+				<UsualGroup name="ШапкаНастройки" id="212">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ШапкаНастройкиРасширеннаяПодсказка" id="213"/>
+					<ChildItems>
+						<InputField name="Организация" id="1">
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<RadioButtonField name="Приоритет" id="206">
+							<Visible>false</Visible>
+							<TitleLocation>None</TitleLocation>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<RadioButtonType>Tumbler</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Основной</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Резервный</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ПриоритетКонтекстноеМеню" id="207"/>
+							<ExtendedTooltip name="ПриоритетРасширеннаяПодсказка" id="208"/>
+						</RadioButtonField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="НастройкиПодключения" id="224">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки подключения</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="НастройкиПодключенияРасширеннаяПодсказка" id="225"/>
+					<ChildItems>
+						<InputField name="РабочееМесто" id="4">
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;настройка действует для всех рабочих мест&gt;</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="РабочееМестоКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="РабочееМестоРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<RadioButtonField name="ОбменНаСервере" id="87">
+							<RadioButtonType>Auto</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>На сервере 1С:Предприятия</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>На локальном компьютере</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ОбменНаСервереКонтекстноеМеню" id="88"/>
+							<ExtendedTooltip name="ОбменНаСервереРасширеннаяПодсказка" id="89"/>
+						</RadioButtonField>
+						<UsualGroup name="ГруппаПодключение" id="38">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Адрес подключения</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПодключениеРасширеннаяПодсказка" id="39"/>
+							<ChildItems>
+								<InputField name="ЗащищенноеСоединение" id="28">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Адрес подключения</v8:content>
+										</v8:item>
+									</Title>
+									<Width>8</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>5</MaxWidth>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>БЛ=http://; БИ=https://</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ЗащищенноеСоединениеКонтекстноеМеню" id="29"/>
+									<ExtendedTooltip name="ЗащищенноеСоединениеРасширеннаяПодсказка" id="30"/>
+								</InputField>
+								<InputField name="СерверПодключенияЛМ" id="22">
+									<TitleLocation>None</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>18</MaxWidth>
+									<ContextMenu name="СерверПодключенияЛМКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="СерверПодключенияЛМРасширеннаяПодсказка" id="24"/>
+								</InputField>
+								<InputField name="ПортПодключенияЛМ" id="25">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Порт</v8:content>
+										</v8:item>
+									</Title>
+									<Width>4</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>4</MaxWidth>
+									<ContextMenu name="ПортПодключенияЛМКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="ПортПодключенияЛМРасширеннаяПодсказка" id="27"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Логин" id="13">
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;логин администратора, заданный при установке ЛМ&gt;</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="ЛогинКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ЛогинРасширеннаяПодсказка" id="15"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНастройкаПароля" id="135">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа1</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНастройкаПароляРасширеннаяПодсказка" id="136"/>
+			<ChildItems>
+				<InputField name="Пароль" id="31">
+					<PasswordMode>true</PasswordMode>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;пароль администратора, заданный при установке ЛМ&gt;</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="ПарольКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ПарольРасширеннаяПодсказка" id="33"/>
+				</InputField>
+				<Button name="Изменить" id="137">
+					<Type>UsualButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ИзменитьРасширеннаяПодсказка" id="138"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТаймаутПодключения" id="219">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТаймаутПодключенияРасширеннаяПодсказка" id="220"/>
+			<ChildItems>
+				<InputField name="Таймаут" id="216">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таймаут</v8:content>
+						</v8:item>
+					</Title>
+					<Width>6</Width>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="ТаймаутКонтекстноеМеню" id="217"/>
+					<ExtendedTooltip name="ТаймаутРасширеннаяПодсказка" id="218"/>
+				</InputField>
+				<LabelDecoration name="ПодписьТаймаут" id="221">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>секунд</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПодписьТаймаутКонтекстноеМеню" id="222"/>
+					<ExtendedTooltip name="ПодписьТаймаутРасширеннаяПодсказка" id="223"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<LabelField name="ВидыПродукцииПредставление" id="107">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>40</MaxWidth>
+			<Hiperlink>true</Hiperlink>
+			<ContextMenu name="ВидыПродукцииПредставлениеКонтекстноеМеню" id="108"/>
+			<ExtendedTooltip name="ВидыПродукцииПредставлениеРасширеннаяПодсказка" id="109"/>
+		</LabelField>
+		<UsualGroup name="ГруппаВыгрузкаКарточек" id="116">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВыгрузкаКарточекРасширеннаяПодсказка" id="117"/>
+			<ChildItems>
+				<InputField name="КоличествоДнейВыгрузкиКарточек" id="110">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загружать КИ за</v8:content>
+						</v8:item>
+					</Title>
+					<Width>6</Width>
+					<SpinButton>true</SpinButton>
+					<MaxValue xsi:type="xs:decimal">90</MaxValue>
+					<ContextMenu name="КоличествоДнейВыгрузкиКарточекКонтекстноеМеню" id="111"/>
+					<ExtendedTooltip name="КоличествоДнейВыгрузкиКарточекРасширеннаяПодсказка" id="112"/>
+				</InputField>
+				<LabelDecoration name="ПодписьКоличествоДней" id="113">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>дней</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ContextMenu name="ПодписьКоличествоДнейКонтекстноеМеню" id="114"/>
+					<ExtendedTooltip name="ПодписьКоличествоДнейРасширеннаяПодсказка" id="115">
+						<Title formatted="true">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>По выбранным товарным группам в Локальный модуль будут выгружены карточки кодов идентификации за указанный период.
+
+
+Максимальный период выгрузки - &lt;b&gt;90&lt;/&gt;&lt;b&gt; &lt;/&gt;&lt;b&gt;дней.&lt;/&gt;
+&lt;b&gt;0&lt;/&gt;&lt;b&gt; &lt;/&gt;&lt;b&gt;дней&lt;/&gt; - не выгружать.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТекущееСостояниеСистемы" id="93">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТекущееСостояниеСистемыРасширеннаяПодсказка" id="94"/>
+			<ChildItems>
+				<Pages name="СтраницыПроверкаПодключения" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страницы проверка подключения</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страницы проверка подключения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<PagesRepresentation>None</PagesRepresentation>
+					<ExtendedTooltip name="СтраницыПроверкаПодключенияРасширеннаяПодсказка" id="43"/>
+					<ChildItems>
+						<Page name="СтраницаПроверкаНеВыполнялась" id="44">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проверка подключения не выполнялась</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проверка подключения не выполнялась</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="СтраницаПроверкаНеВыполняласьРасширеннаяПодсказка" id="45"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаПроверкаНеВыполнялась" id="46">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Проверка подключения не выполнялась</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Проверка подключения не выполнялась</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<VerticalAlign>Center</VerticalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПроверкаНеВыполняласьРасширеннаяПодсказка" id="47"/>
+									<ChildItems>
+										<PictureDecoration name="КартинкаПроверкаНеВыполнялась" id="48">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка</v8:content>
+												</v8:item>
+											</Title>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаПроверкаНеВыполняласьКонтекстноеМеню" id="49"/>
+											<ExtendedTooltip name="КартинкаПроверкаНеВыполняласьРасширеннаяПодсказка" id="50"/>
+										</PictureDecoration>
+										<LabelDecoration name="НадписьПроверкаНеВыполнялась" id="51">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Проверка подключения к Локальному модулю "Честный знак" не выполнялась. &lt;link ПроверитьПодключениеЛМЧЗ&gt;Проверить&lt;/&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьПроверкаНеВыполняласьКонтекстноеМеню" id="52"/>
+											<ExtendedTooltip name="НадписьПроверкаНеВыполняласьРасширеннаяПодсказка" id="53"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаПроверкаВыполняется" id="54">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выполняется проверка подключения</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выполняется проверка подключения</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="СтраницаПроверкаВыполняетсяРасширеннаяПодсказка" id="55"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаПроверкаВыполняется" id="56">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выполняется проверка подключения к УТМ</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выполняется проверка подключения к Локальному модулю "Честный знак"</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<VerticalAlign>Center</VerticalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПроверкаВыполняетсяРасширеннаяПодсказка" id="57"/>
+									<ChildItems>
+										<PictureDecoration name="КартинкаПроверкаВыполняется" id="58">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка</v8:content>
+												</v8:item>
+											</Title>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаПроверкаВыполняетсяКонтекстноеМеню" id="59"/>
+											<ExtendedTooltip name="КартинкаПроверкаВыполняетсяРасширеннаяПодсказка" id="60"/>
+										</PictureDecoration>
+										<LabelDecoration name="НадписьПроверкаВыполняется" id="61">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Выполняется проверка подключения к Локальному модулю "Честный знак"</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьПроверкаВыполняетсяКонтекстноеМеню" id="62"/>
+											<ExtendedTooltip name="НадписьПроверкаВыполняетсяРасширеннаяПодсказка" id="63"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаПроверкаВыполнена" id="64">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проверка подключения выполнена успешно</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проверка подключения выполнена успешно</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="СтраницаПроверкаВыполненаРасширеннаяПодсказка" id="65"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаПроверкаВыполнена" id="66">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подключение настроено корректно</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подключение настроено корректно</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<VerticalAlign>Center</VerticalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПроверкаВыполненаРасширеннаяПодсказка" id="67"/>
+									<ChildItems>
+										<Pages name="СтраницыСтатусНастройки" id="121">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страницы статус настройки</v8:content>
+												</v8:item>
+											</Title>
+											<PagesRepresentation>None</PagesRepresentation>
+											<ExtendedTooltip name="СтраницыСтатусНастройкиРасширеннаяПодсказка" id="122"/>
+											<ChildItems>
+												<Page name="СтраницаЗапуститьИнициализацию" id="123">
+													<Group>AlwaysHorizontal</Group>
+													<ExtendedTooltip name="СтраницаЗапуститьИнициализациюРасширеннаяПодсказка" id="124"/>
+													<ChildItems>
+														<PictureDecoration name="КартинкаИдетИнициализация" id="185">
+															<ContextMenu name="КартинкаИдетИнициализацияКонтекстноеМеню" id="186"/>
+															<ExtendedTooltip name="КартинкаИдетИнициализацияРасширеннаяПодсказка" id="187"/>
+														</PictureDecoration>
+														<LabelDecoration name="НадписьЗапуститьПроцессНастройки" id="118">
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Запустить процесс настройки</v8:content>
+																</v8:item>
+															</Title>
+															<Hyperlink>true</Hyperlink>
+															<ContextMenu name="НадписьЗапуститьПроцессНастройкиКонтекстноеМеню" id="119"/>
+															<ExtendedTooltip name="НадписьЗапуститьПроцессНастройкиРасширеннаяПодсказка" id="120"/>
+														</LabelDecoration>
+													</ChildItems>
+												</Page>
+												<Page name="СтраницаНастроитьТоварныеГруппы" id="125">
+													<Group>AlwaysHorizontal</Group>
+													<ExtendedTooltip name="СтраницаНастроитьТоварныеГруппыРасширеннаяПодсказка" id="126"/>
+													<ChildItems>
+														<PictureDecoration name="КартинкаНастройкаТоварныхГрупп" id="203">
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Картинка настройка товарных групп</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="КартинкаНастройкаТоварныхГруппКонтекстноеМеню" id="204"/>
+															<ExtendedTooltip name="КартинкаНастройкаТоварныхГруппРасширеннаяПодсказка" id="205"/>
+														</PictureDecoration>
+														<LabelDecoration name="НадписьЗапуститьПроцессУстановкиТГ" id="127">
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Синхронизировать виды продукций</v8:content>
+																</v8:item>
+															</Title>
+															<Hyperlink>true</Hyperlink>
+															<ContextMenu name="НадписьЗапуститьПроцессУстановкиТГКонтекстноеМеню" id="128"/>
+															<ExtendedTooltip name="НадписьЗапуститьПроцессУстановкиТГРасширеннаяПодсказка" id="129"/>
+														</LabelDecoration>
+													</ChildItems>
+												</Page>
+												<Page name="СтраницаНастройкаЗавершена" id="130">
+													<Group>AlwaysHorizontal</Group>
+													<ExtendedTooltip name="СтраницаНастройкаЗавершенаРасширеннаяПодсказка" id="131"/>
+													<ChildItems>
+														<PictureDecoration name="КартинкаПроверкаВыполнена" id="68">
+															<Width>2</Width>
+															<Height>1</Height>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Картинка</v8:content>
+																</v8:item>
+															</Title>
+															<FileDragMode>AsFile</FileDragMode>
+															<ContextMenu name="КартинкаПроверкаВыполненаКонтекстноеМеню" id="69"/>
+															<ExtendedTooltip name="КартинкаПроверкаВыполненаРасширеннаяПодсказка" id="70"/>
+														</PictureDecoration>
+														<LabelDecoration name="НадписьПроверкаВыполнена" id="71">
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<Title formatted="true">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Подключение настроено корректно.</v8:content>
+																</v8:item>
+															</Title>
+															<GroupVerticalAlign>Center</GroupVerticalAlign>
+															<ContextMenu name="НадписьПроверкаВыполненаКонтекстноеМеню" id="72"/>
+															<ExtendedTooltip name="НадписьПроверкаВыполненаРасширеннаяПодсказка" id="73"/>
+														</LabelDecoration>
+														<Pages name="СтраницыПредставлениеДатыПоследнейСинхронизации" id="226">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Представление даты синхронизации</v8:content>
+																</v8:item>
+															</Title>
+															<PagesRepresentation>None</PagesRepresentation>
+															<ExtendedTooltip name="СтраницыПредставлениеДатыПоследнейСинхронизацииРасширеннаяПодсказка" id="227"/>
+															<ChildItems>
+																<Page name="СтраницаДатаСинхронизации" id="228">
+																	<ExtendedTooltip name="СтраницаДатаСинхронизацииРасширеннаяПодсказка" id="229"/>
+																	<ChildItems>
+																		<LabelField name="ДатаПоследнейСинхронизации" id="95">
+																			<ContextMenu name="ДатаПоследнейСинхронизацииКонтекстноеМеню" id="96"/>
+																			<ExtendedTooltip name="ДатаПоследнейСинхронизацииРасширеннаяПодсказка" id="97"/>
+																		</LabelField>
+																	</ChildItems>
+																</Page>
+																<Page name="СтраницаНетДатыСинхронизации" id="230">
+																	<ExtendedTooltip name="СтраницаНетДатыСинхронизацииРасширеннаяПодсказка" id="231"/>
+																</Page>
+															</ChildItems>
+														</Pages>
+													</ChildItems>
+												</Page>
+												<Page name="СтраницаОшибкаСинхронизации" id="183">
+													<Group>AlwaysHorizontal</Group>
+													<ExtendedTooltip name="СтраницаОшибкаСинхронизацииРасширеннаяПодсказка" id="184"/>
+													<ChildItems>
+														<PictureDecoration name="КартинкаОшибкаСинхронизации" id="191">
+															<ContextMenu name="КартинкаОшибкаСинхронизацииКонтекстноеМеню" id="192"/>
+															<ExtendedTooltip name="КартинкаОшибкаСинхронизацииРасширеннаяПодсказка" id="193"/>
+														</PictureDecoration>
+														<LabelField name="ПредставлениеСтатусаСистемы" id="197">
+															<ContextMenu name="ПредставлениеСтатусаСистемыКонтекстноеМеню" id="198"/>
+															<ExtendedTooltip name="ПредставлениеСтатусаСистемыРасширеннаяПодсказка" id="199"/>
+														</LabelField>
+														<LabelField name="ДатаПоследнейСинхронизацииОшибка" id="188">
+															<ContextMenu name="ДатаПоследнейСинхронизацииОшибкаКонтекстноеМеню" id="189"/>
+															<ExtendedTooltip name="ДатаПоследнейСинхронизацииОшибкаРасширеннаяПодсказка" id="190"/>
+														</LabelField>
+													</ChildItems>
+												</Page>
+											</ChildItems>
+										</Pages>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаПроверкаНеВыполнена" id="74">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проверка подключения не выполнена</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проверка подключения не выполнена</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="СтраницаПроверкаНеВыполненаРасширеннаяПодсказка" id="75"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаПроверкаНеВыполнена" id="76">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ошибка настройки подключения</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Неверный код ФСРАР</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<VerticalAlign>Center</VerticalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПроверкаНеВыполненаРасширеннаяПодсказка" id="77"/>
+									<ChildItems>
+										<PictureDecoration name="КартинкаПроверкаНеВыполнена" id="78">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка</v8:content>
+												</v8:item>
+											</Title>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаПроверкаНеВыполненаКонтекстноеМеню" id="79"/>
+											<ExtendedTooltip name="КартинкаПроверкаНеВыполненаРасширеннаяПодсказка" id="80"/>
+										</PictureDecoration>
+										<LabelDecoration name="НадписьПроверкаНеВыполнена" id="81">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подключение настроено некорректно. &lt;link ПроверитьПодключениеЛМЧЗ&gt;Повторить проверку&lt;/&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьПроверкаНеВыполненаКонтекстноеМеню" id="82"/>
+											<ExtendedTooltip name="НадписьПроверкаНеВыполненаРасширеннаяПодсказка" id="83"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаИдетНастройка" id="139">
+							<ExtendedTooltip name="СтраницаИдетНастройкаРасширеннаяПодсказка" id="140"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаИдетНастройка" id="141">
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаИдетНастройкаРасширеннаяПодсказка" id="142"/>
+									<ChildItems>
+										<PictureDecoration name="КартинкаИдетНастройка" id="143">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка</v8:content>
+												</v8:item>
+											</Title>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаИдетНастройкаКонтекстноеМеню" id="144"/>
+											<ExtendedTooltip name="КартинкаИдетНастройкаРасширеннаяПодсказка" id="145"/>
+										</PictureDecoration>
+										<LabelDecoration name="НадписьИдетНастройка" id="155">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Идет настройка Локального модуля "Честный знак"</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьИдетНастройкаКонтекстноеМеню" id="156"/>
+											<ExtendedTooltip name="НадписьИдетНастройкаРасширеннаяПодсказка" id="157"/>
+										</LabelDecoration>
+										<LabelDecoration name="НадписьПроверитьСтатус" id="180">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Повторно проверить статус</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="НадписьПроверитьСтатусКонтекстноеМеню" id="181"/>
+											<ExtendedTooltip name="НадписьПроверитьСтатусРасширеннаяПодсказка" id="182"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаОшибкаНастройки" id="158">
+							<ExtendedTooltip name="СтраницаОшибкаНастройкиРасширеннаяПодсказка" id="159"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаОшибкаНастройки" id="160">
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОшибкаНастройкиРасширеннаяПодсказка" id="161"/>
+									<ChildItems>
+										<PictureDecoration name="КартинкаНастройкаНеВыполнена" id="174">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка</v8:content>
+												</v8:item>
+											</Title>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаНастройкаНеВыполненаКонтекстноеМеню" id="175"/>
+											<ExtendedTooltip name="КартинкаНастройкаНеВыполненаРасширеннаяПодсказка" id="176"/>
+										</PictureDecoration>
+										<LabelDecoration name="НадписьНастройкаНеВыполнена" id="177">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройка Локального модуля завершилась с ошибкой. &lt;link ПовторитьНастройкуЛМЧЗ&gt;Повторить попытку&lt;/&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьНастройкаНеВыполненаКонтекстноеМеню" id="178"/>
+											<ExtendedTooltip name="НадписьНастройкаНеВыполненаРасширеннаяПодсказка" id="179"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+	<BaseForm version="2.17">
+		<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+		<ChildItems>
+			<UsualGroup name="ОрганизацияРабочееМесто" id="214">
+				<Group>Vertical</Group>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ОрганизацияРабочееМестоРасширеннаяПодсказка" id="215"/>
+				<ChildItems>
+					<UsualGroup name="ШапкаНастройки" id="212">
+						<Group>AlwaysHorizontal</Group>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ШапкаНастройкиРасширеннаяПодсказка" id="213"/>
+						<ChildItems>
+							<InputField name="Организация" id="1">
+								<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+								<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="3"/>
+							</InputField>
+							<RadioButtonField name="Приоритет" id="206">
+								<Visible>false</Visible>
+								<TitleLocation>None</TitleLocation>
+								<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+								<RadioButtonType>Tumbler</RadioButtonType>
+								<ChoiceList>
+									<xr:Item>
+										<xr:Presentation/>
+										<xr:CheckState>0</xr:CheckState>
+										<xr:Value xsi:type="FormChoiceListDesTimeValue">
+											<Presentation>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Основной</v8:content>
+												</v8:item>
+											</Presentation>
+											<Value xsi:type="xs:decimal">0</Value>
+										</xr:Value>
+									</xr:Item>
+									<xr:Item>
+										<xr:Presentation/>
+										<xr:CheckState>0</xr:CheckState>
+										<xr:Value xsi:type="FormChoiceListDesTimeValue">
+											<Presentation>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Резервный</v8:content>
+												</v8:item>
+											</Presentation>
+											<Value xsi:type="xs:decimal">1</Value>
+										</xr:Value>
+									</xr:Item>
+								</ChoiceList>
+								<ContextMenu name="ПриоритетКонтекстноеМеню" id="207"/>
+								<ExtendedTooltip name="ПриоритетРасширеннаяПодсказка" id="208"/>
+							</RadioButtonField>
+						</ChildItems>
+					</UsualGroup>
+					<UsualGroup name="НастройкиПодключения" id="224">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Настройки подключения</v8:content>
+							</v8:item>
+						</Title>
+						<Group>Vertical</Group>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="НастройкиПодключенияРасширеннаяПодсказка" id="225"/>
+						<ChildItems>
+							<InputField name="РабочееМесто" id="4">
+								<InputHint>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>&lt;настройка действует для всех рабочих мест&gt;</v8:content>
+									</v8:item>
+								</InputHint>
+								<ContextMenu name="РабочееМестоКонтекстноеМеню" id="5"/>
+								<ExtendedTooltip name="РабочееМестоРасширеннаяПодсказка" id="6"/>
+							</InputField>
+							<RadioButtonField name="ОбменНаСервере" id="87">
+								<RadioButtonType>Auto</RadioButtonType>
+								<ChoiceList>
+									<xr:Item>
+										<xr:Presentation/>
+										<xr:CheckState>0</xr:CheckState>
+										<xr:Value xsi:type="FormChoiceListDesTimeValue">
+											<Presentation>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>На сервере 1С:Предприятия</v8:content>
+												</v8:item>
+											</Presentation>
+											<Value xsi:type="xs:decimal">0</Value>
+										</xr:Value>
+									</xr:Item>
+									<xr:Item>
+										<xr:Presentation/>
+										<xr:CheckState>0</xr:CheckState>
+										<xr:Value xsi:type="FormChoiceListDesTimeValue">
+											<Presentation>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>На локальном компьютере</v8:content>
+												</v8:item>
+											</Presentation>
+											<Value xsi:type="xs:decimal">1</Value>
+										</xr:Value>
+									</xr:Item>
+								</ChoiceList>
+								<ContextMenu name="ОбменНаСервереКонтекстноеМеню" id="88"/>
+								<ExtendedTooltip name="ОбменНаСервереРасширеннаяПодсказка" id="89"/>
+							</RadioButtonField>
+							<UsualGroup name="ГруппаПодключение" id="38">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Адрес подключения</v8:content>
+									</v8:item>
+								</Title>
+								<Group>AlwaysHorizontal</Group>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаПодключениеРасширеннаяПодсказка" id="39"/>
+								<ChildItems>
+									<InputField name="ЗащищенноеСоединение" id="28">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Адрес подключения</v8:content>
+											</v8:item>
+										</Title>
+										<Width>8</Width>
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>5</MaxWidth>
+										<EditFormat>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>БЛ=http://; БИ=https://</v8:content>
+											</v8:item>
+										</EditFormat>
+										<ContextMenu name="ЗащищенноеСоединениеКонтекстноеМеню" id="29"/>
+										<ExtendedTooltip name="ЗащищенноеСоединениеРасширеннаяПодсказка" id="30"/>
+									</InputField>
+									<InputField name="СерверПодключенияЛМ" id="22">
+										<TitleLocation>None</TitleLocation>
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>18</MaxWidth>
+										<ContextMenu name="СерверПодключенияЛМКонтекстноеМеню" id="23"/>
+										<ExtendedTooltip name="СерверПодключенияЛМРасширеннаяПодсказка" id="24"/>
+									</InputField>
+									<InputField name="ПортПодключенияЛМ" id="25">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Порт</v8:content>
+											</v8:item>
+										</Title>
+										<Width>4</Width>
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>4</MaxWidth>
+										<ContextMenu name="ПортПодключенияЛМКонтекстноеМеню" id="26"/>
+										<ExtendedTooltip name="ПортПодключенияЛМРасширеннаяПодсказка" id="27"/>
+									</InputField>
+								</ChildItems>
+							</UsualGroup>
+							<InputField name="Логин" id="13">
+								<InputHint>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>&lt;логин администратора, заданный при установке ЛМ&gt;</v8:content>
+									</v8:item>
+								</InputHint>
+								<ContextMenu name="ЛогинКонтекстноеМеню" id="14"/>
+								<ExtendedTooltip name="ЛогинРасширеннаяПодсказка" id="15"/>
+							</InputField>
+						</ChildItems>
+					</UsualGroup>
+				</ChildItems>
+			</UsualGroup>
+			<UsualGroup name="ГруппаНастройкаПароля" id="135">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа1</v8:content>
+					</v8:item>
+				</Title>
+				<Group>AlwaysHorizontal</Group>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаНастройкаПароляРасширеннаяПодсказка" id="136"/>
+				<ChildItems>
+					<InputField name="Пароль" id="31">
+						<PasswordMode>true</PasswordMode>
+						<InputHint>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>&lt;пароль администратора, заданный при установке ЛМ&gt;</v8:content>
+							</v8:item>
+						</InputHint>
+						<ContextMenu name="ПарольКонтекстноеМеню" id="32"/>
+						<ExtendedTooltip name="ПарольРасширеннаяПодсказка" id="33"/>
+					</InputField>
+					<Button name="Изменить" id="137">
+						<Type>UsualButton</Type>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ИзменитьРасширеннаяПодсказка" id="138"/>
+					</Button>
+				</ChildItems>
+			</UsualGroup>
+			<UsualGroup name="ГруппаТаймаутПодключения" id="219">
+				<Group>AlwaysHorizontal</Group>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаТаймаутПодключенияРасширеннаяПодсказка" id="220"/>
+				<ChildItems>
+					<InputField name="Таймаут" id="216">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Таймаут</v8:content>
+							</v8:item>
+						</Title>
+						<Width>6</Width>
+						<SpinButton>true</SpinButton>
+						<ContextMenu name="ТаймаутКонтекстноеМеню" id="217"/>
+						<ExtendedTooltip name="ТаймаутРасширеннаяПодсказка" id="218"/>
+					</InputField>
+					<LabelDecoration name="ПодписьТаймаут" id="221">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>секунд</v8:content>
+							</v8:item>
+						</Title>
+						<ContextMenu name="ПодписьТаймаутКонтекстноеМеню" id="222"/>
+						<ExtendedTooltip name="ПодписьТаймаутРасширеннаяПодсказка" id="223"/>
+					</LabelDecoration>
+				</ChildItems>
+			</UsualGroup>
+			<LabelField name="ВидыПродукцииПредставление" id="107">
+				<Visible>false</Visible>
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<MaxWidth>40</MaxWidth>
+				<Hiperlink>true</Hiperlink>
+				<ContextMenu name="ВидыПродукцииПредставлениеКонтекстноеМеню" id="108"/>
+				<ExtendedTooltip name="ВидыПродукцииПредставлениеРасширеннаяПодсказка" id="109"/>
+			</LabelField>
+			<UsualGroup name="ГруппаВыгрузкаКарточек" id="116">
+				<Visible>false</Visible>
+				<Group>AlwaysHorizontal</Group>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаВыгрузкаКарточекРасширеннаяПодсказка" id="117"/>
+				<ChildItems>
+					<InputField name="КоличествоДнейВыгрузкиКарточек" id="110">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Загружать КИ за</v8:content>
+							</v8:item>
+						</Title>
+						<Width>6</Width>
+						<SpinButton>true</SpinButton>
+						<MaxValue xsi:type="xs:decimal">90</MaxValue>
+						<ContextMenu name="КоличествоДнейВыгрузкиКарточекКонтекстноеМеню" id="111"/>
+						<ExtendedTooltip name="КоличествоДнейВыгрузкиКарточекРасширеннаяПодсказка" id="112"/>
+					</InputField>
+					<LabelDecoration name="ПодписьКоличествоДней" id="113">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>дней</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTipRepresentation>Button</ToolTipRepresentation>
+						<ContextMenu name="ПодписьКоличествоДнейКонтекстноеМеню" id="114"/>
+						<ExtendedTooltip name="ПодписьКоличествоДнейРасширеннаяПодсказка" id="115">
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>По выбранным товарным группам в Локальный модуль будут выгружены карточки кодов идентификации за указанный период.
+
+
+Максимальный период выгрузки - &lt;b&gt;90&lt;/&gt;&lt;b&gt; &lt;/&gt;&lt;b&gt;дней.&lt;/&gt;
+&lt;b&gt;0&lt;/&gt;&lt;b&gt; &lt;/&gt;&lt;b&gt;дней&lt;/&gt; - не выгружать.</v8:content>
+								</v8:item>
+							</Title>
+						</ExtendedTooltip>
+					</LabelDecoration>
+				</ChildItems>
+			</UsualGroup>
+			<UsualGroup name="ГруппаТекущееСостояниеСистемы" id="93">
+				<Group>AlwaysHorizontal</Group>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаТекущееСостояниеСистемыРасширеннаяПодсказка" id="94"/>
+				<ChildItems>
+					<Pages name="СтраницыПроверкаПодключения" id="42">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Страницы проверка подключения</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Страницы проверка подключения</v8:content>
+							</v8:item>
+						</ToolTip>
+						<PagesRepresentation>None</PagesRepresentation>
+						<ExtendedTooltip name="СтраницыПроверкаПодключенияРасширеннаяПодсказка" id="43"/>
+						<ChildItems>
+							<Page name="СтраницаПроверкаНеВыполнялась" id="44">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Проверка подключения не выполнялась</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Проверка подключения не выполнялась</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="СтраницаПроверкаНеВыполняласьРасширеннаяПодсказка" id="45"/>
+								<ChildItems>
+									<UsualGroup name="ГруппаПроверкаНеВыполнялась" id="46">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Проверка подключения не выполнялась</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Проверка подключения не выполнялась</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Group>Horizontal</Group>
+										<VerticalAlign>Center</VerticalAlign>
+										<Behavior>Usual</Behavior>
+										<Representation>NormalSeparation</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаПроверкаНеВыполняласьРасширеннаяПодсказка" id="47"/>
+										<ChildItems>
+											<PictureDecoration name="КартинкаПроверкаНеВыполнялась" id="48">
+												<Width>2</Width>
+												<Height>1</Height>
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Картинка</v8:content>
+													</v8:item>
+												</Title>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="КартинкаПроверкаНеВыполняласьКонтекстноеМеню" id="49"/>
+												<ExtendedTooltip name="КартинкаПроверкаНеВыполняласьРасширеннаяПодсказка" id="50"/>
+											</PictureDecoration>
+											<LabelDecoration name="НадписьПроверкаНеВыполнялась" id="51">
+												<AutoMaxWidth>false</AutoMaxWidth>
+												<Title formatted="true">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Проверка подключения к Локальному модулю "Честный знак" не выполнялась. &lt;link ПроверитьПодключениеЛМЧЗ&gt;Проверить&lt;/&gt;</v8:content>
+													</v8:item>
+												</Title>
+												<ContextMenu name="НадписьПроверкаНеВыполняласьКонтекстноеМеню" id="52"/>
+												<ExtendedTooltip name="НадписьПроверкаНеВыполняласьРасширеннаяПодсказка" id="53"/>
+											</LabelDecoration>
+										</ChildItems>
+									</UsualGroup>
+								</ChildItems>
+							</Page>
+							<Page name="СтраницаПроверкаВыполняется" id="54">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Выполняется проверка подключения</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Выполняется проверка подключения</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="СтраницаПроверкаВыполняетсяРасширеннаяПодсказка" id="55"/>
+								<ChildItems>
+									<UsualGroup name="ГруппаПроверкаВыполняется" id="56">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Выполняется проверка подключения к УТМ</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Выполняется проверка подключения к Локальному модулю "Честный знак"</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Group>Horizontal</Group>
+										<VerticalAlign>Center</VerticalAlign>
+										<Behavior>Usual</Behavior>
+										<Representation>NormalSeparation</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаПроверкаВыполняетсяРасширеннаяПодсказка" id="57"/>
+										<ChildItems>
+											<PictureDecoration name="КартинкаПроверкаВыполняется" id="58">
+												<Width>2</Width>
+												<Height>1</Height>
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Картинка</v8:content>
+													</v8:item>
+												</Title>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="КартинкаПроверкаВыполняетсяКонтекстноеМеню" id="59"/>
+												<ExtendedTooltip name="КартинкаПроверкаВыполняетсяРасширеннаяПодсказка" id="60"/>
+											</PictureDecoration>
+											<LabelDecoration name="НадписьПроверкаВыполняется" id="61">
+												<AutoMaxWidth>false</AutoMaxWidth>
+												<Title formatted="true">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Выполняется проверка подключения к Локальному модулю "Честный знак"</v8:content>
+													</v8:item>
+												</Title>
+												<ContextMenu name="НадписьПроверкаВыполняетсяКонтекстноеМеню" id="62"/>
+												<ExtendedTooltip name="НадписьПроверкаВыполняетсяРасширеннаяПодсказка" id="63"/>
+											</LabelDecoration>
+										</ChildItems>
+									</UsualGroup>
+								</ChildItems>
+							</Page>
+							<Page name="СтраницаПроверкаВыполнена" id="64">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Проверка подключения выполнена успешно</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Проверка подключения выполнена успешно</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="СтраницаПроверкаВыполненаРасширеннаяПодсказка" id="65"/>
+								<ChildItems>
+									<UsualGroup name="ГруппаПроверкаВыполнена" id="66">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Подключение настроено корректно</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Подключение настроено корректно</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Group>Horizontal</Group>
+										<VerticalAlign>Center</VerticalAlign>
+										<Behavior>Usual</Behavior>
+										<Representation>NormalSeparation</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаПроверкаВыполненаРасширеннаяПодсказка" id="67"/>
+										<ChildItems>
+											<Pages name="СтраницыСтатусНастройки" id="121">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Страницы статус настройки</v8:content>
+													</v8:item>
+												</Title>
+												<PagesRepresentation>None</PagesRepresentation>
+												<ExtendedTooltip name="СтраницыСтатусНастройкиРасширеннаяПодсказка" id="122"/>
+												<ChildItems>
+													<Page name="СтраницаЗапуститьИнициализацию" id="123">
+														<Group>AlwaysHorizontal</Group>
+														<ExtendedTooltip name="СтраницаЗапуститьИнициализациюРасширеннаяПодсказка" id="124"/>
+														<ChildItems>
+															<PictureDecoration name="КартинкаИдетИнициализация" id="185">
+																<ContextMenu name="КартинкаИдетИнициализацияКонтекстноеМеню" id="186"/>
+																<ExtendedTooltip name="КартинкаИдетИнициализацияРасширеннаяПодсказка" id="187"/>
+															</PictureDecoration>
+															<LabelDecoration name="НадписьЗапуститьПроцессНастройки" id="118">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Запустить процесс настройки</v8:content>
+																	</v8:item>
+																</Title>
+																<Hyperlink>true</Hyperlink>
+																<ContextMenu name="НадписьЗапуститьПроцессНастройкиКонтекстноеМеню" id="119"/>
+																<ExtendedTooltip name="НадписьЗапуститьПроцессНастройкиРасширеннаяПодсказка" id="120"/>
+															</LabelDecoration>
+														</ChildItems>
+													</Page>
+													<Page name="СтраницаНастроитьТоварныеГруппы" id="125">
+														<Group>AlwaysHorizontal</Group>
+														<ExtendedTooltip name="СтраницаНастроитьТоварныеГруппыРасширеннаяПодсказка" id="126"/>
+														<ChildItems>
+															<PictureDecoration name="КартинкаНастройкаТоварныхГрупп" id="203">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Картинка настройка товарных групп</v8:content>
+																	</v8:item>
+																</Title>
+																<ContextMenu name="КартинкаНастройкаТоварныхГруппКонтекстноеМеню" id="204"/>
+																<ExtendedTooltip name="КартинкаНастройкаТоварныхГруппРасширеннаяПодсказка" id="205"/>
+															</PictureDecoration>
+															<LabelDecoration name="НадписьЗапуститьПроцессУстановкиТГ" id="127">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Синхронизировать виды продукций</v8:content>
+																	</v8:item>
+																</Title>
+																<Hyperlink>true</Hyperlink>
+																<ContextMenu name="НадписьЗапуститьПроцессУстановкиТГКонтекстноеМеню" id="128"/>
+																<ExtendedTooltip name="НадписьЗапуститьПроцессУстановкиТГРасширеннаяПодсказка" id="129"/>
+															</LabelDecoration>
+														</ChildItems>
+													</Page>
+													<Page name="СтраницаНастройкаЗавершена" id="130">
+														<Group>AlwaysHorizontal</Group>
+														<ExtendedTooltip name="СтраницаНастройкаЗавершенаРасширеннаяПодсказка" id="131"/>
+														<ChildItems>
+															<PictureDecoration name="КартинкаПроверкаВыполнена" id="68">
+																<Width>2</Width>
+																<Height>1</Height>
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Картинка</v8:content>
+																	</v8:item>
+																</Title>
+																<FileDragMode>AsFile</FileDragMode>
+																<ContextMenu name="КартинкаПроверкаВыполненаКонтекстноеМеню" id="69"/>
+																<ExtendedTooltip name="КартинкаПроверкаВыполненаРасширеннаяПодсказка" id="70"/>
+															</PictureDecoration>
+															<LabelDecoration name="НадписьПроверкаВыполнена" id="71">
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<Title formatted="true">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Подключение настроено корректно.</v8:content>
+																	</v8:item>
+																</Title>
+																<GroupVerticalAlign>Center</GroupVerticalAlign>
+																<ContextMenu name="НадписьПроверкаВыполненаКонтекстноеМеню" id="72"/>
+																<ExtendedTooltip name="НадписьПроверкаВыполненаРасширеннаяПодсказка" id="73"/>
+															</LabelDecoration>
+															<Pages name="СтраницыПредставлениеДатыПоследнейСинхронизации" id="226">
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Представление даты синхронизации</v8:content>
+																	</v8:item>
+																</Title>
+																<PagesRepresentation>None</PagesRepresentation>
+																<ExtendedTooltip name="СтраницыПредставлениеДатыПоследнейСинхронизацииРасширеннаяПодсказка" id="227"/>
+																<ChildItems>
+																	<Page name="СтраницаДатаСинхронизации" id="228">
+																		<ExtendedTooltip name="СтраницаДатаСинхронизацииРасширеннаяПодсказка" id="229"/>
+																		<ChildItems>
+																			<LabelField name="ДатаПоследнейСинхронизации" id="95">
+																				<ContextMenu name="ДатаПоследнейСинхронизацииКонтекстноеМеню" id="96"/>
+																				<ExtendedTooltip name="ДатаПоследнейСинхронизацииРасширеннаяПодсказка" id="97"/>
+																			</LabelField>
+																		</ChildItems>
+																	</Page>
+																	<Page name="СтраницаНетДатыСинхронизации" id="230">
+																		<ExtendedTooltip name="СтраницаНетДатыСинхронизацииРасширеннаяПодсказка" id="231"/>
+																	</Page>
+																</ChildItems>
+															</Pages>
+														</ChildItems>
+													</Page>
+													<Page name="СтраницаОшибкаСинхронизации" id="183">
+														<Group>AlwaysHorizontal</Group>
+														<ExtendedTooltip name="СтраницаОшибкаСинхронизацииРасширеннаяПодсказка" id="184"/>
+														<ChildItems>
+															<PictureDecoration name="КартинкаОшибкаСинхронизации" id="191">
+																<ContextMenu name="КартинкаОшибкаСинхронизацииКонтекстноеМеню" id="192"/>
+																<ExtendedTooltip name="КартинкаОшибкаСинхронизацииРасширеннаяПодсказка" id="193"/>
+															</PictureDecoration>
+															<LabelField name="ПредставлениеСтатусаСистемы" id="197">
+																<ContextMenu name="ПредставлениеСтатусаСистемыКонтекстноеМеню" id="198"/>
+																<ExtendedTooltip name="ПредставлениеСтатусаСистемыРасширеннаяПодсказка" id="199"/>
+															</LabelField>
+															<LabelField name="ДатаПоследнейСинхронизацииОшибка" id="188">
+																<ContextMenu name="ДатаПоследнейСинхронизацииОшибкаКонтекстноеМеню" id="189"/>
+																<ExtendedTooltip name="ДатаПоследнейСинхронизацииОшибкаРасширеннаяПодсказка" id="190"/>
+															</LabelField>
+														</ChildItems>
+													</Page>
+												</ChildItems>
+											</Pages>
+										</ChildItems>
+									</UsualGroup>
+								</ChildItems>
+							</Page>
+							<Page name="СтраницаПроверкаНеВыполнена" id="74">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Проверка подключения не выполнена</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Проверка подключения не выполнена</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="СтраницаПроверкаНеВыполненаРасширеннаяПодсказка" id="75"/>
+								<ChildItems>
+									<UsualGroup name="ГруппаПроверкаНеВыполнена" id="76">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Ошибка настройки подключения</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Неверный код ФСРАР</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Group>Horizontal</Group>
+										<VerticalAlign>Center</VerticalAlign>
+										<Behavior>Usual</Behavior>
+										<Representation>NormalSeparation</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаПроверкаНеВыполненаРасширеннаяПодсказка" id="77"/>
+										<ChildItems>
+											<PictureDecoration name="КартинкаПроверкаНеВыполнена" id="78">
+												<Width>2</Width>
+												<Height>1</Height>
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Картинка</v8:content>
+													</v8:item>
+												</Title>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="КартинкаПроверкаНеВыполненаКонтекстноеМеню" id="79"/>
+												<ExtendedTooltip name="КартинкаПроверкаНеВыполненаРасширеннаяПодсказка" id="80"/>
+											</PictureDecoration>
+											<LabelDecoration name="НадписьПроверкаНеВыполнена" id="81">
+												<AutoMaxWidth>false</AutoMaxWidth>
+												<Title formatted="true">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Подключение настроено некорректно. &lt;link ПроверитьПодключениеЛМЧЗ&gt;Повторить проверку&lt;/&gt;</v8:content>
+													</v8:item>
+												</Title>
+												<ContextMenu name="НадписьПроверкаНеВыполненаКонтекстноеМеню" id="82"/>
+												<ExtendedTooltip name="НадписьПроверкаНеВыполненаРасширеннаяПодсказка" id="83"/>
+											</LabelDecoration>
+										</ChildItems>
+									</UsualGroup>
+								</ChildItems>
+							</Page>
+							<Page name="СтраницаИдетНастройка" id="139">
+								<ExtendedTooltip name="СтраницаИдетНастройкаРасширеннаяПодсказка" id="140"/>
+								<ChildItems>
+									<UsualGroup name="ГруппаИдетНастройка" id="141">
+										<Group>AlwaysHorizontal</Group>
+										<Representation>None</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаИдетНастройкаРасширеннаяПодсказка" id="142"/>
+										<ChildItems>
+											<PictureDecoration name="КартинкаИдетНастройка" id="143">
+												<Width>2</Width>
+												<Height>1</Height>
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Картинка</v8:content>
+													</v8:item>
+												</Title>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="КартинкаИдетНастройкаКонтекстноеМеню" id="144"/>
+												<ExtendedTooltip name="КартинкаИдетНастройкаРасширеннаяПодсказка" id="145"/>
+											</PictureDecoration>
+											<LabelDecoration name="НадписьИдетНастройка" id="155">
+												<AutoMaxWidth>false</AutoMaxWidth>
+												<Title formatted="true">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Идет настройка Локального модуля "Честный знак"</v8:content>
+													</v8:item>
+												</Title>
+												<ContextMenu name="НадписьИдетНастройкаКонтекстноеМеню" id="156"/>
+												<ExtendedTooltip name="НадписьИдетНастройкаРасширеннаяПодсказка" id="157"/>
+											</LabelDecoration>
+											<LabelDecoration name="НадписьПроверитьСтатус" id="180">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Повторно проверить статус</v8:content>
+													</v8:item>
+												</Title>
+												<Hyperlink>true</Hyperlink>
+												<ContextMenu name="НадписьПроверитьСтатусКонтекстноеМеню" id="181"/>
+												<ExtendedTooltip name="НадписьПроверитьСтатусРасширеннаяПодсказка" id="182"/>
+											</LabelDecoration>
+										</ChildItems>
+									</UsualGroup>
+								</ChildItems>
+							</Page>
+							<Page name="СтраницаОшибкаНастройки" id="158">
+								<ExtendedTooltip name="СтраницаОшибкаНастройкиРасширеннаяПодсказка" id="159"/>
+								<ChildItems>
+									<UsualGroup name="ГруппаОшибкаНастройки" id="160">
+										<Group>AlwaysHorizontal</Group>
+										<Representation>None</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаОшибкаНастройкиРасширеннаяПодсказка" id="161"/>
+										<ChildItems>
+											<PictureDecoration name="КартинкаНастройкаНеВыполнена" id="174">
+												<Width>2</Width>
+												<Height>1</Height>
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Картинка</v8:content>
+													</v8:item>
+												</Title>
+												<FileDragMode>AsFile</FileDragMode>
+												<ContextMenu name="КартинкаНастройкаНеВыполненаКонтекстноеМеню" id="175"/>
+												<ExtendedTooltip name="КартинкаНастройкаНеВыполненаРасширеннаяПодсказка" id="176"/>
+											</PictureDecoration>
+											<LabelDecoration name="НадписьНастройкаНеВыполнена" id="177">
+												<AutoMaxWidth>false</AutoMaxWidth>
+												<Title formatted="true">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Настройка Локального модуля завершилась с ошибкой. &lt;link ПовторитьНастройкуЛМЧЗ&gt;Повторить попытку&lt;/&gt;</v8:content>
+													</v8:item>
+												</Title>
+												<ContextMenu name="НадписьНастройкаНеВыполненаКонтекстноеМеню" id="178"/>
+												<ExtendedTooltip name="НадписьНастройкаНеВыполненаРасширеннаяПодсказка" id="179"/>
+											</LabelDecoration>
+										</ChildItems>
+									</UsualGroup>
+								</ChildItems>
+							</Page>
+						</ChildItems>
+					</Pages>
+				</ChildItems>
+			</UsualGroup>
+		</ChildItems>
+		<Attributes/>
+	</BaseForm>
+</Form>

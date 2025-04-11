@@ -51,7 +51,7 @@
 			</UsePurposes>
 			<ScriptVariant>Russian</ScriptVariant>
 			<Vendor/>
-			<Version>2.1.1.6</Version>
+			<Version>3.0.0.0</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
@@ -80,6 +80,7 @@
 			<StyleItem>ГруппаВариантовОтчетовЦвет82</StyleItem>
 			<StyleItem>ВыборСтандартногоПериодаФонКнопки</StyleItem>
 			<StyleItem>ИзмененноеЗначениеРеквизитаЦвет</StyleItem>
+			<StyleItem>ЦветТекстаНеТребуетВниманияГосИС</StyleItem>
 			<CommonPicture>СерииНоменклатурыКолонкаСтатусов</CommonPicture>
 			<CommonPicture>СтатусыУказанияСерий</CommonPicture>
 			<CommonPicture>СправкаПоАкселераторам</CommonPicture>
@@ -185,18 +186,16 @@
 			<CommonModule>РозничныеПродажиКлиент</CommonModule>
 			<CommonModule>ОбщегоНазначенияКлиент</CommonModule>
 			<CommonModule>ОбработкаТабличнойЧастиТоварыКлиент</CommonModule>
-			<CommonModule>РазборКодаМаркировкиИССлужебный</CommonModule>
 			<CommonModule>ШтрихкодированиеОбщегоНазначенияИС</CommonModule>
 			<CommonModule>РазборКодаМаркировкиИССлужебныйКлиентСервер</CommonModule>
 			<CommonModule>МаркировкаТоваровГИСМРТ</CommonModule>
 			<CommonModule>СобытияФормИСКлиент</CommonModule>
 			<CommonModule>ШтрихкодированиеОбщегоНазначенияИСКлиентСервер</CommonModule>
 			<CommonModule>КлиентЛицензированияКлиент</CommonModule>
-			<CommonModule>ПодключаемоеОборудованиеРТ</CommonModule>
-			<CommonModule>ОборудованиеЧекопечатающиеУстройства</CommonModule>
 			<CommonModule>ИнтеграцияПодсистемБИП</CommonModule>
 			<CommonModule>КлиентЛицензирования</CommonModule>
 			<CommonModule>СтандартныеПодсистемыКлиент</CommonModule>
+			<CommonModule>ШтрихкодированиеИСРТКлиент</CommonModule>
 			<ExchangePlan>ОбменРозницаУправлениеТорговлей103</ExchangePlan>
 			<WebService>ws_tbk</WebService>
 			<DefinedType>Номенклатура</DefinedType>
@@ -214,6 +213,7 @@
 			<CommonForm>ПодключениеИнтернетПоддержки</CommonForm>
 			<CommonForm>ТБКФормаВыбораТипаПродавцаИВремениРаботы</CommonForm>
 			<CommonForm>ТБКФормаБыстрыйПодборПоБК</CommonForm>
+			<CommonForm>ОжиданиеПроверкиКодовМаркировкиИСМП</CommonForm>
 			<Catalog>Кассы</Catalog>
 			<Catalog>КассыККМ</Catalog>
 			<Catalog>Магазины</Catalog>
@@ -397,7 +397,7 @@
 			<InformationRegister>ПробиватьПоБК</InformationRegister>
 			<InformationRegister>ТБК_ПроцентыПремийПоДням</InformationRegister>
 			<InformationRegister>ТБКОбезличенныеМарки</InformationRegister>
-			<InformationRegister>ТБК_ЗапросДанныхУ_УТ</InformationRegister>
+			<InformationRegister>НастройкиПодключенияЛокальныхМодулейИСМП</InformationRegister>
 			<AccumulationRegister>ТоварыНаСкладах</AccumulationRegister>
 			<AccumulationRegister>ДенежныеСредстваККМ</AccumulationRegister>
 			<AccumulationRegister>Продажи</AccumulationRegister>
