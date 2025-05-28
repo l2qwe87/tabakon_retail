@@ -1,17 +1,17 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="61dd594b-84ac-4ed8-97e5-cbd2d25a5362" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="3f12314a-8a63-460b-9020-342a769d5192" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>OLAP</ID>
   <MeasureGroups>
     <MeasureGroup>
       <ID>Отчет О Розничных Продажах</ID>
       <Partitions>
-        <Partition dwd:design-time-name="eb70986e-eb21-4e65-b68e-a0ecacabe0d3">
+        <Partition dwd:design-time-name="a91a5796-391c-4835-b0c0-1f1773a1c398">
           <ID>Отчет О Розничных Продажах</ID>
           <Name>Отчет О Розничных Продажах</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="721f4f1e-edef-4b0d-9263-f3471e1808ec">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="7860106b-d9b5-4fee-955c-982df23b55be">
             <DataSourceViewID>OLAP</DataSourceViewID>
             <TableID>dbo_ОтчетОРозничныхПродажах</TableID>
           </Source>
@@ -24,14 +24,14 @@
     <MeasureGroup>
       <ID>Номенклатура Остатки Последние</ID>
       <Partitions>
-        <Partition dwd:design-time-name="38a8dd38-6782-438a-8d90-485cc31bc20c">
+        <Partition dwd:design-time-name="4d70a46b-c03e-4b62-93e2-66757482e79f">
           <ID>Номенклатура Остатки Последние</ID>
           <Name>Номенклатура Остатки Последние</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="584269b2-2d0f-48da-bd8d-5dbd39840656">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="abadca6e-71f1-4ba2-b5f8-dabace9ae71b">
             <DataSourceViewID>OLAP</DataSourceViewID>
             <TableID>dbo_НоменклатураОстаткиПоследние</TableID>
           </Source>
@@ -44,14 +44,14 @@
     <MeasureGroup>
       <ID>Vw Отчет О Розничных Продажах По Всем</ID>
       <Partitions>
-        <Partition dwd:design-time-name="3db25862-e5a4-402c-986d-2d994ab2378b">
+        <Partition dwd:design-time-name="40adcfbc-10c7-4c11-b114-8d26482638d6">
           <ID>Vw Отчет О Розничных Продажах По Всем</ID>
           <Name>Vw Отчет О Розничных Продажах По Всем</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="c2e53898-a7a2-48db-b1e6-40b76e4e5c27">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="d62f76b8-deb5-4422-9a5e-c6a7bfaf0619">
             <DataSourceViewID>OLAP</DataSourceViewID>
             <TableID>dbo_vwОтчетОРозничныхПродажахПоВсем</TableID>
           </Source>
@@ -64,14 +64,14 @@
     <MeasureGroup>
       <ID>Vw Возврат Товаров От Покупателя По Всем</ID>
       <Partitions>
-        <Partition dwd:design-time-name="9b4eb462-0460-4f46-a70c-2deaffee671b">
+        <Partition dwd:design-time-name="06e2da7c-9772-4771-bf87-f601958dde4e">
           <ID>Vw Возврат Товаров От Покупателя По Всем</ID>
           <Name>Vw Возврат Товаров От Покупателя По Всем</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="9f43302d-f133-46e8-a48e-a8deb1db2821">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="9f93a5b6-f8c7-4939-8dac-40c224c70c5e">
             <DataSourceViewID>OLAP</DataSourceViewID>
             <TableID>dbo_vwВозвратТоваровОтПокупателяПоВсем</TableID>
           </Source>
@@ -84,14 +84,14 @@
     <MeasureGroup>
       <ID>Возврат Товаров От Покупателя</ID>
       <Partitions>
-        <Partition dwd:design-time-name="f21cceb8-1333-4760-a8ba-874558171f42">
+        <Partition dwd:design-time-name="c009981b-8843-4a17-b2a3-060ddccba9ec">
           <ID>Возврат Товаров От Покупателя</ID>
           <Name>Возврат Товаров От Покупателя</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="e3b0f56a-b310-4d27-ac1b-bc1445dc6060">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="25942b5e-659a-4a8e-ab43-0d274c906037">
             <DataSourceViewID>OLAP</DataSourceViewID>
             <TableID>dbo_ВозвратТоваровОтПокупателя</TableID>
           </Source>
@@ -104,14 +104,14 @@
     <MeasureGroup>
       <ID>Товары Остатки</ID>
       <Partitions>
-        <Partition dwd:design-time-name="51b2b380-7acf-4d8c-95d1-7170b6e3c72a">
+        <Partition dwd:design-time-name="299268f1-8f94-49e2-9acc-ce2ca813d81b">
           <ID>Товары Остатки 2021-01</ID>
           <Name>Товары Остатки 2021-01</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="bac9bd01-d121-49af-9b91-47c512dcced3">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="14ef1037-6610-4d92-b05a-a165970f55c9">
             <DataSourceID>OLAP</DataSourceID>
             <QueryDefinition>SELECT *
 FROM [dbo].[ввТоварыОстатки]
@@ -121,14 +121,14 @@ WHERE [Период] &gt; '20210101' AND [Период] &lt; '20210401'</QueryDe
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="7484db58-2a9e-4558-82a6-bcbcd7a34eab">
+        <Partition dwd:design-time-name="7480d826-c2bd-4157-a6b8-ad3690222633">
           <ID>Товары Остатки 2021-02</ID>
           <Name>Товары Остатки 2021-02</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="442f88ae-789f-4121-91d0-fc5731808425">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="ed700f14-cc55-4c8e-a664-d2cec2cd7302">
             <DataSourceID>OLAP</DataSourceID>
             <QueryDefinition>SELECT *
 FROM [dbo].[ввТоварыОстатки]
@@ -138,14 +138,14 @@ WHERE [Период] &gt; '20210401' AND [Период] &lt; '20210701'</QueryDe
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="6fd24621-45dd-477a-90c3-55c439ed48ea">
+        <Partition dwd:design-time-name="0651f96a-b110-43b3-b699-bf8b712f586a">
           <ID>Товары Остатки 2022-01</ID>
           <Name>Товары Остатки 2022-01</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="9ca3f9f9-880e-4649-a4f4-68431366c3d1">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="d5f4434e-d7f3-4d1e-8a64-0877ce98e148">
             <DataSourceID>OLAP</DataSourceID>
             <QueryDefinition>SELECT *
 FROM [dbo].[ввТоварыОстатки]
@@ -155,14 +155,14 @@ WHERE [Период] &gt; '20220101' AND [Период] &lt; '20220401'</QueryDe
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="2b5c5579-bfe0-4a8e-b262-f6092842e177">
+        <Partition dwd:design-time-name="f694d041-0927-4f80-9197-22f3d7d7430a">
           <ID>Товары Остатки 2022-02</ID>
           <Name>Товары Остатки 2022-02</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="3c2c7fcb-0618-412c-9e94-59a4f9e959fe">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="9bcf8367-9f9e-4645-b156-4386b0f01aee">
             <DataSourceID>OLAP</DataSourceID>
             <QueryDefinition>SELECT *
 FROM [dbo].[ввТоварыОстатки]
@@ -172,14 +172,14 @@ WHERE [Период] &gt; '20220401' AND [Период] &lt; '20220701'</QueryDe
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="5f977048-d08a-402f-bad1-ce01aaa0582f">
+        <Partition dwd:design-time-name="a259eb6e-e8b8-4bcc-b60c-099b14b07a7e">
           <ID>Товары Остатки 2023-01</ID>
           <Name>Товары Остатки 2023-01</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="338b52ec-2802-4560-a011-dcb4a1ad2287">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="72ed192c-5619-497d-8479-12538ec3b966">
             <DataSourceID>OLAP</DataSourceID>
             <QueryDefinition>SELECT *
 FROM [dbo].[ввТоварыОстатки]
@@ -189,14 +189,14 @@ WHERE [Период] &gt; '20230101' AND [Период] &lt; '20230401'</QueryDe
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="f21fca11-5c46-42c3-ad19-9fc47854df17">
+        <Partition dwd:design-time-name="00ccaba1-8561-4b9b-b4df-c7749df6a899">
           <ID>Товары Остатки 2023-02</ID>
           <Name>Товары Остатки 2023-02</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="658d7607-f57e-402e-99a9-0ad435a6ef7c">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="1b18ef49-ff2a-4a24-8423-92b01583a655">
             <DataSourceID>OLAP</DataSourceID>
             <QueryDefinition>SELECT *
 FROM [dbo].[ввТоварыОстатки]
@@ -206,14 +206,14 @@ WHERE [Период] &gt; '20230401' AND [Период] &lt; '20230701'</QueryDe
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="5749fca0-35a0-4b45-834d-6f27365b1d18">
+        <Partition dwd:design-time-name="680c7787-4f95-42c9-a7de-201644f02d26">
           <ID>Товары Остатки 2050</ID>
           <Name>Товары Остатки 2050</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="3f2664dc-8a9b-4163-88fd-4e4c45f1df9e">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="e041bf1b-7be8-4328-9e8f-06b1fad03385">
             <DataSourceID>OLAP</DataSourceID>
             <QueryDefinition>SELECT *
 FROM [dbo].[ввТоварыОстатки]
@@ -223,14 +223,14 @@ WHERE [Период] &gt; '20240101' AND [Период] &lt; '20500701'</QueryDe
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="8b83ac71-e26d-4f69-b10d-5fc72c2c463e">
+        <Partition dwd:design-time-name="ed0f6f93-d088-494d-b784-615e2602c515">
           <ID>Товары Остатки 2021-03</ID>
           <Name>Товары Остатки 2021-03</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="decb3d94-b5a8-4957-8efa-32c5c41f2233">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="78bf9299-d104-4023-8ce3-996f65bd8cc4">
             <DataSourceID>OLAP</DataSourceID>
             <QueryDefinition>SELECT *
 FROM [dbo].[ввТоварыОстатки]
@@ -240,14 +240,14 @@ WHERE [Период] &gt; '20210701' AND [Период] &lt; '20211001'</QueryDe
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="b5bd8f0c-053e-4164-9c50-42f105c9241c">
+        <Partition dwd:design-time-name="14982507-6d1a-4f4c-b4f3-098e48bbcb05">
           <ID>Товары Остатки 2021-04</ID>
           <Name>Товары Остатки 2021-04</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="6cbe8b60-a262-4582-b1ba-a658c95291f1">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="1230cdbf-f3ea-4c55-9d63-6663c51ad467">
             <DataSourceID>OLAP</DataSourceID>
             <QueryDefinition>SELECT *
 FROM [dbo].[ввТоварыОстатки]
@@ -257,14 +257,14 @@ WHERE [Период] &gt; '20211001' AND [Период] &lt; '20220101'</QueryDe
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="b4964607-b91d-47a7-a9f9-2a82b3b21c8e">
+        <Partition dwd:design-time-name="f6c3046b-6313-4724-a82a-293fbdf5a7c6">
           <ID>Товары Остатки 2022-03</ID>
           <Name>Товары Остатки 2022-03</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="bb4e8aac-8ef9-43eb-9faa-d01e2cb05b5e">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="ff21bb41-b5f9-43c8-b503-25d2547efb9a">
             <DataSourceID>OLAP</DataSourceID>
             <QueryDefinition>SELECT *
 FROM [dbo].[ввТоварыОстатки]
@@ -274,14 +274,14 @@ WHERE [Период] &gt; '20220701' AND [Период] &lt; '20221001'</QueryDe
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="d8ace90d-ec88-47e9-b9e8-c7e2ba4119b2">
+        <Partition dwd:design-time-name="32a9dea6-f72c-4a36-8941-acf5c6819745">
           <ID>Товары Остатки 2022-04</ID>
           <Name>Товары Остатки 2022-04</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="980b6876-04be-43fc-af0c-742a2bdf3113">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="838ac9bb-4673-48e2-9abe-599281a3af7d">
             <DataSourceID>OLAP</DataSourceID>
             <QueryDefinition>SELECT *
 FROM [dbo].[ввТоварыОстатки]
@@ -291,14 +291,14 @@ WHERE [Период] &gt; '20221001' AND [Период] &lt; '20230101'</QueryDe
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="e22379fc-a92d-42f9-8c30-22cd60cb6408">
+        <Partition dwd:design-time-name="55b69b53-3df0-4537-8d7b-3e77913511dd">
           <ID>Товары Остатки 2023-03</ID>
           <Name>Товары Остатки 2023-03</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="8b873aed-6231-4b4b-8d5c-05571e88725a">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="0cdd7c72-af1b-44c9-b201-63cc7cd868df">
             <DataSourceID>OLAP</DataSourceID>
             <QueryDefinition>SELECT *
 FROM [dbo].[ввТоварыОстатки]
@@ -308,14 +308,14 @@ WHERE [Период] &gt; '20230701' AND [Период] &lt; '20231001'</QueryDe
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="4dc71e54-9a53-4265-b7a5-ce0c20683425">
+        <Partition dwd:design-time-name="629feda5-0eeb-42fe-845b-f33055fdb369">
           <ID>Товары Остатки 2023-04</ID>
           <Name>Товары Остатки 2023-04</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="70dd6909-db1c-4026-b09b-483b4cc0fece">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="bbdf19cf-ebce-4fdb-a0be-b556d1c3985e">
             <DataSourceID>OLAP</DataSourceID>
             <QueryDefinition>SELECT *
 FROM [dbo].[ввТоварыОстатки]
@@ -431,14 +431,14 @@ WHERE [Период] &gt; '20231001' AND [Период] &lt; '20240101'</QueryDe
     <MeasureGroup>
       <ID>Реализация Товаров Услуг</ID>
       <Partitions>
-        <Partition dwd:design-time-name="344f8049-d731-4989-a48f-b5f513dc5017">
+        <Partition dwd:design-time-name="d915a22c-d078-48ae-9f2f-55710662843e">
           <ID>Реализация Товаров Услуг</ID>
           <Name>Реализация Товаров Услуг</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="6d038758-78a0-4807-b83b-ce89e237bb94">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="2c1d16ae-cd46-473d-b947-51d705ae7f43">
             <DataSourceViewID>OLAP</DataSourceViewID>
             <TableID>dbo_РеализацияТоваровУслуг</TableID>
           </Source>
@@ -451,14 +451,14 @@ WHERE [Период] &gt; '20231001' AND [Период] &lt; '20240101'</QueryDe
     <MeasureGroup>
       <ID>Возврат Товаров Поставщику</ID>
       <Partitions>
-        <Partition dwd:design-time-name="1cb755dd-ffdf-43c8-9ee7-a6e3f55a170b">
+        <Partition dwd:design-time-name="c3865671-621c-46a1-b92b-fdc6f0215a8a">
           <ID>Возврат Товаров Поставщику</ID>
           <Name>Возврат Товаров Поставщику</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="2636cbfb-27fb-4f75-bd6f-6732f2febc1f">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="06cae68e-1572-4497-97c2-f6de7ba292b4">
             <DataSourceViewID>OLAP</DataSourceViewID>
             <TableID>dbo_ВозвратТоваровПоставщику</TableID>
           </Source>
@@ -471,14 +471,14 @@ WHERE [Период] &gt; '20231001' AND [Период] &lt; '20240101'</QueryDe
     <MeasureGroup>
       <ID>Чеки</ID>
       <Partitions>
-        <Partition dwd:design-time-name="5c0f5a77-e1f5-45cf-8d9b-9d00ac379e17">
+        <Partition dwd:design-time-name="3876c589-8021-4d67-a591-d67db41dabde">
           <ID>Чеки 2021-01</ID>
           <Name>Чеки 2021-01</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="1d1d3805-595b-4995-8b43-cde341c5b92d">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="86774de7-0560-43d2-9bcc-31a87509b06c">
             <DataSourceID>OLAP</DataSourceID>
             <QueryDefinition>SELECT *
 FROM [dbo].[ввЧеки]
@@ -488,14 +488,14 @@ WHERE [DocDate] &gt;= '20210101' AND [DocDate] &lt; '20210701'</QueryDefinition>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="b63b1952-8293-4f98-84f1-fe438849ac4a">
+        <Partition dwd:design-time-name="4e54acf7-b348-405a-b0bd-ca21319c7397">
           <ID>Чеки 2021-02</ID>
           <Name>Чеки 2021-02</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="8d15563e-f025-431d-b616-71c608c02a10">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="67c2fb86-d226-4c3e-b380-bfdfeb1cb356">
             <DataSourceID>OLAP</DataSourceID>
             <QueryDefinition>SELECT *
 FROM [dbo].[ввЧеки]
@@ -505,14 +505,14 @@ WHERE [DocDate] &gt;= '20210701' AND [DocDate] &lt; '20220101'</QueryDefinition>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="b557d390-51fb-4af8-8980-1fabe02857f1">
+        <Partition dwd:design-time-name="9562f9ef-822d-43d7-a3d9-76146e0d72c5">
           <ID>Чеки 2022-01</ID>
           <Name>Чеки 2022-01</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="7af7d1fa-79e6-4872-9b55-dc204055ab23">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="395ab6f8-52f0-4c0b-9afb-21fe20e7becd">
             <DataSourceID>OLAP</DataSourceID>
             <QueryDefinition>SELECT *
 FROM [dbo].[ввЧеки]
@@ -522,14 +522,14 @@ WHERE [DocDate] &gt;= '20220101' AND [DocDate] &lt; '20220701'</QueryDefinition>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="db02ba5e-56b0-4d52-8ca2-f7dff8a012eb">
+        <Partition dwd:design-time-name="00785e1a-9215-4f0e-8d45-638ea388d4bb">
           <ID>Чеки 2022-02</ID>
           <Name>Чеки 2022-02</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="33266876-6b39-4c73-b5b5-3afc23ef027f">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="9a2dbf4f-0b0d-4462-8eb8-4d195361e5d4">
             <DataSourceID>OLAP</DataSourceID>
             <QueryDefinition>SELECT *
 FROM [dbo].[ввЧеки]
@@ -539,14 +539,14 @@ WHERE [DocDate] &gt;= '20220701' AND [DocDate] &lt; '20230101'</QueryDefinition>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="6b0931ca-c113-4213-bbea-6e225ca8c12c">
+        <Partition dwd:design-time-name="626248bb-ad2e-4a53-92a8-43d5417046e6">
           <ID>Чеки 2023-01</ID>
           <Name>Чеки 2023-01</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="fd0efc91-0977-4a49-a521-16697c5ba2fe">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="9f6489e3-6687-4af0-a1d6-f82546a59caa">
             <DataSourceID>OLAP</DataSourceID>
             <QueryDefinition>SELECT *
 FROM [dbo].[ввЧеки]
@@ -556,14 +556,14 @@ WHERE [DocDate] &gt;= '20230101' AND [DocDate] &lt; '20230701'</QueryDefinition>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="fd3178fc-8641-4541-9d03-1c0a24daa8e4">
+        <Partition dwd:design-time-name="2a6f78db-35a3-49c8-88f4-5fec68ff8e28">
           <ID>Чеки 2023-02</ID>
           <Name>Чеки 2023-02</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="5e1390de-d7ed-4627-9adc-00b061369a92">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="bd2bc5f1-e4bf-4688-bcdb-2ef1cbc011a9">
             <DataSourceID>OLAP</DataSourceID>
             <QueryDefinition>SELECT *
 FROM [dbo].[ввЧеки]
@@ -573,14 +573,14 @@ WHERE [DocDate] &gt;= '20230701' AND [DocDate] &lt; '20240101'</QueryDefinition>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="faf2c292-f9c1-4662-a3b6-03c2aa4f19bd">
+        <Partition dwd:design-time-name="0797de55-af0f-4f0e-b3da-fdf761d775c9">
           <ID>Чеки 2050</ID>
           <Name>Чеки 2050</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="fc6767e0-f899-4456-b792-597e8fdb7284">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="6648c13a-df7b-4c70-a02f-3ba32c29a73b">
             <DataSourceID>OLAP</DataSourceID>
             <QueryDefinition>SELECT *
 FROM [dbo].[ввЧеки]
@@ -590,14 +590,14 @@ WHERE [DocDate] &gt;= '20260101' AND [DocDate] &lt; '20500701'</QueryDefinition>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="bc1e2567-15d7-426c-9f27-79e0b43ad9eb">
+        <Partition dwd:design-time-name="afaf7b8c-aea9-4b77-99bc-ea2bca7f269c">
           <ID>Вв Чеки</ID>
           <Name>Чеки 2024-01</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="bb76f396-e502-4e24-871f-70159cf4a5e8">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="10e9e8af-d287-45b9-98be-83ebe54f925b">
             <DataSourceID>OLAP</DataSourceID>
             <QueryDefinition>SELECT *
 FROM [dbo].[ввЧеки]
@@ -607,14 +607,14 @@ WHERE [DocDate] &gt;= '20240101' AND [DocDate] &lt; '20240701'</QueryDefinition>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="d94f36f5-b62e-4871-9468-093e80421657">
+        <Partition dwd:design-time-name="247bb6bf-5586-48ef-8fc5-a3fe39e01204">
           <ID>Чеки 2024-02</ID>
           <Name>Чеки 2024-02</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="6f6839a5-19f7-475e-b5e6-206679919418">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="f1602242-27fa-4e50-8765-dfad4f2821e0">
             <DataSourceID>OLAP</DataSourceID>
             <QueryDefinition>SELECT *
 FROM [dbo].[ввЧеки]
@@ -624,14 +624,14 @@ WHERE [DocDate] &gt;= '20240701' AND [DocDate] &lt; '20250101'</QueryDefinition>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="7750e594-89db-47de-b097-bed091a14fbb">
+        <Partition dwd:design-time-name="a693fc80-be39-4928-baab-e189b7abe82b">
           <ID>Чеки 2025-01</ID>
           <Name>Чеки 2025-01</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="995ce955-70e7-4c36-a508-01df524bf3ad">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="12b71974-788a-48d5-ba44-dcee02f11b92">
             <DataSourceID>OLAP</DataSourceID>
             <QueryDefinition>SELECT *
 FROM [dbo].[ввЧеки]
@@ -641,14 +641,14 @@ WHERE [DocDate] &gt;= '20250101' AND [DocDate] &lt; '20250701'</QueryDefinition>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
-        <Partition dwd:design-time-name="3a3ec4fa-0287-4811-aabc-cc0882afb08a">
+        <Partition dwd:design-time-name="73d83a43-4f2d-42c0-b19b-7106847b40ce">
           <ID>Чеки 2025-02</ID>
           <Name>Чеки 2025-02</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="QueryBinding" dwd:design-time-name="e7b1b43a-769d-491b-90b1-a5a22d41325b">
+          <Source xsi:type="QueryBinding" dwd:design-time-name="d0fd761a-2e8e-4a25-8f7d-627b29d1d41c">
             <DataSourceID>OLAP</DataSourceID>
             <QueryDefinition>SELECT *
 FROM [dbo].[ввЧеки]
@@ -663,14 +663,14 @@ WHERE [DocDate] &gt;= '20250701' AND [DocDate] &lt; '20260101'</QueryDefinition>
     <MeasureGroup>
       <ID>Себестоимость Анализ Продаж УПР</ID>
       <Partitions>
-        <Partition dwd:design-time-name="b677b407-54e8-4dac-b91d-272367fe653a">
+        <Partition dwd:design-time-name="4dc2d552-03dd-476e-9d95-77b116d2bb83">
           <ID>Себестоимость Анализ Продаж УПР</ID>
           <Name>Себестоимость Анализ Продаж УПР</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="54b1078c-34bb-490f-bcdf-0227f3545cb7">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="9aa16ab7-e829-4340-9a1a-f4d7ebf811c9">
             <DataSourceViewID>OLAP</DataSourceViewID>
             <TableID>dbo_Себестоимость_АнализПродаж_УПР</TableID>
           </Source>
@@ -683,14 +683,14 @@ WHERE [DocDate] &gt;= '20250701' AND [DocDate] &lt; '20260101'</QueryDefinition>
     <MeasureGroup>
       <ID>Отчет О Розничных Продажах 1</ID>
       <Partitions>
-        <Partition dwd:design-time-name="242e368d-5c0a-488c-8865-7005e25ce28b">
+        <Partition dwd:design-time-name="638bdf6f-afc0-4c4c-8b8d-1b2ba09fe4f1">
           <ID>Отчет О Розничных Продажах</ID>
           <Name>Отчет О Розничных Продажах</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="23c0a018-520e-43d5-a5f3-a602580b0644">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="fcfbe709-10db-452b-8896-c4a27aa7f74b">
             <DataSourceViewID>OLAP</DataSourceViewID>
             <TableID>dbo_ОтчетОРозничныхПродажах</TableID>
           </Source>
@@ -703,14 +703,14 @@ WHERE [DocDate] &gt;= '20250701' AND [DocDate] &lt; '20260101'</QueryDefinition>
     <MeasureGroup>
       <ID>История Покупок Розница</ID>
       <Partitions>
-        <Partition dwd:design-time-name="bb0e80c6-5ca2-4367-9ab9-d79164df7b13">
+        <Partition dwd:design-time-name="dd67b915-f003-4323-95dc-7144e72ca85f">
           <ID>История Покупок Розница</ID>
           <Name>История Покупок Розница</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="d8ac2879-09d5-44ff-965d-3e5a0d40da44">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="ff0ffe41-c734-4993-9cef-3b8f3b51ea97">
             <DataSourceViewID>OLAP</DataSourceViewID>
             <TableID>dbo_ИсторияПокупокРозница</TableID>
           </Source>
@@ -723,16 +723,56 @@ WHERE [DocDate] &gt;= '20250701' AND [DocDate] &lt; '20260101'</QueryDefinition>
     <MeasureGroup>
       <ID>Поступление Товаров Услуг</ID>
       <Partitions>
-        <Partition dwd:design-time-name="ba237088-89a4-421f-b90f-93f736dd52b1">
+        <Partition dwd:design-time-name="e41c91b1-c7fe-4afd-b184-e097bb623a2a">
           <ID>Поступление Товаров Услуг</ID>
           <Name>Поступление Товаров Услуг</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="b2fbd638-afac-45dd-8b71-0235fc71bd06">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="7410828c-238b-4572-9043-a36e5b780f6d">
             <DataSourceViewID>OLAP</DataSourceViewID>
             <TableID>dbo_ПоступлениеТоваровУслуг</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Себестоимость Анализ Продаж УПР Новый</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="b7f497e7-2d2a-4e51-8b3f-72c6067ddab1">
+          <ID>Себестоимость Анализ Продаж УПР Новый</ID>
+          <Name>Себестоимость Анализ Продаж УПР Новый</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="b0858431-1b9c-464c-b599-3fae90f8966e">
+            <DataSourceViewID>OLAP</DataSourceViewID>
+            <TableID>dbo_Себестоимость_АнализПродаж_УПР_Новый</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Себестоимость Анализ Продаж УПР Старый</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="21f33b61-732f-455c-b2d1-82e7dc833b04">
+          <ID>Себестоимость Анализ Продаж УПР Старый</ID>
+          <Name>Себестоимость Анализ Продаж УПР Старый</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="69c7502c-86ff-4473-ad57-4da5ddf69ea4">
+            <DataSourceViewID>OLAP</DataSourceViewID>
+            <TableID>dbo_Себестоимость_АнализПродаж_УПР_Старый</TableID>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
