@@ -1,11 +1,13 @@
-﻿CREATE TABLE [dbo].[НоменклатураЦеныПоследние] (
-    [Номенклатура]      NVARCHAR (255)  NULL,
-    [закупочная]        DECIMAL (15, 5) NULL,
-    [Расчетная_Базовая] DECIMAL (15, 5) NULL
+CREATE TABLE [dbo].[НоменклатураЦеныПоследние] (
+    [Номенклатура]      UNIQUEIDENTIFIER NOT NULL,
+    [закупочная]        DECIMAL (15, 5)  NULL,
+    [Расчетная_Базовая] DECIMAL (15, 5)  NULL
 );
 
 
+
+
 GO
-CREATE CLUSTERED INDEX [ClusteredIndex-20230801-014223]
+CREATE UNIQUE CLUSTERED INDEX [PK_Main]
     ON [dbo].[НоменклатураЦеныПоследние]([Номенклатура] ASC);
 

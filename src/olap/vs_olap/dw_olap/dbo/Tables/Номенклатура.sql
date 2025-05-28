@@ -15,8 +15,8 @@
     [Представление]                       NVARCHAR (255)   NULL,
     [РодительНаименование]                NVARCHAR (255)   NULL,
     [ОсновнойПоставщик]                   NVARCHAR (255)   NULL,
-    [ЦеноваяГруппа]                       NVARCHAR (255)   NULL,
-    [ТипНоменклатуры]                     NVARCHAR (255)   NULL,
+    [ЦеноваяГруппа]                       UNIQUEIDENTIFIER NULL,
+    [ТипНоменклатуры]                     UNIQUEIDENTIFIER NULL,
     [Родитель1]                           NVARCHAR (255)   NULL,
     [Родитель2]                           NVARCHAR (255)   NULL,
     [Родитель3]                           NVARCHAR (255)   NULL,
@@ -29,6 +29,14 @@
     [Уровень1]                            NVARCHAR (255)   NULL,
     [Уровень2]                            NVARCHAR (255)   NULL,
     [Уровень3]                            NVARCHAR (255)   NULL,
-    [Уровень4]                            NVARCHAR (255)   NULL
+    [Уровень4]                            NVARCHAR (255)   NULL,
+    [ГруппаМинОст]                        NVARCHAR (255)   NULL
 );
+
+
+
+
+GO
+CREATE UNIQUE CLUSTERED INDEX [IX_PK]
+    ON [dbo].[Номенклатура]([Ссылка] ASC);
 

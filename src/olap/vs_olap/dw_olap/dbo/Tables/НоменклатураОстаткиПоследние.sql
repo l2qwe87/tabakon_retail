@@ -1,12 +1,13 @@
-﻿CREATE TABLE [dbo].[НоменклатураОстаткиПоследние] (
-    [Склад]             NVARCHAR (255)  NULL,
-    [Номенклатура]      NVARCHAR (255)  NULL,
-    [КоличествоОстаток] DECIMAL (15, 5) NULL
+CREATE TABLE [dbo].[НоменклатураОстаткиПоследние] (
+    [Склад]             UNIQUEIDENTIFIER NOT NULL,
+    [Номенклатура]      UNIQUEIDENTIFIER NOT NULL,
+    [КоличествоОстаток] DECIMAL (15, 5)  NULL
 );
 
 
+
+
 GO
-CREATE NONCLUSTERED INDEX [vw_byType]
-    ON [dbo].[НоменклатураОстаткиПоследние]([Склад] ASC)
-    INCLUDE([Номенклатура], [КоличествоОстаток]);
+CREATE UNIQUE CLUSTERED INDEX [PK_Main]
+    ON [dbo].[НоменклатураОстаткиПоследние]([Склад] ASC, [Номенклатура] ASC);
 

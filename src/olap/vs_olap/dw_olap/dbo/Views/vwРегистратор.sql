@@ -4,6 +4,8 @@
 
 
 
+
+
 CREATE VIEW [dbo].[vwРегистратор] as
 
 SELECT 
@@ -13,7 +15,10 @@ FROM [dbo].[ВозвратТоваровОтПокупателя] WITH (NOLOCK)
 GROUP BY
 	[Ссылка]
     ,[СсылкаПредставление]
-UNION ALL 
+
+UNION
+--UNION ALL 
+
 SELECT 
 	[Ссылка]
     ,[СсылкаПредставление]
@@ -22,7 +27,8 @@ GROUP BY
 	[Ссылка]
     ,[СсылкаПредставление]
 
-UNION ALL 
+UNION
+--UNION ALL 
 
 SELECT
 	Регистратор
@@ -33,7 +39,8 @@ GROUP BY
 	Регистратор
 	,РегистраторПредставление
 
-UNION ALL
+UNION
+--UNION ALL
 
 --SELECT 
 --	[DocRef]
@@ -41,11 +48,11 @@ UNION ALL
 --FROM [RetailDocCashierCheck_Ref]
 
 SELECT 
-	[DocRef]
+	CAST([DocRef] as uniqueidentifier)
     ,[CashierCheckReportFriendlyName]
 FROM [REAL_tabakon].[dbo].[RetailDocCashierCheck] WITH (NOLOCK)
 GROUP BY
-	[DocRef]
+	CAST([DocRef] as uniqueidentifier)
     ,[CashierCheckReportFriendlyName]
 
 

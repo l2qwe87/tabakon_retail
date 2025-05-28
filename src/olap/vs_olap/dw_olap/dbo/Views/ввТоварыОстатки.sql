@@ -1,9 +1,10 @@
-﻿CREATE VIEW dbo.ввТоварыОстатки
+﻿
+CREATE   VIEW [dbo].[ввТоварыОстатки]
 AS
 SELECT        rem.Период, rem.Склад, rem.Номенклатура, rem.КоличествоНачальныйОстаток, rem.КоличествоКонечныйОстаток, pr.закупочная * rem.КоличествоНачальныйОстаток AS НачальныйОстатокЗакупочная, 
-                         pr.закупочная * rem.КоличествоКонечныйОстаток AS КонечныйОстатокЗакупочная, CAST(rem.Период AS date) AS date
-FROM            dbo.ТоварыОстатки AS rem INNER JOIN
-                         dbo.НоменклатураЦеныПоследние AS pr ON pr.Номенклатура = rem.Номенклатура
+                         pr.закупочная * rem.КоличествоКонечныйОстаток AS КонечныйОстатокЗакупочная, CAST(1 AS bigint) AS hasRem, CAST(1 AS bigint) AS [ЕстьОстаток], CAST(rem.Период AS date) AS date
+FROM            dbo.prt_ТоварыОстатки AS rem WITH (NOLOCK) INNER JOIN
+                         dbo.НоменклатураЦеныПоследние AS pr WITH (NOLOCK) ON pr.Номенклатура = rem.Номенклатура
 
 GO
 EXECUTE sp_addextendedproperty @name = N'MS_DiagramPane1', @value = N'[0E232FF0-B466-11cf-A24F-00AA00A3EFFF, 1.00]

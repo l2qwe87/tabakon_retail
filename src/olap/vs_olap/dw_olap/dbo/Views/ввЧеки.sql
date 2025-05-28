@@ -1,12 +1,13 @@
 ﻿
 
+
 CREATE VIEW [dbo].[ввЧеки]
 AS
-SELECT        r.DocDate, r.DocRef, d.GoodsDetailId, d.Goods, CASE WHEN [IsSale] = 1 THEN 1 ELSE - 1 END * d.Count AS Count, CASE WHEN [IsSale] = 1 THEN 1 ELSE - 1 END * d.Price AS Price, 
+SELECT        r.DocDate, CAST(r.DocRef as uniqueidentifier) DocRef, CAST(d.GoodsDetailId as uniqueidentifier) GoodsDetailId, CAST(d.Goods as uniqueidentifier) Goods, CASE WHEN [IsSale] = 1 THEN 1 ELSE - 1 END * d.Count AS Count, CASE WHEN [IsSale] = 1 THEN 1 ELSE - 1 END * d.Price AS Price, 
                          CASE WHEN [IsSale] = 1 THEN 1 ELSE - 1 END * d.Sum AS Sum, CASE WHEN [IsSale] = 1 THEN 1 ELSE 0 END * d.Sum AS SumSale, CASE WHEN [IsSale] = 1 THEN 0 ELSE - 1 END * d.Sum AS SumReturn, 
                          CASE WHEN [IsSale] = 1 THEN 1 ELSE 0 END * d.SumCash AS SumCashSale, CASE WHEN [IsSale] = 1 THEN 0 ELSE - 1 END * d.SumCash AS SumCashReturn, 
-                         CASE WHEN [IsSale] = 1 THEN 1 ELSE 0 END * d.SumTerminal AS SumTerminalSale, CASE WHEN [IsSale] = 1 THEN 0 ELSE - 1 END * d.SumTerminal AS SumTerminalReturn, r.IsSale, d.RetailDocCashierCheckDocRef, 
-                         DATEADD(hour, DATEDIFF(hour, 0, r.DocDate), 0) AS date, r.StoreRef, CASE WHEN [IsSale] = 1 THEN 1 ELSE - 1 END * CASE WHEN r.[Sum] = 0 THEN 0 ELSE (ROUND(d .[Sum] / r.[Sum], 4)) END AS weight, 
+                         CASE WHEN [IsSale] = 1 THEN 1 ELSE 0 END * d.SumTerminal AS SumTerminalSale, CASE WHEN [IsSale] = 1 THEN 0 ELSE - 1 END * d.SumTerminal AS SumTerminalReturn, r.IsSale, CAST(d.RetailDocCashierCheckDocRef as uniqueidentifier) RetailDocCashierCheckDocRef, 
+                         DATEADD(hour, DATEDIFF(hour, 0, r.DocDate), 0) AS date,CAST(r.StoreRef as uniqueidentifier) StoreRef, CASE WHEN [IsSale] = 1 THEN 1 ELSE - 1 END * CASE WHEN r.[Sum] = 0 THEN 0 ELSE (ROUND(d .[Sum] / r.[Sum], 4)) END AS weight, 
                          CASE WHEN [IsSale] = 1 THEN 1 ELSE 0 END * CASE WHEN r.[Sum] = 0 THEN 0 ELSE (ROUND(d .[Sum] / r.[Sum], 4)) END AS weightSale, 
                          CASE WHEN [IsSale] = 1 THEN 0 ELSE - 1 END * CASE WHEN r.[Sum] = 0 THEN 0 ELSE (ROUND(d .[Sum] / r.[Sum], 4)) END AS weightReturn, r.CashRegisterShiftNumber
 FROM           REAL_tabakon.dbo.RetailDocCashierCheck AS r INNER JOIN

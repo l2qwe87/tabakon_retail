@@ -46,7 +46,11 @@
 );
 
 
+
+
 GO
-CREATE NONCLUSTERED INDEX [Calendar_date]
+CREATE UNIQUE CLUSTERED INDEX [Calendar_date]
     ON [dbo].[Calendar]([date_] ASC);
+
+
 

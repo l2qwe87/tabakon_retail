@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Себестоимость_АнализПродаж_УПР] (
+﻿CREATE TABLE [dbo].[Себестоимость_АнализПродаж_УПР_Новый] (
     [Период]                   DATETIME2 (7)    NOT NULL,
     [Регистратор]              UNIQUEIDENTIFIER NOT NULL,
     [Номенклатура]             UNIQUEIDENTIFIER NOT NULL,
@@ -13,17 +13,15 @@
 ) ON [Olap_mdf2];
 
 
-
-
 GO
-CREATE UNIQUE CLUSTERED INDEX [PK_Main]
-    ON [dbo].[Себестоимость_АнализПродаж_УПР]([Период] ASC, [Магазин] ASC, [Номенклатура] ASC, [Регистратор] ASC)
+CREATE NONCLUSTERED INDEX [IX_1]
+    ON [dbo].[Себестоимость_АнализПродаж_УПР_Новый]([Регистратор] ASC)
+    INCLUDE([РегистраторПредставление])
     ON [Olap_mdf2];
 
 
 GO
-CREATE NONCLUSTERED INDEX [IX_1]
-    ON [dbo].[Себестоимость_АнализПродаж_УПР]([Регистратор] ASC)
-    INCLUDE([РегистраторПредставление])
+CREATE UNIQUE CLUSTERED INDEX [PK_Main]
+    ON [dbo].[Себестоимость_АнализПродаж_УПР_Новый]([Период] ASC, [Магазин] ASC, [Номенклатура] ASC, [Регистратор] ASC)
     ON [Olap_mdf2];
 
