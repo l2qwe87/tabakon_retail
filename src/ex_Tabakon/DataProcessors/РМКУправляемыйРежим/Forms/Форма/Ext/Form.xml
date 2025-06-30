@@ -557,12 +557,6 @@
 					<ContextMenu name="ИспользоватьВторыеЭлектронкиКонтекстноеМеню" id="751"/>
 					<ExtendedTooltip name="ИспользоватьВторыеЭлектронкиРасширеннаяПодсказка" id="752"/>
 				</CheckBoxField>
-				<CheckBoxField name="АвтоматическиПодгружатьНоменклатуру" id="780">
-					<DataPath>АвтоматическиПодгружатьНоменклатуру</DataPath>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="АвтоматическиПодгружатьНоменклатуруКонтекстноеМеню" id="781"/>
-					<ExtendedTooltip name="АвтоматическиПодгружатьНоменклатуруРасширеннаяПодсказка" id="782"/>
-				</CheckBoxField>
 				<CheckBoxField name="ПереключательDebug" id="753">
 					<DataPath>ПереключательDebug</DataPath>
 					<Visible>false</Visible>
@@ -572,6 +566,12 @@
 					<Events>
 						<Event name="OnChange" callType="After">ТБКПереключательDebugПриИзмененииПосле</Event>
 					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="АвтоматическиПодгружатьНоменклатуру" id="777">
+					<DataPath>АвтоматическиПодгружатьНоменклатуру</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="АвтоматическиПодгружатьНоменклатуруКонтекстноеМеню" id="778"/>
+					<ExtendedTooltip name="АвтоматическиПодгружатьНоменклатуруРасширеннаяПодсказка" id="779"/>
 				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>
