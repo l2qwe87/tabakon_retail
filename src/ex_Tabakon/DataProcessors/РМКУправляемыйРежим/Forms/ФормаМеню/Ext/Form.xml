@@ -290,7 +290,7 @@
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Заявки на товар</v8:content>
+													<v8:content>ТБК заявки</v8:content>
 												</v8:item>
 											</Title>
 											<ExtendedTooltip name="ОТкрытьЗаявкиРасширеннаяПодсказка" id="168"/>
@@ -545,6 +545,21 @@
 											<ContextMenu name="ДекорацияЗавершениеРаботыКонтекстноеМеню" id="100"/>
 											<ExtendedTooltip name="ДекорацияЗавершениеРаботыРасширеннаяПодсказка" id="101"/>
 										</PictureDecoration>
+										<Button name="ОтчетТБКЗаявки" id="179">
+											<Type>UsualButton</Type>
+											<Visible>false</Visible>
+											<Height>2</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<CommandName>Form.Command.ОтчетТБКЗаявки</CommandName>
+											<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отчет ТБК Заявки</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ОтчетТБКЗаявкиРасширеннаяПодсказка" id="180"/>
+										</Button>
 									</ChildItems>
 								</UsualGroup>
 							</ChildItems>
@@ -949,6 +964,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКОткрытьПланыПосле</Action>
+		</Command>
+		<Command name="ОтчетТБКЗаявки" id="1000011">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет ТБКЗаявки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет ТБКЗаявки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКОтчетТБКЗаявкиПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.17">
