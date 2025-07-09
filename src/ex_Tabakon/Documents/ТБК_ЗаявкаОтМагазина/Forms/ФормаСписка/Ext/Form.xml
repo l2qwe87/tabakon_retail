@@ -9,6 +9,20 @@
 				<Font bold="true" kind="AutoFont"/>
 				<ExtendedTooltip name="ИнструкцияРасширеннаяПодсказка" id="50"/>
 			</Button>
+			<Button name="ОтчетТБКЗаявки" id="57">
+				<Type>CommandBarButton</Type>
+				<Height>2</Height>
+				<HorizontalStretch>true</HorizontalStretch>
+				<CommandName>Form.Command.ОтчетТБКЗаявки</CommandName>
+				<Font ref="style:NormalTextFont" height="12" bold="false" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Отчет ТБК Заявки</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ОтчетТБКЗаявкиРасширеннаяПодсказка" id="58"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -473,6 +487,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Инструкция</Action>
+		</Command>
+		<Command name="ОтчетТБКЗаявки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет ТБКЗаявки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет ТБКЗаявки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтчетТБКЗаявки</Action>
 		</Command>
 	</Commands>
 </Form>
