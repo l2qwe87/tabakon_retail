@@ -192,7 +192,22 @@
 			<DataPath>Объект.Товары</DataPath>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="ТоварыКонтекстноеМеню" id="23"/>
-			<AutoCommandBar name="ТоварыКоманднаяПанель" id="24"/>
+			<AutoCommandBar name="ТоварыКоманднаяПанель" id="24">
+				<ChildItems>
+					<Button name="ТоварыСортироватьСписокПоВозрастанию" id="148">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Товары.StandardCommand.SortListAsc</CommandName>
+						<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+						<ExtendedTooltip name="ТоварыСортироватьСписокПоВозрастаниюРасширеннаяПодсказка" id="149"/>
+					</Button>
+					<Button name="ТоварыСортироватьСписокПоУбыванию" id="150">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Товары.StandardCommand.SortListDesc</CommandName>
+						<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+						<ExtendedTooltip name="ТоварыСортироватьСписокПоУбываниюРасширеннаяПодсказка" id="151"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
 			<ExtendedTooltip name="ТоварыРасширеннаяПодсказка" id="25"/>
 			<SearchStringAddition name="ТоварыСтрокаПоиска" id="26">
 				<AdditionSource>
