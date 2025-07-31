@@ -279,6 +279,13 @@
 						<Event name="OnChange">ТоварыКоличествоФактПриИзменении</Event>
 					</Events>
 				</InputField>
+				<InputField name="ТоварыТекущийОстаток" id="155">
+					<DataPath>Объект.Товары.ТекущийОстаток</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТоварыТекущийОстатокКонтекстноеМеню" id="156"/>
+					<ExtendedTooltip name="ТоварыТекущийОстатокРасширеннаяПодсказка" id="157"/>
+				</InputField>
 				<InputField name="ТоварыПричинаБрака" id="103">
 					<DataPath>Объект.Товары.ПричинаБрака</DataPath>
 					<EditMode>EnterOnInput</EditMode>
@@ -483,6 +490,26 @@
 			<UseAlways>
 				<Field>Объект.RegisterRecords</Field>
 			</UseAlways>
+			<Columns>
+				<AdditionalColumns table="Объект.Товары">
+					<Column name="ТекущийОстаток" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Текущий остаток</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>10</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
 		</Attribute>
 		<Attribute name="ПоддерживаемыеТипыПодключаемогоОборудования" id="2">
 			<Title>
