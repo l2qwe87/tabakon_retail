@@ -1,4 +1,4 @@
-﻿
+﻿ 
 //вхПараметры - структура
 //	UserName - string
 //  Password - string
