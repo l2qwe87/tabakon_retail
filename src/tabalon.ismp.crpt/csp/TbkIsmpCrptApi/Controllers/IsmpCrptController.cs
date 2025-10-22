@@ -88,9 +88,9 @@ namespace TbkIsmpCrptApi.Controllers
                 qr = qr.Replace("(01)", "01").Replace("(21)", "21");
             }
 
-            if (qr.StartsWith("01") && qr.IndexOf("21", 2) > 0)
+            if (qr.StartsWith("01") && qr.IndexOf("21", 2) > 12)
             {
-                var serialNumberStart = qr.IndexOf("21", 2);
+                var serialNumberStart = qr.IndexOf("21", 12);
                 var priceStart = qr.IndexOf("8005", serialNumberStart);
                 var signStart = qr.IndexOf("93", serialNumberStart);
 
