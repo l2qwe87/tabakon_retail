@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using TbkIsmpCrptApi.Controllers;
 using Xunit;
 
@@ -20,6 +20,15 @@ namespace QRParserTest
         {
             var qrPa = new QRParser(qr);
             Assert.Equal(cis, qrPa.CIS);
+        }
+
+        // ClothesCIS converted to Theory with InlineData (qr and expected passed via InlineData)
+        [Theory]
+        [InlineData("0104610541730272215pnKT'RwId);*91EE1192PFY/37fDDABcSYnthTvZ9i90lB04JHGgCGsBDGie0uM=", "0104610541730272215pnKT'RwId);*")]
+        public void ClothesCIS(string qr, string expected)
+        {
+            var qrPa = new QRParser(qr);
+            Assert.Equal(expected, qrPa.CIS);
         }
     }
 }
