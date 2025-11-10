@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Http;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -38,16 +39,14 @@ namespace TbkIsmpCrptApi
             services.AddSingleton<ISigner, BashFrameworkSigner>();
             services.AddSingleton<IIsmpClient, IsmpClient>();
 
-            services.AddTransient<HttpClient>((sp) =>
+            services.AddHttpClient("IsmpClient").ConfigureHttpClient((sp, client) =>
             {
                 var ismpClientConfig = sp.GetRequiredService<IsmpClientConfig>();
-                var httpClient = new HttpClient();
-                httpClient.BaseAddress = new Uri(ismpClientConfig.BaseUrlTobacco);
                 if (ismpClientConfig.HttpTimeoutInSeconds != 0)
                 {
-                    httpClient.Timeout = TimeSpan.FromSeconds(ismpClientConfig.HttpTimeoutInSeconds);
+                    client.Timeout = TimeSpan.FromSeconds(ismpClientConfig.HttpTimeoutInSeconds);
                 }
-                return httpClient;
+                client.DefaultRequestHeaders.UserAgent.ParseAdd("TabakonIsmpClient/1.0");
             });
             services.AddSingleton<IMarkirovkaAuth, MarkirovkaAuth>();
             services.AddSingleton<IMarkirovkaClient, MarkirovkaClient>();

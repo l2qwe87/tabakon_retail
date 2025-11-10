@@ -20,7 +20,7 @@ namespace QRParserTest
         public IsmpRequestTests()
         {
             var services = new ServiceCollection();
-            services.AddTransient<HttpClient>((sp) => new HttpClient(new Mock<HttpMessageHandler>().Object)); // Mock handler per client
+            services.AddHttpClient(); // Add IHttpClientFactory
             services.AddSingleton(new IsmpClientConfig { BaseUrlTobacco = "https://test.com", BaseUrlOther = "https://test.com", HttpTimeoutInSeconds = 5 });
             services.AddLogging(); // Add logging
             _serviceProvider = services.BuildServiceProvider();
@@ -38,8 +38,12 @@ namespace QRParserTest
                 .Setup<Task<HttpResponseMessage>>("SendAsync", ItExpr.IsAny<HttpRequestMessage>(), ItExpr.IsAny<CancellationToken>())
                 .ReturnsAsync(new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent("{\"test\":\"data\"}") });
 
+            var httpClient = new HttpClient(handlerMock.Object);
+            var httpClientFactoryMock = new Mock<IHttpClientFactory>();
+            httpClientFactoryMock.Setup(x => x.CreateClient(It.IsAny<string>())).Returns(httpClient);
+
             var services = new ServiceCollection();
-            services.AddTransient<HttpClient>((sp) => new HttpClient(handlerMock.Object));
+            services.AddSingleton(httpClientFactoryMock.Object);
             services.AddSingleton(new IsmpClientConfig { BaseUrlTobacco = "https://test.com", BaseUrlOther = "https://test.com", HttpTimeoutInSeconds = 5 });
             services.AddLogging();
             var sp = services.BuildServiceProvider();
@@ -69,8 +73,12 @@ namespace QRParserTest
                 .Setup<Task<HttpResponseMessage>>("SendAsync", ItExpr.IsAny<HttpRequestMessage>(), ItExpr.IsAny<CancellationToken>())
                 .ThrowsAsync(new TaskCanceledException("Timeout"));
 
+            var httpClient = new HttpClient(handlerMock.Object);
+            var httpClientFactoryMock = new Mock<IHttpClientFactory>();
+            httpClientFactoryMock.Setup(x => x.CreateClient(It.IsAny<string>())).Returns(httpClient);
+
             var services = new ServiceCollection();
-            services.AddTransient<HttpClient>((sp) => new HttpClient(handlerMock.Object));
+            services.AddSingleton(httpClientFactoryMock.Object);
             services.AddSingleton(new IsmpClientConfig { BaseUrlTobacco = "https://test.com", BaseUrlOther = "https://test.com", HttpTimeoutInSeconds = 5 });
             services.AddLogging();
             var sp = services.BuildServiceProvider();
@@ -94,10 +102,14 @@ namespace QRParserTest
             var handlerMock = new Mock<HttpMessageHandler>();
             handlerMock.Protected()
                 .Setup<Task<HttpResponseMessage>>("SendAsync", ItExpr.IsAny<HttpRequestMessage>(), ItExpr.IsAny<CancellationToken>())
-                .Returns(() => Task.FromResult(new HttpResponseMessage(HttpStatusCode.Forbidden) { Content = new StringContent("Forbidden") }));
+                .ReturnsAsync(new HttpResponseMessage(HttpStatusCode.Forbidden) { Content = new StringContent("Forbidden") });
+
+            var httpClient = new HttpClient(handlerMock.Object);
+            var httpClientFactoryMock = new Mock<IHttpClientFactory>();
+            httpClientFactoryMock.Setup(x => x.CreateClient(It.IsAny<string>())).Returns(httpClient);
 
             var services = new ServiceCollection();
-            services.AddTransient<HttpClient>((sp) => new HttpClient(handlerMock.Object));
+            services.AddSingleton(httpClientFactoryMock.Object);
             services.AddSingleton(new IsmpClientConfig { BaseUrlTobacco = "https://test.com", BaseUrlOther = "https://test.com", HttpTimeoutInSeconds = 5 });
             services.AddLogging();
             var sp = services.BuildServiceProvider();
@@ -133,8 +145,12 @@ namespace QRParserTest
                     return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent("Success") });
                 });
 
+            var httpClient = new HttpClient(handlerMock.Object);
+            var httpClientFactoryMock = new Mock<IHttpClientFactory>();
+            httpClientFactoryMock.Setup(x => x.CreateClient(It.IsAny<string>())).Returns(httpClient);
+
             var services = new ServiceCollection();
-            services.AddTransient<HttpClient>((sp) => new HttpClient(handlerMock.Object));
+            services.AddSingleton(httpClientFactoryMock.Object);
             services.AddSingleton(new IsmpClientConfig { BaseUrlTobacco = "https://test.com", BaseUrlOther = "https://test.com", HttpTimeoutInSeconds = 5 });
             services.AddLogging();
             var sp = services.BuildServiceProvider();
@@ -164,8 +180,12 @@ namespace QRParserTest
                 .Setup<Task<HttpResponseMessage>>("SendAsync", ItExpr.IsAny<HttpRequestMessage>(), ItExpr.IsAny<CancellationToken>())
                 .ReturnsAsync(new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent("OK") });
 
+            var httpClient = new HttpClient(handlerMock.Object);
+            var httpClientFactoryMock = new Mock<IHttpClientFactory>();
+            httpClientFactoryMock.Setup(x => x.CreateClient(It.IsAny<string>())).Returns(httpClient);
+
             var services = new ServiceCollection();
-            services.AddTransient<HttpClient>((sp) => new HttpClient(handlerMock.Object));
+            services.AddSingleton(httpClientFactoryMock.Object);
             services.AddSingleton(new IsmpClientConfig { BaseUrlTobacco = "https://test.com", BaseUrlOther = "https://test.com", HttpTimeoutInSeconds = 5 });
             services.AddLogging();
             var sp = services.BuildServiceProvider();
