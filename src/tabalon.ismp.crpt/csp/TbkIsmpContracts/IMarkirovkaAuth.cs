@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TbkIsmpContracts
 {
-    public class TokenInfo{
+    public class TokenInfo
+    {
         public string Token { get; set; }
         public DateTime ExpiredOn { get; set; }
     }

@@ -19,7 +19,7 @@ namespace TbkIsmpCrpt
 
 
         private IServiceProvider _serviceProvider;
-        
+
         private IsmpRequest(
             IServiceProvider serviceProvider
             )
@@ -28,7 +28,7 @@ namespace TbkIsmpCrpt
         }
 
 
-        public static IIsmRequestBuilder Create(IServiceProvider serviceProvider) 
+        public static IIsmRequestBuilder Create(IServiceProvider serviceProvider)
         {
             return new IsmpRequest(serviceProvider);
         }
@@ -40,10 +40,10 @@ namespace TbkIsmpCrpt
         private Dictionary<string, string> _queryParms;
 
 
-        public IIsmRequest Build() 
+        public IIsmRequest Build()
             => this;
 
-        public IIsmRequestBuilder SetRequestUrl(string requestUrl) 
+        public IIsmRequestBuilder SetRequestUrl(string requestUrl)
         {
             _requestUri = requestUrl;
             return this;
@@ -80,7 +80,7 @@ namespace TbkIsmpCrpt
         public async Task<IIsmpResponse> SendAsync()
         {
             var requestUri = _requestUri;
-            if (_queryParms != null) 
+            if (_queryParms != null)
             {
                 requestUri = requestUri + "?" + String.Join("&", _queryParms.Select(q => $"{q.Key}={q.Value}"));
             }
@@ -93,7 +93,8 @@ namespace TbkIsmpCrpt
                 var ismpClientConfig = scope.ServiceProvider.GetRequiredService<IsmpClientConfig>();
                 var urls = new[] { ismpClientConfig.BaseUrlTobacco, ismpClientConfig.BaseUrlOther };
                 IsmpResponse result = null;
-                foreach ( var url in urls ) {
+                foreach (var url in urls)
+                {
                     httpClient.BaseAddress = new Uri(url);
                     var tryCount = 10;
                     while (tryCount > 0)
@@ -133,7 +134,8 @@ namespace TbkIsmpCrpt
                                 }
 
                             }
-                        } catch (Exception e)
+                        }
+                        catch (Exception e)
                         {
                             if (tryCount <= 0)
                                 throw;

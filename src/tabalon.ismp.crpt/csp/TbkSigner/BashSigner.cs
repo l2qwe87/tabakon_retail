@@ -12,10 +12,10 @@ namespace TbkSigner
     public class BashSigner : ISigner
     {
 
-        public async Task<string>  Sign(string thumbprint, string content)
+        public async Task<string> Sign(string thumbprint, string content)
         {
 
-            
+
             var bash = new BashExecuter();
 
             string tmpFoledr = Path.GetFullPath(Assembly.GetExecutingAssembly().Location);
@@ -37,7 +37,7 @@ namespace TbkSigner
             //args.Append($" -detached -base64 -add");
             args.Append($" -detached -add");
 
-            
+
             await File.WriteAllBytesAsync(tmpFileIn, Encoding.ASCII.GetBytes(content));
 
 

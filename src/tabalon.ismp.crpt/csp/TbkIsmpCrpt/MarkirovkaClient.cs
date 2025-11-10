@@ -25,7 +25,7 @@ namespace TbkIsmpCrpt
             _token = tokenInfo.Token;
         }
 
-        
+
         public Task<string> GetAggregated(string cis)
         {
             this.Auth();

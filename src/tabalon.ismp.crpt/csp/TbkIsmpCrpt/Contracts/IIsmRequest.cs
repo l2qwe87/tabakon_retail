@@ -14,11 +14,11 @@ namespace TbkIsmpCrpt
         string Body { get; }
     }
 
-    public static class IsmpResponseExtension 
+    public static class IsmpResponseExtension
     {
         public static T Body<T>(this IIsmpResponse response)
-            => typeof(T) == typeof(string) 
-            ? (T)(object)response.Body 
+            => typeof(T) == typeof(string)
+            ? (T)(object)response.Body
             : JsonConvert.DeserializeObject<T>(response.Body);
     }
 
@@ -28,7 +28,7 @@ namespace TbkIsmpCrpt
         Task<IIsmpResponse> SendAsync();
     }
 
-    public interface IIsmRequestBuilder 
+    public interface IIsmRequestBuilder
     {
         IIsmRequest Build();
         IIsmRequestBuilder SetRequestUrl(string requestUrl);

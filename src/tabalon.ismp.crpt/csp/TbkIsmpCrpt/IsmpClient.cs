@@ -84,7 +84,7 @@ namespace TbkIsmpCrpt
                 //.AddBody(new { cises = ciss })
                 .AddBody(ciss)
                 .Build()
-                .SendAsync(); 
+                .SendAsync();
 
             return tokenResponse.Body<string>(); ;
         }
@@ -101,7 +101,7 @@ namespace TbkIsmpCrpt
             return tokenResponse.Body<string>(); ;
         }
 
-        public async Task<string> _CisesInfo(IEnumerable<string> ciss, string token) 
+        public async Task<string> _CisesInfo(IEnumerable<string> ciss, string token)
         {
             var tokenResponse = await IsmpRequest.Create(_serviceProvider)
                 //.SetRequestUrl("api/v3/true-api/cises/info/")

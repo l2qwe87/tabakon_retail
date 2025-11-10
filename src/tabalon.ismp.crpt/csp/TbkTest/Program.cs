@@ -23,7 +23,7 @@ namespace TbkTest
             //services.AddSingleton<ISigner , PkgSigner>();
             services.AddSingleton<ISigner, BashFrameworkSigner>();
 
-            services.AddSingleton<IsmpClientConfig>((_) => new IsmpClientConfig 
+            services.AddSingleton<IsmpClientConfig>((_) => new IsmpClientConfig
             {
                 BaseUrlTobacco = "https://markirovka.crpt.ru",
                 //BaseUrl = "https://ismp.crpt.ru",
@@ -33,7 +33,8 @@ namespace TbkTest
             });
             services.AddSingleton<IIsmpClient, IsmpClient>();
 
-            services.AddTransient<HttpClient>((sp)=> {
+            services.AddTransient<HttpClient>((sp) =>
+            {
                 var ismpClientConfig = sp.GetRequiredService<IsmpClientConfig>();
                 var httpClient = new HttpClient();
                 httpClient.BaseAddress = new Uri(ismpClientConfig.BaseUrlTobacco);
@@ -46,8 +47,8 @@ namespace TbkTest
 
             var rootServiceProvider = services.BuildServiceProvider();
 
-            
-            using (var scope = rootServiceProvider.CreateScope()) 
+
+            using (var scope = rootServiceProvider.CreateScope())
             {
                 var serviceProvider = scope.ServiceProvider;
 
@@ -76,12 +77,13 @@ namespace TbkTest
 
                 };
 
-                var _qrs = new[] { 
+                var _qrs = new[] {
                     "04601653033399WnSlxCcACyA7rOc",
                     "00000046182876P?!ghe!"
                 };
 
-                foreach (var qr in qrs) {
+                foreach (var qr in qrs)
+                {
                     Console.WriteLine($"========================================");
 
                     {
@@ -117,7 +119,7 @@ namespace TbkTest
         }
 
 
-        
+
     }
 
 
@@ -163,8 +165,8 @@ namespace TbkTest
             _price = qr.Substring(gtin_length + serialNumber_length, price_length);
             _sign = qr.Substring(gtin_length + serialNumber_length + price_length, sign_length);
 
-            CIS = $"{_gtin }{_serialNumber}";
-            KI_SHORT = $"01{_gtin }21{_serialNumber}";
+            CIS = $"{_gtin}{_serialNumber}";
+            KI_SHORT = $"01{_gtin}21{_serialNumber}";
             KI = $"{KI_SHORT}8005{_price}96{_sign}";
 
         }

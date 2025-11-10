@@ -30,7 +30,7 @@ namespace TbkSigner
 
             var args = new StringBuilder();
 
-            
+
             args.Append($" -i {tmpFileIn}");
             args.Append($" -o {tmpFileOut}");
             args.Append($" -t {thumbprint}");

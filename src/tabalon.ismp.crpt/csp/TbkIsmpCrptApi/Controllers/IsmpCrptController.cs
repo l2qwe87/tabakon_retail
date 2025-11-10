@@ -44,9 +44,11 @@ namespace TbkIsmpCrptApi.Controllers
         public async Task<string> ProductInfo([FromQuery] string cis, [FromQuery] bool withOutQRParse = false)
             => await ProductInfoInternal(cis, withOutQRParse);
 
-        private async Task<string> InfoInternal(IEnumerable<string> ciss, bool withOutQRParse) {
+        private async Task<string> InfoInternal(IEnumerable<string> ciss, bool withOutQRParse)
+        {
             var codes = ciss;
-            if (!withOutQRParse) {
+            if (!withOutQRParse)
+            {
                 codes = ciss
                     .Select(cis => new QRParser(cis))
                     .Select(qr => qr.CIS)
@@ -59,7 +61,8 @@ namespace TbkIsmpCrptApi.Controllers
         private async Task<string> ProductInfoInternal(string cis, bool withOutQRParse)
         {
             var code = cis;
-            if (!withOutQRParse) {
+            if (!withOutQRParse)
+            {
                 var qr = new QRParser(cis);
                 code = qr.CIS;
             }

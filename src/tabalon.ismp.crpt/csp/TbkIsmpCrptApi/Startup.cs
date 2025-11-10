@@ -38,11 +38,13 @@ namespace TbkIsmpCrptApi
             services.AddSingleton<ISigner, BashFrameworkSigner>();
             services.AddSingleton<IIsmpClient, IsmpClient>();
 
-            services.AddTransient<HttpClient>((sp) => {
+            services.AddTransient<HttpClient>((sp) =>
+            {
                 var ismpClientConfig = sp.GetRequiredService<IsmpClientConfig>();
                 var httpClient = new HttpClient();
                 httpClient.BaseAddress = new Uri(ismpClientConfig.BaseUrlTobacco);
-                if (ismpClientConfig.HttpTimeoutInSeconds != 0) {
+                if (ismpClientConfig.HttpTimeoutInSeconds != 0)
+                {
                     httpClient.Timeout = TimeSpan.FromSeconds(ismpClientConfig.HttpTimeoutInSeconds);
                 }
                 return httpClient;
@@ -77,7 +79,7 @@ namespace TbkIsmpCrptApi
         }
     }
 
-    public class AppConfig 
+    public class AppConfig
     {
         public IsmpClientConfig IsmpClientConfig { get; set; }
     }

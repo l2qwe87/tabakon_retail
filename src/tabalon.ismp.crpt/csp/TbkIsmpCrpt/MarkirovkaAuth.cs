@@ -30,18 +30,22 @@ namespace TbkIsmpCrpt
             {
                 var expiredOn = _tokenInfo?.ExpiredOn ?? DateTime.MinValue;
                 var utcNow = DateTime.UtcNow;
-                if (expiredOn > utcNow) {
-                    return _tokenInfo; 
+                if (expiredOn > utcNow)
+                {
+                    return _tokenInfo;
                 }
-                
 
-            } finally {
+
+            }
+            finally
+            {
                 _lock.ExitReadLock();
             }
             return RenewToken();
         }
 
-        private TokenInfo RenewToken() {
+        private TokenInfo RenewToken()
+        {
             _lock.EnterWriteLock();
             try
             {
@@ -57,7 +61,8 @@ namespace TbkIsmpCrpt
                 var span = TimeSpan.FromSeconds((_tokenInfo.ExpiredOn - DateTime.Now).TotalSeconds / 2);
                 SchedscheduleTokenCleanupule(span);
 
-            } finally
+            }
+            finally
             {
                 _lock.ExitWriteLock();
             }

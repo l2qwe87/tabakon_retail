@@ -27,14 +27,18 @@ namespace TbkIsmpCrptApi
         /// <param name="qr">Строка QR-кода для разбора.</param>
         public QRParser(string qr)
         {
-            if (qr.StartsWith("(01)") && qr.IndexOf("(21)", 2) > 0) {
+            if (qr.StartsWith("(01)") && qr.IndexOf("(21)", 2) > 0)
+            {
                 qr = qr.Replace("(01)", "01").Replace("(21)", "21");
             }
 
             var fields = ParseGS1String(qr);
-            if (fields.ContainsKey("01") && fields.ContainsKey("21")) {
+            if (fields.ContainsKey("01") && fields.ContainsKey("21"))
+            {
                 CIS = ("01" + fields["01"] + "21" + fields["21"]).Trim();
-            } else {
+            }
+            else
+            {
                 var gtin_length = 14;
                 var serialNumber_length = 7;
                 var price_length = 4;
@@ -77,12 +81,17 @@ namespace TbkIsmpCrptApi
         /// <param name="s">Строка для поиска.</param>
         /// <param name="startPos">Начальная позиция для поиска.</param>
         /// <returns>Позиция следующего AI или длина строки, если не найдено.</returns>
-        private static int FindNextAIStart(string s, int startPos) {
-            for (int pos = startPos; pos < s.Length; pos++) {
-                for (int len = 2; len <= 4; len++) {
-                    if (pos + len <= s.Length) {
+        private static int FindNextAIStart(string s, int startPos)
+        {
+            for (int pos = startPos; pos < s.Length; pos++)
+            {
+                for (int len = 2; len <= 4; len++)
+                {
+                    if (pos + len <= s.Length)
+                    {
                         string candidate = s.Substring(pos, len);
-                        if (IsValidAI(candidate) && candidate != "01" && candidate != "21") {
+                        if (IsValidAI(candidate) && candidate != "01" && candidate != "21")
+                        {
                             return pos;
                         }
                     }
@@ -96,15 +105,19 @@ namespace TbkIsmpCrptApi
         /// </summary>
         /// <param name="gs1String">Строка GS1 для разбора.</param>
         /// <returns>Словарь, содержащий ключи AI и соответствующие значения данных.</returns>
-        private static Dictionary<string, string> ParseGS1String(string gs1String) {
+        private static Dictionary<string, string> ParseGS1String(string gs1String)
+        {
             var fields = new Dictionary<string, string>();
             int pos = 0;
 
-            while (pos < gs1String.Length) {
+            while (pos < gs1String.Length)
+            {
                 string ai = "";
-                for (int i = pos; i < Math.Min(pos + 4, gs1String.Length); i++) {
+                for (int i = pos; i < Math.Min(pos + 4, gs1String.Length); i++)
+                {
                     ai += gs1String[i];
-                    if (IsValidAI(ai)) {
+                    if (IsValidAI(ai))
+                    {
                         pos += ai.Length;
                         break;
                     }
@@ -116,10 +129,13 @@ namespace TbkIsmpCrptApi
                 int dataLength = GetDataLengthForAI(ai);
                 string data = "";
 
-                if (dataLength > 0) {
+                if (dataLength > 0)
+                {
                     data = gs1String.Substring(pos, dataLength);
                     pos += dataLength;
-                } else {
+                }
+                else
+                {
                     int nextAIStart = FindNextAIStart(gs1String, pos);
                     data = gs1String.Substring(pos, nextAIStart - pos);
                     pos = nextAIStart;
@@ -136,7 +152,8 @@ namespace TbkIsmpCrptApi
         /// </summary>
         /// <param name="ai">Строка AI для проверки.</param>
         /// <returns>True, если AI допустим, иначе false.</returns>
-        private static bool IsValidAI(string ai) {
+        private static bool IsValidAI(string ai)
+        {
             string[] validAI = { "01", "21", "10", "11", "17", "91", "92", "93", "8005" };
             return validAI.Contains(ai);
         }
@@ -146,8 +163,10 @@ namespace TbkIsmpCrptApi
         /// </summary>
         /// <param name="ai">Application Identifier.</param>
         /// <returns>Длина данных или -1, если переменная.</returns>
-        private static int GetDataLengthForAI(string ai) {
-            switch (ai) {
+        private static int GetDataLengthForAI(string ai)
+        {
+            switch (ai)
+            {
                 case "01": return 14;
                 case "21": return -1;
                 case "10": return -1;
