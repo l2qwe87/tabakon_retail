@@ -17,6 +17,9 @@ namespace QRParserTest
         [InlineData("(01)04680127995555(21)fGHwsVi", "010468012799555521fGHwsVi")]
         [InlineData("01230000211093s)pTKjQAAAAHwvf", "01230000211093s)pTKjQ")]
         [InlineData("010600179201211421LABtf,B 93gJWU", "010600179201211421LABtf,B")]
+        [InlineData("0104610171993320215p1_;991EE1192X8V/aCSsDZi/lovrHG2WTCtGm/WWSmShyvA/9n5nSWE=", "0104610171993320215p1_;9")]
+        [InlineData("0104610484027835215dm)oCPgCHOHf91EE1192fXOBGL899aDHWkarCAk4ZZZ5cyDdHcWsjxR7ewwr+dE=", "0104610484027835215dm)oCPgCHOHf")]
+        [InlineData("0104610484027835215T7Y*RccvqX/G91EE1192nsBf/xd95nbABF2n0cDXOlK1Fh9+lZzgoUDZ5SF+dzo=", "0104610484027835215T7Y*RccvqX/G")]
         public void GetCIS(string qr, string cis)
         {
             var qrPa = new QRParser(qr);
