@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
@@ -93,9 +93,14 @@ namespace TbkIsmpCrpt
                 var ismpClientConfig = scope.ServiceProvider.GetRequiredService<IsmpClientConfig>();
                 var urls = new[] { ismpClientConfig.BaseUrlTobacco, ismpClientConfig.BaseUrlOther };
                 IsmpResponse result = null;
+                string currentBaseUrl = null;
                 foreach (var url in urls)
                 {
-                    httpClient.BaseAddress = new Uri(url);
+                    if (currentBaseUrl != url)
+                    {
+                        httpClient.BaseAddress = new Uri(url);
+                        currentBaseUrl = url;
+                    }
                     var tryCount = 10;
                     while (tryCount > 0)
                     {

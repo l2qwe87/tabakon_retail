@@ -1,38 +1,39 @@
 using System;
 using TbkIsmpCrptApi;
 using TbkIsmpCrptApi.Controllers;
-using Xunit;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace QRParserTest
 {
+    [TestClass]
     public class QrDataMatrixTests
     {
-        [Theory]
-        [InlineData("010541462278007621CimGms8C9swPomtz", "010541462278007621CimGms8C9swPomtz")]
-        [InlineData("0104640030090754210001%ix800515000093vRdW", "0104640030090754210001%ix")]
-        [InlineData("010290005275769421a?RI7ZL93X9NA", "010290005275769421a?RI7ZL")]
-        [InlineData("00000046198488X?io+qCABm8wAYa", "00000046198488X?io+qC")]
-        [InlineData("04640030090709DYBLHiyACoA", "04640030090709DYBLHiy")]
-        [InlineData("010468012799555521fGHwsVi", "010468012799555521fGHwsVi")]
-        [InlineData("(01)04680127995555(21)fGHwsVi", "010468012799555521fGHwsVi")]
-        [InlineData("01230000211093s)pTKjQAAAAHwvf", "01230000211093s)pTKjQ")]
-        [InlineData("010600179201211421LABtf,B 93gJWU", "010600179201211421LABtf,B")]
-        [InlineData("0104610171993320215p1_;991EE1192X8V/aCSsDZi/lovrHG2WTCtGm/WWSmShyvA/9n5nSWE=", "0104610171993320215p1_;9")]
-        [InlineData("0104610484027835215dm)oCPgCHOHf91EE1192fXOBGL899aDHWkarCAk4ZZZ5cyDdHcWsjxR7ewwr+dE=", "0104610484027835215dm)oCPgCHOHf")]
-        [InlineData("0104610484027835215T7Y*RccvqX/G91EE1192nsBf/xd95nbABF2n0cDXOlK1Fh9+lZzgoUDZ5SF+dzo=", "0104610484027835215T7Y*RccvqX/G")]
+        [DataTestMethod]
+        [DataRow("010541462278007621CimGms8C9swPomtz", "010541462278007621CimGms8C9swPomtz")]
+        [DataRow("0104640030090754210001%ix800515000093vRdW", "0104640030090754210001%ix")]
+        [DataRow("010290005275769421a?RI7ZL93X9NA", "010290005275769421a?RI7ZL")]
+        [DataRow("00000046198488X?io+qCABm8wAYa", "00000046198488X?io+qC")]
+        [DataRow("04640030090709DYBLHiyACoA", "04640030090709DYBLHiy")]
+        [DataRow("010468012799555521fGHwsVi", "010468012799555521fGHwsVi")]
+        [DataRow("(01)04680127995555(21)fGHwsVi", "010468012799555521fGHwsVi")]
+        [DataRow("01230000211093s)pTKjQAAAAHwvf", "01230000211093s)pTKjQ")]
+        [DataRow("010600179201211421LABtf,B 93gJWU", "010600179201211421LABtf,B")]
+        [DataRow("0104610171993320215p1_;991EE1192X8V/aCSsDZi/lovrHG2WTCtGm/WWSmShyvA/9n5nSWE=", "0104610171993320215p1_;9")]
+        [DataRow("0104610484027835215dm)oCPgCHOHf91EE1192fXOBGL899aDHWkarCAk4ZZZ5cyDdHcWsjxR7ewwr+dE=", "0104610484027835215dm)oCPgCHOHf")]
+        [DataRow("0104610484027835215T7Y*RccvqX/G91EE1192nsBf/xd95nbABF2n0cDXOlK1Fh9+lZzgoUDZ5SF+dzo=", "0104610484027835215T7Y*RccvqX/G")]
         public void GetCIS(string qr, string cis)
         {
             var qrPa = new QRParser(qr);
-            Assert.Equal(cis, qrPa.CIS);
+            Assert.AreEqual(cis, qrPa.CIS);
         }
 
-        // ClothesCIS converted to Theory with InlineData (qr and expected passed via InlineData)
-        [Theory]
-        [InlineData("0104610541730272215pnKT'RwId);*91EE1192PFY/37fDDABcSYnthTvZ9i90lB04JHGgCGsBDGie0uM=", "0104610541730272215pnKT'RwId);*")]
+        // ClothesCIS converted to DataTestMethod with DataRow
+        [DataTestMethod]
+        [DataRow("0104610541730272215pnKT'RwId);*91EE1192PFY/37fDDABcSYnthTvZ9i90lB04JHGgCGsBDGie0uM=", "0104610541730272215pnKT'RwId);*")]
         public void ClothesCIS(string qr, string expected)
         {
             var qrPa = new QRParser(qr);
-            Assert.Equal(expected, qrPa.CIS);
+            Assert.AreEqual(expected, qrPa.CIS);
         }
     }
 }
