@@ -1,4 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
@@ -88,7 +89,8 @@ namespace TbkIsmpCrpt
             var httpMethod = _body == null ? HttpMethod.Get : HttpMethod.Post;
             using (var scope = _serviceProvider.CreateScope())
             {
-                var httpClient = scope.ServiceProvider.GetRequiredService<HttpClient>();
+                var httpClientFactory = scope.ServiceProvider.GetRequiredService<IHttpClientFactory>();
+                var httpClient = httpClientFactory.CreateClient("IsmpClient");
 
                 var ismpClientConfig = scope.ServiceProvider.GetRequiredService<IsmpClientConfig>();
                 var urls = new[] { ismpClientConfig.BaseUrlTobacco, ismpClientConfig.BaseUrlOther };
