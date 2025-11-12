@@ -2,12 +2,15 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using Polly;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace TbkIsmpCrpt
@@ -81,7 +84,7 @@ namespace TbkIsmpCrpt
             return this;
         }
 
-        public async Task<IIsmpResponse> SendAsync()
+        public async Task<IIsmpResponse> SendAsync(CancellationToken cancellationToken = default)
         {
             var requestUri = _requestUri;
             if (_queryParms != null)
@@ -94,77 +97,102 @@ namespace TbkIsmpCrpt
             {
                 var httpClientFactory = scope.ServiceProvider.GetRequiredService<IHttpClientFactory>();
                 var httpClient = httpClientFactory.CreateClient("IsmpClient");
+                var logger = _serviceProvider.GetRequiredService<ILogger<IsmpRequest>>();
 
                 var ismpClientConfig = scope.ServiceProvider.GetRequiredService<IsmpClientConfig>();
                 var urls = new[] { ismpClientConfig.BaseUrlTobacco, ismpClientConfig.BaseUrlOther };
-                IsmpResponse result = null;
-                string currentBaseUrl = null;
-                foreach (var url in urls)
+
+                IsmpResponse lastResponse = null;
+
+                for (int urlIndex = 0; urlIndex < urls.Length; urlIndex++)
                 {
-                    if (currentBaseUrl != url)
-                    {
-                        httpClient.BaseAddress = new Uri(url);
-                        currentBaseUrl = url;
-                    }
-                    var tryCount = _config.RetryCount;
-                    while (tryCount > 0)
-                    {
-                        tryCount--;
-                        try
-                        {
-                            using (var request = new HttpRequestMessage(httpMethod, $"{requestUri}"))
+                    var url = urls[urlIndex];
+                    var fullUrl = $"{url.TrimEnd('/')}/{requestUri.TrimStart('/')}";
+                    
+                    // Create retry policy for this URL
+                    // Polly's WaitAndRetryAsync includes initial attempt, so we subtract 1 to match original behavior
+                    var retryCount = Math.Max(0, _config.RetryCount - 1);
+                    var retryPolicy = Policy
+                        .Handle<HttpRequestException>()
+                        .Or<TaskCanceledException>()
+                        .OrResult<HttpResponseMessage>(response => response.StatusCode == HttpStatusCode.Forbidden)
+                        .WaitAndRetryAsync(
+                            retryCount,
+                            retryAttempt => TimeSpan.FromMilliseconds(_config.RetryDelayMs),
+                            onRetry: (outcome, timespan, retryAttempt, context) =>
                             {
-                                request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                                if (this._token != null)
+                                if (outcome.Exception != null)
                                 {
-                                    request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", $"{this._token}");
+                                    logger.LogError($"Request failed with exception: {outcome.Exception.Message}. Retrying in {timespan.TotalMilliseconds}ms... (Attempt {retryAttempt + 1}/{_config.RetryCount})");
                                 }
-
-                                if (!String.IsNullOrWhiteSpace(_body))
+                                else
                                 {
-                                    request.Content = new StringContent(
-                                        _body,
-                                        Encoding.UTF8,
-                                        "application/json");
+                                    logger.LogError($"Request failed with status code {outcome.Result.StatusCode}. Retrying in {timespan.TotalMilliseconds}ms... (Attempt {retryAttempt + 1}/{_config.RetryCount})");
                                 }
+                            });
 
-                                using (var response = await httpClient.SendAsync(request))
+                    try
+                    {
+                        var response = await retryPolicy.ExecuteAsync(
+                            async (token) =>
+                            {
+                                using (var request = new HttpRequestMessage(httpMethod, fullUrl))
                                 {
-                                    var jsonText = await response.Content.ReadAsStringAsync();
-
-                                    result = new IsmpResponse
+                                    request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                                    if (this._token != null)
                                     {
-                                        StatusCode = (int)response.StatusCode,
-                                        Body = jsonText
-                                    };
-                                    if (result.StatusCode != 403)
-                                    {
-                                        return result;
+                                        request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", $"{this._token}");
                                     }
-                                    else
-                                    {
-                                        var logger = _serviceProvider.GetRequiredService<ILogger<IsmpRequest>>();
-                                        logger.LogError($"403 Forbidden on {url}, retry #{_config.RetryCount - tryCount}");
-                                        if (tryCount > 0)
-                                        {
-                                            await Task.Delay(_config.RetryDelayMs);
-                                        }
-                                    }
-                                }
 
-                            }
-                        }
-                        catch (Exception e)
+                                    if (!String.IsNullOrWhiteSpace(_body))
+                                    {
+                                        request.Content = new StringContent(
+                                            _body,
+                                            Encoding.UTF8,
+                                            "application/json");
+                                    }
+
+                                    return await httpClient.SendAsync(request, token);
+                                }
+                            },
+                            cancellationToken);
+
+                        var jsonText = await response.Content.ReadAsStringAsync(cancellationToken);
+
+                        lastResponse = new IsmpResponse
                         {
-                            if (tryCount <= 0)
-                                throw;
-                            var logger = _serviceProvider.GetRequiredService<ILogger<IsmpRequest>>();
-                            logger.LogError($"Timeout on {url}, retry #{_config.RetryCount - tryCount}");
-                            await Task.Delay(_config.RetryDelayMs);
+                            StatusCode = (int)response.StatusCode,
+                            Body = jsonText
+                        };
+
+                        // If we get a non-403 response, return it immediately
+                        if (lastResponse.StatusCode != 403)
+                        {
+                            return lastResponse;
                         }
+                        
+                        // If this is the last URL and we got 403, return the response
+                        if (urlIndex == urls.Length - 1)
+                        {
+                            return lastResponse;
+                        }
+                        
+                        // Otherwise, continue to next URL
+                    }
+                    catch (TaskCanceledException)
+                    {
+                        // For TaskCanceledException, throw immediately (don't try other URLs)
+                        throw;
+                    }
+                    catch (HttpRequestException)
+                    {
+                        // For HttpRequestException, throw immediately (don't try other URLs)
+                        throw;
                     }
                 }
-                return result;
+
+                // This should not be reached, but just in case
+                throw new HttpRequestException("All base URLs failed after retries");
             }
         }
 
