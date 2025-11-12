@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -92,20 +92,7 @@ namespace TbkTest
                         Console.WriteLine($"{qqq}");
                     }
 
-                    //{
-                    //    var qqq = await markirovkaClient.CisesInfo(qr);
-                    //    Console.WriteLine($"{qqq}");
-                    //}
-                    //{
-                    //    var q = new QR(qr);
-                    //    var qqq = await markirovkaClient.CisesInfo(q.KI);
-                    //    Console.WriteLine($"{qqq}");
-                    //}
-                    //{
-                    //    var q = new QR(qr);
-                    //    var qqq = await markirovkaClient.CisesInfo(q.KI_SHORT);
-                    //    Console.WriteLine($"{qqq}");
-                    //}
+
                 }
 
 
