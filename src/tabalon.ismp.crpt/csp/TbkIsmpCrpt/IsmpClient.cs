@@ -22,6 +22,8 @@ namespace TbkIsmpCrpt
         public string BaseUrlOther { get; set; }
         public string Thumbprint { get; set; }
         public int HttpTimeoutInSeconds { get; set; }
+        public int RetryCount { get; set; } = 10;
+        public int RetryDelayMs { get; set; } = 1000;
     }
 
 
@@ -50,7 +52,7 @@ namespace TbkIsmpCrpt
         public async Task<string> Auth()
         {
 
-            var getAuthResponse = await IsmpRequest.Create(_serviceProvider)
+            var getAuthResponse = await IsmpRequest.Create(_serviceProvider, _ismpClientConfig)
                 .SetRequestUrl("api/v3/auth/cert/key")
                 .Build()
                 .SendAsync();
@@ -64,7 +66,7 @@ namespace TbkIsmpCrpt
 
             tokenRequest.data = signature;
 
-            var tokenResponse = await IsmpRequest.Create(_serviceProvider)
+            var tokenResponse = await IsmpRequest.Create(_serviceProvider, _ismpClientConfig)
                 .SetRequestUrl("api/v3/auth/cert/")
                 .AddBody(tokenRequest)
                 .Build()
@@ -83,7 +85,7 @@ namespace TbkIsmpCrpt
                 _ => "api/v3/true-api/cises/info"
             };
 
-            var tokenResponse = await IsmpRequest.Create(_serviceProvider)
+            var tokenResponse = await IsmpRequest.Create(_serviceProvider, _ismpClientConfig)
                 .SetRequestUrl(url)
                 .AddAuth(token)
                 .AddBody(ciss)
@@ -95,7 +97,7 @@ namespace TbkIsmpCrpt
 
         public async Task<string> ProductInfo(string cis, string token)
         {
-            var tokenResponse = await IsmpRequest.Create(_serviceProvider)
+            var tokenResponse = await IsmpRequest.Create(_serviceProvider, _ismpClientConfig)
                .SetRequestUrl("api/v3/true-api/products/info")
                .AddAuth(token)
                .AddQueryParam("cis", cis)

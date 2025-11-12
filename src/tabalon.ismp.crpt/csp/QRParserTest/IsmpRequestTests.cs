@@ -21,7 +21,7 @@ namespace QRParserTest
         {
             var services = new ServiceCollection();
             services.AddHttpClient(); // Add IHttpClientFactory
-            services.AddSingleton(new IsmpClientConfig { BaseUrlTobacco = "https://test.com", BaseUrlOther = "https://test.com", HttpTimeoutInSeconds = 5 });
+            services.AddSingleton(new IsmpClientConfig { BaseUrlTobacco = "https://test.com", BaseUrlOther = "https://test.com", HttpTimeoutInSeconds = 5, RetryCount = 10, RetryDelayMs = 100 });
             services.AddLogging(); // Add logging
             _serviceProvider = services.BuildServiceProvider();
         }
@@ -44,11 +44,12 @@ namespace QRParserTest
 
             var services = new ServiceCollection();
             services.AddSingleton(httpClientFactoryMock.Object);
-            services.AddSingleton(new IsmpClientConfig { BaseUrlTobacco = "https://test.com", BaseUrlOther = "https://test.com", HttpTimeoutInSeconds = 5 });
+            services.AddSingleton(new IsmpClientConfig { BaseUrlTobacco = "https://test.com", BaseUrlOther = "https://test.com", HttpTimeoutInSeconds = 5, RetryCount = 10, RetryDelayMs = 100 });
             services.AddLogging();
             var sp = services.BuildServiceProvider();
 
-            var request = IsmpRequest.Create(sp)
+            var config = sp.GetRequiredService<IsmpClientConfig>();
+            var request = IsmpRequest.Create(sp, config)
                 .SetRequestUrl("test")
                 .Build();
 
@@ -79,11 +80,12 @@ namespace QRParserTest
 
             var services = new ServiceCollection();
             services.AddSingleton(httpClientFactoryMock.Object);
-            services.AddSingleton(new IsmpClientConfig { BaseUrlTobacco = "https://test.com", BaseUrlOther = "https://test.com", HttpTimeoutInSeconds = 5 });
+            services.AddSingleton(new IsmpClientConfig { BaseUrlTobacco = "https://test.com", BaseUrlOther = "https://test.com", HttpTimeoutInSeconds = 5, RetryCount = 10, RetryDelayMs = 100 });
             services.AddLogging();
             var sp = services.BuildServiceProvider();
 
-            var request = IsmpRequest.Create(sp)
+            var config = sp.GetRequiredService<IsmpClientConfig>();
+            var request = IsmpRequest.Create(sp, config)
                 .SetRequestUrl("test")
                 .Build();
 
@@ -110,11 +112,12 @@ namespace QRParserTest
 
             var services = new ServiceCollection();
             services.AddSingleton(httpClientFactoryMock.Object);
-            services.AddSingleton(new IsmpClientConfig { BaseUrlTobacco = "https://test.com", BaseUrlOther = "https://test.com", HttpTimeoutInSeconds = 5 });
+            services.AddSingleton(new IsmpClientConfig { BaseUrlTobacco = "https://test.com", BaseUrlOther = "https://test.com", HttpTimeoutInSeconds = 5, RetryCount = 10, RetryDelayMs = 100 });
             services.AddLogging();
             var sp = services.BuildServiceProvider();
 
-            var request = IsmpRequest.Create(sp)
+            var config = sp.GetRequiredService<IsmpClientConfig>();
+            var request = IsmpRequest.Create(sp, config)
                 .SetRequestUrl("test")
                 .Build();
 
@@ -151,11 +154,12 @@ namespace QRParserTest
 
             var services = new ServiceCollection();
             services.AddSingleton(httpClientFactoryMock.Object);
-            services.AddSingleton(new IsmpClientConfig { BaseUrlTobacco = "https://test.com", BaseUrlOther = "https://test.com", HttpTimeoutInSeconds = 5 });
+            services.AddSingleton(new IsmpClientConfig { BaseUrlTobacco = "https://test.com", BaseUrlOther = "https://test.com", HttpTimeoutInSeconds = 5, RetryCount = 10, RetryDelayMs = 100 });
             services.AddLogging();
             var sp = services.BuildServiceProvider();
 
-            var request = IsmpRequest.Create(sp)
+            var config = sp.GetRequiredService<IsmpClientConfig>();
+            var request = IsmpRequest.Create(sp, config)
                 .SetRequestUrl("test")
                 .Build();
 
@@ -186,11 +190,12 @@ namespace QRParserTest
 
             var services = new ServiceCollection();
             services.AddSingleton(httpClientFactoryMock.Object);
-            services.AddSingleton(new IsmpClientConfig { BaseUrlTobacco = "https://test.com", BaseUrlOther = "https://test.com", HttpTimeoutInSeconds = 5 });
+            services.AddSingleton(new IsmpClientConfig { BaseUrlTobacco = "https://test.com", BaseUrlOther = "https://test.com", HttpTimeoutInSeconds = 5, RetryCount = 10, RetryDelayMs = 100 });
             services.AddLogging();
             var sp = services.BuildServiceProvider();
 
-            var request = IsmpRequest.Create(sp)
+            var config = sp.GetRequiredService<IsmpClientConfig>();
+            var request = IsmpRequest.Create(sp, config)
                 .SetRequestUrl("test")
                 .AddQueryParam("key", "value")
                 .Build();
@@ -202,6 +207,44 @@ namespace QRParserTest
             handlerMock.Protected().Verify("SendAsync", Times.Once(),
                 ItExpr.Is<HttpRequestMessage>(req => req.RequestUri.ToString() == "https://test.com/test?key=value"),
                 ItExpr.IsAny<CancellationToken>());
+        }
+
+        /// <summary>
+        /// Проверяет, что количество ретраев можно настроить через конфигурацию.
+        /// </summary>
+        [TestMethod]
+        public async Task SendAsync_CustomRetryCount_UsesConfiguredValue()
+        {
+            // Arrange
+            var handlerMock = new Mock<HttpMessageHandler>();
+            handlerMock.Protected()
+                .Setup<Task<HttpResponseMessage>>("SendAsync", ItExpr.IsAny<HttpRequestMessage>(), ItExpr.IsAny<CancellationToken>())
+                .ThrowsAsync(new TaskCanceledException("Timeout"));
+
+            var httpClient = new HttpClient(handlerMock.Object);
+            var httpClientFactoryMock = new Mock<IHttpClientFactory>();
+            httpClientFactoryMock.Setup(x => x.CreateClient(It.IsAny<string>())).Returns(httpClient);
+
+            var services = new ServiceCollection();
+            services.AddSingleton(httpClientFactoryMock.Object);
+            services.AddSingleton(new IsmpClientConfig { 
+                BaseUrlTobacco = "https://test.com", 
+                BaseUrlOther = "https://test.com", 
+                HttpTimeoutInSeconds = 5, 
+                RetryCount = 3, 
+                RetryDelayMs = 50 
+            });
+            services.AddLogging();
+            var sp = services.BuildServiceProvider();
+
+            var config = sp.GetRequiredService<IsmpClientConfig>();
+            var request = IsmpRequest.Create(sp, config)
+                .SetRequestUrl("test")
+                .Build();
+
+            // Act & Assert
+            await Assert.ThrowsExceptionAsync<TaskCanceledException>(() => request.SendAsync());
+            handlerMock.Protected().Verify("SendAsync", Times.Exactly(3), ItExpr.IsAny<HttpRequestMessage>(), ItExpr.IsAny<CancellationToken>());
         }
     }
 }
