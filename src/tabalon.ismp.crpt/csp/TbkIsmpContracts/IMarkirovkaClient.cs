@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -9,6 +9,8 @@ namespace TbkIsmpContracts
         Task<string> GetAggregated(string cis);
 
         Task<string> CisesInfo(IEnumerable<string> ciss);
+
+        Task<string> CisesShortList(IEnumerable<string> ciss);
 
         Task<string> ProductInfo(string ciss);
     }
