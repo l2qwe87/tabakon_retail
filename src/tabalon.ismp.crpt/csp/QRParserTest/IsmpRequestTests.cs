@@ -21,6 +21,7 @@ namespace QRParserTest
             var services = new ServiceCollection();
             services.AddSingleton(new IsmpClientConfig { BaseUrlTobacco = "https://test.com", BaseUrlOther = "https://test.com", HttpTimeoutInSeconds = 5, RetryCount = 10, RetryDelayMs = 100 });
             services.AddLogging();
+            services.AddSingleton<IIsmpRequestFactory, IsmpRequestFactory>();
         }
 
         /// <summary>
@@ -43,10 +44,11 @@ namespace QRParserTest
             services.AddSingleton(httpClientFactoryMock.Object);
             services.AddSingleton(new IsmpClientConfig { BaseUrlTobacco = "https://test.com", BaseUrlOther = "https://test.com", HttpTimeoutInSeconds = 5, RetryCount = 10, RetryDelayMs = 100 });
             services.AddLogging();
+            services.AddSingleton<IIsmpRequestFactory, IsmpRequestFactory>();
             var sp = services.BuildServiceProvider();
 
-            var config = sp.GetRequiredService<IsmpClientConfig>();
-            var request = IsmpRequest.Create(sp, config)
+            var requestFactory = sp.GetRequiredService<IIsmpRequestFactory>();
+            var request = requestFactory.Create()
                 .SetRequestUrl("test")
                 .Build();
 
@@ -79,10 +81,11 @@ namespace QRParserTest
             services.AddSingleton(httpClientFactoryMock.Object);
             services.AddSingleton(new IsmpClientConfig { BaseUrlTobacco = "https://test.com", BaseUrlOther = "https://test.com", HttpTimeoutInSeconds = 5, RetryCount = 10, RetryDelayMs = 100 });
             services.AddLogging();
+            services.AddSingleton<IIsmpRequestFactory, IsmpRequestFactory>();
             var sp = services.BuildServiceProvider();
 
-            var config = sp.GetRequiredService<IsmpClientConfig>();
-            var request = IsmpRequest.Create(sp, config)
+            var requestFactory = sp.GetRequiredService<IIsmpRequestFactory>();
+            var request = requestFactory.Create()
                 .SetRequestUrl("test")
                 .Build();
 
@@ -116,10 +119,11 @@ namespace QRParserTest
             services.AddSingleton(httpClientFactoryMock.Object);
             services.AddSingleton(new IsmpClientConfig { BaseUrlTobacco = "https://test.com", BaseUrlOther = "https://test.com", HttpTimeoutInSeconds = 5, RetryCount = 10, RetryDelayMs = 100 });
             services.AddLogging();
+            services.AddSingleton<IIsmpRequestFactory, IsmpRequestFactory>();
             var sp = services.BuildServiceProvider();
 
-            var config = sp.GetRequiredService<IsmpClientConfig>();
-            var request = IsmpRequest.Create(sp, config)
+            var requestFactory = sp.GetRequiredService<IIsmpRequestFactory>();
+            var request = requestFactory.Create()
                 .SetRequestUrl("test")
                 .Build();
 
@@ -151,10 +155,11 @@ namespace QRParserTest
             services.AddSingleton(httpClientFactoryMock.Object);
             services.AddSingleton(new IsmpClientConfig { BaseUrlTobacco = "https://test.com", BaseUrlOther = "https://test.com", HttpTimeoutInSeconds = 5, RetryCount = 10, RetryDelayMs = 100 });
             services.AddLogging();
+            services.AddSingleton<IIsmpRequestFactory, IsmpRequestFactory>();
             var sp = services.BuildServiceProvider();
 
-            var config = sp.GetRequiredService<IsmpClientConfig>();
-            var request = IsmpRequest.Create(sp, config)
+            var requestFactory = sp.GetRequiredService<IIsmpRequestFactory>();
+            var request = requestFactory.Create()
                 .SetRequestUrl("test")
                 .AddQueryParam("key", "value")
                 .Build();
@@ -194,10 +199,11 @@ namespace QRParserTest
                 RetryDelayMs = 100 
             });
             services.AddLogging();
+            services.AddSingleton<IIsmpRequestFactory, IsmpRequestFactory>();
             var sp = services.BuildServiceProvider();
 
-            var config = sp.GetRequiredService<IsmpClientConfig>();
-            var request = IsmpRequest.Create(sp, config)
+            var requestFactory = sp.GetRequiredService<IIsmpRequestFactory>();
+            var request = requestFactory.Create()
                 .SetRequestUrl("test")
                 .AddQueryParam("search", "test+value&special=chars")
                 .AddQueryParam("filter", "name=John&age=25")
@@ -239,10 +245,11 @@ namespace QRParserTest
                 RetryDelayMs = 100 
             });
             services.AddLogging();
+            services.AddSingleton<IIsmpRequestFactory, IsmpRequestFactory>();
             var sp = services.BuildServiceProvider();
 
-            var config = sp.GetRequiredService<IsmpClientConfig>();
-            var request = IsmpRequest.Create(sp, config)
+            var requestFactory = sp.GetRequiredService<IIsmpRequestFactory>();
+            var request = requestFactory.Create()
                 .SetRequestUrl("test")
                 .AddQueryParam("название", "тестовое значение")
                 .AddQueryParam("фильтр", "параметр=значение")
@@ -281,13 +288,14 @@ namespace QRParserTest
                 BaseUrlOther = "https://test.com", 
                 HttpTimeoutInSeconds = 5, 
                 RetryCount = 3, 
-                RetryDelayMs = 50 
+                RetryDelayMs = 100 
             });
             services.AddLogging();
+            services.AddSingleton<IIsmpRequestFactory, IsmpRequestFactory>();
             var sp = services.BuildServiceProvider();
 
-            var config = sp.GetRequiredService<IsmpClientConfig>();
-            var request = IsmpRequest.Create(sp, config)
+            var requestFactory = sp.GetRequiredService<IIsmpRequestFactory>();
+            var request = requestFactory.Create()
                 .SetRequestUrl("test")
                 .Build();
 

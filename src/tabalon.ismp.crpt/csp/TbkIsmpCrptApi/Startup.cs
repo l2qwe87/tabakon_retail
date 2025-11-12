@@ -37,6 +37,7 @@ namespace TbkIsmpCrptApi
             services.AddControllers();
 
             services.AddSingleton<ISigner, BashFrameworkSigner>();
+            services.AddSingleton<IIsmpRequestFactory, IsmpRequestFactory>();
             services.AddSingleton<IIsmpClient, IsmpClient>();
 
             services.AddHttpClient("IsmpClient").ConfigureHttpClient((sp, client) =>
