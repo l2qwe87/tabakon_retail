@@ -86,7 +86,7 @@ namespace TbkIsmpCrpt
             var requestUri = _requestUri;
             if (_queryParms != null)
             {
-                requestUri = requestUri + "?" + String.Join("&", _queryParms.Select(q => $"{q.Key}={q.Value}"));
+                requestUri = requestUri + "?" + String.Join("&", _queryParms.Select(q => $"{Uri.EscapeDataString(q.Key)}={Uri.EscapeDataString(q.Value)}"));
             }
 
             var httpMethod = _body == null ? HttpMethod.Get : HttpMethod.Post;
