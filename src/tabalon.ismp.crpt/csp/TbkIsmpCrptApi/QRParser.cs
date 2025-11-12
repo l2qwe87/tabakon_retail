@@ -131,6 +131,10 @@ namespace TbkIsmpCrptApi
 
                 if (dataLength > 0)
                 {
+                    if (pos + dataLength > gs1String.Length)
+                    {
+                        break;
+                    }
                     data = gs1String.Substring(pos, dataLength);
                     pos += dataLength;
                 }
