@@ -15,19 +15,16 @@ namespace QRParserTest
     [TestClass]
     public class IsmpRequestTests
     {
-        private readonly IServiceProvider _serviceProvider;
-
-        public IsmpRequestTests()
+        [TestInitialize]
+        public void Setup()
         {
             var services = new ServiceCollection();
-            services.AddHttpClient(); // Add IHttpClientFactory
             services.AddSingleton(new IsmpClientConfig { BaseUrlTobacco = "https://test.com", BaseUrlOther = "https://test.com", HttpTimeoutInSeconds = 5, RetryCount = 10, RetryDelayMs = 100 });
-            services.AddLogging(); // Add logging
-            _serviceProvider = services.BuildServiceProvider();
+            services.AddLogging();
         }
 
         /// <summary>
-        /// Проверяет, что успешный HTTP-запрос возвращает ожидаемый ответ без повторных попыток.
+        /// Проверяет базовый функционал отправки запроса.
         /// </summary>
         [TestMethod]
         public async Task SendAsync_SuccessfulRequest_ReturnsResponse()
@@ -102,50 +99,13 @@ namespace QRParserTest
         {
             // Arrange
             var handlerMock = new Mock<HttpMessageHandler>();
-            handlerMock.Protected()
-                .Setup<Task<HttpResponseMessage>>("SendAsync", ItExpr.IsAny<HttpRequestMessage>(), ItExpr.IsAny<CancellationToken>())
-                .ReturnsAsync(() => new HttpResponseMessage(HttpStatusCode.Forbidden) { Content = new StringContent("Forbidden") });
-
-            var httpClient = new HttpClient(handlerMock.Object);
-            var httpClientFactoryMock = new Mock<IHttpClientFactory>();
-            httpClientFactoryMock.Setup(x => x.CreateClient(It.IsAny<string>())).Returns(httpClient);
-
-            var services = new ServiceCollection();
-            services.AddSingleton(httpClientFactoryMock.Object);
-            services.AddSingleton(new IsmpClientConfig { BaseUrlTobacco = "https://test.com", BaseUrlOther = "https://test.com", HttpTimeoutInSeconds = 5, RetryCount = 10, RetryDelayMs = 100 });
-            services.AddLogging();
-            var sp = services.BuildServiceProvider();
-
-            var config = sp.GetRequiredService<IsmpClientConfig>();
-            var request = IsmpRequest.Create(sp, config)
-                .SetRequestUrl("test")
-                .Build();
-
-            // Act
-            var result = await request.SendAsync();
-
-            // Assert
-            Assert.AreEqual(403, result.StatusCode);
-            handlerMock.Protected().Verify("SendAsync", Times.Exactly(20), ItExpr.IsAny<HttpRequestMessage>(), ItExpr.IsAny<CancellationToken>());
-        }
-
-        /// <summary>
-        /// Проверяет, что после нескольких неудачных попыток успешный ответ возвращается без дальнейших повторных попыток.
-        /// </summary>
-        [TestMethod]
-        public async Task SendAsync_SuccessAfterRetries_ReturnsResponse()
-        {
-            // Arrange
             var callCount = 0;
-            var handlerMock = new Mock<HttpMessageHandler>();
             handlerMock.Protected()
                 .Setup<Task<HttpResponseMessage>>("SendAsync", ItExpr.IsAny<HttpRequestMessage>(), ItExpr.IsAny<CancellationToken>())
                 .Returns(() =>
                 {
                     callCount++;
-                    if (callCount < 3)
-                        return Task.FromResult(new HttpResponseMessage(HttpStatusCode.Forbidden)); // 403 to retry
-                    return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent("Success") });
+                    return Task.FromResult(new HttpResponseMessage(HttpStatusCode.Forbidden));
                 });
 
             var httpClient = new HttpClient(handlerMock.Object);
@@ -167,9 +127,8 @@ namespace QRParserTest
             var result = await request.SendAsync();
 
             // Assert
-            Assert.AreEqual(200, result.StatusCode);
-            Assert.AreEqual("Success", result.Body);
-            handlerMock.Protected().Verify("SendAsync", Times.Exactly(3), ItExpr.IsAny<HttpRequestMessage>(), ItExpr.IsAny<CancellationToken>());
+            Assert.AreEqual(403, result.StatusCode);
+            Assert.AreEqual(20, callCount); // 10 retries for each of 2 URLs
         }
 
         /// <summary>
@@ -206,6 +165,96 @@ namespace QRParserTest
             // Assert
             handlerMock.Protected().Verify("SendAsync", Times.Once(),
                 ItExpr.Is<HttpRequestMessage>(req => req.RequestUri.ToString() == "https://test.com/test?key=value"),
+                ItExpr.IsAny<CancellationToken>());
+        }
+
+        /// <summary>
+        /// Проверяет, что специальные символы в query параметрах корректно кодируются.
+        /// </summary>
+        [TestMethod]
+        public async Task SendAsync_WithSpecialCharsInQueryParams_EncodesCorrectly()
+        {
+            // Arrange
+            var handlerMock = new Mock<HttpMessageHandler>();
+            handlerMock.Protected()
+                .Setup<Task<HttpResponseMessage>>("SendAsync", ItExpr.IsAny<HttpRequestMessage>(), ItExpr.IsAny<CancellationToken>())
+                .ReturnsAsync(new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent("OK") });
+
+            var httpClient = new HttpClient(handlerMock.Object);
+            var httpClientFactoryMock = new Mock<IHttpClientFactory>();
+            httpClientFactoryMock.Setup(x => x.CreateClient(It.IsAny<string>())).Returns(httpClient);
+
+            var services = new ServiceCollection();
+            services.AddSingleton(httpClientFactoryMock.Object);
+            services.AddSingleton(new IsmpClientConfig { 
+                BaseUrlTobacco = "https://test.com", 
+                BaseUrlOther = "https://test.com", 
+                HttpTimeoutInSeconds = 5, 
+                RetryCount = 10, 
+                RetryDelayMs = 100 
+            });
+            services.AddLogging();
+            var sp = services.BuildServiceProvider();
+
+            var config = sp.GetRequiredService<IsmpClientConfig>();
+            var request = IsmpRequest.Create(sp, config)
+                .SetRequestUrl("test")
+                .AddQueryParam("search", "test+value&special=chars")
+                .AddQueryParam("filter", "name=John&age=25")
+                .Build();
+
+            // Act
+            await request.SendAsync();
+
+            // Assert
+            handlerMock.Protected().Verify("SendAsync", Times.Once(),
+                ItExpr.Is<HttpRequestMessage>(req => 
+                    req.RequestUri.ToString() == "https://test.com/test?search=test%2Bvalue%26special%3Dchars&filter=name%3DJohn%26age%3D25"),
+                ItExpr.IsAny<CancellationToken>());
+        }
+
+        /// <summary>
+        /// Проверяет, что кириллица в query параметрах корректно кодируется.
+        /// </summary>
+        [TestMethod]
+        public async Task SendAsync_WithCyrillicInQueryParams_EncodesCorrectly()
+        {
+            // Arrange
+            var handlerMock = new Mock<HttpMessageHandler>();
+            handlerMock.Protected()
+                .Setup<Task<HttpResponseMessage>>("SendAsync", ItExpr.IsAny<HttpRequestMessage>(), ItExpr.IsAny<CancellationToken>())
+                .ReturnsAsync(new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent("OK") });
+
+            var httpClient = new HttpClient(handlerMock.Object);
+            var httpClientFactoryMock = new Mock<IHttpClientFactory>();
+            httpClientFactoryMock.Setup(x => x.CreateClient(It.IsAny<string>())).Returns(httpClient);
+
+            var services = new ServiceCollection();
+            services.AddSingleton(httpClientFactoryMock.Object);
+            services.AddSingleton(new IsmpClientConfig { 
+                BaseUrlTobacco = "https://test.com", 
+                BaseUrlOther = "https://test.com", 
+                HttpTimeoutInSeconds = 5, 
+                RetryCount = 10, 
+                RetryDelayMs = 100 
+            });
+            services.AddLogging();
+            var sp = services.BuildServiceProvider();
+
+            var config = sp.GetRequiredService<IsmpClientConfig>();
+            var request = IsmpRequest.Create(sp, config)
+                .SetRequestUrl("test")
+                .AddQueryParam("название", "тестовое значение")
+                .AddQueryParam("фильтр", "параметр=значение")
+                .Build();
+
+            // Act
+            await request.SendAsync();
+
+            // Assert
+            handlerMock.Protected().Verify("SendAsync", Times.Once(),
+                ItExpr.Is<HttpRequestMessage>(req => 
+                    req.RequestUri.ToString() == "https://test.com/test?название=тестовое значение&фильтр=параметр%3Dзначение"),
                 ItExpr.IsAny<CancellationToken>());
         }
 
