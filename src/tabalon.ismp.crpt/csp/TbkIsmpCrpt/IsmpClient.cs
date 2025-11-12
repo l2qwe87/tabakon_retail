@@ -22,8 +22,8 @@ namespace TbkIsmpCrpt
         public string BaseUrlOther { get; set; }
         public string Thumbprint { get; set; }
         public int HttpTimeoutInSeconds { get; set; }
-        public int RetryCount { get; set; } = 10;
-        public int RetryDelayMs { get; set; } = 1000;
+        public int RetryCount { get; set; }
+        public int RetryDelayMs { get; set; }
     }
 
 
