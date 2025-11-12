@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using TbkIsmpContracts;
 
@@ -26,29 +27,29 @@ namespace TbkIsmpCrpt
         }
 
 
-        public Task<string> GetAggregated(string cis)
+        public Task<string> GetAggregated(string cis, CancellationToken cancellationToken = default)
         {
             this.Auth();
             throw new NotImplementedException();
         }
 
 
-        public async Task<string> CisesInfo(IEnumerable<string> ciss)
+        public async Task<string> CisesInfo(IEnumerable<string> ciss, CancellationToken cancellationToken = default)
         {
             this.Auth();
-            return await _ismpClient.CisesInfo(ciss, _token, CisesInfoType.Info);
+            return await _ismpClient.CisesInfo(ciss, _token, CisesInfoType.Info, cancellationToken);
         }
 
-        public async Task<string> CisesShortList(IEnumerable<string> ciss)
+        public async Task<string> CisesShortList(IEnumerable<string> ciss, CancellationToken cancellationToken = default)
         {
             this.Auth();
-            return await _ismpClient.CisesInfo(ciss, _token, CisesInfoType.ShortList);
+            return await _ismpClient.CisesInfo(ciss, _token, CisesInfoType.ShortList, cancellationToken);
         }
 
-        public async Task<string> ProductInfo(string cis)
+        public async Task<string> ProductInfo(string cis, CancellationToken cancellationToken = default)
         {
             this.Auth();
-            return await _ismpClient.ProductInfo(cis, _token);
+            return await _ismpClient.ProductInfo(cis, _token, cancellationToken);
         }
     }
 }

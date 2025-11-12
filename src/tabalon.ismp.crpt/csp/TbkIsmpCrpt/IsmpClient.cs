@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
@@ -49,13 +50,13 @@ namespace TbkIsmpCrpt
             _ismpClientConfig = ismpClientConfig;
             _serviceProvider = serviceProvider;
         }
-        public async Task<string> Auth()
+        public async Task<string> Auth(CancellationToken cancellationToken = default)
         {
 
             var getAuthResponse = await IsmpRequest.Create(_serviceProvider, _ismpClientConfig)
                 .SetRequestUrl("api/v3/auth/cert/key")
                 .Build()
-                .SendAsync();
+                .SendAsync(cancellationToken);
 
             var tokenRequest = getAuthResponse.Body<TokenRequest>();
 
@@ -70,13 +71,13 @@ namespace TbkIsmpCrpt
                 .SetRequestUrl("api/v3/auth/cert/")
                 .AddBody(tokenRequest)
                 .Build()
-                .SendAsync();
+                .SendAsync(cancellationToken);
 
             var q = tokenResponse.Body<TokenResponse>();
             return q.token;
         }
 
-        public async Task<string> CisesInfo(IEnumerable<string> ciss, string token, CisesInfoType type = CisesInfoType.Info)
+        public async Task<string> CisesInfo(IEnumerable<string> ciss, string token, CisesInfoType type = CisesInfoType.Info, CancellationToken cancellationToken = default)
         {
             var url = type switch
             {
@@ -90,19 +91,19 @@ namespace TbkIsmpCrpt
                 .AddAuth(token)
                 .AddBody(ciss)
                 .Build()
-                .SendAsync();
+                .SendAsync(cancellationToken);
 
             return tokenResponse.Body<string>();
         }
 
-        public async Task<string> ProductInfo(string cis, string token)
+        public async Task<string> ProductInfo(string cis, string token, CancellationToken cancellationToken = default)
         {
             var tokenResponse = await IsmpRequest.Create(_serviceProvider, _ismpClientConfig)
                .SetRequestUrl("api/v3/true-api/products/info")
                .AddAuth(token)
                .AddQueryParam("cis", cis)
                .Build()
-               .SendAsync();
+               .SendAsync(cancellationToken);
 
             return tokenResponse.Body<string>(); ;
         }

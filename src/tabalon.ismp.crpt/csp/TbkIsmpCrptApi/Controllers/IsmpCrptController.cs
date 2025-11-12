@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using TbkIsmpContracts;
 
@@ -33,18 +34,18 @@ namespace TbkIsmpCrptApi.Controllers
             => _markirovkaAuth.GetToken();
 
         [HttpGet("Info")]
-        public async Task<string> InfoGet([FromQuery] IEnumerable<string> ciss, [FromQuery] bool withOutQRParse = false)
-            => await InfoInternal(ciss, withOutQRParse);
+        public async Task<string> InfoGet([FromQuery] IEnumerable<string> ciss, [FromQuery] bool withOutQRParse = false, CancellationToken cancellationToken = default)
+            => await InfoInternal(ciss, withOutQRParse, cancellationToken);
 
         [HttpPost("Info")]
-        public async Task<string> InfoPost([FromBody] IEnumerable<string> ciss, [FromQuery] bool withOutQRParse = false)
-            => await InfoInternal(ciss, withOutQRParse);
+        public async Task<string> InfoPost([FromBody] IEnumerable<string> ciss, [FromQuery] bool withOutQRParse = false, CancellationToken cancellationToken = default)
+            => await InfoInternal(ciss, withOutQRParse, cancellationToken);
 
         [HttpGet("ProductInfo")]
-        public async Task<string> ProductInfo([FromQuery] string cis, [FromQuery] bool withOutQRParse = false)
-            => await ProductInfoInternal(cis, withOutQRParse);
+        public async Task<string> ProductInfo([FromQuery] string cis, [FromQuery] bool withOutQRParse = false, CancellationToken cancellationToken = default)
+            => await ProductInfoInternal(cis, withOutQRParse, cancellationToken);
 
-        private async Task<string> InfoInternal(IEnumerable<string> ciss, bool withOutQRParse)
+        private async Task<string> InfoInternal(IEnumerable<string> ciss, bool withOutQRParse, CancellationToken cancellationToken)
         {
             var codes = ciss;
             if (!withOutQRParse)
@@ -54,11 +55,11 @@ namespace TbkIsmpCrptApi.Controllers
                     .Select(qr => qr.CIS)
                     .ToList();
             }
-            var resp = await _markirovkaClient.CisesInfo(codes);
+            var resp = await _markirovkaClient.CisesInfo(codes, cancellationToken);
             return resp;
         }
 
-        private async Task<string> ProductInfoInternal(string cis, bool withOutQRParse)
+        private async Task<string> ProductInfoInternal(string cis, bool withOutQRParse, CancellationToken cancellationToken)
         {
             var code = cis;
             if (!withOutQRParse)
@@ -67,7 +68,7 @@ namespace TbkIsmpCrptApi.Controllers
                 code = qr.CIS;
             }
 
-            var resp = await _markirovkaClient.ProductInfo(code);
+            var resp = await _markirovkaClient.ProductInfo(code, cancellationToken);
             return resp;
         }
     }

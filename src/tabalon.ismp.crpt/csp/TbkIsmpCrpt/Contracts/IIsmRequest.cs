@@ -1,9 +1,10 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace TbkIsmpCrpt
@@ -25,7 +26,7 @@ namespace TbkIsmpCrpt
 
     public interface IIsmRequest
     {
-        Task<IIsmpResponse> SendAsync();
+        Task<IIsmpResponse> SendAsync(CancellationToken cancellationToken = default);
     }
 
     public interface IIsmRequestBuilder
