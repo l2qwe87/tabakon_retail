@@ -102,7 +102,7 @@ namespace QRParserTest
             var handlerMock = new Mock<HttpMessageHandler>();
             handlerMock.Protected()
                 .Setup<Task<HttpResponseMessage>>("SendAsync", ItExpr.IsAny<HttpRequestMessage>(), ItExpr.IsAny<CancellationToken>())
-                .ReturnsAsync(new HttpResponseMessage(HttpStatusCode.Forbidden) { Content = new StringContent("Forbidden") });
+                .ReturnsAsync(() => new HttpResponseMessage(HttpStatusCode.Forbidden) { Content = new StringContent("Forbidden") });
 
             var httpClient = new HttpClient(handlerMock.Object);
             var httpClientFactoryMock = new Mock<IHttpClientFactory>();
