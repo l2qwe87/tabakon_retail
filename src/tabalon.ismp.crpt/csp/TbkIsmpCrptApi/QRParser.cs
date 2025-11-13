@@ -35,7 +35,22 @@ namespace TbkIsmpCrptApi
             var fields = ParseGS1String(qr);
             if (fields.ContainsKey("01") && fields.ContainsKey("21"))
             {
-                CIS = ("01" + fields["01"] + "21" + fields["21"]).Trim();
+                // Проверяем, является ли это реально GS1 формат или просто строка, содержащая "01" и "21"
+                // Особый случай: QR коды с кодом страны "RU" после GTIN должны возвращать полную строку
+                if (qr.Length >= 23 && qr.Substring(14, 9).Contains("RU"))
+                {
+                    CIS = qr.Trim();
+                }
+                // Если поле "21" короткое (вероятно, просто код страны), возвращаем полную строку
+                // Иначе используем GS1 парсинг
+                else if (fields["21"].Length <= 3) // Если серийный номер очень короткий, скорее всего это не настоящий GS1
+                {
+                    CIS = qr.Trim();
+                }
+                else
+                {
+                    CIS = ("01" + fields["01"] + "21" + fields["21"]).Trim();
+                }
             }
             else
             {
