@@ -30,30 +30,20 @@ namespace TbkIsmpCrpt
 
     public class IsmpClient : IIsmpClient
     {
-        //private readonly string baeUrl = "https://ismp.crpt.ru";
-        //private readonly string baeUrl = "https://markirovka.crpt.ru";
-        //private readonly string baeUrl = "https://ismotp.crptech.ru";
-
+        private readonly IIsmpRequestFactory _requestFactory;
         private readonly IServiceProvider _serviceProvider;
-        private readonly IsmpClientConfig _ismpClientConfig;
-
 
         private string _lastToken;
 
-
-        public IsmpClient(
-            IsmpClientConfig ismpClientConfig,
-            IServiceProvider serviceProvider
-            )
+        public IsmpClient(IIsmpRequestFactory requestFactory, IServiceProvider serviceProvider)
         {
-
-            _ismpClientConfig = ismpClientConfig;
+            _requestFactory = requestFactory;
             _serviceProvider = serviceProvider;
         }
         public async Task<string> Auth(CancellationToken cancellationToken = default)
         {
 
-            var getAuthResponse = await IsmpRequest.Create(_serviceProvider, _ismpClientConfig)
+            var getAuthResponse = await _requestFactory.Create()
                 .SetRequestUrl("api/v3/auth/cert/key")
                 .Build()
                 .SendAsync(cancellationToken);
@@ -63,11 +53,12 @@ namespace TbkIsmpCrpt
             var data = tokenRequest.data;
 
             var signer = _serviceProvider.GetRequiredService<ISigner>();
-            var signature = await signer.Sign(_ismpClientConfig.Thumbprint, data);
+            var config = _serviceProvider.GetRequiredService<IsmpClientConfig>();
+            var signature = await signer.Sign(config.Thumbprint, data);
 
             tokenRequest.data = signature;
 
-            var tokenResponse = await IsmpRequest.Create(_serviceProvider, _ismpClientConfig)
+            var tokenResponse = await _requestFactory.Create()
                 .SetRequestUrl("api/v3/auth/cert/")
                 .AddBody(tokenRequest)
                 .Build()
@@ -86,7 +77,7 @@ namespace TbkIsmpCrpt
                 _ => "api/v3/true-api/cises/info"
             };
 
-            var tokenResponse = await IsmpRequest.Create(_serviceProvider, _ismpClientConfig)
+            var tokenResponse = await _requestFactory.Create()
                 .SetRequestUrl(url)
                 .AddAuth(token)
                 .AddBody(ciss)
@@ -98,7 +89,7 @@ namespace TbkIsmpCrpt
 
         public async Task<string> ProductInfo(string cis, string token, CancellationToken cancellationToken = default)
         {
-            var tokenResponse = await IsmpRequest.Create(_serviceProvider, _ismpClientConfig)
+            var tokenResponse = await _requestFactory.Create()
                .SetRequestUrl("api/v3/true-api/products/info")
                .AddAuth(token)
                .AddQueryParam("cis", cis)

@@ -25,19 +25,13 @@ namespace TbkIsmpCrpt
         private IServiceProvider _serviceProvider;
         private IsmpClientConfig _config;
 
-        private IsmpRequest(
+        internal IsmpRequest(
             IServiceProvider serviceProvider,
             IsmpClientConfig config
             )
         {
             _serviceProvider = serviceProvider;
             _config = config;
-        }
-
-
-        public static IIsmRequestBuilder Create(IServiceProvider serviceProvider, IsmpClientConfig config)
-        {
-            return new IsmpRequest(serviceProvider, config);
         }
 
 
