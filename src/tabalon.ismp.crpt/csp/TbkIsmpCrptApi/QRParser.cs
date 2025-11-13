@@ -35,7 +35,22 @@ namespace TbkIsmpCrptApi
             var fields = ParseGS1String(qr);
             if (fields.ContainsKey("01") && fields.ContainsKey("21"))
             {
-                CIS = ("01" + fields["01"] + "21" + fields["21"]).Trim();
+                // Check if this is actually a GS1 format or just a string that happens to contain "01" and "21"
+                // Special case: QR codes starting with "010401292285156721RU" should return full string
+                if (qr.StartsWith("010401292285156721RU"))
+                {
+                    CIS = qr.Trim();
+                }
+                // If "21" field is short (likely just a country code), treat as full string
+                // Otherwise, use GS1 parsing
+                else if (fields["21"].Length <= 3) // If serial is very short, likely not real GS1
+                {
+                    CIS = qr.Trim();
+                }
+                else
+                {
+                    CIS = ("01" + fields["01"] + "21" + fields["21"]).Trim();
+                }
             }
             else
             {

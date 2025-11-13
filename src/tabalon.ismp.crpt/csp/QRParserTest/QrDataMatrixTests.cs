@@ -28,6 +28,17 @@ namespace QRParserTest
             Assert.AreEqual(cis, qrPa.CIS);
         }
 
+        // Full string CIS tests - QR codes that should return the complete string as CIS
+        [DataTestMethod]
+        [DataRow("010400639605740221RU11121825238122948", "010400639605740221RU11121825238122948")]
+        [DataRow("010401292285156721RU13120125254185826", "010401292285156721RU13120125254185826")]
+        [DataRow("010401292285156721RU13120125254190100", "010401292285156721RU13120125254190100")]
+        public void GetCISFullString(string qr, string expectedCis)
+        {
+            var qrPa = new QRParser(qr);
+            Assert.AreEqual(expectedCis, qrPa.CIS);
+        }
+
         // ClothesCIS converted to DataTestMethod with DataRow
         [DataTestMethod]
         [DataRow("0104610541730272215pnKT'RwId);*91EE1192PFY/37fDDABcSYnthTvZ9i90lB04JHGgCGsBDGie0uM=", "0104610541730272215pnKT'RwId);*")]
