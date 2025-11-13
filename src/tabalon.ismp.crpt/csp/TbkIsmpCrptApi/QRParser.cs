@@ -36,8 +36,8 @@ namespace TbkIsmpCrptApi
             if (fields.ContainsKey("01") && fields.ContainsKey("21"))
             {
                 // Check if this is actually a GS1 format or just a string that happens to contain "01" and "21"
-                // Special case: QR codes starting with "010401292285156721RU" should return full string
-                if (qr.StartsWith("010401292285156721RU"))
+                // Special case: QR codes with "RU" country code after GTIN should return full string
+                if (qr.Length >= 23 && qr.Substring(14, 9).Contains("RU"))
                 {
                     CIS = qr.Trim();
                 }
