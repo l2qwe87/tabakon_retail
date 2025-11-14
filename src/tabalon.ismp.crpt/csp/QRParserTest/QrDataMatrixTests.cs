@@ -24,11 +24,11 @@ namespace QRParserTest
         [DataRow("010460165303918621GbEXjF?8005170000", "010460165303918621GbEXjF?")]
         public void GetCIS(string qr, string cis)
         {
-            var qrPa = new QRParser(qr);
+            var qrPa = new QRParserV2(qr);
             Assert.AreEqual(cis, qrPa.CIS);
         }
 
-        // Full string CIS tests - QR codes that should return the complete string as CIS
+        // GS1 DataMatrix tests - QR codes with RU country code should return GTIN+Serial according to documentation
         [DataTestMethod]
         [DataRow("010400639605740221RU11121825238122948", "010400639605740221RU11121825238122948")]
         [DataRow("010401292285156721RU13120125254185826", "010401292285156721RU13120125254185826")]
@@ -47,9 +47,9 @@ namespace QRParserTest
         [DataRow("010400639605743321RU11121825265193552", "010400639605743321RU11121825265193552")]
         [DataRow("010400639605740221RU11121825238122254", "010400639605740221RU11121825238122254")]
         [DataRow("010400639605740221RU11121825238122948", "010400639605740221RU11121825238122948")]
-        public void GetCISFullString(string qr, string expectedCis)
+        public void GetCISGS1WithRU(string qr, string expectedCis)
         {
-            var qrPa = new QRParser(qr);
+            var qrPa = new QRParserV2(qr);
             Assert.AreEqual(expectedCis, qrPa.CIS);
         }
 
@@ -58,7 +58,7 @@ namespace QRParserTest
         [DataRow("0104610541730272215pnKT'RwId);*91EE1192PFY/37fDDABcSYnthTvZ9i90lB04JHGgCGsBDGie0uM=", "0104610541730272215pnKT'RwId);*")]
         public void ClothesCIS(string qr, string expected)
         {
-            var qrPa = new QRParser(qr);
+            var qrPa = new QRParserV2(qr);
             Assert.AreEqual(expected, qrPa.CIS);
         }
     }
