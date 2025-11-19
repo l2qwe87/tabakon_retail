@@ -24,7 +24,7 @@ namespace QRParserTest
         [DataRow("010460165303918621GbEXjF?8005170000", "010460165303918621GbEXjF?")]
         public void GetCIS(string qr, string cis)
         {
-            var qrPa = new QRParserV2(qr);
+            var qrPa = new QRParser(qr);
             Assert.AreEqual(cis, qrPa.CIS);
         }
 
@@ -49,7 +49,7 @@ namespace QRParserTest
         [DataRow("010400639605740221RU11121825238122948", "010400639605740221RU11121825238122948")]
         public void GetCISGS1WithRU(string qr, string expectedCis)
         {
-            var qrPa = new QRParserV2(qr);
+            var qrPa = new QRParser(qr);
             Assert.AreEqual(expectedCis, qrPa.CIS);
         }
 
@@ -58,7 +58,7 @@ namespace QRParserTest
         [DataRow("0104610541730272215pnKT'RwId);*91EE1192PFY/37fDDABcSYnthTvZ9i90lB04JHGgCGsBDGie0uM=", "0104610541730272215pnKT'RwId);*")]
         public void ClothesCIS(string qr, string expected)
         {
-            var qrPa = new QRParserV2(qr);
+            var qrPa = new QRParser(qr);
             Assert.AreEqual(expected, qrPa.CIS);
         }
     }
