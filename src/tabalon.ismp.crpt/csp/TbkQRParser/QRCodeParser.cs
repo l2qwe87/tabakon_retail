@@ -23,6 +23,7 @@ namespace TbkQRParser
                 {
                     OriginalQR = qrCode,
                     IsSuccess = false,
+                    IsSpecialFormatWithoutAI = false,
                     ErrorMessage = "QR-код не может быть пустым"
                 };
             }
@@ -34,8 +35,23 @@ namespace TbkQRParser
 
                 Dictionary<string, string> parsedFields;
                 
+                // Особая проверка для кодов без AI
+                if (IsSpecialFormatWithoutAI(normalizedQR))
+                {
+                    parsedFields = ParseSpecialFormat(normalizedQR);
+                    
+                    return new QRParseResult
+                    {
+                        OriginalQR = qrCode,
+                        ProductGroup = DetermineProductGroup(parsedFields, ProductGroupCodeLengthDictionary.GetPossibleProductGroups(normalizedQR.Length)),
+                        CIS = GenerateCIS(parsedFields),
+                        ParsedFields = parsedFields,
+                        IsSuccess = true,
+                        IsSpecialFormatWithoutAI = true
+                    };
+                }
                 // Если длина 21 - простая структура без AI
-                if (normalizedQR.Length == 21)
+                else if (normalizedQR.Length == 21)
                 {
                     parsedFields = ParseSimpleFormat(normalizedQR);
                 }
@@ -50,6 +66,7 @@ namespace TbkQRParser
                         {
                             OriginalQR = qrCode,
                             IsSuccess = false,
+                            IsSpecialFormatWithoutAI = false,
                             ErrorMessage = parseResult.ErrorMessage
                         };
                     }
@@ -72,7 +89,8 @@ namespace TbkQRParser
                     ProductGroup = productGroup,
                     CIS = cis,
                     ParsedFields = parsedFields,
-                    IsSuccess = true
+                    IsSuccess = true,
+                    IsSpecialFormatWithoutAI = false
                 };
             }
             catch (Exception ex)
@@ -81,6 +99,7 @@ namespace TbkQRParser
                 {
                     OriginalQR = qrCode,
                     IsSuccess = false,
+                    IsSpecialFormatWithoutAI = false,
                     ErrorMessage = $"Ошибка при парсинге QR-кода: {ex.Message}"
                 };
             }
@@ -351,6 +370,74 @@ namespace TbkQRParser
 
             // Если не удалось определить однозначно, возвращаем первую возможную
             return possibleGroups.First();
+        }
+
+        /// <summary>
+        /// Проверяет, является ли код особым форматом без AI
+        /// </summary>
+        /// <param name="qrCode">QR-код для проверки</param>
+        /// <returns>True, если это особый формат без AI</returns>
+        private bool IsSpecialFormatWithoutAI(string qrCode)
+        {
+            // Если первые 2 символа не равны "01" И на позиции 2+14=16 нет "21"
+            if (qrCode.Length >= 16 && !qrCode.StartsWith("01"))
+            {
+                // Проверяем, есть ли "21" на позиции 16
+                if (qrCode.Length >= 18 && qrCode.Substring(16, 2) == "21")
+                {
+                    return true;
+                }
+                
+                // Для длины 25 - особый случай без AI
+                if (qrCode.Length == 25)
+                {
+                    return true;
+                }
+            }
+            
+            return false;
+        }
+
+        /// <summary>
+        /// Парсинг особого формата без AI полей
+        /// </summary>
+        /// <param name="qrCode">QR-код особого формата</param>
+        /// <returns>Словарь с разобранными полями</returns>
+        private Dictionary<string, string> ParseSpecialFormat(string qrCode)
+        {
+            var fields = new Dictionary<string, string>();
+            
+            if (qrCode.Length >= 21)
+            {
+                // Первые 14 символов - GTIN (неявный AI "01")
+                fields["01"] = qrCode.Substring(0, 14);
+                
+                // Следующие 7 символов - серийный номер (неявный AI "21")
+                if (qrCode.Length >= 21)
+                {
+                    fields["21"] = qrCode.Substring(14, 7);
+                }
+                
+                // Если есть еще символы, проверяем на цену и код проверки
+                if (qrCode.Length > 21)
+                {
+                    int remainingLength = qrCode.Length - 21;
+                    
+                    // Следующие 4 символа - минимальная цена (неявный AI "8005")
+                    if (remainingLength >= 4)
+                    {
+                        fields["8005"] = qrCode.Substring(21, 4);
+                    }
+                    
+                    // Следующие 4 символа - код проверки (неявный AI "93")
+                    if (remainingLength >= 8)
+                    {
+                        fields["93"] = qrCode.Substring(25, 4);
+                    }
+                }
+            }
+            
+            return fields;
         }
 
         /// <summary>

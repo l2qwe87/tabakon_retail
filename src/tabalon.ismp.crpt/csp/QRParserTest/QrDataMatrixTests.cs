@@ -28,7 +28,7 @@ namespace QRParserTest
             Assert.AreEqual(cis, qrPa.CIS);
         }
 
-        // GS1 DataMatrix tests - QR codes with RU country code should return GTIN+Serial according to documentation
+        // Full string CIS tests - QR codes that should return the complete string as CIS
         [DataTestMethod]
         [DataRow("010400639605740221RU11121825238122948", "010400639605740221RU11121825238122948")]
         [DataRow("010401292285156721RU13120125254185826", "010401292285156721RU13120125254185826")]
@@ -47,7 +47,7 @@ namespace QRParserTest
         [DataRow("010400639605743321RU11121825265193552", "010400639605743321RU11121825265193552")]
         [DataRow("010400639605740221RU11121825238122254", "010400639605740221RU11121825238122254")]
         [DataRow("010400639605740221RU11121825238122948", "010400639605740221RU11121825238122948")]
-        public void GetCISGS1WithRU(string qr, string expectedCis)
+        public void GetCISFullString(string qr, string expectedCis)
         {
             var qrPa = new QRParser(qr);
             Assert.AreEqual(expectedCis, qrPa.CIS);
