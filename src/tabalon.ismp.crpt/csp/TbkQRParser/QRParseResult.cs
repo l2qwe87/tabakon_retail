@@ -33,6 +33,11 @@ namespace TbkQRParser
         public bool IsSuccess { get; set; }
 
         /// <summary>
+        /// Флаг особого формата без AI полей
+        /// </summary>
+        public bool IsSpecialFormatWithoutAI { get; set; }
+
+        /// <summary>
         /// Сообщение об ошибке (если парсинг не удался)
         /// </summary>
         public string ErrorMessage { get; set; }
