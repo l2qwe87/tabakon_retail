@@ -38,6 +38,7 @@ namespace TbkQRParser
                 // Особая проверка для кодов без AI
                 if (IsSpecialFormatWithoutAI(normalizedQR))
                 {
+<<<<<<< HEAD
                     // Определяем тип особого формата
                     if (normalizedQR.StartsWith("01") && normalizedQR.Length == 34)
                     {
@@ -49,6 +50,9 @@ namespace TbkQRParser
                         // Особый формат без AI
                         parsedFields = ParseSpecialFormat(normalizedQR);
                     }
+=======
+                    parsedFields = ParseSpecialFormat(normalizedQR);
+>>>>>>> eb7d915a7d4f71c5f700a31a35b65f3039b03ced
                     
                     return new QRParseResult
                     {
@@ -389,7 +393,11 @@ namespace TbkQRParser
         /// <returns>True, если это особый формат без AI</returns>
         private bool IsSpecialFormatWithoutAI(string qrCode)
         {
+<<<<<<< HEAD
             // Случай 1: Не начинается с "01" И есть "21" на позиции 16
+=======
+            // Если первые 2 символа не равны "01" И на позиции 2+14=16 нет "21"
+>>>>>>> eb7d915a7d4f71c5f700a31a35b65f3039b03ced
             if (qrCode.Length >= 16 && !qrCode.StartsWith("01"))
             {
                 // Проверяем, есть ли "21" на позиции 16
@@ -405,6 +413,7 @@ namespace TbkQRParser
                 }
             }
             
+<<<<<<< HEAD
             // Случай 2: Начинается с "01" и содержит только GTIN + Serial Number
             // для определенных длин (например, 34 символа)
             if (qrCode.StartsWith("01") && qrCode.Length == 34)
@@ -416,6 +425,8 @@ namespace TbkQRParser
                 }
             }
             
+=======
+>>>>>>> eb7d915a7d4f71c5f700a31a35b65f3039b03ced
             return false;
         }
 
@@ -479,7 +490,6 @@ namespace TbkQRParser
             
             return fields;
         }
-
         /// <summary>
         /// Парсинг простого формата (21 символ) без AI полей
         /// </summary>
