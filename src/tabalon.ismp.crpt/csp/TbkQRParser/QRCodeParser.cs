@@ -38,7 +38,17 @@ namespace TbkQRParser
                 // Особая проверка для кодов без AI
                 if (IsSpecialFormatWithoutAI(normalizedQR))
                 {
-                    parsedFields = ParseSpecialFormat(normalizedQR);
+                    // Определяем тип особого формата
+                    if (normalizedQR.StartsWith("01") && normalizedQR.Length == 34)
+                    {
+                        // Особый формат с AI (начинается с "01")
+                        parsedFields = ParseSpecialFormatWithAI(normalizedQR);
+                    }
+                    else
+                    {
+                        // Особый формат без AI
+                        parsedFields = ParseSpecialFormat(normalizedQR);
+                    }
                     
                     return new QRParseResult
                     {
@@ -379,7 +389,7 @@ namespace TbkQRParser
         /// <returns>True, если это особый формат без AI</returns>
         private bool IsSpecialFormatWithoutAI(string qrCode)
         {
-            // Если первые 2 символа не равны "01" И на позиции 2+14=16 нет "21"
+            // Случай 1: Не начинается с "01" И есть "21" на позиции 16
             if (qrCode.Length >= 16 && !qrCode.StartsWith("01"))
             {
                 // Проверяем, есть ли "21" на позиции 16
@@ -390,6 +400,17 @@ namespace TbkQRParser
                 
                 // Для длины 25 - особый случай без AI
                 if (qrCode.Length == 25)
+                {
+                    return true;
+                }
+            }
+            
+            // Случай 2: Начинается с "01" и содержит только GTIN + Serial Number
+            // для определенных длин (например, 34 символа)
+            if (qrCode.StartsWith("01") && qrCode.Length == 34)
+            {
+                // Проверяем, есть ли "21" на позиции 16
+                if (qrCode.Length >= 18 && qrCode.Substring(16, 2) == "21")
                 {
                     return true;
                 }
@@ -440,6 +461,25 @@ namespace TbkQRParser
             return fields;
         }
 
+        private Dictionary<string, string> ParseSpecialFormatWithAI(string qrCode)
+        {
+            var fields = new Dictionary<string, string>();
+            
+            if (qrCode.Length >= 18 && qrCode.StartsWith("01") && qrCode.Substring(16, 2) == "21")
+            {
+                // AI "01" - GTIN (следующие 14 символов)
+                fields["01"] = qrCode.Substring(2, 14);
+                
+                // AI "21" - серийный номер (оставшаяся часть)
+                if (qrCode.Length > 18)
+                {
+                    fields["21"] = qrCode.Substring(18);
+                }
+            }
+            
+            return fields;
+        }
+
         /// <summary>
         /// Парсинг простого формата (21 символ) без AI полей
         /// </summary>
@@ -469,8 +509,9 @@ namespace TbkQRParser
         private bool IsValidAI(string ai)
         {
             // Используем словарь для проверки валидности AI
-            return ProductGroupAIDictionary.GetDataLengthForAI(ai) != -1 || 
-                   ProductGroupAIDictionary.GetDataLengthForAI(ai) > 0;
+            // AI валиден, если он найден в словаре (длина >= 0 или -1 для переменной длины)
+            int dataLength = ProductGroupAIDictionary.GetDataLengthForAI(ai);
+            return dataLength >= 0 || dataLength == -1;
         }
     }
 }

@@ -106,5 +106,36 @@ namespace TbkQRParserTests
             Assert.IsFalse(result.IsSuccess, "Парсинг null кода должен быть неуспешным");
             Assert.IsNotNull(result.ErrorMessage, "Должно быть сообщение об ошибке");
         }
+
+        [TestMethod]
+        public void ParseFull_WithSpecialFormatWithAI_ShouldParseCorrectly()
+        {
+            // Arrange - особый формат с AI полями (реальный кейс)
+            string qrCode = "010541462278007621CimGms8C9swPomtz";
+
+            // Act
+            var result = _parser.ParseFull(qrCode);
+
+            // Assert
+            Assert.IsTrue(result.IsSuccess, $"Парсинг должен быть успешным. Ошибка: {result.ErrorMessage}");
+            Assert.IsNull(result.ErrorMessage, "Не должно быть ошибки");
+            Assert.AreEqual(qrCode, result.OriginalQR, "Исходный код должен сохраниться");
+
+            // Проверка наличия полей
+            Assert.IsNotNull(result.ParsedFields, "Поля должны быть разобраны");
+            Assert.IsTrue(result.ParsedFields.ContainsKey("01"), "Должно содержаться поле GTIN (01)");
+            Assert.IsTrue(result.ParsedFields.ContainsKey("21"), "Должно содержаться поле серийного номера (21)");
+
+            // Проверка значений полей для особого формата с AI
+            Assert.AreEqual("05414622780076", result.GTIN, "GTIN должен быть первые 14 символов после AI");
+            Assert.AreEqual("CimGms8C9swPomtz", result.SerialNumber, "Серийный номер должен быть оставшаяся часть");
+
+            // Проверка определения товарной группы
+            Assert.IsNotNull(result.ProductGroup, "Товарная группа должна быть определена");
+            Assert.AreEqual(ProductGroup.CigarettesWithFilter, result.ProductGroup, "Должна быть определена группа сигарет с фильтром");
+            
+            // Проверка флага особого формата
+            Assert.IsTrue(result.IsSpecialFormatWithoutAI, "Должен быть установлен флаг особого формата без AI");
+        }
     }
 }

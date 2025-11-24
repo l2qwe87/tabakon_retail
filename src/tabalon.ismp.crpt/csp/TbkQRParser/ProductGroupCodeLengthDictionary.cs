@@ -71,7 +71,7 @@ namespace TbkQRParser
                 MaxLength = 68,
                 StandardLength = 25,
                 Description = "GTIN(14) + Серийный номер(7) + Опционально: Цена(4-6) + Криптозащита(4)",
-                PossibleLengths = new List<int> { 21, 25, 29, 31, 35, 39, 43, 47, 51, 55, 59, 63, 67, 68 }
+                PossibleLengths = new List<int> { 21, 25, 29, 31, 34, 35, 39, 43, 47, 51, 55, 59, 63, 67, 68 }
             };
 
             // Сигареты без фильтра
@@ -82,7 +82,7 @@ namespace TbkQRParser
                 MaxLength = 68,
                 StandardLength = 25,
                 Description = "GTIN(14) + Серийный номер(7) + Опционально: Цена(4-6) + Криптозащита(4)",
-                PossibleLengths = new List<int> { 21, 25, 29, 31, 35, 39, 43, 47, 51, 55, 59, 63, 67, 68 }
+                PossibleLengths = new List<int> { 21, 25, 29, 31, 34, 35, 39, 43, 47, 51, 55, 59, 63, 67, 68 }
             };
 
             // Сигариллы
