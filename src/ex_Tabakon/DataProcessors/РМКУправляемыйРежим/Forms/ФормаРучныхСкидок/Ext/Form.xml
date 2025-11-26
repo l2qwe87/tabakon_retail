@@ -325,13 +325,21 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="IQOSРасширеннаяПодсказка" id="49"/>
 					<ChildItems>
-						<Button name="АксессуарыIQOS" id="50">
+						<Button name="АксессуарыIQOSСкидка30" id="55">
+							<Type>UsualButton</Type>
+							<Width>20</Width>
+							<Height>4</Height>
+							<CommandName>Form.Command.АксессуарыIQOSСкидка30</CommandName>
+							<Font ref="sys:DefaultGUIFont" faceName="MS Shell Dlg" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ExtendedTooltip name="АксессуарыIQOSСкидка30РасширеннаяПодсказка" id="56"/>
+						</Button>
+						<Button name="АксессуарыIQOS50" id="50">
 							<Type>UsualButton</Type>
 							<Width>20</Width>
 							<Height>4</Height>
 							<CommandName>Form.Command.АксессуарыIQOSСкидка50</CommandName>
 							<Font ref="sys:DefaultGUIFont" faceName="MS Shell Dlg" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
-							<ExtendedTooltip name="АксессуарыIQOSРасширеннаяПодсказка" id="51"/>
+							<ExtendedTooltip name="АксессуарыIQOS50РасширеннаяПодсказка" id="51"/>
 						</Button>
 					</ChildItems>
 				</UsualGroup>
@@ -351,6 +359,21 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Аксессуары IQOSСкидка50</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБККоманднаяПанельСкидкиНажатие</Action>
+		</Command>
+		<Command name="АксессуарыIQOSСкидка30" id="1000001">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аксессуары IQOS 30%</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аксессуары IQOSСкидка30</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБККоманднаяПанельСкидкиНажатие</Action>
