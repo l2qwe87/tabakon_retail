@@ -117,7 +117,7 @@ namespace TbkQRParser
                     DataLength = -1, // переменная длина
                     IsRequired = true,
                     Order = 2,
-                    ValidationPattern = @"^[A-Za-z0-9]{1,20}$"
+                    ValidationPattern = @"^[A-Za-z0-9+/=]{1,20}$"
                 },
                 new AISpecification
                 {
@@ -126,7 +126,7 @@ namespace TbkQRParser
                     DataLength = 4,
                     IsRequired = false,
                     Order = 3,
-                    ValidationPattern = @"^[A-Za-z0-9]{4}$"
+                    ValidationPattern = @"^[A-Za-z0-9+/=]{4}$"
                 },
                 new AISpecification
                 {
@@ -135,7 +135,7 @@ namespace TbkQRParser
                     DataLength = -1, // переменная длина
                     IsRequired = false,
                     Order = 4,
-                    ValidationPattern = @"^[A-Za-z0-9]{1,30}$"
+                    ValidationPattern = @"^[A-Za-z0-9+/=]{1,30}$"
                 },
                 new AISpecification
                 {
@@ -144,7 +144,7 @@ namespace TbkQRParser
                     DataLength = -1, // переменная длина
                     IsRequired = false,
                     Order = 5,
-                    ValidationPattern = @"^[A-Za-z0-9]{1,30}$"
+                    ValidationPattern = @"^[A-Za-z0-9+/=]{1,30}$"
                 },
                 new AISpecification
                 {

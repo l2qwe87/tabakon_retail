@@ -36,7 +36,9 @@ namespace TbkQRParser
                 Dictionary<string, string> parsedFields;
                 
                 // Особая проверка для кодов без AI
-                if (IsSpecialFormatWithoutAI(normalizedQR))
+                // Особая проверка для кодов без AI
+                bool isSpecial = IsSpecialFormatWithoutAI(normalizedQR);
+                if (isSpecial)
                 {
                     // Определяем тип особого формата
                     if (normalizedQR.StartsWith("01") && normalizedQR.Length == 34)
@@ -405,12 +407,12 @@ namespace TbkQRParser
                 }
             }
             
-            // Случай 2: Начинается с "01" и содержит только GTIN + Serial Number
-            // для определенных длин (например, 34 символа)
-            if (qrCode.StartsWith("01") && qrCode.Length == 34)
+            // Случай 2: Начинается с "01" и НЕ содержит "21" на позиции 16
+            // (т.е. это обычный GS1 код с AI полями, а не особый формат)
+            if (qrCode.StartsWith("01"))
             {
-                // Проверяем, есть ли "21" на позиции 16
-                if (qrCode.Length >= 18 && qrCode.Substring(16, 2) == "21")
+                // Если нет "21" на позиции 16, это особый формат
+                if (!(qrCode.Length >= 18 && qrCode.Substring(16, 2) == "21"))
                 {
                     return true;
                 }
@@ -470,10 +472,28 @@ namespace TbkQRParser
                 // AI "01" - GTIN (следующие 14 символов)
                 fields["01"] = qrCode.Substring(2, 14);
                 
-                // AI "21" - серийный номер (оставшаяся часть)
-                if (qrCode.Length > 18)
+                // AI "21" - серийный номер (начинается после позиции 18)
+                int serialStart = 18;
+                
+                // Ищем следующий AI после серийного номера
+                int nextAIPos = FindNextAIStart(qrCode, serialStart, "21");
+                string serialNumber = qrCode.Substring(serialStart, nextAIPos - serialStart);
+                fields["21"] = serialNumber;
+                
+                // Если есть еще данные, пытаемся найти другие AI
+                if (nextAIPos < qrCode.Length)
                 {
-                    fields["21"] = qrCode.Substring(18);
+                    var remainingPart = qrCode.Substring(nextAIPos);
+                    var parseResult = ParseGS1WithSpecifications(remainingPart);
+                    
+                    if (parseResult.IsSuccess)
+                    {
+                        // Добавляем все найденные поля
+                        foreach (var kvp in parseResult.ParsedFields)
+                        {
+                            fields[kvp.Key] = kvp.Value;
+                        }
+                    }
                 }
             }
             

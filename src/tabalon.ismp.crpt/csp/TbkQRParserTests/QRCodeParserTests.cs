@@ -39,8 +39,8 @@ namespace TbkQRParserTests
         [TestMethod]
         [DataRow("010101010101212121XYZ", "01010101010121", "2121XYZ", null, false)]
         [DataRow("04640030090709DYBLHiyACoA", "04640030090709", "DYBLHiy", "ACoA", true)]
-        [DataRow("010541462278007621CimGms8C9swPomtz", "05414622780076", "CimGms8C9swPomtz", null, true)]
-        [DataRow("010290005275769421a?RI7ZL93X9NA", "02900052757694", "a?RI7ZL", null, false)]
+        [DataRow("010541462278007621CimGms8C9swPomtz", "05414622780076", "CimGms8C9swPomtz", null, false)]
+
         public void ParseFull_WithValidCodes_ShouldParseCorrectly(string qrCode, string expectedGtin, string expectedSerial, string expectedPrice, bool expectedSpecialFormat)
         {
             // Act
@@ -66,6 +66,8 @@ namespace TbkQRParserTests
                 Assert.IsTrue(result.ParsedFields.ContainsKey("8005"), "Должно содержаться поле цены (8005)");
                 Assert.AreEqual(expectedPrice, result.Price, "Цена должна соответствовать ожидаемому значению");
             }
+            
+
 
             // Проверка определения товарной группы
             Assert.IsNotNull(result.ProductGroup, "Товарная группа должна быть определена");

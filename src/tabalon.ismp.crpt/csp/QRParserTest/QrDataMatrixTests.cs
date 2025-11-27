@@ -2,6 +2,7 @@ using System;
 using TbkIsmpCrptApi;
 using TbkIsmpCrptApi.Controllers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TbkQRParser;
 
 namespace QRParserTest
 {
@@ -26,6 +27,15 @@ namespace QRParserTest
         {
             var qrPa = new QRParser(qr);
             Assert.AreEqual(cis, qrPa.CIS);
+
+            var qRCodeParser = new QRCodeParser();
+            var qRParseResult = qRCodeParser.ParseFull(qr);
+            if (qRParseResult.IsSpecialFormatWithoutAI)
+            {
+                Assert.AreEqual(cis, qRParseResult.CIS);    
+            }
+
+            Assert.AreEqual(cis, qRParseResult.CIS);
         }
 
         // Full string CIS tests - QR codes that should return the complete string as CIS
