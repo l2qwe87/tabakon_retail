@@ -405,7 +405,6 @@ namespace TbkQRParser
                 }
             }
             
-<<<<<<< HEAD
             // Случай 2: Начинается с "01" и содержит только GTIN + Serial Number
             // для определенных длин (например, 34 символа)
             if (qrCode.StartsWith("01") && qrCode.Length == 34)
