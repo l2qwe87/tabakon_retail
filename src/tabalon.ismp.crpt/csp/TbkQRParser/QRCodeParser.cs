@@ -257,16 +257,22 @@ namespace TbkQRParser
                 }
                 
                 // Особый случай для AI "21" (серийный номер)
-                // Если после извлеченных данных есть "93" в начале, это может быть код криптозащиты
-                if (spec.AI == "21" && nextPos < gs1String.Length && 
-                    gs1String.Substring(nextPos, 2) == "93")
+                // Проверяем, есть ли встроенные AI "8005" в данных
+                if (spec.AI == "21")
                 {
-                    // Проверяем, что оставшаяся часть соответствует формату кода криптозащиты
-                    string remaining = gs1String.Substring(nextPos);
-                    if (remaining.Length >= 6) // "93" + минимум 4 символа данных
+                    // Ищем AI "8005" (цена) в данных серийного номера
+                    for (int checkPos = pos; checkPos < nextPos; checkPos++)
                     {
-                        // Это может быть код криптозащиты, обрезаем серийный номер до этого места
-                        return (gs1String.Substring(pos, dataLength), dataLength);
+                        if (checkPos + 4 <= nextPos && gs1String.Substring(checkPos, 4) == "8005" &&
+                            checkPos + 4 + 6 <= gs1String.Length)
+                        {
+                            // Нашли AI "8005", обрезаем серийный номер до этого места
+                            int serialLength = checkPos - pos;
+                            if (serialLength >= spec.MinDataLength)
+                            {
+                                return (gs1String.Substring(pos, serialLength), serialLength);
+                            }
+                        }
                     }
                 }
                 
@@ -589,10 +595,8 @@ namespace TbkQRParser
         /// <returns>True, если AI допустим</returns>
         private bool IsValidAI(string ai)
         {
-            // Используем словарь для проверки валидности AI
-            // AI валиден, если он найден в словаре (длина >= 0 или -1 для переменной длины)
-            int dataLength = ProductGroupAIDictionary.GetDataLengthForAI(ai);
-            return dataLength >= 0 || dataLength == -1;
+            // AI валиден, если он найден в словаре спецификаций
+            return ProductGroupAIDictionary.GetSpecificationByAI(ai) != null;
         }
     }
 }
