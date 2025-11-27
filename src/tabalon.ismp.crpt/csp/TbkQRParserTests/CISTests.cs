@@ -15,45 +15,17 @@ namespace TbkQRParserTests
         }
 
         [TestMethod]
-        public void ParseFull_ShouldGenerateCorrectCIS()
+        [DataRow("010101010101212121XYZ", "0101010101010121212121XYZ")]
+        [DataRow("010541462278007621CimGms8C9swPomtz", "010541462278007621CimGms8C9swPomtz")]
+        [DataRow("04640030090709DYBLHiyACoA", "04640030090709DYBLHiyACoA")]
+        public void ParseFull_ShouldGenerateCorrectCIS(string qrCode, string expectedCIS)
         {
-            // Arrange
-            string qrCode = "010101010101212121XYZ";
-
             // Act
             var result = _parser.ParseFull(qrCode);
 
             // Assert
-            Assert.IsTrue(result.IsSuccess, "Парсинг должен быть успешным");
-            Assert.AreEqual("0101010101010121212121XYZ", result.CIS, "CIS должен соответствовать ожидаемому значению");
-        }
-
-        [TestMethod]
-        public void ParseFull_WithAICode_ShouldGenerateCorrectCIS()
-        {
-            // Arrange
-            string qrCode = "010541462278007621CimGms8C9swPomtz";
-
-            // Act
-            var result = _parser.ParseFull(qrCode);
-
-            // Assert
-            Assert.IsTrue(result.IsSuccess, "Парсинг должен быть успешным");
-            Assert.AreEqual("010541462278007621CimGms8C9swPomtz", result.CIS, "CIS должен соответствовать ожидаемому значению");
-        }
-
-        [TestMethod]
-        public void ParseFull_WithSpecialFormat_ShouldGenerateCorrectCIS()
-        {
-            // Arrange
-            string qrCode = "04640030090709DYBLHiyACoA";
-
-            // Act
-            var result = _parser.ParseFull(qrCode);
-
-            // Assert
-            Assert.IsTrue(result.IsSuccess, "Парсинг должен быть успешным");
-            Assert.AreEqual("04640030090709DYBLHiyACoA", result.CIS, "CIS должен соответствовать ожидаемому значению");
+            Assert.IsTrue(result.IsSuccess, $"Парсинг должен быть успешным для кода: {qrCode}");
+            Assert.AreEqual(expectedCIS, result.CIS, $"CIS должен соответствовать ожидаемому значению для кода: {qrCode}");
         }
     }
 }
