@@ -196,38 +196,6 @@ namespace TbkQRParser
                 fields[ai] = data;
                 usedAIs.Add(ai);
                 pos += dataLength;
-                
-                // Если это AI "01" и следующий AI "21", то пропускаем поиск других AI "21" в середине серийного номера
-                if (ai == "01" && pos + 2 <= gs1String.Length && gs1String.Substring(pos, 2) == "21")
-                {
-                    // Извлекаем серийный номер для AI "21"
-                    var (serialData, serialLength) = ExtractAIData(gs1String, pos, ProductGroupAIDictionary.GetSpecificationByAI("21"));
-                    if (serialData != null && ValidateAIData("21", serialData, ProductGroupAIDictionary.GetSpecificationByAI("21")))
-                    {
-                        fields["21"] = serialData;
-                        usedAIs.Add("21");
-                        pos += serialLength;
-                        
-                        // Пропускаем остальные AI "21" в середине данных
-                        while (pos + 2 <= gs1String.Length)
-                        {
-                            if (gs1String.Substring(pos, 2) == "21")
-                            {
-                                pos += 2; // Пропускаем AI "21"
-                                // Извлекаем и пропускаем данные после AI "21"
-                                var (skipData, skipLength) = ExtractAIData(gs1String, pos, ProductGroupAIDictionary.GetSpecificationByAI("21"));
-                                if (skipData != null)
-                                {
-                                    pos += skipLength;
-                                }
-                            }
-                            else
-                            {
-                                break;
-                            }
-                        }
-                    }
-                }
             }
 
             return (true, null, fields);
@@ -280,7 +248,29 @@ namespace TbkQRParser
             {
                 // Переменная длина - ищем следующий AI с учетом возможных длин кодов
                 int nextPos = FindNextAIStartWithCodeLengths(gs1String, pos, spec.AI);
-                return (gs1String.Substring(pos, nextPos - pos), nextPos - pos);
+                int dataLength = nextPos - pos;
+                
+                // Проверяем минимальную длину
+                if (dataLength < spec.MinDataLength)
+                {
+                    return (null, 0);
+                }
+                
+                // Особый случай для AI "21" (серийный номер)
+                // Если после извлеченных данных есть "93" в начале, это может быть код криптозащиты
+                if (spec.AI == "21" && nextPos < gs1String.Length && 
+                    gs1String.Substring(nextPos, 2) == "93")
+                {
+                    // Проверяем, что оставшаяся часть соответствует формату кода криптозащиты
+                    string remaining = gs1String.Substring(nextPos);
+                    if (remaining.Length >= 6) // "93" + минимум 4 символа данных
+                    {
+                        // Это может быть код криптозащиты, обрезаем серийный номер до этого места
+                        return (gs1String.Substring(pos, dataLength), dataLength);
+                    }
+                }
+                
+                return (gs1String.Substring(pos, dataLength), dataLength);
             }
         }
 
@@ -315,9 +305,17 @@ namespace TbkQRParser
         {
             for (int pos = startPos; pos < s.Length; pos++)
             {
-                var (nextAI, _) = FindNextAI(s, pos);
+                var (nextAI, aiLength) = FindNextAI(s, pos);
                 if (!string.IsNullOrEmpty(nextAI) && nextAI != currentAI)
                 {
+                    // Особая эвристика для AI "93" (код криптозащиты)
+                    if (nextAI == "93" && pos + aiLength + 4 == s.Length)
+                    {
+                        // Если "93" находится в самом конце строки и после него есть ровно 4 символа,
+                        // это скорее всего отдельный AI "93" с данными, а не часть серийного номера
+                        return pos;
+                    }
+                    
                     // Проверяем, что оставшаяся длина соответствует возможным длинам кодов
                     int remainingLength = s.Length - pos;
                     var possibleGroups = ProductGroupCodeLengthDictionary.GetPossibleProductGroups(remainingLength);
@@ -357,8 +355,12 @@ namespace TbkQRParser
         /// <returns>True, если данные валидны</returns>
         private bool ValidateAIData(string ai, string data, AISpecification spec)
         {
-            // Проверка длины
+            // Проверка длины для фиксированной длины
             if (spec.DataLength > 0 && data.Length != spec.DataLength)
+                return false;
+
+            // Проверка минимальной длины для переменной длины
+            if (spec.DataLength == -1 && data.Length < spec.MinDataLength)
                 return false;
 
             // Проверка по регулярному выражению

@@ -25,6 +25,11 @@ namespace TbkQRParser
         public int DataLength { get; set; }
 
         /// <summary>
+        /// Минимальная длина данных для AI с переменной длиной (0 для фиксированной длины)
+        /// </summary>
+        public int MinDataLength { get; set; }
+
+        /// <summary>
         /// Обязательный ли AI для данной товарной группы
         /// </summary>
         public bool IsRequired { get; set; }
@@ -106,6 +111,7 @@ namespace TbkQRParser
                     AI = "01",
                     Description = "GTIN (Global Trade Item Number)",
                     DataLength = 14,
+                    MinDataLength = 0, // фиксированная длина
                     IsRequired = true,
                     Order = 1,
                     ValidationPattern = @"^\d{14}$"
@@ -115,15 +121,17 @@ namespace TbkQRParser
                     AI = "21",
                     Description = "Серийный номер",
                     DataLength = -1, // переменная длина
+                    MinDataLength = 6, // минимальная длина 6 символов
                     IsRequired = true,
                     Order = 2,
-                    ValidationPattern = @"^[A-Za-z0-9+/=]{1,20}$"
+                    ValidationPattern = @"^[A-Za-z0-9+/=?\-\._]{1,20}$"
                 },
                 new AISpecification
                 {
                     AI = "93",
                     Description = "Код криптозащиты",
                     DataLength = 4,
+                    MinDataLength = 0, // фиксированная длина
                     IsRequired = false,
                     Order = 3,
                     ValidationPattern = @"^[A-Za-z0-9+/=]{4}$"
@@ -133,6 +141,7 @@ namespace TbkQRParser
                     AI = "91",
                     Description = "Идентификатор компании",
                     DataLength = -1, // переменная длина
+                    MinDataLength = 1, // минимальная длина 1 символ
                     IsRequired = false,
                     Order = 4,
                     ValidationPattern = @"^[A-Za-z0-9+/=]{1,30}$"
@@ -142,6 +151,7 @@ namespace TbkQRParser
                     AI = "92",
                     Description = "Внутренний код организации",
                     DataLength = -1, // переменная длина
+                    MinDataLength = 1, // минимальная длина 1 символ
                     IsRequired = false,
                     Order = 5,
                     ValidationPattern = @"^[A-Za-z0-9+/=]{1,30}$"
@@ -151,6 +161,7 @@ namespace TbkQRParser
                     AI = "8005",
                     Description = "Цена товара",
                     DataLength = 6,
+                    MinDataLength = 0, // фиксированная длина
                     IsRequired = false,
                     Order = 6,
                     ValidationPattern = @"^\d{6}$"
@@ -160,6 +171,7 @@ namespace TbkQRParser
                     AI = "3103",
                     Description = "Вес товара (нетто) в граммах",
                     DataLength = 6,
+                    MinDataLength = 0, // фиксированная длина
                     IsRequired = false,
                     Order = 7,
                     ValidationPattern = @"^\d{6}$"
@@ -279,19 +291,26 @@ namespace TbkQRParser
         {
             var structure = GetStructure(productGroup);
             if (structure == null) return false;
-
+            
             var spec = structure.GetSpecificationByAI(ai);
             if (spec == null) return false;
+            
+            return Regex.IsMatch(data, spec.ValidationPattern);
+        }
 
-            // Проверка длины
-            if (spec.DataLength > 0 && data.Length != spec.DataLength)
-                return false;
-
-            // Проверка по регулярному выражению
-            if (!string.IsNullOrEmpty(spec.ValidationPattern))
-                return Regex.IsMatch(data, spec.ValidationPattern);
-
-            return true;
+        /// <summary>
+        /// Получает спецификацию AI по коду для всех товарных групп
+        /// </summary>
+        /// <param name="ai">Код AI</param>
+        /// <returns>Спецификация AI или null</returns>
+        public static AISpecification GetSpecificationByAI(string ai)
+        {
+            foreach (var structure in _structures.Values)
+            {
+                var spec = structure.GetSpecificationByAI(ai);
+                if (spec != null) return spec;
+            }
+            return null;
         }
 
         /// <summary>
