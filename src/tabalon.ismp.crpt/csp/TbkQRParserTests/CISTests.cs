@@ -53,7 +53,7 @@ namespace TbkQRParserTests
 
             // Assert
             Assert.IsTrue(result.IsSuccess, "Парсинг должен быть успешным");
-            Assert.AreEqual("010464003009070921DYBLHiy", result.CIS, "CIS должен соответствовать ожидаемому значению");
+            Assert.AreEqual("04640030090709DYBLHiyACoA", result.CIS, "CIS должен соответствовать ожидаемому значению");
         }
     }
 }

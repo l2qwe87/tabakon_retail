@@ -56,7 +56,7 @@ namespace TbkQRParser
                     {
                         OriginalQR = qrCode,
                         ProductGroup = DetermineProductGroup(parsedFields, ProductGroupCodeLengthDictionary.GetPossibleProductGroups(normalizedQR.Length)),
-                        CIS = GenerateCIS(parsedFields),
+                        CIS = GenerateCIS(parsedFields, true),
                         ParsedFields = parsedFields,
                         IsSuccess = true,
                         IsSpecialFormatWithoutAI = true
@@ -87,7 +87,7 @@ namespace TbkQRParser
                 }
 
                 // Формирование CIS
-                var cis = GenerateCIS(parsedFields);
+                var cis = GenerateCIS(parsedFields, false);
 
                 // Определение возможных товарных групп по длине кода
                 var possibleGroups = ProductGroupCodeLengthDictionary.GetPossibleProductGroups(normalizedQR.Length);
@@ -99,7 +99,7 @@ namespace TbkQRParser
                 {
                     OriginalQR = qrCode,
                     ProductGroup = productGroup,
-                    CIS = cis,
+                    CIS = GenerateCIS(parsedFields, false),
                     ParsedFields = parsedFields,
                     IsSuccess = true,
                     IsSpecialFormatWithoutAI = false
@@ -340,9 +340,22 @@ namespace TbkQRParser
         /// Генерирует CIS на основе разобранных полей
         /// </summary>
         /// <param name="parsedFields">Разобранные AI поля</param>
+        /// <param name="isSpecialFormat">Это особый формат без AI</param>
         /// <returns>CIS строка</returns>
-        private string GenerateCIS(Dictionary<string, string> parsedFields)
+        private string GenerateCIS(Dictionary<string, string> parsedFields, bool isSpecialFormat)
         {
+            // Для особых форматов без AI собираем CIS из GTIN + серийный номер
+            if (isSpecialFormat)
+            {
+                if (parsedFields.ContainsKey("01") && parsedFields.ContainsKey("21"))
+                {
+                    return parsedFields["01"] + parsedFields["21"];
+                }
+                
+                // Если нет полей 01 и 21, возвращаем исходную строку
+                return parsedFields.Values.FirstOrDefault() ?? "";
+            }
+            
             if (parsedFields.ContainsKey("01") && parsedFields.ContainsKey("21"))
             {
                 return ("01" + parsedFields["01"] + "21" + parsedFields["21"]).Trim();
@@ -435,10 +448,13 @@ namespace TbkQRParser
                 // Первые 14 символов - GTIN (неявный AI "01")
                 fields["01"] = qrCode.Substring(0, 14);
                 
-                // Следующие 7 символов - серийный номер (неявный AI "21")
-                if (qrCode.Length >= 21)
+                // Следующие символы - серийный номер (неявный AI "21")
+                if (qrCode.Length > 14)
                 {
-                    fields["21"] = qrCode.Substring(14, 7);
+                    // Для особых форматов без AI все что после GTIN - серийный номер
+                    int serialStart = 14;
+                    string serialNumber = qrCode.Substring(serialStart);
+                    fields["21"] = serialNumber;
                 }
                 
                 // Если есть еще символы, проверяем на цену и код проверки
