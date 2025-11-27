@@ -18,6 +18,7 @@ namespace TbkQRParserTests
         [DataRow("010101010101212121XYZ", "0101010101010121212121XYZ")]
         [DataRow("010541462278007621CimGms8C9swPomtz", "010541462278007621CimGms8C9swPomtz")]
         [DataRow("04640030090709DYBLHiyACoA", "04640030090709DYBLHiyACoA")]
+        [DataRow("00000046198488X?io+qCABm8wAYa", "00000046198488X?io+qC")]
         public void ParseFull_ShouldGenerateCorrectCIS(string qrCode, string expectedCIS)
         {
             // Act

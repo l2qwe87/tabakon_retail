@@ -413,8 +413,8 @@ namespace TbkQRParser
                     return true;
                 }
                 
-                // Для длины 25 - особый случай без AI
-                if (qrCode.Length == 25)
+                // Для длин 25 и 29 - особые случаи без AI
+                if (qrCode.Length == 25 || qrCode.Length == 29)
                 {
                     return true;
                 }
@@ -453,7 +453,19 @@ namespace TbkQRParser
                 {
                     // Для особых форматов без AI все что после GTIN - серийный номер
                     int serialStart = 14;
-                    string serialNumber = qrCode.Substring(serialStart);
+                    string serialNumber;
+                    
+                    if (qrCode.Length == 29)
+                    {
+                        // Для длины 29 - только первые 7 символов серийного номера
+                        serialNumber = qrCode.Substring(serialStart, 7);
+                    }
+                    else
+                    {
+                        // Для других длин - вся оставшаяся часть
+                        serialNumber = qrCode.Substring(serialStart);
+                    }
+                    
                     fields["21"] = serialNumber;
                 }
                 
