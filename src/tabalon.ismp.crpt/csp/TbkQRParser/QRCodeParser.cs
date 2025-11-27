@@ -165,7 +165,7 @@ namespace TbkQRParser
                 }
 
                 // Получение спецификации AI
-                var spec = GetAISpecification(ai);
+                var spec = GetSpecificationByAI(ai);
                 if (spec == null)
                 {
                     return (false, $"Неизвестный AI: {ai}", fields);
@@ -196,6 +196,38 @@ namespace TbkQRParser
                 fields[ai] = data;
                 usedAIs.Add(ai);
                 pos += dataLength;
+                
+                // Если это AI "01" и следующий AI "21", то пропускаем поиск других AI "21" в середине серийного номера
+                if (ai == "01" && pos + 2 <= gs1String.Length && gs1String.Substring(pos, 2) == "21")
+                {
+                    // Извлекаем серийный номер для AI "21"
+                    var (serialData, serialLength) = ExtractAIData(gs1String, pos, ProductGroupAIDictionary.GetSpecificationByAI("21"));
+                    if (serialData != null && ValidateAIData("21", serialData, ProductGroupAIDictionary.GetSpecificationByAI("21")))
+                    {
+                        fields["21"] = serialData;
+                        usedAIs.Add("21");
+                        pos += serialLength;
+                        
+                        // Пропускаем остальные AI "21" в середине данных
+                        while (pos + 2 <= gs1String.Length)
+                        {
+                            if (gs1String.Substring(pos, 2) == "21")
+                            {
+                                pos += 2; // Пропускаем AI "21"
+                                // Извлекаем и пропускаем данные после AI "21"
+                                var (skipData, skipLength) = ExtractAIData(gs1String, pos, ProductGroupAIDictionary.GetSpecificationByAI("21"));
+                                if (skipData != null)
+                                {
+                                    pos += skipLength;
+                                }
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                    }
+                }
             }
 
             return (true, null, fields);
@@ -304,7 +336,7 @@ namespace TbkQRParser
         /// </summary>
         /// <param name="ai">Код AI</param>
         /// <returns>Спецификация AI или null</returns>
-        private AISpecification GetAISpecification(string ai)
+        private AISpecification GetSpecificationByAI(string ai)
         {
             var allStructures = ProductGroupAIDictionary.GetAllStructures();
             foreach (var structure in allStructures.Values)
