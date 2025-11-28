@@ -13,15 +13,17 @@ namespace TbkIsmpCrptApi
 {
     public class Program
     {
-        public static void Main(string[] args)
-        {
-            Directory.SetCurrentDirectory(Path.GetDirectoryName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName));
+    public static void Main(string[] args)
+    {
+        AppContext.SetSwitch("Microsoft.AspNetCore.Mvc.ApiExplorer.IsEnhancedModelMetadataSupported", true);
 
-            var bash = new BashExecuter();
-            var res = bash.Run("subst", "k: c:\\PerfLogs\\k1").Result;
+        Directory.SetCurrentDirectory(Path.GetDirectoryName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName));
 
-            CreateHostBuilder(args).Build().Run();
-        }
+        var bash = new BashExecuter();
+        var res = bash.Run("subst", "k: c:\\PerfLogs\\k1").Result;
+
+        CreateHostBuilder(args).Build().Run();
+    }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
