@@ -257,7 +257,7 @@ namespace TbkQRParser
                 }
                 
                 // Особый случай для AI "21" (серийный номер)
-                // Проверяем, есть ли встроенные AI "8005" в данных
+                // Проверяем, есть ли встроенные AI "8005" или "93" в данных
                 if (spec.AI == "21")
                 {
                     // Ищем AI "8005" (цена) в данных серийного номера
@@ -267,6 +267,21 @@ namespace TbkQRParser
                             checkPos + 4 + 6 <= gs1String.Length)
                         {
                             // Нашли AI "8005", обрезаем серийный номер до этого места
+                            int serialLength = checkPos - pos;
+                            if (serialLength >= spec.MinDataLength)
+                            {
+                                return (gs1String.Substring(pos, serialLength), serialLength);
+                            }
+                        }
+                    }
+                    
+                    // Ищем AI "93" (код криптозащиты) в данных серийного номера
+                    for (int checkPos = pos; checkPos < nextPos; checkPos++)
+                    {
+                        if (checkPos + 2 <= nextPos && gs1String.Substring(checkPos, 2) == "93" &&
+                            checkPos + 2 + 4 <= gs1String.Length)
+                        {
+                            // Нашли AI "93", обрезаем серийный номер до этого места
                             int serialLength = checkPos - pos;
                             if (serialLength >= spec.MinDataLength)
                             {
