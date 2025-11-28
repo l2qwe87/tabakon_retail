@@ -21,11 +21,7 @@ namespace TbkAiParser
 
         private readonly string[] possibleNextAis = { "8005", "91", "92", "93" };
 
-        /// <summary>
-        /// Разбирает входную строку на пары AI и значения.
-        /// </summary>
-        /// <param name="input">Входная строка Base64.</param>
-        /// <returns>Список пар (AI, значение).</returns>
+        /// <inheritdoc />
         public List<KeyValuePair<string, string>> Parse(string input)
         {
             var result = new List<KeyValuePair<string, string>>();

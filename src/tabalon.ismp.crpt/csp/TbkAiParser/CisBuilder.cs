@@ -14,11 +14,7 @@ namespace TbkAiParser
             _aiParser = aiParser;
         }
 
-        /// <summary>
-        /// Строит CIS строку из входной Base64 строки.
-        /// </summary>
-        /// <param name="input">Входная строка Base64.</param>
-        /// <returns>CIS строка или первые 21 символов если не подходит.</returns>
+        /// <inheritdoc />
         public string Build(string input)
         {
             // Подготавливаем вход: заменяем (01) на 01, (21) на 21
