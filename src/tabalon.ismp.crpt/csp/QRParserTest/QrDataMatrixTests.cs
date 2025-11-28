@@ -2,6 +2,7 @@ using System;
 using TbkIsmpCrptApi;
 using TbkIsmpCrptApi.Controllers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TbkQRParser;
 
 namespace QRParserTest
 {
@@ -22,10 +23,11 @@ namespace QRParserTest
         [DataRow("0104610484027835215dm)oCPgCHOHf91EE1192fXOBGL899aDHWkarCAk4ZZZ5cyDdHcWsjxR7ewwr+dE=", "0104610484027835215dm)oCPgCHOHf")]
         [DataRow("0104610484027835215T7Y*RccvqX/G91EE1192nsBf/xd95nbABF2n0cDXOlK1Fh9+lZzgoUDZ5SF+dzo=", "0104610484027835215T7Y*RccvqX/G")]
         [DataRow("010460165303918621GbEXjF?8005170000", "010460165303918621GbEXjF?")]
-        public void GetCIS(string qr, string cis)
+        public void GetCIS(string qr, string expectedCis)
         {
-            var qrPa = new QRParser(qr);
-            Assert.AreEqual(cis, qrPa.CIS);
+            var qRCodeParser = new QRCodeParser();
+            var qRParseResult = qRCodeParser.ParseFull(qr);
+            Assert.AreEqual(expectedCis, qRParseResult.CIS);
         }
 
         // Full string CIS tests - QR codes that should return the complete string as CIS
@@ -49,17 +51,19 @@ namespace QRParserTest
         [DataRow("010400639605740221RU11121825238122948", "010400639605740221RU11121825238122948")]
         public void GetCISFullString(string qr, string expectedCis)
         {
-            var qrPa = new QRParser(qr);
-            Assert.AreEqual(expectedCis, qrPa.CIS);
+            var qRCodeParser = new QRCodeParser();
+            var qRParseResult = qRCodeParser.ParseFull(qr);
+            Assert.AreEqual(expectedCis, qRParseResult.CIS);
         }
 
         // ClothesCIS converted to DataTestMethod with DataRow
         [DataTestMethod]
         [DataRow("0104610541730272215pnKT'RwId);*91EE1192PFY/37fDDABcSYnthTvZ9i90lB04JHGgCGsBDGie0uM=", "0104610541730272215pnKT'RwId);*")]
-        public void ClothesCIS(string qr, string expected)
+        public void ClothesCIS(string qr, string expectedCis)
         {
-            var qrPa = new QRParser(qr);
-            Assert.AreEqual(expected, qrPa.CIS);
+            var qRCodeParser = new QRCodeParser();
+            var qRParseResult = qRCodeParser.ParseFull(qr);
+            Assert.AreEqual(expectedCis, qRParseResult.CIS);
         }
     }
 }
