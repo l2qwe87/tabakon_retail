@@ -8,7 +8,8 @@ public sealed class AiParserTests
         [TestMethod]
         public void TestParse()
         {
-            var parser = new AiParser();
+            var handlers = new List<IAiHandler> { new StandardAiHandler(), new SpecialAiHandler() };
+            var parser = new AiParser(handlers);
             var result = parser.Parse("0104640030090754210001%ix800515000093vRdW");
         Assert.AreEqual(4, result.Count);
         Assert.AreEqual("01", result[0].Key);
@@ -29,7 +30,8 @@ public sealed class AiParserTests
         [DataRow("010401292285163521RU13120225293131337", "010401292285163521RU13120225293131337")]
         public void TestCisBuilder(string input, string expected)
         {
-            var parser = new AiParser();
+            var handlers = new List<IAiHandler> { new StandardAiHandler(), new SpecialAiHandler() };
+            var parser = new AiParser(handlers);
             var cisBuilder = new CisBuilder(parser);
             var result = cisBuilder.Build(input);
         Assert.AreEqual(expected, result);

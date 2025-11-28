@@ -44,6 +44,8 @@ namespace TbkIsmpCrptApi
             services.AddSingleton<ISigner, BashFrameworkSigner>();
             services.AddSingleton<IIsmpRequestFactory, IsmpRequestFactory>();
             services.AddSingleton<IIsmpClient, IsmpClient>();
+            services.AddSingleton<IAiHandler, StandardAiHandler>();
+            services.AddSingleton<IAiHandler, SpecialAiHandler>();
             services.AddSingleton<IAiParser, AiParser>();
             services.AddSingleton<ICisBuilder, CisBuilder>();
 
