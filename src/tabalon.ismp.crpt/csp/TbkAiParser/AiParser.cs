@@ -5,11 +5,11 @@ using System.Linq;
 namespace TbkAiParser
 {
     /// <summary>
-    /// Статический класс для парсинга AI кодов из строк Base64.
+    /// Класс для парсинга AI кодов из строк Base64.
     /// </summary>
-    public static class AiParser
+    public class AiParser : IAiParser
     {
-        private static readonly Dictionary<string, int> aiMinLengths = new()
+        private readonly Dictionary<string, int> aiMinLengths = new()
         {
             { "01", 14 },
             { "21", 6 },
@@ -19,14 +19,14 @@ namespace TbkAiParser
             { "93", 4 }
         };
 
-        private static readonly string[] possibleNextAis = { "8005", "91", "92", "93" };
+        private readonly string[] possibleNextAis = { "8005", "91", "92", "93" };
 
         /// <summary>
         /// Разбирает входную строку на пары AI и значения.
         /// </summary>
         /// <param name="input">Входная строка Base64.</param>
         /// <returns>Список пар (AI, значение).</returns>
-        public static List<KeyValuePair<string, string>> Parse(string input)
+        public List<KeyValuePair<string, string>> Parse(string input)
         {
             var result = new List<KeyValuePair<string, string>>();
             int pos = 0;
@@ -91,7 +91,7 @@ namespace TbkAiParser
         /// <param name="start">Начальная позиция поиска.</param>
         /// <param name="ais">Массив возможных AI.</param>
         /// <returns>Кортеж с позицией и найденным AI, или (-1, null).</returns>
-        private static (int pos, string? ai) FindNextValidAi(string input, int start, string[] ais)
+        private (int pos, string? ai) FindNextValidAi(string input, int start, string[] ais)
         {
             int minPos = int.MaxValue;
             string foundAi = null;
@@ -143,7 +143,7 @@ namespace TbkAiParser
         /// <param name="start">Начальная позиция поиска.</param>
         /// <param name="ais">Массив AI для поиска.</param>
         /// <returns>Позиция найденного AI или -1.</returns>
-        private static int FindNextAi(string input, int start, string[] ais)
+        private int FindNextAi(string input, int start, string[] ais)
         {
             int minPos = int.MaxValue;
             foreach (var ai in ais)

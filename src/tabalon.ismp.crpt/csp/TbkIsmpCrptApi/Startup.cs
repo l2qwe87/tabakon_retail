@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using TbkAiParser;
 using TbkIsmpContracts;
 using TbkIsmpCrpt;
 using TbkSigner;
@@ -43,6 +44,8 @@ namespace TbkIsmpCrptApi
             services.AddSingleton<ISigner, BashFrameworkSigner>();
             services.AddSingleton<IIsmpRequestFactory, IsmpRequestFactory>();
             services.AddSingleton<IIsmpClient, IsmpClient>();
+            services.AddSingleton<IAiParser, AiParser>();
+            services.AddSingleton<ICisBuilder, CisBuilder>();
 
             services.AddHttpClient("IsmpClient").ConfigureHttpClient((sp, client) =>
             {

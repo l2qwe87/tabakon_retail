@@ -18,15 +18,18 @@ namespace TbkIsmpCrptApi.Controllers
         private readonly ILogger<IsmpCrptController> _logger;
         private readonly IMarkirovkaClient _markirovkaClient;
         private readonly IMarkirovkaAuth _markirovkaAuth;
+        private readonly ICisBuilder _cisBuilder;
 
         public IsmpCrptController(
             IMarkirovkaClient markirovkaClient,
             IMarkirovkaAuth markirovkaAuth,
+            ICisBuilder cisBuilder,
             ILogger<IsmpCrptController> logger
             )
         {
             _markirovkaClient = markirovkaClient;
             _markirovkaAuth = markirovkaAuth;
+            _cisBuilder = cisBuilder;
             _logger = logger;
         }
 
@@ -52,7 +55,7 @@ namespace TbkIsmpCrptApi.Controllers
             if (!withOutQRParse)
             {
                 codes = ciss
-                    .Select(cis => CisBuilder.Build(cis))
+                    .Select(cis => _cisBuilder.Build(cis))
                     .ToList();
             }
             var resp = await _markirovkaClient.CisesInfo(codes, cancellationToken);
@@ -64,7 +67,7 @@ namespace TbkIsmpCrptApi.Controllers
             var code = cis;
             if (!withOutQRParse)
             {
-                code = CisBuilder.Build(cis);
+                code = _cisBuilder.Build(cis);
             }
 
             var resp = await _markirovkaClient.ProductInfo(code, cancellationToken);
