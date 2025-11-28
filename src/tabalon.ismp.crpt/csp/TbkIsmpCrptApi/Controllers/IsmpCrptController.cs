@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using TbkAiParser;
 using TbkIsmpContracts;
 
 namespace TbkIsmpCrptApi.Controllers
@@ -51,8 +52,7 @@ namespace TbkIsmpCrptApi.Controllers
             if (!withOutQRParse)
             {
                 codes = ciss
-                    .Select(cis => new QRParser(cis))
-                    .Select(qr => qr.CIS)
+                    .Select(cis => CisBuilder.Build(cis))
                     .ToList();
             }
             var resp = await _markirovkaClient.CisesInfo(codes, cancellationToken);
@@ -64,8 +64,7 @@ namespace TbkIsmpCrptApi.Controllers
             var code = cis;
             if (!withOutQRParse)
             {
-                var qr = new QRParser(cis);
-                code = qr.CIS;
+                code = CisBuilder.Build(cis);
             }
 
             var resp = await _markirovkaClient.ProductInfo(code, cancellationToken);
