@@ -3,7 +3,7 @@ using System.Collections.Generic;
 namespace TbkAiParser
 {
     /// <summary>
-    /// Интерфейс для парсинга AI кодов из строк Base64.
+    /// Обработчик парсинга AI кодов из строк Base64.
     /// </summary>
     public interface IAiParser
     {

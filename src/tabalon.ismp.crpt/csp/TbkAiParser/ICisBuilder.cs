@@ -1,7 +1,7 @@
 namespace TbkAiParser
 {
     /// <summary>
-    /// Интерфейс для построения CIS строк из Base64 входа.
+    /// Обработчик построения CIS строк из Base64 входа.
     /// </summary>
     public interface ICisBuilder
     {
