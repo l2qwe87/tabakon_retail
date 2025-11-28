@@ -3,6 +3,7 @@ using TbkIsmpCrptApi;
 using TbkIsmpCrptApi.Controllers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TbkAiParser;
+using System.Collections.Generic;
 
 namespace QRParserTest
 {
@@ -25,7 +26,8 @@ namespace QRParserTest
         [DataRow("010460165303918621GbEXjF?8005170000", "010460165303918621GbEXjF?")]
         public void GetCIS(string input, string expected)
         {
-            var parser = new TbkAiParser.AiParser();
+            var handlers = new List<TbkAiParser.IAiHandler> { new TbkAiParser.StandardAiHandler(), new TbkAiParser.SpecialAiHandler() };
+            var parser = new TbkAiParser.AiParser(handlers);
             var cisBuilder = new TbkAiParser.CisBuilder(parser);
             var result = cisBuilder.Build(input);
             Assert.AreEqual(expected, result);
@@ -51,7 +53,8 @@ namespace QRParserTest
         [DataRow("010400639605740221RU11121825238122254", "010400639605740221RU11121825238122254")]
         public void GetCISFullString(string input, string expected)
         {
-            var parser = new TbkAiParser.AiParser();
+            var handlers = new List<TbkAiParser.IAiHandler> { new TbkAiParser.StandardAiHandler(), new TbkAiParser.SpecialAiHandler() };
+            var parser = new TbkAiParser.AiParser(handlers);
             var cisBuilder = new TbkAiParser.CisBuilder(parser);
             var result = cisBuilder.Build(input);
             Assert.AreEqual(expected, result);
@@ -62,7 +65,8 @@ namespace QRParserTest
         [DataRow("0104610541730272215pnKT'RwId);*91EE1192PFY/37fDDABcSYnthTvZ9i90lB04JHGgCGsBDGie0uM=", "0104610541730272215pnKT'RwId);*")]
         public void ClothesCIS(string input, string expected)
         {
-            var parser = new TbkAiParser.AiParser();
+            var handlers = new List<TbkAiParser.IAiHandler> { new TbkAiParser.StandardAiHandler(), new TbkAiParser.SpecialAiHandler() };
+            var parser = new TbkAiParser.AiParser(handlers);
             var cisBuilder = new TbkAiParser.CisBuilder(parser);
             var result = cisBuilder.Build(input);
             Assert.AreEqual(expected, result);

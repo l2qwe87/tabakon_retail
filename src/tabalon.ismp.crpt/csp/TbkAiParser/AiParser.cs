@@ -9,17 +9,13 @@ namespace TbkAiParser
     /// </summary>
     public class AiParser : IAiParser
     {
-        private readonly Dictionary<string, int> aiMinLengths = new()
-        {
-            { "01", 14 },
-            { "21", 6 },
-            { "8005", 6 },
-            { "91", 4 },
-            { "92", 4 },
-            { "93", 4 }
-        };
-
+        private readonly IEnumerable<IAiHandler> handlers;
         private readonly string[] possibleNextAis = { "8005", "91", "92", "93" };
+
+        public AiParser(IEnumerable<IAiHandler> handlers)
+        {
+            this.handlers = handlers;
+        }
 
         /// <inheritdoc />
         public List<KeyValuePair<string, string>> Parse(string input)
@@ -63,17 +59,30 @@ namespace TbkAiParser
                 else
                 {
                     // Found valid AI
-                    int valueLen = nextAiPos - pos;
-                    // Добавляем значение к последнему AI
-                    if (result.Count > 0)
+                    var handler = handlers.FirstOrDefault(h => h.CanHandle(foundAi));
+                    if (handler != null)
                     {
-                        var last = result.Last();
-                        result[result.Count - 1] = new KeyValuePair<string, string>(last.Key, last.Value + input.Substring(pos, valueLen));
-                    }
+                        var aiResult = handler.Handle(input, nextAiPos, foundAi);
+                        if (aiResult != null)
+                        {
+                            int valueLen = nextAiPos - pos;
+                            // Добавляем значение к последнему AI
+                            if (result.Count > 0)
+                            {
+                                var last = result.Last();
+                                result[result.Count - 1] = new KeyValuePair<string, string>(last.Key, last.Value + input.Substring(pos, valueLen));
+                            }
 
-                    // Добавляем новый AI
-                    pos = nextAiPos + foundAi.Length;
-                    result.Add(new KeyValuePair<string, string>(foundAi, ""));
+                            // Добавляем новый AI
+                            pos = aiResult.NewPos;
+                            result.Add(new KeyValuePair<string, string>(foundAi, aiResult.Value));
+                        }
+                        else
+                        {
+                            // Not valid, skip
+                            pos = nextAiPos + foundAi.Length;
+                        }
+                    }
                 }
             }
 
@@ -97,11 +106,11 @@ namespace TbkAiParser
                 int index = input.IndexOf(ai, start);
                 if (index != -1)
                 {
-                    if (ai == "93")
+                    var handler = handlers.FirstOrDefault(h => h.CanHandle(ai));
+                    if (handler != null)
                     {
-                        // 93 всегда последний, значение ровно 4 символа
-                        int valueStart = index + 2;
-                        if (valueStart + 4 == input.Length)
+                        var result = handler.Handle(input, index, ai);
+                        if (result != null)
                         {
                             if (index < minPos)
                             {
@@ -109,22 +118,6 @@ namespace TbkAiParser
                                 foundAi = ai;
                             }
                         }
-                    }
-                    else
-                    {
-                        // Проверяем, достаточно ли длины значения для этого AI
-                        int valueStart = index + ai.Length;
-                        int nextAiPos = FindNextAi(input, valueStart, ais);
-                        int valueLen = nextAiPos == -1 ? input.Length - valueStart : nextAiPos - valueStart;
-                        if (valueLen >= aiMinLengths[ai])
-                        {
-                            if (index < minPos)
-                            {
-                                minPos = index;
-                                foundAi = ai;
-                            }
-                        }
-                        // Иначе, этот AI считается частью значения предыдущего, пропускаем
                     }
                 }
             }
