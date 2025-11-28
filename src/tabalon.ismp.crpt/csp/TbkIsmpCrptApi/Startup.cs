@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -34,7 +35,10 @@ namespace TbkIsmpCrptApi
             var appConfig = Configuration.Get<AppConfig>();
             services.AddSingleton(appConfig.IsmpClientConfig);
 
-            services.AddControllers();
+            services.AddControllers(options =>
+            {
+                options.OutputFormatters.Add(new StringOutputFormatter());
+            });
 
             services.AddSingleton<ISigner, BashFrameworkSigner>();
             services.AddSingleton<IIsmpRequestFactory, IsmpRequestFactory>();
