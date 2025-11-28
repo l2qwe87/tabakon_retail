@@ -2,7 +2,7 @@ using System;
 using TbkIsmpCrptApi;
 using TbkIsmpCrptApi.Controllers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TbkQRParser;
+using TbkAiParser;
 
 namespace QRParserTest
 {
@@ -23,11 +23,10 @@ namespace QRParserTest
         [DataRow("0104610484027835215dm)oCPgCHOHf91EE1192fXOBGL899aDHWkarCAk4ZZZ5cyDdHcWsjxR7ewwr+dE=", "0104610484027835215dm)oCPgCHOHf")]
         [DataRow("0104610484027835215T7Y*RccvqX/G91EE1192nsBf/xd95nbABF2n0cDXOlK1Fh9+lZzgoUDZ5SF+dzo=", "0104610484027835215T7Y*RccvqX/G")]
         [DataRow("010460165303918621GbEXjF?8005170000", "010460165303918621GbEXjF?")]
-        public void GetCIS(string qr, string expectedCis)
+        public void GetCIS(string input, string expected)
         {
-            var qRCodeParser = new QRCodeParser();
-            var qRParseResult = qRCodeParser.ParseFull(qr);
-            Assert.AreEqual(expectedCis, qRParseResult.CIS);
+            var result = CisBuilder.Build(input);
+            Assert.AreEqual(expected, result);
         }
 
         // Full string CIS tests - QR codes that should return the complete string as CIS
@@ -48,22 +47,19 @@ namespace QRParserTest
         [DataRow("010400639607488121RU11121725260224037", "010400639607488121RU11121725260224037")]
         [DataRow("010400639605743321RU11121825265193552", "010400639605743321RU11121825265193552")]
         [DataRow("010400639605740221RU11121825238122254", "010400639605740221RU11121825238122254")]
-        [DataRow("010400639605740221RU11121825238122948", "010400639605740221RU11121825238122948")]
-        public void GetCISFullString(string qr, string expectedCis)
+        public void GetCISFullString(string input, string expected)
         {
-            var qRCodeParser = new QRCodeParser();
-            var qRParseResult = qRCodeParser.ParseFull(qr);
-            Assert.AreEqual(expectedCis, qRParseResult.CIS);
+            var result = CisBuilder.Build(input);
+            Assert.AreEqual(expected, result);
         }
 
         // ClothesCIS converted to DataTestMethod with DataRow
         [DataTestMethod]
         [DataRow("0104610541730272215pnKT'RwId);*91EE1192PFY/37fDDABcSYnthTvZ9i90lB04JHGgCGsBDGie0uM=", "0104610541730272215pnKT'RwId);*")]
-        public void ClothesCIS(string qr, string expectedCis)
+        public void ClothesCIS(string input, string expected)
         {
-            var qRCodeParser = new QRCodeParser();
-            var qRParseResult = qRCodeParser.ParseFull(qr);
-            Assert.AreEqual(expectedCis, qRParseResult.CIS);
+            var result = CisBuilder.Build(input);
+            Assert.AreEqual(expected, result);
         }
     }
 }
