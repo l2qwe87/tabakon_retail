@@ -341,6 +341,14 @@
 							<Font ref="sys:DefaultGUIFont" faceName="MS Shell Dlg" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 							<ExtendedTooltip name="АксессуарыIQOS50РасширеннаяПодсказка" id="51"/>
 						</Button>
+						<Button name="АксессуарыIQOSСкидка90" id="57">
+							<Type>UsualButton</Type>
+							<Width>20</Width>
+							<Height>4</Height>
+							<CommandName>Form.Command.АксессуарыIQOSСкидка90</CommandName>
+							<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ExtendedTooltip name="АксессуарыIQOSСкидка90РасширеннаяПодсказка" id="58"/>
+						</Button>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -374,6 +382,21 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Аксессуары IQOSСкидка30</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБККоманднаяПанельСкидкиНажатие</Action>
+		</Command>
+		<Command name="АксессуарыIQOSСкидка90" id="1000002">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аксессуары IQOS 90%</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аксессуары IQOSСкидка90</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБККоманднаяПанельСкидкиНажатие</Action>
