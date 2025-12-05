@@ -671,6 +671,18 @@
 										</UsualGroup>
 									</ChildItems>
 								</UsualGroup>
+								<Button name="НовыйГод" id="187">
+									<Type>Hyperlink</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Command.НовыйГод</CommandName>
+									<TextColor>#00B1DD</TextColor>
+									<Font ref="style:LargeTextFont" kind="StyleItem"/>
+									<Picture>
+										<xr:Abs>Picture.jpg</xr:Abs>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="НовыйГодРасширеннаяПодсказка" id="188"/>
+								</Button>
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="ГруппаПремияПоПроцентам" id="124">
@@ -1407,4 +1419,21 @@
 			</Type>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="НовыйГод" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новый год</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новый год</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НовыйГод</Action>
+		</Command>
+	</Commands>
 </Form>
