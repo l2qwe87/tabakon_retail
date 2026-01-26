@@ -431,6 +431,49 @@
 					</Type>
 				</Properties>
 			</Attribute>
+			<Attribute uuid="51eacfb5-f95d-43b2-b5f5-20101883f020">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ПоДокументу</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>73f49cbd-c760-40c3-9a2d-a9778fea2915</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="7fb83e74-e9e1-4059-b94f-c9c1c64ad16d">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ФизЛицо</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>265e5744-1dfe-464a-b0a2-8065bee8a368</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="813b43be-733b-446a-aef7-deec97fa2f49">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ДатаРождения</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>ae7b6b5a-a765-485b-9644-82453ef35c57</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
 			<Form>ФормаСписка</Form>
 			<Form>ФормаДокумента</Form>
 			<TabularSection uuid="f3f83701-4b36-42d4-aa80-19762b987de4">
@@ -806,6 +849,73 @@
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
 							<DataHistory>Use</DataHistory>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="9be60556-18c0-4321-b2ed-cbf9e251df41">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>ЭтоВетТребование</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>c0a7865b-d55f-439f-a5f7-6d6dc8fe0fe0</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:boolean</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="0f64c6a2-8b81-4782-a2ca-60dff435e5fd">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>ДатаВетРецепта</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>3b0a2d1b-3c9b-4fb3-b5a0-15fd1b0b0b63</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:dateTime</v8:Type>
+								<v8:DateQualifiers>
+									<v8:DateFractions>Date</v8:DateFractions>
+								</v8:DateQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="eb25258b-e407-485c-88f9-fc42990f9704">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>ПродажаПодарка</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>7acf9551-c2b1-4663-acd9-aedc864e4900</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:boolean</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="f0e4bdc2-dbea-470c-80e5-607f9209e1de">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>НомерВетРецепта</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>2afaee59-070c-4364-a12a-52c7d12a50e3</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:string</v8:Type>
+								<v8:StringQualifiers>
+									<v8:Length>36</v8:Length>
+									<v8:AllowedLength>Variable</v8:AllowedLength>
+								</v8:StringQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="2559362f-9d1b-4772-81fa-5193426f3160">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>ДоговорКонтрагента</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>c35d2cd3-155a-40e6-8bbc-db7029529fcd</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+							</Type>
 						</Properties>
 					</Attribute>
 				</ChildObjects>
