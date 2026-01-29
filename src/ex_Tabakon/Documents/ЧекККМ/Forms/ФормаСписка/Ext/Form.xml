@@ -48,15 +48,24 @@
 							<ExtendedTooltip name="ГруппаДействияПараметрыОтбораExtendedTooltip" id="109"/>
 							<ChildItems>
 								<UsualGroup name="ГруппаОтбор" id="28">
-									<Group>Vertical</Group>
+									<Group>Horizontal</Group>
 									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ChildItemsWidth>Equal</ChildItemsWidth>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаОтборExtendedTooltip" id="110"/>
 									<ChildItems>
+										<InputField name="ОтборОрганизация" id="32">
+											<TitleLocation>Top</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ClearButton>true</ClearButton>
+											<OpenButton>false</OpenButton>
+											<QuickChoice>true</QuickChoice>
+											<ContextMenu name="ОтборОрганизацияКонтекстноеМеню" id="33"/>
+											<ExtendedTooltip name="ОтборОрганизацияExtendedTooltip" id="111"/>
+										</InputField>
 										<InputField name="ОтборМагазин" id="29">
-											<TitleLocation>Left</TitleLocation>
+											<TitleLocation>Top</TitleLocation>
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<ClearButton>true</ClearButton>
 											<OpenButton>false</OpenButton>
@@ -71,17 +80,8 @@
 											<ContextMenu name="ОтборМагазинКонтекстноеМеню" id="30"/>
 											<ExtendedTooltip name="ОтборМагазинExtendedTooltip" id="112"/>
 										</InputField>
-										<InputField name="ОтборОрганизация" id="32">
-											<TitleLocation>Left</TitleLocation>
-											<AutoMaxWidth>false</AutoMaxWidth>
-											<ClearButton>true</ClearButton>
-											<OpenButton>false</OpenButton>
-											<QuickChoice>true</QuickChoice>
-											<ContextMenu name="ОтборОрганизацияКонтекстноеМеню" id="33"/>
-											<ExtendedTooltip name="ОтборОрганизацияExtendedTooltip" id="111"/>
-										</InputField>
 										<InputField name="ОтборКассаККМ" id="102">
-											<TitleLocation>Left</TitleLocation>
+											<TitleLocation>Top</TitleLocation>
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<ClearButton>true</ClearButton>
 											<OpenButton>false</OpenButton>
@@ -112,10 +112,6 @@
 																<Presentation/>
 																<Value xsi:type="xr:DesignTimeRef">Enum.ТипыКассККМ.EnumValue.АвтономнаяККМ</Value>
 															</v8:Value>
-															<v8:Value xsi:type="FormChoiceListDesTimeValue">
-																<Presentation/>
-																<Value xsi:type="xr:DesignTimeRef">Enum.ТипыКассККМ.EnumValue.СетевоеОборудование</Value>
-															</v8:Value>
 														</Value>
 													</app:value>
 												</app:item>
@@ -128,7 +124,6 @@
 								<UsualGroup name="ГруппаСмена" id="104">
 									<UserVisible>
 										<xr:Common>false</xr:Common>
-										<xr:Value name="Role.ПолныеПрава">true</xr:Value>
 									</UserVisible>
 									<Title>
 										<v8:item>
@@ -210,7 +205,6 @@
 								<UsualGroup name="ГруппаВнесениеВыемка" id="95">
 									<UserVisible>
 										<xr:Common>false</xr:Common>
-										<xr:Value name="Role.ПолныеПрава">true</xr:Value>
 									</UserVisible>
 									<Title>
 										<v8:item>
@@ -242,63 +236,7 @@
 										</Button>
 									</ChildItems>
 								</UsualGroup>
-								<UsualGroup name="ГруппаЭквайринг" id="245">
-									<UserVisible>
-										<xr:Common>false</xr:Common>
-										<xr:Value name="Role.ПолныеПрава">true</xr:Value>
-									</UserVisible>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа эквайринг</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа эквайринг</v8:content>
-										</v8:item>
-									</ToolTip>
-									<Group>Vertical</Group>
 									<Behavior>Usual</Behavior>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаЭквайрингРасширеннаяПодсказка" id="249"/>
-									<ChildItems>
-										<Button name="ВыполнитьСверкуИтогов" id="243">
-											<Type>UsualButton</Type>
-											<Representation>PictureAndText</Representation>
-											<CommandName>0</CommandName>
-											<Picture>
-												<xr:Ref>CommonPicture.ПодключаемоеОборудованиеЭквайринговыйТерминал16</xr:Ref>
-												<xr:LoadTransparent>true</xr:LoadTransparent>
-											</Picture>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Сверка итогов</v8:content>
-												</v8:item>
-											</Title>
-											<ExtendedTooltip name="ВыполнитьСверкуИтоговРасширеннаяПодсказка" id="250"/>
-										</Button>
-										<Button name="НапечататьПоследнийСлипЧек" id="247">
-											<Type>UsualButton</Type>
-											<Representation>PictureAndText</Representation>
-											<CommandName>0</CommandName>
-											<Picture>
-												<xr:Ref>CommonPicture.ПодключаемоеОборудованиеЭквайринговыйТерминал16</xr:Ref>
-												<xr:LoadTransparent>true</xr:LoadTransparent>
-											</Picture>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Последний слип-чек</v8:content>
-												</v8:item>
-											</Title>
-											<ExtendedTooltip name="НапечататьПоследнийСлипЧекРасширеннаяПодсказка" id="251"/>
-										</Button>
-									</ChildItems>
-								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
 						<CommandBar name="КоманднаяПанельФормы" id="201">
@@ -504,6 +442,7 @@
 							<InitialTreeView>ExpandTopLevel</InitialTreeView>
 							<EnableStartDrag>true</EnableStartDrag>
 							<FileDragMode>AsFile</FileDragMode>
+							<RowPictureDataPath>10000000</RowPictureDataPath>
 							<AutoRefresh>false</AutoRefresh>
 							<AutoRefreshPeriod>60</AutoRefreshPeriod>
 							<Period>
@@ -517,7 +456,6 @@
 							<ShowRoot>true</ShowRoot>
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
-							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 							<ContextMenu name="СписокКонтекстноеМеню" id="2">
 								<ChildItems>
 									<Button name="СписокКонтекстноеМенюВозвратОтПокупателя" id="231">
@@ -585,7 +523,6 @@
 											<v8:content>Смена</v8:content>
 										</v8:item>
 									</Title>
-									<HorizontalAlign>Left</HorizontalAlign>
 									<Width>7</Width>
 									<ContextMenu name="НомерСменыККМКонтекстноеМеню" id="9"/>
 									<ExtendedTooltip name="НомерСменыККМExtendedTooltip" id="127"/>
@@ -637,6 +574,22 @@
 									<ContextMenu name="СтатусЧекаККМКонтекстноеМеню" id="15"/>
 									<ExtendedTooltip name="СтатусЧекаККМExtendedTooltip" id="131"/>
 								</LabelField>
+								<LabelField name="ДисконтнаяКарта" id="19">
+									<Width>4</Width>
+									<ContextMenu name="ДисконтнаяКартаКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="ДисконтнаяКартаExtendedTooltip" id="133"/>
+								</LabelField>
+								<LabelField name="ВладелецДисконтнойКарты" id="21">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Владелец</v8:content>
+										</v8:item>
+									</Title>
+									<Width>4</Width>
+									<ContextMenu name="ВладелецДисконтнойКартыКонтекстноеМеню" id="22"/>
+									<ExtendedTooltip name="ВладелецДисконтнойКартыExtendedTooltip" id="134"/>
+								</LabelField>
 								<ColumnGroup name="ГруппаДисконтнаяКарта" id="235">
 									<Title>
 										<v8:item>
@@ -680,11 +633,6 @@
 									<ContextMenu name="МагазинКонтекстноеМеню" id="25"/>
 									<ExtendedTooltip name="МагазинExtendedTooltip" id="136"/>
 								</LabelField>
-								<LabelField name="Организация" id="237">
-									<Width>4</Width>
-									<ContextMenu name="ОрганизацияКонтекстноеМеню" id="238"/>
-									<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="239"/>
-								</LabelField>
 								<LabelField name="КассаККМ" id="26">
 									<Width>4</Width>
 									<ContextMenu name="КассаККМКонтекстноеМеню" id="27"/>
@@ -697,13 +645,6 @@
 								<LabelField name="ОтчетОРозничныхПродажах" id="97">
 									<ContextMenu name="ОтчетОРозничныхПродажахКонтекстноеМеню" id="98"/>
 									<ExtendedTooltip name="ОтчетОРозничныхПродажахExtendedTooltip" id="138"/>
-								</LabelField>
-								<LabelField name="Комментарий" id="240">
-									<UserVisible>
-										<xr:Common>false</xr:Common>
-									</UserVisible>
-									<ContextMenu name="КомментарийКонтекстноеМеню" id="241"/>
-									<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="242"/>
 								</LabelField>
 							</ChildItems>
 						</Table>
@@ -764,6 +705,7 @@
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<EnableStartDrag>true</EnableStartDrag>
 							<FileDragMode>AsFile</FileDragMode>
+							<RowPictureDataPath>10000000</RowPictureDataPath>
 							<AutoRefresh>false</AutoRefresh>
 							<AutoRefreshPeriod>60</AutoRefreshPeriod>
 							<Period>
@@ -1013,15 +955,24 @@
 								<ExtendedTooltip name="ГруппаДействияПараметрыОтбораExtendedTooltip" id="109"/>
 								<ChildItems>
 									<UsualGroup name="ГруппаОтбор" id="28">
-										<Group>Vertical</Group>
+										<Group>Horizontal</Group>
 										<Behavior>Usual</Behavior>
 										<Representation>None</Representation>
 										<ChildItemsWidth>Equal</ChildItemsWidth>
 										<ShowTitle>false</ShowTitle>
 										<ExtendedTooltip name="ГруппаОтборExtendedTooltip" id="110"/>
 										<ChildItems>
+											<InputField name="ОтборОрганизация" id="32">
+												<TitleLocation>Top</TitleLocation>
+												<AutoMaxWidth>false</AutoMaxWidth>
+												<ClearButton>true</ClearButton>
+												<OpenButton>false</OpenButton>
+												<QuickChoice>true</QuickChoice>
+												<ContextMenu name="ОтборОрганизацияКонтекстноеМеню" id="33"/>
+												<ExtendedTooltip name="ОтборОрганизацияExtendedTooltip" id="111"/>
+											</InputField>
 											<InputField name="ОтборМагазин" id="29">
-												<TitleLocation>Left</TitleLocation>
+												<TitleLocation>Top</TitleLocation>
 												<AutoMaxWidth>false</AutoMaxWidth>
 												<MaxWidth>28</MaxWidth>
 												<ClearButton>true</ClearButton>
@@ -1048,7 +999,7 @@
 												<ExtendedTooltip name="ОтборОрганизацияExtendedTooltip" id="111"/>
 											</InputField>
 											<InputField name="ОтборКассаККМ" id="102">
-												<TitleLocation>Left</TitleLocation>
+												<TitleLocation>Top</TitleLocation>
 												<AutoMaxWidth>false</AutoMaxWidth>
 												<MaxWidth>28</MaxWidth>
 												<ClearButton>true</ClearButton>
@@ -1096,7 +1047,6 @@
 									<UsualGroup name="ГруппаСмена" id="104">
 										<UserVisible>
 											<xr:Common>false</xr:Common>
-											<xr:Value name="Role.ПолныеПрава">true</xr:Value>
 										</UserVisible>
 										<Title>
 											<v8:item>
@@ -1178,7 +1128,6 @@
 									<UsualGroup name="ГруппаВнесениеВыемка" id="95">
 										<UserVisible>
 											<xr:Common>false</xr:Common>
-											<xr:Value name="Role.ПолныеПрава">true</xr:Value>
 										</UserVisible>
 										<Title>
 											<v8:item>
@@ -1307,6 +1256,7 @@
 											<Button name="СписокДокументЧекККМСоздатьНаОсновании1" id="203">
 												<Type>CommandBarButton</Type>
 												<CommandName>0</CommandName>
+												<DataPath>1:02023637-7868-4a5f-8576-835a76e0c9ba/182</DataPath>
 												<Title>
 													<v8:item>
 														<v8:lang>ru</v8:lang>
@@ -1318,26 +1268,31 @@
 											<Button name="ФормаОбработкаСозданиеЧековКоррекцииЧекКоррекции" id="221">
 												<Type>CommandBarButton</Type>
 												<CommandName>0</CommandName>
+												<DataPath>1:02023637-7868-4a5f-8576-835a76e0c9ba/182</DataPath>
 												<ExtendedTooltip name="ФормаОбработкаСозданиеЧековКоррекцииЧекКоррекцииРасширеннаяПодсказка" id="222"/>
 											</Button>
 											<Button name="ФормаДокументПриходныйКассовыйОрдерСоздатьНаОсновании" id="205">
 												<Type>CommandBarButton</Type>
 												<CommandName>0</CommandName>
+												<DataPath>1:02023637-7868-4a5f-8576-835a76e0c9ba/182</DataPath>
 												<ExtendedTooltip name="ФормаДокументПриходныйКассовыйОрдерСоздатьНаОснованииРасширеннаяПодсказка" id="206"/>
 											</Button>
 											<Button name="ФормаОбщаяКомандаСозданиеСвязанныхОбъектов" id="185">
 												<Type>CommandBarButton</Type>
 												<CommandName>0</CommandName>
+												<DataPath>1:02023637-7868-4a5f-8576-835a76e0c9ba/182</DataPath>
 												<ExtendedTooltip name="ФормаОбщаяКомандаСозданиеСвязанныхОбъектовРасширеннаяПодсказка" id="186"/>
 											</Button>
 											<Button name="ФормаДокументОплатаОтПокупателяПлатежнойКартойСоздатьНаОсновании" id="209">
 												<Type>CommandBarButton</Type>
 												<CommandName>0</CommandName>
+												<DataPath>1:02023637-7868-4a5f-8576-835a76e0c9ba/182</DataPath>
 												<ExtendedTooltip name="ФормаДокументОплатаОтПокупателяПлатежнойКартойСоздатьНаОснованииРасширеннаяПодсказка" id="210"/>
 											</Button>
 											<Button name="ФормаРасходныйКассовыйОрдер" id="219">
 												<Type>CommandBarButton</Type>
 												<CommandName>0</CommandName>
+												<DataPath>1:02023637-7868-4a5f-8576-835a76e0c9ba/182</DataPath>
 												<Title>
 													<v8:item>
 														<v8:lang>ru</v8:lang>
@@ -1444,11 +1399,13 @@
 											<Button name="ФормаОбщаяКомандаЗаполнениеОбъекта" id="195">
 												<Type>CommandBarButton</Type>
 												<CommandName>0</CommandName>
+												<DataPath>1:02023637-7868-4a5f-8576-835a76e0c9ba/182</DataPath>
 												<ExtendedTooltip name="ФормаОбщаяКомандаЗаполнениеОбъектаРасширеннаяПодсказка" id="196"/>
 											</Button>
 											<Button name="ФормаОбщаяКомандаОтчетыОбъекта" id="197">
 												<Type>CommandBarButton</Type>
 												<CommandName>0</CommandName>
+												<DataPath>1:02023637-7868-4a5f-8576-835a76e0c9ba/182</DataPath>
 												<ExtendedTooltip name="ФормаОбщаяКомандаОтчетыОбъектаРасширеннаяПодсказка" id="198"/>
 											</Button>
 										</ChildItems>
@@ -1467,6 +1424,7 @@
 								<InitialTreeView>ExpandTopLevel</InitialTreeView>
 								<EnableStartDrag>true</EnableStartDrag>
 								<FileDragMode>AsFile</FileDragMode>
+								<RowPictureDataPath>10000000</RowPictureDataPath>
 								<AutoRefresh>false</AutoRefresh>
 								<AutoRefreshPeriod>60</AutoRefreshPeriod>
 								<Period>
@@ -1553,6 +1511,17 @@
 												<v8:content>№ чека ККМ</v8:content>
 											</v8:item>
 										</Title>
+										<Width>7</Width>
+										<ContextMenu name="НомерСменыККМКонтекстноеМеню" id="9"/>
+										<ExtendedTooltip name="НомерСменыККМExtendedTooltip" id="127"/>
+									</LabelField>
+									<LabelField name="НомерЧекаККМ" id="10">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>№ чека ККМ</v8:content>
+											</v8:item>
+										</Title>
 										<HorizontalAlign>Left</HorizontalAlign>
 										<Width>10</Width>
 										<ContextMenu name="НомерЧекаККМКонтекстноеМеню" id="11"/>
@@ -1592,6 +1561,22 @@
 										<Width>4</Width>
 										<ContextMenu name="СтатусЧекаККМКонтекстноеМеню" id="15"/>
 										<ExtendedTooltip name="СтатусЧекаККМExtendedTooltip" id="131"/>
+									</LabelField>
+									<LabelField name="ДисконтнаяКарта" id="19">
+										<Width>4</Width>
+										<ContextMenu name="ДисконтнаяКартаКонтекстноеМеню" id="20"/>
+										<ExtendedTooltip name="ДисконтнаяКартаExtendedTooltip" id="133"/>
+									</LabelField>
+									<LabelField name="ВладелецДисконтнойКарты" id="21">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Владелец</v8:content>
+											</v8:item>
+										</Title>
+										<Width>4</Width>
+										<ContextMenu name="ВладелецДисконтнойКартыКонтекстноеМеню" id="22"/>
+										<ExtendedTooltip name="ВладелецДисконтнойКартыExtendedTooltip" id="134"/>
 									</LabelField>
 									<ColumnGroup name="ГруппаДисконтнаяКарта" id="235">
 										<Title>
@@ -1720,6 +1705,7 @@
 								<UseAlternationRowColor>true</UseAlternationRowColor>
 								<EnableStartDrag>true</EnableStartDrag>
 								<FileDragMode>AsFile</FileDragMode>
+								<RowPictureDataPath>10000000</RowPictureDataPath>
 								<AutoRefresh>false</AutoRefresh>
 								<AutoRefreshPeriod>60</AutoRefreshPeriod>
 								<Period>
