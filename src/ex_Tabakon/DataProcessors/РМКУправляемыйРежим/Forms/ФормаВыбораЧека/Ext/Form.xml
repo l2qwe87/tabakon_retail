@@ -93,6 +93,7 @@
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<EnableStartDrag>true</EnableStartDrag>
 							<FileDragMode>AsFile</FileDragMode>
+							<RowPictureDataPath>10000000</RowPictureDataPath>
 							<Font ref="style:NormalTextFont" height="16" kind="StyleItem"/>
 							<SearchStringLocation>None</SearchStringLocation>
 							<ViewStatusLocation>None</ViewStatusLocation>
@@ -217,8 +218,9 @@
 									<CommandName>0</CommandName>
 									<ExtendedTooltip name="ПоискПоМагнитномуКодуРасширеннаяПодсказка" id="112"/>
 								</Button>
-								<Button name="ПоискПоКодуПС" id="131">
+								<Button name="Кнопка1" id="123">
 									<Type>UsualButton</Type>
+									<Visible>false</Visible>
 									<TitleHeight>2</TitleHeight>
 									<Width>8</Width>
 									<Height>3</Height>
@@ -226,27 +228,10 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Найти по QR</v8:content>
+											<v8:content>Найти чек SWIP</v8:content>
 										</v8:item>
 									</Title>
-									<PictureLocation>Left</PictureLocation>
-									<ExtendedTooltip name="ПоискПоКодуПСРасширеннаяПодсказка" id="133"/>
-								</Button>
-								<Button name="КомандаОтменитьПоиск" id="115">
-									<Type>UsualButton</Type>
-									<TitleHeight>3</TitleHeight>
-									<Width>10</Width>
-									<Height>3</Height>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КомандаОтменитьПоискРасширеннаяПодсказка" id="116"/>
-								</Button>
-								<Button name="КнопкаЗакрыть" id="21">
-									<Type>UsualButton</Type>
-									<Representation>Picture</Representation>
-									<Width>10</Width>
-									<Height>3</Height>
-									<CommandName>0</CommandName>
-									<ExtendedTooltip name="КнопкаЗакрытьExtendedTooltip" id="45"/>
+									<ExtendedTooltip name="Кнопка1РасширеннаяПодсказка" id="124"/>
 								</Button>
 								<Button name="Инструкция" id="125">
 									<Type>UsualButton</Type>
@@ -277,6 +262,22 @@
 										</v8:item>
 									</Title>
 									<ExtendedTooltip name="Инструкция1РасширеннаяПодсказка" id="130"/>
+								</Button>
+								<Button name="КомандаОтменитьПоиск" id="115">
+									<Type>UsualButton</Type>
+									<TitleHeight>3</TitleHeight>
+									<Width>10</Width>
+									<Height>3</Height>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="КомандаОтменитьПоискРасширеннаяПодсказка" id="116"/>
+								</Button>
+								<Button name="КнопкаЗакрыть" id="21">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<Width>10</Width>
+									<Height>3</Height>
+									<CommandName>0</CommandName>
+									<ExtendedTooltip name="КнопкаЗакрытьExtendedTooltip" id="45"/>
 								</Button>
 							</ChildItems>
 						</UsualGroup>
@@ -437,6 +438,7 @@
 								<UseAlternationRowColor>true</UseAlternationRowColor>
 								<EnableStartDrag>true</EnableStartDrag>
 								<FileDragMode>AsFile</FileDragMode>
+								<RowPictureDataPath>10000000</RowPictureDataPath>
 								<Font ref="style:NormalTextFont" height="16" kind="StyleItem"/>
 								<SearchStringLocation>None</SearchStringLocation>
 								<ViewStatusLocation>None</ViewStatusLocation>
@@ -560,7 +562,7 @@
 										<CommandName>0</CommandName>
 										<ExtendedTooltip name="ПоискПоМагнитномуКодуРасширеннаяПодсказка" id="112"/>
 									</Button>
-									<Button name="ПоискПоКодуПС" id="123">
+									<Button name="Кнопка1" id="123">
 										<Type>UsualButton</Type>
 										<TitleHeight>2</TitleHeight>
 										<Width>8</Width>
@@ -569,11 +571,10 @@
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
-												<v8:content>Найти по QR</v8:content>
+												<v8:content>Найти чек SWIP</v8:content>
 											</v8:item>
 										</Title>
-										<PictureLocation>Left</PictureLocation>
-										<ExtendedTooltip name="ПоискПоКодуПСРасширеннаяПодсказка" id="124"/>
+										<ExtendedTooltip name="Кнопка1РасширеннаяПодсказка" id="124"/>
 									</Button>
 									<Button name="КомандаОтменитьПоиск" id="115">
 										<Type>UsualButton</Type>
