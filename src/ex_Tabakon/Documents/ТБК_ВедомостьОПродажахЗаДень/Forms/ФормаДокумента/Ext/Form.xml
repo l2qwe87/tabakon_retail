@@ -190,14 +190,6 @@
 										<Event name="OnChange">ВедомостьПродажНеУчтеноПриИзменении</Event>
 									</Events>
 								</InputField>
-								<Button name="Инкасация" id="234">
-									<Type>UsualButton</Type>
-									<Enabled>false</Enabled>
-									<CommandName>Form.Command.Инкасация</CommandName>
-									<BackColor>style:ImportantColor</BackColor>
-									<Font bold="true" kind="AutoFont"/>
-									<ExtendedTooltip name="ИнкасацияРасширеннаяПодсказка" id="235"/>
-								</Button>
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="Группа_ВыручкаКомментарий" id="78">
@@ -932,21 +924,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПродавцыПодробно</Action>
-		</Command>
-		<Command name="Инкасация" id="6">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Инкасация</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Инкасация</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>Инкасация</Action>
 		</Command>
 	</Commands>
 </Form>

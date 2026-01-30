@@ -3269,8 +3269,22 @@
 							</Title>
 							<ExtendedTooltip name="ИнструкцииРасширеннаяПодсказка" id="650"/>
 						</Button>
+						<Button name="Инкасация" id="783">
+							<Type>UsualButton</Type>
+							<Width>12</Width>
+							<Height>4</Height>
+							<CommandName>Form.Command.Инкасация</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Инкассация</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ИнкасацияРасширеннаяПодсказка" id="784"/>
+						</Button>
 						<Button name="Новости" id="651">
 							<Type>UsualButton</Type>
+							<Visible>false</Visible>
 							<Width>12</Width>
 							<Height>4</Height>
 							<CommandName>Form.Command.ОткрытьНовости</CommandName>
@@ -4613,6 +4627,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКЗаявкиИМПосле</Action>
+		</Command>
+		<Command name="Инкасация" id="1000025">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инкасация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инкасация</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКИнкасацияПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.17">
