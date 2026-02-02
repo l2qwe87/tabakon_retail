@@ -309,20 +309,6 @@
 											</Title>
 											<ExtendedTooltip name="ОТкрытьЗаявкиНаЦенникиРасширеннаяПодсказка" id="170"/>
 										</Button>
-										<Button name="ОткрытьИнструкции" id="171">
-											<Type>UsualButton</Type>
-											<Height>2</Height>
-											<HorizontalStretch>true</HorizontalStretch>
-											<CommandName>Form.Command.ОткрытьИнструкции</CommandName>
-											<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Инструкции</v8:content>
-												</v8:item>
-											</Title>
-											<ExtendedTooltip name="ОткрытьИнструкцииРасширеннаяПодсказка" id="172"/>
-										</Button>
 										<Button name="Инкасация" id="179">
 											<Type>UsualButton</Type>
 											<Height>2</Height>
@@ -337,9 +323,22 @@
 											</Title>
 											<ExtendedTooltip name="ИнкасацияРасширеннаяПодсказка" id="180"/>
 										</Button>
+										<Button name="ОткрытьИнструкции" id="171">
+											<Type>UsualButton</Type>
+											<Height>2</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<CommandName>Form.Command.ОткрытьИнструкции</CommandName>
+											<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Инструкции</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ОткрытьИнструкцииРасширеннаяПодсказка" id="172"/>
+										</Button>
 										<Button name="ПоказатьНовости" id="173">
 											<Type>UsualButton</Type>
-											<Visible>false</Visible>
 											<Height>2</Height>
 											<HorizontalStretch>true</HorizontalStretch>
 											<CommandName>Form.Command.ПоказатьНовости</CommandName>
