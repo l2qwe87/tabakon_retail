@@ -13,6 +13,7 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="BeforeClose">ПередЗакрытием</Event>
 		<Event name="BeforeWrite">ПередЗаписью</Event>
@@ -175,6 +176,7 @@
 								</InputField>
 								<InputField name="ВедомостьПродажНеУчтено" id="19">
 									<DataPath>Объект.ВедомостьПродажНеУчтено</DataPath>
+									<Visible>false</Visible>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -214,6 +216,7 @@
 								</InputField>
 								<InputField name="Комментарий_ВедомостьПродажнеНеУчтено" id="83">
 									<DataPath>Объект.ВедомостьПродажнеНеУчтено_Комментарий</DataPath>
+									<Visible>false</Visible>
 									<TitleLocation>None</TitleLocation>
 									<ContextMenu name="Комментарий_ВедомостьПродажнеНеУчтеноКонтекстноеМеню" id="84"/>
 									<ExtendedTooltip name="Комментарий_ВедомостьПродажнеНеУчтеноРасширеннаяПодсказка" id="85"/>
@@ -589,7 +592,6 @@
 									<ExtendedTooltip name="ПродавцыПродавецРасширеннаяПодсказка" id="211"/>
 								</InputField>
 								<CheckBoxField name="ПродавцыЭтоГлавныйПродавец" id="212">
-									<DataPath>1/0:21c50195-4f04-443f-89d5-0ab06cff8aed/0:c0dbf4cf-9d91-4020-80b4-4702ea2588e0</DataPath>
 									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<CheckBoxType>Auto</CheckBoxType>
