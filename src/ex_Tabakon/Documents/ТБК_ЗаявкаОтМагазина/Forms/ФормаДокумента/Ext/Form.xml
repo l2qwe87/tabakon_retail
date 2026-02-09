@@ -178,15 +178,47 @@
 			<ContextMenu name="ПричинаОтказаКонтекстноеМеню" id="65"/>
 			<ExtendedTooltip name="ПричинаОтказаРасширеннаяПодсказка" id="66"/>
 		</InputField>
-		<CheckBoxField name="Сформирован" id="59">
-			<DataPath>Объект.Сформирован</DataPath>
-			<CheckBoxType>Auto</CheckBoxType>
-			<ContextMenu name="СформированКонтекстноеМеню" id="60"/>
-			<ExtendedTooltip name="СформированРасширеннаяПодсказка" id="61"/>
-			<Events>
-				<Event name="OnChange">СформированПриИзменении</Event>
-			</Events>
-		</CheckBoxField>
+		<UsualGroup name="ГруппаСформирован" id="158">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа сформирован</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа сформирован</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСформированРасширеннаяПодсказка" id="159"/>
+			<ChildItems>
+				<CheckBoxField name="Сформирован" id="59">
+					<DataPath>Объект.Сформирован</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СформированКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="СформированРасширеннаяПодсказка" id="61"/>
+					<Events>
+						<Event name="OnChange">СформированПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="ДатаСформирован" id="155">
+					<DataPath>Объект.ДатаСформирован</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата формирования</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДатаСформированКонтекстноеМеню" id="156"/>
+					<ExtendedTooltip name="ДатаСформированРасширеннаяПодсказка" id="157"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<Table name="Товары" id="22">
 			<Representation>List</Representation>
 			<AutoInsertNewRow>true</AutoInsertNewRow>
