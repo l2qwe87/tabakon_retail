@@ -307,6 +307,138 @@
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
+						<Button name="Купюры" id="277">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.Купюры</CommandName>
+							<ExtendedTooltip name="КупюрыРасширеннаяПодсказка" id="278"/>
+						</Button>
+						<UsualGroup name="Группа_Купюры" id="234">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа возвраты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Height>1</Height>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="Группа_КупюрыРасширеннаяПодсказка" id="235"/>
+							<ChildItems>
+								<Table name="Купюры5000" id="236">
+									<TitleLocation>Top</TitleLocation>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.Купюры5000</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Купюры 5000</v8:content>
+										</v8:item>
+									</Title>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="Купюры5000КонтекстноеМеню" id="237"/>
+									<AutoCommandBar name="Купюры5000КоманднаяПанель" id="238"/>
+									<ExtendedTooltip name="Купюры5000РасширеннаяПодсказка" id="239"/>
+									<SearchStringAddition name="Купюры5000СтрокаПоиска" id="240">
+										<AdditionSource>
+											<Item>Купюры5000</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="Купюры5000СтрокаПоискаКонтекстноеМеню" id="241"/>
+										<ExtendedTooltip name="Купюры5000СтрокаПоискаРасширеннаяПодсказка" id="242"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="Купюры5000СостояниеПросмотра" id="243">
+										<AdditionSource>
+											<Item>Купюры5000</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="Купюры5000СостояниеПросмотраКонтекстноеМеню" id="244"/>
+										<ExtendedTooltip name="Купюры5000СостояниеПросмотраРасширеннаяПодсказка" id="245"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="Купюры5000УправлениеПоиском" id="246">
+										<AdditionSource>
+											<Item>Купюры5000</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="Купюры5000УправлениеПоискомКонтекстноеМеню" id="247"/>
+										<ExtendedTooltip name="Купюры5000УправлениеПоискомРасширеннаяПодсказка" id="248"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="КупюрыНомерСтроки" id="249">
+											<DataPath>Объект.Купюры5000.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="КупюрыНомерСтрокиКонтекстноеМеню" id="250"/>
+											<ExtendedTooltip name="КупюрыНомерСтрокиРасширеннаяПодсказка" id="251"/>
+										</LabelField>
+										<InputField name="КупюрыКупюра5000" id="252">
+											<DataPath>Объект.Купюры5000.Номер</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>34</Width>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="КупюрыКупюра5000КонтекстноеМеню" id="253"/>
+											<ExtendedTooltip name="КупюрыКупюра5000РасширеннаяПодсказка" id="254"/>
+										</InputField>
+										<InputField name="КупюрыКупюра2000" id="255">
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="КупюрыКупюра2000КонтекстноеМеню" id="256"/>
+											<ExtendedTooltip name="КупюрыКупюра2000РасширеннаяПодсказка" id="257"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+								<Table name="Купюры2000" id="258">
+									<TitleLocation>Top</TitleLocation>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.Купюры2000</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="Купюры2000КонтекстноеМеню" id="259"/>
+									<AutoCommandBar name="Купюры2000КоманднаяПанель" id="260"/>
+									<ExtendedTooltip name="Купюры2000РасширеннаяПодсказка" id="261"/>
+									<SearchStringAddition name="Купюры2000СтрокаПоиска" id="262">
+										<AdditionSource>
+											<Item>Купюры2000</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="Купюры2000СтрокаПоискаКонтекстноеМеню" id="263"/>
+										<ExtendedTooltip name="Купюры2000СтрокаПоискаРасширеннаяПодсказка" id="264"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="Купюры2000СостояниеПросмотра" id="265">
+										<AdditionSource>
+											<Item>Купюры2000</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="Купюры2000СостояниеПросмотраКонтекстноеМеню" id="266"/>
+										<ExtendedTooltip name="Купюры2000СостояниеПросмотраРасширеннаяПодсказка" id="267"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="Купюры2000УправлениеПоиском" id="268">
+										<AdditionSource>
+											<Item>Купюры2000</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="Купюры2000УправлениеПоискомКонтекстноеМеню" id="269"/>
+										<ExtendedTooltip name="Купюры2000УправлениеПоискомРасширеннаяПодсказка" id="270"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="Купюры2000НомерСтроки" id="271">
+											<DataPath>Объект.Купюры2000.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="Купюры2000НомерСтрокиКонтекстноеМеню" id="272"/>
+											<ExtendedTooltip name="Купюры2000НомерСтрокиРасширеннаяПодсказка" id="273"/>
+										</LabelField>
+										<InputField name="Купюры2000Номера" id="274">
+											<DataPath>Объект.Купюры2000.Номер</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="Купюры2000НомераКонтекстноеМеню" id="275"/>
+											<ExtendedTooltip name="Купюры2000НомераРасширеннаяПодсказка" id="276"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
 						<Button name="ВыемкаПодробно" id="156">
 							<Type>Hyperlink</Type>
 							<CommandName>Form.Command.ВыемкаПодробно</CommandName>
@@ -924,6 +1056,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПродавцыПодробно</Action>
+		</Command>
+		<Command name="Купюры" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Купюры</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выемка подробно</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Купюры</Action>
 		</Command>
 	</Commands>
 </Form>
