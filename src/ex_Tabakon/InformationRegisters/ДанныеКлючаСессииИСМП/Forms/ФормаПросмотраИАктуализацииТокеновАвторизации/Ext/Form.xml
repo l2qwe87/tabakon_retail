@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="ПанельКнопок" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель кнопок</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПанельКнопокРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Button name="Актуализировать" id="8">
+					<Type>UsualButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="АктуализироватьРасширеннаяПодсказка" id="9"/>
+				</Button>
+				<UsualGroup name="ГруппаНапоминание" id="44">
+					<EnableContentChange>true</EnableContentChange>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа напоминание</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНапоминаниеРасширеннаяПодсказка" id="45"/>
+					<ChildItems>
+						<PictureDecoration name="Отступ1" id="92">
+							<Width>3</Width>
+							<Height>1</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отступ1</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Отступ1КонтекстноеМеню" id="93"/>
+							<ExtendedTooltip name="Отступ1РасширеннаяПодсказка" id="94"/>
+						</PictureDecoration>
+						<InputField name="СрокПовторногоОповещения" id="3">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Напомнить через</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Время, через которое нужно напомнить</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>15</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<DropListButton>true</DropListButton>
+							<ClearButton>false</ClearButton>
+							<EditTextUpdate>OnValueChange</EditTextUpdate>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xs:string">5м</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xs:string">10м</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xs:string">15м</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xs:string">30м</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="СрокПовторногоОповещенияКонтекстноеМеню" id="4"/>
+							<ExtendedTooltip name="СрокПовторногоОповещенияРасширеннаяПодсказка" id="5"/>
+						</InputField>
+						<Button name="ОтложитьВсе" id="6">
+							<Type>UsualButton</Type>
+							<CommandName>0</CommandName>
+							<ExtendedTooltip name="ОтложитьВсеРасширеннаяПодсказка" id="7"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<CommandBar name="ГруппаЕще" id="70">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ещё</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаЕщеРасширеннаяПодсказка" id="71"/>
+					<ChildItems>
+						<Button name="Добавить" id="99">
+							<Type>CommandBarButton</Type>
+							<CommandName>0</CommandName>
+							<ExtendedTooltip name="ДобавитьРасширеннаяПодсказка" id="100"/>
+						</Button>
+						<Button name="Удалить" id="101">
+							<Type>CommandBarButton</Type>
+							<CommandName>0</CommandName>
+							<ExtendedTooltip name="УдалитьРасширеннаяПодсказка" id="102"/>
+						</Button>
+						<Button name="ОбновитьТаблицуТокенов" id="58">
+							<Type>CommandBarButton</Type>
+							<CommandName>0</CommandName>
+							<ExtendedTooltip name="ОбновитьТаблицуТокеновРасширеннаяПодсказка" id="59"/>
+						</Button>
+						<ButtonGroup name="КомандыТаблицы" id="97">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Команды таблицы</v8:content>
+								</v8:item>
+							</Title>
+							<CommandSource>Item.Токены</CommandSource>
+							<ExtendedTooltip name="КомандыТаблицыРасширеннаяПодсказка" id="98"/>
+						</ButtonGroup>
+						<ButtonGroup name="КомандыФормы" id="95">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Команды формы</v8:content>
+								</v8:item>
+							</Title>
+							<CommandSource>Form</CommandSource>
+							<ExtendedTooltip name="КомандыФормыРасширеннаяПодсказка" id="96"/>
+						</ButtonGroup>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Токены" id="10">
+			<Representation>List</Representation>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТокеныКонтекстноеМеню" id="12"/>
+			<AutoCommandBar name="ТокеныКоманднаяПанель" id="11">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТокеныРасширеннаяПодсказка" id="13"/>
+			<SearchStringAddition name="ТокеныСтрокаПоиска" id="14">
+				<AdditionSource>
+					<Item>Токены</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТокеныСтрокаПоискаКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ТокеныСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТокеныСостояниеПросмотра" id="20">
+				<AdditionSource>
+					<Item>Токены</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТокеныСостояниеПросмотраКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ТокеныСостояниеПросмотраРасширеннаяПодсказка" id="22"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТокеныУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>Токены</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТокеныУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ТокеныУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ТокеныОрганизация" id="23">
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="ТокеныОрганизацияКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ТокеныОрганизацияРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="ТокеныПроизводственныйОбъект" id="103">
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="ТокеныПроизводственныйОбъектКонтекстноеМеню" id="104"/>
+					<ExtendedTooltip name="ТокеныПроизводственныйОбъектРасширеннаяПодсказка" id="105"/>
+				</InputField>
+				<InputField name="ТокеныТипТокенаАвторизации" id="106">
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип токена</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип токена авторизации</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="ТокеныТипТокенаАвторизацииКонтекстноеМеню" id="107"/>
+					<ExtendedTooltip name="ТокеныТипТокенаАвторизацииРасширеннаяПодсказка" id="108"/>
+				</InputField>
+				<InputField name="ТокеныВремяДействияСтрокой" id="52">
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="ТокеныВремяДействияСтрокойКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ТокеныВремяДействияСтрокойРасширеннаяПодсказка" id="54"/>
+				</InputField>
+				<CheckBoxField name="ТокеныТребуетсяАктуализация" id="46">
+					<Visible>false</Visible>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ReadOnly>true</ReadOnly>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТокеныТребуетсяАктуализацияКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ТокеныТребуетсяАктуализацияРасширеннаяПодсказка" id="48"/>
+				</CheckBoxField>
+				<CheckBoxField name="ТокеныПросрочен" id="55">
+					<Visible>false</Visible>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ReadOnly>true</ReadOnly>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТокеныПросроченКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ТокеныПросроченРасширеннаяПодсказка" id="57"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes/>
+	<BaseForm version="2.17">
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+			<Autofill>false</Autofill>
+		</AutoCommandBar>
+		<ChildItems>
+			<UsualGroup name="ПанельКнопок" id="1">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Панель кнопок</v8:content>
+					</v8:item>
+				</Title>
+				<Group>AlwaysHorizontal</Group>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ПанельКнопокРасширеннаяПодсказка" id="2"/>
+				<ChildItems>
+					<Button name="Актуализировать" id="8">
+						<Type>UsualButton</Type>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="АктуализироватьРасширеннаяПодсказка" id="9"/>
+					</Button>
+					<UsualGroup name="ГруппаНапоминание" id="44">
+						<EnableContentChange>true</EnableContentChange>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа напоминание</v8:content>
+							</v8:item>
+						</Title>
+						<Group>AlwaysHorizontal</Group>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ГруппаНапоминаниеРасширеннаяПодсказка" id="45"/>
+						<ChildItems>
+							<PictureDecoration name="Отступ1" id="92">
+								<Width>3</Width>
+								<Height>1</Height>
+								<HorizontalStretch>false</HorizontalStretch>
+								<VerticalStretch>false</VerticalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Отступ1</v8:content>
+									</v8:item>
+								</Title>
+								<ContextMenu name="Отступ1КонтекстноеМеню" id="93"/>
+								<ExtendedTooltip name="Отступ1РасширеннаяПодсказка" id="94"/>
+							</PictureDecoration>
+							<InputField name="СрокПовторногоОповещения" id="3">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Напомнить через</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Время, через которое нужно напомнить</v8:content>
+									</v8:item>
+								</ToolTip>
+								<Width>15</Width>
+								<HorizontalStretch>false</HorizontalStretch>
+								<DropListButton>true</DropListButton>
+								<ClearButton>false</ClearButton>
+								<EditTextUpdate>OnValueChange</EditTextUpdate>
+								<ChoiceList>
+									<xr:Item>
+										<xr:Presentation/>
+										<xr:CheckState>0</xr:CheckState>
+										<xr:Value xsi:type="FormChoiceListDesTimeValue">
+											<Presentation/>
+											<Value xsi:type="xs:string">5м</Value>
+										</xr:Value>
+									</xr:Item>
+									<xr:Item>
+										<xr:Presentation/>
+										<xr:CheckState>0</xr:CheckState>
+										<xr:Value xsi:type="FormChoiceListDesTimeValue">
+											<Presentation/>
+											<Value xsi:type="xs:string">10м</Value>
+										</xr:Value>
+									</xr:Item>
+									<xr:Item>
+										<xr:Presentation/>
+										<xr:CheckState>0</xr:CheckState>
+										<xr:Value xsi:type="FormChoiceListDesTimeValue">
+											<Presentation/>
+											<Value xsi:type="xs:string">15м</Value>
+										</xr:Value>
+									</xr:Item>
+									<xr:Item>
+										<xr:Presentation/>
+										<xr:CheckState>0</xr:CheckState>
+										<xr:Value xsi:type="FormChoiceListDesTimeValue">
+											<Presentation/>
+											<Value xsi:type="xs:string">30м</Value>
+										</xr:Value>
+									</xr:Item>
+								</ChoiceList>
+								<ContextMenu name="СрокПовторногоОповещенияКонтекстноеМеню" id="4"/>
+								<ExtendedTooltip name="СрокПовторногоОповещенияРасширеннаяПодсказка" id="5"/>
+							</InputField>
+							<Button name="ОтложитьВсе" id="6">
+								<Type>UsualButton</Type>
+								<CommandName>0</CommandName>
+								<ExtendedTooltip name="ОтложитьВсеРасширеннаяПодсказка" id="7"/>
+							</Button>
+						</ChildItems>
+					</UsualGroup>
+					<CommandBar name="ГруппаЕще" id="70">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ещё</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ГруппаЕщеРасширеннаяПодсказка" id="71"/>
+						<ChildItems>
+							<Button name="Добавить" id="99">
+								<Type>CommandBarButton</Type>
+								<CommandName>0</CommandName>
+								<ExtendedTooltip name="ДобавитьРасширеннаяПодсказка" id="100"/>
+							</Button>
+							<Button name="Удалить" id="101">
+								<Type>CommandBarButton</Type>
+								<CommandName>0</CommandName>
+								<ExtendedTooltip name="УдалитьРасширеннаяПодсказка" id="102"/>
+							</Button>
+							<Button name="ОбновитьТаблицуТокенов" id="58">
+								<Type>CommandBarButton</Type>
+								<CommandName>0</CommandName>
+								<ExtendedTooltip name="ОбновитьТаблицуТокеновРасширеннаяПодсказка" id="59"/>
+							</Button>
+							<ButtonGroup name="КомандыТаблицы" id="97">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Команды таблицы</v8:content>
+									</v8:item>
+								</Title>
+								<CommandSource>Item.Токены</CommandSource>
+								<ExtendedTooltip name="КомандыТаблицыРасширеннаяПодсказка" id="98"/>
+							</ButtonGroup>
+							<ButtonGroup name="КомандыФормы" id="95">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Команды формы</v8:content>
+									</v8:item>
+								</Title>
+								<CommandSource>Form</CommandSource>
+								<ExtendedTooltip name="КомандыФормыРасширеннаяПодсказка" id="96"/>
+							</ButtonGroup>
+						</ChildItems>
+					</CommandBar>
+				</ChildItems>
+			</UsualGroup>
+			<Table name="Токены" id="10">
+				<Representation>List</Representation>
+				<ChangeRowOrder>false</ChangeRowOrder>
+				<RowFilter xsi:nil="true"/>
+				<ContextMenu name="ТокеныКонтекстноеМеню" id="12"/>
+				<AutoCommandBar name="ТокеныКоманднаяПанель" id="11">
+					<Autofill>false</Autofill>
+				</AutoCommandBar>
+				<ExtendedTooltip name="ТокеныРасширеннаяПодсказка" id="13"/>
+				<SearchStringAddition name="ТокеныСтрокаПоиска" id="14">
+					<AdditionSource>
+						<Item>Токены</Item>
+						<Type>SearchStringRepresentation</Type>
+					</AdditionSource>
+					<ContextMenu name="ТокеныСтрокаПоискаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ТокеныСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+				</SearchStringAddition>
+				<ViewStatusAddition name="ТокеныСостояниеПросмотра" id="20">
+					<AdditionSource>
+						<Item>Токены</Item>
+						<Type>ViewStatusRepresentation</Type>
+					</AdditionSource>
+					<ContextMenu name="ТокеныСостояниеПросмотраКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ТокеныСостояниеПросмотраРасширеннаяПодсказка" id="22"/>
+				</ViewStatusAddition>
+				<SearchControlAddition name="ТокеныУправлениеПоиском" id="17">
+					<AdditionSource>
+						<Item>Токены</Item>
+						<Type>SearchControl</Type>
+					</AdditionSource>
+					<ContextMenu name="ТокеныУправлениеПоискомКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ТокеныУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+				</SearchControlAddition>
+				<ChildItems>
+					<InputField name="ТокеныОрганизация" id="23">
+						<ReadOnly>true</ReadOnly>
+						<ContextMenu name="ТокеныОрганизацияКонтекстноеМеню" id="24"/>
+						<ExtendedTooltip name="ТокеныОрганизацияРасширеннаяПодсказка" id="25"/>
+					</InputField>
+					<InputField name="ТокеныПроизводственныйОбъект" id="103">
+						<ReadOnly>true</ReadOnly>
+						<ContextMenu name="ТокеныПроизводственныйОбъектКонтекстноеМеню" id="104"/>
+						<ExtendedTooltip name="ТокеныПроизводственныйОбъектРасширеннаяПодсказка" id="105"/>
+					</InputField>
+					<InputField name="ТокеныТипТокенаАвторизации" id="106">
+						<ReadOnly>true</ReadOnly>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Тип токена</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Тип токена авторизации</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ContextMenu name="ТокеныТипТокенаАвторизацииКонтекстноеМеню" id="107"/>
+						<ExtendedTooltip name="ТокеныТипТокенаАвторизацииРасширеннаяПодсказка" id="108"/>
+					</InputField>
+					<InputField name="ТокеныВремяДействияСтрокой" id="52">
+						<ReadOnly>true</ReadOnly>
+						<ContextMenu name="ТокеныВремяДействияСтрокойКонтекстноеМеню" id="53"/>
+						<ExtendedTooltip name="ТокеныВремяДействияСтрокойРасширеннаяПодсказка" id="54"/>
+					</InputField>
+					<CheckBoxField name="ТокеныТребуетсяАктуализация" id="46">
+						<Visible>false</Visible>
+						<UserVisible>
+							<xr:Common>false</xr:Common>
+						</UserVisible>
+						<ReadOnly>true</ReadOnly>
+						<CheckBoxType>Auto</CheckBoxType>
+						<ContextMenu name="ТокеныТребуетсяАктуализацияКонтекстноеМеню" id="47"/>
+						<ExtendedTooltip name="ТокеныТребуетсяАктуализацияРасширеннаяПодсказка" id="48"/>
+					</CheckBoxField>
+					<CheckBoxField name="ТокеныПросрочен" id="55">
+						<Visible>false</Visible>
+						<UserVisible>
+							<xr:Common>false</xr:Common>
+						</UserVisible>
+						<ReadOnly>true</ReadOnly>
+						<CheckBoxType>Auto</CheckBoxType>
+						<ContextMenu name="ТокеныПросроченКонтекстноеМеню" id="56"/>
+						<ExtendedTooltip name="ТокеныПросроченРасширеннаяПодсказка" id="57"/>
+					</CheckBoxField>
+				</ChildItems>
+			</Table>
+		</ChildItems>
+		<Attributes/>
+	</BaseForm>
+</Form>
