@@ -44,7 +44,7 @@
 	ДействующиеЦеныНоменклатурыСрезПоследних.Цена КАК Цена
 ПОМЕСТИТЬ Вт
 ИЗ
-	РегистрНакопления.ТоварыНаСкладах.Остатки(, ) КАК ТоварыНаСкладахОстатки
+	РегистрНакопления.ТоварыНаСкладах.Остатки(, НЕ Номенклатура В (&amp;Прочее, &amp;УслугиАренды, &amp;УслугиЗатраты)) КАК ТоварыНаСкладахОстатки
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ДействующиеЦеныНоменклатуры.СрезПоследних(&amp;ТекДата, ) КАК ДействующиеЦеныНоменклатурыСрезПоследних
 		ПО ТоварыНаСкладахОстатки.Номенклатура = ДействующиеЦеныНоменклатурыСрезПоследних.Номенклатура
 			И ТоварыНаСкладахОстатки.Характеристика = ДействующиеЦеныНоменклатурыСрезПоследних.Характеристика
@@ -200,6 +200,54 @@
 		</valueType>
 		<value xsi:type="xs:string"/>
 		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Прочее</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Прочее</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Номенклатура</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<expression>Справочники.Номенклатура.НайтиПоНаименованию("Прочее", истина)</expression>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>УслугиАренды</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Услуги аренды</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Номенклатура</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<expression>Справочники.Номенклатура.НайтиПоНаименованию("услуги аренды", Истина)</expression>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>УслугиЗатраты</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Услуги затраты</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Номенклатура</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<expression>Справочники.Номенклатура.НайтиПоНаименованию("УСЛУГИ затраты", истина)</expression>
+		<valueListAllowed>true</valueListAllowed>
 	</parameter>
 	<settingsVariant>
 		<dcsset:name>Остатки магазина</dcsset:name>
