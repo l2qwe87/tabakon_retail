@@ -39,21 +39,39 @@
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ПРЕДСТАВЛЕНИЕ(ТоварыНаСкладахОстатки.Номенклатура) КАК Номенклатура,
-	ПРЕДСТАВЛЕНИЕ(ТоварыНаСкладахОстатки.Характеристика) КАК Характеристика,
+	ТоварыНаСкладахОстатки.Характеристика КАК Характеристика,
 	ТоварыНаСкладахОстатки.КоличествоОстаток КАК Остаток,
 	ДействующиеЦеныНоменклатурыСрезПоследних.Цена КАК Цена
+ПОМЕСТИТЬ Вт
 ИЗ
-	РегистрНакопления.ТоварыНаСкладах.Остатки(, НЕ Номенклатура В (&amp;Прочее, &amp;УслугиАренды, &amp;УслугиЗатраты)) КАК ТоварыНаСкладахОстатки
+	РегистрНакопления.ТоварыНаСкладах.Остатки(, ) КАК ТоварыНаСкладахОстатки
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ДействующиеЦеныНоменклатуры.СрезПоследних(&amp;ТекДата, ) КАК ДействующиеЦеныНоменклатурыСрезПоследних
 		ПО ТоварыНаСкладахОстатки.Номенклатура = ДействующиеЦеныНоменклатурыСрезПоследних.Номенклатура
 			И ТоварыНаСкладахОстатки.Характеристика = ДействующиеЦеныНоменклатурыСрезПоследних.Характеристика
 			И ТоварыНаСкладахОстатки.Склад.Магазин = ДействующиеЦеныНоменклатурыСрезПоследних.ОбъектЦенообразования
 ГДЕ
-	ТоварыНаСкладахОстатки.Номенклатура.Наименование ПОДОБНО &amp;Наименование
+	НЕ ТоварыНаСкладахОстатки.Номенклатура.Наименование ПОДОБНО "% БК%"
+	И ТоварыНаСкладахОстатки.Номенклатура.Наименование ПОДОБНО &amp;Наименование
 	И ТоварыНаСкладахОстатки.Номенклатура.Наименование ПОДОБНО &amp;НаименованиеКоличествоЗатяжек
+;
 
-УПОРЯДОЧИТЬ ПО
-	ТоварыНаСкладахОстатки.Номенклатура.Наименование</query>
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Вт.Номенклатура КАК Номенклатура,
+	ПРЕДСТАВЛЕНИЕ(Вт.Характеристика) КАК Характеристика,
+	Вт.Остаток КАК Остаток,
+	Вт.Цена КАК Цена
+ИЗ
+	Вт КАК Вт
+ГДЕ
+	(НЕ &amp;ЕстьУсловинеНаЦену
+			ИЛИ Вт.Характеристика &lt;&gt; ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка)
+				И (&amp;ЗнакСравнения = "&lt;="
+					И Вт.Цена &lt;= &amp;Цена)
+			ИЛИ &amp;ЗнакСравнения = "&gt;="
+				И Вт.Цена &gt;= &amp;Цена
+			ИЛИ &amp;ЗнакСравнения = "="
+				И Вт.Цена = &amp;Цена)</query>
 	</dataSet>
 	<totalField>
 		<dataPath>Остаток</dataPath>
@@ -115,54 +133,6 @@
 		<useRestriction>false</useRestriction>
 	</parameter>
 	<parameter>
-		<name>Прочее</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Прочее</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Номенклатура</v8:Type>
-		</valueType>
-		<value xsi:nil="true"/>
-		<useRestriction>true</useRestriction>
-		<expression>Справочники.Номенклатура.НайтиПоНаименованию("Прочее")</expression>
-		<valueListAllowed>true</valueListAllowed>
-	</parameter>
-	<parameter>
-		<name>УслугиАренды</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Услуги аренды</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Номенклатура</v8:Type>
-		</valueType>
-		<value xsi:nil="true"/>
-		<useRestriction>true</useRestriction>
-		<expression>Справочники.Номенклатура.НайтиПоНаименованию("услуги аренды")</expression>
-		<valueListAllowed>true</valueListAllowed>
-	</parameter>
-	<parameter>
-		<name>УслугиЗатраты</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Услуги затраты</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Номенклатура</v8:Type>
-		</valueType>
-		<value xsi:nil="true"/>
-		<useRestriction>true</useRestriction>
-		<expression>Справочники.Номенклатура.НайтиПоНаименованию("УСЛУГИ затраты")</expression>
-		<valueListAllowed>true</valueListAllowed>
-	</parameter>
-	<parameter>
 		<name>ТекДата</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
@@ -179,6 +149,57 @@
 		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
 		<useRestriction>true</useRestriction>
 		<expression>ТекущаяДата()</expression>
+	</parameter>
+	<parameter>
+		<name>ЕстьУсловинеНаЦену</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Есть условине на цену</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Цена</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Цена</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ЗнакСравнения</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Знак сравнения</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string"/>
+		<useRestriction>true</useRestriction>
 	</parameter>
 	<settingsVariant>
 		<dcsset:name>Остатки магазина</dcsset:name>
@@ -214,21 +235,6 @@
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>НаименованиеКоличествоЗатяжек</dcscor:parameter>
 					<dcscor:value xsi:type="xs:string"/>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>Прочее</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>УслугиАренды</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>УслугиЗатраты</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:order>
