@@ -351,6 +351,20 @@
 											</Title>
 											<ExtendedTooltip name="ПоказатьНовостиРасширеннаяПодсказка" id="174"/>
 										</Button>
+										<Button name="ДвижениеТоваров" id="184">
+											<Type>UsualButton</Type>
+											<Height>2</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<CommandName>Form.Command.ОтчетДвиженияТоваров</CommandName>
+											<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Движение товаров</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ДвижениеТоваровРасширеннаяПодсказка" id="185"/>
+										</Button>
 									</ChildItems>
 								</UsualGroup>
 								<LabelDecoration name="ДекорацияДляЦентрирования" id="106">
@@ -979,6 +993,21 @@
 			</ToolTip>
 			<Action callType="Before">Инкасация</Action>
 			<Action callType="After">ТБКИнкасацияПосле</Action>
+		</Command>
+		<Command name="ОтчетДвиженияТоваров" id="1000012">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет движения товаров</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет движения товаров</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКОткрытьОтчетДвиженияТоваров</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.17">
