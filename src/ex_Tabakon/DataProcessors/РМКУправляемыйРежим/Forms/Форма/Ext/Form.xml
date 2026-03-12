@@ -3356,6 +3356,20 @@
 							</Title>
 							<ExtendedTooltip name="ОстаткиМагазинаРасширеннаяПодсказка" id="668"/>
 						</Button>
+						<Button name="ДвиженияТоваров" id="785">
+							<Type>UsualButton</Type>
+							<Width>12</Width>
+							<Height>4</Height>
+							<CommandName>Form.Command.ДвиженияТоваров</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Движения 
+товаров</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ДвиженияТоваровРасширеннаяПодсказка" id="786"/>
+						</Button>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -4642,6 +4656,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКИнкасацияПосле</Action>
+		</Command>
+		<Command name="ДвиженияТоваров" id="1000026">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Движения товаров</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Движения товаров</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКДвиженияТоваровПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.17">
