@@ -1058,6 +1058,11 @@
 					</ToolTip>
 					<ExtendedTooltip name="ГруппаАкцииРасширеннаяПодсказка" id="190"/>
 					<ChildItems>
+						<Button name="ОбновитьСтраницуАкций" id="242">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ОбновитьСтраницуАкций</CommandName>
+							<ExtendedTooltip name="ОбновитьСтраницуАкцийРасширеннаяПодсказка" id="243"/>
+						</Button>
 						<Table name="Акции" id="194">
 							<Representation>Tree</Representation>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
@@ -1727,6 +1732,22 @@
 				</v8:item>
 			</ToolTip>
 			<Action>НовыйГод</Action>
+		</Command>
+		<Command name="ОбновитьСтраницуАкций" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить страницу акций</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить страницу акций</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Action>ОбновитьСтраницуАкций</Action>
 		</Command>
 	</Commands>
 </Form>
