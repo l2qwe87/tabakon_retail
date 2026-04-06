@@ -9,6 +9,9 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Номенклатура</dataPath>
 			<field>Номенклатура</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Характеристика</dataPath>
@@ -38,7 +41,7 @@
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	ПРЕДСТАВЛЕНИЕ(ТоварыНаСкладахОстатки.Номенклатура) КАК Номенклатура,
+	ТоварыНаСкладахОстатки.Номенклатура КАК Номенклатура,
 	ТоварыНаСкладахОстатки.Характеристика КАК Характеристика,
 	ТоварыНаСкладахОстатки.КоличествоОстаток КАК Остаток,
 	ДействующиеЦеныНоменклатурыСрезПоследних.Цена КАК Цена
@@ -287,7 +290,7 @@
 			</dcsset:dataParameters>
 			<dcsset:order>
 				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>Номенклатура</dcsset:field>
+					<dcsset:field>Номенклатура.Наименование</dcsset:field>
 					<dcsset:orderType>Asc</dcsset:orderType>
 				</dcsset:item>
 			</dcsset:order>
