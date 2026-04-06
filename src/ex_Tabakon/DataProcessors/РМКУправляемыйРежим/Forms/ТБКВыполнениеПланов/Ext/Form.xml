@@ -259,6 +259,11 @@
 						<Event name="OnChange">ПереключательМесяцДеньПриИзменении</Event>
 					</Events>
 				</RadioButtonField>
+				<Button name="Табель" id="244">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.Табель</CommandName>
+					<ExtendedTooltip name="ТабельРасширеннаяПодсказка" id="245"/>
+				</Button>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="Группа2" id="3">
@@ -673,6 +678,7 @@
 								</UsualGroup>
 								<Button name="НовыйГод" id="187">
 									<Type>Hyperlink</Type>
+									<Visible>false</Visible>
 									<Representation>PictureAndText</Representation>
 									<CommandName>Form.Command.НовыйГод</CommandName>
 									<TextColor>#00B1DD</TextColor>
@@ -1748,6 +1754,21 @@
 			</ToolTip>
 			<Shortcut>F5</Shortcut>
 			<Action>ОбновитьСтраницуАкций</Action>
+		</Command>
+		<Command name="Табель" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Табель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Табель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Табель</Action>
 		</Command>
 	</Commands>
 </Form>
