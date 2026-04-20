@@ -12,6 +12,16 @@
 				<Font bold="true" kind="AutoFont"/>
 				<ExtendedTooltip name="ФормаИнструкцияРасширеннаяПодсказка" id="234"/>
 			</Button>
+			<Button name="ФормаОтчетАннулированныеЧеки" id="252">
+				<Type>CommandBarHyperlink</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ОтчетАннулированныеЧеки</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.MarkToDelete</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаОтчетАннулированныеЧекиРасширеннаяПодсказка" id="253"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<ChildItems>
@@ -964,6 +974,21 @@
 			</ToolTip>
 			<Action callType="Before">Инструкция</Action>
 			<Action callType="After">ТБКИнструкцияПосле</Action>
+		</Command>
+		<Command name="ОтчетАннулированныеЧеки" id="1000002">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аннулированные чеки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет аннулированные чеки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКОтчетАннулированныеЧекиПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.17">
