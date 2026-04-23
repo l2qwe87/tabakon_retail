@@ -281,7 +281,7 @@
 ИЗ
 	Справочник.ТБКОкладыПремииИПроцентыНоваяМотивация.ГруппыИсключений КАК ТБКОкладыПремииИПроцентыНоваяМотивацияГруппыИсключений
 		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ТБКОкладыПремииИПроцентыНоваяМотивация КАК ТБКОкладыПремииИПроцентыНоваяМотивация
-		ПО (ТБКОкладыПремииИПроцентыНоваяМотивацияГруппыИсключений.Ссылка = ТБКОкладыПремииИПроцентыНоваяМотивация.Ссылка)
+		ПО ТБКОкладыПремииИПроцентыНоваяМотивацияГруппыИсключений.Ссылка = ТБКОкладыПремииИПроцентыНоваяМотивация.Ссылка
 ГДЕ
 	ТБКОкладыПремииИПроцентыНоваяМотивация.Период &lt;= &amp;Период
 ;
@@ -531,13 +531,13 @@
 ИЗ
 	вт_ВТ КАК Основная
 		ЛЕВОЕ СОЕДИНЕНИЕ вт_ВТ КАК вт_ВМТВЧас
-		ПО Основная.ВМТВЧас &gt; вт_ВМТВЧас.ВМТВЧас
+		ПО Основная.ВМТВЧас &lt; вт_ВМТВЧас.ВМТВЧас
 		ЛЕВОЕ СОЕДИНЕНИЕ вт_ВТ КАК вт_ВыполнениеЛичногоПлана
-		ПО Основная.ВыполнениеЛичногоПлана &gt; вт_ВыполнениеЛичногоПлана.ВыполнениеЛичногоПлана
+		ПО Основная.ВыполнениеЛичногоПлана &lt; вт_ВыполнениеЛичногоПлана.ВыполнениеЛичногоПлана
 		ЛЕВОЕ СОЕДИНЕНИЕ вт_ВТ КАК вт_ДоляВМТ
-		ПО Основная.ДоляВМТ &gt; вт_ДоляВМТ.ДоляВМТ
+		ПО Основная.ДоляВМТ &lt; вт_ДоляВМТ.ДоляВМТ
 		ЛЕВОЕ СОЕДИНЕНИЕ вт_ВТ КАК вт_ДоляЧеков
-		ПО Основная.ДоляЧеков &gt; вт_ДоляЧеков.ДоляЧеков
+		ПО Основная.ДоляЧеков &lt; вт_ДоляЧеков.ДоляЧеков
 
 СГРУППИРОВАТЬ ПО
 	Основная.Продавец,
@@ -962,7 +962,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">#FF6600</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">#00FF00</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -988,7 +988,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">web:Salmon</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">#99CC00</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -1014,7 +1014,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">#FFCC00</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">#FFFF00</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -1040,7 +1040,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">#FFFF00</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">web:Gold</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -1066,7 +1066,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">#99CC00</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">web:DarkOrange</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -1092,7 +1092,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">#79CC6D</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">web:Salmon</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -1118,7 +1118,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">#00FF00</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">#FF6600</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -1144,7 +1144,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">#FF6600</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">#00FF00</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -1170,7 +1170,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">web:Salmon</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">#99CC00</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -1196,7 +1196,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">#FFCC00</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">#FFFF00</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -1222,7 +1222,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">#FFFF00</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">web:Gold</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -1248,7 +1248,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">#99CC00</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">web:DarkOrange</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -1274,7 +1274,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">#79CC6D</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">web:Salmon</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -1300,7 +1300,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">#00FF00</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">#FF6600</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -1326,7 +1326,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">#FF6600</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">#00FF00</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -1352,7 +1352,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">web:Salmon</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">#99CC00</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -1378,7 +1378,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">#FFCC00</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">#FFFF00</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -1404,7 +1404,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">#FFFF00</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">web:Gold</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -1430,7 +1430,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">#99CC00</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">web:DarkOrange</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -1456,7 +1456,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">#79CC6D</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">web:Salmon</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -1482,7 +1482,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">#00FF00</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">#FF6600</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -1508,7 +1508,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">#FF6600</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">#00FF00</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -1534,7 +1534,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">web:Salmon</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">#99CC00</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -1560,7 +1560,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">#FFCC00</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">#FFFF00</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -1586,7 +1586,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">#FFFF00</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">web:Gold</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -1612,7 +1612,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">#99CC00</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">web:DarkOrange</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -1638,7 +1638,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">#79CC6D</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">web:Salmon</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -1664,7 +1664,7 @@
 						<dcsset:appearance>
 							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 								<dcscor:parameter>ЦветФона</dcscor:parameter>
-								<dcscor:value xsi:type="v8ui:Color">#00FF00</dcscor:value>
+								<dcscor:value xsi:type="v8ui:Color">#FF6600</dcscor:value>
 							</dcscor:item>
 						</dcsset:appearance>
 						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
