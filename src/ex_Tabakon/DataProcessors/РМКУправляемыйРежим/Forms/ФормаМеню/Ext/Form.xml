@@ -351,6 +351,21 @@
 											</Title>
 											<ExtendedTooltip name="ПоказатьНовостиРасширеннаяПодсказка" id="174"/>
 										</Button>
+										<Button name="ОткрытьХозНужды" id="181">
+											<Type>UsualButton</Type>
+											<Enabled>false</Enabled>
+											<Height>2</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<CommandName>Form.Command.ОткрытьХозНужды</CommandName>
+											<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Хоз. нужды</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ОткрытьХозНуждыРасширеннаяПодсказка" id="182"/>
+										</Button>
 									</ChildItems>
 								</UsualGroup>
 								<LabelDecoration name="ДекорацияДляЦентрирования" id="106">
@@ -979,6 +994,21 @@
 			</ToolTip>
 			<Action callType="Before">Инкасация</Action>
 			<Action callType="After">ТБКИнкасацияПосле</Action>
+		</Command>
+		<Command name="ОткрытьХозНужды" id="1000012">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть хоз. нужды</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть хоз нужды</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКОткрытьХозНуждыПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.17">

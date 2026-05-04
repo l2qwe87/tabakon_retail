@@ -577,7 +577,7 @@
 	</dataSet>
 	<totalField>
 		<dataPath>ВМТВЧас</dataPath>
-		<expression>Среднее(ВМТВЧас)</expression>
+		<expression>Сумма(ВМТВЧас)</expression>
 	</totalField>
 	<totalField>
 		<dataPath>ВМТЧеки</dataPath>
@@ -585,15 +585,15 @@
 	</totalField>
 	<totalField>
 		<dataPath>ВыполнениеЛичногоПлана</dataPath>
-		<expression>Среднее(ВыполнениеЛичногоПлана)</expression>
+		<expression> Сумма(СуммаПродажПродавцаВМТ)/Сумма(ЛичныйПлан) * 100</expression>
 	</totalField>
 	<totalField>
 		<dataPath>ДоляВМТ</dataPath>
-		<expression>Среднее(ДоляВМТ)</expression>
+		<expression>Сумма(СуммаПродажПродавцаВМТ) / Сумма(СуммаПродажПродавца) *100</expression>
 	</totalField>
 	<totalField>
 		<dataPath>ДоляЧеков</dataPath>
-		<expression>Среднее(ДоляЧеков)</expression>
+		<expression>Сумма(ВМТЧеки) / Сумма(ОбщиеЧеки) *100</expression>
 	</totalField>
 	<totalField>
 		<dataPath>ЛичныйПлан</dataPath>
@@ -852,21 +852,6 @@
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:dataParameters>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>ВидПродажа</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>СтатусЧекаККМ</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>СтатусЧекаККМ1</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
-				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>ПериодОтч</dcscor:parameter>
