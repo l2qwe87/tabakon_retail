@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
 	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
@@ -33,7 +33,7 @@
 					</v8:item>
 				</Title>
 				<Picture>
-					<xr:Ref>0:0a4b947f-6c9b-415f-8387-db3b4716250b</xr:Ref>
+					<xr:Ref>CommonPicture.ЗаполнитьПоШаблону</xr:Ref>
 					<xr:LoadTransparent>true</xr:LoadTransparent>
 				</Picture>
 				<Representation>Picture</Representation>
@@ -359,7 +359,7 @@
 													<ExtendedTooltip name="ЗаполнитьСуммуПоОстаткуРасширеннаяПодсказка" id="203"/>
 												</Button>
 												<LabelDecoration name="НадписьОстатокДС" id="199">
-													<TextColor>0:ad87bd29-0ad1-4da4-ac62-38e714e0cb9f</TextColor>
+													<TextColor>style:ПоясняющийТекст</TextColor>
 													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<ContextMenu name="НадписьОстатокДСКонтекстноеМеню" id="200"/>
 													<ExtendedTooltip name="НадписьОстатокДСРасширеннаяПодсказка" id="201"/>
@@ -398,7 +398,7 @@
 									<xr:CheckState>0</xr:CheckState>
 									<xr:Value xsi:type="FormChoiceListDesTimeValue">
 										<Presentation/>
-										<Value xsi:type="xr:DesignTimeRef">705a9406-7848-4921-98f5-3bc8972b3d4c.ee08ea7d-f361-4756-9a0f-cede827b18c3</Value>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.ПрочиеРасходы</Value>
 									</xr:Value>
 								</xr:Item>
 								<xr:Item>
@@ -406,7 +406,7 @@
 									<xr:CheckState>0</xr:CheckState>
 									<xr:Value xsi:type="FormChoiceListDesTimeValue">
 										<Presentation/>
-										<Value xsi:type="xr:DesignTimeRef">705a9406-7848-4921-98f5-3bc8972b3d4c.c7384ec8-21fe-4421-995a-35c8496f4bf9</Value>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.ВыдачаДенежныхСредствВДругуюОрганизацию</Value>
 									</xr:Value>
 								</xr:Item>
 								<xr:Item>
@@ -414,7 +414,7 @@
 									<xr:CheckState>0</xr:CheckState>
 									<xr:Value xsi:type="FormChoiceListDesTimeValue">
 										<Presentation/>
-										<Value xsi:type="xr:DesignTimeRef">705a9406-7848-4921-98f5-3bc8972b3d4c.8e961b39-3981-49b3-913a-d3d566520b70</Value>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.ВыдачаДенежныхСредствВКассуККМ</Value>
 									</xr:Value>
 								</xr:Item>
 								<xr:Item>
@@ -422,7 +422,7 @@
 									<xr:CheckState>0</xr:CheckState>
 									<xr:Value xsi:type="FormChoiceListDesTimeValue">
 										<Presentation/>
-										<Value xsi:type="xr:DesignTimeRef">705a9406-7848-4921-98f5-3bc8972b3d4c.92b2381e-cf02-4720-8c5c-3d391006287a</Value>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.ВыдачаДенежныхСредствВДругуюКассу</Value>
 									</xr:Value>
 								</xr:Item>
 								<xr:Item>
@@ -430,7 +430,7 @@
 									<xr:CheckState>0</xr:CheckState>
 									<xr:Value xsi:type="FormChoiceListDesTimeValue">
 										<Presentation/>
-										<Value xsi:type="xr:DesignTimeRef">705a9406-7848-4921-98f5-3bc8972b3d4c.f604f718-8aa3-48a9-bdfe-834dacb618f7</Value>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.СдачаДенежныхСредствВБанк</Value>
 									</xr:Value>
 								</xr:Item>
 								<xr:Item>
@@ -438,7 +438,7 @@
 									<xr:CheckState>0</xr:CheckState>
 									<xr:Value xsi:type="FormChoiceListDesTimeValue">
 										<Presentation/>
-										<Value xsi:type="xr:DesignTimeRef">705a9406-7848-4921-98f5-3bc8972b3d4c.44998cff-8bbd-4c88-824f-94ff9cd3151a</Value>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.ВозвратОплатыКлиенту</Value>
 									</xr:Value>
 								</xr:Item>
 								<xr:Item>
@@ -446,11 +446,11 @@
 									<xr:CheckState>0</xr:CheckState>
 									<xr:Value xsi:type="FormChoiceListDesTimeValue">
 										<Presentation/>
-										<Value xsi:type="xr:DesignTimeRef">705a9406-7848-4921-98f5-3bc8972b3d4c.52e2fd8e-ea85-497a-bb5b-07edfb0439d4</Value>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.ОплатаПоставщику</Value>
 									</xr:Value>
 								</xr:Item>
 							</ChoiceList>
-							<BackColor>0:5abc496c-5745-4220-9fdc-bac092717871</BackColor>
+							<BackColor>style:ФонУправляющегоПоля</BackColor>
 							<ContextMenu name="ХозяйственнаяОперацияКонтекстноеМеню" id="103"/>
 							<ExtendedTooltip name="ХозяйственнаяОперацияExtendedTooltip" id="125"/>
 						</InputField>
@@ -623,7 +623,7 @@
 											</Title>
 											<Hyperlink>true</Hyperlink>
 											<Picture>
-												<xr:Ref>0:3f90d62c-95b9-44d3-827b-dac0341efccb</xr:Ref>
+												<xr:Ref>CommonPicture.ВниманиеЖелтый16</xr:Ref>
 												<xr:LoadTransparent>true</xr:LoadTransparent>
 											</Picture>
 											<ContextMenu name="ДекорацияНесоответствиеСНОКонтекстноеМеню" id="417"/>
@@ -823,7 +823,7 @@
 									<xr:CheckState>0</xr:CheckState>
 									<xr:Value xsi:type="FormChoiceListDesTimeValue">
 										<Presentation/>
-										<Value xsi:type="xr:DesignTimeRef">705a9406-7848-4921-98f5-3bc8972b3d4c.ee08ea7d-f361-4756-9a0f-cede827b18c3</Value>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.ПрочиеРасходы</Value>
 									</xr:Value>
 								</xr:Item>
 								<xr:Item>
@@ -831,7 +831,7 @@
 									<xr:CheckState>0</xr:CheckState>
 									<xr:Value xsi:type="FormChoiceListDesTimeValue">
 										<Presentation/>
-										<Value xsi:type="xr:DesignTimeRef">705a9406-7848-4921-98f5-3bc8972b3d4c.c7384ec8-21fe-4421-995a-35c8496f4bf9</Value>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.ВыдачаДенежныхСредствВДругуюОрганизацию</Value>
 									</xr:Value>
 								</xr:Item>
 								<xr:Item>
@@ -839,7 +839,7 @@
 									<xr:CheckState>0</xr:CheckState>
 									<xr:Value xsi:type="FormChoiceListDesTimeValue">
 										<Presentation/>
-										<Value xsi:type="xr:DesignTimeRef">705a9406-7848-4921-98f5-3bc8972b3d4c.8e961b39-3981-49b3-913a-d3d566520b70</Value>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.ВыдачаДенежныхСредствВКассуККМ</Value>
 									</xr:Value>
 								</xr:Item>
 								<xr:Item>
@@ -847,7 +847,7 @@
 									<xr:CheckState>0</xr:CheckState>
 									<xr:Value xsi:type="FormChoiceListDesTimeValue">
 										<Presentation/>
-										<Value xsi:type="xr:DesignTimeRef">705a9406-7848-4921-98f5-3bc8972b3d4c.92b2381e-cf02-4720-8c5c-3d391006287a</Value>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.ВыдачаДенежныхСредствВДругуюКассу</Value>
 									</xr:Value>
 								</xr:Item>
 								<xr:Item>
@@ -855,7 +855,7 @@
 									<xr:CheckState>0</xr:CheckState>
 									<xr:Value xsi:type="FormChoiceListDesTimeValue">
 										<Presentation/>
-										<Value xsi:type="xr:DesignTimeRef">705a9406-7848-4921-98f5-3bc8972b3d4c.f604f718-8aa3-48a9-bdfe-834dacb618f7</Value>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.СдачаДенежныхСредствВБанк</Value>
 									</xr:Value>
 								</xr:Item>
 								<xr:Item>
@@ -863,7 +863,7 @@
 									<xr:CheckState>0</xr:CheckState>
 									<xr:Value xsi:type="FormChoiceListDesTimeValue">
 										<Presentation/>
-										<Value xsi:type="xr:DesignTimeRef">705a9406-7848-4921-98f5-3bc8972b3d4c.44998cff-8bbd-4c88-824f-94ff9cd3151a</Value>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.ВозвратОплатыКлиенту</Value>
 									</xr:Value>
 								</xr:Item>
 								<xr:Item>
@@ -871,11 +871,11 @@
 									<xr:CheckState>0</xr:CheckState>
 									<xr:Value xsi:type="FormChoiceListDesTimeValue">
 										<Presentation/>
-										<Value xsi:type="xr:DesignTimeRef">705a9406-7848-4921-98f5-3bc8972b3d4c.52e2fd8e-ea85-497a-bb5b-07edfb0439d4</Value>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.ОплатаПоставщику</Value>
 									</xr:Value>
 								</xr:Item>
 							</ChoiceList>
-							<BackColor>0:5abc496c-5745-4220-9fdc-bac092717871</BackColor>
+							<BackColor>style:ФонУправляющегоПоля</BackColor>
 							<ContextMenu name="ХозяйственнаяОперация1КонтекстноеМеню" id="292"/>
 							<ExtendedTooltip name="ХозяйственнаяОперация1РасширеннаяПодсказка" id="293"/>
 						</InputField>
@@ -1308,7 +1308,7 @@
 					<VerticalStretch>false</VerticalStretch>
 					<Zoomable>true</Zoomable>
 					<ValuesPicture>
-						<xr:Ref>0:871d6b10-e1f2-46a2-9e85-355f5131e3a3</xr:Ref>
+						<xr:Ref>CommonPicture.СтатусыДокумента</xr:Ref>
 						<xr:LoadTransparent>false</xr:LoadTransparent>
 					</ValuesPicture>
 					<Border width="1">
@@ -1322,7 +1322,7 @@
 				</PictureField>
 				<LabelDecoration name="ДекорацияВнесенВКассовуюКнигу" id="323">
 					<AutoMaxWidth>false</AutoMaxWidth>
-					<TextColor>0:ad87bd29-0ad1-4da4-ac62-38e714e0cb9f</TextColor>
+					<TextColor>style:ПоясняющийТекст</TextColor>
 					<Title formatted="false">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1502,7 +1502,7 @@
 			</dcsset:item>
 		</ConditionalAppearance>
 	</Attributes>
-	<BaseForm version="2.17">
+	<BaseForm version="2.20">
 		<VerticalScroll>useIfNecessary</VerticalScroll>
 		<AutoTime>CurrentOrLast</AutoTime>
 		<UsePostingMode>Auto</UsePostingMode>

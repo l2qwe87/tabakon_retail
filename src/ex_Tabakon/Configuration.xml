@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
 	<Configuration uuid="5ad8f73a-68f1-4684-b2c3-804259a1eba0">
 		<InternalInfo>
 			<xr:ContainedObject>
@@ -30,6 +30,22 @@
 				<xr:ClassId>fb282519-d103-4dd3-bc12-cb271d631dfc</xr:ClassId>
 				<xr:ObjectId>d5ee10db-ad51-4458-a828-d8766869c9db</xr:ObjectId>
 			</xr:ContainedObject>
+			<xr:PropertyState>
+				<xr:Property>ManagedApplicationModule</xr:Property>
+				<xr:State>Extended</xr:State>
+			</xr:PropertyState>
+			<xr:PropertyState>
+				<xr:Property>SessionModule</xr:Property>
+				<xr:State>Extended</xr:State>
+			</xr:PropertyState>
+			<xr:PropertyState>
+				<xr:Property>CommandInterface</xr:Property>
+				<xr:State>Extended</xr:State>
+			</xr:PropertyState>
+			<xr:PropertyState>
+				<xr:Property>MainSectionCommandInterface</xr:Property>
+				<xr:State>Extended</xr:State>
+			</xr:PropertyState>
 		</InternalInfo>
 		<Properties>
 			<ObjectBelonging>Adopted</ObjectBelonging>
@@ -51,7 +67,7 @@
 			</UsePurposes>
 			<ScriptVariant>Russian</ScriptVariant>
 			<Vendor/>
-			<Version>3.1.4.0</Version>
+			<Version>4.0.0.0</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
@@ -62,12 +78,12 @@
 		</Properties>
 		<ChildObjects>
 			<Language>Русский</Language>
-			<Subsystem>Продажи</Subsystem>
-			<Subsystem>ТБКМиграции</Subsystem>
+			<Subsystem>Администрирование</Subsystem>
 			<Subsystem>ЗапасыИЗакупки</Subsystem>
 			<Subsystem>НормативноСправочнаяИнформация</Subsystem>
-			<Subsystem>Администрирование</Subsystem>
+			<Subsystem>Продажи</Subsystem>
 			<Subsystem>Склад</Subsystem>
+			<Subsystem>ТБКМиграции</Subsystem>
 			<StyleItem>ЦветТекстаОтмененнойСтрокиДокумента</StyleItem>
 			<StyleItem>ЦветПроведенногоДокумента</StyleItem>
 			<StyleItem>ЦветНепроведенногоДокумента</StyleItem>
@@ -149,62 +165,49 @@
 			<Role>ДобавлениеИзменениеЧековККМ</Role>
 			<Role>ПолныеПрава</Role>
 			<CommonTemplate>EF_00_00835911</CommonTemplate>
-			<CommonModule>ШтрихкодированиеИС</CommonModule>
-			<CommonModule>ШтрихкодированиеИСРТ</CommonModule>
-			<CommonModule>ШтрихкодированиеМОТП</CommonModule>
-			<CommonModule>ШтрихкодированиеИСПереопределяемый</CommonModule>
-			<CommonModule>ИнтеграцияИСРТ</CommonModule>
-			<CommonModule>ТБК_Номенклатура</CommonModule>
-			<CommonModule>ШтрихкодированиеИСВызовСервера</CommonModule>
-			<CommonModule>ТБК_Миграции</CommonModule>
-			<CommonModule>ТБК_ПраваДоступа</CommonModule>
-			<CommonModule>ТБК_WS_GET</CommonModule>
-			<CommonModule>ТБК_WS_POST</CommonModule>
-			<CommonModule>ОбщегоНазначения</CommonModule>
-			<CommonModule>ЗапасыСервер</CommonModule>
-			<CommonModule>ШтрихкодированиеЕГАИСКлиентСервер</CommonModule>
-			<CommonModule>ОбщегоНазначенияВызовСервера</CommonModule>
-			<CommonModule>МенеджерОборудованияКлиент</CommonModule>
-			<CommonModule>МенеджерОборудованияКлиентСервер</CommonModule>
-			<CommonModule>ШтрихкодированиеИСМПСлужебный</CommonModule>
-			<CommonModule>ФорматноЛогическийКонтрольВызовСервера</CommonModule>
-			<CommonModule>ШтрихкодированиеМОТППереопределяемый</CommonModule>
-			<CommonModule>ПродажиСервер</CommonModule>
-			<CommonModule>РасчетСтатусовОформленияИСМП</CommonModule>
-			<CommonModule>ШтрихкодированиеИСКлиентСервер</CommonModule>
 			<CommonModule>ДатыЗапретаИзменения</CommonModule>
-			<CommonModule>ТБК_WS</CommonModule>
-			<CommonModule>ТБК_WS_Клиент</CommonModule>
-			<CommonModule>ФоновоеВыполнение</CommonModule>
-			<CommonModule>ТБКНеФискальнаяПечать</CommonModule>
-			<CommonModule>СкидкиНаценкиСервер</CommonModule>
-			<CommonModule>ОбработкаТабличнойЧастиТоварыСервер</CommonModule>
-			<CommonModule>ТБК_Шифрование</CommonModule>
-			<CommonModule>ТБК_ПрограммаЛояльности</CommonModule>
-			<CommonModule>ОбщегоНазначенияРТВызовСервера</CommonModule>
-			<CommonModule>ШтрихкодированиеМОТПКлиентСервер</CommonModule>
-			<CommonModule>ШтрихкодированиеИССлужебный</CommonModule>
-			<CommonModule>ШтрихкодированиеИСКлиент</CommonModule>
-			<CommonModule>РозничныеПродажиКлиент</CommonModule>
-			<CommonModule>ОбщегоНазначенияКлиент</CommonModule>
-			<CommonModule>ОбработкаТабличнойЧастиТоварыКлиент</CommonModule>
-			<CommonModule>ШтрихкодированиеОбщегоНазначенияИС</CommonModule>
-			<CommonModule>РазборКодаМаркировкиИССлужебныйКлиентСервер</CommonModule>
-			<CommonModule>МаркировкаТоваровГИСМРТ</CommonModule>
-			<CommonModule>СобытияФормИСКлиент</CommonModule>
-			<CommonModule>ШтрихкодированиеОбщегоНазначенияИСКлиентСервер</CommonModule>
-			<CommonModule>КлиентЛицензированияКлиент</CommonModule>
+			<CommonModule>ЗапасыСервер</CommonModule>
 			<CommonModule>ИнтеграцияПодсистемБИП</CommonModule>
 			<CommonModule>КлиентЛицензирования</CommonModule>
-			<CommonModule>СтандартныеПодсистемыКлиент</CommonModule>
-			<CommonModule>ШтрихкодированиеИСРТКлиент</CommonModule>
-			<CommonModule>РозничныеПродажиСервер</CommonModule>
+			<CommonModule>КлиентЛицензированияКлиент</CommonModule>
+			<CommonModule>МаркировкаТоваровГИСМРТ</CommonModule>
+			<CommonModule>МенеджерОборудованияКлиент</CommonModule>
+			<CommonModule>МенеджерОборудованияКлиентСервер</CommonModule>
 			<CommonModule>ОбменДаннымиИСМПКлиентСервер</CommonModule>
 			<CommonModule>ОбменДаннымиСобытияРТ</CommonModule>
-			<CommonModule>ПодключаемоеОборудованиеРТ</CommonModule>
-			<CommonModule>ОборудованиеЧекопечатающиеУстройства</CommonModule>
-			<CommonModule>УчетНДС</CommonModule>
+			<CommonModule>ОбработкаТабличнойЧастиТоварыКлиент</CommonModule>
+			<CommonModule>ОбработкаТабличнойЧастиТоварыСервер</CommonModule>
+			<CommonModule>ОбщегоНазначения</CommonModule>
+			<CommonModule>ОбщегоНазначенияВызовСервера</CommonModule>
+			<CommonModule>ОбщегоНазначенияКлиент</CommonModule>
+			<CommonModule>ОбщегоНазначенияРТВызовСервера</CommonModule>
+			<CommonModule>ПродажиСервер</CommonModule>
+			<CommonModule>РазборКодаМаркировкиИССлужебныйКлиентСервер</CommonModule>
+			<CommonModule>РозничныеПродажиКлиент</CommonModule>
+			<CommonModule>РозничныеПродажиСервер</CommonModule>
+			<CommonModule>СкидкиНаценкиСервер</CommonModule>
+			<CommonModule>СтандартныеПодсистемыКлиент</CommonModule>
+			<CommonModule>ТБК_WS</CommonModule>
+			<CommonModule>ТБК_WS_GET</CommonModule>
+			<CommonModule>ТБК_WS_POST</CommonModule>
+			<CommonModule>ТБК_WS_Клиент</CommonModule>
+			<CommonModule>ТБК_Миграции</CommonModule>
+			<CommonModule>ТБК_Номенклатура</CommonModule>
+			<CommonModule>ТБК_ПраваДоступа</CommonModule>
+			<CommonModule>ТБК_ПрограммаЛояльности</CommonModule>
+			<CommonModule>ТБК_Шифрование</CommonModule>
+			<CommonModule>ТБКНеФискальнаяПечать</CommonModule>
+			<CommonModule>ФоновоеВыполнение</CommonModule>
+			<CommonModule>ШтрихкодированиеИС</CommonModule>
+			<CommonModule>ШтрихкодированиеИСКлиент</CommonModule>
+			<CommonModule>ШтрихкодированиеИСПереопределяемый</CommonModule>
+			<CommonModule>ШтрихкодированиеИСРТ</CommonModule>
+			<CommonModule>ШтрихкодированиеИСРТКлиент</CommonModule>
+			<CommonModule>ШтрихкодированиеМОТП</CommonModule>
+			<CommonModule>ШтрихкодированиеОбщегоНазначенияИС</CommonModule>
+			<CommonModule>ШтрихкодированиеОбщегоНазначенияИСКлиентСервер</CommonModule>
 			<CommonModule>ИнтерфейсИСМПОбщегоНазначенияКлиентСервер</CommonModule>
+			<CommonModule>ИнтеграцияТСПИоТКлиент</CommonModule>
 			<ExchangePlan>ОбменРозницаУправлениеТорговлей103</ExchangePlan>
 			<WebService>ws_tbk</WebService>
 			<DefinedType>Номенклатура</DefinedType>
@@ -223,199 +226,199 @@
 			<CommonForm>ТБКФормаВыбораТипаПродавцаИВремениРаботы</CommonForm>
 			<CommonForm>ТБКФормаБыстрыйПодборПоБК</CommonForm>
 			<CommonForm>ОжиданиеПроверкиКодовМаркировкиИСМП</CommonForm>
-			<Catalog>Кассы</Catalog>
-			<Catalog>КассыККМ</Catalog>
-			<Catalog>Магазины</Catalog>
-			<Catalog>Склады</Catalog>
-			<Catalog>Контрагенты</Catalog>
-			<Catalog>ШтрихкодыУпаковокТоваров</Catalog>
-			<Catalog>РабочиеМеста</Catalog>
-			<Catalog>Организации</Catalog>
-			<Catalog>СтатьиДвиженияДенежныхСредств</Catalog>
-			<Catalog>Номенклатура</Catalog>
-			<Catalog>ВидыНоменклатуры</Catalog>
-			<Catalog>СкидкиНаценки</Catalog>
-			<Catalog>СценарииОбменовДанными</Catalog>
-			<Catalog>ХарактеристикиНоменклатуры</Catalog>
-			<Catalog>УпаковкиНоменклатуры</Catalog>
-			<Catalog>НастройкиРМК</Catalog>
-			<Catalog>ФизическиеЛица</Catalog>
-			<Catalog>Пользователи</Catalog>
-			<Catalog>ВидыОплатЧекаККМ</Catalog>
-			<Catalog>ГруппыДоступа</Catalog>
-			<Catalog>УсловияПредоставленияСкидокНаценок</Catalog>
-			<Catalog>ПризнакиПредметовРасчета</Catalog>
-			<Catalog>ХранилищеШаблонов</Catalog>
-			<Catalog>ПрофилиГруппДоступа</Catalog>
-			<Catalog>ЭквайринговыеТерминалы</Catalog>
-			<Catalog>ПодключаемоеОборудование</Catalog>
-			<Catalog>ИнформационныеКарты</Catalog>
 			<Catalog>АналитикаХозяйственныхОпераций</Catalog>
 			<Catalog>БазовыеЕдиницыИзмерения</Catalog>
-			<Catalog>КлассификаторАлкогольнойПродукцииЕГАИС</Catalog>
-			<Catalog>Справки2ЕГАИС</Catalog>
-			<Catalog>НаборыУпаковок</Catalog>
-			<Catalog>ТБКПроекты</Catalog>
-			<Catalog>ТБК_Инструкции</Catalog>
-			<Catalog>ТБКНовости</Catalog>
-			<Catalog>ТБКГруппыНоменклатурыДляПланов</Catalog>
-			<Catalog>ДоговорыКонтрагентов</Catalog>
+			<Catalog>БанковскиеСчета</Catalog>
 			<Catalog>БонусныеПрограммыЛояльности</Catalog>
-			<Catalog>ТБКСообщенияУТРозница</Catalog>
-			<Catalog>УдалитьБанковскиеСчетаОрганизаций</Catalog>
-			<Catalog>ПричиныОтменыЗаказовПокупателей</Catalog>
-			<Catalog>Марки</Catalog>
-			<Catalog>СтраныМира</Catalog>
-			<Catalog>КлассификаторТНВЭД</Catalog>
-			<Catalog>ТоварныеКатегории</Catalog>
-			<Catalog>ЦеновыеГруппы</Catalog>
-			<Catalog>ТоварныеГруппы</Catalog>
 			<Catalog>ВидыАлкогольнойПродукции</Catalog>
 			<Catalog>ВидыМехаГИСМ</Catalog>
+			<Catalog>ВидыНоменклатуры</Catalog>
+			<Catalog>ВидыОплатЧекаККМ</Catalog>
+			<Catalog>ГруппыДоступа</Catalog>
+			<Catalog>ДоговорыКонтрагентов</Catalog>
+			<Catalog>ИнформационныеКарты</Catalog>
+			<Catalog>Кассы</Catalog>
+			<Catalog>КассыККМ</Catalog>
+			<Catalog>КлассификаторАлкогольнойПродукцииЕГАИС</Catalog>
+			<Catalog>КлассификаторТНВЭД</Catalog>
+			<Catalog>Контрагенты</Catalog>
+			<Catalog>Магазины</Catalog>
+			<Catalog>Марки</Catalog>
+			<Catalog>НаборыУпаковок</Catalog>
+			<Catalog>НастройкиРМК</Catalog>
+			<Catalog>Номенклатура</Catalog>
 			<Catalog>НоменклатураПрисоединенныеФайлы</Catalog>
-			<Catalog>ТБКПричиныБрака</Catalog>
-			<Catalog>ТБКОкладыПремииИПроцентыНоваяМотивация</Catalog>
-			<Catalog>БанковскиеСчета</Catalog>
+			<Catalog>НомераГТД</Catalog>
+			<Catalog>Организации</Catalog>
+			<Catalog>ПодключаемоеОборудование</Catalog>
+			<Catalog>Пользователи</Catalog>
+			<Catalog>ПризнакиПредметовРасчета</Catalog>
+			<Catalog>ПричиныОтменыЗаказовПокупателей</Catalog>
+			<Catalog>ПрофилиГруппДоступа</Catalog>
+			<Catalog>РабочиеМеста</Catalog>
 			<Catalog>СерииНоменклатуры</Catalog>
 			<Catalog>СертификатыКлючейЭлектроннойПодписиИШифрования</Catalog>
-			<Catalog>НомераГТД</Catalog>
-			<Document>ТБК_ВедомостьОПродажахЗаДень</Document>
-			<Document>ОтчетОРозничныхПродажах</Document>
-			<Document>ЧекККМ</Document>
-			<Document>ПриходныйКассовыйОрдер</Document>
+			<Catalog>СкидкиНаценки</Catalog>
+			<Catalog>Склады</Catalog>
+			<Catalog>Справки2ЕГАИС</Catalog>
+			<Catalog>СтатьиДвиженияДенежныхСредств</Catalog>
+			<Catalog>СтраныМира</Catalog>
+			<Catalog>СценарииОбменовДанными</Catalog>
+			<Catalog>ТБК_Инструкции</Catalog>
+			<Catalog>ТБКГруппыНоменклатурыДляПланов</Catalog>
+			<Catalog>ТБКНовости</Catalog>
+			<Catalog>ТБКОкладыПремииИПроцентыНоваяМотивация</Catalog>
+			<Catalog>ТБКПричиныБрака</Catalog>
+			<Catalog>ТБКПроекты</Catalog>
+			<Catalog>ТБКСообщенияУТРозница</Catalog>
+			<Catalog>ТоварныеГруппы</Catalog>
+			<Catalog>ТоварныеКатегории</Catalog>
+			<Catalog>УдалитьБанковскиеСчетаОрганизаций</Catalog>
+			<Catalog>УпаковкиНоменклатуры</Catalog>
+			<Catalog>УсловияПредоставленияСкидокНаценок</Catalog>
+			<Catalog>ФизическиеЛица</Catalog>
+			<Catalog>ХарактеристикиНоменклатуры</Catalog>
+			<Catalog>ХранилищеШаблонов</Catalog>
+			<Catalog>ЦеновыеГруппы</Catalog>
+			<Catalog>ШтрихкодыУпаковокТоваров</Catalog>
+			<Catalog>ЭквайринговыеТерминалы</Catalog>
+			<Document>ВозвратТоваровОтПокупателя</Document>
 			<Document>ВыемкаДенежныхСредствИзКассыККМ</Document>
+			<Document>ЗаказПокупателя</Document>
+			<Document>ИзменениеАссортимента</Document>
+			<Document>КассоваяСмена</Document>
+			<Document>КорректировкаРегистров</Document>
+			<Document>МаркетинговаяАкция</Document>
+			<Document>ОплатаОтПокупателяПлатежнойКартой</Document>
+			<Document>ОтгрузкаТоваровИСМП</Document>
+			<Document>ОтчетОРозничныхПродажах</Document>
+			<Document>ПеремещениеТоваров</Document>
+			<Document>ПоступлениеТоваров</Document>
+			<Document>ПрименениеЦенНоменклатуры</Document>
+			<Document>ПриходныйКассовыйОрдер</Document>
+			<Document>ПриходныйОрдерНаТовары</Document>
 			<Document>РасходныйКассовыйОрдер</Document>
 			<Document>РасходныйОрдерНаТовары</Document>
-			<Document>МаркетинговаяАкция</Document>
-			<Document>ПрименениеЦенНоменклатуры</Document>
-			<Document>СписаниеТоваров</Document>
-			<Document>ПеремещениеТоваров</Document>
-			<Document>ВозвратТоваровОтПокупателя</Document>
-			<Document>ОплатаОтПокупателяПлатежнойКартой</Document>
 			<Document>РеализацияТоваров</Document>
-			<Document>ПриходныйОрдерНаТовары</Document>
-			<Document>ОтгрузкаТоваровИСМП</Document>
-			<Document>КорректировкаРегистров</Document>
-			<Document>КассоваяСмена</Document>
-			<Document>ЗаказПокупателя</Document>
-			<Document>ТТНИсходящаяЕГАИС</Document>
-			<Document>ТТНВходящаяЕГАИС</Document>
-			<Document>ТБК_ЗаявкаОтМагазина</Document>
-			<Document>ТБК_ЗаявкаНаЦенники</Document>
 			<Document>РегистрацияБезналичнойОплаты</Document>
-			<Document>ИзменениеАссортимента</Document>
-			<Document>ПоступлениеТоваров</Document>
+			<Document>СписаниеТоваров</Document>
+			<Document>ТБК_ВедомостьОПродажахЗаДень</Document>
+			<Document>ТБК_ЗаявкаНаЦенники</Document>
+			<Document>ТБК_ЗаявкаОтМагазина</Document>
 			<Document>ТБКИнкасация</Document>
+			<Document>ТТНВходящаяЕГАИС</Document>
+			<Document>ТТНИсходящаяЕГАИС</Document>
+			<Document>ЧекККМ</Document>
 			<Enum>ВариантыВеденияДополнительныхДанныхПоНоменклатуре</Enum>
-			<Enum>ВидыПродукцииИС</Enum>
-			<Enum>ВидыОперацийЧекККМ</Enum>
-			<Enum>ХозяйственныеОперации</Enum>
-			<Enum>ОсобенностиУчетаНоменклатуры</Enum>
-			<Enum>СостоянияОднократныхСкидок</Enum>
 			<Enum>ВариантыОбластейОграниченияСкидокНаценок</Enum>
-			<Enum>ТипыПодключаемогоОборудования</Enum>
-			<Enum>ВидыНазначенияДатЗапрета</Enum>
-			<Enum>СтатусыЧековККМ</Enum>
-			<Enum>ТипыКассККМ</Enum>
 			<Enum>ВидыИнформационныхКарт</Enum>
-			<Enum>ТипыОплатЧекаККМ</Enum>
+			<Enum>ВидыКиЗГИСМ</Enum>
+			<Enum>ВидыНазначенияДатЗапрета</Enum>
+			<Enum>ВидыОперацийЧекККМ</Enum>
+			<Enum>ВидыПродукцииИС</Enum>
+			<Enum>ВидыУпаковокИС</Enum>
+			<Enum>ОсобенностиУчетаНоменклатуры</Enum>
+			<Enum>Периодичность</Enum>
 			<Enum>ПолФизическогоЛица</Enum>
-			<Enum>УсловияПредоставленияСкидокНаценок</Enum>
-			<Enum>ТипыНоменклатуры</Enum>
-			<Enum>СтавкиНДС</Enum>
-			<Enum>ТипыСистемНалогообложенияККТ</Enum>
-			<Enum>СпособыПредоставленияСкидокНаценок</Enum>
-			<Enum>ТипыШтрихкодов</Enum>
-			<Enum>ТипыУпаковок</Enum>
-			<Enum>СтатусыКассовойСмены</Enum>
-			<Enum>СтатусыЗаказовПокупателей</Enum>
+			<Enum>РазмерыКиЗГИСМ</Enum>
 			<Enum>СостоянияДоставкиЗаказаПокупателя</Enum>
+			<Enum>СостоянияОднократныхСкидок</Enum>
 			<Enum>СостоянияОплатыЗаказаПокупателя</Enum>
+			<Enum>СпособыВыпускаВОборотГИСМ</Enum>
+			<Enum>СпособыПредоставленияСкидокНаценок</Enum>
+			<Enum>СрокДействияПодарочныхСертификатов</Enum>
+			<Enum>СтавкиНДС</Enum>
+			<Enum>СтатусыЗаказовПокупателей</Enum>
+			<Enum>СтатусыКассовойСмены</Enum>
+			<Enum>СтатусыЧековККМ</Enum>
 			<Enum>ТБК_ВидыОперацийЗаявокОтМагазина</Enum>
 			<Enum>ТБК_ВидыПричинЗаявокНаПоступление</Enum>
-			<Enum>ТБКТипыПродавцов</Enum>
 			<Enum>ТБК_ТипыЦенников</Enum>
-			<Enum>ТипыСерийныхНомеровСертификатов</Enum>
-			<Enum>СпособыВыпускаВОборотГИСМ</Enum>
-			<Enum>СрокДействияПодарочныхСертификатов</Enum>
-			<Enum>РазмерыКиЗГИСМ</Enum>
-			<Enum>Периодичность</Enum>
-			<Enum>ВидыКиЗГИСМ</Enum>
-			<Enum>ВидыУпаковокИС</Enum>
+			<Enum>ТБКТипыПродавцов</Enum>
+			<Enum>ТипыКассККМ</Enum>
+			<Enum>ТипыНоменклатуры</Enum>
+			<Enum>ТипыОплатЧекаККМ</Enum>
 			<Enum>ТипыПлатежнойСистемыККТ</Enum>
+			<Enum>ТипыПодключаемогоОборудования</Enum>
+			<Enum>ТипыСерийныхНомеровСертификатов</Enum>
+			<Enum>ТипыСистемНалогообложенияККТ</Enum>
+			<Enum>ТипыУпаковок</Enum>
+			<Enum>ТипыШтрихкодов</Enum>
+			<Enum>УсловияПредоставленияСкидокНаценок</Enum>
+			<Enum>ХозяйственныеОперации</Enum>
 			<Enum>ЮрФизЛицо</Enum>
-			<Report>ОтчетПоЧекам</Report>
-			<Report>ТБКОтчетОстаткиВРознице</Report>
+			<Enum>СтатусыКодовМаркировкиИСМП</Enum>
 			<Report>ВедомостьПоТоварамНаСкладахСвободныеОстатки</Report>
-			<Report>ТБКОтчет_ТБК_Заявки</Report>
+			<Report>ОтчетПоЧекам</Report>
 			<Report>ТБК_ДвиженияТоваров</Report>
 			<Report>ТБК_ИнформацияПоАннулированнымЧекам</Report>
 			<Report>ТБК_ЭффективностьПродавцов</Report>
+			<Report>ТБКОтчет_ТБК_Заявки</Report>
+			<Report>ТБКОтчетОстаткиВРознице</Report>
 			<DataProcessor>РМКУправляемыйРежим</DataProcessor>
 			<DataProcessor>ТБК_Оле</DataProcessor>
 			<DataProcessor>ТБК_Миграции</DataProcessor>
-			<DataProcessor>ТБК_ВыгрузкаПродажДляИнвентаризации</DataProcessor>
-			<DataProcessor>ПомощникПриемкиОтгрузки</DataProcessor>
-			<DataProcessor>ТБК_TEST_WS</DataProcessor>
-			<DataProcessor>ПечатьЭтикетокИЦенников</DataProcessor>
-			<DataProcessor>СозданиеЧековКоррекции</DataProcessor>
-			<DataProcessor>ТБК_ПочинитьВыемку</DataProcessor>
-			<DataProcessor>ТБК_Маркировка</DataProcessor>
-			<DataProcessor>ЗакрытиеКассовойСмены</DataProcessor>
-			<DataProcessor>ТБК_ПоказатьПокупкиПоГруппам</DataProcessor>
-			<DataProcessor>ПомощникСозданияОбменаДанными</DataProcessor>
-			<DataProcessor>ТБКЧатУТ</DataProcessor>
 			<DataProcessor>ВводКонтактнойИнформации</DataProcessor>
-			<DataProcessor>КонвертацияОбъектовИнформационныхБаз</DataProcessor>
 			<DataProcessor>ВыполнениеОбменаДанными</DataProcessor>
+			<DataProcessor>ЗакрытиеКассовойСмены</DataProcessor>
+			<DataProcessor>КонвертацияОбъектовИнформационныхБаз</DataProcessor>
+			<DataProcessor>ПечатьЭтикетокИЦенников</DataProcessor>
+			<DataProcessor>ПомощникПриемкиОтгрузки</DataProcessor>
+			<DataProcessor>СозданиеЧековКоррекции</DataProcessor>
+			<DataProcessor>ТБК_TEST_WS</DataProcessor>
+			<DataProcessor>ТБК_ВыгрузкаПродажДляИнвентаризации</DataProcessor>
+			<DataProcessor>ТБК_Маркировка</DataProcessor>
+			<DataProcessor>ТБК_ПоказатьПокупкиПоГруппам</DataProcessor>
+			<DataProcessor>ТБК_ПочинитьВыемку</DataProcessor>
+			<DataProcessor>ТБКЧатУТ</DataProcessor>
 			<DataProcessor>УниверсальныйОбменДаннымиXML</DataProcessor>
-			<InformationRegister>СостоянияОднократныхСкидокИКупонов</InformationRegister>
-			<InformationRegister>ТБКДанныеВаучера</InformationRegister>
-			<InformationRegister>Штрихкоды</InformationRegister>
-			<InformationRegister>ТБКМиграции</InformationRegister>
+			<InformationRegister>БезопасноеХранилищеДанных</InformationRegister>
+			<InformationRegister>БуферОперацийСтатистики</InformationRegister>
+			<InformationRegister>ВременныеИдентификаторыЗапросов</InformationRegister>
+			<InformationRegister>ДанныеКлючаСессииИСМП</InformationRegister>
 			<InformationRegister>ДатыЗапретаИзменения</InformationRegister>
-			<InformationRegister>ТБК_Штрихкоды</InformationRegister>
-			<InformationRegister>КомплектующиеНоменклатуры</InformationRegister>
+			<InformationRegister>ДействующиеЦеныНоменклатуры</InformationRegister>
 			<InformationRegister>ЗначенияДополнительныхПравПользователя</InformationRegister>
-			<InformationRegister>ТБК_Константы</InformationRegister>
+			<InformationRegister>КомментарииСтатистики</InformationRegister>
+			<InformationRegister>КомплектующиеНоменклатуры</InformationRegister>
+			<InformationRegister>НастройкиПодключенияЛокальныхМодулейИСМП</InformationRegister>
+			<InformationRegister>ПоставщикиНоменклатуры</InformationRegister>
+			<InformationRegister>ПробиватьПоБК</InformationRegister>
 			<InformationRegister>СоответствияОбъектовИнформационныхБаз</InformationRegister>
-			<InformationRegister>ФИОФизЛиц</InformationRegister>
 			<InformationRegister>СостояниеДоставкиЗаказаПокупателя</InformationRegister>
 			<InformationRegister>СостояниеОплатыЗаказаПокупателя</InformationRegister>
-			<InformationRegister>НастройкиТранспортаОбменаДанными</InformationRegister>
-			<InformationRegister>БезопасноеХранилищеДанных</InformationRegister>
-			<InformationRegister>ПрименениеСистемНалогообложения</InformationRegister>
-			<InformationRegister>КомментарииСтатистики</InformationRegister>
-			<InformationRegister>ХранилищеСертификатов</InformationRegister>
+			<InformationRegister>СостоянияОднократныхСкидокИКупонов</InformationRegister>
 			<InformationRegister>СохраненныеДанныеПомощникаПриемкиОтгрузки</InformationRegister>
-			<InformationRegister>ВременныеИдентификаторыЗапросов</InformationRegister>
-			<InformationRegister>ТБК_ПокупкиСотрудников</InformationRegister>
 			<InformationRegister>ТБК_ДанныеПоЗаявкамМагазинов</InformationRegister>
+			<InformationRegister>ТБК_ДанныеПоХозТоварам</InformationRegister>
+			<InformationRegister>ТБК_ЗапросДанныхУ_УТ</InformationRegister>
 			<InformationRegister>ТБК_ИсторияПокупокРозница</InformationRegister>
-			<InformationRegister>ТБКСменыСотрудников</InformationRegister>
-			<InformationRegister>БуферОперацийСтатистики</InformationRegister>
-			<InformationRegister>ТБКПланыМагазинаПоМесяцам</InformationRegister>
-			<InformationRegister>ТБКФокуснаяМотивация</InformationRegister>
-			<InformationRegister>ТБКРегистрацияКлиентов</InformationRegister>
-			<InformationRegister>ДействующиеЦеныНоменклатуры</InformationRegister>
+			<InformationRegister>ТБК_Константы</InformationRegister>
+			<InformationRegister>ТБК_ПланыМагазинаПоПериодам</InformationRegister>
+			<InformationRegister>ТБК_ПокупкиСотрудников</InformationRegister>
+			<InformationRegister>ТБК_ПроцентыПремийПоДням</InformationRegister>
+			<InformationRegister>ТБК_РезультатФокуснойМотивации</InformationRegister>
+			<InformationRegister>ТБК_Штрихкоды</InformationRegister>
+			<InformationRegister>ТБКАктивностьПользователя</InformationRegister>
 			<InformationRegister>ТБКГруппыИПроцентыДляПремийОбщаяМотивация</InformationRegister>
-			<InformationRegister>ТБКПодаркиПоАкциям</InformationRegister>
-			<InformationRegister>ТБКПогашенныеСертификаты</InformationRegister>
-			<InformationRegister>ТБКРучныеСкидкиЗапись</InformationRegister>
+			<InformationRegister>ТБКДанныеВаучера</InformationRegister>
 			<InformationRegister>ТБКДолгиеЧеки</InformationRegister>
+			<InformationRegister>ТБКМаркиДляСписания</InformationRegister>
+			<InformationRegister>ТБКМиграции</InformationRegister>
+			<InformationRegister>ТБКПланыМагазинаПоМесяцам</InformationRegister>
+			<InformationRegister>ТБКПогашенныеСертификаты</InformationRegister>
+			<InformationRegister>ТБКПодаркиПоАкциям</InformationRegister>
+			<InformationRegister>ТБКРегистрацияКлиентов</InformationRegister>
+			<InformationRegister>ТБКРучныеСкидкиЗапись</InformationRegister>
+			<InformationRegister>ТБКСменыСотрудников</InformationRegister>
 			<InformationRegister>ТБКСоставГруппДляПроцентов_Исключения</InformationRegister>
 			<InformationRegister>ТБКУценка_Новая</InformationRegister>
-			<InformationRegister>ПоставщикиНоменклатуры</InformationRegister>
-			<InformationRegister>ТБКМаркиДляСписания</InformationRegister>
-			<InformationRegister>ПробиватьПоБК</InformationRegister>
-			<InformationRegister>ТБК_ПроцентыПремийПоДням</InformationRegister>
-			<InformationRegister>НастройкиПодключенияЛокальныхМодулейИСМП</InformationRegister>
-			<InformationRegister>ТБК_ЗапросДанныхУ_УТ</InformationRegister>
-			<InformationRegister>ТБК_РезультатФокуснойМотивации</InformationRegister>
-			<InformationRegister>ТБК_ПланыМагазинаПоПериодам</InformationRegister>
-			<InformationRegister>ДанныеКлючаСессииИСМП</InformationRegister>
-			<InformationRegister>ТБКАктивностьПользователя</InformationRegister>
-			<InformationRegister>ТБК_ДанныеПоХозТоварам</InformationRegister>
+			<InformationRegister>ТБКФокуснаяМотивация</InformationRegister>
+			<InformationRegister>УдалитьНастройкиТранспортаОбменаДанными</InformationRegister>
+			<InformationRegister>ФИОФизЛиц</InformationRegister>
+			<InformationRegister>ХранилищеСертификатов</InformationRegister>
+			<InformationRegister>Штрихкоды</InformationRegister>
+			<InformationRegister>ПрименениеСистемНалогообложения</InformationRegister>
 			<AccumulationRegister>ТоварыНаСкладах</AccumulationRegister>
 			<AccumulationRegister>ДенежныеСредстваККМ</AccumulationRegister>
 			<AccumulationRegister>Продажи</AccumulationRegister>
