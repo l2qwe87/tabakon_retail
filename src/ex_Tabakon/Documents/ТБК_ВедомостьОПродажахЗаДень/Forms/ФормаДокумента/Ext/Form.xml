@@ -305,6 +305,12 @@
 									<ContextMenu name="СуммаВыемкиКонтекстноеМеню" id="161"/>
 									<ExtendedTooltip name="СуммаВыемкиРасширеннаяПодсказка" id="162"/>
 								</InputField>
+								<Button name="ВнестиДанныеПоВыручке" id="279">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ВнестиДанныеПоВыручке</CommandName>
+									<Font bold="true" kind="AutoFont"/>
+									<ExtendedTooltip name="ВнестиДанныеПоВыручкеРасширеннаяПодсказка" id="280"/>
+								</Button>
 							</ChildItems>
 						</UsualGroup>
 						<Button name="Купюры" id="277">
@@ -1083,6 +1089,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Купюры</Action>
+		</Command>
+		<Command name="ВнестиДанныеПоВыручке" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Внести данные по выручке</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Внести данные по выручке</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВнестиДанныеПоВыручке</Action>
 		</Command>
 	</Commands>
 </Form>
