@@ -132,6 +132,16 @@
 									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 									<ContextMenu name="НормативыФактическийОстатокКонтекстноеМеню" id="83"/>
 									<ExtendedTooltip name="НормативыФактическийОстатокРасширеннаяПодсказка" id="84"/>
+									<Events>
+										<Event name="OnChange">НормативыФактическийОстатокПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="НормативыПоступит" id="87">
+									<DataPath>Нормативы.Поступит</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="НормативыПоступитКонтекстноеМеню" id="88"/>
+									<ExtendedTooltip name="НормативыПоступитРасширеннаяПодсказка" id="89"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -259,7 +269,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Количество</v8:content>
+							<v8:content>Норматив</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -284,6 +294,22 @@
 							<v8:Digits>10</v8:Digits>
 							<v8:FractionDigits>0</v8:FractionDigits>
 							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Поступит" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поступит</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 						</v8:NumberQualifiers>
 					</Type>
 				</Column>

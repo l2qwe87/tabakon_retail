@@ -17,6 +17,16 @@
 			<ContextMenu name="ДеревоНоменклатурыКонтекстноеМеню" id="2"/>
 			<AutoCommandBar name="ДеревоНоменклатурыКоманднаяПанель" id="3">
 				<Autofill>false</Autofill>
+				<ChildItems>
+					<SearchStringAddition name="Дополнение1" id="17">
+						<AdditionSource>
+							<Item>ДеревоНоменклатуры</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="Дополнение1КонтекстноеМеню" id="18"/>
+						<ExtendedTooltip name="Дополнение1РасширеннаяПодсказка" id="19"/>
+					</SearchStringAddition>
+				</ChildItems>
 			</AutoCommandBar>
 			<ExtendedTooltip name="ДеревоНоменклатурыРасширеннаяПодсказка" id="4"/>
 			<SearchStringAddition name="ДеревоНоменклатурыСтрокаПоиска" id="5">
