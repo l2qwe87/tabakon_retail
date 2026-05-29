@@ -36,6 +36,16 @@
 			<dataPath>ОбъектЦенообразования</dataPath>
 			<field>ОбъектЦенообразования</field>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Страна</dataPath>
+			<field>Страна</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страна</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ТоварыНаСкладахОстатки.Номенклатура.НаименованиеПолное КАК Номенклатура,
@@ -60,7 +70,12 @@
 	Вт.Номенклатура КАК Номенклатура,
 	ПРЕДСТАВЛЕНИЕ(Вт.Характеристика) КАК Характеристика,
 	Вт.Остаток КАК Остаток,
-	Вт.Цена КАК Цена
+	Вт.Цена КАК Цена,
+	ВЫБОР
+		КОГДА СТРНАЙТИ(Вт.Номенклатура, "Пр-во:") &gt; 0
+			ТОГДА ПОДСТРОКА(Вт.Номенклатура, СТРНАЙТИ(Вт.Номенклатура, "Пр-во:") + 6, ДЛИНАСТРОКИ(Вт.Номенклатура))
+		ИНАЧЕ ""
+	КОНЕЦ КАК Страна
 ИЗ
 	Вт КАК Вт
 ГДЕ
@@ -264,6 +279,9 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Страна</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Характеристика</dcsset:field>
