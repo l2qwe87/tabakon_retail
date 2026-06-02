@@ -1251,6 +1251,69 @@
 						</Pages>
 					</ChildItems>
 				</Page>
+				<Page name="Группа14" id="253">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Маркетинговые акции</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа14РасширеннаяПодсказка" id="254"/>
+					<ChildItems>
+						<Table name="ДеревоДанных" id="255">
+							<Representation>Tree</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ДеревоДанных</DataPath>
+							<ContextMenu name="ДеревоДанныхКонтекстноеМеню" id="256"/>
+							<AutoCommandBar name="ДеревоДанныхКоманднаяПанель" id="257">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ДеревоДанныхРасширеннаяПодсказка" id="258"/>
+							<SearchStringAddition name="ДеревоДанныхСтрокаПоиска" id="259">
+								<AdditionSource>
+									<Item>ДеревоДанных</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоДанныхСтрокаПоискаКонтекстноеМеню" id="260"/>
+								<ExtendedTooltip name="ДеревоДанныхСтрокаПоискаРасширеннаяПодсказка" id="261"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДеревоДанныхСостояниеПросмотра" id="262">
+								<AdditionSource>
+									<Item>ДеревоДанных</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоДанныхСостояниеПросмотраКонтекстноеМеню" id="263"/>
+								<ExtendedTooltip name="ДеревоДанныхСостояниеПросмотраРасширеннаяПодсказка" id="264"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДеревоДанныхУправлениеПоиском" id="265">
+								<AdditionSource>
+									<Item>ДеревоДанных</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоДанныхУправлениеПоискомКонтекстноеМеню" id="266"/>
+								<ExtendedTooltip name="ДеревоДанныхУправлениеПоискомРасширеннаяПодсказка" id="267"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ДеревоДанныхАкция" id="268">
+									<DataPath>ДеревоДанных.Акция</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ДеревоДанныхАкцияКонтекстноеМеню" id="269"/>
+									<ExtendedTooltip name="ДеревоДанныхАкцияРасширеннаяПодсказка" id="270"/>
+								</InputField>
+								<InputField name="ДеревоДанныхОписание" id="271">
+									<DataPath>ДеревоДанных.Описание</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ДеревоДанныхОписаниеКонтекстноеМеню" id="272"/>
+									<ExtendedTooltip name="ДеревоДанныхОписаниеРасширеннаяПодсказка" id="273"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
 	</ChildItems>
@@ -1760,6 +1823,50 @@
 			<Type>
 				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
 			</Type>
+		</Attribute>
+		<Attribute name="ДеревоДанных" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево данных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Акция" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Акция</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Описание" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание акции</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
 		</Attribute>
 	</Attributes>
 	<Commands>
