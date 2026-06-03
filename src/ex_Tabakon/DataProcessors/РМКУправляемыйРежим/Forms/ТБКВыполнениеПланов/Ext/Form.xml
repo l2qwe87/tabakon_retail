@@ -1262,10 +1262,12 @@
 					<ChildItems>
 						<Table name="ДеревоДанных" id="255">
 							<Representation>Tree</Representation>
+							<ReadOnly>true</ReadOnly>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<DataPath>ДеревоДанных</DataPath>
+							<BackColor>#D2FFFC</BackColor>
 							<ContextMenu name="ДеревоДанныхКонтекстноеМеню" id="256"/>
 							<AutoCommandBar name="ДеревоДанныхКоманднаяПанель" id="257">
 								<Autofill>false</Autofill>
@@ -1295,6 +1297,9 @@
 								<ContextMenu name="ДеревоДанныхУправлениеПоискомКонтекстноеМеню" id="266"/>
 								<ExtendedTooltip name="ДеревоДанныхУправлениеПоискомРасширеннаяПодсказка" id="267"/>
 							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ДеревоДанныхВыбор</Event>
+							</Events>
 							<ChildItems>
 								<InputField name="ДеревоДанныхАкция" id="268">
 									<DataPath>ДеревоДанных.Акция</DataPath>
