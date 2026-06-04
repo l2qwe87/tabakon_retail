@@ -3383,7 +3383,37 @@
 							</Title>
 							<ExtendedTooltip name="ДвиженияТоваровРасширеннаяПодсказка" id="786"/>
 						</Button>
+						<Button name="Акции" id="790">
+							<Type>UsualButton</Type>
+							<Width>12</Width>
+							<Height>4</Height>
+							<CommandName>Form.Command.ОткрытьАкции</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Акции</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="АкцииРасширеннаяПодсказка" id="791"/>
+						</Button>
 					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаТБК_2" id="792">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ТБК 2</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ТБК 2</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТБК_2РасширеннаяПодсказка" id="793"/>
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
@@ -4698,6 +4728,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКДвиженияТоваровПосле</Action>
+		</Command>
+		<Command name="ОткрытьАкции" id="1000027">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть акции</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть акции</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКОткрытьАкцииПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.20">

@@ -23,6 +23,20 @@
 				</Title>
 				<ExtendedTooltip name="ОтчетТБКЗаявкиРасширеннаяПодсказка" id="58"/>
 			</Button>
+			<Button name="Списки" id="165">
+				<Type>CommandBarButton</Type>
+				<Height>2</Height>
+				<HorizontalStretch>true</HorizontalStretch>
+				<CommandName>Form.Command.Списки</CommandName>
+				<Font ref="style:NormalTextFont" height="12" bold="false" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Списки</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="СпискиРасширеннаяПодсказка" id="166"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -569,6 +583,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОтчетТБКЗаявки</Action>
+		</Command>
+		<Command name="Списки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Списки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Списки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Списки</Action>
 		</Command>
 	</Commands>
 </Form>

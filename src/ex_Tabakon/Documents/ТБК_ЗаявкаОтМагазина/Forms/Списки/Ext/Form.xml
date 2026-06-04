@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Списки представителей</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockWholeInterface</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<ChildrenAlign>None</ChildrenAlign>
+	<HorizontalAlign>Left</HorizontalAlign>
+	<VerticalAlign>Top</VerticalAlign>
+	<Customizable>false</Customizable>
+	<ScalingMode>Normal</ScalingMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Списки" id="225">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Списки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="СпискиРасширеннаяПодсказка" id="226"/>
+			<ChildItems>
+				<Pages name="ГруппаСписки" id="227">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа списки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа списки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<PagesRepresentation>TabsOnTop</PagesRepresentation>
+					<ExtendedTooltip name="ГруппаСпискиРасширеннаяПодсказка" id="228"/>
+					<Events>
+						<Event name="OnCurrentPageChange">ГруппаСпискиПриСменеСтраницы</Event>
+					</Events>
+					<ChildItems>
+						<Page name="Группа15" id="229">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Список эксп.</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="Группа15РасширеннаяПодсказка" id="230"/>
+							<ChildItems>
+								<SpreadSheetDocumentField name="ТабличныйДокументЭксель" id="234">
+									<DataPath>ТабличныйДокументЭксель</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="ТабличныйДокументЭксельКонтекстноеМеню" id="235"/>
+									<ExtendedTooltip name="ТабличныйДокументЭксельРасширеннаяПодсказка" id="236"/>
+								</SpreadSheetDocumentField>
+							</ChildItems>
+						</Page>
+						<Page name="Группа13" id="237">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Допуск представителей сигареты</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="Группа13РасширеннаяПодсказка" id="238"/>
+							<ChildItems>
+								<SpreadSheetDocumentField name="ТабличныйДокументЭксель1" id="239">
+									<DataPath>ТабличныйДокументЭксель</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="ТабличныйДокументЭксель1КонтекстноеМеню" id="240"/>
+									<ExtendedTooltip name="ТабличныйДокументЭксель1РасширеннаяПодсказка" id="241"/>
+								</SpreadSheetDocumentField>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ТабличныйДокументЭксель" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Табличный документ эксель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НовыйГод" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новый год</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новый год</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НовыйГод</Action>
+		</Command>
+		<Command name="ОбновитьСтраницуАкций" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить страницу акций</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить страницу акций</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Action>ОбновитьСтраницуАкций</Action>
+		</Command>
+		<Command name="Табель" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Табель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Табель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Табель</Action>
+		</Command>
+		<Command name="ЭффективностьПродавцов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Эффективность продавцов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЭффективностьПродавцов</Action>
+		</Command>
+	</Commands>
+</Form>
