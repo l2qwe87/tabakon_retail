@@ -1175,13 +1175,6 @@
 									<ContextMenu name="АкцииОстатокКонтекстноеМеню" id="211"/>
 									<ExtendedTooltip name="АкцииОстатокРасширеннаяПодсказка" id="212"/>
 								</InputField>
-								<InputField name="АкцииЦена" id="253">
-									<DataPath>Акции.Цена</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-									<ContextMenu name="АкцииЦенаКонтекстноеМеню" id="254"/>
-									<ExtendedTooltip name="АкцииЦенаРасширеннаяПодсказка" id="255"/>
-								</InputField>
 							</ChildItems>
 						</Table>
 					</ChildItems>
@@ -1744,22 +1737,6 @@
 						</v8:DateQualifiers>
 					</Type>
 				</Column>
-				<Column name="Цена" id="8">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Цена</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:decimal</v8:Type>
-						<v8:NumberQualifiers>
-							<v8:Digits>10</v8:Digits>
-							<v8:FractionDigits>2</v8:FractionDigits>
-							<v8:AllowedSign>Any</v8:AllowedSign>
-						</v8:NumberQualifiers>
-					</Type>
-				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="ТабличныйДокументЭксель" id="20">
@@ -1783,50 +1760,6 @@
 			<Type>
 				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
 			</Type>
-		</Attribute>
-		<Attribute name="ДеревоДанных" id="23">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Дерево данных</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>v8:ValueTree</v8:Type>
-			</Type>
-			<Columns>
-				<Column name="Акция" id="1">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Акция</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
-				<Column name="Описание" id="2">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Описание акции</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
-			</Columns>
 		</Attribute>
 	</Attributes>
 	<Commands>
