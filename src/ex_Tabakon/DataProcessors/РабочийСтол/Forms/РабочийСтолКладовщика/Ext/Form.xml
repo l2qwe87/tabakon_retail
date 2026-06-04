@@ -1,0 +1,780 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen" callType="Override">ТБКПриОткрытииВместо</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаТекущаяДата" id="73">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая дата</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТекущаяДатаExtendedTooltip" id="76"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияПериод" id="71">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период:</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>[todo Декорация для заголовка]</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="ДекорацияПериодКонтекстноеМеню" id="72"/>
+					<ExtendedTooltip name="ДекорацияПериодExtendedTooltip" id="77"/>
+				</LabelDecoration>
+				<LabelDecoration name="ТекущаяДата" id="69">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текущая дата</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ТекущаяДатаКонтекстноеМеню" id="70"/>
+					<ExtendedTooltip name="ТекущаяДатаExtendedTooltip" id="78"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДеньНедели" id="74">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<TextColor>style:ПоясняющийТекст</TextColor>
+					<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;День недели&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДеньНеделиКонтекстноеМеню" id="75"/>
+					<ExtendedTooltip name="ДеньНеделиExtendedTooltip" id="79"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаМагазинСклад" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа магазин склад</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаМагазинСкладExtendedTooltip" id="80"/>
+			<ChildItems>
+				<InputField name="Магазин" id="15">
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<ContextMenu name="МагазинКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="МагазинExtendedTooltip" id="81"/>
+				</InputField>
+				<InputField name="Склад" id="17">
+					<ChoiceButton>true</ChoiceButton>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Отбор.Магазин</xr:Name>
+							<xr:DataPath xsi:type="xs:string">4</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
+					<ContextMenu name="СкладКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="СкладExtendedTooltip" id="82"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаExtendedTooltip" id="83"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаРаспоряжения" id="23">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Распоряжения на приемку и отгрузку товаров</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ExtendedTooltip name="ГруппаРаспоряженияExtendedTooltip" id="84"/>
+					<ChildItems>
+						<Table name="Распоряжения" id="1">
+							<Representation>Tree</Representation>
+							<ReadOnly>true</ReadOnly>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<InitialTreeView>ExpandAllLevels</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<ContextMenu name="РаспоряженияКонтекстноеМеню" id="2"/>
+							<AutoCommandBar name="РаспоряженияКоманднаяПанель" id="3">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="Обновить" id="12">
+										<Type>CommandBarButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="ОбновитьExtendedTooltip" id="86"/>
+									</Button>
+									<Popup name="РаспоряженияОтчеты" id="64">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отчеты</v8:content>
+											</v8:item>
+										</Title>
+										<Picture>
+											<xr:Ref>StdPicture.Report</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="РаспоряженияОтчетыExtendedTooltip" id="87"/>
+										<ChildItems>
+											<Button name="РаспоряженияОтчетТоварыКПриемке" id="66">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="РаспоряженияОтчетТоварыКПриемкеExtendedTooltip" id="88"/>
+											</Button>
+											<Button name="РаспоряженияОтчетТоварыКОтгрузке" id="65">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="РаспоряженияОтчетТоварыКОтгрузкеExtendedTooltip" id="89"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="РаспоряженияExtendedTooltip" id="90"/>
+							<SearchStringAddition name="РаспоряженияSearchString" id="102">
+								<AdditionSource>
+									<Item>Распоряжения</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РаспоряженияSearchStringContextMenu" id="103"/>
+								<ExtendedTooltip name="РаспоряженияSearchStringExtendedTooltip" id="104"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РаспоряженияViewStatus" id="105">
+								<AdditionSource>
+									<Item>Распоряжения</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РаспоряженияViewStatusContextMenu" id="106"/>
+								<ExtendedTooltip name="РаспоряженияViewStatusExtendedTooltip" id="107"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РаспоряженияSearchControl" id="108">
+								<AdditionSource>
+									<Item>Распоряжения</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РаспоряженияSearchControlContextMenu" id="109"/>
+								<ExtendedTooltip name="РаспоряженияSearchControlExtendedTooltip" id="110"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="РаспоряженияРаспоряжение" id="4">
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РаспоряженияРаспоряжениеКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="РаспоряженияРаспоряжениеExtendedTooltip" id="91"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПриказыНаИнвентаризацию" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приказы на пересчет товаров</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ExtendedTooltip name="ГруппаПриказыНаИнвентаризациюExtendedTooltip" id="92"/>
+					<ChildItems>
+						<Table name="ПриказыНаИнвентаризацию" id="25">
+							<ReadOnly>true</ReadOnly>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="ПриказыНаИнвентаризациюКонтекстноеМеню" id="26"/>
+							<AutoCommandBar name="ПриказыНаИнвентаризациюКоманднаяПанель" id="27">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ОбновитьПриказы" id="62">
+										<Type>CommandBarButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="ОбновитьПриказыExtendedTooltip" id="94"/>
+									</Button>
+									<Popup name="ПриказыНаИнвентаризациюОтчеты" id="67">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отчеты</v8:content>
+											</v8:item>
+										</Title>
+										<Picture>
+											<xr:Ref>StdPicture.Report</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ПриказыНаИнвентаризациюОтчетыExtendedTooltip" id="95"/>
+										<ChildItems>
+											<Button name="ПриказыНаИнвентаризациюОтчетОформлениеИзлишковНедостач" id="68">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="ПриказыНаИнвентаризациюОтчетОформлениеИзлишковНедостачExtendedTooltip" id="96"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ПриказыНаИнвентаризациюExtendedTooltip" id="97"/>
+							<SearchStringAddition name="ПриказыНаИнвентаризациюSearchString" id="111">
+								<AdditionSource>
+									<Item>ПриказыНаИнвентаризацию</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПриказыНаИнвентаризациюSearchStringContextMenu" id="112"/>
+								<ExtendedTooltip name="ПриказыНаИнвентаризациюSearchStringExtendedTooltip" id="113"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПриказыНаИнвентаризациюViewStatus" id="114">
+								<AdditionSource>
+									<Item>ПриказыНаИнвентаризацию</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПриказыНаИнвентаризациюViewStatusContextMenu" id="115"/>
+								<ExtendedTooltip name="ПриказыНаИнвентаризациюViewStatusExtendedTooltip" id="116"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПриказыНаИнвентаризациюSearchControl" id="117">
+								<AdditionSource>
+									<Item>ПриказыНаИнвентаризацию</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПриказыНаИнвентаризациюSearchControlContextMenu" id="118"/>
+								<ExtendedTooltip name="ПриказыНаИнвентаризациюSearchControlExtendedTooltip" id="119"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<ColumnGroup name="ГруппаКолонокПриказы" id="63">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ГруппаКолонокПриказыExtendedTooltip" id="98"/>
+									<ChildItems>
+										<LabelField name="ПриказыНаИнвентаризациюСсылка" id="54">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Приказ</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ПриказыНаИнвентаризациюСсылкаКонтекстноеМеню" id="55"/>
+											<ExtendedTooltip name="ПриказыНаИнвентаризациюСсылкаExtendedTooltip" id="99"/>
+										</LabelField>
+										<LabelField name="ПриказыНаИнвентаризациюСтатус" id="56">
+											<ContextMenu name="ПриказыНаИнвентаризациюСтатусКонтекстноеМеню" id="57"/>
+											<ExtendedTooltip name="ПриказыНаИнвентаризациюСтатусExtendedTooltip" id="100"/>
+										</LabelField>
+										<LabelField name="ПриказыНаИнвентаризациюСостояние" id="52">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Состояние</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ПриказыНаИнвентаризациюСостояниеКонтекстноеМеню" id="53"/>
+											<ExtendedTooltip name="ПриказыНаИнвентаризациюСостояниеExtendedTooltip" id="101"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>РаспоряженияРаспоряжение</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Распоряжения.Распоряжение</dcsset:left>
+							<dcsset:comparisonType>Contains</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Приемка</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Распоряжения.Распоряжение</dcsset:left>
+							<dcsset:comparisonType>Contains</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Отгрузка</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>РаспоряженияРаспоряжение</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Распоряжения.Распоряжение</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">&lt;нет распоряжений&gt;</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ЦветТекстаОтмененнойСтрокиДокумента</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<BaseForm version="2.20">
+		<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+		<AutoTitle>false</AutoTitle>
+		<CommandBarLocation>None</CommandBarLocation>
+		<VerticalScroll>useIfNecessary</VerticalScroll>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+		<ChildItems>
+			<UsualGroup name="ГруппаТекущаяДата" id="73">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Текущая дата</v8:content>
+					</v8:item>
+				</Title>
+				<Group>Horizontal</Group>
+				<Behavior>Usual</Behavior>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаТекущаяДатаExtendedTooltip" id="76"/>
+				<ChildItems>
+					<LabelDecoration name="ДекорацияПериод" id="71">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Период:</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>[todo Декорация для заголовка]</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ContextMenu name="ДекорацияПериодКонтекстноеМеню" id="72"/>
+						<ExtendedTooltip name="ДекорацияПериодExtendedTooltip" id="77"/>
+					</LabelDecoration>
+					<LabelDecoration name="ТекущаяДата" id="69">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Текущая дата</v8:content>
+							</v8:item>
+						</Title>
+						<ContextMenu name="ТекущаяДатаКонтекстноеМеню" id="70"/>
+						<ExtendedTooltip name="ТекущаяДатаExtendedTooltip" id="78"/>
+					</LabelDecoration>
+					<LabelDecoration name="ДеньНедели" id="74">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<TextColor>style:ПоясняющийТекст</TextColor>
+						<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>&lt;День недели&gt;</v8:content>
+							</v8:item>
+						</Title>
+						<ContextMenu name="ДеньНеделиКонтекстноеМеню" id="75"/>
+						<ExtendedTooltip name="ДеньНеделиExtendedTooltip" id="79"/>
+					</LabelDecoration>
+				</ChildItems>
+			</UsualGroup>
+			<UsualGroup name="ГруппаМагазинСклад" id="19">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа магазин склад</v8:content>
+					</v8:item>
+				</Title>
+				<Group>Horizontal</Group>
+				<Behavior>Usual</Behavior>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаМагазинСкладExtendedTooltip" id="80"/>
+				<ChildItems>
+					<InputField name="Магазин" id="15">
+						<ClearButton>true</ClearButton>
+						<OpenButton>false</OpenButton>
+						<ContextMenu name="МагазинКонтекстноеМеню" id="16"/>
+						<ExtendedTooltip name="МагазинExtendedTooltip" id="81"/>
+					</InputField>
+					<InputField name="Склад" id="17">
+						<ChoiceButton>true</ChoiceButton>
+						<ClearButton>true</ClearButton>
+						<OpenButton>false</OpenButton>
+						<ChoiceParameterLinks>
+							<xr:Link>
+								<xr:Name>Отбор.Магазин</xr:Name>
+								<xr:DataPath xsi:type="xs:string">4</xr:DataPath>
+								<xr:ValueChange>Clear</xr:ValueChange>
+							</xr:Link>
+						</ChoiceParameterLinks>
+						<ContextMenu name="СкладКонтекстноеМеню" id="18"/>
+						<ExtendedTooltip name="СкладExtendedTooltip" id="82"/>
+					</InputField>
+				</ChildItems>
+			</UsualGroup>
+			<UsualGroup name="Группа" id="22">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа</v8:content>
+					</v8:item>
+				</Title>
+				<Group>Horizontal</Group>
+				<Behavior>Usual</Behavior>
+				<ChildItemsWidth>Equal</ChildItemsWidth>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаExtendedTooltip" id="83"/>
+				<ChildItems>
+					<UsualGroup name="ГруппаРаспоряжения" id="23">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Распоряжения на приемку и отгрузку товаров</v8:content>
+							</v8:item>
+						</Title>
+						<Group>Vertical</Group>
+						<Behavior>Usual</Behavior>
+						<ExtendedTooltip name="ГруппаРаспоряженияExtendedTooltip" id="84"/>
+						<ChildItems>
+							<Table name="Распоряжения" id="1">
+								<Representation>Tree</Representation>
+								<ReadOnly>true</ReadOnly>
+								<HorizontalLines>false</HorizontalLines>
+								<VerticalLines>false</VerticalLines>
+								<AutoInsertNewRow>true</AutoInsertNewRow>
+								<InitialTreeView>ExpandAllLevels</InitialTreeView>
+								<EnableStartDrag>true</EnableStartDrag>
+								<EnableDrag>true</EnableDrag>
+								<FileDragMode>AsFile</FileDragMode>
+								<SearchStringLocation>None</SearchStringLocation>
+								<ViewStatusLocation>None</ViewStatusLocation>
+								<SearchControlLocation>None</SearchControlLocation>
+								<ContextMenu name="РаспоряженияКонтекстноеМеню" id="2"/>
+								<AutoCommandBar name="РаспоряженияКоманднаяПанель" id="3">
+									<Autofill>false</Autofill>
+									<ChildItems>
+										<Button name="Обновить" id="12">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ОбновитьExtendedTooltip" id="86"/>
+										</Button>
+										<Popup name="РаспоряженияОтчеты" id="64">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отчеты</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>StdPicture.Report</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="РаспоряженияОтчетыExtendedTooltip" id="87"/>
+											<ChildItems>
+												<Button name="РаспоряженияОтчетТоварыКПриемке" id="66">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<ExtendedTooltip name="РаспоряженияОтчетТоварыКПриемкеExtendedTooltip" id="88"/>
+												</Button>
+												<Button name="РаспоряженияОтчетТоварыКОтгрузке" id="65">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<ExtendedTooltip name="РаспоряженияОтчетТоварыКОтгрузкеExtendedTooltip" id="89"/>
+												</Button>
+											</ChildItems>
+										</Popup>
+									</ChildItems>
+								</AutoCommandBar>
+								<ExtendedTooltip name="РаспоряженияExtendedTooltip" id="90"/>
+								<SearchStringAddition name="РаспоряженияSearchString" id="102">
+									<AdditionSource>
+										<Item>Распоряжения</Item>
+										<Type>SearchStringRepresentation</Type>
+									</AdditionSource>
+									<ContextMenu name="РаспоряженияSearchStringContextMenu" id="103"/>
+									<ExtendedTooltip name="РаспоряженияSearchStringExtendedTooltip" id="104"/>
+								</SearchStringAddition>
+								<ViewStatusAddition name="РаспоряженияViewStatus" id="105">
+									<AdditionSource>
+										<Item>Распоряжения</Item>
+										<Type>ViewStatusRepresentation</Type>
+									</AdditionSource>
+									<ContextMenu name="РаспоряженияViewStatusContextMenu" id="106"/>
+									<ExtendedTooltip name="РаспоряженияViewStatusExtendedTooltip" id="107"/>
+								</ViewStatusAddition>
+								<SearchControlAddition name="РаспоряженияSearchControl" id="108">
+									<AdditionSource>
+										<Item>Распоряжения</Item>
+										<Type>SearchControl</Type>
+									</AdditionSource>
+									<ContextMenu name="РаспоряженияSearchControlContextMenu" id="109"/>
+									<ExtendedTooltip name="РаспоряженияSearchControlExtendedTooltip" id="110"/>
+								</SearchControlAddition>
+								<ChildItems>
+									<InputField name="РаспоряженияРаспоряжение" id="4">
+										<EditMode>EnterOnInput</EditMode>
+										<ContextMenu name="РаспоряженияРаспоряжениеКонтекстноеМеню" id="5"/>
+										<ExtendedTooltip name="РаспоряженияРаспоряжениеExtendedTooltip" id="91"/>
+									</InputField>
+								</ChildItems>
+							</Table>
+						</ChildItems>
+					</UsualGroup>
+					<UsualGroup name="ГруппаПриказыНаИнвентаризацию" id="24">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Приказы на пересчет товаров</v8:content>
+							</v8:item>
+						</Title>
+						<Group>Vertical</Group>
+						<Behavior>Usual</Behavior>
+						<ExtendedTooltip name="ГруппаПриказыНаИнвентаризациюExtendedTooltip" id="92"/>
+						<ChildItems>
+							<Table name="ПриказыНаИнвентаризацию" id="25">
+								<ReadOnly>true</ReadOnly>
+								<HorizontalLines>false</HorizontalLines>
+								<VerticalLines>false</VerticalLines>
+								<UseAlternationRowColor>true</UseAlternationRowColor>
+								<EnableStartDrag>true</EnableStartDrag>
+								<FileDragMode>AsFile</FileDragMode>
+								<SearchStringLocation>None</SearchStringLocation>
+								<ViewStatusLocation>None</ViewStatusLocation>
+								<SearchControlLocation>None</SearchControlLocation>
+								<AutoRefresh>false</AutoRefresh>
+								<AutoRefreshPeriod>60</AutoRefreshPeriod>
+								<Period>
+									<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+									<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+									<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+								</Period>
+								<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+								<RestoreCurrentRow>false</RestoreCurrentRow>
+								<TopLevelParent xsi:nil="true"/>
+								<ShowRoot>true</ShowRoot>
+								<AllowRootChoice>false</AllowRootChoice>
+								<UpdateOnDataChange>Auto</UpdateOnDataChange>
+								<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+								<ContextMenu name="ПриказыНаИнвентаризациюКонтекстноеМеню" id="26"/>
+								<AutoCommandBar name="ПриказыНаИнвентаризациюКоманднаяПанель" id="27">
+									<Autofill>false</Autofill>
+									<ChildItems>
+										<Button name="ОбновитьПриказы" id="62">
+											<Type>CommandBarButton</Type>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ОбновитьПриказыExtendedTooltip" id="94"/>
+										</Button>
+										<Popup name="ПриказыНаИнвентаризациюОтчеты" id="67">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отчеты</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>StdPicture.Report</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="ПриказыНаИнвентаризациюОтчетыExtendedTooltip" id="95"/>
+											<ChildItems>
+												<Button name="ПриказыНаИнвентаризациюОтчетОформлениеИзлишковНедостач" id="68">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<ExtendedTooltip name="ПриказыНаИнвентаризациюОтчетОформлениеИзлишковНедостачExtendedTooltip" id="96"/>
+												</Button>
+											</ChildItems>
+										</Popup>
+									</ChildItems>
+								</AutoCommandBar>
+								<ExtendedTooltip name="ПриказыНаИнвентаризациюExtendedTooltip" id="97"/>
+								<SearchStringAddition name="ПриказыНаИнвентаризациюSearchString" id="111">
+									<AdditionSource>
+										<Item>ПриказыНаИнвентаризацию</Item>
+										<Type>SearchStringRepresentation</Type>
+									</AdditionSource>
+									<ContextMenu name="ПриказыНаИнвентаризациюSearchStringContextMenu" id="112"/>
+									<ExtendedTooltip name="ПриказыНаИнвентаризациюSearchStringExtendedTooltip" id="113"/>
+								</SearchStringAddition>
+								<ViewStatusAddition name="ПриказыНаИнвентаризациюViewStatus" id="114">
+									<AdditionSource>
+										<Item>ПриказыНаИнвентаризацию</Item>
+										<Type>ViewStatusRepresentation</Type>
+									</AdditionSource>
+									<ContextMenu name="ПриказыНаИнвентаризациюViewStatusContextMenu" id="115"/>
+									<ExtendedTooltip name="ПриказыНаИнвентаризациюViewStatusExtendedTooltip" id="116"/>
+								</ViewStatusAddition>
+								<SearchControlAddition name="ПриказыНаИнвентаризациюSearchControl" id="117">
+									<AdditionSource>
+										<Item>ПриказыНаИнвентаризацию</Item>
+										<Type>SearchControl</Type>
+									</AdditionSource>
+									<ContextMenu name="ПриказыНаИнвентаризациюSearchControlContextMenu" id="118"/>
+									<ExtendedTooltip name="ПриказыНаИнвентаризациюSearchControlExtendedTooltip" id="119"/>
+								</SearchControlAddition>
+								<ChildItems>
+									<ColumnGroup name="ГруппаКолонокПриказы" id="63">
+										<Group>InCell</Group>
+										<ExtendedTooltip name="ГруппаКолонокПриказыExtendedTooltip" id="98"/>
+										<ChildItems>
+											<LabelField name="ПриказыНаИнвентаризациюСсылка" id="54">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Приказ</v8:content>
+													</v8:item>
+												</Title>
+												<ContextMenu name="ПриказыНаИнвентаризациюСсылкаКонтекстноеМеню" id="55"/>
+												<ExtendedTooltip name="ПриказыНаИнвентаризациюСсылкаExtendedTooltip" id="99"/>
+											</LabelField>
+											<LabelField name="ПриказыНаИнвентаризациюСтатус" id="56">
+												<ContextMenu name="ПриказыНаИнвентаризациюСтатусКонтекстноеМеню" id="57"/>
+												<ExtendedTooltip name="ПриказыНаИнвентаризациюСтатусExtendedTooltip" id="100"/>
+											</LabelField>
+											<LabelField name="ПриказыНаИнвентаризациюСостояние" id="52">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Состояние</v8:content>
+													</v8:item>
+												</Title>
+												<ContextMenu name="ПриказыНаИнвентаризациюСостояниеКонтекстноеМеню" id="53"/>
+												<ExtendedTooltip name="ПриказыНаИнвентаризациюСостояниеExtendedTooltip" id="101"/>
+											</LabelField>
+										</ChildItems>
+									</ColumnGroup>
+								</ChildItems>
+							</Table>
+						</ChildItems>
+					</UsualGroup>
+				</ChildItems>
+			</UsualGroup>
+		</ChildItems>
+		<Attributes>
+			<ConditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>РаспоряженияРаспоряжение</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>OrGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Распоряжения.Распоряжение</dcsset:left>
+								<dcsset:comparisonType>Contains</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:string">Приемка</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Распоряжения.Распоряжение</dcsset:left>
+								<dcsset:comparisonType>Contains</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:string">Отгрузка</dcsset:right>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>РаспоряженияРаспоряжение</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Распоряжения.Распоряжение</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">&lt;нет распоряжений&gt;</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:ЦветТекстаОтмененнойСтрокиДокумента</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</ConditionalAppearance>
+		</Attributes>
+	</BaseForm>
+</Form>
