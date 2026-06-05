@@ -58,6 +58,13 @@
 					<ContextMenu name="ДеревоНоменклатурыКоличествоКонтекстноеМеню" id="18"/>
 					<ExtendedTooltip name="ДеревоНоменклатурыКоличествоРасширеннаяПодсказка" id="19"/>
 				</InputField>
+				<InputField name="ДеревоНоменклатурыЦена" id="20">
+					<DataPath>ДеревоНоменклатуры.Цена</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДеревоНоменклатурыЦенаКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ДеревоНоменклатурыЦенаРасширеннаяПодсказка" id="22"/>
+				</InputField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
@@ -102,6 +109,22 @@
 						<v8:NumberQualifiers>
 							<v8:Digits>10</v8:Digits>
 							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Цена" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
 							<v8:AllowedSign>Any</v8:AllowedSign>
 						</v8:NumberQualifiers>
 					</Type>
