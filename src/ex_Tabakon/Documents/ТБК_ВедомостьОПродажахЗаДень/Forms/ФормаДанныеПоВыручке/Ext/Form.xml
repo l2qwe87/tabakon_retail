@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Данные по выручке</v8:content>
+		</v8:item>
+	</Title>
+	<Width>100</Width>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ДанныеПоВыручке" id="1">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ДанныеПоВыручке</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДанныеПоВыручкеКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ДанныеПоВыручкеКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ДанныеПоВыручкеРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="ДанныеПоВыручкеСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>ДанныеПоВыручке</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеПоВыручкеСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="ДанныеПоВыручкеСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДанныеПоВыручкеСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>ДанныеПоВыручке</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеПоВыручкеСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ДанныеПоВыручкеСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДанныеПоВыручкеУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>ДанныеПоВыручке</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеПоВыручкеУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ДанныеПоВыручкеУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">ДанныеПоВыручкеПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">ДанныеПоВыручкеПередУдалением</Event>
+				<Event name="OnChange">ДанныеПоВыручкеПриИзменении</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ДанныеПоВыручкеТипДС" id="17">
+					<DataPath>ДанныеПоВыручке.ТипДС</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДанныеПоВыручкеТипДСКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ДанныеПоВыручкеТипДСРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="ДанныеПоВыручкеПо1с" id="14">
+					<DataPath>ДанныеПоВыручке.По1с</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По 1с</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДанныеПоВыручкеПо1сКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ДанныеПоВыручкеПо1сРасширеннаяПодсказка" id="16"/>
+				</InputField>
+				<InputField name="ДанныеПоВыручкеZОтчет" id="20">
+					<DataPath>ДанныеПоВыручке.ZОтчет</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Внести с z-отчета</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<TextColor>web:LightGray</TextColor>
+					<ContextMenu name="ДанныеПоВыручкеZОтчетКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ДанныеПоВыручкеZОтчетРасширеннаяПодсказка" id="22"/>
+					<Events>
+						<Event name="OnChange">ДанныеПоВыручкеZОтчетПриИзменении</Event>
+						<Event name="EditTextChange">ДанныеПоВыручкеZОтчетИзменениеТекстаРедактирования</Event>
+						<Event name="TextEditEnd">ДанныеПоВыручкеZОтчетОкончаниеВводаТекста</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДанныеПоВыручкеРазницаZ" id="26">
+					<DataPath>ДанныеПоВыручке.РазницаZ</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДанныеПоВыручкеРазницаZКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ДанныеПоВыручкеРазницаZРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="ДанныеПоВыручкеФактически" id="23">
+					<DataPath>ДанныеПоВыручке.Фактически</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<TextColor>web:LightGray</TextColor>
+					<ContextMenu name="ДанныеПоВыручкеФактическиКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ДанныеПоВыручкеФактическиРасширеннаяПодсказка" id="25"/>
+					<Events>
+						<Event name="EditTextChange">ДанныеПоВыручкеФактическиИзменениеТекстаРедактирования</Event>
+						<Event name="TextEditEnd">ДанныеПоВыручкеФактическиОкончаниеВводаТекста</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДанныеПоВыручкеРазницаФакт" id="29">
+					<DataPath>ДанныеПоВыручке.РазницаФакт</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДанныеПоВыручкеРазницаФактКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ДанныеПоВыручкеРазницаФактРасширеннаяПодсказка" id="31"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<LabelDecoration name="Декорация1" id="32">
+			<TextColor>style:SpecialTextColor</TextColor>
+			<ContextMenu name="Декорация1КонтекстноеМеню" id="33"/>
+			<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="34"/>
+		</LabelDecoration>
+		<CheckBoxField name="ТерминальнаяСверкаНеВышла" id="37">
+			<DataPath>ТерминальнаяСверкаНеВышла</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ТерминальнаяСверкаНеВышлаКонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="ТерминальнаяСверкаНеВышлаРасширеннаяПодсказка" id="39"/>
+		</CheckBoxField>
+		<Button name="ОК" id="35">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ОК</CommandName>
+			<BackColor>style:ActivityColor</BackColor>
+			<Font bold="true" kind="AutoFont"/>
+			<ExtendedTooltip name="ОКРасширеннаяПодсказка" id="36"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ДанныеПоВыручке" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные по выручке</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="По1с" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По1с</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипДС" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип ДС</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ZОтчет" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Z-отчет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Фактически" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фактически</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="РазницаZ" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разница с z-отчетом</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="РазницаФакт" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разница с фактом</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТерминальнаяСверкаНеВышла" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Терминальная сверка не вышла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДанныеПоВыручкеРазницаZ</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДанныеПоВыручке.РазницаZ</dcsset:left>
+						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДанныеПоВыручкеРазницаФакт</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДанныеПоВыручке.РазницаФакт</dcsset:left>
+						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОК</Action>
+		</Command>
+	</Commands>
+</Form>
