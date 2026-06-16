@@ -3396,6 +3396,19 @@
 							</Title>
 							<ExtendedTooltip name="АкцииРасширеннаяПодсказка" id="786"/>
 						</Button>
+						<Button name="Списки" id="792">
+							<Type>UsualButton</Type>
+							<Width>12</Width>
+							<Height>4</Height>
+							<CommandName>Form.Command.ОткрытьСписки</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Списки</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="СпискиРасширеннаяПодсказка" id="793"/>
+						</Button>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -4726,6 +4739,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКОткрытьАкцииПосле</Action>
+		</Command>
+		<Command name="ОткрытьСписки" id="1000028">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть списки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть списки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКОткрытьСпискиПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.17">
