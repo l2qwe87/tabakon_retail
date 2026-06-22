@@ -3206,6 +3206,7 @@
 						</Button>
 						<Button name="ОткрытьПочту" id="579">
 							<Type>UsualButton</Type>
+							<Visible>false</Visible>
 							<Width>12</Width>
 							<Height>4</Height>
 							<CommandName>Form.Command.ОткрытьПочту</CommandName>
@@ -3246,6 +3247,7 @@
 						</Button>
 						<Button name="ПрименениеЦенНоменклатуры" id="653">
 							<Type>UsualButton</Type>
+							<Visible>false</Visible>
 							<Width>11</Width>
 							<Height>4</Height>
 							<CommandName>Document.ПрименениеЦенНоменклатуры.StandardCommand.OpenList</CommandName>
@@ -3324,38 +3326,6 @@
 							</Title>
 							<ExtendedTooltip name="ОткрытьВыполнениеПлановРасширеннаяПодсказка" id="656"/>
 						</Button>
-						<UsualGroup name="ГруппаПокупкиСотрудников" id="586">
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа покупки сотрудников</v8:content>
-								</v8:item>
-							</ToolTip>
-							<Group>Vertical</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаПокупкиСотрудниковРасширеннаяПодсказка" id="587"/>
-							<ChildItems>
-								<CheckBoxField name="ПокупкаСотрудника" id="581">
-									<DataPath>ПокупкаСотрудника</DataPath>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ПокупкаСотрудникаКонтекстноеМеню" id="582"/>
-									<ExtendedTooltip name="ПокупкаСотрудникаРасширеннаяПодсказка" id="583"/>
-								</CheckBoxField>
-								<Button name="ПолучитьЦеныПокупкаСотрудника" id="584">
-									<Type>UsualButton</Type>
-									<Width>12</Width>
-									<CommandName>Form.Command.ПолучитьЦеныПокупкаСотрудника</CommandName>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Получить цены для сотрудников</v8:content>
-										</v8:item>
-									</Title>
-									<ExtendedTooltip name="ПолучитьЦеныПокупкаСотрудникаРасширеннаяПодсказка" id="585"/>
-								</Button>
-							</ChildItems>
-						</UsualGroup>
 						<Button name="ОстаткиМагазина" id="667">
 							<Type>UsualButton</Type>
 							<Width>12</Width>
@@ -3410,6 +3380,38 @@
 							</Title>
 							<ExtendedTooltip name="СпискиРасширеннаяПодсказка" id="795"/>
 						</Button>
+						<UsualGroup name="ГруппаПокупкиСотрудников" id="586">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа покупки сотрудников</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПокупкиСотрудниковРасширеннаяПодсказка" id="587"/>
+							<ChildItems>
+								<CheckBoxField name="ПокупкаСотрудника" id="581">
+									<DataPath>ПокупкаСотрудника</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПокупкаСотрудникаКонтекстноеМеню" id="582"/>
+									<ExtendedTooltip name="ПокупкаСотрудникаРасширеннаяПодсказка" id="583"/>
+								</CheckBoxField>
+								<Button name="ПолучитьЦеныПокупкаСотрудника" id="584">
+									<Type>UsualButton</Type>
+									<Width>12</Width>
+									<CommandName>Form.Command.ПолучитьЦеныПокупкаСотрудника</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Получить цены для сотрудников</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ПолучитьЦеныПокупкаСотрудникаРасширеннаяПодсказка" id="585"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ГруппаТБК_2" id="792">

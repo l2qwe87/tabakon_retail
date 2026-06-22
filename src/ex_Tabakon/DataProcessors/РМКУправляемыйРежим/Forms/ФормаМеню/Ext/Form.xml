@@ -573,6 +573,50 @@
 											<ContextMenu name="ДекорацияЗавершениеРаботыКонтекстноеМеню" id="100"/>
 											<ExtendedTooltip name="ДекорацияЗавершениеРаботыРасширеннаяПодсказка" id="101"/>
 										</PictureDecoration>
+										<LabelDecoration name="Декорация3" id="189">
+											<Width>24</Width>
+											<TextColor>style:SpecialTextColor</TextColor>
+											<Font ref="style:NormalTextFont" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Предложи и расскажи</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<BackColor>style:FormBackColor</BackColor>
+											<BorderColor>style:BorderColor</BorderColor>
+											<ContextMenu name="Декорация3КонтекстноеМеню" id="190"/>
+											<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="191"/>
+										</LabelDecoration>
+										<PictureDecoration name="Декорация2" id="186">
+											<Hyperlink>true</Hyperlink>
+											<Picture>
+												<xr:Ref>CommonPicture.QRПредложений</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="Декорация2КонтекстноеМеню" id="187"/>
+											<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="188"/>
+											<Events>
+												<Event name="Click" callType="After">ТБКДекорация2НажатиеПосле</Event>
+											</Events>
+										</PictureDecoration>
+										<LabelDecoration name="Декорация4" id="192" DisplayImportance="VeryHigh">
+											<Width>24</Width>
+											<TextColor>style:SpecialTextColor</TextColor>
+											<Font ref="style:NormalTextFont" height="15" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Мы ждем ваши пожелания для улучшения качества работы в компании</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<BackColor>style:FormBackColor</BackColor>
+											<BorderColor>style:BorderColor</BorderColor>
+											<ContextMenu name="Декорация4КонтекстноеМеню" id="193"/>
+											<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="194"/>
+										</LabelDecoration>
 									</ChildItems>
 								</UsualGroup>
 							</ChildItems>
