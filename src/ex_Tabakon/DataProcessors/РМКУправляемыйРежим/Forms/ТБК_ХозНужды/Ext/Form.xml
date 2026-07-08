@@ -12,25 +12,35 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 		<ChildItems>
-			<Button name="ДанныеОбновить" id="34">
+			<ButtonGroup name="ФормаГруппа1" id="90">
+				<ExtendedTooltip name="ФормаГруппа1РасширеннаяПодсказка" id="91"/>
+				<ChildItems>
+					<Button name="ДанныеОтправить" id="32">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.Отправить</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.SendMessage</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ДанныеОтправитьРасширеннаяПодсказка" id="33"/>
+					</Button>
+					<Button name="ДанныеОбновить" id="34">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.Обновить</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.Refresh</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ДанныеОбновитьРасширеннаяПодсказка" id="35"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+			<Button name="ФормаПоказатьЗаПрошлыйМесяц" id="92">
 				<Type>CommandBarButton</Type>
-				<Representation>PictureAndText</Representation>
-				<CommandName>Form.Command.Обновить</CommandName>
-				<Picture>
-					<xr:Ref>StdPicture.Refresh</xr:Ref>
-					<xr:LoadTransparent>true</xr:LoadTransparent>
-				</Picture>
-				<ExtendedTooltip name="ДанныеОбновитьРасширеннаяПодсказка" id="35"/>
-			</Button>
-			<Button name="ДанныеОтправить" id="32">
-				<Type>CommandBarButton</Type>
-				<Representation>PictureAndText</Representation>
-				<CommandName>Form.Command.Отправить</CommandName>
-				<Picture>
-					<xr:Ref>StdPicture.SendMessage</xr:Ref>
-					<xr:LoadTransparent>true</xr:LoadTransparent>
-				</Picture>
-				<ExtendedTooltip name="ДанныеОтправитьРасширеннаяПодсказка" id="33"/>
+				<CommandName>Form.Command.ПоказатьЗаПрошлыйМесяц</CommandName>
+				<ExtendedTooltip name="ФормаПоказатьЗаПрошлыйМесяцРасширеннаяПодсказка" id="93"/>
 			</Button>
 			<Button name="Форматест" id="85">
 				<Type>CommandBarButton</Type>
@@ -432,6 +442,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>тест</Action>
+		</Command>
+		<Command name="ПоказатьЗаПрошлыйМесяц" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать за прошлый месяц</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать за прошлый месяц</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьЗаПрошлыйМесяц</Action>
 		</Command>
 	</Commands>
 </Form>
