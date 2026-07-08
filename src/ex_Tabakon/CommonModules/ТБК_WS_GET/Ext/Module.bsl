@@ -917,7 +917,7 @@
 	
 КонецФункции
 
-Функция GetZapolnenieHozTovarov() Экспорт 
+Функция GetZapolnenieHozTovarov(вхПараметры) Экспорт 
 	
 	Попытка
 		Запрос = Новый Запрос;
