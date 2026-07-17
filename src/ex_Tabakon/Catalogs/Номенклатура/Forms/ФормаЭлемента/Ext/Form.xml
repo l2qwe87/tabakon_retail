@@ -191,6 +191,10 @@
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite" callType="After">ТБКПослеЗаписиПосле</Event>
+		<Event name="AfterWriteAtServer" callType="After">ТБКПослеЗаписиНаСервереПосле</Event>
+	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаВертикальНаименований" id="374">
 			<Group>Vertical</Group>
