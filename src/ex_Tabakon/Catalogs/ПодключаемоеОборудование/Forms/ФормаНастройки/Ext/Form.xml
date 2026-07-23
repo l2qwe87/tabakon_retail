@@ -1,0 +1,927 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ЗаписатьИЗакрыть" id="1">
+				<Type>CommandBarButton</Type>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="ЗаписатьИЗакрытьExtendedTooltip" id="74"/>
+			</Button>
+			<Button name="ТестУстройства" id="25">
+				<Type>CommandBarButton</Type>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="ТестУстройстваExtendedTooltip" id="79"/>
+			</Button>
+			<Button name="АвтонастройкаУстройства" id="200">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="АвтонастройкаУстройстваРасширеннаяПодсказка" id="201"/>
+			</Button>
+			<Popup name="Функции" id="24">
+				<EnableContentChange>true</EnableContentChange>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Функции</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФункцииExtendedTooltip" id="75"/>
+				<ChildItems>
+					<ButtonGroup name="ДополнительныеДействия" id="71">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дополнительные действия</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ДополнительныеДействияExtendedTooltip" id="78"/>
+					</ButtonGroup>
+				</ChildItems>
+			</Popup>
+			<Button name="Справка" id="3">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="СправкаExtendedTooltip" id="80"/>
+			</Button>
+			<Button name="ФормаОчиститьПараметры" id="202">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="ФормаОчиститьПараметрыРасширеннаяПодсказка" id="203"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="ГруппаДемонстрационныйРежим" id="54">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Демонстрационный режим</v8:content>
+				</v8:item>
+			</Title>
+			<Height>3</Height>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДемонстрационныйРежимExtendedTooltip" id="89"/>
+			<ChildItems>
+				<LabelField name="ДемонстрационныйРежим" id="51">
+					<ReadOnly>true</ReadOnly>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>true</VerticalStretch>
+					<TextColor>style:SpecialTextColor</TextColor>
+					<ContextMenu name="ДемонстрационныйРежимКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="ДемонстрационныйРежимExtendedTooltip" id="90"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="СтатусКомпоненты" id="134">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус компоненты</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтатусКомпонентыРасширеннаяПодсказка" id="135"/>
+			<ChildItems>
+				<Page name="КомпонентаПолучениеИнформации" id="156">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Компонента получение информации</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="КомпонентаПолучениеИнформацииРасширеннаяПодсказка" id="157"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияПолучениеИнформации" id="158">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Получение информации о компоненте подключения оборудования…</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПолучениеИнформацииКонтекстноеМеню" id="159"/>
+							<ExtendedTooltip name="ДекорацияПолучениеИнформацииРасширеннаяПодсказка" id="160"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="КомпонентаНеУстановлена" id="138">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Компонента не установлена</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedTooltip name="КомпонентаНеУстановленаРасширеннаяПодсказка" id="139"/>
+					<ChildItems>
+						<LabelDecoration name="КомпонентаНеУстановленТекст" id="142">
+							<Width>60</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Для использования подключаемого оборудования необходимо установить драйвер на текущем рабочем месте.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="КомпонентаНеУстановленТекстКонтекстноеМеню" id="143"/>
+							<ExtendedTooltip name="КомпонентаНеУстановленТекстРасширеннаяПодсказка" id="144"/>
+						</LabelDecoration>
+						<Button name="Установить" id="140">
+							<Type>UsualButton</Type>
+							<CommandName>0</CommandName>
+							<ExtendedTooltip name="УстановитьРасширеннаяПодсказка" id="141"/>
+						</Button>
+					</ChildItems>
+				</Page>
+				<Page name="КомпонентаУстановлена" id="26">
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Драйвер</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="КомпонентаУстановленаРасширеннаяПодсказка" id="81"/>
+					<ChildItems>
+						<UsualGroup name="ДрайверОборудования" id="136">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Информация</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ДрайверОборудованияРасширеннаяПодсказка" id="137"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаВерсия" id="45">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа версия</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаВерсияРасширеннаяПодсказка" id="82"/>
+									<ChildItems>
+										<InputField name="Статус" id="27">
+											<ReadOnly>true</ReadOnly>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Wrap>false</Wrap>
+											<ContextMenu name="СтатусКонтекстноеМеню" id="28"/>
+											<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="83"/>
+										</InputField>
+										<InputField name="Версия" id="29">
+											<ReadOnly>true</ReadOnly>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Wrap>false</Wrap>
+											<ContextMenu name="ВерсияКонтекстноеМеню" id="30"/>
+											<ExtendedTooltip name="ВерсияExtendedTooltip" id="84"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Описание" id="53">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Описание</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ОписаниеExtendedTooltip" id="85"/>
+									<ChildItems>
+										<InputField name="НаименованиеДрайвера" id="43">
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Наименование</v8:content>
+												</v8:item>
+											</Title>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<ContextMenu name="НаименованиеДрайвераКонтекстноеМеню" id="44"/>
+											<ExtendedTooltip name="НаименованиеДрайвераExtendedTooltip" id="86"/>
+										</InputField>
+										<InputField name="ОписаниеДрайвера" id="46">
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Описание</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Left</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<MultiLine>true</MultiLine>
+											<ContextMenu name="ОписаниеДрайвераКонтекстноеМеню" id="47"/>
+											<ExtendedTooltip name="ОписаниеДрайвераExtendedTooltip" id="87"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<LabelDecoration name="ДекорацияИнформацияОбОкружении" id="197">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Информация об окружении</v8:content>
+										</v8:item>
+									</Title>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="ДекорацияИнформацияОбОкруженииКонтекстноеМеню" id="198"/>
+									<ExtendedTooltip name="ДекорацияИнформацияОбОкруженииРасширеннаяПодсказка" id="199"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ДрайверОсновнаяПоставка" id="192">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Основная поставка</v8:content>
+								</v8:item>
+							</Title>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ДрайверОсновнаяПоставкаРасширеннаяПодсказка" id="193"/>
+							<ChildItems>
+								<LabelDecoration name="ОсновнаяПоставкаУстановлена" id="194">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="ОсновнаяПоставкаУстановленаКонтекстноеМеню" id="195"/>
+									<ExtendedTooltip name="ОсновнаяПоставкаУстановленаРасширеннаяПодсказка" id="196"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ДрайверИнтеграционныйКомпонент" id="145">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Установлен интеграционный компонент</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ДрайверИнтеграционныйКомпонентРасширеннаяПодсказка" id="146"/>
+					<ChildItems>
+						<LabelDecoration name="ДрайверПредупреждение" id="150">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:SpecialTextColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Установка драйвера "%1" не завершена.
+</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДрайверПредупреждениеКонтекстноеМеню" id="151"/>
+							<ExtendedTooltip name="ДрайверПредупреждениеРасширеннаяПодсказка" id="152"/>
+						</LabelDecoration>
+						<LabelDecoration name="ИнтеграционныйКомпонентУстановлен" id="147">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>На текущем рабочем месте установлен интеграционный компонент к основной поставке драйвера. 
+Основная поставка драйвера устанавливается с помощью дистрибутива, полученного из внешнего источника.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ИнтеграционныйКомпонентУстановленКонтекстноеМеню" id="148"/>
+							<ExtendedTooltip name="ИнтеграционныйКомпонентУстановленРасширеннаяПодсказка" id="149"/>
+						</LabelDecoration>
+						<LabelDecoration name="ПерейтиНаСайтПроизводителя" id="153">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Перейти на сайт поставщика</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="ПерейтиНаСайтПроизводителяКонтекстноеМеню" id="154"/>
+							<ExtendedTooltip name="ПерейтиНаСайтПроизводителяРасширеннаяПодсказка" id="155"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="УстройствоПодключено" id="188">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Устройство подключено</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="УстройствоПодключеноРасширеннаяПодсказка" id="189"/>
+					<ChildItems>
+						<LabelDecoration name="УстройствоПодключеноСообщение" id="91">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>2</Height>
+							<TextColor>style:SpecialTextColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Устройство подключено, настройки не могут быть изменены. 
+Для отключения устройства требуется закрыть все формы приложения для текущей информационной базы.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="УстройствоПодключеноСообщениеКонтекстноеМеню" id="92"/>
+							<ExtendedTooltip name="УстройствоПодключеноСообщениеРасширеннаяПодсказка" id="93"/>
+						</LabelDecoration>
+						<Button name="Закрыть" id="190">
+							<Type>UsualButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<CommandName>0</CommandName>
+							<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="191"/>
+						</Button>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<Pages name="Страницы" id="73">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыExtendedTooltip" id="88"/>
+		</Pages>
+		<UsualGroup name="ПрефиксыИСуффиксыДорожек" id="161">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Префиксы и суффиксы дорожек</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ПрефиксыИСуффиксыДорожекРасширеннаяПодсказка" id="162"/>
+			<ChildItems>
+				<Table name="ПараметрыДорожек" id="163">
+					<Representation>List</Representation>
+					<TitleLocation>Auto</TitleLocation>
+					<CommandBarLocation>None</CommandBarLocation>
+					<SkipOnInput>false</SkipOnInput>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<HeightInTableRows>3</HeightInTableRows>
+					<SelectionMode>SingleRow</SelectionMode>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ПараметрыДорожекКонтекстноеМеню" id="164"/>
+					<AutoCommandBar name="ПараметрыДорожекКоманднаяПанель" id="165"/>
+					<ExtendedTooltip name="ПараметрыДорожекРасширеннаяПодсказка" id="166"/>
+					<SearchStringAddition name="ПараметрыДорожекСтрокаПоиска" id="167">
+						<AdditionSource>
+							<Item>ПараметрыДорожек</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПараметрыДорожекСтрокаПоискаКонтекстноеМеню" id="168"/>
+						<ExtendedTooltip name="ПараметрыДорожекСтрокаПоискаРасширеннаяПодсказка" id="169"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ПараметрыДорожекСостояниеПросмотра" id="170">
+						<AdditionSource>
+							<Item>ПараметрыДорожек</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<HorizontalLocation>Left</HorizontalLocation>
+						<ContextMenu name="ПараметрыДорожекСостояниеПросмотраКонтекстноеМеню" id="171"/>
+						<ExtendedTooltip name="ПараметрыДорожекСостояниеПросмотраРасширеннаяПодсказка" id="172"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ПараметрыДорожекУправлениеПоиском" id="173">
+						<AdditionSource>
+							<Item>ПараметрыДорожек</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ПараметрыДорожекУправлениеПоискомКонтекстноеМеню" id="174"/>
+						<ExtendedTooltip name="ПараметрыДорожекУправлениеПоискомРасширеннаяПодсказка" id="175"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="ПараметрыДорожекНомерДорожки" id="176">
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПараметрыДорожекНомерДорожкиКонтекстноеМеню" id="177"/>
+							<ExtendedTooltip name="ПараметрыДорожекНомерДорожкиРасширеннаяПодсказка" id="178"/>
+						</InputField>
+						<InputField name="ПараметрыДорожекПрефикс" id="179">
+							<EditMode>EnterOnInput</EditMode>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChooseType>false</ChooseType>
+							<ContextMenu name="ПараметрыДорожекПрефиксКонтекстноеМеню" id="180"/>
+							<ExtendedTooltip name="ПараметрыДорожекПрефиксРасширеннаяПодсказка" id="181"/>
+						</InputField>
+						<InputField name="ПараметрыДорожекСуффикс" id="182">
+							<EditMode>EnterOnInput</EditMode>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChooseType>false</ChooseType>
+							<ContextMenu name="ПараметрыДорожекСуффиксКонтекстноеМеню" id="183"/>
+							<ExtendedTooltip name="ПараметрыДорожекСуффиксРасширеннаяПодсказка" id="184"/>
+						</InputField>
+						<CheckBoxField name="ПараметрыДорожекИспользовать" id="185">
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПараметрыДорожекИспользоватьКонтекстноеМеню" id="186"/>
+							<ExtendedTooltip name="ПараметрыДорожекИспользоватьРасширеннаяПодсказка" id="187"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+	<BaseForm version="2.20">
+		<AutoTitle>false</AutoTitle>
+		<Customizable>false</Customizable>
+		<VerticalScroll>useIfNecessary</VerticalScroll>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+			<Autofill>false</Autofill>
+			<ChildItems>
+				<Button name="ЗаписатьИЗакрыть" id="1">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ЗаписатьИЗакрытьExtendedTooltip" id="74"/>
+				</Button>
+				<Button name="ТестУстройства" id="25">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ТестУстройстваExtendedTooltip" id="79"/>
+				</Button>
+				<Button name="АвтонастройкаУстройства" id="200">
+					<Type>CommandBarButton</Type>
+					<Visible>false</Visible>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="АвтонастройкаУстройстваРасширеннаяПодсказка" id="201"/>
+				</Button>
+				<Popup name="Функции" id="24">
+					<EnableContentChange>true</EnableContentChange>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Функции</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ФункцииExtendedTooltip" id="75"/>
+					<ChildItems>
+						<ButtonGroup name="ДополнительныеДействия" id="71">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дополнительные действия</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ДополнительныеДействияExtendedTooltip" id="78"/>
+						</ButtonGroup>
+					</ChildItems>
+				</Popup>
+				<Button name="Справка" id="3">
+					<Type>CommandBarButton</Type>
+					<Visible>false</Visible>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="СправкаExtendedTooltip" id="80"/>
+				</Button>
+				<Button name="ФормаОчиститьПараметры" id="202">
+					<Type>CommandBarButton</Type>
+					<Visible>false</Visible>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ФормаОчиститьПараметрыРасширеннаяПодсказка" id="203"/>
+				</Button>
+			</ChildItems>
+		</AutoCommandBar>
+		<ChildItems>
+			<UsualGroup name="ГруппаДемонстрационныйРежим" id="54">
+				<Visible>false</Visible>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Демонстрационный режим</v8:content>
+					</v8:item>
+				</Title>
+				<Height>3</Height>
+				<Group>Vertical</Group>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаДемонстрационныйРежимExtendedTooltip" id="89"/>
+				<ChildItems>
+					<LabelField name="ДемонстрационныйРежим" id="51">
+						<ReadOnly>true</ReadOnly>
+						<TitleLocation>None</TitleLocation>
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<AutoMaxHeight>false</AutoMaxHeight>
+						<HorizontalStretch>true</HorizontalStretch>
+						<VerticalStretch>true</VerticalStretch>
+						<TextColor>style:SpecialTextColor</TextColor>
+						<ContextMenu name="ДемонстрационныйРежимКонтекстноеМеню" id="52"/>
+						<ExtendedTooltip name="ДемонстрационныйРежимExtendedTooltip" id="90"/>
+					</LabelField>
+				</ChildItems>
+			</UsualGroup>
+			<Pages name="СтатусКомпоненты" id="134">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Статус компоненты</v8:content>
+					</v8:item>
+				</Title>
+				<HorizontalStretch>true</HorizontalStretch>
+				<PagesRepresentation>None</PagesRepresentation>
+				<ExtendedTooltip name="СтатусКомпонентыРасширеннаяПодсказка" id="135"/>
+				<ChildItems>
+					<Page name="КомпонентаПолучениеИнформации" id="156">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Компонента получение информации</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="КомпонентаПолучениеИнформацииРасширеннаяПодсказка" id="157"/>
+						<ChildItems>
+							<LabelDecoration name="ДекорацияПолучениеИнформации" id="158">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Получение информации о компоненте подключения оборудования…</v8:content>
+									</v8:item>
+								</Title>
+								<ContextMenu name="ДекорацияПолучениеИнформацииКонтекстноеМеню" id="159"/>
+								<ExtendedTooltip name="ДекорацияПолучениеИнформацииРасширеннаяПодсказка" id="160"/>
+							</LabelDecoration>
+						</ChildItems>
+					</Page>
+					<Page name="КомпонентаНеУстановлена" id="138">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Компонента не установлена</v8:content>
+							</v8:item>
+						</Title>
+						<HorizontalStretch>false</HorizontalStretch>
+						<ExtendedTooltip name="КомпонентаНеУстановленаРасширеннаяПодсказка" id="139"/>
+						<ChildItems>
+							<LabelDecoration name="КомпонентаНеУстановленТекст" id="142">
+								<Width>60</Width>
+								<HorizontalStretch>false</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Для использования подключаемого оборудования необходимо установить драйвер на текущем рабочем месте.</v8:content>
+									</v8:item>
+								</Title>
+								<ContextMenu name="КомпонентаНеУстановленТекстКонтекстноеМеню" id="143"/>
+								<ExtendedTooltip name="КомпонентаНеУстановленТекстРасширеннаяПодсказка" id="144"/>
+							</LabelDecoration>
+							<Button name="Установить" id="140">
+								<Type>UsualButton</Type>
+								<CommandName>0</CommandName>
+								<ExtendedTooltip name="УстановитьРасширеннаяПодсказка" id="141"/>
+							</Button>
+						</ChildItems>
+					</Page>
+					<Page name="КомпонентаУстановлена" id="26">
+						<ReadOnly>true</ReadOnly>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Драйвер</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="КомпонентаУстановленаРасширеннаяПодсказка" id="81"/>
+						<ChildItems>
+							<UsualGroup name="ДрайверОборудования" id="136">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Информация</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Vertical</Group>
+								<Representation>None</Representation>
+								<ExtendedTooltip name="ДрайверОборудованияРасширеннаяПодсказка" id="137"/>
+								<ChildItems>
+									<UsualGroup name="ГруппаВерсия" id="45">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа версия</v8:content>
+											</v8:item>
+										</Title>
+										<Group>Horizontal</Group>
+										<Representation>None</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаВерсияРасширеннаяПодсказка" id="82"/>
+										<ChildItems>
+											<InputField name="Статус" id="27">
+												<ReadOnly>true</ReadOnly>
+												<AutoMaxWidth>false</AutoMaxWidth>
+												<Wrap>false</Wrap>
+												<ContextMenu name="СтатусКонтекстноеМеню" id="28"/>
+												<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="83"/>
+											</InputField>
+											<InputField name="Версия" id="29">
+												<ReadOnly>true</ReadOnly>
+												<AutoMaxWidth>false</AutoMaxWidth>
+												<Wrap>false</Wrap>
+												<ContextMenu name="ВерсияКонтекстноеМеню" id="30"/>
+												<ExtendedTooltip name="ВерсияExtendedTooltip" id="84"/>
+											</InputField>
+										</ChildItems>
+									</UsualGroup>
+									<UsualGroup name="Описание" id="53">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Описание</v8:content>
+											</v8:item>
+										</Title>
+										<Group>Vertical</Group>
+										<Representation>None</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ОписаниеExtendedTooltip" id="85"/>
+										<ChildItems>
+											<InputField name="НаименованиеДрайвера" id="43">
+												<ReadOnly>true</ReadOnly>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Наименование</v8:content>
+													</v8:item>
+												</Title>
+												<AutoMaxWidth>false</AutoMaxWidth>
+												<HorizontalStretch>true</HorizontalStretch>
+												<ContextMenu name="НаименованиеДрайвераКонтекстноеМеню" id="44"/>
+												<ExtendedTooltip name="НаименованиеДрайвераExtendedTooltip" id="86"/>
+											</InputField>
+											<InputField name="ОписаниеДрайвера" id="46">
+												<ReadOnly>true</ReadOnly>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Описание</v8:content>
+													</v8:item>
+												</Title>
+												<TitleLocation>Left</TitleLocation>
+												<AutoMaxWidth>false</AutoMaxWidth>
+												<HorizontalStretch>true</HorizontalStretch>
+												<MultiLine>true</MultiLine>
+												<ContextMenu name="ОписаниеДрайвераКонтекстноеМеню" id="47"/>
+												<ExtendedTooltip name="ОписаниеДрайвераExtendedTooltip" id="87"/>
+											</InputField>
+										</ChildItems>
+									</UsualGroup>
+									<LabelDecoration name="ДекорацияИнформацияОбОкружении" id="197">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Информация об окружении</v8:content>
+											</v8:item>
+										</Title>
+										<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+										<Hyperlink>true</Hyperlink>
+										<ContextMenu name="ДекорацияИнформацияОбОкруженииКонтекстноеМеню" id="198"/>
+										<ExtendedTooltip name="ДекорацияИнформацияОбОкруженииРасширеннаяПодсказка" id="199"/>
+									</LabelDecoration>
+								</ChildItems>
+							</UsualGroup>
+							<UsualGroup name="ДрайверОсновнаяПоставка" id="192">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Основная поставка</v8:content>
+									</v8:item>
+								</Title>
+								<ControlRepresentation>Picture</ControlRepresentation>
+								<Representation>None</Representation>
+								<ExtendedTooltip name="ДрайверОсновнаяПоставкаРасширеннаяПодсказка" id="193"/>
+								<ChildItems>
+									<LabelDecoration name="ОсновнаяПоставкаУстановлена" id="194">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<ContextMenu name="ОсновнаяПоставкаУстановленаКонтекстноеМеню" id="195"/>
+										<ExtendedTooltip name="ОсновнаяПоставкаУстановленаРасширеннаяПодсказка" id="196"/>
+									</LabelDecoration>
+								</ChildItems>
+							</UsualGroup>
+						</ChildItems>
+					</Page>
+					<Page name="ДрайверИнтеграционныйКомпонент" id="145">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Установлен интеграционный компонент</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ДрайверИнтеграционныйКомпонентРасширеннаяПодсказка" id="146"/>
+						<ChildItems>
+							<LabelDecoration name="ДрайверПредупреждение" id="150">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<TextColor>style:SpecialTextColor</TextColor>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Установка драйвера "%1" не завершена.
+</v8:content>
+									</v8:item>
+								</Title>
+								<ContextMenu name="ДрайверПредупреждениеКонтекстноеМеню" id="151"/>
+								<ExtendedTooltip name="ДрайверПредупреждениеРасширеннаяПодсказка" id="152"/>
+							</LabelDecoration>
+							<LabelDecoration name="ИнтеграционныйКомпонентУстановлен" id="147">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>На текущем рабочем месте установлен интеграционный компонент к основной поставке драйвера. 
+Основная поставка драйвера устанавливается с помощью дистрибутива, полученного из внешнего источника.</v8:content>
+									</v8:item>
+								</Title>
+								<ContextMenu name="ИнтеграционныйКомпонентУстановленКонтекстноеМеню" id="148"/>
+								<ExtendedTooltip name="ИнтеграционныйКомпонентУстановленРасширеннаяПодсказка" id="149"/>
+							</LabelDecoration>
+							<LabelDecoration name="ПерейтиНаСайтПроизводителя" id="153">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Перейти на сайт поставщика</v8:content>
+									</v8:item>
+								</Title>
+								<Hyperlink>true</Hyperlink>
+								<ContextMenu name="ПерейтиНаСайтПроизводителяКонтекстноеМеню" id="154"/>
+								<ExtendedTooltip name="ПерейтиНаСайтПроизводителяРасширеннаяПодсказка" id="155"/>
+							</LabelDecoration>
+						</ChildItems>
+					</Page>
+					<Page name="УстройствоПодключено" id="188">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Устройство подключено</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="УстройствоПодключеноРасширеннаяПодсказка" id="189"/>
+						<ChildItems>
+							<LabelDecoration name="УстройствоПодключеноСообщение" id="91">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<Height>2</Height>
+								<TextColor>style:SpecialTextColor</TextColor>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Устройство подключено, настройки не могут быть изменены. 
+Для отключения устройства требуется закрыть все формы приложения для текущей информационной базы.</v8:content>
+									</v8:item>
+								</Title>
+								<ContextMenu name="УстройствоПодключеноСообщениеКонтекстноеМеню" id="92"/>
+								<ExtendedTooltip name="УстройствоПодключеноСообщениеРасширеннаяПодсказка" id="93"/>
+							</LabelDecoration>
+							<Button name="Закрыть" id="190">
+								<Type>UsualButton</Type>
+								<DefaultButton>true</DefaultButton>
+								<CommandName>0</CommandName>
+								<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="191"/>
+							</Button>
+						</ChildItems>
+					</Page>
+				</ChildItems>
+			</Pages>
+			<Pages name="Страницы" id="73">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Страницы</v8:content>
+					</v8:item>
+				</Title>
+				<PagesRepresentation>None</PagesRepresentation>
+				<ExtendedTooltip name="СтраницыExtendedTooltip" id="88"/>
+			</Pages>
+			<UsualGroup name="ПрефиксыИСуффиксыДорожек" id="161">
+				<Visible>false</Visible>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Префиксы и суффиксы дорожек</v8:content>
+					</v8:item>
+				</Title>
+				<Group>Vertical</Group>
+				<Representation>None</Representation>
+				<ExtendedTooltip name="ПрефиксыИСуффиксыДорожекРасширеннаяПодсказка" id="162"/>
+				<ChildItems>
+					<Table name="ПараметрыДорожек" id="163">
+						<Representation>List</Representation>
+						<TitleLocation>Auto</TitleLocation>
+						<CommandBarLocation>None</CommandBarLocation>
+						<SkipOnInput>false</SkipOnInput>
+						<ChangeRowSet>false</ChangeRowSet>
+						<ChangeRowOrder>false</ChangeRowOrder>
+						<HeightInTableRows>3</HeightInTableRows>
+						<SelectionMode>SingleRow</SelectionMode>
+						<UseAlternationRowColor>true</UseAlternationRowColor>
+						<AutoInsertNewRow>true</AutoInsertNewRow>
+						<EnableStartDrag>true</EnableStartDrag>
+						<EnableDrag>true</EnableDrag>
+						<FileDragMode>AsFile</FileDragMode>
+						<SearchStringLocation>None</SearchStringLocation>
+						<ViewStatusLocation>None</ViewStatusLocation>
+						<SearchControlLocation>None</SearchControlLocation>
+						<RowFilter xsi:nil="true"/>
+						<ContextMenu name="ПараметрыДорожекКонтекстноеМеню" id="164"/>
+						<AutoCommandBar name="ПараметрыДорожекКоманднаяПанель" id="165"/>
+						<ExtendedTooltip name="ПараметрыДорожекРасширеннаяПодсказка" id="166"/>
+						<SearchStringAddition name="ПараметрыДорожекСтрокаПоиска" id="167">
+							<AdditionSource>
+								<Item>ПараметрыДорожек</Item>
+								<Type>SearchStringRepresentation</Type>
+							</AdditionSource>
+							<ContextMenu name="ПараметрыДорожекСтрокаПоискаКонтекстноеМеню" id="168"/>
+							<ExtendedTooltip name="ПараметрыДорожекСтрокаПоискаРасширеннаяПодсказка" id="169"/>
+						</SearchStringAddition>
+						<ViewStatusAddition name="ПараметрыДорожекСостояниеПросмотра" id="170">
+							<AdditionSource>
+								<Item>ПараметрыДорожек</Item>
+								<Type>ViewStatusRepresentation</Type>
+							</AdditionSource>
+							<HorizontalLocation>Left</HorizontalLocation>
+							<ContextMenu name="ПараметрыДорожекСостояниеПросмотраКонтекстноеМеню" id="171"/>
+							<ExtendedTooltip name="ПараметрыДорожекСостояниеПросмотраРасширеннаяПодсказка" id="172"/>
+						</ViewStatusAddition>
+						<SearchControlAddition name="ПараметрыДорожекУправлениеПоиском" id="173">
+							<AdditionSource>
+								<Item>ПараметрыДорожек</Item>
+								<Type>SearchControl</Type>
+							</AdditionSource>
+							<ContextMenu name="ПараметрыДорожекУправлениеПоискомКонтекстноеМеню" id="174"/>
+							<ExtendedTooltip name="ПараметрыДорожекУправлениеПоискомРасширеннаяПодсказка" id="175"/>
+						</SearchControlAddition>
+						<ChildItems>
+							<InputField name="ПараметрыДорожекНомерДорожки" id="176">
+								<ReadOnly>true</ReadOnly>
+								<EditMode>EnterOnInput</EditMode>
+								<ContextMenu name="ПараметрыДорожекНомерДорожкиКонтекстноеМеню" id="177"/>
+								<ExtendedTooltip name="ПараметрыДорожекНомерДорожкиРасширеннаяПодсказка" id="178"/>
+							</InputField>
+							<InputField name="ПараметрыДорожекПрефикс" id="179">
+								<EditMode>EnterOnInput</EditMode>
+								<HorizontalStretch>true</HorizontalStretch>
+								<ClearButton>true</ClearButton>
+								<ListChoiceMode>true</ListChoiceMode>
+								<ChooseType>false</ChooseType>
+								<ContextMenu name="ПараметрыДорожекПрефиксКонтекстноеМеню" id="180"/>
+								<ExtendedTooltip name="ПараметрыДорожекПрефиксРасширеннаяПодсказка" id="181"/>
+							</InputField>
+							<InputField name="ПараметрыДорожекСуффикс" id="182">
+								<EditMode>EnterOnInput</EditMode>
+								<HorizontalStretch>true</HorizontalStretch>
+								<ClearButton>true</ClearButton>
+								<ListChoiceMode>true</ListChoiceMode>
+								<ChooseType>false</ChooseType>
+								<ContextMenu name="ПараметрыДорожекСуффиксКонтекстноеМеню" id="183"/>
+								<ExtendedTooltip name="ПараметрыДорожекСуффиксРасширеннаяПодсказка" id="184"/>
+							</InputField>
+							<CheckBoxField name="ПараметрыДорожекИспользовать" id="185">
+								<TitleLocation>None</TitleLocation>
+								<EditMode>EnterOnInput</EditMode>
+								<CheckBoxType>Auto</CheckBoxType>
+								<ContextMenu name="ПараметрыДорожекИспользоватьКонтекстноеМеню" id="186"/>
+								<ExtendedTooltip name="ПараметрыДорожекИспользоватьРасширеннаяПодсказка" id="187"/>
+							</CheckBoxField>
+						</ChildItems>
+					</Table>
+				</ChildItems>
+			</UsualGroup>
+		</ChildItems>
+		<Attributes/>
+	</BaseForm>
+</Form>
