@@ -365,6 +365,20 @@
 											</Title>
 											<ExtendedTooltip name="ОткрытьХозНуждыРасширеннаяПодсказка" id="182"/>
 										</Button>
+										<Button name="Уценка" id="189">
+											<Type>UsualButton</Type>
+											<Height>2</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<CommandName>Form.Command.Уценка</CommandName>
+											<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Уценка</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="УценкаРасширеннаяПодсказка" id="190"/>
+										</Button>
 									</ChildItems>
 								</UsualGroup>
 								<LabelDecoration name="ДекорацияДляЦентрирования" id="106">
@@ -1023,6 +1037,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКОткрытьХозНуждыПосле</Action>
+		</Command>
+		<Command name="Уценка" id="1000013">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уценка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уценка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКУценкаПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.20">
