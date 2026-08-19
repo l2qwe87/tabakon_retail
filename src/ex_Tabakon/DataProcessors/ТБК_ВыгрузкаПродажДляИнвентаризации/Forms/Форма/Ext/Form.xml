@@ -4,16 +4,78 @@
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
 	<ChildItems>
-		<InputField name="ПериодВыгрузки" id="1">
-			<DataPath>ПериодВыгрузки</DataPath>
-			<ContextMenu name="ПериодВыгрузкиКонтекстноеМеню" id="2"/>
-			<ExtendedTooltip name="ПериодВыгрузкиРасширеннаяПодсказка" id="3"/>
-		</InputField>
-		<Button name="ВыгрузитьВФайл" id="4">
-			<Type>UsualButton</Type>
-			<CommandName>Form.Command.ВыгрузитьВФайл</CommandName>
-			<ExtendedTooltip name="ВыгрузитьВФайлРасширеннаяПодсказка" id="5"/>
-		</Button>
+		<Pages name="ГруппаСтраницы" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="7"/>
+			<ChildItems>
+				<Page name="ГруппаПродажи" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа продажи</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа продажи</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПродажиРасширеннаяПодсказка" id="9"/>
+					<ChildItems>
+						<InputField name="ПериодВыгрузки" id="1">
+							<DataPath>ПериодВыгрузки</DataPath>
+							<ContextMenu name="ПериодВыгрузкиКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ПериодВыгрузкиРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<Button name="ВыгрузитьВФайл" id="4">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ВыгрузитьВФайл</CommandName>
+							<ExtendedTooltip name="ВыгрузитьВФайлРасширеннаяПодсказка" id="5"/>
+						</Button>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаОРП" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ОРП</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ОРП</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаОРПРасширеннаяПодсказка" id="11"/>
+					<ChildItems>
+						<InputField name="ОРП" id="12">
+							<DataPath>ОРП</DataPath>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ОРПКонтекстноеМеню" id="13"/>
+							<ExtendedTooltip name="ОРПРасширеннаяПодсказка" id="14"/>
+						</InputField>
+						<Button name="ВыгрузитьОРП" id="15">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ВыгрузитьОРП</CommandName>
+							<ExtendedTooltip name="ВыгрузитьОРПРасширеннаяПодсказка" id="16"/>
+						</Button>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -33,13 +95,27 @@
 				<v8:Type>v8:StandardPeriod</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="ОРП" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОРП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:TypeId>c54bc9da-857b-48df-9fa6-2ffdb1e31b32</v8:TypeId>
+			</Settings>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ВыгрузитьВФайл" id="1">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Выгрузить в файл</v8:content>
+					<v8:content>Выгрузить продажи</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -49,6 +125,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ВыгрузитьВФайл</Action>
+		</Command>
+		<Command name="ВыгрузитьОРП" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить ОРП</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить ОРП</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьВФайлОРП</Action>
 		</Command>
 	</Commands>
 </Form>
