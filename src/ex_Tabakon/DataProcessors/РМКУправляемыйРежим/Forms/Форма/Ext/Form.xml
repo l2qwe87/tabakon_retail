@@ -663,6 +663,30 @@
 					</Title>
 					<ExtendedTooltip name="ЧатСофисомРасширеннаяПодсказка" id="658"/>
 				</Button>
+				<Button name="ТБК_КнопкаСвязьККТ" id="800">
+					<Type>UsualButton</Type>
+					<Width>18</Width>
+					<CommandName>Form.Command.СвязьСККТ</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ККТ: не проверялась</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ТБК_КнопкаСвязьККТРасширеннаяПодсказка" id="801"/>
+				</Button>
+				<Button name="ТБК_КнопкаСвязьПИоТ" id="802">
+					<Type>UsualButton</Type>
+					<Width>18</Width>
+					<CommandName>Form.Command.СвязьСПИоТ</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ПИоТ: не проверялся</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ТБК_КнопкаСвязьПИоТРасширеннаяПодсказка" id="803"/>
+				</Button>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="Debug" id="551">
@@ -4829,6 +4853,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ТБКОткрытьСпискиПосле</Action>
+		</Command>
+		<Command name="СвязьСККТ" id="1000042">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Связь с ККТ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить связь с ККТ через подключаемое оборудование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКСвязьСККТПосле</Action>
+		</Command>
+		<Command name="СвязьСПИоТ" id="1000043">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Связь с ТС ПИоТ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить готовность ТС ПИоТ к проверке кодов маркировки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">ТБКСвязьСПИоТПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.20">
