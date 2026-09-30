@@ -105,11 +105,6 @@
 						<CommandName>0</CommandName>
 						<ExtendedTooltip name="ФормаОбщаяКомандаЗаполнениеОбъектаРасширеннаяПодсказка" id="828"/>
 					</Button>
-					<Button name="ФормаПерезаполнить" id="1078">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.Перезаполнить</CommandName>
-						<ExtendedTooltip name="ФормаПерезаполнитьРасширеннаяПодсказка" id="1079"/>
-					</Button>
 					<Button name="ФормаВыгрузитьДокументВФайл" id="1080">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Command.ВыгрузитьДокументВФайл</CommandName>
@@ -2802,21 +2797,6 @@
 		</ConditionalAppearance>
 	</Attributes>
 	<Commands>
-		<Command name="Перезаполнить" id="1000000">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Перезаполнить</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Перезаполнить</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action callType="After">ТБКПерезаполнитьПосле</Action>
-		</Command>
 		<Command name="ВыгрузитьДокументВФайл" id="1000001">
 			<Title>
 				<v8:item>
