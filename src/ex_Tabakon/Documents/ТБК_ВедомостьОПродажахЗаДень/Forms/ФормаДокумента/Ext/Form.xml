@@ -13,12 +13,11 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
-		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="BeforeClose">ПередЗакрытием</Event>
-		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
-		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="Шапка" id="86">
@@ -391,12 +390,6 @@
 											<ContextMenu name="КупюрыКупюра5000КонтекстноеМеню" id="253"/>
 											<ExtendedTooltip name="КупюрыКупюра5000РасширеннаяПодсказка" id="254"/>
 										</InputField>
-										<InputField name="КупюрыКупюра2000" id="255">
-											<EditMode>EnterOnInput</EditMode>
-											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-											<ContextMenu name="КупюрыКупюра2000КонтекстноеМеню" id="256"/>
-											<ExtendedTooltip name="КупюрыКупюра2000РасширеннаяПодсказка" id="257"/>
-										</InputField>
 									</ChildItems>
 								</Table>
 								<Table name="Купюры2000" id="258">
@@ -741,13 +734,6 @@
 									<ContextMenu name="ПродавцыПродавецКонтекстноеМеню" id="210"/>
 									<ExtendedTooltip name="ПродавцыПродавецРасширеннаяПодсказка" id="211"/>
 								</InputField>
-								<CheckBoxField name="ПродавцыЭтоГлавныйПродавец" id="212">
-									<Visible>false</Visible>
-									<EditMode>EnterOnInput</EditMode>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ПродавцыЭтоГлавныйПродавецКонтекстноеМеню" id="213"/>
-									<ExtendedTooltip name="ПродавцыЭтоГлавныйПродавецРасширеннаяПодсказка" id="214"/>
-								</CheckBoxField>
 								<InputField name="ПродавцыТипПродавца" id="225">
 									<DataPath>Объект.Продавцы.ТипПродавца</DataPath>
 									<EditMode>EnterOnInput</EditMode>
