@@ -343,6 +343,7 @@
 										<Button name="СписокДокументЧекККМСоздатьНаОсновании1" id="203">
 											<Type>CommandBarButton</Type>
 											<CommandName>0</CommandName>
+											<DataPath>Items.Список.CurrentData.Ref</DataPath>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -354,26 +355,31 @@
 										<Button name="ФормаОбработкаСозданиеЧековКоррекцииЧекКоррекции" id="221">
 											<Type>CommandBarButton</Type>
 											<CommandName>0</CommandName>
+											<DataPath>Items.Список.CurrentData.Ref</DataPath>
 											<ExtendedTooltip name="ФормаОбработкаСозданиеЧековКоррекцииЧекКоррекцииРасширеннаяПодсказка" id="222"/>
 										</Button>
 										<Button name="ФормаДокументПриходныйКассовыйОрдерСоздатьНаОсновании" id="205">
 											<Type>CommandBarButton</Type>
 											<CommandName>0</CommandName>
+											<DataPath>Items.Список.CurrentData.Ref</DataPath>
 											<ExtendedTooltip name="ФормаДокументПриходныйКассовыйОрдерСоздатьНаОснованииРасширеннаяПодсказка" id="206"/>
 										</Button>
 										<Button name="ФормаОбщаяКомандаСозданиеСвязанныхОбъектов" id="185">
 											<Type>CommandBarButton</Type>
 											<CommandName>0</CommandName>
+											<DataPath>Items.Список.CurrentData.Ref</DataPath>
 											<ExtendedTooltip name="ФормаОбщаяКомандаСозданиеСвязанныхОбъектовРасширеннаяПодсказка" id="186"/>
 										</Button>
 										<Button name="ФормаДокументОплатаОтПокупателяПлатежнойКартойСоздатьНаОсновании" id="209">
 											<Type>CommandBarButton</Type>
 											<CommandName>0</CommandName>
+											<DataPath>Items.Список.CurrentData.Ref</DataPath>
 											<ExtendedTooltip name="ФормаДокументОплатаОтПокупателяПлатежнойКартойСоздатьНаОснованииРасширеннаяПодсказка" id="210"/>
 										</Button>
 										<Button name="ФормаРасходныйКассовыйОрдер" id="219">
 											<Type>CommandBarButton</Type>
 											<CommandName>0</CommandName>
+											<DataPath>Items.Список.CurrentData.Ref</DataPath>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -485,11 +491,13 @@
 										<Button name="ФормаОбщаяКомандаЗаполнениеОбъекта" id="195">
 											<Type>CommandBarButton</Type>
 											<CommandName>0</CommandName>
+											<DataPath>Items.Список.CurrentData.Ref</DataPath>
 											<ExtendedTooltip name="ФормаОбщаяКомандаЗаполнениеОбъектаРасширеннаяПодсказка" id="196"/>
 										</Button>
 										<Button name="ФормаОбщаяКомандаОтчетыОбъекта" id="197">
 											<Type>CommandBarButton</Type>
 											<CommandName>0</CommandName>
+											<DataPath>Items.Список.CurrentData.Ref</DataPath>
 											<ExtendedTooltip name="ФормаОбщаяКомандаОтчетыОбъектаРасширеннаяПодсказка" id="198"/>
 										</Button>
 									</ChildItems>
@@ -508,6 +516,8 @@
 							<InitialTreeView>ExpandTopLevel</InitialTreeView>
 							<EnableStartDrag>true</EnableStartDrag>
 							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Список</DataPath>
+							<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
 							<AutoRefresh>false</AutoRefresh>
 							<AutoRefreshPeriod>60</AutoRefreshPeriod>
 							<Period>
@@ -561,6 +571,7 @@
 							</SearchControlAddition>
 							<ChildItems>
 								<LabelField name="Номер" id="6">
+									<DataPath>Список.Number</DataPath>
 									<Width>12</Width>
 									<ContextMenu name="НомерКонтекстноеМеню" id="7"/>
 									<ExtendedTooltip name="НомерExtendedTooltip" id="125"/>
@@ -575,6 +586,7 @@
 									<ExtendedTooltip name="ГруппаНомерДатаExtendedTooltip" id="124"/>
 									<ChildItems>
 										<LabelField name="Дата" id="4">
+											<DataPath>Список.Date</DataPath>
 											<DefaultItem>true</DefaultItem>
 											<Width>9</Width>
 											<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
@@ -583,6 +595,7 @@
 									</ChildItems>
 								</ColumnGroup>
 								<LabelField name="НомерСменыККМ" id="8">
+									<DataPath>Список.НомерСменыККМ</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -595,6 +608,7 @@
 									<ExtendedTooltip name="НомерСменыККМExtendedTooltip" id="127"/>
 								</LabelField>
 								<LabelField name="НомерЧекаККМ" id="10">
+									<DataPath>Список.НомерЧекаККМ</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -607,6 +621,7 @@
 									<ExtendedTooltip name="НомерЧекаККМExtendedTooltip" id="128"/>
 								</LabelField>
 								<LabelField name="СуммаДокумента" id="160">
+									<DataPath>Список.СуммаДокумента</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -617,6 +632,7 @@
 									<ExtendedTooltip name="СуммаДокументаРасширеннаяПодсказка" id="162"/>
 								</LabelField>
 								<LabelField name="ВидОперации" id="12">
+									<DataPath>Список.ВидОперации</DataPath>
 									<UserVisible>
 										<xr:Common>false</xr:Common>
 									</UserVisible>
@@ -631,6 +647,7 @@
 									<ExtendedTooltip name="ВидОперацииExtendedTooltip" id="130"/>
 								</LabelField>
 								<LabelField name="СтатусЧекаККМ" id="14">
+									<DataPath>Список.СтатусЧекаККМ</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -658,11 +675,13 @@
 									<ExtendedTooltip name="ГруппаДисконтнаяКартаРасширеннаяПодсказка" id="236"/>
 									<ChildItems>
 										<LabelField name="ДисконтнаяКарта" id="19">
+											<DataPath>Список.ДисконтнаяКарта</DataPath>
 											<Width>4</Width>
 											<ContextMenu name="ДисконтнаяКартаКонтекстноеМеню" id="20"/>
 											<ExtendedTooltip name="ДисконтнаяКартаExtendedTooltip" id="133"/>
 										</LabelField>
 										<LabelField name="ВладелецДисконтнойКарты" id="21">
+											<DataPath>Список.ВладелецДисконтнойКарты</DataPath>
 											<UserVisible>
 												<xr:Common>false</xr:Common>
 											</UserVisible>
@@ -680,34 +699,45 @@
 									</ChildItems>
 								</ColumnGroup>
 								<LabelField name="Магазин" id="24">
+									<DataPath>Список.Магазин</DataPath>
 									<Width>4</Width>
 									<ContextMenu name="МагазинКонтекстноеМеню" id="25"/>
 									<ExtendedTooltip name="МагазинExtendedTooltip" id="136"/>
 								</LabelField>
 								<LabelField name="Организация" id="237">
+									<DataPath>Список.Организация</DataPath>
 									<Width>4</Width>
 									<ContextMenu name="ОрганизацияКонтекстноеМеню" id="238"/>
 									<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="239"/>
 								</LabelField>
 								<LabelField name="КассаККМ" id="26">
+									<DataPath>Список.КассаККМ</DataPath>
 									<Width>4</Width>
 									<ContextMenu name="КассаККМКонтекстноеМеню" id="27"/>
 									<ExtendedTooltip name="КассаККМExtendedTooltip" id="137"/>
 								</LabelField>
 								<LabelField name="ЗаказПокупателя" id="155">
+									<DataPath>Список.ЗаказПокупателя</DataPath>
 									<ContextMenu name="ЗаказПокупателяКонтекстноеМеню" id="156"/>
 									<ExtendedTooltip name="ЗаказПокупателяРасширеннаяПодсказка" id="157"/>
 								</LabelField>
 								<LabelField name="ОтчетОРозничныхПродажах" id="97">
+									<DataPath>Список.ОтчетОРозничныхПродажах</DataPath>
 									<ContextMenu name="ОтчетОРозничныхПродажахКонтекстноеМеню" id="98"/>
 									<ExtendedTooltip name="ОтчетОРозничныхПродажахExtendedTooltip" id="138"/>
 								</LabelField>
 								<LabelField name="Комментарий" id="240">
+									<DataPath>Список.Комментарий</DataPath>
 									<UserVisible>
 										<xr:Common>false</xr:Common>
 									</UserVisible>
 									<ContextMenu name="КомментарийКонтекстноеМеню" id="241"/>
 									<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="242"/>
+								</LabelField>
+								<LabelField name="СсылкаТБКВерсияРМК" id="254">
+									<DataPath>Список.Ref.ТБКВерсияРМК</DataPath>
+									<ContextMenu name="СсылкаТБКВерсияРМККонтекстноеМеню" id="255"/>
+									<ExtendedTooltip name="СсылкаТБКВерсияРМКРасширеннаяПодсказка" id="256"/>
 								</LabelField>
 							</ChildItems>
 						</Table>
@@ -895,6 +925,105 @@
 		</Pages>
 	</ChildItems>
 	<Attributes>
+		<Attribute name="Список" id="1000001">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Ref</Field>
+				<Field>Список.ОшибкаОтправкиНСПК</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДокументЧекККМ.Ссылка,
+	ДокументЧекККМ.ПометкаУдаления,
+	ДокументЧекККМ.Номер,
+	ДокументЧекККМ.Дата,
+	ДокументЧекККМ.Проведен,
+	ДокументЧекККМ.АдресЧекаЕГАИС,
+	ДокументЧекККМ.АдресЭП,
+	ДокументЧекККМ.АналитикаХозяйственнойОперации,
+	ДокументЧекККМ.БонусыНачислены,
+	ДокументЧекККМ.ВидОперации,
+	ДокументЧекККМ.ВладелецДисконтнойКарты,
+	ДокументЧекККМ.ВыручкаНаличными,
+	ДокументЧекККМ.ДатаРождения,
+	ДокументЧекККМ.ДисконтнаяКарта,
+	ДокументЧекККМ.ДоговорКонтрагента,
+	ДокументЧекККМ.ДокументРасчета,
+	ДокументЧекККМ.ЗаказПокупателя,
+	ДокументЧекККМ.ИдентификаторЧекаВОчереди,
+	ДокументЧекККМ.КассаККМ,
+	ДокументЧекККМ.Комментарий,
+	ДокументЧекККМ.Контрагент,
+	ДокументЧекККМ.Магазин,
+	ДокументЧекККМ.НомерСменыККМ,
+	ДокументЧекККМ.НомерЧекаККМ,
+	ДокументЧекККМ.ОперацияСДенежнымиСредствами,
+	ДокументЧекККМ.Организация,
+	ДокументЧекККМ.Ответственный,
+	ДокументЧекККМ.ОтработанПереход,
+	ДокументЧекККМ.ОтчетОРозничныхПродажах,
+	ДокументЧекККМ.ПоДокументу,
+	ДокументЧекККМ.ПодписьЧекаЕГАИС,
+	ДокументЧекККМ.Продавец,
+	ДокументЧекККМ.СистемаНалогообложения,
+	ДокументЧекККМ.СкидкиРассчитаны,
+	ДокументЧекККМ.СсылкаЯндексКассы,
+	ДокументЧекККМ.СтатусЧекаККМ,
+	ДокументЧекККМ.СуммаДокумента,
+	ДокументЧекККМ.Телефон,
+	ДокументЧекККМ.УдалитьВидНалога,
+	ДокументЧекККМ.УдалитьДоговорЭквайринга,
+	ДокументЧекККМ.УникальныйИдентификаторПлатежа,
+	ДокументЧекККМ.ФизЛицо,
+	ДокументЧекККМ.ЦенаВключаетНДС,
+	ДокументЧекККМ.ЧекККМПродажа,
+	ДокументЧекККМ.КодТРУ,
+	ДокументЧекККМ.Оплачивается,
+	ДокументЧекККМ.Товары,
+	ДокументЧекККМ.Оплата,
+	ДокументЧекККМ.УправляемыеСкидки,
+	ДокументЧекККМ.Подарки,
+	ДокументЧекККМ.СкидкиНаценки,
+	ДокументЧекККМ.СерийныеНомера,
+	ДокументЧекККМ.СерииПодарков,
+	ДокументЧекККМ.ПогашениеПодарочныхСертификатов,
+	ДокументЧекККМ.Серии,
+	ДокументЧекККМ.БонусныеБаллыКНачислению,
+	ДокументЧекККМ.АкцизныеМарки,
+	ДокументЧекККМ.ПредъявленныеКодыОднократныхСкидок,
+	ДокументЧекККМ.КодыМаркировки,
+	ДокументЧекККМ.ТоварыОрганизации,
+	ДокументЧекККМ.МоментВремени,
+	ВЫБОР КОГДА ОшибкиПодтвержденияНСПК.ОснованиеФискальнойОперации Есть NULL
+		ТОГДА Ложь
+		ИНАЧЕ Истина
+	КОНЕЦ Как ОшибкаОтправкиНСПК
+ИЗ
+	Документ.ЧекККМ КАК ДокументЧекККМ
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ОшибкиПодтвержденияНСПК КАК ОшибкиПодтвержденияНСПК
+		ПО ОшибкиПодтвержденияНСПК.ОснованиеФискальнойОперации = ДокументЧекККМ.Ссылка</QueryText>
+				<MainTable>Document.ЧекККМ</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -1319,6 +1448,7 @@
 											<Button name="СписокДокументЧекККМСоздатьНаОсновании1" id="203">
 												<Type>CommandBarButton</Type>
 												<CommandName>0</CommandName>
+												<DataPath>Items.Список.CurrentData.Ref</DataPath>
 												<Title>
 													<v8:item>
 														<v8:lang>ru</v8:lang>
@@ -1330,26 +1460,31 @@
 											<Button name="ФормаОбработкаСозданиеЧековКоррекцииЧекКоррекции" id="221">
 												<Type>CommandBarButton</Type>
 												<CommandName>0</CommandName>
+												<DataPath>Items.Список.CurrentData.Ref</DataPath>
 												<ExtendedTooltip name="ФормаОбработкаСозданиеЧековКоррекцииЧекКоррекцииРасширеннаяПодсказка" id="222"/>
 											</Button>
 											<Button name="ФормаДокументПриходныйКассовыйОрдерСоздатьНаОсновании" id="205">
 												<Type>CommandBarButton</Type>
 												<CommandName>0</CommandName>
+												<DataPath>Items.Список.CurrentData.Ref</DataPath>
 												<ExtendedTooltip name="ФормаДокументПриходныйКассовыйОрдерСоздатьНаОснованииРасширеннаяПодсказка" id="206"/>
 											</Button>
 											<Button name="ФормаОбщаяКомандаСозданиеСвязанныхОбъектов" id="185">
 												<Type>CommandBarButton</Type>
 												<CommandName>0</CommandName>
+												<DataPath>Items.Список.CurrentData.Ref</DataPath>
 												<ExtendedTooltip name="ФормаОбщаяКомандаСозданиеСвязанныхОбъектовРасширеннаяПодсказка" id="186"/>
 											</Button>
 											<Button name="ФормаДокументОплатаОтПокупателяПлатежнойКартойСоздатьНаОсновании" id="209">
 												<Type>CommandBarButton</Type>
 												<CommandName>0</CommandName>
+												<DataPath>Items.Список.CurrentData.Ref</DataPath>
 												<ExtendedTooltip name="ФормаДокументОплатаОтПокупателяПлатежнойКартойСоздатьНаОснованииРасширеннаяПодсказка" id="210"/>
 											</Button>
 											<Button name="ФормаРасходныйКассовыйОрдер" id="219">
 												<Type>CommandBarButton</Type>
 												<CommandName>0</CommandName>
+												<DataPath>Items.Список.CurrentData.Ref</DataPath>
 												<Title>
 													<v8:item>
 														<v8:lang>ru</v8:lang>
@@ -1456,11 +1591,13 @@
 											<Button name="ФормаОбщаяКомандаЗаполнениеОбъекта" id="195">
 												<Type>CommandBarButton</Type>
 												<CommandName>0</CommandName>
+												<DataPath>Items.Список.CurrentData.Ref</DataPath>
 												<ExtendedTooltip name="ФормаОбщаяКомандаЗаполнениеОбъектаРасширеннаяПодсказка" id="196"/>
 											</Button>
 											<Button name="ФормаОбщаяКомандаОтчетыОбъекта" id="197">
 												<Type>CommandBarButton</Type>
 												<CommandName>0</CommandName>
+												<DataPath>Items.Список.CurrentData.Ref</DataPath>
 												<ExtendedTooltip name="ФормаОбщаяКомандаОтчетыОбъектаРасширеннаяПодсказка" id="198"/>
 											</Button>
 										</ChildItems>
@@ -1479,6 +1616,8 @@
 								<InitialTreeView>ExpandTopLevel</InitialTreeView>
 								<EnableStartDrag>true</EnableStartDrag>
 								<FileDragMode>AsFile</FileDragMode>
+								<DataPath>Список</DataPath>
+								<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
 								<AutoRefresh>false</AutoRefresh>
 								<AutoRefreshPeriod>60</AutoRefreshPeriod>
 								<Period>
@@ -1533,12 +1672,14 @@
 										<ExtendedTooltip name="ГруппаНомерДатаExtendedTooltip" id="124"/>
 										<ChildItems>
 											<LabelField name="Номер" id="6">
+												<DataPath>Список.Number</DataPath>
 												<Visible>false</Visible>
 												<Width>12</Width>
 												<ContextMenu name="НомерКонтекстноеМеню" id="7"/>
 												<ExtendedTooltip name="НомерExtendedTooltip" id="125"/>
 											</LabelField>
 											<LabelField name="Дата" id="4">
+												<DataPath>Список.Date</DataPath>
 												<DefaultItem>true</DefaultItem>
 												<Width>9</Width>
 												<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
@@ -1547,6 +1688,7 @@
 										</ChildItems>
 									</ColumnGroup>
 									<LabelField name="НомерСменыККМ" id="8">
+										<DataPath>Список.НомерСменыККМ</DataPath>
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
@@ -1559,6 +1701,7 @@
 										<ExtendedTooltip name="НомерСменыККМExtendedTooltip" id="127"/>
 									</LabelField>
 									<LabelField name="НомерЧекаККМ" id="10">
+										<DataPath>Список.НомерЧекаККМ</DataPath>
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
@@ -1571,6 +1714,7 @@
 										<ExtendedTooltip name="НомерЧекаККМExtendedTooltip" id="128"/>
 									</LabelField>
 									<LabelField name="СуммаДокумента" id="160">
+										<DataPath>Список.СуммаДокумента</DataPath>
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
@@ -1581,6 +1725,7 @@
 										<ExtendedTooltip name="СуммаДокументаРасширеннаяПодсказка" id="162"/>
 									</LabelField>
 									<LabelField name="ВидОперации" id="12">
+										<DataPath>Список.ВидОперации</DataPath>
 										<UserVisible>
 											<xr:Common>false</xr:Common>
 										</UserVisible>
@@ -1595,6 +1740,7 @@
 										<ExtendedTooltip name="ВидОперацииExtendedTooltip" id="130"/>
 									</LabelField>
 									<LabelField name="СтатусЧекаККМ" id="14">
+										<DataPath>Список.СтатусЧекаККМ</DataPath>
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
@@ -1622,11 +1768,13 @@
 										<ExtendedTooltip name="ГруппаДисконтнаяКартаРасширеннаяПодсказка" id="236"/>
 										<ChildItems>
 											<LabelField name="ДисконтнаяКарта" id="19">
+												<DataPath>Список.ДисконтнаяКарта</DataPath>
 												<Width>4</Width>
 												<ContextMenu name="ДисконтнаяКартаКонтекстноеМеню" id="20"/>
 												<ExtendedTooltip name="ДисконтнаяКартаExtendedTooltip" id="133"/>
 											</LabelField>
 											<LabelField name="ВладелецДисконтнойКарты" id="21">
+												<DataPath>Список.ВладелецДисконтнойКарты</DataPath>
 												<UserVisible>
 													<xr:Common>false</xr:Common>
 												</UserVisible>
@@ -1644,29 +1792,35 @@
 										</ChildItems>
 									</ColumnGroup>
 									<LabelField name="Магазин" id="24">
+										<DataPath>Список.Магазин</DataPath>
 										<Width>4</Width>
 										<ContextMenu name="МагазинКонтекстноеМеню" id="25"/>
 										<ExtendedTooltip name="МагазинExtendedTooltip" id="136"/>
 									</LabelField>
 									<LabelField name="Организация" id="237">
+										<DataPath>Список.Организация</DataPath>
 										<Width>4</Width>
 										<ContextMenu name="ОрганизацияКонтекстноеМеню" id="238"/>
 										<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="239"/>
 									</LabelField>
 									<LabelField name="КассаККМ" id="26">
+										<DataPath>Список.КассаККМ</DataPath>
 										<Width>4</Width>
 										<ContextMenu name="КассаККМКонтекстноеМеню" id="27"/>
 										<ExtendedTooltip name="КассаККМExtendedTooltip" id="137"/>
 									</LabelField>
 									<LabelField name="ЗаказПокупателя" id="155">
+										<DataPath>Список.ЗаказПокупателя</DataPath>
 										<ContextMenu name="ЗаказПокупателяКонтекстноеМеню" id="156"/>
 										<ExtendedTooltip name="ЗаказПокупателяРасширеннаяПодсказка" id="157"/>
 									</LabelField>
 									<LabelField name="ОтчетОРозничныхПродажах" id="97">
+										<DataPath>Список.ОтчетОРозничныхПродажах</DataPath>
 										<ContextMenu name="ОтчетОРозничныхПродажахКонтекстноеМеню" id="98"/>
 										<ExtendedTooltip name="ОтчетОРозничныхПродажахExtendedTooltip" id="138"/>
 									</LabelField>
 									<LabelField name="Комментарий" id="240">
+										<DataPath>Список.Комментарий</DataPath>
 										<UserVisible>
 											<xr:Common>false</xr:Common>
 										</UserVisible>
@@ -1859,6 +2013,105 @@
 			</Pages>
 		</ChildItems>
 		<Attributes>
+			<Attribute name="Список" id="1000001">
+				<Type>
+					<v8:Type>cfg:DynamicList</v8:Type>
+				</Type>
+				<MainAttribute>true</MainAttribute>
+				<UseAlways>
+					<Field>Список.Ref</Field>
+					<Field>Список.ОшибкаОтправкиНСПК</Field>
+				</UseAlways>
+				<Settings xsi:type="DynamicList">
+					<ManualQuery>true</ManualQuery>
+					<DynamicDataRead>true</DynamicDataRead>
+					<QueryText>ВЫБРАТЬ
+	ДокументЧекККМ.Ссылка,
+	ДокументЧекККМ.ПометкаУдаления,
+	ДокументЧекККМ.Номер,
+	ДокументЧекККМ.Дата,
+	ДокументЧекККМ.Проведен,
+	ДокументЧекККМ.АдресЧекаЕГАИС,
+	ДокументЧекККМ.АдресЭП,
+	ДокументЧекККМ.АналитикаХозяйственнойОперации,
+	ДокументЧекККМ.БонусыНачислены,
+	ДокументЧекККМ.ВидОперации,
+	ДокументЧекККМ.ВладелецДисконтнойКарты,
+	ДокументЧекККМ.ВыручкаНаличными,
+	ДокументЧекККМ.ДатаРождения,
+	ДокументЧекККМ.ДисконтнаяКарта,
+	ДокументЧекККМ.ДоговорКонтрагента,
+	ДокументЧекККМ.ДокументРасчета,
+	ДокументЧекККМ.ЗаказПокупателя,
+	ДокументЧекККМ.ИдентификаторЧекаВОчереди,
+	ДокументЧекККМ.КассаККМ,
+	ДокументЧекККМ.Комментарий,
+	ДокументЧекККМ.Контрагент,
+	ДокументЧекККМ.Магазин,
+	ДокументЧекККМ.НомерСменыККМ,
+	ДокументЧекККМ.НомерЧекаККМ,
+	ДокументЧекККМ.ОперацияСДенежнымиСредствами,
+	ДокументЧекККМ.Организация,
+	ДокументЧекККМ.Ответственный,
+	ДокументЧекККМ.ОтработанПереход,
+	ДокументЧекККМ.ОтчетОРозничныхПродажах,
+	ДокументЧекККМ.ПоДокументу,
+	ДокументЧекККМ.ПодписьЧекаЕГАИС,
+	ДокументЧекККМ.Продавец,
+	ДокументЧекККМ.СистемаНалогообложения,
+	ДокументЧекККМ.СкидкиРассчитаны,
+	ДокументЧекККМ.СсылкаЯндексКассы,
+	ДокументЧекККМ.СтатусЧекаККМ,
+	ДокументЧекККМ.СуммаДокумента,
+	ДокументЧекККМ.Телефон,
+	ДокументЧекККМ.УдалитьВидНалога,
+	ДокументЧекККМ.УдалитьДоговорЭквайринга,
+	ДокументЧекККМ.УникальныйИдентификаторПлатежа,
+	ДокументЧекККМ.ФизЛицо,
+	ДокументЧекККМ.ЦенаВключаетНДС,
+	ДокументЧекККМ.ЧекККМПродажа,
+	ДокументЧекККМ.КодТРУ,
+	ДокументЧекККМ.Оплачивается,
+	ДокументЧекККМ.Товары,
+	ДокументЧекККМ.Оплата,
+	ДокументЧекККМ.УправляемыеСкидки,
+	ДокументЧекККМ.Подарки,
+	ДокументЧекККМ.СкидкиНаценки,
+	ДокументЧекККМ.СерийныеНомера,
+	ДокументЧекККМ.СерииПодарков,
+	ДокументЧекККМ.ПогашениеПодарочныхСертификатов,
+	ДокументЧекККМ.Серии,
+	ДокументЧекККМ.БонусныеБаллыКНачислению,
+	ДокументЧекККМ.АкцизныеМарки,
+	ДокументЧекККМ.ПредъявленныеКодыОднократныхСкидок,
+	ДокументЧекККМ.КодыМаркировки,
+	ДокументЧекККМ.ТоварыОрганизации,
+	ДокументЧекККМ.МоментВремени,
+	ВЫБОР КОГДА ОшибкиПодтвержденияНСПК.ОснованиеФискальнойОперации Есть NULL
+		ТОГДА Ложь
+		ИНАЧЕ Истина
+	КОНЕЦ Как ОшибкаОтправкиНСПК
+ИЗ
+	Документ.ЧекККМ КАК ДокументЧекККМ
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ОшибкиПодтвержденияНСПК КАК ОшибкиПодтвержденияНСПК
+		ПО ОшибкиПодтвержденияНСПК.ОснованиеФискальнойОперации = ДокументЧекККМ.Ссылка</QueryText>
+					<MainTable>Document.ЧекККМ</MainTable>
+					<ListSettings>
+						<dcsset:filter>
+							<dcsset:viewMode>Normal</dcsset:viewMode>
+							<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+						</dcsset:filter>
+						<dcsset:order>
+							<dcsset:viewMode>Normal</dcsset:viewMode>
+							<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+						</dcsset:order>
+						<dcsset:conditionalAppearance>
+							<dcsset:viewMode>Normal</dcsset:viewMode>
+							<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+						</dcsset:conditionalAppearance>
+					</ListSettings>
+				</Settings>
+			</Attribute>
 			<ConditionalAppearance>
 				<dcsset:item>
 					<dcsset:selection>
