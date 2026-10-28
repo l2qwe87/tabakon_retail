@@ -755,6 +755,96 @@
 						</UsualGroup>
 					</ChildItems>
 				</Page>
+				<Page name="Проценты" id="256">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проценты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проценты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПроцентыРасширеннаяПодсказка" id="257"/>
+					<ChildItems>
+						<Table name="ТЗ_Проценты" id="258">
+							<Representation>List</Representation>
+							<ReadOnly>true</ReadOnly>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ТЗ_Проценты</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТЗ_ПроцентыКонтекстноеМеню" id="259"/>
+							<AutoCommandBar name="ТЗ_ПроцентыКоманднаяПанель" id="260">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТЗ_ПроцентыРасширеннаяПодсказка" id="261"/>
+							<SearchStringAddition name="ТЗ_ПроцентыСтрокаПоиска" id="262">
+								<AdditionSource>
+									<Item>ТЗ_Проценты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗ_ПроцентыСтрокаПоискаКонтекстноеМеню" id="263"/>
+								<ExtendedTooltip name="ТЗ_ПроцентыСтрокаПоискаРасширеннаяПодсказка" id="264"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТЗ_ПроцентыСостояниеПросмотра" id="265">
+								<AdditionSource>
+									<Item>ТЗ_Проценты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗ_ПроцентыСостояниеПросмотраКонтекстноеМеню" id="266"/>
+								<ExtendedTooltip name="ТЗ_ПроцентыСостояниеПросмотраРасширеннаяПодсказка" id="267"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТЗ_ПроцентыУправлениеПоиском" id="268">
+								<AdditionSource>
+									<Item>ТЗ_Проценты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЗ_ПроцентыУправлениеПоискомКонтекстноеМеню" id="269"/>
+								<ExtendedTooltip name="ТЗ_ПроцентыУправлениеПоискомРасширеннаяПодсказка" id="270"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ТЗ_ПроцентыДень" id="271">
+									<DataPath>ТЗ_Проценты.День</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТЗ_ПроцентыДеньКонтекстноеМеню" id="272"/>
+									<ExtendedTooltip name="ТЗ_ПроцентыДеньРасширеннаяПодсказка" id="273"/>
+								</InputField>
+								<InputField name="ТЗ_ПроцентыПроцент" id="274">
+									<DataPath>ТЗ_Проценты.ПроцентПремии</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТЗ_ПроцентыПроцентКонтекстноеМеню" id="275"/>
+									<ExtendedTooltip name="ТЗ_ПроцентыПроцентРасширеннаяПодсказка" id="276"/>
+								</InputField>
+								<InputField name="ТЗ_ПроцентыСуммаПродаж" id="277">
+									<DataPath>ТЗ_Проценты.СуммаПродаж</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТЗ_ПроцентыСуммаПродажКонтекстноеМеню" id="278"/>
+									<ExtendedTooltip name="ТЗ_ПроцентыСуммаПродажРасширеннаяПодсказка" id="279"/>
+								</InputField>
+								<InputField name="ТЗ_ПроцентыСуммаПремии" id="280">
+									<DataPath>ТЗ_Проценты.ПремиязаПроцент</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТЗ_ПроцентыСуммаПремииКонтекстноеМеню" id="281"/>
+									<ExtendedTooltip name="ТЗ_ПроцентыСуммаПремииРасширеннаяПодсказка" id="282"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<LabelDecoration name="Декорация2НадписьПремияЗаПроцент2" id="283">
+							<Font height="12" bold="true" kind="AutoFont"/>
+							<ContextMenu name="Декорация2НадписьПремияЗаПроцент2КонтекстноеМеню" id="284"/>
+							<ExtendedTooltip name="Декорация2НадписьПремияЗаПроцент2РасширеннаяПодсказка" id="285"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
 				<Page name="Фокусная" id="17">
 					<Title>
 						<v8:item>
@@ -1890,6 +1980,81 @@
 						<v8:DateQualifiers>
 							<v8:DateFractions>DateTime</v8:DateFractions>
 						</v8:DateQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТЗ_Проценты" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Т з проценты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="День" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>День</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПроцентПремии" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Процент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаПродаж" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма продаж</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПремиязаПроцент" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма премии</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
 					</Type>
 				</Column>
 			</Columns>
