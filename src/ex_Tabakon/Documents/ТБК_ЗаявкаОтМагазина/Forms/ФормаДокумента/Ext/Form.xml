@@ -97,16 +97,30 @@
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
-		<InputField name="Магазин" id="7">
-			<DataPath>Объект.Магазин</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<AutoMarkIncomplete>true</AutoMarkIncomplete>
-			<ContextMenu name="МагазинКонтекстноеМеню" id="8"/>
-			<ExtendedTooltip name="МагазинРасширеннаяПодсказка" id="9"/>
-			<Events>
-				<Event name="OnChange">МагазинПриИзменении</Event>
-			</Events>
-		</InputField>
+		<UsualGroup name="Группа6" id="163">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="164"/>
+			<ChildItems>
+				<InputField name="Магазин" id="7">
+					<DataPath>Объект.Магазин</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="МагазинКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="МагазинРасширеннаяПодсказка" id="9"/>
+					<Events>
+						<Event name="OnChange">МагазинПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДляКого" id="160">
+					<DataPath>Объект.ДляКого</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДляКогоКонтекстноеМеню" id="161"/>
+					<ExtendedTooltip name="ДляКогоРасширеннаяПодсказка" id="162"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="Группа3" id="51">
 			<Group>AlwaysHorizontal</Group>
 			<Representation>None</Representation>
