@@ -12,6 +12,10 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen" callType="After">ТБКПриОткрытииПосле</Event>
+		<Event name="OnCreateAtServer" callType="After">ТБКПриСозданииНаСервереПосле</Event>
+	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаЗаголовкиКнопки" id="152">
 			<Title>
