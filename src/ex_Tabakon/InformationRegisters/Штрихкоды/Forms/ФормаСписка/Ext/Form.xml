@@ -161,11 +161,6 @@
 						<CommandName>0</CommandName>
 						<ExtendedTooltip name="СписокКнопкаСправкаExtendedTooltip" id="28"/>
 					</Button>
-					<Button name="СписокСинхронизацияШтрихкодов" id="49">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.СинхронизацияШтрихкодов</CommandName>
-						<ExtendedTooltip name="СписокСинхронизацияШтрихкодовРасширеннаяПодсказка" id="50"/>
-					</Button>
 				</ChildItems>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокExtendedTooltip" id="29"/>
@@ -230,23 +225,6 @@
 		</Table>
 	</ChildItems>
 	<Attributes/>
-	<Commands>
-		<Command name="СинхронизацияШтрихкодов" id="1000000">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Синхронизация штрихкодов</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Синхронизация штрихкодов</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action callType="After">ТБКСинхронизацияШтрихкодовПосле</Action>
-		</Command>
-	</Commands>
 	<BaseForm version="2.20">
 		<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 		<VerticalScroll>useIfNecessary</VerticalScroll>
